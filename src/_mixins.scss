@@ -1,5 +1,7 @@
 @mixin anim($property) {
-	transition: $property .3s ease-in-out;
+	-webkit-transition: $property $transition-duration $transition-function;
+       -o-transition: $property $transition-duration $transition-function;
+          transition: $property $transition-duration $transition-function;
 }
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";

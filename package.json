@@ -2,6 +2,8 @@
   "private": true,
   "dependencies": {
     "gulp": "^3.9.0",
+    "gulp-iconfont": "^2.0.0",
+    "gulp-iconfont-css": "0.0.9",
     "gulp-sass": "^2.0.1"
   }
 }

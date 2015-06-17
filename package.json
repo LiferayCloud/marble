@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0"
+  }
+}

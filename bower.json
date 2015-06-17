@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "crystal-bootstrap",
+  "name": "steel-bootstrap",
   "version": "0.0.0",
   "dependencies": {
     "bootstrap-sass": "~3.3.4"

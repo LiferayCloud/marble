@@ -1,11 +1,8 @@
 var gulp = require('gulp');
-var compass = require('gulp-compass');
+var sass = require('gulp-sass');
 
-gulp.task('build', function() {
+gulp.task('sass', function() {
 	return gulp.src('src/*.scss')
-		.pipe(compass({
-			css: 'dist',
-			sass: 'src'
-		}))
-		.pipe(gulp.dest('dist'));
+		.pipe(sass())
+		.pipe(gulp.dest('build'));
 });

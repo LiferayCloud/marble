@@ -6,4 +6,9 @@ $secondary: #233240 !default;
 $black: #000 !default;
 $white: #fff !default;
 
+$shadow-small: 0 1px 1px rgba(black, 0.08);
+$shadow-large: 0 2px 4px rgba(black, 0.12);
+
+$border-radius-small: 2px;
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";

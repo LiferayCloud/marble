@@ -1,3 +1,11 @@
+/* Colors
+   ========================================================================== */
+/* Scaffolding
+   ========================================================================== */
+/* Typography
+   ========================================================================== */
+/* Components
+   ========================================================================== */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 html {
@@ -1074,12 +1082,12 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #337ab7;
+  color: #1c6de2;
   text-decoration: none; }
   a:hover,
   a:focus {
-    color: #23527c;
-    text-decoration: underline; }
+    color: #1c6de2;
+    text-decoration: none; }
   a:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
@@ -3200,7 +3208,7 @@ fieldset[disabled] a.btn {
     background-color: #fff; }
 
 .btn-link {
-  color: #337ab7;
+  color: #1c6de2;
   font-weight: normal;
   border-radius: 0; }
   .btn-link,
@@ -3218,8 +3226,8 @@ fieldset[disabled] a.btn {
     border-color: transparent; }
   .btn-link:hover,
   .btn-link:focus {
-    color: #23527c;
-    text-decoration: underline;
+    color: #1c6de2;
+    text-decoration: none;
     background-color: transparent; }
   .btn-link[disabled]:hover,
   .btn-link[disabled]:focus,
@@ -3732,7 +3740,7 @@ tbody.collapse.in {
   .nav .open > a:hover,
   .nav .open > a:focus {
     background-color: #eeeeee;
-    border-color: #337ab7; }
+    border-color: #1c6de2; }
   .nav .nav-divider {
     height: 1px;
     margin: 9px 0;
@@ -4293,7 +4301,7 @@ tbody.collapse.in {
       padding: 6px 12px;
       line-height: 1.42857;
       text-decoration: none;
-      color: #337ab7;
+      color: #1c6de2;
       background-color: #fff;
       border: 1px solid #ddd;
       margin-left: -1px; }
@@ -4311,7 +4319,7 @@ tbody.collapse.in {
   .pagination > li > span:hover,
   .pagination > li > span:focus {
     z-index: 3;
-    color: #23527c;
+    color: #1c6de2;
     background-color: #eeeeee;
     border-color: #ddd; }
   .pagination > .active > a,
@@ -4490,7 +4498,7 @@ a.label:focus {
     padding: 1px 5px; }
   .list-group-item.active > .badge,
   .nav-pills > .active > a > .badge {
-    color: #337ab7;
+    color: #1c6de2;
     background-color: #fff; }
   .list-group-item > .badge {
     float: right; }
@@ -4562,7 +4570,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7; }
+  border-color: #1c6de2; }
 
 .alert {
   padding: 15px;

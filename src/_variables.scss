@@ -1,4 +1,5 @@
-$body-bg: #f4f8ff !default;
+/* Colors
+   ========================================================================== */
 
 $primary: #1c6de2 !default;
 $secondary: #233240 !default;
@@ -6,14 +7,17 @@ $secondary: #233240 !default;
 $black: #000 !default;
 $white: #fff !default;
 
-$shadow-small: 0 1px 1px rgba(black, 0.08) !default;
-$shadow-large: 0 2px 4px rgba(black, 0.12) !default;
+/* Scaffolding
+   ========================================================================== */
 
-$transition-duration: .3s !default;
-$transition-function: ease-in-out !default;
+$body-bg: #f4f8ff !default;
+$link-color: $primary;
+$link-hover-color: $primary;
 
-$border-radius-small: 2px !default;
+/* Typography
+   ========================================================================== */
 
+$font-family-sans-serif: "Open Sans", sans-serif;
 $font-size-h1: 20px;
 $font-size-h2: 18px;
 $font-size-h3: 16px;
@@ -21,6 +25,15 @@ $font-size-h4: 14px;
 $font-size-h5: 13px;
 $font-size-h6: 12px;
 
-$font-family-sans-serif: "Open Sans", sans-serif;
+/* Components
+   ========================================================================== */
+
+$border-radius-small: 2px !default;
+
+$shadow-small: 0 1px 1px rgba(black, 0.08) !default;
+$shadow-large: 0 2px 4px rgba(black, 0.12) !default;
+
+$transition-duration: .3s !default;
+$transition-function: ease-in-out !default;
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";

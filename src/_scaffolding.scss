@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	letter-spacing: -0.02rem;
+}
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";

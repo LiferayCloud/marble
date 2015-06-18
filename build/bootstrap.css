@@ -1,4 +1,5 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1032,6 +1033,16 @@ th {
 .glyphicon-menu-up:before {
   content: "\e260"; }
 
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  letter-spacing: -0.02rem; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1048,7 +1059,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -1189,19 +1200,19 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 36px; }
+  font-size: 20px; }
 
 h2, .h2 {
-  font-size: 30px; }
-
-h3, .h3 {
-  font-size: 24px; }
-
-h4, .h4 {
   font-size: 18px; }
 
-h5, .h5 {
+h3, .h3 {
+  font-size: 16px; }
+
+h4, .h4 {
   font-size: 14px; }
+
+h5, .h5 {
+  font-size: 13px; }
 
 h6, .h6 {
   font-size: 12px; }
@@ -5418,7 +5429,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5531,7 +5542,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;

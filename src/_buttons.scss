@@ -1,0 +1,35 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+.btn {
+	@include anim(opacity);
+	@include button-size(0, 32px, 12px, 32px, 2px);
+	border: none;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		opacity: .8;
+	}
+
+	&.disabled,
+  fieldset[disabled] & {
+		opacity: .4;
+		transition: none;
+  }
+}
+
+.btn-default {
+	&:hover,
+	&:focus,
+	&.focus {
+		background: $btn-default-bg;
+	}
+}
+
+.btn-primary {
+	&:hover,
+	&:focus,
+	&.focus {
+		background: $btn-primary-bg;
+	}
+}

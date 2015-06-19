@@ -1,5 +1,4 @@
-/* Colors
-   ========================================================================== */
+// Colors
 
 $primary: #1c6de2 !default;
 $secondary: #233240 !default;
@@ -7,16 +6,14 @@ $secondary: #233240 !default;
 $black: #000 !default;
 $white: #fff !default;
 
-/* Scaffolding
-   ========================================================================== */
+// Scaffolding
 
 $body-bg: #f4f8ff !default;
 $link-color: $primary;
 $link-hover-color: $primary;
 $link-hover-decoration: none;
 
-/* Typography
-   ========================================================================== */
+// Typography
 
 $font-family-sans-serif: "Open Sans", sans-serif;
 $font-size-h1: 20px;
@@ -26,8 +23,7 @@ $font-size-h4: 14px;
 $font-size-h5: 13px;
 $font-size-h6: 12px;
 
-/* Buttons
-   ========================================================================== */
+// Buttons
 
 $btn-default-color: white;
 $btn-default-bg: rgba($secondary, .4);
@@ -35,8 +31,7 @@ $btn-default-bg: rgba($secondary, .4);
 $btn-primary-color: white;
 $btn-primary-bg: $primary;
 
-/* Components
-   ========================================================================== */
+// Components
 
 $border-radius-small: 2px !default;
 

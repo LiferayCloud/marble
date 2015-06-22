@@ -8,7 +8,7 @@ $white: #fff !default;
 
 // Scaffolding
 
-$body-bg: #f4f8ff !default;
+$body-bg: rgba($primary, .1) !default;
 $link-color: $primary;
 $link-hover-color: $primary;
 $link-hover-decoration: none;

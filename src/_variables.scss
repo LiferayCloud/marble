@@ -16,6 +16,7 @@ $link-hover-decoration: none;
 // Typography
 
 $font-family-sans-serif: "Open Sans", sans-serif;
+$font-size-base: 12px;
 $font-size-h1: 20px;
 $font-size-h2: 18px;
 $font-size-h3: 16px;
@@ -38,6 +39,7 @@ $input-border: rgba($secondary, .2);
 $input-color: rgba(black, .4);
 $input-border-radius: 2px;
 $input-border-focus: $primary;
+$input-group-addon-bg: rgba($secondary, .05);
 
 // Components
 

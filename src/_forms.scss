@@ -1,1 +1,27 @@
-@import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/forms";
+
+label {
+	color: rgba($secondary, .7);
+	font-size: 12px;
+	font-weight: 400;
+	margin-bottom: 3px;
+}
+
+.form-control {
+	box-shadow: none;
+	font-size: 12px;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.help-block {
+	color: rgba($secondary, .4);
+	font-size: 11px;
+	margin-top: 2px;
+}
+
+.help-block.invalid {
+	color: $brand-danger;
+}

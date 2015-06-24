@@ -31,9 +31,19 @@ $btn-default-bg: rgba($secondary, .4);
 $btn-primary-color: white;
 $btn-primary-bg: $primary;
 
+// Forms
+
+$input-bg: rgba(white, .2);
+$input-border: rgba($secondary, .2);
+$input-color: rgba(black, .4);
+$input-border-radius: 2px;
+$input-border-focus: $primary;
+
 // Components
 
 $border-radius-small: 2px !default;
+
+// Bonus
 
 $shadow-small: 0 1px 1px rgba(black, 0.08) !default;
 $shadow-large: 0 2px 4px rgba(black, 0.12) !default;

@@ -2807,6 +2807,11 @@ label {
   font-size: 11px;
   margin-top: 2px; }
 
+.has-success .form-control:focus,
+.has-warning .form-control:focus,
+.has-error .form-control:focus {
+  box-shadow: none; }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;

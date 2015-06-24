@@ -19,3 +19,11 @@ label {
 	font-size: 11px;
 	margin-top: 2px;
 }
+
+.has-success,
+.has-warning,
+.has-error {
+  .form-control:focus {
+  	box-shadow: none;
+  }
+}

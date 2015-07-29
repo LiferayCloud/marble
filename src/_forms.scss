@@ -28,6 +28,14 @@ label {
   }
 }
 
+.primary {
+	color: #1c6de2;
+}
+
+.secondary {
+	color: #233240;
+}
+
 .has-success .help-block .primary {
 	color: $brand-success;
 }

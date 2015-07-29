@@ -2818,6 +2818,15 @@ label {
 .has-error .form-control:focus {
   box-shadow: none; }
 
+.has-success .help-block .primary {
+  color: #5cb85c; }
+
+.has-warning .help-block .primary {
+  color: #f0ad4e; }
+
+.has-danger .help-block .primary {
+  color: #d9534f; }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;

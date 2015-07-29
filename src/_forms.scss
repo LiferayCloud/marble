@@ -27,3 +27,15 @@ label {
   	box-shadow: none;
   }
 }
+
+.has-success .help-block .primary {
+	color: $brand-success;
+}
+
+.has-warning .help-block .primary {
+	color: $brand-warning;
+}
+
+.has-danger .help-block .primary {
+	color: $brand-danger;
+}

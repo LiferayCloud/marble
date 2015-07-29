@@ -1142,6 +1142,12 @@ body {
   text-size-adjust: 100%;
   letter-spacing: -0.02rem; }
 
+.primary {
+  color: #1c6de2; }
+
+.secondary {
+  color: #233240; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
@@ -2812,20 +2818,14 @@ label {
 .has-error .form-control:focus {
   box-shadow: none; }
 
-.primary {
-  color: #1c6de2; }
-
-.secondary {
-  color: #233240; }
-
 .has-success .help-block .primary {
-  color: #5cb85c; }
+  color: #3c763d; }
 
 .has-warning .help-block .primary {
-  color: #f0ad4e; }
+  color: #8a6d3b; }
 
-.has-danger .help-block .primary {
-  color: #d9534f; }
+.has-error .help-block .primary {
+  color: #a94442; }
 
 .btn {
   display: inline-block;

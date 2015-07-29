@@ -28,22 +28,14 @@ label {
   }
 }
 
-.primary {
-	color: #1c6de2;
-}
-
-.secondary {
-	color: #233240;
-}
-
 .has-success .help-block .primary {
-	color: $brand-success;
+	color: $state-success-text;
 }
 
 .has-warning .help-block .primary {
-	color: $brand-warning;
+	color: $state-warning-text;
 }
 
-.has-danger .help-block .primary {
-	color: $brand-danger;
+.has-error .help-block .primary {
+	color: $state-danger-text;
 }

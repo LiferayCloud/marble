@@ -92,35 +92,35 @@
   content: "\E012";
 }
 
-.icon-12-chart:before {
+.icon-12-check:before {
   content: "\E013";
 }
 
-.icon-12-check:before {
+.icon-12-clock:before {
   content: "\E014";
 }
 
-.icon-12-clock:before {
+.icon-12-close-long:before {
   content: "\E015";
 }
 
-.icon-12-close-long:before {
+.icon-12-close-short:before {
   content: "\E016";
 }
 
-.icon-12-close-short:before {
+.icon-12-collapse:before {
   content: "\E017";
 }
 
-.icon-12-collapse:before {
+.icon-12-collections:before {
   content: "\E018";
 }
 
-.icon-12-collections:before {
+.icon-12-expand:before {
   content: "\E019";
 }
 
-.icon-12-expand:before {
+.icon-12-external:before {
   content: "\E01A";
 }
 
@@ -132,86 +132,94 @@
   content: "\E01C";
 }
 
-.icon-12-graph:before {
+.icon-12-gear:before {
   content: "\E01D";
 }
 
-.icon-12-groups:before {
+.icon-12-graph:before {
   content: "\E01E";
 }
 
-.icon-12-hash:before {
+.icon-12-groups:before {
   content: "\E01F";
 }
 
-.icon-12-heart-fill:before {
+.icon-12-hash:before {
   content: "\E020";
 }
 
-.icon-12-heart:before {
+.icon-12-heart-fill:before {
   content: "\E021";
 }
 
-.icon-12-info-card:before {
+.icon-12-heart:before {
   content: "\E022";
 }
 
-.icon-12-journal:before {
+.icon-12-info-card:before {
   content: "\E023";
 }
 
-.icon-12-link:before {
+.icon-12-journal:before {
   content: "\E024";
 }
 
-.icon-12-network:before {
+.icon-12-link:before {
   content: "\E025";
 }
 
-.icon-12-people:before {
+.icon-12-menu:before {
   content: "\E026";
 }
 
-.icon-12-person-card-2:before {
+.icon-12-network:before {
   content: "\E027";
 }
 
-.icon-12-person-card-3:before {
+.icon-12-people:before {
   content: "\E028";
 }
 
-.icon-12-person:before {
+.icon-12-person-card-2:before {
   content: "\E029";
 }
 
-.icon-12-persons:before {
+.icon-12-person-card-3:before {
   content: "\E02A";
 }
 
-.icon-12-pin:before {
+.icon-12-person:before {
   content: "\E02B";
 }
 
-.icon-12-plus:before {
+.icon-12-persons:before {
   content: "\E02C";
 }
 
-.icon-12-post:before {
+.icon-12-pin:before {
   content: "\E02D";
 }
 
-.icon-12-region:before {
+.icon-12-plus:before {
   content: "\E02E";
 }
 
-.icon-12-signpost:before {
+.icon-12-post:before {
   content: "\E02F";
 }
 
-.icon-12-star:before {
+.icon-12-region:before {
   content: "\E030";
 }
 
-.icon-12-trash:before {
+.icon-12-signpost:before {
   content: "\E031";
+}
+
+.icon-12-star:before {
+  content: "\E032";
+}
+
+.icon-12-trash:before {
+  content: "\E033";
 }

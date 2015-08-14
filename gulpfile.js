@@ -3,11 +3,13 @@ var sass = require('gulp-sass');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
 
-gulp.task('build', ['fonts12', 'fonts16'], function() {
+gulp.task('build', function() {
 	return gulp.src('src/*.scss')
 		.pipe(sass({includePaths: ['bower_components']}))
 		.pipe(gulp.dest('build'));
 });
+
+gulp.task('fonts', ['fonts12', 'fonts16']);
 
 gulp.task('fonts12', function() {
 	return gulp.src('src/fonts/icon-12/*.svg')
@@ -37,4 +39,8 @@ gulp.task('fonts16', function() {
 			log: function() {}
 		}))
 		.pipe(gulp.dest('build/fonts/'));
+});
+
+gulp.task('watch', function() {
+	gulp.watch('src/*.scss', ['build']);
 });

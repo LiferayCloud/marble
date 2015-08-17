@@ -1,7 +1,8 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
 .btn {
-	@include button-size(0, 45px, 16px, 60px, 4px);
+	@include button-size(0, 43px, 16px, 58px, 4px);
+	font-weight: 600;
 }
 
 .btn-primary {
@@ -59,5 +60,5 @@
 // Sizes
 
 .btn-lg {
-	@include button-size(0, 78px, 16px, 60px, 4px);
+	@include button-size(0, 76px, 16px, 58px, 4px);
 }

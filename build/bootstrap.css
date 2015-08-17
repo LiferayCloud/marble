@@ -3299,10 +3299,11 @@ input[type="button"].btn-block {
   width: 100%; }
 
 .btn {
-  padding: 0 45px;
+  padding: 0 43px;
   font-size: 16px;
-  line-height: 60px;
-  border-radius: 4px; }
+  line-height: 58px;
+  border-radius: 4px;
+  font-weight: 600; }
 
 .btn-primary {
   -webkit-transition: all 0.3s ease-in-out;
@@ -3350,9 +3351,9 @@ input[type="button"].btn-block {
   top: 2px; }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0 78px;
+  padding: 0 76px;
   font-size: 16px;
-  line-height: 60px;
+  line-height: 58px;
   border-radius: 4px; }
 
 .fade {

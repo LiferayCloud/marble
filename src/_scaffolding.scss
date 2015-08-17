@@ -1,4 +1,5 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "variables";
 
 body {
   text-rendering: optimizeLegibility;
@@ -12,9 +13,17 @@ body {
 }
 
 .primary {
-	color: #1c6de2;
+	color: $primary;
+}
+
+.primary-bg {
+	background: $primary;
 }
 
 .secondary {
-	color: #233240;
+	color: $secondary;
+}
+
+.secondary-bg {
+	background: $secondary;
 }

@@ -1,6 +1,6 @@
 // Colors
 
-$primary: #1c6de2 !default;
+$primary: #233240 !default;
 $secondary: #233240 !default;
 
 $black: #000 !default;
@@ -29,15 +29,17 @@ $font-size-h6: 12px;
 
 // Buttons
 
-$btn-default-color: white;
-$btn-default-bg: rgba($secondary, .4);
+$btn-default-color: $white;
+$btn-default-bg: rgba($white, .1);
+$btn-default-border: $btn-default-bg;
 
-$btn-primary-color: white;
-$btn-primary-bg: $primary;
+$btn-primary-color: $white;
+$btn-primary-bg: rgba($primary, .8);
+$btn-default-border: $btn-primary-bg;
 
 // Forms
 
-$input-bg: rgba(white, .2);
+$input-bg: rgba($white, .2);
 $input-border: rgba($secondary, .2);
 $input-color: rgba(black, .4);
 $input-border-radius: 2px;

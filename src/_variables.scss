@@ -31,11 +31,14 @@ $font-size-h6: 12px;
 
 $btn-default-color: $white;
 $btn-default-bg: rgba($white, .1);
-$btn-default-border: $btn-default-bg;
+$btn-default-border: transparent;
 
 $btn-primary-color: $white;
 $btn-primary-bg: rgba($primary, .8);
-$btn-default-border: $btn-primary-bg;
+$btn-primary-border: transparent;
+
+$btn-success-border: transparent;
+$btn-danger-border: $brand-danger;
 
 // Forms
 

@@ -2,7 +2,6 @@
 
 .btn {
 	@include button-size(0, 43px, 16px, 58px, 4px);
-	font-weight: 600;
 }
 
 .btn-primary {
@@ -61,4 +60,5 @@
 
 .btn-lg {
 	@include button-size(0, 76px, 16px, 58px, 4px);
+	font-weight: 600;
 }

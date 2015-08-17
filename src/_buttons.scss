@@ -10,12 +10,18 @@
 	&.focus {
 		opacity: .8;
 	}
+// Icons
 
 	&.disabled,
   fieldset[disabled] & {
 		opacity: .4;
 		transition: none;
   }
+.btn span[class^="icon-16-"],
+.btn span[class*="icon-16-"] {
+	margin-right: 10px;
+	position: relative;
+	top: 2px;
 }
 
 .btn-default {

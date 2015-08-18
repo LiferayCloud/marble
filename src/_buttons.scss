@@ -2,6 +2,20 @@
 
 .btn {
 	@include button-size(0, 43px, 16px, 58px, 4px);
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			outline: none;
+		}
+	}
+
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
 }
 
 .btn-primary {
@@ -12,6 +26,16 @@
 	&.focus {
 		background-color: rgba($primary, .7);
 		border-color: $primary;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($primary, .7);
+			border-color: $primary;
+		}
 	}
 }
 
@@ -24,15 +48,36 @@
 		background-color: rgba($brand-success, .8);
 		border-color: rgba($brand-success, .99);
 	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($brand-success, .8);
+			border-color: rgba($brand-success, .99);
+		}
+	}
 }
 
 .btn-danger {
-	@include anim(background-color);
+	@include anim(all);
 
 	&:hover,
 	&:focus,
 	&.focus {
 		background-color: rgba($brand-danger, .8);
+		border-color: rgba($brand-danger, .99);
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($brand-danger, .8);
+			border-color: rgba($brand-danger, .99);
+		}
 	}
 }
 
@@ -44,6 +89,16 @@
 	&.focus {
 		background-color: rgba($white, .15);
 		border-color: rgba($white, .6);
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($white, .15);
+			border-color: rgba($white, .6);
+		}
 	}
 }
 

@@ -11,6 +11,7 @@ label {
 	padding: 20px 27px;
 
 	&:focus {
+		border-color: $brand-success;
 		box-shadow: none;
 	}
 }

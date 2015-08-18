@@ -45,7 +45,8 @@ $btn-danger-border: $brand-danger;
 $input-bg: rgba($white, .2);
 $input-border-focus: $primary;
 $input-border: rgba($secondary, .2);
-$input-color: rgba($black, .4);
+$input-color: $primary;
+$input-color-placeholder: rgba($primary, .3);
 $input-group-addon-bg: transparent;
 $input-height-base: 52px;
 

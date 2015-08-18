@@ -11,7 +11,7 @@ $brand-danger: #e64545;
 
 // Scaffolding
 
-$body-bg: rgba($secondary, .04) !default;
+$body-bg: $white;
 $link-color: $primary;
 $link-hover-color: $primary;
 $link-hover-decoration: none;
@@ -19,7 +19,7 @@ $link-hover-decoration: none;
 // Typography
 
 $font-family-sans-serif: "Open Sans", sans-serif;
-$font-size-base: 12px;
+$font-size-base: 14px;
 $font-size-h1: 20px;
 $font-size-h2: 18px;
 $font-size-h3: 16px;
@@ -43,11 +43,16 @@ $btn-danger-border: $brand-danger;
 // Forms
 
 $input-bg: rgba($white, .2);
-$input-border: rgba($secondary, .2);
-$input-color: rgba(black, .4);
-$input-border-radius: 2px;
 $input-border-focus: $primary;
+$input-border: rgba($secondary, .2);
+$input-color: rgba($black, .4);
 $input-group-addon-bg: rgba($secondary, .05);
+$input-height-base: 52px;
+
+// Form states
+
+$state-success-text: $brand-success;
+$state-danger-text: $brand-danger;
 
 // Components
 
@@ -55,8 +60,8 @@ $border-radius-small: 2px !default;
 
 // Bonus
 
-$shadow-small: 0 1px 1px rgba(black, 0.08) !default;
-$shadow-large: 0 2px 4px rgba(black, 0.12) !default;
+$shadow-small: 0 1px 1px rgba($black, 0.08) !default;
+$shadow-large: 0 2px 4px rgba($black, 0.12) !default;
 
 $transition-duration: .3s !default;
 $transition-function: ease-in-out !default;

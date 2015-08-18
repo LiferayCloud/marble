@@ -3735,7 +3735,7 @@ tbody.collapse.in {
   line-height: 1;
   color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  background-color: rgba(35, 50, 64, 0.05);
+  background-color: transparent;
   border: 1px solid rgba(35, 50, 64, 0.2);
   border-radius: 4px; }
   .input-group-addon.input-sm, .input-group-sm > .input-group-addon,
@@ -3797,6 +3797,19 @@ tbody.collapse.in {
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
+
+.input-group-addon {
+  border: 0;
+  color: rgba(35, 50, 64, 0.3); }
+
+.input-group-addon:first-child {
+  padding-left: 0; }
+
+.input-group-addon:last-child {
+  padding-right: 0; }
+
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 4px; }
 
 .nav {
   margin-bottom: 0;

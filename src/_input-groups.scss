@@ -12,7 +12,7 @@
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  @include border-right-radius($border-radius-base);
+	@include border-right-radius($border-radius-base);
 }
 
 .input-group-addon:first-child {
@@ -26,7 +26,7 @@
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  @include border-left-radius($border-radius-base);
+	@include border-left-radius($border-radius-base);
 }
 
 .input-group-addon:last-child {
@@ -34,5 +34,40 @@
 }
 
 .input-group .form-control:not(:first-child):not(:last-child) {
-  border-radius: $border-radius-base;
+	border-radius: $border-radius-base;
+}
+
+.input-inner-addon {
+	position: relative;
+}
+
+.input-inner-addon [class^="icon-12-"],
+.input-inner-addon [class*="icon-12-"],
+.input-inner-addon [class^="icon-16-"],
+.input-inner-addon [class*="icon-16-"] {
+	@include anim(color);
+	color: rgba($primary, .3);
+	position: absolute;
+	right: 27px;
+}
+
+.input-inner-addon [class^="icon-12-"]:hover,
+.input-inner-addon [class*="icon-12-"]:hover,
+.input-inner-addon [class^="icon-16-"]:hover,
+.input-inner-addon [class*="icon-16-"]:hover {
+	color: rgba($primary, .6);
+}
+
+.input-inner-addon [class^="icon-12-"],
+.input-inner-addon [class*="icon-12-"] {
+	top: 21px;
+}
+
+.input-inner-addon [class^="icon-16-"],
+.input-inner-addon [class*="icon-16-"] {
+	top: 18px;
+}
+
+.input-inner-addon .form-control {
+	padding: 20px 60px 20px 27px;
 }

@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Demo: Forms</title>
+	<title>Demo: Input groups</title>
 
 	<link rel="stylesheet" href="../build/bootstrap.css">
+	<link rel="stylesheet" href="../build/fonts/icon-12.css">
+	<link rel="stylesheet" href="../build/fonts/icon-16.css">
 	<style>
 		body {
 			margin: 24px auto;
@@ -15,22 +17,43 @@
 <body>
 	<form>
 		<div class="form-group">
+			<label>Input with preffix</label>
 			<div class="input-group">
 				<div class="input-group-addon">http://</div>
-				<input id="input-addon" type="text" class="form-control" placeholder="myapp">
+				<input type="text" class="form-control" placeholder="app-url">
 			</div>
 		</div>
+
 		<div class="form-group">
+			<label>Input with suffix</label>
 			<div class="input-group">
-				<input id="input-addon" type="text" class="form-control" placeholder="myapp">
+				<input type="text" class="form-control" placeholder="app-url">
 				<div class="input-group-addon">.appland.com</div>
 			</div>
 		</div>
+
 		<div class="form-group">
+			<label>Input with preffix and suffix</label>
 			<div class="input-group">
 				<div class="input-group-addon">http://</div>
-				<input id="input-addon" type="text" class="form-control" placeholder="myapp">
+				<input type="text" class="form-control" placeholder="app-url">
 				<div class="input-group-addon">.appland.com</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Input with icon 12</label>
+			<div class="input-inner-addon">
+				<input class="form-control" type="text" placeholder="app-url">
+				<span class="icon-12-person"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Input with icon 16</label>
+			<div class="input-inner-addon">
+				<input class="form-control" type="text" placeholder="app-url">
+				<span class="icon-16-info"></span>
 			</div>
 		</div>
 	</form>

@@ -3875,6 +3875,37 @@ tbody.collapse.in {
 .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 4px; }
 
+.input-inner-addon {
+  position: relative; }
+
+.input-inner-addon [class^="icon-12-"],
+.input-inner-addon [class*="icon-12-"],
+.input-inner-addon [class^="icon-16-"],
+.input-inner-addon [class*="icon-16-"] {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  color: rgba(35, 50, 64, 0.3);
+  position: absolute;
+  right: 27px; }
+
+.input-inner-addon [class^="icon-12-"]:hover,
+.input-inner-addon [class*="icon-12-"]:hover,
+.input-inner-addon [class^="icon-16-"]:hover,
+.input-inner-addon [class*="icon-16-"]:hover {
+  color: rgba(35, 50, 64, 0.6); }
+
+.input-inner-addon [class^="icon-12-"],
+.input-inner-addon [class*="icon-12-"] {
+  top: 21px; }
+
+.input-inner-addon [class^="icon-16-"],
+.input-inner-addon [class*="icon-16-"] {
+  top: 18px; }
+
+.input-inner-addon .form-control {
+  padding: 20px 60px 20px 27px; }
+
 .nav {
   margin-bottom: 0;
   padding-left: 0;

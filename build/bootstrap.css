@@ -3401,6 +3401,13 @@ input[type="button"].btn-block {
   border-radius: 4px;
   font-weight: 600; }
 
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 50px;
+  border-radius: 4px;
+  font-weight: 600; }
+
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;

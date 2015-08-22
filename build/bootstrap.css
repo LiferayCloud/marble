@@ -4661,16 +4661,16 @@ a.label:focus {
   cursor: pointer; }
 
 .label-default {
-  background-color: #777777; }
+  background-color: #fff; }
   .label-default[href]:hover,
   .label-default[href]:focus {
-    background-color: #5e5e5e; }
+    background-color: #e6e6e6; }
 
 .label-primary {
-  background-color: #337ab7; }
+  background-color: rgba(35, 50, 64, 0.8); }
   .label-primary[href]:hover,
   .label-primary[href]:focus {
-    background-color: #286090; }
+    background-color: rgba(17, 24, 31, 0.8); }
 
 .label-success {
   background-color: #77d55a; }
@@ -4695,6 +4695,21 @@ a.label:focus {
   .label-danger[href]:hover,
   .label-danger[href]:focus {
     background-color: #db1d1d; }
+
+.label {
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block; }
+
+.label-default {
+  border: 1px solid rgba(35, 50, 64, 0.3);
+  color: rgba(35, 50, 64, 0.5);
+  padding: 10px 12px; }
+
+.label-primary {
+  padding: 11px 13px; }
 
 .badge {
   display: inline-block;

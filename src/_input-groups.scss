@@ -1,41 +1,25 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
 
+// Addon -----------------------------------------------------------------------
+
 .input-group-addon {
 	border: 0;
 	color: rgba($primary, .3);
-}
-
-.input-group .form-control:first-child,
-.input-group-addon:first-child,
-.input-group-btn:first-child > .btn,
-.input-group-btn:first-child > .btn-group > .btn,
-.input-group-btn:first-child > .dropdown-toggle,
-.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-	@include border-right-radius($border-radius-base);
 }
 
 .input-group-addon:first-child {
 	padding-left: 0;
 }
 
-.input-group .form-control:last-child,
-.input-group-addon:last-child,
-.input-group-btn:last-child > .btn,
-.input-group-btn:last-child > .btn-group > .btn,
-.input-group-btn:last-child > .dropdown-toggle,
-.input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-	@include border-left-radius($border-radius-base);
-}
-
 .input-group-addon:last-child {
 	padding-right: 0;
 }
 
-.input-group .form-control:not(:first-child):not(:last-child) {
-	border-radius: $border-radius-base;
+.input-group-addon-input {
+	border-radius: $border-radius-base !important;
 }
+
+// Inner Addon -----------------------------------------------------------------
 
 .input-inner-addon {
 	position: relative;
@@ -48,7 +32,28 @@
 	@include anim(color);
 	color: rgba($primary, .3);
 	position: absolute;
+}
+
+.input-inner-addon-left [class^="icon-12-"],
+.input-inner-addon-left [class*="icon-12-"],
+.input-inner-addon-left [class^="icon-16-"],
+.input-inner-addon-left [class*="icon-16-"] {
 	right: 27px;
+}
+
+.input-inner-addon-left .form-control {
+	padding: 20px 60px 20px 27px;
+}
+
+.input-inner-addon-right [class^="icon-12-"],
+.input-inner-addon-right [class*="icon-12-"],
+.input-inner-addon-right [class^="icon-16-"],
+.input-inner-addon-right [class*="icon-16-"] {
+	left: 27px;
+}
+
+.input-inner-addon-right .form-control {
+	padding: 20px 27px 20px 60px;
 }
 
 .input-inner-addon [class^="icon-12-"]:hover,
@@ -68,6 +73,32 @@
 	top: 18px;
 }
 
-.input-inner-addon .form-control {
-	padding: 20px 60px 20px 27px;
+// Button Addon -----------------------------------------------------------------
+
+.input-group-btn {
+	z-index: 3;
+}
+
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group {
+	margin-right: -2px;
+}
+
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+	margin-left: -2px;
+}
+
+.input-btn-right {
+	border-bottom-left-radius: 4px !important;
+	border-top-left-radius: 4px !important;
+	border-bottom-right-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+}
+
+.input-btn-left {
+	border-bottom-left-radius: 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-right-radius: 4px !important;
+	border-top-right-radius: 4px !important;
 }

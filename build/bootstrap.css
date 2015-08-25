@@ -2811,7 +2811,7 @@ label {
 
 .form-control {
   box-shadow: none;
-  padding: 20px 27px; }
+  padding: 20px; }
   .form-control:focus {
     border-color: #77d55a;
     box-shadow: none; }
@@ -3879,19 +3879,19 @@ tbody.collapse.in {
 .input-inner-addon-left [class*="icon-12-"],
 .input-inner-addon-left [class^="icon-16-"],
 .input-inner-addon-left [class*="icon-16-"] {
-  right: 27px; }
+  right: 20px; }
 
 .input-inner-addon-left .form-control {
-  padding: 20px 60px 20px 27px; }
+  padding: 20px 50px 20px 20px; }
 
 .input-inner-addon-right [class^="icon-12-"],
 .input-inner-addon-right [class*="icon-12-"],
 .input-inner-addon-right [class^="icon-16-"],
 .input-inner-addon-right [class*="icon-16-"] {
-  left: 27px; }
+  left: 20px; }
 
 .input-inner-addon-right .form-control {
-  padding: 20px 27px 20px 60px; }
+  padding: 20px 20px 20px 50px; }
 
 .input-inner-addon [class^="icon-12-"],
 .input-inner-addon [class*="icon-12-"] {

@@ -56,13 +56,6 @@
 	padding: 20px 27px 20px 60px;
 }
 
-.input-inner-addon [class^="icon-12-"]:hover,
-.input-inner-addon [class*="icon-12-"]:hover,
-.input-inner-addon [class^="icon-16-"]:hover,
-.input-inner-addon [class*="icon-16-"]:hover {
-	color: rgba($primary, .6);
-}
-
 .input-inner-addon [class^="icon-12-"],
 .input-inner-addon [class*="icon-12-"] {
 	top: 21px;
@@ -71,6 +64,17 @@
 .input-inner-addon [class^="icon-16-"],
 .input-inner-addon [class*="icon-16-"] {
 	top: 18px;
+}
+
+.input-inner-icon-helper {
+	cursor: help;
+}
+
+.input-inner-icon-helper:hover,
+.input-inner-icon-helper:hover,
+.input-inner-icon-helper:hover,
+.input-inner-icon-helper:hover {
+	color: rgba($primary, .6);
 }
 
 // Button Addon -----------------------------------------------------------------

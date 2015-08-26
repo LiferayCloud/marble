@@ -40,6 +40,10 @@ $btn-primary-border: transparent;
 $btn-success-border: transparent;
 $btn-danger-border: $brand-danger;
 
+$btn-inverse-color: $white;
+$btn-inverse-bg: rgba($white, .1);
+$btn-inverse-border: transparent;
+
 // Forms
 
 $input-bg: rgba($white, .2);

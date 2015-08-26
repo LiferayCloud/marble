@@ -81,14 +81,18 @@
 	}
 }
 
-.btn-default {
+.btn-inverse {
 	@include anim(all);
+	color: $btn-inverse-color;
+	background: $btn-inverse-bg;
+	border-color: $btn-inverse-border;
 
 	&:hover,
 	&:focus,
 	&.focus {
 		background-color: rgba($white, .15);
 		border-color: rgba($white, .6);
+		color: $btn-inverse-color;
 	}
 
 	&:active,
@@ -98,6 +102,7 @@
 		&.focus {
 			background-color: rgba($white, .15);
 			border-color: rgba($white, .6);
+			color: $btn-inverse-color;
 		}
 	}
 }

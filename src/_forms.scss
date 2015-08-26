@@ -16,6 +16,12 @@ label {
 	}
 }
 
+.form-control-borderless {
+	border: 0;
+	color: rgba($primary, .8);
+	outline: 0;
+}
+
 .help-block {
 	color: rgba($secondary, .4);
 	font-size: 11px;

@@ -2816,6 +2816,11 @@ label {
     border-color: #77d55a;
     box-shadow: none; }
 
+.form-control-borderless {
+  border: 0;
+  color: rgba(35, 50, 64, 0.8);
+  outline: 0; }
+
 .help-block {
   color: rgba(35, 50, 64, 0.4);
   font-size: 11px;

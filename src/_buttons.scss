@@ -18,6 +18,27 @@
 	}
 }
 
+.btn-default {
+	@include anim(all);
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($primary, .15);
+		border-color: rgba($primary, .2);
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($primary, .15);
+			border-color: rgba($primary, .2);
+		}
+	}
+}
+
 .btn-primary {
 	@include anim(all);
 

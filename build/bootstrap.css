@@ -3436,6 +3436,11 @@ input[type="button"].btn-block {
   border-radius: 4px;
   font-weight: 600; }
 
+.btn-transparent {
+  background: transparent;
+  border: 0;
+  padding: 0; }
+
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -3785,14 +3790,14 @@ tbody.collapse.in {
   padding: 0 45px;
   text-transform: uppercase; }
 
-.btn-label {
+.btn-group-label {
   -webkit-transition: top 0.3s ease-in-out;
   -o-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
   position: relative;
   top: 0; }
 
-.btn-icon {
+.btn-group-icon {
   -webkit-transition: top 0.3s ease-in-out;
   -o-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
@@ -3828,10 +3833,10 @@ tbody.collapse.in {
 .btn-group-selected.btn-delete-bg {
   background: #ff5653; }
 
-.btn-group-selected .btn-label {
+.btn-group-selected .btn-group-label {
   top: -10px; }
 
-.btn-group-selected .btn-icon {
+.btn-group-selected .btn-group-icon {
   top: 32px; }
 
 .input-group {

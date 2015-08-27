@@ -148,3 +148,11 @@
 	@include button-size(0, 20px, 14px, 50px, 4px);
 	font-weight: 600;
 }
+
+// Transparent
+
+.btn-transparent {
+	background: transparent;
+	border: 0;
+	padding: 0;
+}

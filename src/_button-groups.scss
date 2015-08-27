@@ -12,13 +12,13 @@
 	text-transform: uppercase;
 }
 
-.btn-label {
+.btn-group-label {
 	@include anim(top);
 	position: relative;
 	top: 0;
 }
 
-.btn-icon {
+.btn-group-icon {
 	@include anim(top);
 	background: $white;
 	border-radius: 50%;
@@ -45,10 +45,10 @@
 .btn-group-selected.btn-patch-bg  { background: $http-patch;  }
 .btn-group-selected.btn-delete-bg { background: $http-delete; }
 
-.btn-group-selected .btn-label {
+.btn-group-selected .btn-group-label {
 	top: -10px;
 }
 
-.btn-group-selected .btn-icon {
+.btn-group-selected .btn-group-icon {
 	top: 32px;
 }

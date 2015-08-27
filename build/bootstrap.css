@@ -3504,7 +3504,7 @@ tbody.collapse.in {
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(35, 50, 64, 0.12);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -3523,14 +3523,14 @@ tbody.collapse.in {
     clear: both;
     font-weight: normal;
     line-height: 1.42857;
-    color: #333333;
+    color: rgba(35, 50, 64, 0.5);
     white-space: nowrap; }
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #262626;
-  background-color: #f5f5f5; }
+  color: rgba(35, 50, 64, 0.9);
+  background-color: none; }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3607,6 +3607,29 @@ tbody.collapse.in {
   .navbar-right .dropdown-menu-left {
     left: 0;
     right: auto; } }
+
+.dropdown-menu {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  min-width: initial;
+  position: absolute; }
+
+.dropdown-menu > li {
+  margin: 0; }
+  .dropdown-menu > li:first-child {
+    margin-top: 25px; }
+  .dropdown-menu > li:last-child {
+    margin-bottom: 25px; }
+
+.dropdown-menu > li > a {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  display: block;
+  font-size: 14px;
+  padding: 10px 40px;
+  text-decoration: none; }
 
 .btn-group,
 .btn-group-vertical {

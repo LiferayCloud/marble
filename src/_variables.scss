@@ -68,6 +68,13 @@ $border-radius-small: 2px !default;
 $label-default-bg: $white;
 $label-primary-bg: rgba($primary, .8);
 
+// Dropdowns
+
+$dropdown-border: rgba($primary, 0.12);
+$dropdown-link-color: rgba($primary, .5);
+$dropdown-link-hover-color: rgba($primary, .9);
+$dropdown-link-hover-bg: none;
+
 // Bonus
 
 $shadow-small: 0 1px 1px rgba($black, 0.08) !default;

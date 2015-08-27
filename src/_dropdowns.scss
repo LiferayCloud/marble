@@ -1,0 +1,30 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "variables";
+
+.dropdown-menu {
+	background: $white;
+	border-radius: $border-radius-base;
+	box-shadow: 0 1px 8px rgba($black, 0.08);
+	min-width: initial;
+	position: absolute;
+}
+
+.dropdown-menu > li {
+	margin: 0;
+
+	&:first-child {
+		margin-top: 25px;
+	}
+
+	&:last-child {
+		margin-bottom: 25px;
+	}
+}
+
+.dropdown-menu > li > a {
+	@include anim(color);
+	display: block;
+	font-size: 14px;
+	padding: 10px 40px;
+	text-decoration: none;
+}

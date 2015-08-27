@@ -3835,6 +3835,7 @@ tbody.collapse.in {
 
 .btn-group-selected,
 .btn-group-selected:hover {
+  background: #233240;
   color: #fff;
   font-weight: 700; }
 

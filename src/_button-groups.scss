@@ -34,6 +34,7 @@
 
 .btn-group-selected,
 .btn-group-selected:hover {
+	background: $primary;
 	color: $white;
 	font-weight: 700;
 }

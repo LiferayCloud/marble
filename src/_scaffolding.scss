@@ -27,3 +27,27 @@ body {
 .secondary-bg {
 	background: $secondary;
 }
+
+.http-get-bg {
+	background: $http-get;
+}
+
+.http-head-bg {
+	background: $http-head;
+}
+
+.http-post-bg {
+	background: $http-post;
+}
+
+.http-put-bg {
+	background: $http-put;
+}
+
+.http-patch-bg {
+	background: $http-patch;
+}
+
+.http-delete-bg {
+	background: $http-delete;
+}

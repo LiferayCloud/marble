@@ -1154,6 +1154,24 @@ body {
 .secondary-bg {
   background: #233240; }
 
+.http-get-bg {
+  background: #0080ff; }
+
+.http-head-bg {
+  background: #9343ff; }
+
+.http-post-bg {
+  background: #6dd64d; }
+
+.http-put-bg {
+  background: #ffc021; }
+
+.http-patch-bg {
+  background: #35d6c3; }
+
+.http-delete-bg {
+  background: #ff5653; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
@@ -3859,24 +3877,6 @@ tbody.collapse.in {
   background: #233240;
   color: #fff;
   font-weight: 700; }
-
-.btn-group-selected.btn-get-bg {
-  background: #0080ff; }
-
-.btn-group-selected.btn-head-bg {
-  background: #9343ff; }
-
-.btn-group-selected.btn-post-bg {
-  background: #6dd64d; }
-
-.btn-group-selected.btn-put-bg {
-  background: #ffc021; }
-
-.btn-group-selected.btn-patch-bg {
-  background: #35d6c3; }
-
-.btn-group-selected.btn-delete-bg {
-  background: #ff5653; }
 
 .btn-group-selected .btn-group-label {
   top: -10px; }

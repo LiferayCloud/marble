@@ -39,13 +39,6 @@
 	font-weight: 700;
 }
 
-.btn-group-selected.btn-get-bg    { background: $http-get;    }
-.btn-group-selected.btn-head-bg   { background: $http-head;   }
-.btn-group-selected.btn-post-bg   { background: $http-post;   }
-.btn-group-selected.btn-put-bg    { background: $http-put;    }
-.btn-group-selected.btn-patch-bg  { background: $http-patch;  }
-.btn-group-selected.btn-delete-bg { background: $http-delete; }
-
 .btn-group-selected .btn-group-label {
 	top: -10px;
 }

@@ -9,6 +9,13 @@ $white: #fff !default;
 $brand-success: #77d55a;
 $brand-danger: #e64545;
 
+$http-get    : #0080ff;
+$http-head   : #9343ff;
+$http-post   : #6dd64d;
+$http-put    : #ffc021;
+$http-patch  : #35d6c3;
+$http-delete : #ff5653;
+
 // Scaffolding
 
 $body-bg: $white;
@@ -82,14 +89,5 @@ $shadow-large: 0 2px 4px rgba($black, 0.12) !default;
 
 $transition-duration: .3s !default;
 $transition-function: ease-in-out !default;
-
-// HTTP Methods
-
-$http-get    : #0080ff;
-$http-head   : #9343ff;
-$http-post   : #6dd64d;
-$http-put    : #ffc021;
-$http-patch  : #35d6c3;
-$http-delete : #ff5653;
 
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";

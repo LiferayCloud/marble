@@ -17,11 +17,34 @@
 </head>
 <body>
 	<div class="row">
-		<div class="col-md-2">
-			<h1>Dropdown + button</h1>
+		<div class="col-md-4">
+			<h1>Dropdown + input group left</h1>
+
+			<div class="input-group">
+				<div class="input-group-btn">
+					<div class="dropdown open">
+						<button class="btn btn-default btn-sm dropdown-select dropdown-select-group-left" type="button">
+							GET
+							<span class="icon-12-arrow-down-short"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">GET</a></li>
+							<li><a href="#">HEAD</a></li>
+							<li><a href="#">POST</a></li>
+							<li><a href="#">PUT</a></li>
+							<li><a href="#">PATCH</a></li>
+							<li><a href="#">DELETE</a></li>
+						</ul>
+					</div>
+				</div>
+				<input type="text" class="form-control" aria-label="...">
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h1>Dropdown + button input</h1>
 
 			<div class="dropdown open">
-				<button class="btn btn-default dropdown-select" type="button">
+				<button class="btn btn-default form-control dropdown-select" type="button">
 					Type
 					<span class="icon-12-arrow-down-short"></span>
 				</button>
@@ -34,16 +57,17 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-10">
-			<h1>Dropdown + input group</h1>
+		<div class="col-md-4">
+			<h1>Dropdown + input group left</h1>
 
 			<div class="input-group">
+				<input type="text" class="form-control" aria-label="...">
 				<div class="input-group-btn">
-					<button class="btn btn-default btn-sm dropdown-select" type="button">
-						GET
-						<span class="icon-12-arrow-down-short"></span>
-					</button>
 					<div class="dropdown open">
+						<button class="btn btn-default btn-sm dropdown-select dropdown-select-group-right" type="button">
+							GET
+							<span class="icon-12-arrow-down-short"></span>
+						</button>
 						<ul class="dropdown-menu">
 							<li><a href="#">GET</a></li>
 							<li><a href="#">HEAD</a></li>
@@ -54,7 +78,6 @@
 						</ul>
 					</div>
 				</div>
-				<input type="text" class="form-control" aria-label="...">
 			</div>
 		</div>
 	</div>

@@ -3674,17 +3674,28 @@ tbody.collapse.in {
 .dropdown-select:active:focus {
   border-color: #77d55a; }
 
-.dropdown > .dropdown-select {
+.dropdown-select.form-control {
   background: white;
   padding: 0 20px;
   line-height: 51px;
-  display: block;
-  width: 100%;
   text-align: left; }
 
-.dropdown > .dropdown-select .icon-12-arrow-down-short {
+.dropdown-select .icon-12-arrow-down-short {
+  margin-left: 10px; }
+
+.dropdown-select.form-control .icon-12-arrow-down-short {
   float: right;
   line-height: 51px; }
+
+.dropdown-select-group-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: -2px; }
+
+.dropdown-select-group-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -2px; }
 
 .btn-group,
 .btn-group-vertical {

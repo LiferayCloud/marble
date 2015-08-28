@@ -5,6 +5,7 @@
 	background: $white;
 	border-radius: $border-radius-base;
 	box-shadow: 0 1px 8px rgba($black, 0.08);
+	margin: -10px 0 0 10px;
 	min-width: initial;
 	position: absolute;
 }
@@ -27,4 +28,25 @@
 	font-size: 14px;
 	padding: 10px 40px;
 	text-decoration: none;
+}
+
+// Dropdown select -------------------------------------------------------------
+
+.dropdown > .dropdown-select {
+	background: white;
+	padding: 0 20px;
+	line-height: 51px;
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
+.dropdown > .dropdown-select .icon-12-arrow-down-short {
+	float: right;
+	line-height: 51px;
+}
+
+.dropdown-select {
+	color: rgba($primary, .6);
+	font-weight: 400;
 }

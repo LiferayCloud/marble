@@ -1,13 +1,15 @@
 // Colors
 
-$primary: #233240 !default;
+$primary  : #233240 !default;
 $secondary: #233240 !default;
 
 $black: #000 !default;
 $white: #fff !default;
 
-$brand-success: #77d55a;
-$brand-danger: #e64545;
+$brand-primary : $primary;
+$brand-success : #77d55a;
+$brand-warning : #fc9409;
+$brand-danger  : #e64545;
 
 $http-get    : #0080ff;
 $http-head   : #9343ff;

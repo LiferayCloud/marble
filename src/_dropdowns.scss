@@ -32,6 +32,24 @@
 
 // Dropdown select -------------------------------------------------------------
 
+.dropdown-select {
+	color: rgba($primary, .6);
+	font-weight: 400;
+}
+
+.dropdown-select.btn-default:hover,
+.dropdown-select.btn-default:active,
+.dropdown-select.btn-default:focus,
+.dropdown-select.btn-default:active:focus {
+	background: white;
+}
+
+.dropdown-select:active,
+.dropdown-select:focus,
+.dropdown-select:active:focus {
+	border-color: $brand-success;
+}
+
 .dropdown > .dropdown-select {
 	background: white;
 	padding: 0 20px;
@@ -44,9 +62,4 @@
 .dropdown > .dropdown-select .icon-12-arrow-down-short {
 	float: right;
 	line-height: 51px;
-}
-
-.dropdown-select {
-	color: rgba($primary, .6);
-	font-weight: 400;
 }

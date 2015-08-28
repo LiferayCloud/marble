@@ -3659,6 +3659,21 @@ tbody.collapse.in {
   padding: 10px 40px;
   text-decoration: none; }
 
+.dropdown-select {
+  color: rgba(35, 50, 64, 0.6);
+  font-weight: 400; }
+
+.dropdown-select.btn-default:hover,
+.dropdown-select.btn-default:active,
+.dropdown-select.btn-default:focus,
+.dropdown-select.btn-default:active:focus {
+  background: white; }
+
+.dropdown-select:active,
+.dropdown-select:focus,
+.dropdown-select:active:focus {
+  border-color: #77d55a; }
+
 .dropdown > .dropdown-select {
   background: white;
   padding: 0 20px;
@@ -3670,10 +3685,6 @@ tbody.collapse.in {
 .dropdown > .dropdown-select .icon-12-arrow-down-short {
   float: right;
   line-height: 51px; }
-
-.dropdown-select {
-  color: rgba(35, 50, 64, 0.6);
-  font-weight: 400; }
 
 .btn-group,
 .btn-group-vertical {

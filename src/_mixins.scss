@@ -5,3 +5,13 @@
        -o-transition: $property $transition-duration $transition-function;
           transition: $property $transition-duration $transition-function;
 }
+
+@mixin selection {
+	&::selection {
+		background: rgba($primary, .1);
+	}
+
+	&::-moz-selection {
+		background: rgba($primary, .1);
+	}
+}

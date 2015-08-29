@@ -56,7 +56,7 @@
   content: "\E009";
 }
 
-.icon-12-balloon-comments-fill:before {
+.icon-12-balloon-comments-inline:before {
   content: "\E00A";
 }
 
@@ -84,75 +84,75 @@
   content: "\E010";
 }
 
-.icon-12-bullet:before {
+.icon-12-camera:before {
   content: "\E011";
 }
 
-.icon-12-camera:before {
+.icon-12-card:before {
   content: "\E012";
 }
 
-.icon-12-card:before {
+.icon-12-check:before {
   content: "\E013";
 }
 
-.icon-12-check:before {
+.icon-12-clock:before {
   content: "\E014";
 }
 
-.icon-12-clock:before {
+.icon-12-close-long:before {
   content: "\E015";
 }
 
-.icon-12-close-long:before {
+.icon-12-close-short:before {
   content: "\E016";
 }
 
-.icon-12-close-short:before {
+.icon-12-collapse:before {
   content: "\E017";
 }
 
-.icon-12-collapse:before {
+.icon-12-collections:before {
   content: "\E018";
 }
 
-.icon-12-collections:before {
+.icon-12-expand:before {
   content: "\E019";
 }
 
-.icon-12-expand:before {
+.icon-12-external:before {
   content: "\E01A";
 }
 
-.icon-12-external:before {
+.icon-12-flag-small:before {
   content: "\E01B";
 }
 
-.icon-12-flag-small:before {
+.icon-12-flag:before {
   content: "\E01C";
 }
 
-.icon-12-flag:before {
+.icon-12-gear:before {
   content: "\E01D";
 }
 
-.icon-12-gear:before {
+.icon-12-graph:before {
   content: "\E01E";
 }
 
-.icon-12-graph:before {
+.icon-12-groups:before {
   content: "\E01F";
 }
 
-.icon-12-groups:before {
+.icon-12-hash:before {
   content: "\E020";
 }
 
-.icon-12-hash:before {
+.icon-12-heart-full:before {
   content: "\E021";
 }
 
-.icon-12-heart-fill:before {
+.icon-12-heart-inline:before {
   content: "\E022";
 }
 
@@ -212,18 +212,18 @@
   content: "\E030";
 }
 
-.icon-12-region:before {
+.icon-12-signpost:before {
   content: "\E031";
 }
 
-.icon-12-signpost:before {
+.icon-12-star:before {
   content: "\E032";
 }
 
-.icon-12-star:before {
+.icon-12-trash:before {
   content: "\E033";
 }
 
-.icon-12-trash:before {
+.icon-12-upload:before {
   content: "\E034";
 }

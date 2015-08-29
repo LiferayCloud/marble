@@ -2,9 +2,21 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1200 960" enable-background="new 0 0 1200 960" xml:space="preserve">
-<g id="row-5">
+<g id="row-6">
+	<g id="mail_x5F_straight">
+	</g>
+	<g id="markdown">
+	</g>
+	<g id="info">
+	</g>
+	<g id="folder">
+	</g>
+	<g id="server">
+	</g>
 	<g id="speed-monitor">
 	</g>
+</g>
+<g id="row-5">
 	<g id="person-role">
 	</g>
 	<g id="lock">
@@ -19,9 +31,9 @@
 	</g>
 	<g id="person">
 	</g>
-	<g id="folder">
+	<g id="eye">
 	</g>
-	<g id="server">
+	<g id="clear">
 	</g>
 	<g id="arrow-right-rod">
 	</g>
@@ -91,7 +103,7 @@
 	</g>
 	<g id="liferay-logo">
 	</g>
-	<g id="eye">
+	<g id="heart-full">
 	</g>
 	<g id="confirm">
 	</g>
@@ -127,11 +139,11 @@
 	</g>
 	<g id="camera">
 	</g>
-	<g id="subscribe">
+	<g id="blank">
 	</g>
 	<g id="star">
 	</g>
 </g>
-<g id="guides" display="none">
+<g id="guides">
 </g>
 </svg>

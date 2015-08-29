@@ -3,6 +3,10 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1200 960" enable-background="new 0 0 1200 960" xml:space="preserve">
 <g id="row-6">
+	<g id="mail_x5F_straight">
+	</g>
+	<g id="markdown">
+	</g>
 	<g id="info">
 		<path d="M600,0C334.9,0,120,214.9,120,480s214.9,480,480,480s480-214.9,480-480S865.1,0,600,0z M931.8,620.1
 			c-18.1,42.9-44.1,81.4-77.2,114.5s-71.6,59.1-114.5,77.2C695.8,830.5,648.7,840,600,840s-95.8-9.5-140.1-28.2
@@ -137,7 +141,7 @@
 	</g>
 	<g id="camera">
 	</g>
-	<g id="subscribe">
+	<g id="blank">
 	</g>
 	<g id="star">
 	</g>

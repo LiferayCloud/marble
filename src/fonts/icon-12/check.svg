@@ -2,91 +2,117 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
-<g id="flag">
+<g id="row-4">
+	<g id="menu">
+	</g>
+	<g id="gear">
+	</g>
+	<g id="external">
+	</g>
+	<g id="graph">
+	</g>
+	<g id="alert">
+	</g>
+	<g id="expand">
+	</g>
+	<g id="collapse">
+	</g>
+	<g id="colections">
+	</g>
+	<g id="briefcase">
+	</g>
 </g>
-<g id="flag-small">
+<g id="row-3">
+	<g id="flag">
+	</g>
+	<g id="flag-small">
+	</g>
+	<g id="signpost">
+	</g>
+	<g id="info-card">
+	</g>
+	<g id="journal">
+	</g>
+	<g id="network">
+	</g>
+	<g id="trash">
+	</g>
+	<g id="card">
+	</g>
+	<g id="browser">
+	</g>
+	<g id="arrows">
+	</g>
+	<g id="arrow-left-rod">
+	</g>
+	<g id="arrow-right-rod">
+	</g>
+	<g id="arrow-up-short">
+	</g>
+	<g id="arrow-down-short">
+	</g>
 </g>
-<g id="signpost">
+<g id="row-2">
+	<g id="heart-full">
+	</g>
+	<g id="balloon-comments-inline">
+	</g>
+	<g id="balloon-comments">
+	</g>
+	<g id="check">
+		<path d="M400,913.1L103.4,616.6l113.1-113.1L400,686.9l423.4-423.4l113.1,113.1L400,913.1z"/>
+	</g>
+	<g id="balloon-topic">
+	</g>
+	<g id="persons">
+	</g>
+	<g id="groups">
+	</g>
+	<g id="building-big">
+	</g>
+	<g id="person-card-2">
+	</g>
+	<g id="person-card-3">
+	</g>
+	<g id="plus">
+	</g>
+	<g id="arrow-right-long">
+	</g>
+	<g id="arrow-left-long">
+	</g>
+	<g id="heart-inline">
+	</g>
 </g>
-<g id="info-card">
+<g id="row-1">
+	<g id="close-short">
+	</g>
+	<g id="hash">
+	</g>
+	<g id="people">
+	</g>
+	<g id="building-small">
+	</g>
+	<g id="person">
+	</g>
+	<g id="close-long">
+	</g>
+	<g id="post">
+	</g>
+	<g id="star">
+	</g>
+	<g id="heart">
+	</g>
+	<g id="link">
+	</g>
+	<g id="camera">
+	</g>
+	<g id="balloon-text">
+	</g>
+	<g id="pin">
+	</g>
+	<g id="clock">
+	</g>
 </g>
-<g id="journal">
-</g>
-<g id="network">
-</g>
-<g id="trash">
-</g>
-<g id="card">
-</g>
-<g id="browser">
-</g>
-<g id="arrows">
-</g>
-<g id="arrow-left-rod">
-</g>
-<g id="arrow-right-rod">
-</g>
-<g id="arrow-up-short">
-</g>
-<g id="arrow-down-short">
-</g>
-<g id="briefcase">
-</g>
-<g id="balloon-comments-fill">
-</g>
-<g id="balloon-comments">
-</g>
-<g id="check">
-	<path d="M400,913.1L103.4,616.6l113.1-113.1L400,686.9l423.4-423.4l113.1,113.1L400,913.1z"/>
-</g>
-<g id="balloon-topic">
-</g>
-<g id="persons">
-</g>
-<g id="groups">
-</g>
-<g id="building-big">
-</g>
-<g id="person-card-2">
-</g>
-<g id="person-card-3">
-</g>
-<g id="plus">
-</g>
-<g id="arrow-right-long">
-</g>
-<g id="arrow-left-long">
-</g>
-<g id="close-short">
-</g>
-<g id="hash">
-</g>
-<g id="people">
-</g>
-<g id="building-small">
-</g>
-<g id="person">
-</g>
-<g id="heart-fill">
-</g>
-<g id="close-long">
-</g>
-<g id="post">
-</g>
-<g id="star">
-</g>
-<g id="heart">
-</g>
-<g id="link">
-</g>
-<g id="camera">
-</g>
-<g id="balloon-text">
-</g>
-<g id="pin">
-</g>
-<g id="clock">
-</g>
-<g id="guide">
+<g id="guides">
 </g>
 </svg>

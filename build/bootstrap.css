@@ -3468,6 +3468,13 @@ input[type="button"].btn-block {
   background: transparent;
   border: 0;
   padding: 0; }
+  .btn-transparent:focus,
+  .btn-transparent.focus,
+  .btn-transparent:active:focus,
+  .btn-transparent:active.focus,
+  .btn-transparent.active:focus,
+  .btn-transparent.active.focus {
+    outline: none; }
 
 .fade {
   opacity: 0;

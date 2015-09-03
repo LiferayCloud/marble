@@ -45,7 +45,7 @@
 	position: relative;
 
 	.label-action {
-		@include anim(top);
+		@include anim(top, 0.2s);
 		left: 50%;
 		margin-left: -6px;
 		position: absolute;
@@ -53,12 +53,12 @@
 	}
 
 	.label-icon {
-		@include anim(top);
+		@include anim(top, 0.2s);
 		position: relative;
 	}
 
 	.label-content {
-		@include anim(top);
+		@include anim(top, 0.2s);
 		position: relative;
 		top: 0;
 	}

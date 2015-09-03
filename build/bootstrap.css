@@ -4871,6 +4871,9 @@ a.label:focus {
   .label.label-sm {
     padding: 7px 12px 7px; }
 
+.label-sm {
+  font-size: 10px; }
+
 .label-default {
   border: 1px solid rgba(35, 50, 64, 0.3);
   color: rgba(35, 50, 64, 0.5);
@@ -4878,13 +4881,43 @@ a.label:focus {
   .label-default.label-sm {
     padding: 6px 11px 6px; }
 
-.label-sm {
-  font-size: 10px; }
-
 .label-icon {
   margin-right: 6px;
   position: relative;
   top: 2px; }
+
+.label-clickable {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative; }
+  .label-clickable .label-action {
+    -webkit-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+    left: 50%;
+    margin-left: -6px;
+    position: absolute;
+    top: -24px; }
+  .label-clickable .label-icon {
+    -webkit-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+    position: relative; }
+  .label-clickable .label-content {
+    -webkit-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+    position: relative;
+    top: 0; }
+
+.label-clickable:hover .label-action {
+  top: 9px; }
+
+.label-clickable:hover .label-icon {
+  top: 24px; }
+
+.label-clickable:hover .label-content {
+  top: 24px; }
 
 .badge {
   display: inline-block;

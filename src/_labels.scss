@@ -1,6 +1,6 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/labels";
 
-// Labels ----------------------------------------------------------------------
+// Base ------------------------------------------------------------------------
 
 .label {
 	border-radius: $border-radius-base;
@@ -15,6 +15,14 @@
 	}
 }
 
+// Sizes -----------------------------------------------------------------------
+
+.label-sm {
+	font-size: 10px;
+}
+
+// Types -----------------------------------------------------------------------
+
 .label-default {
 	border: 1px solid rgba($primary, .3);
 	color: rgba($primary, .5);
@@ -25,12 +33,47 @@
 	}
 }
 
-.label-sm {
-	font-size: 10px;
-}
-
 .label-icon {
 	margin-right: 6px;
 	position: relative;
 	top: 2px;
+}
+
+.label-clickable {
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+
+	.label-action {
+		@include anim(top);
+		left: 50%;
+		margin-left: -6px;
+		position: absolute;
+		top: -24px;
+	}
+
+	.label-icon {
+		@include anim(top);
+		position: relative;
+	}
+
+	.label-content {
+		@include anim(top);
+		position: relative;
+		top: 0;
+	}
+}
+
+.label-clickable:hover {
+	.label-action {
+		top: 9px;
+	}
+
+	.label-icon {
+		top: 24px;
+	}
+
+	.label-content {
+		top: 24px;
+	}
 }

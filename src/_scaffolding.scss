@@ -34,3 +34,33 @@ body {
 .http-delete-bg {
 	background: $http-delete;
 }
+
+.http-get-bg.label-multiple::after,
+.http-get-bg.label-multiple::before {
+	border: 1px solid $http-get;
+}
+
+.http-head-bg.label-multiple::after,
+.http-head-bg.label-multiple::before {
+	border: 1px solid $http-head;
+}
+
+.http-post-bg.label-multiple::after,
+.http-post-bg.label-multiple::before {
+	border: 1px solid $http-post;
+}
+
+.http-put-bg.label-multiple::after,
+.http-put-bg.label-multiple::before {
+	border: 1px solid $http-put;
+}
+
+.http-patch-bg.label-multiple::after,
+.http-patch-bg.label-multiple::before {
+	border: 1px solid $http-patch;
+}
+
+.http-delete-bg.label-multiple::after,
+.http-delete-bg.label-multiple::before {
+	border: 1px solid $http-delete;
+}

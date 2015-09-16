@@ -1160,6 +1160,30 @@ body {
 .http-delete-bg {
   background: #ff5653; }
 
+.http-get-bg.label-multiple::after,
+.http-get-bg.label-multiple::before {
+  border: 1px solid #0080ff; }
+
+.http-head-bg.label-multiple::after,
+.http-head-bg.label-multiple::before {
+  border: 1px solid #9343ff; }
+
+.http-post-bg.label-multiple::after,
+.http-post-bg.label-multiple::before {
+  border: 1px solid #6dd64d; }
+
+.http-put-bg.label-multiple::after,
+.http-put-bg.label-multiple::before {
+  border: 1px solid #ffc021; }
+
+.http-patch-bg.label-multiple::after,
+.http-patch-bg.label-multiple::before {
+  border: 1px solid #35d6c3; }
+
+.http-delete-bg.label-multiple::after,
+.http-delete-bg.label-multiple::before {
+  border: 1px solid #ff5653; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
@@ -4842,10 +4866,10 @@ a.label:focus {
     background-color: #e6e6e6; }
 
 .label-primary {
-  background-color: rgba(35, 50, 64, 0.8); }
+  background-color: #4F5B66; }
   .label-primary[href]:hover,
   .label-primary[href]:focus {
-    background-color: rgba(17, 24, 31, 0.8); }
+    background-color: #394149; }
 
 .label-success {
   background-color: #77d55a; }
@@ -4877,12 +4901,33 @@ a.label:focus {
   font-size: 11px;
   font-weight: 700;
   padding: 9px 12px 10px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative; }
   .label.label-sm {
     padding: 7px 12px 7px; }
 
 .label-sm {
   font-size: 10px; }
+
+.label-multiple::after,
+.label-multiple::before {
+  border-radius: 4px;
+  content: " ";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background: white; }
+
+.label-multiple::after {
+  top: 2px;
+  left: 2px;
+  z-index: -1; }
+
+.label-multiple::before {
+  top: 4px;
+  left: 4px;
+  z-index: -2; }
 
 .label-default {
   border: 1px solid rgba(35, 50, 64, 0.3);
@@ -4890,6 +4935,32 @@ a.label:focus {
   padding: 8px 11px 9px; }
   .label-default.label-sm {
     padding: 6px 11px 6px; }
+
+.label-default.label-multiple::after,
+.label-default.label-multiple::before {
+  border: 1px solid rgba(35, 50, 64, 0.3);
+  width: calc(100% + 1px);
+  height: calc(100% + 1px); }
+
+.label-default.label-multiple::after {
+  top: 2px;
+  left: 2px; }
+
+.label-default.label-multiple::before {
+  top: 4px;
+  left: 4px; }
+
+.label-primary.label-multiple::after,
+.label-primary.label-multiple::before {
+  border: 1px solid #4F5B66; }
+
+.label-success.label-multiple::after,
+.label-success.label-multiple::before {
+  border: 1px solid #77d55a; }
+
+.label-danger.label-multiple::after,
+.label-danger.label-multiple::before {
+  border: 1px solid #e64545; }
 
 .label-icon {
   margin-right: 6px;

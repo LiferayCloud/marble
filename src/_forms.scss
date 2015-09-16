@@ -11,8 +11,12 @@ label {
 	padding: 20px;
 
 	&:focus {
-		border-color: $brand-success;
 		box-shadow: none;
+	}
+
+	&[disabled]:focus,
+	&[readonly]:focus {
+		border-color: $input-border;
 	}
 }
 

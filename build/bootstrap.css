@@ -2370,10 +2370,10 @@ output {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
   .form-control:focus {
-    border-color: #233240;
+    border-color: #77d55a;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(35, 50, 64, 0.6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(35, 50, 64, 0.6); }
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(119, 213, 90, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(119, 213, 90, 0.6); }
   .form-control::-moz-placeholder {
     color: rgba(35, 50, 64, 0.3);
     opacity: 1; }
@@ -2841,8 +2841,10 @@ label {
   box-shadow: none;
   padding: 20px; }
   .form-control:focus {
-    border-color: #77d55a;
     box-shadow: none; }
+  .form-control[disabled]:focus,
+  .form-control[readonly]:focus {
+    border-color: rgba(35, 50, 64, 0.2); }
 
 .form-control-borderless {
   border: 0;

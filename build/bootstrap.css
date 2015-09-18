@@ -3708,14 +3708,23 @@ tbody.collapse.in {
   .dropdown-menu > li:last-child {
     margin-bottom: 25px; }
 
-.dropdown-menu > li > a {
+.dropdown-menu > li > a,
+.dropdown-menu > li > button {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+  color: rgba(35, 50, 64, 0.5);
   display: block;
   font-size: 14px;
   padding: 10px 40px;
   text-decoration: none; }
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus,
+  .dropdown-menu > li > button:hover,
+  .dropdown-menu > li > button:focus {
+    text-decoration: none;
+    background-color: none;
+    color: rgba(35, 50, 64, 0.9); }
 
 .dropdown-select {
   color: rgba(35, 50, 64, 0.6);

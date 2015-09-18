@@ -22,12 +22,21 @@
 	}
 }
 
-.dropdown-menu > li > a {
+.dropdown-menu > li > a,
+.dropdown-menu > li > button {
 	@include anim(color);
+	color: $dropdown-link-color;
 	display: block;
 	font-size: 14px;
 	padding: 10px 40px;
 	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: $dropdown-link-hover-bg;
+		color: $dropdown-link-hover-color;
+	}
 }
 
 // Dropdown select -------------------------------------------------------------

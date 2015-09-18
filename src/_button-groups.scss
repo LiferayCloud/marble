@@ -31,7 +31,10 @@
 // Selected --------------------------------------------------------------------
 
 .btn-group-selected,
-.btn-group-selected:hover {
+.btn-group-selected:hover,
+.btn-group-selected:focus,
+.btn-group-selected:active:hover,
+.btn-group-selected:active:focus {
 	background: $primary;
 	color: $white;
 	font-weight: 700;

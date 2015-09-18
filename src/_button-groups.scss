@@ -11,6 +11,26 @@
 	text-transform: uppercase;
 }
 
+.btn-group .btn-default {
+	&:focus,
+	&.focus {
+		background-color: $btn-default-bg;
+	}
+
+	&:focus,
+	&.focus {
+		&:hover {
+			background-color: $btn-default-focus-bg;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&.focus {
+		border-color: $btn-default-focus-border;
+	}
+}
+
 .btn-group-label {
 	@include anim(top);
 	position: relative;
@@ -31,12 +51,12 @@
 
 // Selected --------------------------------------------------------------------
 
-.btn-group-selected,
-.btn-group-selected:hover,
-.btn-group-selected:focus,
-.btn-group-selected:active:hover,
-.btn-group-selected:active:focus {
+.btn-group .btn-group-selected,
+.btn-group .btn-group-selected:hover,
+.btn-group .btn-group-selected:focus,
+.btn-group .btn-group-selected:focus:hover {
 	background: $primary;
+	border-color: $btn-default-focus-border;
 	color: $white;
 	font-weight: 700;
 }

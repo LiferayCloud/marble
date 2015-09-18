@@ -24,8 +24,8 @@
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($primary, .15);
-		border-color: rgba($primary, .2);
+		background-color: $btn-default-focus-bg;
+		border-color: $btn-default-focus-border;
 	}
 
 	&:active,
@@ -33,8 +33,8 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($primary, .15);
-			border-color: rgba($primary, .2);
+			background-color: $btn-default-focus-bg;
+			border-color: $btn-default-focus-border;
 		}
 	}
 }

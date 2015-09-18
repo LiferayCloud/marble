@@ -1142,22 +1142,46 @@ body {
   text-size-adjust: 100%;
   letter-spacing: -0.02rem; }
 
-.http-get-bg {
+.http-get-bg,
+.btn-group .btn-group-selected.http-get-bg,
+.btn-group .btn-group-selected.http-get-bg:hover,
+.btn-group .btn-group-selected.http-get-bg:focus,
+.btn-group .btn-group-selected.http-get-bg:focus:hover {
   background: #0080ff; }
 
-.http-head-bg {
+.http-head-bg,
+.btn-group .btn-group-selected.http-head-bg,
+.btn-group .btn-group-selected.http-head-bg:hover,
+.btn-group .btn-group-selected.http-head-bg:focus,
+.btn-group .btn-group-selected.http-head-bg:focus:hover {
   background: #9343ff; }
 
-.http-post-bg {
+.http-post-bg,
+.btn-group .btn-group-selected.http-post-bg,
+.btn-group .btn-group-selected.http-post-bg:hover,
+.btn-group .btn-group-selected.http-post-bg:focus,
+.btn-group .btn-group-selected.http-post-bg:focus:hover {
   background: #6dd64d; }
 
-.http-put-bg {
+.http-put-bg,
+.btn-group .btn-group-selected.http-put-bg,
+.btn-group .btn-group-selected.http-put-bg:hover,
+.btn-group .btn-group-selected.http-put-bg:focus,
+.btn-group .btn-group-selected.http-put-bg:focus:hover {
   background: #ffc021; }
 
-.http-patch-bg {
+.http-patch-bg,
+.btn-group .btn-group-selected.http-patch-bg,
+.btn-group .btn-group-selected.http-patch-bg:hover,
+.btn-group .btn-group-selected.http-patch-bg:focus,
+.btn-group .btn-group-selected.http-patch-bg:focus:hover {
   background: #35d6c3; }
 
-.http-delete-bg {
+.http-delete-bg,
+.btn-group .btn-group-selected.http-delete-bg,
+.btn-group .btn-group-selected.http-delete-bg:hover,
+.btn-group .btn-group-selected.http-delete-bg:focus,
+.btn-group .btn-group-selected.http-delete-bg:focus:hover {
   background: #ff5653; }
 
 .http-get-bg.label-multiple::after,
@@ -3382,16 +3406,16 @@ input[type="button"].btn-block {
   .btn-default:hover,
   .btn-default:focus,
   .btn-default.focus {
-    background-color: rgba(35, 50, 64, 0.15);
-    border-color: rgba(35, 50, 64, 0.2); }
+    background-color: #DEE0E2;
+    border-color: #D3D6D9; }
   .btn-default:active:hover,
   .btn-default:active:focus,
   .btn-default:active.focus,
   .btn-default.active:hover,
   .btn-default.active:focus,
   .btn-default.active.focus {
-    background-color: rgba(35, 50, 64, 0.15);
-    border-color: rgba(35, 50, 64, 0.2); }
+    background-color: #DEE0E2;
+    border-color: #D3D6D9; }
 
 .btn-primary {
   -webkit-transition: all 0.3s ease-in-out;
@@ -3914,6 +3938,19 @@ tbody.collapse.in {
   padding: 0 45px;
   text-transform: uppercase; }
 
+.btn-group .btn-default:focus,
+.btn-group .btn-default.focus {
+  background-color: #fff; }
+
+.btn-group .btn-default:focus:hover,
+.btn-group .btn-default.focus:hover {
+  background-color: #DEE0E2; }
+
+.btn-group .btn-default:hover,
+.btn-group .btn-default:focus,
+.btn-group .btn-default.focus {
+  border-color: #D3D6D9; }
+
 .btn-group-label {
   -webkit-transition: top 0.3s ease-in-out;
   -o-transition: top 0.3s ease-in-out;
@@ -3934,12 +3971,12 @@ tbody.collapse.in {
   position: absolute;
   top: 60px; }
 
-.btn-group-selected,
-.btn-group-selected:hover,
-.btn-group-selected:focus,
-.btn-group-selected:active:hover,
-.btn-group-selected:active:focus {
+.btn-group .btn-group-selected,
+.btn-group .btn-group-selected:hover,
+.btn-group .btn-group-selected:focus,
+.btn-group .btn-group-selected:focus:hover {
   background: #233240;
+  border-color: #D3D6D9;
   color: #fff;
   font-weight: 700; }
 

@@ -4148,7 +4148,7 @@ tbody.collapse.in {
   top: 18px; }
 
 .input-inner-icon-helper {
-  cursor: help; }
+  z-index: 999; }
 
 .input-inner-icon-helper:hover,
 .input-inner-icon-helper:hover,

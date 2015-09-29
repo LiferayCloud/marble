@@ -102,6 +102,32 @@
 	}
 }
 
+.btn-accent {
+	@include anim(all);
+	background: $btn-accent-bg;
+	border-color: $btn-accent-border;
+	color: $btn-accent-color;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($accent, .8);
+		border-color: rgba($accent, .8);
+		color: $btn-accent-color;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($accent, .8);
+			border-color: rgba($accent, .8);
+			color: $btn-accent-color;
+		}
+	}
+}
+
 .btn-inverse {
 	@include anim(all);
 	color: $btn-inverse-color;

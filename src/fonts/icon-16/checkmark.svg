@@ -2,28 +2,17 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1200 960" enable-background="new 0 0 1200 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+<g id="row-5">
+	<path id="checkmark_1_" d="M420,949.7L35.1,564.9l169.7-169.7L420,610.3L995.1,35.1l169.7,169.7L420,949.7z"/>
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-		<path d="M660,180h180v60H660V180z M840,720H660v60h180V720z M420,420v120h660v420H120V540h180V420H120V0h960v420H420z M240,660
-			v180h720V660H240z M960,300V120H240v180H960z"/>
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -41,14 +30,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -67,8 +56,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -83,6 +70,8 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -93,8 +82,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -113,12 +100,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

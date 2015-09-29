@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1380 959" enable-background="new 0 0 1380 959" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 1140 959" enable-background="new 0 0 1140 959" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,8 +55,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -81,12 +69,13 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
-		<path d="M1140-120.5H240c-66.3,0-120,53.7-120,120v900c0,66.3,53.7,120,120,120h900c66.3,0,120-53.7,120-120v-900
-			C1260-66.8,1206.3-120.5,1140-120.5z M420,659.5H240v-180h180V659.5z M420,419.5H240v-180h180V419.5z M420,179.5H240v-180h180
-			V179.5z M660,899.5H480v-180h180V899.5z M660,419.5H480v-180h180V419.5z M660,179.5H480v-180h180V179.5z M900,899.5H720v-180h180
-			V899.5z M900,659.5H720v-180h180V659.5z M900,179.5H720v-180h180V179.5z M1140,899.5H960v-180h180V899.5z M1140,659.5H960v-180
-			h180V659.5z M1140,419.5H960v-180h180V419.5z"/>
+		<path d="M1140,0c0-66.3-53.7-120-120-120H120C53.7-120,0-66.3,0,0v900c0,66.3,53.7,120,120,120h900c66.3,0,120-53.7,120-120V0z
+			 M300,660H120V480h180V660z M300,420H120V240h180V420z M300,180H120V0h180V180z M540,900H360V720h180V900z M540,420H360V240h180
+			V420z M540,180H360V0h180V180z M780,900H600V720h180V900z M780,660H600V480h180V660z M780,180H600V0h180V180z M1020,900H840V720
+			h180V900z M1020,660H840V480h180V660z M1020,420H840V240h180V420z"/>
 	</g>
 	<g id="menu-content">
 	</g>
@@ -96,8 +85,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -116,12 +103,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

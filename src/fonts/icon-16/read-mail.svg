@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1200 960" enable-background="new 0 0 1200 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
 	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
-	</g>
 	<g id="read-mail">
-		<path d="M900,330V0H300v330l-180-90v720h960V240L900,330z M420,120h360v270l-180,90l-180-90V120z M960,840H240V434.2l306.3,153.2
-			l53.7,26.8l53.7-26.8L960,434.2V840z M720,240H480v-60h240V240z M720,360H480v-60h240V360z"/>
+		<path d="M780,330V0H180v330L0,240v720h960V240L780,330z M300,120h360v270l-180,90l-180-90V120z M840,840H120V434.2l306.3,153.2
+			l53.7,26.8l53.7-26.8L840,434.2V840z M600,240H360v-60h240V240z M600,360H360v-60h240V360z"/>
 	</g>
 	<g id="person">
 	</g>
@@ -41,14 +31,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -67,8 +57,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -83,6 +71,8 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -93,8 +83,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -113,12 +101,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

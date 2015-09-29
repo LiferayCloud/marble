@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 780 960" enable-background="new 0 0 780 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 540 960" enable-background="new 0 0 540 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,15 +55,13 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
 	</g>
 	<g id="facebook">
-		<path d="M649.6-52.6v161.8h-96.2c-70.5,0-89.5,29.4-89.5,88.3V300h179.6l-23.9,181.4H463.9V960H276.3V481.4H120V300h156.3V179.7
-			c0-152,91.9-239.7,233.5-239.7C569.9-60,616.5-57.5,649.6-52.6z"/>
+		<path d="M529.6-52.6v161.8h-96.2c-70.5,0-89.5,29.4-89.5,88.3V300h179.6l-23.9,181.4H343.9V960H156.3V481.4H0V300h156.3V179.7
+			c0-152,91.9-239.7,233.5-239.7C449.9-60,496.5-57.5,529.6-52.6z"/>
 	</g>
 	<g id="twitter">
 	</g>
@@ -83,6 +71,8 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -93,8 +83,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -113,12 +101,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

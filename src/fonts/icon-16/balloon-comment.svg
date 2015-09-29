@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1320 960" enable-background="new 0 0 1320 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 1080 960" enable-background="new 0 0 1080 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,8 +55,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -81,6 +69,8 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -91,8 +81,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -111,12 +99,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">
@@ -128,13 +116,13 @@
 	<g id="ellipsis">
 	</g>
 	<g id="balloon-comment">
-		<path d="M659.5,60c48.6,0,95.7,9.5,139.9,28.2c42.8,18.1,81.3,44,114.3,77.1c33.1,33.1,59,71.5,77.1,114.3
+		<path d="M539.5,60c48.6,0,95.7,9.5,139.9,28.2c42.8,18.1,81.3,44,114.3,77.1c33.1,33.1,59,71.5,77.1,114.3
 			c18.7,44.2,28.2,91.3,28.2,139.9c0,48.1-9.3,94.8-27.7,138.6l-23.1,55.1l38.3,153.3l-153.3-38.3l-55.1,23.1
 			c-43.9,18.4-90.5,27.7-138.6,27.7c-48.6,0-95.7-9.5-139.9-28.2c-42.8-18.1-81.3-44-114.3-77.1c-33.1-33.1-59-71.5-77.1-114.3
 			c-18.7-44.2-28.2-91.3-28.2-139.9c0-48.6,9.5-95.7,28.2-139.9c18.1-42.8,44-81.3,77.1-114.3c33.1-33.1,71.5-59,114.3-77.1
-			C563.8,69.5,610.9,60,659.5,60 M659.5-120C361.5-120,120,121.5,120,419.5S361.5,959,659.5,959c73.8,0,144.1-14.8,208.1-41.6
+			C443.8,69.5,490.9,60,539.5,60 M539.5-120C241.5-120,0,121.5,0,419.5S241.5,959,539.5,959c73.8,0,144.1-14.8,208.1-41.6
 			c0,0,288.7,71.1,297.1,71.1c47.4,0,73.7-36.5,60.1-90.9l-67.5-269.9c26.8-64,41.6-134.4,41.6-208.1
-			C1199,121.5,957.5-120,659.5-120L659.5-120z"/>
+			C1079,121.5,837.5-120,539.5-120L539.5-120z"/>
 	</g>
 	<g id="heart-fill">
 	</g>

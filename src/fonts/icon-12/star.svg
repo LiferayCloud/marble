@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1200 960" enable-background="new 0 0 1200 960" xml:space="preserve">
+	 viewBox="0 0 1040 960" enable-background="new 0 0 1040 960" xml:space="preserve">
 <g id="row-4">
+	<g id="upload">
+	</g>
 	<g id="menu">
 	</g>
 	<g id="gear">
@@ -11,6 +13,8 @@
 	</g>
 	<g id="graph">
 	</g>
+</g>
+<g id="row-3">
 	<g id="alert">
 	</g>
 	<g id="expand">
@@ -21,8 +25,6 @@
 	</g>
 	<g id="briefcase">
 	</g>
-</g>
-<g id="row-3">
 	<g id="flag">
 	</g>
 	<g id="flag-small">
@@ -45,14 +47,14 @@
 	</g>
 	<g id="arrow-left-rod">
 	</g>
+</g>
+<g id="row-2">
 	<g id="arrow-right-rod">
 	</g>
 	<g id="arrow-up-short">
 	</g>
 	<g id="arrow-down-short">
 	</g>
-</g>
-<g id="row-2">
 	<g id="heart-full">
 	</g>
 	<g id="balloon-comments-inline">
@@ -79,10 +81,10 @@
 	</g>
 	<g id="arrow-left-long">
 	</g>
-	<g id="heart-inline">
-	</g>
 </g>
 <g id="row-1">
+	<g id="heart-inline">
+	</g>
 	<g id="close-short">
 	</g>
 	<g id="hash">
@@ -98,7 +100,7 @@
 	<g id="post">
 	</g>
 	<g id="star">
-		<path d="M600-80l122.8,397H1120L798.6,562.7l122.8,397.2L600,714.5L278.6,960l122.8-397.3L80,317h397.2L600-80z"/>
+		<path d="M520-80l122.8,397H1040L718.6,562.7l122.8,397.2L520,714.5L198.6,960l122.8-397.3L0,317h397.2L520-80z"/>
 	</g>
 	<g id="heart">
 	</g>

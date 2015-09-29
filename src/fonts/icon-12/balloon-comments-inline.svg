@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1120 960" enable-background="new 0 0 1120 960" xml:space="preserve">
+	 viewBox="0 0 1040 960" enable-background="new 0 0 1040 960" xml:space="preserve">
 <g id="row-4">
+	<g id="upload">
+	</g>
 	<g id="menu">
 	</g>
 	<g id="gear">
@@ -11,6 +13,8 @@
 	</g>
 	<g id="graph">
 	</g>
+</g>
+<g id="row-3">
 	<g id="alert">
 	</g>
 	<g id="expand">
@@ -21,8 +25,6 @@
 	</g>
 	<g id="briefcase">
 	</g>
-</g>
-<g id="row-3">
 	<g id="flag">
 	</g>
 	<g id="flag-small">
@@ -45,20 +47,20 @@
 	</g>
 	<g id="arrow-left-rod">
 	</g>
+</g>
+<g id="row-2">
 	<g id="arrow-right-rod">
 	</g>
 	<g id="arrow-up-short">
 	</g>
 	<g id="arrow-down-short">
 	</g>
-</g>
-<g id="row-2">
 	<g id="heart-full">
 	</g>
 	<g id="balloon-comments-inline">
-		<path d="M734.7,759.9c8.5,0,17.1,1.4,25.3,4.1l126,42l-42-126c-6.6-19.8-5.2-41.4,3.9-60.2c59.5-122.6,34.7-269.7-61.7-366.1
-			C725.8,193.3,645.5,160,560,160s-165.8,33.3-226.3,93.7S240,394.5,240,480s33.3,165.8,93.7,226.3C394.2,766.7,474.5,800,560,800
-			c48.3,0,96.6-11.1,139.8-32C710.8,762.6,722.7,759.9,734.7,759.9z"/>
+		<path d="M654.7,759.9c8.5,0,17.1,1.4,25.3,4.1l126,42l-42-126c-6.6-19.8-5.2-41.4,3.9-60.2c59.5-122.6,34.7-269.7-61.7-366.1
+			C645.8,193.3,565.5,160,480,160s-165.8,33.3-226.3,93.7S160,394.5,160,480s33.3,165.8,93.7,226.3C314.2,766.7,394.5,800,480,800
+			c48.3,0,96.6-11.1,139.8-32C630.8,762.6,642.7,759.9,654.7,759.9z"/>
 	</g>
 	<g id="balloon-comments">
 	</g>
@@ -82,10 +84,10 @@
 	</g>
 	<g id="arrow-left-long">
 	</g>
-	<g id="heart-inline">
-	</g>
 </g>
 <g id="row-1">
+	<g id="heart-inline">
+	</g>
 	<g id="close-short">
 	</g>
 	<g id="hash">

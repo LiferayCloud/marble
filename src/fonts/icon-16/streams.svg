@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1200 960" enable-background="new 0 0 1200 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,8 +55,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -81,21 +69,21 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
 	</g>
 	<g id="streams">
-		<path d="M240,0v120H120v780h840V780h120V0H240z M900,840H180V180h60v600h660V840z M1020,720H300V60h720V720z M540,300H360V120h180
-			V300z M540,540H360V360h180V540z M960,180H600v-60h360V180z M960,300H600v-60h360V300z M960,420H600v-60h360V420z M960,540H600
-			v-60h360V540z M960,660H360v-60h600V660z"/>
+		<path d="M120,0v120H0v780h840V780h120V0H120z M780,840H60V180h60v600h660V840z M900,720H180V60h720V720z M420,300H240V120h180V300
+			z M420,540H240V360h180V540z M840,180H480v-60h360V180z M840,300H480v-60h360V300z M840,420H480v-60h360V420z M840,540H480v-60
+			h360V540z M840,660H240v-60h600V660z"/>
 	</g>
 	<g id="balloon-topic">
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -114,12 +102,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 720 960" enable-background="new 0 0 720 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,8 +55,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -81,6 +69,8 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -91,8 +81,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -108,19 +96,19 @@
 	<g id="arrow-left-rod">
 	</g>
 	<g id="cancel_1_">
-		<path d="M813.6,686.4c35.1,35.1,35.1,92.1,0,127.3C796.1,831.2,773,840,750,840s-46.1-8.8-63.6-26.4L480,607.3L273.6,813.6
-			C256.1,831.2,233,840,210,840s-46.1-8.8-63.6-26.4c-35.1-35.1-35.1-92.1,0-127.3L352.7,480L146.4,273.6
-			c-35.1-35.1-35.1-92.1,0-127.3c35.1-35.1,92.1-35.1,127.3,0L480,352.7l206.4-206.4c35.1-35.1,92.1-35.1,127.3,0
-			c35.1,35.1,35.1,92.1,0,127.3L607.3,480L813.6,686.4z"/>
+		<path d="M693.6,686.4c35.1,35.1,35.1,92.1,0,127.3C676.1,831.2,653,840,630,840s-46.1-8.8-63.6-26.4L360,607.3L153.6,813.6
+			C136.1,831.2,113,840,90,840s-46.1-8.8-63.6-26.4c-35.1-35.1-35.1-92.1,0-127.3L232.7,480L26.4,273.6
+			c-35.1-35.1-35.1-92.1,0-127.3c35.1-35.1,92.1-35.1,127.3,0L360,352.7l206.4-206.4c35.1-35.1,92.1-35.1,127.3,0
+			c35.1,35.1,35.1,92.1,0,127.3L487.3,480L693.6,686.4z"/>
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

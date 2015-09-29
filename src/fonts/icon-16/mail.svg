@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1080 960" enable-background="new 0 0 1080 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 840 960" enable-background="new 0 0 840 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,8 +55,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -80,10 +68,12 @@
 	<g id="phone">
 	</g>
 	<g id="mail">
-		<path d="M840,180H240c-66.3,0-120,53.7-120,120v420c0,66.3,53.7,120,120,120h600c66.3,0,120-53.7,120-120V300
-			C960,233.7,906.3,180,840,180z M744,300L540,463.2L336,300H744z M240,720V376.8l262.5,210c11,8.8,24.2,13.1,37.5,13.1
-			s26.5-4.4,37.5-13.1l262.5-210V720H240z"/>
+		<path d="M720,180H120C53.7,180,0,233.7,0,300v420c0,66.3,53.7,120,120,120h600c66.3,0,120-53.7,120-120V300
+			C840,233.7,786.3,180,720,180z M624,300L420,463.2L216,300H624z M120,720V376.8l262.5,210c11,8.8,24.2,13.1,37.5,13.1
+			s26.5-4.4,37.5-13.1l262.5-210V720H120z"/>
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -94,8 +84,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -114,12 +102,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">

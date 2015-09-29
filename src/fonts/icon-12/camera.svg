@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1120 960" enable-background="new 0 0 1120 960" xml:space="preserve">
+	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
 <g id="row-4">
+	<g id="upload">
+	</g>
 	<g id="menu">
 	</g>
 	<g id="gear">
@@ -11,6 +13,8 @@
 	</g>
 	<g id="graph">
 	</g>
+</g>
+<g id="row-3">
 	<g id="alert">
 	</g>
 	<g id="expand">
@@ -21,8 +25,6 @@
 	</g>
 	<g id="briefcase">
 	</g>
-</g>
-<g id="row-3">
 	<g id="flag">
 	</g>
 	<g id="flag-small">
@@ -45,14 +47,14 @@
 	</g>
 	<g id="arrow-left-rod">
 	</g>
+</g>
+<g id="row-2">
 	<g id="arrow-right-rod">
 	</g>
 	<g id="arrow-up-short">
 	</g>
 	<g id="arrow-down-short">
 	</g>
-</g>
-<g id="row-2">
 	<g id="heart-full">
 	</g>
 	<g id="balloon-comments-inline">
@@ -79,10 +81,10 @@
 	</g>
 	<g id="arrow-left-long">
 	</g>
-	<g id="heart-inline">
-	</g>
 </g>
 <g id="row-1">
+	<g id="heart-inline">
+	</g>
 	<g id="close-short">
 	</g>
 	<g id="hash">
@@ -104,10 +106,10 @@
 	<g id="link">
 	</g>
 	<g id="camera">
-		<path d="M880,160h-80v0C800,71.6,728.4,0,640,0H480c-88.4,0-160,71.6-160,160v0h-80c-88.4,0-160,71.6-160,160v400
-			c0,88.4,71.6,160,160,160h640c88.4,0,160-71.6,160-160V320C1040,231.6,968.4,160,880,160z M560,720c-132.5,0-240-107.5-240-240
-			s107.5-240,240-240s240,107.5,240,240S692.5,720,560,720z M560,640c-88.4,0-160-71.6-160-160s71.6-160,160-160s160,71.6,160,160
-			S648.4,640,560,640z"/>
+		<path d="M800,160h-80v0C720,71.6,648.4,0,560,0H400c-88.4,0-160,71.6-160,160v0h-80C71.6,160,0,231.6,0,320v400
+			c0,88.4,71.6,160,160,160h640c88.4,0,160-71.6,160-160V320C960,231.6,888.4,160,800,160z M480,720c-132.5,0-240-107.5-240-240
+			s107.5-240,240-240s240,107.5,240,240S612.5,720,480,720z M480,640c-88.4,0-160-71.6-160-160s71.6-160,160-160s160,71.6,160,160
+			S568.4,640,480,640z"/>
 	</g>
 	<g id="balloon-text">
 	</g>

@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1320 960" enable-background="new 0 0 1320 960" xml:space="preserve">
-<g id="row-6">
-	<g id="mail_x5F_straight">
-	</g>
+	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+<g id="row-5">
+</g>
+<g id="row-4">
 	<g id="markdown">
+	</g>
+	<g id="mail_x5F_straight">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
-	</g>
-	<g id="server">
-	</g>
-	<g id="speed-monitor">
-	</g>
-</g>
-<g id="row-5">
-	<g id="person-role">
-	</g>
-	<g id="lock">
-	</g>
-	<g id="list">
 	</g>
 	<g id="read-mail">
 	</g>
@@ -39,14 +29,14 @@
 	</g>
 	<g id="speaker-off">
 	</g>
-</g>
-<g id="row-4">
 	<g id="speaker-on">
 	</g>
 	<g id="pause">
 	</g>
 	<g id="play">
 	</g>
+</g>
+<g id="row-3">
 	<g id="circle-arrow">
 	</g>
 	<g id="module">
@@ -65,8 +55,6 @@
 	</g>
 	<g id="dribbble">
 	</g>
-</g>
-<g id="row-3">
 	<g id="globe">
 	</g>
 	<g id="github">
@@ -81,6 +69,8 @@
 	</g>
 	<g id="mail">
 	</g>
+</g>
+<g id="row-2">
 	<g id="liferay-logo-2">
 	</g>
 	<g id="menu-content">
@@ -91,8 +81,6 @@
 	</g>
 	<g id="groups">
 	</g>
-</g>
-<g id="row-2">
 	<g id="persons">
 	</g>
 	<g id="house">
@@ -111,12 +99,12 @@
 	</g>
 	<g id="plus">
 	</g>
+</g>
+<g id="row-1">
 	<g id="bullhorn">
 	</g>
 	<g id="link">
 	</g>
-</g>
-<g id="row-1">
 	<g id="pen">
 	</g>
 	<g id="bell">
@@ -124,10 +112,9 @@
 	<g id="magnifier">
 	</g>
 	<g id="menu">
-		<path d="M1050,180H270c-49.7,0-90-40.3-90-90v0c0-49.7,40.3-90,90-90l780,0c49.7,0,90,40.3,90,90v0
-			C1140,139.7,1099.7,180,1050,180z M1140,450L1140,450c0-49.7-40.3-90-90-90H270c-49.7,0-90,40.3-90,90v0c0,49.7,40.3,90,90,90h780
-			C1099.7,540,1140,499.7,1140,450z M1140,810L1140,810c0-49.7-40.3-90-90-90H270c-49.7,0-90,40.3-90,90v0c0,49.7,40.3,90,90,90h780
-			C1099.7,900,1140,859.7,1140,810z"/>
+		<path d="M870,180H90c-49.7,0-90-40.3-90-90v0C0,40.3,40.3,0,90,0l780,0c49.7,0,90,40.3,90,90v0C960,139.7,919.7,180,870,180z
+			 M960,450L960,450c0-49.7-40.3-90-90-90H90c-49.7,0-90,40.3-90,90v0c0,49.7,40.3,90,90,90h780C919.7,540,960,499.7,960,450z
+			 M960,810L960,810c0-49.7-40.3-90-90-90H90c-49.7,0-90,40.3-90,90v0c0,49.7,40.3,90,90,90h780C919.7,900,960,859.7,960,810z"/>
 	</g>
 	<g id="ellipsis">
 	</g>

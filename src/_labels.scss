@@ -6,11 +6,12 @@
 .label {
 	border-radius: $border-radius-base;
 	display: inline-block;
+	font-family: $font-family-secondary;
 	font-size: 11px;
-	font-weight: 700;
+	font-weight: 900;
 	padding: 9px 12px 10px;
-	text-transform: uppercase;
 	position: relative;
+	text-transform: uppercase;
 
 	&.label-sm {
 		padding: 7px 12px 7px;

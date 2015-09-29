@@ -2881,7 +2881,8 @@ select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
     font-size: 12px; } }
 
 label {
-  color: rgba(14, 20, 26, 0.7);
+  color: rgba(14, 20, 26, 0.4);
+  font-size: 11px;
   font-weight: 400;
   margin-bottom: 3px; }
 
@@ -4971,11 +4972,12 @@ a.label:focus {
 .label {
   border-radius: 4px;
   display: inline-block;
+  font-family: "brandon-grotesque", sans-serif;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 900;
   padding: 9px 12px 10px;
-  text-transform: uppercase;
-  position: relative; }
+  position: relative;
+  text-transform: uppercase; }
   .label.label-sm {
     padding: 7px 12px 7px; }
 

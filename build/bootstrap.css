@@ -2331,10 +2331,11 @@ table th[class*="col-"] {
 .table > thead > tr > th,
 .table > thead > tr > td {
   color: rgba(14, 20, 26, 0.4);
+  font-family: "brandon-grotesque", sans-serif;
   font-size: 11px;
   font-weight: 700;
-  text-transform: uppercase;
-  padding: 20px 10px 28px; }
+  padding: 20px 10px 28px;
+  text-transform: uppercase; }
 
 .table > tbody > tr > th,
 .table > tbody > tr > td {
@@ -3763,7 +3764,7 @@ tbody.collapse.in {
 .dropdown-select:active,
 .dropdown-select:focus,
 .dropdown-select:active:focus {
-  border-color: #77d55a; }
+  border-color: #647efb; }
 
 .dropdown-select.form-control {
   background: white;

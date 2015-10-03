@@ -11,6 +11,18 @@ body {
 	letter-spacing: -0.02rem;
 }
 
+body.fade-out {
+	@include anim(opacity);
+	display: block;
+	opacity: 0;
+	overflow: hidden;
+}
+
+body.fade-in {
+	@include anim(opacity);
+	opacity: 1;
+}
+
 .http-get-bg,
 .btn-group .btn-group-selected.http-get-bg,
 .btn-group .btn-group-selected.http-get-bg:hover,

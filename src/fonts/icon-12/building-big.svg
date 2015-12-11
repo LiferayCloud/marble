@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1040 959" enable-background="new 0 0 1040 959" xml:space="preserve">
+	 viewBox="0 0 960 959" enable-background="new 0 0 960 959" xml:space="preserve">
 <g id="row-4">
 	<g id="upload">
 	</g>
@@ -70,9 +70,10 @@
 	<g id="groups">
 	</g>
 	<g id="building-big">
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M480-1v240H0v720h1040V-1H480z M400,879h-80V559H160v320H80V319h320V879z
-			 M720,799h-80V639h80V799z M720,559h-80V399h80V559z M720,319h-80V159h80V319z M880,799h-80V639h80V799z M880,559h-80V399h80V559z
-			 M880,319h-80V159h80V319z"/>
+		<g>
+			<path d="M400-80v400H0v560h960V-80H400z M400,800h-80V560H160v240H80V400h320V800z M640,720h-80V560h80V720z M640,480h-80V320h80
+				V480z M640,240h-80V80h80V240z M800,720h-80V560h80V720z M800,480h-80V320h80V480z M800,240h-80V80h80V240z"/>
+		</g>
 	</g>
 	<g id="person-card-2">
 	</g>

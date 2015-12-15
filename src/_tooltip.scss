@@ -1,0 +1,19 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+
+.tooltip-inner {
+	background: #0e141a;
+	border-radius: $border-radius-small;
+	border: 1px solid rgba($secondary, 0.12);
+	box-shadow: 0 1px 8px rgba($black, 0.08);
+	color: rgba($white, .8);
+	font-size: 11px;
+	line-height: 17px;
+	max-width: 220px;
+	min-width: initial;
+	padding: 10px 20px;
+	text-align: left;
+}
+
+.tooltip-arrow {
+	display: none;
+}

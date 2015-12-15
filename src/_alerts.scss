@@ -1,0 +1,40 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+@import "variables";
+
+.alert {
+	border-radius: 0;
+	border: 0;
+	font-weight: 600;
+	left: 0;
+	padding: 45px 40px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1051;
+}
+
+.alert-danger {
+	color: $white;
+	background-color: $brand-danger;
+}
+
+.alert-success {
+	color: $white;
+	background-color: $brand-success;
+}
+
+.alert .close {
+	@include anim(color);
+	color: $white;
+	font-size: 32px;
+	line-height: 24px;
+	opacity: 1;
+	outline: none;
+	text-shadow: none;
+}
+
+.alert .close:hover {
+	color: rgba($white, .7);
+	opacity: 1;
+}

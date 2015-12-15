@@ -4987,6 +4987,41 @@ a.thumbnail.active {
   .alert-danger .alert-link {
     color: #db1d1d; }
 
+.alert {
+  border-radius: 0;
+  border: 0;
+  font-weight: 600;
+  left: 0;
+  padding: 45px 40px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 1051; }
+
+.alert-danger {
+  color: #fff;
+  background-color: #e64545; }
+
+.alert-success {
+  color: #fff;
+  background-color: #77d55a; }
+
+.alert .close {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  color: #fff;
+  font-size: 32px;
+  line-height: 24px;
+  opacity: 1;
+  outline: none;
+  text-shadow: none; }
+
+.alert .close:hover {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1; }
+
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }

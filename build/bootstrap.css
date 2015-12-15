@@ -5677,6 +5677,22 @@ button.close {
   border: 0;
   -webkit-appearance: none; }
 
+/* Switcher - Off
+	 ========================================================================== */
+.switcher {
+  background: rgba(14, 20, 26, 0.4); }
+
+.switcher-control {
+  background: rgba(14, 20, 26, 0.7); }
+
+/* Switcher - On
+	 ========================================================================== */
+.switcher-on {
+  background: rgba(119, 213, 90, 0.4); }
+
+.switcher-on .switcher-control {
+  background: #77d55a; }
+
 .modal-open {
   overflow: hidden; }
 

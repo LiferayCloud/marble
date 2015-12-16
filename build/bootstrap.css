@@ -5990,6 +5990,64 @@ button.close {
   position: absolute;
   left: 0; }
 
+/* List
+	 ========================================================================== */
+.list .listitem {
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  border: none;
+  border-bottom: 1px solid rgba(14, 20, 26, 0.2);
+  list-style: none;
+  margin: 0;
+  padding: 35px 12px;
+  width: 100%; }
+
+.list .listitem:last-child {
+  border-bottom: 0; }
+
+.list .list-main-content {
+  margin-left: 12px; }
+
+.list .list-text-primary {
+  color: rgba(14, 20, 26, 0.6);
+  font-size: 16px;
+  margin-top: 5px; }
+
+.list .list-text-secondary {
+  color: rgba(14, 20, 26, 0.4);
+  font-size: 12px; }
+
+.list .list-icons {
+  margin-top: 16px; }
+
+.list .list-icon {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  color: rgba(14, 20, 26, 0.3);
+  margin-left: 3px; }
+
+.list .list-icon:hover {
+  color: rgba(14, 20, 26, 0.6); }
+
+.list .list-label {
+  margin-top: 8px;
+  margin-right: 40px; }
+
+.list > ul {
+  padding: 0; }
+
+.list .avatar-initials {
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+  width: 48px; }
+
+.list .avatar-photo img {
+  width: 48px;
+  height: 48px; }
+
 .modal-open {
   overflow: hidden; }
 

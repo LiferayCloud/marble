@@ -1,0 +1,66 @@
+/* List
+	 ========================================================================== */
+
+.list .listitem {
+	@include anim(background);
+	border: none;
+	border-bottom: 1px solid rgba($primary, .2);
+	list-style: none;
+	margin: 0;
+	padding: 35px 12px;
+	width: 100%;
+}
+
+.list .listitem:last-child {
+	border-bottom: 0;
+}
+
+.list .list-main-content {
+	margin-left: 12px;
+}
+
+.list .list-text-primary {
+	color: rgba($primary, .6);
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.list .list-text-secondary {
+	color: rgba($primary, .4);
+	font-size: 12px;
+}
+
+.list .list-icons {
+	margin-top: 16px;
+}
+
+.list .list-icon {
+	@include anim(color);
+	color: rgba($primary, .3);
+	margin-left: 3px;
+}
+
+.list .list-icon:hover {
+	color: rgba($primary, .6);
+}
+
+.list .list-label {
+	margin-top: 8px;
+	margin-right: 40px;
+}
+
+.list > ul {
+	padding: 0;
+}
+
+.list .avatar-initials {
+	font-size: 16px;
+	height: 48px;
+	line-height: 48px;
+	width: 48px;
+}
+
+.list .avatar-photo img {
+	width: 48px;
+	height: 48px;
+}

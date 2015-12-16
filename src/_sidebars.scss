@@ -71,13 +71,14 @@
 	vertical-align: middle;
 }
 
-.sidebar-header .icon-12-arrow-up-short {
-	display: none;
-}
+.icon-12-arrow-up-short   { display: inline; }
+.icon-12-arrow-down-short { display: none; }
 
-.sidebar-header .icon-12-arrow-down-short {
-	display: inline;
-}
+.toggler-header-collapsed .icon-12-arrow-up-short   { display: inline; }
+.toggler-header-collapsed .icon-12-arrow-down-short { display: none; }
+
+.toggler-header-expanded .icon-12-arrow-up-short   { display: none; }
+.toggler-header-expanded .icon-12-arrow-down-short { display: inline; }
 
 /* First level
    ========================================================================== */

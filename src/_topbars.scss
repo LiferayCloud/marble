@@ -1,23 +1,62 @@
+@import "variables";
+@import "mixins";
+
 /* Topbar
 	 ========================================================================== */
 
 .topbar {
-	background: #0e141a;
+	background: $primary;
 	height: 84px;
 	padding: 0 40px;
 }
 
 .topbar-logo {
 	float: left;
+	margin: 2px 0;
 }
 
 .topbar-logo-link {
-	display: block;
+	@include anim(color);
+	color: rgba($white, .8);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-family: $font-family-secondary;
+	font-weight: 500;
 	margin: 30px 0;
+	text-transform: uppercase;
+}
+
+.topbar-logo-link:hover,
+.topbar-logo-link:focus {
+	color: white;
+}
+
+.topbar-logo-text {
+	font-size: 13px;
+	margin-left: 20px;
+}
+
+.topbar-logo-label {
+	background: rgba(white, .2);
+	border-radius: $border-radius-small;
+	color: rgba(white, .9);
+	font-size: 10px;
+	margin-left: 2px;
+	padding: 2px 7px;
+	position: relative;
+	top: -1px;
 }
 
 .topbar-list {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
 	align-items: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	float: right;
 	font-size: 0;
@@ -38,42 +77,47 @@
 .topbar-link {
 	@include anim(color);
 	color: rgba($white, .3);
-	font-size: 14px;
-	font-weight: 400;
+	font-family: $font-family-secondary;
+	font-size: 12px;
+	font-weight: 500;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .topbar-link:focus {
 	color: rgba($white, .3);
 }
 
-.topbar-link:hover {
+.topbar-link:hover,
+.topbar-link:focus {
 	color: rgba($white, .6);
 }
 
 .topbar-link-selected,
-.topbar-link-selected:hover {
-	color: $white;
+.topbar-link-selected:hover,
+.topbar-link-selected:focus {
+	color: $accent;
 }
 
 .topbar-avatar {
-	width: 62px;
+	margin-left: 10px;
+	position: relative;
+	top: 3px;
 }
 
-.topbar-avatar .avatar-photo,
-.topbar-avatar .avatar-initials {
+.topbar-avatar .avatar-container {
 	cursor: pointer;
 	display: inline-block;
 }
 
 .topbar-avatar .avatar-initials {
-	background: $primary;
+	background: $accent;
 }
 
 .topbar-caret {
 	margin-left: 10px;
 	position: relative;
-	top: 3px;
+	top: -12px;
 }
 
 @media (max-width: 480px) {
@@ -91,5 +135,52 @@
 
 	.topbar-caret {
 		margin-left: 5px;
+	}
+}
+
+/* Topbar Inverse
+	 ========================================================================== */
+
+.topbar.topbar-inverse {
+	background: $accent;
+}
+
+.topbar-inverse .topbar-logo-label {
+	background: rgba($primary, .2);
+}
+
+.topbar-inverse .topbar-list {
+	margin: 33px 0;
+}
+
+.topbar-inverse .topbar-link {
+	color: rgba(white, .5);
+}
+
+.topbar-inverse .topbar-link:hover,
+.topbar-inverse .topbar-link:focus {
+	color: rgba(white, .8);
+}
+
+.topbar-inverse .topbar-link-selected {
+	color: white;
+}
+
+.topbar-inverse .topbar-link-selected:hover,
+.topbar-inverse .topbar-link-selected:focus {
+	color: white;
+}
+
+@media (max-width: 480px) {
+	.topbar-inverse .topbar {
+	    padding: 0 10px;
+	}
+
+	.topbar-inverse .topbar-logo-text {
+		margin-left: 10px;
+	}
+
+	.topbar-inverse .topbar-logo-complementary {
+		display: none;
 	}
 }

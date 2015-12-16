@@ -5816,8 +5816,6 @@ button.close {
     width: 100%; }
   .sidebar-header {
     display: block; }
-  .sidebar-list-2.hidden {
-    display: block !important; }
   .toggler-collapsed {
     display: none; } }
 

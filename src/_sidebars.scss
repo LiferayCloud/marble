@@ -1,0 +1,87 @@
+/* Sidebar
+	 ========================================================================== */
+
+.sidebar {
+	background: white;
+	box-shadow: $shadow-large;
+	height: 100vh;
+	width: 265px;
+}
+
+.sidebar-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-item {
+	display: block;
+}
+
+.sidebar-link {
+	@include anim(all);
+	display: block;
+	text-decoration: none;
+}
+
+.sidebar-link:focus {
+	outline: none;
+}
+
+/* First level
+   ========================================================================== */
+
+.sidebar-list-1 .sidebar-link {
+	color: rgba($secondary, .8);
+	font-size: 14px;
+	font-weight: 600;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 8px 0 20px;
+}
+
+.sidebar-list-1 .sidebar-link:hover,
+.sidebar-list-1 .sidebar-link:focus {
+	background: rgba($primary, .05);
+	color: rgba($secondary, .9);
+}
+
+.sidebar-list-1 .sidebar-icon {
+	color: $accent;
+	display: inline-block;
+	margin-right: 20px;
+	margin-top: -1px;
+	text-align: center;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.sidebar-list-1 .sidebar-link-selected,
+.sidebar-list-1 .sidebar-link-selected:hover,
+.sidebar-list-1 .sidebar-link-selected:focus {
+	color: $accent;
+}
+
+/* Second level
+   ========================================================================== */
+
+.sidebar-list-2 .sidebar-link {
+	color: rgba($secondary, .9);
+	font-size: 13px;
+	font-weight: 400;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 8px 0 60px;
+}
+
+.sidebar-list-2 .sidebar-link:hover,
+.sidebar-list-2 .sidebar-link:focus {
+	background: rgba($primary, .05);
+}
+
+.sidebar-list-2 .sidebar-link-selected,
+.sidebar-list-2 .sidebar-link-selected:hover,
+.sidebar-list-2 .sidebar-link-selected:focus {
+	background: rgba($accent, .1);
+	color: $accent;
+}

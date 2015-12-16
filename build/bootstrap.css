@@ -5809,7 +5809,7 @@ button.close {
 
 /* Medium screens
    ========================================================================== */
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .sidebar {
     position: absolute;
     height: auto;

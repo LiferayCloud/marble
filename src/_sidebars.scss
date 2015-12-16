@@ -139,7 +139,7 @@
 /* Medium screens
    ========================================================================== */
 
-@media (max-width: 600px) {
+@media (min-width: $screen-sm-min) {
 	.sidebar {
 		position: absolute;
 		height: auto;

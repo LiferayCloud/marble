@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 /* Sidebar
 	 ========================================================================== */
 
@@ -5,6 +8,8 @@
 	background: white;
 	box-shadow: $shadow-large;
 	height: 100vh;
+	left: 0;
+	position: fixed;
 	width: 265px;
 }
 
@@ -28,6 +33,52 @@
 	outline: none;
 }
 
+/* Header
+   ========================================================================== */
+
+.sidebar-header {
+	background: rgba($accent, .1);
+	color: $accent;
+	cursor: pointer;
+	display: none;
+	font-size: 14px;
+	font-weight: 600;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px 0 20px;
+	width: 100%;
+}
+
+.sidebar-header:hover,
+.sidebar-header:focus {
+	color: $accent;
+}
+
+.sidebar-header .sidebar-icon {
+	color: $accent;
+	display: inline-block;
+	margin-right: 20px;
+	margin-top: -1px;
+	text-align: center;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.sidebar-header .sidebar-icon-right {
+	float: right;
+	line-height: 60px;
+	margin-top: -1px;
+	vertical-align: middle;
+}
+
+.sidebar-header .icon-12-arrow-up-short {
+	display: none;
+}
+
+.sidebar-header .icon-12-arrow-down-short {
+	display: inline;
+}
+
 /* First level
    ========================================================================== */
 
@@ -37,7 +88,7 @@
 	font-weight: 600;
 	height: 60px;
 	line-height: 60px;
-	padding: 0 8px 0 20px;
+	padding: 0 20px 0 20px;
 }
 
 .sidebar-list-1 .sidebar-link:hover,
@@ -71,7 +122,7 @@
 	font-weight: 400;
 	height: 36px;
 	line-height: 36px;
-	padding: 0 8px 0 60px;
+	padding: 0 20px 0 60px;
 }
 
 .sidebar-list-2 .sidebar-link:hover,
@@ -84,4 +135,27 @@
 .sidebar-list-2 .sidebar-link-selected:focus {
 	background: rgba($accent, .1);
 	color: $accent;
+}
+
+/* Medium screens
+   ========================================================================== */
+
+@media (max-width: 600px) {
+	.sidebar {
+		position: absolute;
+		height: auto;
+		width: 100%;
+	}
+
+	.sidebar-header {
+		display: block;
+	}
+
+	.sidebar-list-2.hidden {
+		display: block !important;
+	}
+
+	.toggler-collapsed {
+		display: none;
+	}
 }

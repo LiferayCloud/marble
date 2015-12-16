@@ -1,0 +1,95 @@
+/* Topbar
+	 ========================================================================== */
+
+.topbar {
+	background: #0e141a;
+	height: 84px;
+	padding: 0 40px;
+}
+
+.topbar-logo {
+	float: left;
+}
+
+.topbar-logo-link {
+	display: block;
+	margin: 30px 0;
+}
+
+.topbar-list {
+	align-items: center;
+	display: flex;
+	float: right;
+	font-size: 0;
+	list-style: none;
+	margin: 24px 0;
+	padding: 0;
+}
+
+.topbar-item {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.topbar-item:last-child {
+	margin-right: 0;
+}
+
+.topbar-link {
+	@include anim(color);
+	color: rgba($white, .3);
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.topbar-link:focus {
+	color: rgba($white, .3);
+}
+
+.topbar-link:hover {
+	color: rgba($white, .6);
+}
+
+.topbar-link-selected,
+.topbar-link-selected:hover {
+	color: $white;
+}
+
+.topbar-avatar {
+	width: 62px;
+}
+
+.topbar-avatar .avatar-photo,
+.topbar-avatar .avatar-initials {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.topbar-avatar .avatar-initials {
+	background: $primary;
+}
+
+.topbar-caret {
+	margin-left: 10px;
+	position: relative;
+	top: 3px;
+}
+
+@media (max-width: 480px) {
+	.topbar {
+		padding: 0 20px;
+	}
+
+	.topbar-item {
+		margin: 0 10px;
+	}
+
+	.topbar-avatar {
+		width: 56px;
+	}
+
+	.topbar-caret {
+		margin-left: 5px;
+	}
+}

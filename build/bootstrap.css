@@ -5754,23 +5754,17 @@ button.close {
   margin-top: -1px;
   vertical-align: middle; }
 
-.icon-12-arrow-up-short {
-  display: inline; }
-
-.icon-12-arrow-down-short {
-  display: none; }
-
 .toggler-header-collapsed .icon-12-arrow-up-short {
-  display: inline; }
+  display: none; }
 
 .toggler-header-collapsed .icon-12-arrow-down-short {
-  display: none; }
+  display: inline; }
 
 .toggler-header-expanded .icon-12-arrow-up-short {
-  display: none; }
+  display: inline; }
 
 .toggler-header-expanded .icon-12-arrow-down-short {
-  display: inline; }
+  display: none; }
 
 /* First level
    ========================================================================== */

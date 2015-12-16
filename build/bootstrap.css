@@ -5689,10 +5689,10 @@ button.close {
 .sidebar {
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
-  height: 100vh;
+  height: auto;
   left: 0;
-  position: fixed;
-  width: 265px; }
+  position: absolute;
+  width: 100%; }
 
 .sidebar-list {
   list-style: none;
@@ -5718,7 +5718,7 @@ button.close {
   background: rgba(100, 126, 251, 0.1);
   color: #647efb;
   cursor: pointer;
-  display: none;
+  display: block;
   font-size: 14px;
   font-weight: 600;
   height: 60px;
@@ -5746,6 +5746,8 @@ button.close {
   margin-top: -1px;
   vertical-align: middle; }
 
+/* Toggle Header
+   ========================================================================== */
 .toggler-header-collapsed .icon-12-arrow-up-short {
   display: none; }
 
@@ -5756,6 +5758,9 @@ button.close {
   display: inline; }
 
 .toggler-header-expanded .icon-12-arrow-down-short {
+  display: none; }
+
+.toggler-collapsed {
   display: none; }
 
 /* First level
@@ -5811,13 +5816,13 @@ button.close {
    ========================================================================== */
 @media (min-width: 768px) {
   .sidebar {
-    position: absolute;
-    height: auto;
-    width: 100%; }
+    position: fixed;
+    height: 100vh;
+    width: 265px; }
   .sidebar-header {
-    display: block; }
+    display: none; }
   .toggler-collapsed {
-    display: none; } }
+    display: block; } }
 
 /* Topbar
 	 ========================================================================== */

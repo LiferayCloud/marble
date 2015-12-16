@@ -7,10 +7,10 @@
 .sidebar {
 	background: white;
 	box-shadow: $shadow-large;
-	height: 100vh;
+	height: auto;
 	left: 0;
-	position: fixed;
-	width: 265px;
+	position: absolute;
+	width: 100%;
 }
 
 .sidebar-list {
@@ -40,7 +40,7 @@
 	background: rgba($accent, .1);
 	color: $accent;
 	cursor: pointer;
-	display: none;
+	display: block;
 	font-size: 14px;
 	font-weight: 600;
 	height: 60px;
@@ -72,11 +72,18 @@
 	vertical-align: middle;
 }
 
+/* Toggle Header
+   ========================================================================== */
+
 .toggler-header-collapsed .icon-12-arrow-up-short   { display: none; }
 .toggler-header-collapsed .icon-12-arrow-down-short { display: inline; }
 
 .toggler-header-expanded .icon-12-arrow-up-short   { display: inline; }
 .toggler-header-expanded .icon-12-arrow-down-short { display: none; }
+
+.toggler-collapsed {
+	display: none;
+}
 
 /* First level
    ========================================================================== */
@@ -141,16 +148,16 @@
 
 @media (min-width: $screen-sm-min) {
 	.sidebar {
-		position: absolute;
-		height: auto;
-		width: 100%;
+		position: fixed;
+		height: 100vh;
+		width: 265px;
 	}
 
 	.sidebar-header {
-		display: block;
+		display: none;
 	}
 
 	.toggler-collapsed {
-		display: none;
+		display: block;
 	}
 }

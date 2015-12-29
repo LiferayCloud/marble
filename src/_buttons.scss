@@ -154,6 +154,32 @@
 	}
 }
 
+.btn-inverse-accent {
+	@include anim(all);
+	background: $btn-inverse-accent-bg;
+	border-color: $btn-inverse-accent-border;
+	color: $btn-inverse-accent-color;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($btn-inverse-accent-bg, .8);
+		border-color: $btn-inverse-accent-border;
+		color: $btn-inverse-accent-color;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($btn-inverse-accent-bg, .8);
+			border-color: $btn-inverse-accent-border;
+			color: $btn-inverse-accent-color;
+		}
+	}
+}
+
 // Icons
 
 .btn span[class^="icon-16-"],

@@ -23,6 +23,10 @@ body.fade-in {
 	opacity: 1;
 }
 
+.primary-bg {
+	background: $primary;
+}
+
 .http-get-bg,
 .btn-group .btn-group-selected.http-get-bg,
 .btn-group .btn-group-selected.http-get-bg:hover,

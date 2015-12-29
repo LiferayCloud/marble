@@ -1156,6 +1156,9 @@ body.fade-in {
   transition: opacity 0.3s ease-in-out;
   opacity: 1; }
 
+.primary-bg {
+  background: #0e141a; }
+
 .http-get-bg,
 .btn-group .btn-group-selected.http-get-bg,
 .btn-group .btn-group-selected.http-get-bg:hover,

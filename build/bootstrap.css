@@ -1159,6 +1159,9 @@ body.fade-in {
 .primary-bg {
   background: #0e141a; }
 
+.accent-bg {
+  background: #647efb; }
+
 .http-get-bg,
 .btn-group .btn-group-selected.http-get-bg,
 .btn-group .btn-group-selected.http-get-bg:hover,
@@ -2935,6 +2938,20 @@ label {
 .has-error .help-block .primary {
   color: #e64545; }
 
+.input-inverse-accent {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #fff; }
+  .input-inverse-accent::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1; }
+  .input-inverse-accent:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8); }
+  .input-inverse-accent::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8); }
+  .input-inverse-accent:focus {
+    border-color: #fff; }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -3336,6 +3353,22 @@ input[type="button"].btn-block {
     background-color: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.6);
     color: #fff; }
+
+.btn-inverse-accent {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  border-color: transparent;
+  color: #647efb; }
+  .btn-inverse-accent:hover, .btn-inverse-accent:focus, .btn-inverse-accent.focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: transparent;
+    color: #647efb; }
+  .btn-inverse-accent:active:hover, .btn-inverse-accent:active:focus, .btn-inverse-accent:active.focus, .btn-inverse-accent.active:hover, .btn-inverse-accent.active:focus, .btn-inverse-accent.active.focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: transparent;
+    color: #647efb; }
 
 .btn span[class^="icon-16-"],
 .btn span[class*="icon-16-"] {

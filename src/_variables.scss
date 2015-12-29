@@ -76,6 +76,12 @@ $input-group-addon-bg: transparent;
 $input-height-base: 52px;
 $input-bg-disabled: white;
 
+$input-inverse-bg: transparent;
+$input-inverse-border-focus: $white;
+$input-inverse-border: rgba($white, .8);
+$input-inverse-color: $white;
+$input-inverse-color-placeholder: rgba($white, .8);
+
 // Form states
 
 $state-success-text: $brand-success;

@@ -23,6 +23,16 @@ $http-delete : #ff5653;
 
 $grid-gutter-width: 24px;
 
+$screen-xs: 360px;
+$screen-sm: 600px;
+$screen-md: 992px;
+$screen-lg: 1280px;
+
+$container-tablet: (560px + $grid-gutter-width) !default;
+$container-desktop: (960px + $grid-gutter-width) !default;
+$container-large-desktop: (1200px + $grid-gutter-width) !default;
+
+
 // Scaffolding
 
 $body-bg: $white;

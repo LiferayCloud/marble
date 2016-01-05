@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Grid Breakpoints</title>
+
+	<link rel="stylesheet" href="../build/bootstrap.css">
+	<style>
+	h1 {
+		text-align: center;
+	}
+
+	.container-xs { width: 480px; }
+	.container-sm { width: 768px; }
+	.container-md { width: 992px; }
+	.container-lg { width: 1200px; }
+
+	[class^="col-"] {
+		background-color: rgba(31, 122, 255, .2);
+		color: black;
+		height: 150px;
+	}
+
+	[class^="col-"]:after {
+		background-color: rgba(31, 122, 255, .5);
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 15px;
+		right: 15px;
+		bottom: 0;
+		z-index: -1;
+	}
+	</style>
+</head>
+<body>
+	<h1>Small (480px)</h1>
+	<div class="container container-xs">
+		<div class="row">
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4"></div>
+			<div class="col-xs-4"></div>
+		</div>
+	</div>
+
+	<h1>Medium (768px)</h1>
+	<div class="container container-sm">
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3"></div>
+		</div>
+	</div>
+
+	<h1>Large (992px)</h1>
+	<div class="container container-md">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+
+	<h1>Extra Large (1200px)</h1>
+	<div class="container container-lg">
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-1"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -26,12 +26,12 @@ $grid-gutter-width: 24px;
 
 $screen-xs: 360px;
 $screen-sm: 600px;
-$screen-md: 992px;
+$screen-md: 960px;
 $screen-lg: 1280px;
 
-$container-tablet: (560px + $grid-gutter-width) !default;
-$container-desktop: (960px + $grid-gutter-width) !default;
-$container-large-desktop: (1200px + $grid-gutter-width) !default;
+$container-tablet: ($screen-sm - $grid-gutter-width) !default;
+$container-desktop: ($screen-md - $grid-gutter-width) !default;
+$container-large-desktop: ($screen-lg - $grid-gutter-width) !default;
 
 
 // Scaffolding

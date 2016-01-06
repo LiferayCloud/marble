@@ -1602,13 +1602,13 @@ pre {
     clear: both; }
   @media (min-width: 600px) {
     .container {
-      width: 584px; } }
-  @media (min-width: 992px) {
+      width: 576px; } }
+  @media (min-width: 960px) {
     .container {
-      width: 984px; } }
+      width: 936px; } }
   @media (min-width: 1280px) {
     .container {
-      width: 1224px; } }
+      width: 1256px; } }
 
 .container-fluid {
   margin-right: auto;
@@ -1978,7 +1978,7 @@ pre {
   .col-sm-offset-16 {
     margin-left: 100%; } }
 
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16 {
     float: left; }
   .col-md-1 {
@@ -6498,7 +6498,7 @@ button.close {
   .modal-sm {
     width: 300px; } }
 
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .modal-lg {
     width: 900px; } }
 
@@ -7120,7 +7120,7 @@ button.close {
   .visible-xs-inline-block {
     display: inline-block !important; } }
 
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 959px) {
   .visible-sm {
     display: block !important; }
   table.visible-sm {
@@ -7131,19 +7131,19 @@ button.close {
   td.visible-sm {
     display: table-cell !important; } }
 
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 959px) {
   .visible-sm-block {
     display: block !important; } }
 
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 959px) {
   .visible-sm-inline {
     display: inline !important; } }
 
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 959px) {
   .visible-sm-inline-block {
     display: inline-block !important; } }
 
-@media (min-width: 992px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1279px) {
   .visible-md {
     display: block !important; }
   table.visible-md {
@@ -7154,15 +7154,15 @@ button.close {
   td.visible-md {
     display: table-cell !important; } }
 
-@media (min-width: 992px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1279px) {
   .visible-md-block {
     display: block !important; } }
 
-@media (min-width: 992px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1279px) {
   .visible-md-inline {
     display: inline !important; } }
 
-@media (min-width: 992px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1279px) {
   .visible-md-inline-block {
     display: inline-block !important; } }
 
@@ -7193,11 +7193,11 @@ button.close {
   .hidden-xs {
     display: none !important; } }
 
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 959px) {
   .hidden-sm {
     display: none !important; } }
 
-@media (min-width: 992px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1279px) {
   .hidden-md {
     display: none !important; } }
 

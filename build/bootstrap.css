@@ -1602,13 +1602,13 @@ pre {
     clear: both; }
   @media (min-width: 600px) {
     .container {
-      width: 576px; } }
+      width: 580px; } }
   @media (min-width: 960px) {
     .container {
-      width: 936px; } }
+      width: 940px; } }
   @media (min-width: 1280px) {
     .container {
-      width: 1256px; } }
+      width: 1280px; } }
 
 .container-fluid {
   margin-right: auto;
@@ -2253,6 +2253,11 @@ pre {
     margin-left: 93.75%; }
   .col-lg-offset-16 {
     margin-left: 100%; } }
+
+.container,
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 table {
   background-color: transparent; }

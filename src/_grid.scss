@@ -1,0 +1,7 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
+
+.container,
+.container-fluid {
+	padding-left: $grid-margin-width;
+	padding-right: $grid-margin-width;
+}

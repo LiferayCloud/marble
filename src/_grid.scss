@@ -1,12 +1,5 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
-.container,
-.container-hybrid,
-.container-fluid {
-	padding-left: $grid-margin-width;
-	padding-right: $grid-margin-width;
-}
-
 .container-hybrid {
 	@include container-fixed;
 
@@ -21,4 +14,11 @@
 	@media (min-width: $screen-lg-min) {
 		width: $container-lg;
 	}
+}
+
+.container,
+.container-hybrid,
+.container-fluid {
+	padding-left: $grid-margin-width;
+	padding-right: $grid-margin-width;
 }

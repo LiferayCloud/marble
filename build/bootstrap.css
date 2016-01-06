@@ -2254,12 +2254,6 @@ pre {
   .col-lg-offset-16 {
     margin-left: 100%; } }
 
-.container,
-.container-hybrid,
-.container-fluid {
-  padding-left: 20px;
-  padding-right: 20px; }
-
 .container-hybrid {
   margin-right: auto;
   margin-left: auto;
@@ -2279,6 +2273,12 @@ pre {
   @media (min-width: 1280px) {
     .container-hybrid {
       width: 1280px; } }
+
+.container,
+.container-hybrid,
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 table {
   background-color: transparent; }

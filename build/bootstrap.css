@@ -2255,9 +2255,30 @@ pre {
     margin-left: 100%; } }
 
 .container,
+.container-hybrid,
 .container-fluid {
   padding-left: 20px;
   padding-right: 20px; }
+
+.container-hybrid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 12px;
+  padding-right: 12px; }
+  .container-hybrid:before, .container-hybrid:after {
+    content: " ";
+    display: table; }
+  .container-hybrid:after {
+    clear: both; }
+  @media (min-width: 600px) {
+    .container-hybrid {
+      width: 100%; } }
+  @media (min-width: 960px) {
+    .container-hybrid {
+      width: 100%; } }
+  @media (min-width: 1280px) {
+    .container-hybrid {
+      width: 1280px; } }
 
 table {
   background-color: transparent; }

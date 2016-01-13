@@ -2517,7 +2517,7 @@ table th[class*="col-"] {
 .table > thead > tr > th,
 .table > thead > tr > td {
   color: rgba(14, 20, 26, 0.4);
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 11px;
   font-weight: 700;
   padding: 20px 10px 28px;
@@ -4920,7 +4920,7 @@ a.label:hover, a.label:focus {
 .label {
   border-radius: 4px;
   display: inline-block;
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 11px;
   font-weight: 900;
   padding: 9px 12px 10px;
@@ -6050,7 +6050,7 @@ button.close {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   margin: 30px 0;
   text-transform: uppercase; }
@@ -6100,7 +6100,7 @@ button.close {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: rgba(255, 255, 255, 0.3);
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 12px;
   font-weight: 500;
   text-decoration: none;
@@ -6220,7 +6220,7 @@ button.close {
   background: rgba(14, 20, 26, 0.3);
   color: white;
   cursor: default;
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase; }
@@ -6553,7 +6553,7 @@ button.close {
 
 .modal-header .modal-title {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 24px;

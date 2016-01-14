@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="../build/bootstrap.css">
 	<link rel="stylesheet" href="../build/fonts/icon-12.css">
 	<link rel="stylesheet" href="../build/fonts/icon-16.css">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:700,400,300|Open+Sans:700,400,300">
 </head>
 <body>
 	<h1>Avatar photo</h1>
@@ -15,7 +17,8 @@
 	<nav class="topbar">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="#">
-				<img class="topbar-image" src="logo.svg" width="24" height="24" alt="Logo">
+				<span class="icon-16-launchpad-logo"></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
 			</a>
 		</div>
 		<ul class="topbar-list">
@@ -30,8 +33,11 @@
 			</li>
 			<li class="topbar-item topbar-avatar">
 				<button class="topbar-link btn-transparent">
-					<span class="avatar-photo avatar-medium">
-						<img src="https://avatars2.githubusercontent.com/u/398893?s=72" alt="Avatar">
+					<span class="avatar-container avatar-medium" alt="Zeno Rocha">
+						<span class="avatar-photo avatar-medium">
+							<img src="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120">
+						</span>
+						<span class="avatar-initials avatar-medium">Z</span>
 					</span>
 					<span class="topbar-caret icon-12-arrow-down-short"></span>
 				</button>
@@ -44,7 +50,8 @@
 	<nav class="topbar">
 		<div class="topbar-logo">
 			<a class="topbar-logo-link" href="#">
-				<img class="topbar-image" src="logo.svg" width="24" height="24" alt="Logo">
+				<span class="icon-16-launchpad-logo"></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
 			</a>
 		</div>
 		<ul class="topbar-list">
@@ -59,9 +66,36 @@
 			</li>
 			<li class="topbar-item topbar-avatar">
 				<button class="topbar-link btn-transparent">
-					<span class="avatar-initials avatar-medium">m</span>
+					<span class="avatar-container avatar-medium" alt="Zeno Rocha">
+						<span class="avatar-photo avatar-medium">
+							<img src="http://www.gravatar.com/avatar/1?d=blank&amp;s=120">
+						</span>
+						<span class="avatar-initials avatar-medium">Z</span>
+					</span>
 					<span class="topbar-caret icon-12-arrow-down-short"></span>
 				</button>
+			</li>
+		</ul>
+	</nav>
+
+	<h1>Topbar Inverse</h1>
+
+	<nav class="topbar topbar-inverse">
+		<div class="topbar-logo">
+			<a class="topbar-logo-link" href="/">
+				<span class="icon-16-launchpad-logo"></span>
+				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project <span class="topbar-logo-label">Beta</span></span></span>
+			</a>
+		</div>
+		<ul class="topbar-list">
+			<li class="topbar-item">
+				<a class="topbar-link" href="/">Product</a>
+			</li>
+			<li class="topbar-item">
+				<a class="topbar-link topbar-link-selected" href="docs.html">Learn</a>
+			</li>
+			<li class="topbar-item">
+				<a class="topbar-link" href="/dashboard/login/signin">Login</a>
 			</li>
 		</ul>
 	</nav>

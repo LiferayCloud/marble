@@ -7,7 +7,7 @@
 .topbar {
 	background: $primary;
 	height: 84px;
-	padding: 0 40px;
+	padding: 0 20px;
 }
 
 .topbar-logo {
@@ -23,9 +23,8 @@
 	display: -ms-flexbox;
 	display: flex;
 	font-family: $font-family-secondary;
-	font-weight: 500;
+	font-weight: 700;
 	margin: 30px 0;
-	text-transform: uppercase;
 }
 
 .topbar-logo-link:hover,
@@ -33,18 +32,28 @@
 	color: white;
 }
 
+.topbar-logo-link .icon-16-launchpad-logo {
+	font-size: 20px;
+	position: relative;
+	top: -1px;
+}
+
 .topbar-logo-text {
-	font-size: 13px;
+	display: none;
+	font-size: 14px;
+	letter-spacing: 0px;
 	margin-left: 20px;
+	position: relative;
+	top: 1px;
 }
 
 .topbar-logo-label {
 	background: rgba(white, .2);
 	border-radius: $border-radius-small;
 	color: rgba(white, .9);
-	font-size: 10px;
-	margin-left: 2px;
-	padding: 2px 7px;
+	font-size: 12px;
+	margin-left: 17px;
+	padding: 11px 9px 10px 10px;
 	position: relative;
 	top: -1px;
 }
@@ -78,10 +87,9 @@
 	@include anim(color);
 	color: rgba($white, .3);
 	font-family: $font-family-secondary;
-	font-size: 12px;
-	font-weight: 500;
+	font-size: 14px;
+	font-weight: 700;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 
 .topbar-link:focus {
@@ -100,7 +108,7 @@
 }
 
 .topbar-avatar {
-	margin-left: 10px;
+	margin-left: 19px;
 	position: relative;
 	top: 3px;
 }
@@ -117,24 +125,12 @@
 .topbar-caret {
 	margin-left: 10px;
 	position: relative;
-	top: -12px;
+	top: -13px;
 }
 
-@media (max-width: 480px) {
-	.topbar {
-		padding: 0 20px;
-	}
-
-	.topbar-item {
-		margin: 0 10px;
-	}
-
-	.topbar-avatar {
-		width: 56px;
-	}
-
-	.topbar-caret {
-		margin-left: 5px;
+@media (min-width: $screen-sm-min) {
+	.topbar-logo-text {
+		display: block;
 	}
 }
 
@@ -150,7 +146,7 @@
 }
 
 .topbar-inverse .topbar-list {
-	margin: 33px 0;
+	margin: 22px 0;
 }
 
 .topbar-inverse .topbar-link {
@@ -169,18 +165,4 @@
 .topbar-inverse .topbar-link-selected:hover,
 .topbar-inverse .topbar-link-selected:focus {
 	color: white;
-}
-
-@media (max-width: 480px) {
-	.topbar-inverse .topbar {
-	    padding: 0 10px;
-	}
-
-	.topbar-inverse .topbar-logo-text {
-		margin-left: 10px;
-	}
-
-	.topbar-inverse .topbar-logo-complementary {
-		display: none;
-	}
 }

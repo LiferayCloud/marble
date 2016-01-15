@@ -24,206 +24,238 @@
   content: "\E001";
 }
 
-.icon-12-arrow-down-short:before {
+.icon-12-arrow-down-rod:before {
   content: "\E002";
 }
 
-.icon-12-arrow-left-long:before {
+.icon-12-arrow-down-short:before {
   content: "\E003";
 }
 
-.icon-12-arrow-left-rod:before {
+.icon-12-arrow-left-long:before {
   content: "\E004";
 }
 
-.icon-12-arrow-right-long:before {
+.icon-12-arrow-left-rod:before {
   content: "\E005";
 }
 
-.icon-12-arrow-right-rod:before {
+.icon-12-arrow-right-long:before {
   content: "\E006";
 }
 
-.icon-12-arrow-up-short:before {
+.icon-12-arrow-right-rod:before {
   content: "\E007";
 }
 
-.icon-12-arrows:before {
+.icon-12-arrow-up-rod:before {
   content: "\E008";
 }
 
-.icon-12-ballon-text:before {
+.icon-12-arrow-up-short:before {
   content: "\E009";
 }
 
-.icon-12-balloon-comments-inline:before {
+.icon-12-arrows:before {
   content: "\E00A";
 }
 
-.icon-12-balloon-comments:before {
+.icon-12-ballon-text:before {
   content: "\E00B";
 }
 
-.icon-12-balloon-topic:before {
+.icon-12-balloon-comments-inline:before {
   content: "\E00C";
 }
 
-.icon-12-briefcase:before {
+.icon-12-balloon-comments:before {
   content: "\E00D";
 }
 
-.icon-12-browser:before {
+.icon-12-balloon-topic:before {
   content: "\E00E";
 }
 
-.icon-12-building-big:before {
+.icon-12-bell-off:before {
   content: "\E00F";
 }
 
-.icon-12-building-small:before {
+.icon-12-bell:before {
   content: "\E010";
 }
 
-.icon-12-camera:before {
+.icon-12-bookmark:before {
   content: "\E011";
 }
 
-.icon-12-card:before {
+.icon-12-briefcase:before {
   content: "\E012";
 }
 
-.icon-12-check:before {
+.icon-12-browser:before {
   content: "\E013";
 }
 
-.icon-12-clock:before {
+.icon-12-building-big:before {
   content: "\E014";
 }
 
-.icon-12-close-long:before {
+.icon-12-building-small:before {
   content: "\E015";
 }
 
-.icon-12-close-short:before {
+.icon-12-camera:before {
   content: "\E016";
 }
 
-.icon-12-collapse:before {
+.icon-12-card:before {
   content: "\E017";
 }
 
-.icon-12-collections:before {
+.icon-12-check:before {
   content: "\E018";
 }
 
-.icon-12-expand:before {
+.icon-12-clock:before {
   content: "\E019";
 }
 
-.icon-12-external:before {
+.icon-12-close-long:before {
   content: "\E01A";
 }
 
-.icon-12-flag-small:before {
+.icon-12-close-short:before {
   content: "\E01B";
 }
 
-.icon-12-flag:before {
+.icon-12-collapse:before {
   content: "\E01C";
 }
 
-.icon-12-gear:before {
+.icon-12-collections:before {
   content: "\E01D";
 }
 
-.icon-12-graph:before {
+.icon-12-download:before {
   content: "\E01E";
 }
 
-.icon-12-groups:before {
+.icon-12-expand:before {
   content: "\E01F";
 }
 
-.icon-12-hash:before {
+.icon-12-external:before {
   content: "\E020";
 }
 
-.icon-12-heart-full:before {
+.icon-12-eye-off:before {
   content: "\E021";
 }
 
-.icon-12-heart-inline:before {
+.icon-12-flag-small:before {
   content: "\E022";
 }
 
-.icon-12-heart:before {
+.icon-12-flag:before {
   content: "\E023";
 }
 
-.icon-12-info-card:before {
+.icon-12-gear:before {
   content: "\E024";
 }
 
-.icon-12-journal:before {
+.icon-12-graph:before {
   content: "\E025";
 }
 
-.icon-12-link:before {
+.icon-12-groups:before {
   content: "\E026";
 }
 
-.icon-12-menu:before {
+.icon-12-hash:before {
   content: "\E027";
 }
 
-.icon-12-network:before {
+.icon-12-heart-full:before {
   content: "\E028";
 }
 
-.icon-12-people:before {
+.icon-12-heart-inline:before {
   content: "\E029";
 }
 
-.icon-12-person-card-2:before {
+.icon-12-heart:before {
   content: "\E02A";
 }
 
-.icon-12-person-card-3:before {
+.icon-12-info-card:before {
   content: "\E02B";
 }
 
-.icon-12-person:before {
+.icon-12-journal:before {
   content: "\E02C";
 }
 
-.icon-12-persons:before {
+.icon-12-link:before {
   content: "\E02D";
 }
 
-.icon-12-pin:before {
+.icon-12-menu:before {
   content: "\E02E";
 }
 
-.icon-12-plus:before {
+.icon-12-network:before {
   content: "\E02F";
 }
 
-.icon-12-post:before {
+.icon-12-pen:before {
   content: "\E030";
 }
 
-.icon-12-signpost:before {
+.icon-12-people:before {
   content: "\E031";
 }
 
-.icon-12-star:before {
+.icon-12-person-card-2:before {
   content: "\E032";
 }
 
-.icon-12-trash:before {
+.icon-12-person-card-3:before {
   content: "\E033";
 }
 
-.icon-12-upload:before {
+.icon-12-person:before {
   content: "\E034";
+}
+
+.icon-12-persons:before {
+  content: "\E035";
+}
+
+.icon-12-pin:before {
+  content: "\E036";
+}
+
+.icon-12-plus:before {
+  content: "\E037";
+}
+
+.icon-12-post:before {
+  content: "\E038";
+}
+
+.icon-12-signpost:before {
+  content: "\E039";
+}
+
+.icon-12-star:before {
+  content: "\E03A";
+}
+
+.icon-12-trash:before {
+  content: "\E03B";
+}
+
+.icon-12-upload:before {
+  content: "\E03C";
 }

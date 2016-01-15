@@ -9,6 +9,7 @@
 	box-shadow: $shadow-large;
 	height: auto;
 	left: 0;
+	padding: 20px;
 	position: absolute;
 	width: 100%;
 }
@@ -25,6 +26,7 @@
 
 .sidebar-link {
 	@include anim(all);
+	border-radius: $border-radius-large;
 	display: block;
 	text-decoration: none;
 }
@@ -38,6 +40,7 @@
 
 .sidebar-header {
 	background: rgba($accent, .1);
+	border-radius: $border-radius-large;
 	color: $accent;
 	cursor: pointer;
 	display: block;
@@ -104,7 +107,7 @@
 }
 
 .sidebar-list-1 .sidebar-icon {
-	color: $accent;
+	color: rgba($secondary, .6);
 	display: inline-block;
 	margin-right: 20px;
 	margin-top: -1px;
@@ -116,6 +119,11 @@
 .sidebar-list-1 .sidebar-link-selected,
 .sidebar-list-1 .sidebar-link-selected:hover,
 .sidebar-list-1 .sidebar-link-selected:focus {
+	background: rgba($accent, .1);
+	color: $accent;
+}
+
+.sidebar-list-1 .sidebar-link-selected  .sidebar-icon {
 	color: $accent;
 }
 

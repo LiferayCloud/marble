@@ -1087,7 +1087,7 @@ img {
   height: auto; }
 
 .img-rounded {
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .img-thumbnail {
   padding: 4px;
@@ -2818,7 +2818,7 @@ select[multiple].input-sm,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
@@ -2840,7 +2840,7 @@ select[multiple].input-lg,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .form-group-lg select.form-control {
   height: 46px;
@@ -3412,7 +3412,7 @@ fieldset[disabled] a.btn {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
@@ -4075,7 +4075,7 @@ tbody.collapse.in {
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 10px 16px;
     font-size: 18px;
-    border-radius: 6px; }
+    border-radius: 4px; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
@@ -4804,13 +4804,13 @@ tbody.collapse.in {
 
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px; }
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px; }
 
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px; }
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px; }
 
 .pagination-sm > li > a,
 .pagination-sm > li > span {
@@ -5078,7 +5078,7 @@ a.badge:hover, a.badge:focus {
     border-top-color: #d5d5d5; }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    border-radius: 6px;
+    border-radius: 4px;
     padding-left: 12px;
     padding-right: 12px; }
   .jumbotron .container {
@@ -5845,7 +5845,7 @@ button.list-group-item-danger {
 
 .well-lg {
   padding: 24px;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .well-sm {
   padding: 9px;
@@ -5897,6 +5897,7 @@ button.close {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   height: auto;
   left: 0;
+  padding: 20px;
   position: absolute;
   width: 100%; }
 
@@ -5912,6 +5913,7 @@ button.close {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border-radius: 4px;
   display: block;
   text-decoration: none; }
 
@@ -5922,6 +5924,7 @@ button.close {
    ========================================================================== */
 .sidebar-header {
   background: rgba(100, 126, 251, 0.1);
+  border-radius: 4px;
   color: #647efb;
   cursor: pointer;
   display: block;
@@ -5985,7 +5988,7 @@ button.close {
   color: rgba(14, 20, 26, 0.9); }
 
 .sidebar-list-1 .sidebar-icon {
-  color: #647efb;
+  color: rgba(14, 20, 26, 0.6);
   display: inline-block;
   margin-right: 20px;
   margin-top: -1px;
@@ -5996,6 +5999,10 @@ button.close {
 .sidebar-list-1 .sidebar-link-selected,
 .sidebar-list-1 .sidebar-link-selected:hover,
 .sidebar-list-1 .sidebar-link-selected:focus {
+  background: rgba(100, 126, 251, 0.1);
+  color: #647efb; }
+
+.sidebar-list-1 .sidebar-link-selected .sidebar-icon {
   color: #647efb; }
 
 /* Second level
@@ -6442,7 +6449,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 4px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -6763,7 +6770,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 4px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
   .popover.top {
@@ -6781,7 +6788,7 @@ button.close {
   font-size: 14px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0; }
+  border-radius: 3px 3px 0 0; }
 
 .popover-content {
   padding: 9px 14px; }

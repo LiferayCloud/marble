@@ -88,6 +88,36 @@
 	display: none;
 }
 
+/* Search
+   ========================================================================== */
+
+.sidebar-search .form-group {
+	margin: 10px 0;
+}
+
+.sidebar-search .form-control {
+	@include anim(all);
+	background: rgba($primary, .05);
+	border-color: white;
+	color: rgba($primary, .4);
+	font-weight: 600;
+}
+
+.sidebar-search .input-inner-icon-helper {
+	@include anim(color);
+	color: rgba($primary, .6);
+}
+
+.sidebar-search .form-control:focus {
+	background: white;
+	border-color: $accent;
+	color: rgba($primary, .8);
+}
+
+.sidebar-search .form-control:focus + .input-inner-icon-helper {
+	color: $accent;
+}
+
 /* First level
    ========================================================================== */
 
@@ -162,5 +192,9 @@
 
 	.toggler-collapsed {
 		display: block;
+	}
+
+	.sidebar-search .form-group {
+		margin: 0 0 24px;
 	}
 }

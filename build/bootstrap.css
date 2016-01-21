@@ -4157,7 +4157,7 @@ tbody.collapse.in {
   right: 20px; }
 
 .input-inner-addon-left .form-control {
-  padding: 20px 50px 20px 20px; }
+  padding-right: 50px; }
 
 .input-inner-addon-right [class^="icon-12-"],
 .input-inner-addon-right [class*="icon-12-"],
@@ -4166,7 +4166,7 @@ tbody.collapse.in {
   left: 20px; }
 
 .input-inner-addon-right .form-control {
-  padding: 20px 20px 20px 50px; }
+  padding-left: 50px; }
 
 .input-inner-addon [class^="icon-12-"],
 .input-inner-addon [class*="icon-12-"] {
@@ -4174,7 +4174,7 @@ tbody.collapse.in {
 
 .input-inner-addon [class^="icon-16-"],
 .input-inner-addon [class*="icon-16-"] {
-  top: 18px; }
+  top: 19px; }
 
 .input-inner-icon-helper {
   z-index: 999; }

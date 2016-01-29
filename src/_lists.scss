@@ -4,7 +4,6 @@
 .list .listitem {
 	@include anim(background);
 	border: none;
-	border-bottom: 1px solid rgba($primary, .2);
 	list-style: none;
 	margin: 0;
 	padding: 35px 12px;

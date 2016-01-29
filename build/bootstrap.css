@@ -6359,7 +6359,6 @@ button.close {
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   border: none;
-  border-bottom: 1px solid rgba(14, 20, 26, 0.2);
   list-style: none;
   margin: 0;
   padding: 35px 12px;

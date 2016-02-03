@@ -55,11 +55,11 @@ $font-size-h6: 12px;
 
 // Buttons
 
-$btn-default-color: rgba($primary, .8);
+$btn-default-color: $accent;
 $btn-default-bg: $white;
-$btn-default-border: rgba($primary, .2);
-$btn-default-focus-bg: #DEE0E2;
-$btn-default-focus-border: #D3D6D9;
+$btn-default-border: $accent;
+$btn-default-focus-bg: rgba($accent, .1);
+$btn-default-focus-border: $accent;
 
 $btn-primary-color: $white;
 $btn-primary-bg: rgba($primary, .8);

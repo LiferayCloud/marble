@@ -2,13 +2,14 @@
 
 label {
 	color: rgba($primary, .4);
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 400;
-	margin-bottom: 3px;
+	margin-bottom: 4px;
 }
 
 .form-control {
 	box-shadow: none;
+	font-size: 16px;
 	padding: 0 20px;
 
 	&:focus {
@@ -24,13 +25,14 @@ label {
 .form-control-borderless {
 	border: 0;
 	color: rgba($primary, .8);
+	font-size: 16px;
 	outline: 0;
 }
 
 .help-block {
 	color: rgba($secondary, .4);
-	font-size: 11px;
-	margin-top: 2px;
+	font-size: 12px;
+	margin-top: 4px;
 }
 
 .has-success,

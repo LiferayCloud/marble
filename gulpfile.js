@@ -5,7 +5,7 @@ var iconfontCss = require('gulp-iconfont-css');
 
 gulp.task('build', function() {
 	return gulp.src('src/*.scss')
-		.pipe(sass({includePaths: ['bower_components']}))
+		.pipe(sass({includePaths: ['node_modules']}))
 		.pipe(gulp.dest('build'));
 });
 

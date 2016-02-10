@@ -3,6 +3,7 @@
   "name": "steel-bootstrap",
   "version": "0.0.0",
   "dependencies": {
+    "bootstrap-sass": "^3.3.6",
     "gulp": "^3.9.0",
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",

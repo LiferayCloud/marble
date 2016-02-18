@@ -6055,7 +6055,7 @@ button.close {
 
 /* Medium screens
    ========================================================================== */
-@media (min-width: 600px) {
+@media (min-width: 960px) {
   .sidebar {
     position: fixed;
     height: 100vh;

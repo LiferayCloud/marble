@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Sidebar Inverse</title>
+
+	<link rel="stylesheet" href="../build/bootstrap.css">
+	<link rel="stylesheet" href="../build/fonts/icon-12.css">
+	<link rel="stylesheet" href="../build/fonts/icon-16.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../bower_components/metal-toggler/build/globals/toggler-min.js"></script>
+</head>
+<body>
+	<nav class="sidebar sidebar-inverse">
+		<a class="sidebar-header toggler-header-collapsed">
+			<span class="sidebar-icon icon-16-menu"></span>
+			<span>Docs Menu</span>
+			<span class="sidebar-icon-right">
+				<span class="icon-12-arrow-down-short"></span>
+				<span class="icon-12-arrow-up-short"></span>
+			</span>
+		</a>
+		<ul class="sidebar-list sidebar-list-1 toggler-collapsed">
+			<li class="sidebar-item">
+				<form class="sidebar-search">
+					<div class="form-group">
+						<div class="input-inner-addon input-inner-addon-right">
+							<input class="form-control" type="text" placeholder="Search Docs" autocomplete="off">
+							<span class="input-inner-icon-helper icon-16-magnifier"></span>
+						</div>
+					</div>
+				</form>
+			</li>
+			<li class="sidebar-item">
+				<a class="sidebar-link sidebar-link-selected" href="#">
+					<span class="sidebar-icon icon-16-house"></span>
+					<span>Label</span>
+				</a>
+				<ul class="sidebar-list sidebar-list-2">
+					<li class="sidebar-item">
+						<a class="sidebar-link sidebar-link-selected" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="#">
+					<span class="sidebar-icon icon-16-globe"></span>
+					<span>Label</span>
+				</a>
+				<ul class="sidebar-list sidebar-list-2 hidden">
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="#">
+					<span class="sidebar-icon icon-16-github"></span>
+					<span>Label</span>
+				</a>
+				<ul class="sidebar-list sidebar-list-2 hidden">
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<span>Label</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<script>
+	window.toggler = new metal.Toggler({
+		content: '.sidebar-list-1',
+		header: '.sidebar-header'
+	});
+	</script>
+</body>
+</html>

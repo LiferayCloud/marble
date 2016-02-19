@@ -131,6 +131,7 @@
 }
 
 .sidebar-list-1 .sidebar-icon {
+	@include anim(color);
 	color: rgba($secondary, .6);
 	display: inline-block;
 	margin-right: 20px;
@@ -175,6 +176,79 @@
 	background: rgba($accent, .1);
 	color: $accent;
 }
+
+/* Sidebar Inverse
+	 ========================================================================== */
+
+@media (max-width: $screen-md-min) {
+	.sidebar.sidebar-inverse {
+		background: $accent;
+	}
+
+	// Header --------------------------------------------------------------------
+
+	.sidebar-inverse .sidebar-header {
+		background: rgba(white, .3);
+		color: white;
+	}
+
+	.sidebar-inverse .sidebar-header:hover,
+	.sidebar-inverse .sidebar-header:focus,
+	.sidebar-inverse .sidebar-header .sidebar-icon {
+		color: white;
+	}
+
+	// Search --------------------------------------------------------------------
+
+	.sidebar-inverse .sidebar-search .form-control {
+		background: white;
+	}
+
+	.sidebar-inverse .sidebar-search .form-control:focus {
+		border-color: white;
+	}
+
+	// First level ---------------------------------------------------------------
+
+	.sidebar-inverse .sidebar-list-1 .sidebar-link {
+		color: rgba(white, .8);
+	}
+
+	.sidebar-inverse .sidebar-list-1 .sidebar-icon {
+		color: rgba(white, .6);
+	}
+
+	.sidebar-inverse .sidebar-list-1 .sidebar-link:hover,
+	.sidebar-inverse .sidebar-list-1 .sidebar-link:focus,
+	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected,
+	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected:hover,
+	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected:focus {
+		background: rgba(white, .1);
+		color: white;
+	}
+
+	.sidebar-inverse .sidebar-list-1 .sidebar-link:hover .sidebar-icon,
+	.sidebar-inverse .sidebar-list-1 .sidebar-link:focus .sidebar-icon,
+	.sidebar-inverse .sidebar-list-1 .sidebar-link-selected .sidebar-icon {
+		color: white;
+	}
+
+	// Second level --------------------------------------------------------------
+
+	.sidebar-inverse .sidebar-list-2 .sidebar-link {
+		color: rgba(white, .9);
+	}
+
+	.sidebar-inverse .sidebar-list-2 .sidebar-link:hover,
+	.sidebar-inverse .sidebar-list-2 .sidebar-link:focus,
+	.sidebar-inverse .sidebar-list-2 .sidebar-link-selected,
+	.sidebar-inverse .sidebar-list-2 .sidebar-link-selected:hover,
+	.sidebar-inverse .sidebar-list-2 .sidebar-link-selected:focus {
+		background: rgba(white, .1);
+		color: white;
+	}
+}
+
 
 /* Medium screens
    ========================================================================== */

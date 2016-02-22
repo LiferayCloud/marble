@@ -32,10 +32,8 @@
 	color: white;
 }
 
-.topbar-logo-link .icon-16-launchpad-logo {
-	font-size: 20px;
-	position: relative;
-	top: -1px;
+.topbar-logo-link .icon-12-rocket {
+	font-size: 24px;
 }
 
 .topbar-logo-text {
@@ -48,7 +46,7 @@
 }
 
 .topbar-logo-label {
-	background: rgba(white, .2);
+	background: rgba(white, .3);
 	border-radius: $border-radius-small;
 	color: rgba(white, .9);
 	font-size: 12px;
@@ -133,6 +131,50 @@
 		display: block;
 	}
 }
+
+/* Topbar Light
+	 ========================================================================== */
+
+.topbar.topbar-light {
+	background: white;
+}
+
+.topbar-light .topbar-logo-link {
+	color: rgba($accent, .8);
+}
+
+.topbar-light .topbar-logo-link:hover,
+.topbar-light .topbar-logo-link:focus {
+	color: $accent;
+}
+
+.topbar-light .topbar-logo-label {
+	background: rgba($accent, .3);
+	color: $accent;
+}
+
+.topbar-light .topbar-list {
+	margin: 33px 0;
+}
+
+.topbar-light .topbar-link {
+	color: rgba($accent, .6);
+}
+
+.topbar-light .topbar-link:hover,
+.topbar-light .topbar-link:focus {
+	color: rgba($accent, .8);
+}
+
+.topbar-light .topbar-link-selected {
+	color: $accent;
+}
+
+.topbar-light .topbar-link-selected:hover,
+.topbar-light .topbar-link-selected:focus {
+	color: $accent;
+}
+
 
 /* Topbar Inverse
 	 ========================================================================== */

@@ -6139,10 +6139,8 @@ button.close {
 .topbar-logo-link:focus {
   color: white; }
 
-.topbar-logo-link .icon-16-launchpad-logo {
-  font-size: 20px;
-  position: relative;
-  top: -1px; }
+.topbar-logo-link .icon-12-rocket {
+  font-size: 24px; }
 
 .topbar-logo-text {
   display: none;
@@ -6153,7 +6151,7 @@ button.close {
   top: 1px; }
 
 .topbar-logo-label {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 12px;
@@ -6226,6 +6224,39 @@ button.close {
 @media (min-width: 600px) {
   .topbar-logo-text {
     display: block; } }
+
+/* Topbar Light
+	 ========================================================================== */
+.topbar.topbar-light {
+  background: white; }
+
+.topbar-light .topbar-logo-link {
+  color: rgba(100, 126, 251, 0.8); }
+
+.topbar-light .topbar-logo-link:hover,
+.topbar-light .topbar-logo-link:focus {
+  color: #647efb; }
+
+.topbar-light .topbar-logo-label {
+  background: rgba(100, 126, 251, 0.3);
+  color: #647efb; }
+
+.topbar-light .topbar-list {
+  margin: 33px 0; }
+
+.topbar-light .topbar-link {
+  color: rgba(100, 126, 251, 0.6); }
+
+.topbar-light .topbar-link:hover,
+.topbar-light .topbar-link:focus {
+  color: rgba(100, 126, 251, 0.8); }
+
+.topbar-light .topbar-link-selected {
+  color: #647efb; }
+
+.topbar-light .topbar-link-selected:hover,
+.topbar-light .topbar-link-selected:focus {
+  color: #647efb; }
 
 /* Topbar Inverse
 	 ========================================================================== */

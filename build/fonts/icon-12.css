@@ -244,18 +244,22 @@
   content: "\E038";
 }
 
-.icon-12-signpost:before {
+.icon-12-rocket:before {
   content: "\E039";
 }
 
-.icon-12-star:before {
+.icon-12-signpost:before {
   content: "\E03A";
 }
 
-.icon-12-trash:before {
+.icon-12-star:before {
   content: "\E03B";
 }
 
-.icon-12-upload:before {
+.icon-12-trash:before {
   content: "\E03C";
+}
+
+.icon-12-upload:before {
+  content: "\E03D";
 }

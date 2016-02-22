@@ -2,6 +2,8 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+<g id="row-6">
+</g>
 <g id="row-5">
 </g>
 <g id="row-4">
@@ -26,10 +28,8 @@
 	<g id="contract">
 	</g>
 	<g id="expand">
-		<g>
-			<polygon points="420,0 0,0 0,420 167.7,252.3 378.6,462.5 463.4,377.5 252.6,167.4 			"/>
-			<polygon points="792.4,707.6 582.4,497.6 497.6,582.4 707.6,792.4 540,960 960,960 960,540 			"/>
-		</g>
+		<path d="M252.6,167.4l210.8,210.1l-84.7,85L167.7,252.3L0,420V0h420L252.6,167.4z M792.4,707.6l-210-210l-84.9,84.9l210,210
+			L540,960h420V540L792.4,707.6z"/>
 	</g>
 	<g id="speaker-off">
 	</g>
@@ -121,7 +121,7 @@
 	</g>
 	<g id="balloon-comment">
 	</g>
-	<g id="heart-fill">
+	<g id="heart-inline">
 	</g>
 	<g id="heart">
 	</g>

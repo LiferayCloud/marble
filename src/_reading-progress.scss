@@ -1,7 +1,6 @@
 .reading-progress {
-  background-color: #f2f2f2;
-  display: none;
-  width: 290px;
+  background: rgba($primary, .05);
+  position: relative;
 }
 
 .reading-progress ul {
@@ -24,6 +23,7 @@
 }
 
 .reading-progress a::before {
+	background: white;
   content: counter(articles);
   top: 50%;
   bottom: auto;
@@ -38,7 +38,6 @@
   line-height: 34px;
   border-radius: 50%;
   color: #b3b3b3;
-  font-family: Georgia, serif;
   text-align: center;
   box-shadow: inset 0 0 0 1px #d9d9d9;
   -webkit-transition: background-color 0.3s, color 0.3s;
@@ -46,23 +45,8 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.reading-progress a::after {
-  content: '';
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 0;
-  height: 1px;
-  width: 260px;
-  background-color: #d9d9d9;
-}
-
 .reading-progress a.reading em {
-  color: #2a76e8;
+  color: $accent;
 }
 
 .reading-progress a.reading svg {
@@ -91,7 +75,7 @@
   display: none;
 }
 
-.reading-progress em {
+.reading-title {
   display: block;
   font-size: 1.4rem;
   line-height: 1.2;
@@ -104,11 +88,9 @@
   transition: color 0.3s;
 }
 
-.reading-progress b {
+.reading-subtitle {
   color: #a6a6a6;
   font-size: 1.2rem;
-  font-family: Georgia, serif;
-  font-style: italic;
 }
 
 .reading-progress svg {
@@ -122,12 +104,5 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 1.1em;
-  stroke: #2a76e8;
-}
-
-@media only screen and (min-width: 1100px) {
-  .reading-progress {
-    display: block;
-    position: fixed;
-  }
+  stroke: $accent;
 }

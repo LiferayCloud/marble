@@ -16,7 +16,7 @@
 .reading-progress a {
 	display: block;
 	position: relative;
-	padding: 16px 11px 16px 90px;
+	padding: 16px 11px 16px 80px;
 }
 
 .reading-progress a::before,
@@ -35,9 +35,9 @@
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 	left: 20px;
-	width: 48px;
-	height: 48px;
-	line-height: 48px;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
 	border-radius: 50%;
 	color: rgba($primary, .4);
 	text-align: center;

@@ -1,108 +1,110 @@
 .reading-progress {
-  background: rgba($primary, .05);
-  position: relative;
+	background: rgba($primary, .05);
+	border-radius: 4px;
+	position: relative;
 }
 
 .reading-progress ul {
+	list-style: none;
 	padding-left: 0;
 }
 
 .reading-progress li {
-  counter-increment: articles;
+	counter-increment: articles;
 }
 
 .reading-progress a {
-  display: block;
-  position: relative;
-  padding: 1.6em 1.1em 1.6em 4.3em;
+	display: block;
+	position: relative;
+	padding: 16px 11px 16px 90px;
 }
 
 .reading-progress a::before,
 .reading-progress a::after {
-  position: absolute;
+	position: absolute;
 }
 
 .reading-progress a::before {
-	background: white;
-  content: counter(articles);
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 1.1em;
-  width: 36px;
-  height: 36px;
-  line-height: 34px;
-  border-radius: 50%;
-  color: #b3b3b3;
-  text-align: center;
-  box-shadow: inset 0 0 0 1px #d9d9d9;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  -moz-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
+	background: transparent;
+	content: counter(articles);
+	top: 50%;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 20px;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	border-radius: 50%;
+	color: rgba($primary, .4);
+	text-align: center;
+	box-shadow: inset 0 0 0 1px #d9d9d9;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+	-moz-transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
 }
 
-.reading-progress a.reading em {
-  color: $accent;
+.reading-progress a.reading .reading-title {
+	color: $accent;
 }
 
 .reading-progress a.reading svg {
-  display: block;
+	display: block;
 }
 
 .reading-progress a.reading::before {
-  background-color: #ffffff;
-  color: #141414;
+	background-color: white;
+	color: rgba($primary, .8);
 }
 
-.reading-progress a.read em {
-  color: #a6a6a6;
+.reading-progress a.read .reading-title {
+	color: #a6a6a6;
 }
 
 .reading-progress a.reading.read svg {
-  display: none;
+	display: none;
 }
 
 .reading-progress a.read::before {
-  background-color: #d9d9d9;
-  color: #b3b3b3;
+	background-color: #d9d9d9;
+	color: #b3b3b3;
 }
 
 .reading-progress li:last-of-type a::after {
-  display: none;
+	display: none;
 }
 
 .reading-title {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  color: #141414;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  transition: color 0.3s;
+	display: block;
+	font-size: 15px;
+	line-height: 1.2;
+	color: rgba($primary, .6);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
 }
 
 .reading-subtitle {
-  color: #a6a6a6;
-  font-size: 1.2rem;
+	color: rgba($primary, .4);
+	font-size: 12px;
 }
 
 .reading-progress svg {
-  display: none;
-  position: absolute;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 1.1em;
-  stroke: $accent;
+	display: none;
+	position: absolute;
+	top: 50%;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 20px;
+	stroke: $accent;
 }

@@ -5245,7 +5245,8 @@ a.thumbnail.active {
   color: #647efb;
   font-size: 14px;
   font-weight: 700;
-  margin-left: 20px; }
+  margin-left: 20px;
+  text-transform: uppercase; }
 
 @keyframes alert-spinner {
   to {

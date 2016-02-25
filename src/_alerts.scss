@@ -2,39 +2,129 @@
 @import "variables";
 
 .alert {
-	border-radius: 0;
 	border: 0;
-	font-weight: 600;
-	left: 0;
-	padding: 45px 40px;
 	position: fixed;
-	right: 0;
 	text-align: center;
-	top: 0;
 	z-index: 1051;
+	background-color: white;
+    border-radius: 4px;
+    bottom: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: rgba($primary, .8);
+    font-size: 14px;
+    font-weight: 400;
+    left: 50px;
+    margin: 0;
+    min-height: 60px;
+    padding: 0;
 }
 
 .alert-danger {
-	color: $white;
-	background-color: $brand-danger;
+	background-color: $white;
 }
 
 .alert-success {
-	color: $white;
-	background-color: $brand-success;
+	background-color: $white;
+}
+
+.alert-body {
+    display: inline-block;
+    line-height: 60px;
+    min-height: 60px;
+    margin: 0 0 0 25px;
 }
 
 .alert .close {
 	@include anim(color);
-	color: $white;
-	font-size: 32px;
-	line-height: 24px;
 	opacity: 1;
 	outline: none;
 	text-shadow: none;
+	color: rgba($primary, .4);
+	font-size: 24px;
+	line-height: 60px;
+	margin: 0 25px;
+	right: inherit;
+	top: inherit;
 }
 
 .alert .close:hover {
-	color: rgba($white, .7);
+	color: rgba($primary, .2);
 	opacity: 1;
+}
+
+.alert-spinner {
+    margin: 0 0 0 25px;
+    top: 9px;
+}
+
+.alert-alert-content {
+    margin: 0 0 0 25px;
+}
+
+.alert-undo-link {
+    color: $accent;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+@keyframes alert-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes alert-spinner {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.alert-spinner {
+    color: white;
+    display: inline-block;
+    font-family: "icon-12";
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 17px;
+    min-height: 24px;
+    min-width: 24px;
+    position: relative;
+    text-align: center;
+}
+
+.alert-spinner:before {
+    height: 24px;
+    position: absolute;
+    width: 24px;
+    margin-left: -12px;
+}
+
+.alert-spinner:not(:required):before {
+    content: "";
+    border-radius: 50%;
+    border: 3px solid white;
+    border-bottom-color: $brand-success;
+    border-left-color: $brand-success;
+    border-top-color: $brand-success;
+    animation: alert-spinner .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    -webkit-animation: alert-spinner .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.alert-spinner-done:not(:required):before {
+    content: "\E018";
+    background: $brand-success;
+    border-color: $brand-success;
+    animation: alert-spinner-done 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1;
+    -webkit-animation: alert-spinner-done 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1;
+}
+
+.alert-danger .alert-spinner:not(:required):before {
+    border-bottom-color: $brand-danger;
+    border-left-color: $brand-danger;
+    border-top-color: $brand-danger;
+}
+
+.alert-danger .alert-spinner-done:not(:required):before {
+    background: $brand-danger;
+    border-color: $brand-danger;
 }

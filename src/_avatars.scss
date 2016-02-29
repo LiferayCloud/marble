@@ -83,7 +83,6 @@ $xlarge : 46px;
 	cursor: default;
 	font-family: $font-family-secondary;
 	font-weight: 600;
-	text-align: center;
 	text-transform: uppercase;
 }
 
@@ -91,27 +90,50 @@ $xlarge : 46px;
 	color: white;
 }
 
-.avatar-initials.avatar-xsmall {
+/* Avatar - Number
+	 ========================================================================== */
+
+.avatar-number {
+	@extend .avatar;
+	@include anim(background);
+	background: rgba($primary, .1);
+	color: rgba($primary, .6);
+	font-weight: 600;
+}
+
+.avatar-number:hover {
+	background: rgba($primary, .2);
+}
+
+/* Avatar - Initials and Number
+	 ========================================================================== */
+
+.avatar-initials.avatar-xsmall,
+.avatar-number.avatar-xsmall {
 	font-size: 12px;
 	line-height: $xsmall;
 }
 
-.avatar-initials.avatar-small {
+.avatar-initials.avatar-small,
+.avatar-number.avatar-small {
 	font-size: 13px;
 	line-height: $small;
 }
 
-.avatar-initials.avatar-medium {
+.avatar-initials.avatar-medium,
+.avatar-number.avatar-medium {
 	font-size: 14px;
 	line-height: $medium;
 }
 
-.avatar-initials.avatar-large {
+.avatar-initials.avatar-large,
+.avatar-number.avatar-large {
 	font-size: 15px;
 	line-height: $large;
 }
 
-.avatar-initials.avatar-xlarge {
+.avatar-initials.avatar-xlarge,
+.avatar-number.avatar-xlarge {
 	font-size: 16px;
 	line-height: $xlarge;
 }

@@ -103,7 +103,9 @@
 .topbar-link-selected,
 .topbar-link-selected:hover,
 .topbar-link-selected:focus {
+	border-bottom: 3px solid $accent;
 	color: $accent;
+	padding-bottom: 5px;
 }
 
 .topbar-avatar {
@@ -163,10 +165,7 @@
 	color: rgba($accent, .8);
 }
 
-.topbar-light .topbar-link-selected {
-	color: $accent;
-}
-
+.topbar-light .topbar-link-selected,
 .topbar-light .topbar-link-selected:hover,
 .topbar-light .topbar-link-selected:focus {
 	color: $accent;
@@ -193,11 +192,9 @@
 	color: rgba(white, .8);
 }
 
-.topbar-inverse .topbar-link-selected {
-	color: white;
-}
-
+.topbar-inverse .topbar-link-selected,
 .topbar-inverse .topbar-link-selected:hover,
 .topbar-inverse .topbar-link-selected:focus {
 	color: white;
+	border-color: white;
 }

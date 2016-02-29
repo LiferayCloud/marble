@@ -70,6 +70,7 @@
 	list-style: none;
 	margin: 24px 0;
 	padding: 0;
+	height: 38px;
 }
 
 .topbar-item {
@@ -153,10 +154,6 @@
 	color: $accent;
 }
 
-.topbar-light .topbar-list {
-	margin: 33px 0;
-}
-
 .topbar-light .topbar-link {
 	color: rgba($accent, .6);
 }
@@ -185,10 +182,6 @@
 
 .topbar-inverse .topbar-logo-label {
 	background: rgba($primary, .2);
-}
-
-.topbar-inverse .topbar-list {
-	margin: 33px 0;
 }
 
 .topbar-inverse .topbar-link {

@@ -3570,6 +3570,23 @@ input[type="button"].btn-block {
   .btn-transparent:focus, .btn-transparent.focus, .btn-transparent:active:focus, .btn-transparent:active.focus, .btn-transparent.active:focus, .btn-transparent.active.focus {
     outline: none; }
 
+.btn-icon {
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: rgba(14, 20, 26, 0.1);
+  border: 0;
+  border-radius: 50%;
+  color: rgba(14, 20, 26, 0.6);
+  height: 48px;
+  width: 48px; }
+  .btn-icon:hover, .btn-icon:focus, .btn-icon.focus {
+    background: rgba(14, 20, 26, 0.2); }
+  .btn-icon:focus, .btn-icon.focus, .btn-icon:active:focus, .btn-icon:active.focus, .btn-icon.active:focus, .btn-icon.active.focus {
+    color: #647efb;
+    background: rgba(100, 126, 251, 0.2);
+    outline: none; }
+
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -6281,7 +6298,9 @@ button.close {
 .topbar-link-selected,
 .topbar-link-selected:hover,
 .topbar-link-selected:focus {
-  color: #647efb; }
+  border-bottom: 3px solid #647efb;
+  color: #647efb;
+  padding-bottom: 5px; }
 
 .topbar-avatar {
   margin-left: 19px;
@@ -6327,9 +6346,7 @@ button.close {
 .topbar-light .topbar-link:focus {
   color: rgba(100, 126, 251, 0.8); }
 
-.topbar-light .topbar-link-selected {
-  color: #647efb; }
-
+.topbar-light .topbar-link-selected,
 .topbar-light .topbar-link-selected:hover,
 .topbar-light .topbar-link-selected:focus {
   color: #647efb; }
@@ -6349,20 +6366,19 @@ button.close {
 .topbar-inverse .topbar-link:focus {
   color: rgba(255, 255, 255, 0.8); }
 
-.topbar-inverse .topbar-link-selected {
-  color: white; }
-
+.topbar-inverse .topbar-link-selected,
 .topbar-inverse .topbar-link-selected:hover,
 .topbar-inverse .topbar-link-selected:focus {
-  color: white; }
+  color: white;
+  border-color: white; }
 
 /* Avatar
 	 ========================================================================== */
-.avatar-round, .avatar, .avatar-initials, .avatar-icon, .avatar-icon-12,
+.avatar-round, .avatar, .avatar-initials, .avatar-number, .avatar-icon, .avatar-icon-12,
 .avatar-icon-16, .avatar-photo img {
   border-radius: 50%; }
 
-.avatar, .avatar-initials, .avatar-icon, .avatar-icon-12,
+.avatar, .avatar-initials, .avatar-number, .avatar-icon, .avatar-icon-12,
 .avatar-icon-16 {
   display: block;
   text-align: center;
@@ -6400,29 +6416,53 @@ button.close {
   cursor: default;
   font-family: "Lato", sans-serif;
   font-weight: 600;
-  text-align: center;
   text-transform: uppercase; }
 
 .avatar-initials:hover {
   color: white; }
 
-.avatar-initials.avatar-xsmall, .avatar-photo.avatar-xsmall img.avatar-initials {
+/* Avatar - Number
+	 ========================================================================== */
+.avatar-number {
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: rgba(14, 20, 26, 0.1);
+  color: rgba(14, 20, 26, 0.6);
+  font-weight: 600; }
+
+.avatar-number:hover {
+  background: rgba(14, 20, 26, 0.2); }
+
+/* Avatar - Initials and Number
+	 ========================================================================== */
+.avatar-initials.avatar-xsmall, .avatar-photo.avatar-xsmall img.avatar-initials,
+.avatar-number.avatar-xsmall,
+.avatar-photo.avatar-xsmall img.avatar-number {
   font-size: 12px;
   line-height: 32px; }
 
-.avatar-initials.avatar-small, .avatar-photo.avatar-small img.avatar-initials {
+.avatar-initials.avatar-small, .avatar-photo.avatar-small img.avatar-initials,
+.avatar-number.avatar-small,
+.avatar-photo.avatar-small img.avatar-number {
   font-size: 13px;
   line-height: 34px; }
 
-.avatar-initials.avatar-medium, .avatar-photo.avatar-medium img.avatar-initials {
+.avatar-initials.avatar-medium, .avatar-photo.avatar-medium img.avatar-initials,
+.avatar-number.avatar-medium,
+.avatar-photo.avatar-medium img.avatar-number {
   font-size: 14px;
   line-height: 36px; }
 
-.avatar-initials.avatar-large, .avatar-photo.avatar-large img.avatar-initials {
+.avatar-initials.avatar-large, .avatar-photo.avatar-large img.avatar-initials,
+.avatar-number.avatar-large,
+.avatar-photo.avatar-large img.avatar-number {
   font-size: 15px;
   line-height: 44px; }
 
-.avatar-initials.avatar-xlarge, .avatar-photo.avatar-xlarge img.avatar-initials {
+.avatar-initials.avatar-xlarge, .avatar-photo.avatar-xlarge img.avatar-initials,
+.avatar-number.avatar-xlarge,
+.avatar-photo.avatar-xlarge img.avatar-number {
   font-size: 16px;
   line-height: 46px; }
 
@@ -6530,21 +6570,8 @@ button.close {
   color: rgba(14, 20, 26, 0.4);
   font-size: 12px; }
 
-.list .list-icons {
-  margin-top: 16px; }
-
-.list .list-icon {
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-  color: rgba(14, 20, 26, 0.3);
-  margin-left: 3px; }
-
-.list .list-icon:hover {
-  color: rgba(14, 20, 26, 0.6); }
-
 .list .list-label {
-  margin-top: 8px;
+  margin-top: 6px;
   margin-right: 40px; }
 
 .list > ul {

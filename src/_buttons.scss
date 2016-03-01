@@ -218,3 +218,32 @@
 		}
 	}
 }
+
+// Icon
+
+.btn-icon {
+	@include anim(background);
+	background: rgba($primary, .1);
+	border: 0;
+	border-radius: 50%;
+	color: rgba($primary, .6);
+	height: 48px;
+	width: 48px;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background: rgba($primary, .2);
+	}
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			color: $accent;
+			background: rgba($accent, .2);
+			outline: none;
+		}
+	}
+}

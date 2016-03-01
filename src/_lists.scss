@@ -29,22 +29,8 @@
 	font-size: 12px;
 }
 
-.list .list-icons {
-	margin-top: 16px;
-}
-
-.list .list-icon {
-	@include anim(color);
-	color: rgba($primary, .3);
-	margin-left: 3px;
-}
-
-.list .list-icon:hover {
-	color: rgba($primary, .6);
-}
-
 .list .list-label {
-	margin-top: 8px;
+	margin-top: 6px;
 	margin-right: 40px;
 }
 

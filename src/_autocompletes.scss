@@ -3,8 +3,7 @@
 
 .autocomplete {
 	@include box-shadow(0 2px 8px rgba(0, 0, 0, 0.16));
-	background-color: white;
-	border-radius: 2px;
+	background: white;
 	border: 1px transparent;
 	margin-top: 4px;
 	overflow: hidden;

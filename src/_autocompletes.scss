@@ -3,10 +3,10 @@
 
 .autocomplete {
 	@include box-shadow(0 2px 8px rgba(0, 0, 0, 0.16));
-	background-color: #fff;
-	margin-top: 4px;
-	border: 1px transparent;
+	background-color: white;
 	border-radius: 2px;
+	border: 1px transparent;
+	margin-top: 4px;
 	overflow: hidden;
 	position: absolute;
 	z-index: $zindex-modal;
@@ -15,8 +15,12 @@
 		padding-bottom: 12px;
 		padding-top: 12px;
 
-		.list-item:hover {
-			background-color: #edf4fd;
+		.listitem {
+			cursor: pointer;
+		}
+
+		.listitem:hover {
+			background-color: rgba($accent, .1);
 		}
 
 		ul {

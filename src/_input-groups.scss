@@ -19,6 +19,15 @@
 	border-radius: $border-radius-base !important;
 }
 
+.has-success,
+.has-warning,
+.has-error {
+	.input-group-addon {
+		background: transparent;
+		color: rgba($primary, .3);
+	}
+}
+
 // Inner Addon -----------------------------------------------------------------
 
 .input-inner-addon {

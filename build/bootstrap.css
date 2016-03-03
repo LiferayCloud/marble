@@ -3756,15 +3756,15 @@ tbody.collapse.in {
   min-width: initial;
   position: absolute; }
 
-.dropdown-menu > li {
+.dropdown-menu li {
   margin: 0; }
-  .dropdown-menu > li:first-child {
+  .dropdown-menu li:first-child {
     margin-top: 25px; }
-  .dropdown-menu > li:last-child {
+  .dropdown-menu li:last-child {
     margin-bottom: 25px; }
 
-.dropdown-menu > li > a,
-.dropdown-menu > li > button {
+.dropdown-menu li a,
+.dropdown-menu li button {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
@@ -3773,9 +3773,9 @@ tbody.collapse.in {
   font-size: 14px;
   padding: 10px 40px;
   text-decoration: none; }
-  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
-  .dropdown-menu > li > button:hover,
-  .dropdown-menu > li > button:focus {
+  .dropdown-menu li a:hover, .dropdown-menu li a:focus,
+  .dropdown-menu li button:hover,
+  .dropdown-menu li button:focus {
     text-decoration: none;
     background-color: none;
     color: rgba(14, 20, 26, 0.9); }
@@ -4156,6 +4156,12 @@ tbody.collapse.in {
 
 .input-group-addon-input {
   border-radius: 4px !important; }
+
+.has-success .input-group-addon,
+.has-warning .input-group-addon,
+.has-error .input-group-addon {
+  background: transparent;
+  color: rgba(14, 20, 26, 0.3); }
 
 .input-inner-addon {
   position: relative; }
@@ -6532,7 +6538,7 @@ button.close {
 /* Avatar - Photo + Initials
 	 ========================================================================== */
 .avatar-container {
-  display: block;
+  display: inline-block;
   position: relative; }
 
 .avatar-container .avatar-photo {

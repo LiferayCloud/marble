@@ -10,7 +10,7 @@
 	position: absolute;
 }
 
-.dropdown-menu > li {
+.dropdown-menu li {
 	margin: 0;
 
 	&:first-child {
@@ -22,8 +22,8 @@
 	}
 }
 
-.dropdown-menu > li > a,
-.dropdown-menu > li > button {
+.dropdown-menu li a,
+.dropdown-menu li button {
 	@include anim(color);
 	color: $dropdown-link-color;
 	display: block;

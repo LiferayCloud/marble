@@ -6003,7 +6003,11 @@ button.close {
   left: 0;
   padding: 20px;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 1000; }
+
+.sidebar-offset {
+  padding-top: 100px; }
 
 .sidebar-list {
   list-style: none;
@@ -6205,12 +6209,25 @@ button.close {
     position: fixed;
     height: 100vh;
     width: 265px; }
+  .sidebar-offset {
+    margin-left: 265px;
+    padding-top: 0;
+    width: calc(100% - 265px); }
+    .sidebar-offset .container {
+      width: 695px; }
   .sidebar-header {
     display: none; }
   .toggler-collapsed {
     display: block; }
   .sidebar-search .form-group {
     margin: 0 0 24px; } }
+
+/* Large screens
+   ========================================================================== */
+@media (min-width: 1280px) {
+  .sidebar-offset .container,
+  .sidebar-offset .container-hybrid {
+    width: 1015px; } }
 
 /* Topbar
 	 ========================================================================== */

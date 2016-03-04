@@ -12,6 +12,11 @@
 	padding: 20px;
 	position: absolute;
 	width: 100%;
+	z-index: 1000;
+}
+
+.sidebar-offset {
+	padding-top: 100px;
 }
 
 .sidebar-list {
@@ -249,7 +254,6 @@
 	}
 }
 
-
 /* Medium screens
    ========================================================================== */
 
@@ -258,6 +262,16 @@
 		position: fixed;
 		height: 100vh;
 		width: 265px;
+	}
+
+	.sidebar-offset {
+		margin-left: 265px;
+		padding-top: 0;
+		width: calc(100% - 265px);
+
+		.container {
+			width: $screen-md-min - 265px;
+		}
 	}
 
 	.sidebar-header {
@@ -270,5 +284,17 @@
 
 	.sidebar-search .form-group {
 		margin: 0 0 24px;
+	}
+}
+
+/* Large screens
+   ========================================================================== */
+
+@media (min-width: $screen-lg-min) {
+	.sidebar-offset {
+		.container,
+		.container-hybrid {
+			width: $screen-lg-min - 265px;
+		}
 	}
 }

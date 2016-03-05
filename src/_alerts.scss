@@ -112,7 +112,7 @@
 }
 
 .alert-spinner-done:not(:required):before {
-	content: "\E018";
+	content: "\E01A";
 	background: $brand-success;
 	border-color: $brand-success;
 	animation: alert-spinner-done 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1;

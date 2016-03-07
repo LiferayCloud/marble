@@ -7,90 +7,42 @@
 	border-radius: $border-radius-base;
 	display: inline-block;
 	font-family: $font-family-secondary;
-	font-size: 11px;
-	font-weight: 900;
-	padding: 9px 12px 10px;
+	font-size: 14px;
+	padding: 11px 12px 12px;
 	position: relative;
-	text-transform: uppercase;
+	font-weight: 700;
 
 	&.label-sm {
 		padding: 7px 12px 7px;
+		font-size: 10px;
 	}
-}
-
-// Sizes -----------------------------------------------------------------------
-
-.label-sm {
-	font-size: 10px;
-}
-
-// Multiple --------------------------------------------------------------------
-
-.label-multiple::after,
-.label-multiple::before {
-	border-radius: $border-radius-base;
-	content: " ";
-	display: block;
-	height: 100%;
-	position: absolute;
-	width: 100%;
-	background: white;
-}
-
-.label-multiple::after {
-	top: 2px;
-	left: 2px;
-	z-index: -1;
-}
-
-.label-multiple::before {
-	top: 4px;
-	left: 4px;
-	z-index: -2;
 }
 
 // Colors ----------------------------------------------------------------------
 
 .label-default {
-	border: 1px solid rgba($primary, .3);
-	color: rgba($primary, .5);
-	padding: 8px 11px 9px;
-
-	&.label-sm {
-		padding: 6px 11px 6px;
-	}
+	background: rgba($primary, .1);
+	color: rgba($primary, .8);
 }
 
-.label-default.label-multiple::after,
-.label-default.label-multiple::before {
-	border: 1px solid rgba($primary, .3);
-	width: calc(100% + 1px);
-	height: calc(100% + 1px);
+.label-danger {
+	background: rgba($brand-danger, .2);
+	color: $brand-danger;
 }
 
-.label-default.label-multiple::after {
-	top: 2px;
-	left: 2px;
+.label-primary {
+	background: rgba($accent, .2);
+	color: $accent;
 }
 
-.label-default.label-multiple::before {
-	top: 4px;
-	left: 4px;
+.label-success {
+	background: rgba($brand-success, .2);
+	color: $brand-success;
 }
 
-.label-primary.label-multiple::after,
-.label-primary.label-multiple::before {
-	border: 1px solid $label-primary-bg;
-}
-
-.label-success.label-multiple::after,
-.label-success.label-multiple::before {
-	border: 1px solid $label-success-bg;
-}
-
-.label-danger.label-multiple::after,
-.label-danger.label-multiple::before {
-	border: 1px solid $label-danger-bg;
+.label-warning {
+	background: rgba($brand-warning, .2);
+	color: $brand-warning;
 }
 
 // Icon ------------------------------------------------------------------------
@@ -126,18 +78,18 @@
 		position: relative;
 		top: 0;
 	}
-}
 
-.label-clickable:hover {
-	.label-action {
-		top: 9px;
-	}
+	&:hover {
+		.label-action {
+			top: 12px;
+		}
 
-	.label-icon {
-		top: 24px;
-	}
+		.label-icon {
+			top: 26px;
+		}
 
-	.label-content {
-		top: 24px;
+		.label-content {
+			top: 26px;
+		}
 	}
 }

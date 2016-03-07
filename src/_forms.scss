@@ -8,17 +8,22 @@ label {
 }
 
 .form-control {
+	@include anim(background);
+	background: rgba($primary, .05);
+	border: 0;
 	box-shadow: none;
+	color: rgba($primary, .8);
 	font-size: 16px;
 	padding: 0 20px;
 
 	&:focus {
+		background: rgba($primary, .1);
 		box-shadow: none;
 	}
 
-	&[disabled]:focus,
-	&[readonly]:focus {
-		border-color: $input-border;
+	&[disabled],
+	&[readonly] {
+		background: rgba($primary, .2);
 	}
 }
 
@@ -38,21 +43,40 @@ label {
 .has-success,
 .has-warning,
 .has-error {
-  .form-control:focus {
-  	box-shadow: none;
-  }
+	.form-control,
+	.form-control:focus {
+		box-shadow: none;
+	}
 }
 
-.has-success .help-block .primary {
-	color: $state-success-text;
+.has-success {
+	.form-control {
+		background: rgba($brand-success, .1);
+	}
+
+	.help-block .primary {
+		color: $state-success-text;
+	}
 }
 
-.has-warning .help-block .primary {
-	color: $state-warning-text;
+.has-warning {
+	.form-control {
+		background: rgba($brand-warning, .1);
+	}
+
+	.help-block .primary {
+		color: $state-warning-text;
+	}
 }
 
-.has-error .help-block .primary {
-	color: $state-danger-text;
+.has-error {
+	.form-control {
+		background: rgba($brand-danger, .1);
+	}
+
+	.help-block .primary {
+		color: $state-danger-text;
+	}
 }
 
 .input-inverse-accent {

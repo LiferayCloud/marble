@@ -3077,13 +3077,20 @@ label {
   margin-bottom: 4px; }
 
 .form-control {
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: rgba(14, 20, 26, 0.05);
+  border: 0;
   box-shadow: none;
+  color: rgba(14, 20, 26, 0.8);
   font-size: 16px;
   padding: 0 20px; }
   .form-control:focus {
+    background: rgba(14, 20, 26, 0.1);
     box-shadow: none; }
-  .form-control[disabled]:focus, .form-control[readonly]:focus {
-    border-color: rgba(14, 20, 26, 0.2); }
+  .form-control[disabled], .form-control[readonly] {
+    background: rgba(14, 20, 26, 0.2); }
 
 .form-control-borderless {
   border: 0;
@@ -3096,16 +3103,28 @@ label {
   font-size: 12px;
   margin-top: 4px; }
 
+.has-success .form-control,
 .has-success .form-control:focus,
+.has-warning .form-control,
 .has-warning .form-control:focus,
+.has-error .form-control,
 .has-error .form-control:focus {
   box-shadow: none; }
+
+.has-success .form-control {
+  background: rgba(119, 213, 90, 0.1); }
 
 .has-success .help-block .primary {
   color: #77d55a; }
 
+.has-warning .form-control {
+  background: rgba(252, 148, 9, 0.1); }
+
 .has-warning .help-block .primary {
   color: #8a6d3b; }
+
+.has-error .form-control {
+  background: rgba(230, 69, 69, 0.1); }
 
 .has-error .help-block .primary {
   color: #e64545; }
@@ -5308,7 +5327,7 @@ a.thumbnail.active {
   -webkit-animation: alert-spinner 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; }
 
 .alert-spinner-done:not(:required):before {
-  content: "\E018";
+  content: "\E01A";
   background: #77d55a;
   border-color: #77d55a;
   animation: alert-spinner-done 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1;

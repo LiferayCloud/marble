@@ -3,28 +3,26 @@
 // Addon -----------------------------------------------------------------------
 
 .input-group-addon {
+	background: rgba($primary, .2);
 	border: 0;
-	color: rgba($primary, .3);
+	color: rgba($primary, .6);
 }
 
-.input-group-addon:first-child {
-	padding-left: 0;
+.has-success {
+	.input-group-addon {
+		background: rgba($brand-success, .2);
+	}
 }
 
-.input-group-addon:last-child {
-	padding-right: 0;
+.has-warning {
+	.input-group-addon {
+		background: rgba($brand-warning, .2);
+	}
 }
 
-.input-group-addon-input {
-	border-radius: $border-radius-base !important;
-}
-
-.has-success,
-.has-warning,
 .has-error {
 	.input-group-addon {
-		background: transparent;
-		color: rgba($primary, .3);
+		background: rgba($brand-danger, .2);
 	}
 }
 
@@ -102,16 +100,22 @@
 	margin-left: -2px;
 }
 
-.input-btn-right {
+.input-btn-right,
+.input-group-addon-input-left {
 	border-bottom-left-radius: 4px !important;
 	border-top-left-radius: 4px !important;
 	border-bottom-right-radius: 0 !important;
 	border-top-right-radius: 0 !important;
 }
 
-.input-btn-left {
+.input-btn-left,
+.input-group-addon-input-right {
 	border-bottom-left-radius: 0 !important;
 	border-top-left-radius: 0 !important;
 	border-bottom-right-radius: 4px !important;
 	border-top-right-radius: 4px !important;
+}
+
+.input-group-addon-input-center {
+	border-radius: 0
 }

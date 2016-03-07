@@ -4994,6 +4994,9 @@ a.label:hover, a.label:focus {
   background: rgba(252, 148, 9, 0.2);
   color: #fc9409; }
 
+.label-text {
+  font-weight: 400; }
+
 .label-icon {
   margin-right: 6px;
   position: relative;

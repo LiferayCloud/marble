@@ -25,8 +25,8 @@
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: $btn-default-focus-bg;
-		border-color: $btn-default-focus-border;
+		background-color: rgba($accent, .2);
+		color: $accent;
 	}
 
 	&:active,
@@ -34,8 +34,8 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: $btn-default-focus-bg;
-			border-color: $btn-default-focus-border;
+			background-color: rgba($accent, .2);
+			color: $accent;
 		}
 	}
 }
@@ -46,8 +46,7 @@
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($primary, .7);
-		border-color: $primary;
+		background-color: rgba($accent, .3);
 	}
 
 	&:active,
@@ -55,8 +54,7 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($primary, .7);
-			border-color: $primary;
+			background-color: rgba($accent, .3);
 		}
 	}
 }
@@ -68,7 +66,6 @@
 	&:focus,
 	&.focus {
 		background-color: rgba($brand-success, .8);
-		border-color: rgba($brand-success, .99);
 	}
 
 	&:active,
@@ -77,7 +74,6 @@
 		&:focus,
 		&.focus {
 			background-color: rgba($brand-success, .8);
-			border-color: rgba($brand-success, .99);
 		}
 	}
 }
@@ -89,7 +85,6 @@
 	&:focus,
 	&.focus {
 		background-color: rgba($brand-danger, .8);
-		border-color: rgba($brand-danger, .99);
 	}
 
 	&:active,
@@ -98,7 +93,6 @@
 		&:focus,
 		&.focus {
 			background-color: rgba($brand-danger, .8);
-			border-color: rgba($brand-danger, .99);
 		}
 	}
 }
@@ -106,14 +100,12 @@
 .btn-accent {
 	@include anim(all);
 	background: $btn-accent-bg;
-	border-color: $btn-accent-border;
 	color: $btn-accent-color;
 
 	&:hover,
 	&:focus,
 	&.focus {
 		background-color: rgba($accent, .8);
-		border-color: rgba($accent, .8);
 		color: $btn-accent-color;
 	}
 
@@ -123,7 +115,6 @@
 		&:focus,
 		&.focus {
 			background-color: rgba($accent, .8);
-			border-color: rgba($accent, .8);
 			color: $btn-accent-color;
 		}
 	}
@@ -133,13 +124,11 @@
 	@include anim(all);
 	color: $btn-inverse-color;
 	background: $btn-inverse-bg;
-	border-color: $btn-inverse-border;
 
 	&:hover,
 	&:focus,
 	&.focus {
 		background-color: rgba($white, .15);
-		border-color: rgba($white, .6);
 		color: $btn-inverse-color;
 	}
 
@@ -149,7 +138,6 @@
 		&:focus,
 		&.focus {
 			background-color: rgba($white, .15);
-			border-color: rgba($white, .6);
 			color: $btn-inverse-color;
 		}
 	}
@@ -158,14 +146,12 @@
 .btn-inverse-accent {
 	@include anim(all);
 	background: $btn-inverse-accent-bg;
-	border-color: $btn-inverse-accent-border;
 	color: $btn-inverse-accent-color;
 
 	&:hover,
 	&:focus,
 	&.focus {
 		background-color: rgba($btn-inverse-accent-bg, .8);
-		border-color: $btn-inverse-accent-border;
 		color: $btn-inverse-accent-color;
 	}
 
@@ -175,7 +161,6 @@
 		&:focus,
 		&.focus {
 			background-color: rgba($btn-inverse-accent-bg, .8);
-			border-color: $btn-inverse-accent-border;
 			color: $btn-inverse-accent-color;
 		}
 	}

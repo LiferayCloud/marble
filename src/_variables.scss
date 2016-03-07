@@ -55,18 +55,16 @@ $font-size-h6: 12px;
 
 // Buttons
 
-$btn-default-color: $accent;
-$btn-default-bg: $white;
-$btn-default-border: $accent;
-$btn-default-focus-bg: rgba($accent, .1);
-$btn-default-focus-border: $accent;
+$btn-default-color: rgba($primary, .6);
+$btn-default-bg: rgba($primary, .1);
+$btn-default-border: transparent;
 
-$btn-primary-color: $white;
-$btn-primary-bg: rgba($primary, .8);
+$btn-primary-color: $accent;
+$btn-primary-bg: rgba($accent, .2);
 $btn-primary-border: transparent;
 
 $btn-success-border: transparent;
-$btn-danger-border: $brand-danger;
+$btn-danger-border: transparent;
 
 $btn-accent-color: white;
 $btn-accent-bg: $accent;

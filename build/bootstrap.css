@@ -5152,7 +5152,7 @@ a.thumbnail.active {
   display: inline-block;
   line-height: 60px;
   min-height: 60px;
-  margin: 0 0 0 25px; }
+  margin: 0 25px; }
 
 .alert .close {
   -webkit-transition: color 0.3s ease-in-out;
@@ -5164,7 +5164,7 @@ a.thumbnail.active {
   color: rgba(14, 20, 26, 0.4);
   font-size: 24px;
   line-height: 60px;
-  margin: 0 25px;
+  margin: 0 25px 0 0;
   right: inherit;
   top: inherit; }
 

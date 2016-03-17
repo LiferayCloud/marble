@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+<g id="row-7">
+</g>
 <g id="row-6">
 	<path id="building" d="M420-60v420H0v600h420h60h480V-60H420z M420,900H300V600H180v300H60V420h360V900z M660,780H540V600h120V780z
 		 M660,540H540V360h120V540z M660,300H540V120h120V300z M840,780H720V600h120V780z M840,540H720V360h120V540z M840,300H720V120h120
@@ -10,15 +12,15 @@
 <g id="row-5">
 </g>
 <g id="row-4">
-	<g id="markdown">
+	<g id="read-full_1_">
 	</g>
-	<g id="mail_x5F_straight">
+	<g id="markdown">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
 	</g>
-	<g id="read-mail">
+	<g id="read-full_2_">
 	</g>
 	<g id="person">
 	</g>
@@ -44,13 +46,11 @@
 <g id="row-3">
 	<g id="circle-arrow">
 	</g>
-	<g id="module">
-	</g>
 	<g id="speedometer">
 	</g>
 	<g id="calendar">
 	</g>
-	<g id="data">
+	<g id="server">
 	</g>
 	<g id="code-file">
 	</g>
@@ -85,10 +85,6 @@
 	<g id="balloon-topic">
 	</g>
 	<g id="groups">
-	</g>
-	<g id="persons">
-	</g>
-	<g id="house">
 	</g>
 	<g id="liferay-logo">
 	</g>
@@ -128,7 +124,7 @@
 	</g>
 	<g id="camera">
 	</g>
-	<g id="blank">
+	<g id="lock">
 	</g>
 	<g id="star">
 	</g>

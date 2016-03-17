@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 800 960" enable-background="new 0 0 800 960" xml:space="preserve">
+<g id="row-5">
+</g>
 <g id="row-4">
-	<g id="upload">
-	</g>
-	<g id="menu">
-		<path d="M800,240H0L0,80h800V240z M800,560H0l0-160h800V560z M800,880H0l0-160h800V880z"/>
-	</g>
-	<g id="gear">
-	</g>
-	<g id="external">
-	</g>
-	<g id="graph">
-	</g>
+	<path id="menu_1_" d="M800,240H0L0,80h800V240z M800,560H0l0-160h800V560z M800,880H0l0-160h800V880z"/>
 </g>
 <g id="row-3">
 	<g id="alert">

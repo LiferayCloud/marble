@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 720 960" enable-background="new 0 0 720 960" xml:space="preserve">
+<g id="row-7">
+</g>
 <g id="row-6">
-	<path id="bookmark" d="M660,60c-120,0-480,0-600,0C26.9,60,0,86.9,0,120c0,120,0,660,0,780c0,33.1,26.9,60,60,60
-		c14.2,0,27.2-4.9,37.5-13.2l0,0C179,881.6,274.8,805,360,736.8c85.2,68.2,181,144.8,262.5,210l0,0c10.3,8.2,23.3,13.2,37.5,13.2
-		c33.1,0,60-26.9,60-60c0-120,0-660,0-780C720,86.9,693.1,60,660,60z"/>
+	<path id="bookmark" d="M660,60c-120,0-480,0-600,0C26.9,60,0,86.9,0,120c0,120,0,600,0,720c0,33.1,26.9,60,60,60
+		c14.2,0,27.2-4.9,37.5-13.2l0,0C179,821.6,274.8,745,360,676.8c85.2,68.2,181,144.8,262.5,210l0,0c10.3,8.2,23.3,13.2,37.5,13.2
+		c33.1,0,60-26.9,60-60c0-120,0-600,0-720C720,86.9,693.1,60,660,60z"/>
 </g>
 <g id="row-5">
 </g>
 <g id="row-4">
-	<g id="markdown">
+	<g id="read-full_1_">
 	</g>
-	<g id="mail_x5F_straight">
+	<g id="markdown">
 	</g>
 	<g id="info">
 	</g>
 	<g id="folder">
 	</g>
-	<g id="read-mail">
+	<g id="read-full_2_">
 	</g>
 	<g id="person">
 	</g>
@@ -44,13 +46,11 @@
 <g id="row-3">
 	<g id="circle-arrow">
 	</g>
-	<g id="module">
-	</g>
 	<g id="speedometer">
 	</g>
 	<g id="calendar">
 	</g>
-	<g id="data">
+	<g id="server">
 	</g>
 	<g id="code-file">
 	</g>
@@ -85,10 +85,6 @@
 	<g id="balloon-topic">
 	</g>
 	<g id="groups">
-	</g>
-	<g id="persons">
-	</g>
-	<g id="house">
 	</g>
 	<g id="liferay-logo">
 	</g>
@@ -128,7 +124,7 @@
 	</g>
 	<g id="camera">
 	</g>
-	<g id="blank">
+	<g id="lock">
 	</g>
 	<g id="star">
 	</g>

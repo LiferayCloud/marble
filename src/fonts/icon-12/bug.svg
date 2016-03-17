@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1120 960" enable-background="new 0 0 1120 960" xml:space="preserve">
+<g id="row-5">
+	<path id="bug" d="M880,320H240v0C240,143.3,383.3,0,560,0h0C736.7,0,880,143.3,880,320L880,320z M800,400H560H320
+		c-44.2,0-80,35.8-80,80v80v80c0,27.9,3.6,54.9,10.3,80.7c-3.4-0.4-6.8-0.7-10.3-0.7c-22.1,0-42.1,9-56.6,23.4c-40,40-40,40-80,80
+		C89,837.9,80,857.9,80,880c0,44.2,35.8,80,80,80c22.1,0,42.1-9,56.6-23.4c40-40,40-40,80-80c5.1-5.1,9.5-10.9,13.1-17.3
+		C368.3,912.9,458.6,960,560,960h0h0c101.4,0,191.7-47.1,250.3-120.7c3.6,6.3,8,12.1,13.1,17.3c40,40,40,40,80,80
+		C917.9,951,937.9,960,960,960c44.2,0,80-35.8,80-80c0-22.1-9-42.1-23.4-56.6c-40-40-40-40-80-80C922.1,729,902.1,720,880,720
+		c-3.5,0-6.9,0.2-10.3,0.7c6.7-25.8,10.3-52.8,10.3-80.7v-80v-80C880,435.8,844.2,400,800,400z M960,400c22.1,0,42.1-9,56.6-23.4
+		c40-40,40-40,80-80c14.5-14.5,23.4-34.5,23.4-56.6c0-44.2-35.8-80-80-80c-22.1,0-42.1,9-56.6,23.4c-40,40-40,40-80,80
+		C889,277.9,880,297.9,880,320C880,364.2,915.8,400,960,400z M103.4,376.6C117.9,391,137.9,400,160,400c44.2,0,80-35.8,80-80
+		c0-22.1-9-42.1-23.4-56.6c-40-40-40-40-80-80C122.1,169,102.1,160,80,160c-44.2,0-80,35.8-80,80c0,22.1,9,42.1,23.4,56.6
+		C63.4,336.6,63.4,336.6,103.4,376.6z M1040,480c-40,0-40,0-80,0c-44.2,0-80,35.8-80,80s35.8,80,80,80c40,0,40,0,80,0
+		c44.2,0,80-35.8,80-80S1084.2,480,1040,480z M160,480c-40,0-40,0-80,0c-44.2,0-80,35.8-80,80s35.8,80,80,80c40,0,40,0,80,0
+		c44.2,0,80-35.8,80-80S204.2,480,160,480z"/>
+</g>
+<g id="row-4">
+</g>
+<g id="row-3">
+	<g id="alert">
+	</g>
+	<g id="expand">
+	</g>
+	<g id="collapse">
+	</g>
+	<g id="colections">
+	</g>
+	<g id="briefcase">
+	</g>
+	<g id="flag">
+	</g>
+	<g id="flag-small">
+	</g>
+	<g id="signpost">
+	</g>
+	<g id="info-card">
+	</g>
+	<g id="journal">
+	</g>
+	<g id="network">
+	</g>
+	<g id="trash">
+	</g>
+	<g id="card">
+	</g>
+	<g id="browser">
+	</g>
+	<g id="arrows">
+	</g>
+	<g id="arrow-left-rod">
+	</g>
+</g>
+<g id="row-2">
+	<g id="arrow-right-rod">
+	</g>
+	<g id="arrow-up-short">
+	</g>
+	<g id="arrow-down-short">
+	</g>
+	<g id="heart-full">
+	</g>
+	<g id="balloon-comments-inline">
+	</g>
+	<g id="balloon-comments">
+	</g>
+	<g id="check">
+	</g>
+	<g id="balloon-topic">
+	</g>
+	<g id="persons">
+	</g>
+	<g id="groups">
+	</g>
+	<g id="building-big">
+	</g>
+	<g id="person-card-2">
+	</g>
+	<g id="person-card-3">
+	</g>
+	<g id="plus">
+	</g>
+	<g id="arrow-right-long">
+	</g>
+	<g id="arrow-left-long">
+	</g>
+</g>
+<g id="row-1">
+	<g id="heart-inline">
+	</g>
+	<g id="close-short">
+	</g>
+	<g id="hash">
+	</g>
+	<g id="people">
+	</g>
+	<g id="building-small">
+	</g>
+	<g id="person">
+	</g>
+	<g id="close-long">
+	</g>
+	<g id="post">
+	</g>
+	<g id="star">
+	</g>
+	<g id="heart">
+	</g>
+	<g id="link">
+	</g>
+	<g id="camera">
+	</g>
+	<g id="balloon-text">
+	</g>
+	<g id="pin">
+	</g>
+	<g id="clock">
+	</g>
+</g>
+<g id="guides">
+</g>
+</svg>

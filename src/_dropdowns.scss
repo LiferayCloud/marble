@@ -3,8 +3,9 @@
 
 .dropdown-menu {
 	background: $white;
+	border: 0;
 	border-radius: $border-radius-base;
-	box-shadow: 0 1px 8px rgba($black, 0.08);
+	box-shadow: 0 2px 8px rgba(black, .2);
 	margin: -10px 0 0 10px;
 	min-width: initial;
 	position: absolute;

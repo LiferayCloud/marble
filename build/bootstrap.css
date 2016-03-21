@@ -6157,20 +6157,21 @@ button.close {
 .topbar {
   background: #0e141a;
   height: 84px;
-  padding: 0 20px; }
+  padding: 0 20px;
+  width: 100%;
+  display: flex; }
 
 .topbar-logo {
-  float: left;
-  margin: 2px 0; }
+  align-items: center;
+  display: flex;
+  margin: 2px 0;
+  width: 20%; }
 
 .topbar-logo-link {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: rgba(255, 255, 255, 0.8);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -6201,21 +6202,23 @@ button.close {
   position: relative;
   top: -1px; }
 
+.topbar-input {
+  flex-grow: 1; }
+  .topbar-input .form-control {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%; }
+
 .topbar-list {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  justify-content: flex-end;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   float: right;
   font-size: 0;
   list-style: none;
   margin: 24px 0;
   padding: 0;
-  height: 38px; }
+  height: 38px;
+  width: 20%; }
 
 .topbar-item {
   display: inline-block;

@@ -3777,7 +3777,8 @@ tbody.collapse.in {
   display: block;
   font-size: 14px;
   padding: 10px 40px;
-  text-decoration: none; }
+  text-decoration: none;
+  width: 100%; }
   .dropdown-menu li a:hover, .dropdown-menu li a:focus,
   .dropdown-menu li button:hover,
   .dropdown-menu li button:focus {
@@ -3805,7 +3806,6 @@ tbody.collapse.in {
   transition: all 0.3s ease-in-out;
   color: rgba(14, 20, 26, 0.8);
   font-size: 12px;
-  font-weight: 600;
   margin: 0;
   padding: 10px 20px; }
   .dropdown-icon .dropdown-menu li a span,
@@ -6881,16 +6881,14 @@ button.close {
   border-bottom-color: #000; }
 
 .tooltip-inner {
-  background: #0e141a;
-  border-radius: 2px;
-  border: 1px solid rgba(14, 20, 26, 0.12);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 11px;
-  line-height: 17px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: rgba(14, 20, 26, 0.6);
+  font-size: 13px;
   max-width: 220px;
   min-width: initial;
-  padding: 10px 20px;
+  padding: 12px;
   text-align: left; }
 
 .tooltip-arrow {

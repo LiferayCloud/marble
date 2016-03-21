@@ -6203,10 +6203,21 @@ button.close {
   top: -1px; }
 
 .topbar-input {
+  align-items: center;
   flex-grow: 1; }
+  .topbar-input .input-inner-addon {
+    margin: 0 auto;
+    max-width: 608px;
+    top: 22px; }
+  .topbar-input .input-inner-icon-helper {
+    color: white;
+    top: 10px; }
   .topbar-input .form-control {
     background: rgba(255, 255, 255, 0.2);
-    width: 100%; }
+    color: rgba(255, 255, 255, 0.8);
+    height: 36px; }
+  .topbar-input ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8); }
 
 .topbar-list {
   justify-content: flex-end;

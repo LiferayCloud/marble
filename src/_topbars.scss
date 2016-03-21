@@ -58,11 +58,28 @@
 }
 
 .topbar-input {
+	align-items: center;
 	flex-grow: 1;
+
+	.input-inner-addon {
+		margin: 0 auto;
+		max-width: 608px;
+		top: 22px;
+	}
+
+	.input-inner-icon-helper {
+		color: white;
+		top: 10px;
+	}
 
 	.form-control {
 		background: rgba(white, .2);
-		width: 100%;
+		color: rgba(white, .8);
+		height: 36px;
+	}
+
+	::-webkit-input-placeholder {
+		color: rgba(white, .8);
 	}
 }
 

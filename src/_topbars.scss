@@ -35,6 +35,8 @@
 
 .topbar-logo-link .icon-12-rocket {
 	font-size: 24px;
+	position: relative;
+	top: 2px;
 }
 
 .topbar-logo-text {
@@ -43,7 +45,7 @@
 	letter-spacing: 0px;
 	margin-left: 20px;
 	position: relative;
-	top: 1px;
+	top: 5px;
 }
 
 .topbar-logo-label {
@@ -64,7 +66,7 @@
 	.input-inner-addon {
 		margin: 0 auto;
 		max-width: 608px;
-		top: 22px;
+		top: 26px;
 	}
 
 	.input-inner-icon-helper {
@@ -102,6 +104,7 @@
 }
 
 .topbar-item:last-child {
+	display: table;
 	margin-right: 0;
 }
 

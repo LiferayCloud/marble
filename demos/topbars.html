@@ -164,12 +164,12 @@
 				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project</span></span>
 			</a>
 		</div>
-		<div class="topbar-input">
+		<form class="topbar-input" action="http://liferay.io/docs/search/" method="GET" enctype="multipart/form-data">
 			<div class="input-inner-addon input-inner-addon-right">
-				<input class="form-control" type="text" placeholder="Search on Docs">
+				<input name="q" class="form-control" type="text" placeholder="Search on Docs" autocomplete="off" required>
 				<span class="input-inner-icon-helper icon-16-magnifier"></span>
 			</div>
-		</div>
+		</form>
 		<ul class="topbar-list">
 			<li class="topbar-item">
 				<a class="topbar-link topbar-link-selected" href="docs.html">Docs</a>

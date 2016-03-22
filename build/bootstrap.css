@@ -6213,14 +6213,28 @@ button.close {
     max-width: 608px;
     top: 26px; }
   .topbar-input .input-inner-icon-helper {
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     color: white;
-    top: 10px; }
+    top: 11px; }
   .topbar-input .form-control {
-    background: rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.8);
-    height: 36px; }
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+    height: 36px;
+    padding-left: 60px; }
+    .topbar-input .form-control:focus {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      color: rgba(14, 20, 26, 0.8); }
+    .topbar-input .form-control:focus + .input-inner-icon-helper {
+      color: #647efb; }
   .topbar-input ::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8); }
+    color: white; }
 
 .topbar-list {
   align-items: center;

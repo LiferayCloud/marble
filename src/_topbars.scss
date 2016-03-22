@@ -71,18 +71,33 @@
 	}
 
 	.input-inner-icon-helper {
+		@include anim(color);
 		color: white;
-		top: 10px;
+		top: 11px;
 	}
 
 	.form-control {
-		background: rgba(white, .2);
-		color: rgba(white, .8);
+		@include anim(all);
+		background: rgba(white, .3);
+		color: white;
+		font-weight: 600;
 		height: 36px;
+		padding-left: 60px;
+
+
+		&:focus {
+			background: white;
+			box-shadow: 0 2px 8px rgba(black, .2);
+			color: rgba($primary, .8);
+		}
+
+		&:focus + .input-inner-icon-helper {
+			color: $accent;
+		}
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(white, .8);
+		color: white;
 	}
 }
 

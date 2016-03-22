@@ -6164,6 +6164,7 @@ button.close {
 .topbar-logo {
   align-items: center;
   display: flex;
+  align-self: flex-start;
   margin: 2px 0;
   width: 20%; }
 
@@ -6222,9 +6223,9 @@ button.close {
     color: rgba(255, 255, 255, 0.8); }
 
 .topbar-list {
-  justify-content: flex-end;
   align-items: center;
   display: flex;
+  margin-left: auto;
   float: right;
   font-size: 0;
   list-style: none;
@@ -6232,6 +6233,9 @@ button.close {
   padding: 0;
   height: 38px;
   width: 20%; }
+
+.topbar-input + .topbar-list {
+  justify-content: flex-end; }
 
 .topbar-item {
   display: inline-block;

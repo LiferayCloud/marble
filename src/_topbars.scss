@@ -15,6 +15,7 @@
 .topbar-logo {
 	align-items: center;
 	display: flex;
+	align-self: flex-start;
 	margin: 2px 0;
 	width: 20%;
 }
@@ -86,9 +87,9 @@
 }
 
 .topbar-list {
-	justify-content: flex-end;
 	align-items: center;
 	display: flex;
+	margin-left: auto;
 	float: right;
 	font-size: 0;
 	list-style: none;
@@ -96,6 +97,10 @@
 	padding: 0;
 	height: 38px;
 	width: 20%;
+}
+
+.topbar-input + .topbar-list {
+	justify-content: flex-end;
 }
 
 .topbar-item {

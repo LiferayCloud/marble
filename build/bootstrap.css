@@ -6638,6 +6638,11 @@ button.close {
 .autocomplete-topbar .listitem-description {
   color: #0e141a; }
 
+.autocomplete-topbar em {
+  background: rgba(100, 126, 251, 0.2);
+  color: #647efb;
+  font-style: normal; }
+
 .modal-open {
   overflow: hidden; }
 

@@ -82,4 +82,10 @@
 	.listitem-description {
 		color: $primary;
 	}
+
+	em {
+		background: rgba($accent, .2);
+		color: $accent;
+		font-style: normal;
+	}
 }

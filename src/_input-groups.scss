@@ -26,6 +26,10 @@
 	}
 }
 
+.input-group-addon.disabled {
+	background: rgba($primary, .3);
+}
+
 // Inner Addon -----------------------------------------------------------------
 
 .input-inner-addon {

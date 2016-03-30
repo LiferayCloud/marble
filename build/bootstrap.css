@@ -4117,6 +4117,9 @@ tbody.collapse.in {
 .has-error .input-group-addon {
   background: rgba(230, 69, 69, 0.2); }
 
+.input-group-addon.disabled {
+  background: rgba(14, 20, 26, 0.3); }
+
 .input-inner-addon {
   position: relative; }
 

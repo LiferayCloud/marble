@@ -6188,7 +6188,6 @@ button.close {
   top: 2px; }
 
 .topbar-logo-text {
-  display: none;
   font-size: 14px;
   letter-spacing: 0px;
   margin-left: 20px;
@@ -6348,12 +6347,6 @@ button.close {
 .topbar-inverse .topbar-link-selected:focus {
   color: white;
   border-color: white; }
-
-/* Responsive
-	 ========================================================================== */
-@media (min-width: 960px) {
-  .topbar-logo-text {
-    display: block; } }
 
 /* Avatar
 	 ========================================================================== */

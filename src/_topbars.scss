@@ -41,7 +41,6 @@
 }
 
 .topbar-logo-text {
-	display: none;
 	font-size: 14px;
 	letter-spacing: 0px;
 	margin-left: 20px;
@@ -237,13 +236,4 @@
 .topbar-inverse .topbar-link-selected:focus {
 	color: white;
 	border-color: white;
-}
-
-/* Responsive
-	 ========================================================================== */
-
-@media (min-width: $screen-md-min) {
-	.topbar-logo-text {
-		display: block;
-	}
 }

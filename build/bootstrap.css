@@ -6348,6 +6348,10 @@ button.close {
   color: white;
   border-color: white; }
 
+.topbar-inverse .topbar-avatar .avatar-initials {
+  background: white;
+  color: #647efb; }
+
 /* Avatar
 	 ========================================================================== */
 .avatar-round, .avatar, .avatar-initials, .avatar-number, .avatar-icon, .avatar-icon-12,

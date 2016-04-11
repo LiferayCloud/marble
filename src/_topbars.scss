@@ -91,7 +91,7 @@
 		}
 
 		&:focus + .input-inner-icon-helper {
-			color: $accent;
+			color: inherit;
 		}
 	}
 
@@ -216,29 +216,38 @@
 
 .topbar.topbar-inverse {
 	background: $accent;
-}
-
-.topbar-inverse .topbar-logo-label {
-	background: rgba($primary, .2);
-}
-
-.topbar-inverse .topbar-link {
-	color: rgba(white, .5);
-}
-
-.topbar-inverse .topbar-link:hover,
-.topbar-inverse .topbar-link:focus {
-	color: rgba(white, .8);
-}
-
-.topbar-inverse .topbar-link-selected,
-.topbar-inverse .topbar-link-selected:hover,
-.topbar-inverse .topbar-link-selected:focus {
-	color: white;
-	border-color: white;
-}
-
-.topbar-inverse .topbar-avatar .avatar-initials {
-	background: white;
 	color: $accent;
+}
+
+.topbar-inverse {
+	.topbar-logo-label {
+		background: rgba($primary, .2);
+	}
+
+	.topbar-link {
+		color: rgba(white, .5);
+
+		&:hover,
+		&:focus {
+			color: rgba(white, .8);
+		}
+	}
+
+	.topbar-link-selected,
+	.topbar-link-selected:hover,
+	.topbar-link-selected:focus {
+		color: white;
+		border-color: white;
+	}
+
+	.topbar-avatar {
+		.avatar-container {
+			color: $accent;
+		}
+
+		.avatar-initials {
+			background: white;
+			color: inherit;
+		}
+	}
 }

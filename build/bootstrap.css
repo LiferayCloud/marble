@@ -6159,7 +6159,7 @@ button.close {
 	 ========================================================================== */
 .topbar {
   background: #0e141a;
-  height: 84px;
+  height: 60px;
   padding: 0 20px;
   width: 100%;
   display: flex; }
@@ -6179,7 +6179,7 @@ button.close {
   display: flex;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  margin: 30px 0; }
+  margin: 16px 0; }
 
 .topbar-logo-link:hover,
 .topbar-logo-link:focus {
@@ -6213,7 +6213,7 @@ button.close {
   .topbar-input .input-inner-addon {
     margin: 0 auto;
     max-width: 608px;
-    top: 26px; }
+    top: 14px; }
   .topbar-input .input-inner-icon-helper {
     -webkit-transition: color 0.3s ease-in-out;
     -o-transition: color 0.3s ease-in-out;
@@ -6246,7 +6246,7 @@ button.close {
   float: right;
   font-size: 0;
   list-style: none;
-  margin-top: 22px;
+  margin-top: 10px;
   padding: 0;
   height: 38px;
   max-width: 280px; }

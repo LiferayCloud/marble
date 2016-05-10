@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "steel-bootstrap",
+  "name": "westyle",
   "version": "0.0.0",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
@@ -8,5 +8,10 @@
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",
     "gulp-sass": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp-iconfont": "^2.0.0",
+    "gulp-iconfont-css": "0.0.9",
+    "gulp-sass": "^2.3.1"
   }
 }

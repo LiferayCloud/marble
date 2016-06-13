@@ -22,11 +22,19 @@
 
 .topbar-logo-link {
 	@include anim(color);
-	color: rgba($white, .8);
 	display: flex;
-	font-family: $font-family-secondary;
-	font-weight: 700;
-	margin: 16px 0;
+	margin: 4px 0;
+
+	text-indent: -9999px;
+	width: 48px;
+	height: 48px;
+
+	mask-image: url('../build/images/logo_wedeploy.svg');
+	-webkit-mask-image: url('../build/images/logo_wedeploy.svg');
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+
+	background-color: #fff;
 }
 
 .topbar-logo-link:hover,
@@ -148,8 +156,8 @@
 .topbar-link-selected,
 .topbar-link-selected:hover,
 .topbar-link-selected:focus {
-	border-bottom: 3px solid $accent;
-	color: $accent;
+	border-bottom: 3px solid $white;
+	color: $white;
 	padding-bottom: 5px;
 }
 
@@ -165,7 +173,8 @@
 }
 
 .topbar-avatar .avatar-initials {
-	background: $accent;
+	background: $white;
+	color: $primary;
 }
 
 .topbar-caret {
@@ -182,7 +191,7 @@
 }
 
 .topbar-light .topbar-logo-link {
-	color: rgba($accent, .8);
+	background-color: $accent;
 }
 
 .topbar-light .topbar-logo-link:hover,
@@ -196,20 +205,25 @@
 }
 
 .topbar-light .topbar-link {
-	color: rgba($accent, .6);
+	color: rgba($primary, .6);
 }
 
 .topbar-light .topbar-link:hover,
 .topbar-light .topbar-link:focus {
-	color: rgba($accent, .8);
+	color: rgba($primary, .8);
 }
 
 .topbar-light .topbar-link-selected,
 .topbar-light .topbar-link-selected:hover,
 .topbar-light .topbar-link-selected:focus {
-	color: $accent;
+	color: rgba($primary, .8);
+	border-bottom: 3px solid rgba($primary, .8);
 }
 
+.topbar-light .topbar-avatar .avatar-initials {
+	background: $accent;
+	color: $white;
+}
 
 /* Topbar Inverse
 	 ========================================================================== */

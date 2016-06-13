@@ -2,7 +2,7 @@
 
 $primary  : #0e141a !default;
 $secondary: #0e141a !default;
-$accent   : #647efb !default;
+$accent   : #00d46a !default;
 
 $black: #000 !default;
 $white: #fff !default;
@@ -89,7 +89,7 @@ $input-group-addon-bg: transparent;
 $input-height-base: 60px;
 $input-bg-disabled: white;
 
-$input-inverse-bg: transparent;
+$input-inverse-bg: rgba($primary, .05);
 $input-inverse-border-focus: $white;
 $input-inverse-border: rgba($white, .8);
 $input-inverse-color: $white;

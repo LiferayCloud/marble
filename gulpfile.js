@@ -41,6 +41,12 @@ gulp.task('fonts16', function() {
 		.pipe(gulp.dest('build/fonts/'));
 });
 
+//images
+gulp.task('images', function () {
+		return gulp.src(['src/images/*'])
+				.pipe(gulp.dest('build/images'));
+});
+
 gulp.task('watch', function() {
 	gulp.watch('src/*.scss', ['build']);
 });

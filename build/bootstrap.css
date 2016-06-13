@@ -6301,7 +6301,8 @@ button.close {
   display: inline-block; }
 
 .topbar-avatar .avatar-initials {
-  background: #00d46a; }
+  background: #fff;
+  color: #0e141a; }
 
 .topbar-caret {
   margin-left: 10px;

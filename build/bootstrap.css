@@ -6175,25 +6175,18 @@ button.close {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+  color: white;
   display: flex;
-  margin: 4px 0;
-  text-indent: -9999px;
-  width: 48px;
-  height: 48px;
-  mask-image: url("../build/images/logo_wedeploy.svg");
-  -webkit-mask-image: url("../build/images/logo_wedeploy.svg");
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  background-color: #fff; }
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin: 4px 0; }
 
 .topbar-logo-link:hover,
 .topbar-logo-link:focus {
   color: white; }
 
-.topbar-logo-link .icon-12-rocket {
-  font-size: 24px;
-  position: relative;
-  top: 2px; }
+.topbar-logo-link .icon-12-wedeploy-logo {
+  font-size: 48px; }
 
 .topbar-logo-text {
   font-size: 14px;
@@ -6254,7 +6247,7 @@ button.close {
   margin-top: 10px;
   padding: 0;
   height: 38px;
-  max-width: 280px; }
+  max-width: 300px; }
 
 .topbar-input + .topbar-list {
   justify-content: flex-end; }
@@ -6301,8 +6294,7 @@ button.close {
   display: inline-block; }
 
 .topbar-avatar .avatar-initials {
-  background: #fff;
-  color: #0e141a; }
+  background: #00d46a; }
 
 .topbar-caret {
   margin-left: 10px;
@@ -6315,7 +6307,7 @@ button.close {
   background: white; }
 
 .topbar-light .topbar-logo-link {
-  background-color: #00d46a; }
+  color: rgba(0, 212, 106, 0.8); }
 
 .topbar-light .topbar-logo-link:hover,
 .topbar-light .topbar-logo-link:focus {
@@ -6326,21 +6318,17 @@ button.close {
   color: #00d46a; }
 
 .topbar-light .topbar-link {
-  color: rgba(14, 20, 26, 0.6); }
+  color: rgba(0, 212, 106, 0.6); }
 
 .topbar-light .topbar-link:hover,
 .topbar-light .topbar-link:focus {
-  color: rgba(14, 20, 26, 0.8); }
+  color: rgba(0, 212, 106, 0.8); }
 
 .topbar-light .topbar-link-selected,
 .topbar-light .topbar-link-selected:hover,
 .topbar-light .topbar-link-selected:focus {
-  color: rgba(14, 20, 26, 0.8);
-  border-bottom: 3px solid rgba(14, 20, 26, 0.8); }
-
-.topbar-light .topbar-avatar .avatar-initials {
-  background: #00d46a;
-  color: #fff; }
+  color: #00d46a;
+  border-bottom: 3px solid #00d46a; }
 
 /* Topbar Inverse
 	 ========================================================================== */
@@ -6368,6 +6356,10 @@ button.close {
 .topbar-inverse .topbar-avatar .avatar-initials {
   background: white;
   color: inherit; }
+
+.topbar .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1; }
 
 /* Avatar
 	 ========================================================================== */

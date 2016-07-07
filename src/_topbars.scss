@@ -64,7 +64,7 @@
 	.input-inner-addon {
 		margin: 0 auto;
 		max-width: 608px;
-		top: 14px;
+		top: 12px;
 	}
 
 	.input-inner-icon-helper {
@@ -146,7 +146,7 @@
 .topbar-link-selected,
 .topbar-link-selected:hover,
 .topbar-link-selected:focus {
-	border-bottom: 3px solid $white;
+	border-bottom: 0px solid $white;
 	color: $white;
 	padding-bottom: 5px;
 }

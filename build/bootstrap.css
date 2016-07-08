@@ -3756,7 +3756,7 @@ tbody.collapse.in {
   background: #fff;
   border: 0;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(14, 20, 26, 0.1);
   margin: -10px 0 0 10px;
   min-width: initial;
   position: absolute; }

@@ -6211,7 +6211,7 @@ button.close {
   .topbar-input .input-inner-addon {
     margin: 0 auto;
     max-width: 608px;
-    top: 14px; }
+    top: 12px; }
   .topbar-input .input-inner-icon-helper {
     -webkit-transition: color 0.3s ease-in-out;
     -o-transition: color 0.3s ease-in-out;
@@ -6280,7 +6280,7 @@ button.close {
 .topbar-link-selected,
 .topbar-link-selected:hover,
 .topbar-link-selected:focus {
-  border-bottom: 3px solid #fff;
+  border-bottom: 0px solid #fff;
   color: #fff;
   padding-bottom: 5px; }
 

@@ -20,14 +20,14 @@
 	&:focus,
 	&.focus {
 		&:hover {
-			background-color: $btn-default-focus-bg;
+			background-color: transparent;
 		}
 	}
 
 	&:hover,
 	&:focus,
 	&.focus {
-		border-color: $btn-default-focus-border;
+		border-color: transparent;
 	}
 }
 
@@ -56,7 +56,7 @@
 .btn-group .btn-group-selected:focus,
 .btn-group .btn-group-selected:focus:hover {
 	background: $primary;
-	border-color: $btn-default-focus-border;
+	border-color: transparent;
 	color: $white;
 	font-weight: 700;
 }

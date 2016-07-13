@@ -6280,7 +6280,8 @@ button.close {
     font-weight: 600;
     height: 36px;
     padding-left: 60px;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    font-size: 1.4rem; }
     .topbar-input .form-control:focus {
       background: white;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);

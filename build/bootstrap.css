@@ -6371,7 +6371,7 @@ button.close {
   color: #00d46a; }
 
 .topbar-light .topbar-link {
-  color: rgba(0, 212, 106, 0.6); }
+  color: rgba(0, 212, 106, 0.4); }
 
 .topbar-light .topbar-link:hover,
 .topbar-light .topbar-link:focus {
@@ -6381,7 +6381,7 @@ button.close {
 .topbar-light .topbar-link-selected:hover,
 .topbar-light .topbar-link-selected:focus {
   color: #00d46a;
-  border-bottom: 3px solid #00d46a; }
+  border-bottom: 0px solid #00d46a; }
 
 /* Topbar Inverse
 	 ========================================================================== */

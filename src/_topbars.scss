@@ -194,7 +194,7 @@
 }
 
 .topbar-light .topbar-link {
-	color: rgba($accent, .6);
+	color: rgba($accent, .4);
 }
 
 .topbar-light .topbar-link:hover,
@@ -206,7 +206,7 @@
 .topbar-light .topbar-link-selected:hover,
 .topbar-light .topbar-link-selected:focus {
 	color: $accent;
-	border-bottom: 3px solid $accent;
+	border-bottom: 0px solid $accent;
 }
 
 

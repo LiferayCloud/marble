@@ -4250,7 +4250,7 @@ tbody.collapse.in {
 .input-group-addon-input-center {
   border-radius: 0; }
 
-.form-control.input-btn-separated {
+.form-group .input-group .form-control.input-btn-separated {
   width: calc(100% - 8px);
   border-radius: 4px; }
 

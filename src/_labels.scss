@@ -8,13 +8,15 @@
 	display: inline-block;
 	font-family: $font-family-secondary;
 	font-size: 14px;
-	padding: 11px 12px 12px;
+	padding: 0 12px;
 	position: relative;
 	font-weight: 700;
+	line-height: 36px;
 
 	&.label-sm {
-		padding: 7px 12px 7px;
+		padding: 0 12px;
 		font-size: 10px;
+		line-height: 24px;
 	}
 }
 

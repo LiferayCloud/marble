@@ -3071,10 +3071,11 @@ select[multiple].input-lg,
     font-size: 12px; } }
 
 label {
-  color: rgba(14, 20, 26, 0.4);
-  font-size: 12px;
+  color: rgba(14, 20, 26, 0.6);
+  font-size: 14px;
   font-weight: 400;
-  margin-bottom: 4px; }
+  margin-bottom: 0;
+  line-height: 36px; }
 
 .form-control {
   -webkit-transition: background 0.3s ease-in-out;
@@ -4248,6 +4249,13 @@ tbody.collapse.in {
 
 .input-group-addon-input-center {
   border-radius: 0; }
+
+.from-group .input-group .input-btn-separated {
+  width: calc(100% - 8px);
+  border-radius: 4px; }
+
+.input-group-btn.input-group-btn-separated:last-child > .btn {
+  border-radius: 4px; }
 
 .nav {
   margin-bottom: 0;

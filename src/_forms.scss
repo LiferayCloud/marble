@@ -1,10 +1,11 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/forms";
 
 label {
-	color: rgba($primary, .4);
-	font-size: 12px;
+	color: rgba($primary, 0.6);
+	font-size: 14px;
 	font-weight: 400;
-	margin-bottom: 4px;
+	margin-bottom: 0;
+	line-height: 36px;
 }
 
 .form-control {

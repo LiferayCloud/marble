@@ -123,3 +123,13 @@
 .input-group-addon-input-center {
 	border-radius: 0
 }
+
+//BUTTON Addon but separated -------------------
+.from-group .input-group .input-btn-separated {
+	width: calc(100% - 8px);
+	border-radius: 4px;
+}
+
+.input-group-btn.input-group-btn-separated:last-child > .btn {
+	border-radius: 4px;
+}

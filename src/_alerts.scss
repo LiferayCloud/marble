@@ -52,9 +52,9 @@
 	opacity: 1;
 }
 
-.alert-spinner {
+.alert .spinner {
 	margin: 0 0 0 25px;
-	top: 9px;
+	top: 7px;
 }
 
 .alert-alert-content {
@@ -67,65 +67,4 @@
 	font-weight: 700;
 	margin-left: 20px;
 	text-transform: uppercase;
-}
-
-@keyframes alert-spinner {
-	to {
-		transform: rotate(360deg);
-	}
-}
-@-webkit-keyframes alert-spinner {
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-}
-
-.alert-spinner {
-	color: white;
-	display: inline-block;
-	font-family: "icon-12";
-	font-size: 14px;
-	font-weight: 900;
-	line-height: 17px;
-	min-height: 24px;
-	min-width: 24px;
-	position: relative;
-	text-align: center;
-}
-
-.alert-spinner:before {
-	height: 24px;
-	position: absolute;
-	width: 24px;
-	margin-left: -12px;
-}
-
-.alert-spinner:not(:required):before {
-	content: "";
-	border-radius: 50%;
-	border: 3px solid white;
-	border-bottom-color: $brand-success;
-	border-left-color: $brand-success;
-	border-top-color: $brand-success;
-	animation: alert-spinner .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-	-webkit-animation: alert-spinner .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-}
-
-.alert-spinner-done:not(:required):before {
-	content: "\E01A";
-	background: $brand-success;
-	border-color: $brand-success;
-	animation: alert-spinner-done 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1;
-	-webkit-animation: alert-spinner-done 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) 1;
-}
-
-.alert-danger .alert-spinner:not(:required):before {
-	border-bottom-color: $brand-danger;
-	border-left-color: $brand-danger;
-	border-top-color: $brand-danger;
-}
-
-.alert-danger .alert-spinner-done:not(:required):before {
-	background: $brand-danger;
-	border-color: $brand-danger;
 }

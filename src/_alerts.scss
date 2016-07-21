@@ -31,7 +31,7 @@
 	display: inline-block;
 	line-height: 60px;
 	min-height: 60px;
-	margin: 0 25px;
+	margin: 0 20px;
 }
 
 .alert .close {
@@ -41,7 +41,7 @@
 	text-shadow: none;
 	color: rgba($primary, .4);
 	font-size: 24px;
-	line-height: 60px;
+	line-height: 59px;
 	margin: 0 20px 0 0;
 	right: inherit;
 	top: inherit;
@@ -72,7 +72,7 @@
 	text-transform: uppercase;
 
 	position: relative;
-	top: 0px;
+	top: 1px;
 
 	-webkit-transition: color 0.2s;
 	-o-transition: color 0.2s;

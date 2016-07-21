@@ -5254,6 +5254,7 @@ a.thumbnail.active {
   margin: 0 0 0 20px; }
 
 .alert-undo-link {
+  outline: none;
   background: rgba(255, 255, 255, 0);
   border: 0px solid #fff;
   padding: 0;

@@ -31,9 +31,9 @@
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -60,6 +60,10 @@
 		min-width: 200px;
 		vertical-align: middle;
 		display: table;
+	}
+
+	.btn {
+		margin-left: 20px;
 	}
 
 	.box h2 {
@@ -92,9 +96,7 @@
 			<span class="spinner spinner-small"></span>
 			<p>Loading...</p>
 		</div>
-	</div>
-
-	<div class="boxes">
+		<!-- danger -->
 		<div class="box">
 			<h2>spinner large danger</h3>
 			<span class="spinner spinner-large spinner-danger"></span>
@@ -112,25 +114,104 @@
 			<span class="spinner spinner-small spinner-danger"></span>
 			<p>Loading...</p>
 		</div>
+
+		<!-- warning -->
+		<div class="box">
+			<h2>spinner large warning</h3>
+			<span class="spinner spinner-large spinner-warning"></span>
+			<p>Loading...</p>
+		</div>
+
+		<div class="box">
+			<h2>spinner medium warning</h3>
+			<span class="spinner spinner-medium spinner-warning"></span>
+			<p>Loading...</p>
+		</div>
+
+		<div class="box">
+			<h2>spinner small warning</h3>
+			<span class="spinner spinner-small spinner-warning"></span>
+			<p>Loading...</p>
+		</div>
 	</div>
 
+	<!-- spinner done -->
 	<div class="boxes">
 		<div class="box">
 			<h2>spinner done</h3>
-			<span class="spinner spinner-done"></span>
+			<span class="spinner spinner-large spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+
+		<div class="box">
+			<h2>spinner done</h3>
+			<span class="spinner spinner-medium spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+
+		<div class="box">
+			<h2>spinner done</h3>
+			<span class="spinner spinner-small spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+		<!-- danger -->
+		<div class="box">
+			<h2>spinner done danger</h3>
+			<span class="spinner spinner-large spinner-danger spinner-done"></span>
 			<p>Loaded</p>
 		</div>
 
 		<div class="box">
 			<h2>spinner done danger</h3>
-			<span class="spinner spinner-done spinner-danger"></span>
+			<span class="spinner spinner-medium spinner-danger spinner-done"></span>
 			<p>Loaded</p>
 		</div>
+
+		<div class="box">
+			<h2>spinner done danger</h3>
+			<span class="spinner spinner-small spinner-danger spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+		<!-- warning -->
+		<div class="box">
+			<h2>spinner done warning</h3>
+			<span class="spinner spinner-large spinner-warning spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+
+		<div class="box">
+			<h2>spinner done warning</h3>
+			<span class="spinner spinner-medium spinner-warning spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+
+		<div class="box">
+			<h2>spinner done warning</h3>
+			<span class="spinner spinner-small spinner-warning spinner-done"></span>
+			<p>Loaded</p>
+		</div>
+
 	</div>
 
+	<div class="boxes">
+
+		<a class="btn btn-success" href="#">Success
+		<span class="spinner spinner-small spinner-white spinner-right"></span></a>
+
+		<a class="btn btn-danger" href="#">Danger <span class="spinner spinner-small spinner-white spinner-right"></span></a>
+
+	</div>
 
 	<div id="alert1" class="alert animated slideInBottom">
 		<span class="spinner"></span>
+		<span class="alert-body">
+			User was deleted successfully.
+		</span>
+		<button type="button" class="close" aria-label="Close" data-onclick="toggle"><span aria-hidden="true">×</span></button>
+	</div>
+
+	<div id="alert2" class="alert animated slideInBottom">
+		<span class="spinner spinner-done"></span>
 		<span class="alert-body">
 			User was deleted successfully.
 		</span>

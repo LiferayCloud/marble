@@ -15,7 +15,7 @@
 	font-weight: 400;
 	left: 50px;
 	margin: 0;
-	min-height: 60px;
+	height: 60px;
 	padding: 0;
 }
 
@@ -42,7 +42,7 @@
 	color: rgba($primary, .4);
 	font-size: 24px;
 	line-height: 60px;
-	margin: 0 25px 0 0;
+	margin: 0 20px 0 0;
 	right: inherit;
 	top: inherit;
 }
@@ -53,18 +53,32 @@
 }
 
 .alert .spinner {
-	margin: 0 0 0 25px;
+	margin: 0 0 0 20px;
 	top: 7px;
 }
 
 .alert-alert-content {
-	margin: 0 0 0 25px;
+	margin: 0 0 0 20px;
 }
 
 .alert-undo-link {
+	background: rgba($white, 0);
+	border: 0px solid $white;
+	padding: 0;
 	color: $accent;
 	font-size: 14px;
 	font-weight: 700;
-	margin-left: 20px;
+	margin: 0 0 0 20px;
 	text-transform: uppercase;
+
+	position: relative;
+	top: 0px;
+
+	-webkit-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.alert-undo-link:hover {
+	color: rgba($accent, .8);
 }

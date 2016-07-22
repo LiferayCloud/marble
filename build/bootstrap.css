@@ -6716,7 +6716,8 @@ button.close {
   margin-top: 0px;
   overflow: hidden;
   position: absolute;
-  z-index: 1050; }
+  z-index: 1050;
+  border-radius: 4px; }
   .autocomplete .list {
     padding-bottom: 12px;
     padding-top: 12px; }

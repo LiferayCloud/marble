@@ -6668,20 +6668,27 @@ button.close {
   border-bottom: 0; }
 
 .list .list-main-content {
-  margin-left: 12px; }
+  margin-left: 20px; }
 
 .list .list-text-primary {
-  color: rgba(14, 20, 26, 0.6);
-  font-size: 16px;
-  margin-top: 5px; }
+  color: rgba(14, 20, 26, 0.8);
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  line-height: 24px;
+  position: relative;
+  top: 2px; }
 
 .list .list-text-secondary {
   color: rgba(14, 20, 26, 0.4);
-  font-size: 12px; }
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 24px;
+  position: relative;
+  top: 4px; }
 
 .list .list-label {
-  margin-top: 9px;
-  margin-left: 9px; }
+  margin-top: 6px;
+  margin-left: 10px; }
 
 .list .btn-icon {
   margin-left: 40px; }

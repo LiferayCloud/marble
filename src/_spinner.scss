@@ -118,24 +118,67 @@
 	border-color: $brand-warning;
 }
 
-//SPINNER IN A BUTTON
-.btn .spinner {
+//spinner white
+.spinner.spinner-white:not(:required):before {
+	border-color: rgba($white, 0);
+	border-bottom-color: $white;
+	border-left-color: $white;
+	border-top-color: $white;
+}
+
+//spinner with text
+.spinner.spinner-left {
+	margin-right: 10px;
+}
+
+.spinner.spinner-right {
+	margin-left: 10px;
+}
+
+//customize
+.btn .spinner,
+.label .spinner, {
 	top: 6px;
+}
 
-	&.spinner-white:not(:required):before {
-		border-color: rgba($white, 0);
-		border-bottom-color: $white;
-		border-left-color: $white;
-		border-top-color: $white;
-	}
+.label .spinner.spinner-left {
+	margin-right: 8px;
+}
 
-	&.spinner-left {
-		margin-right: 10px;
-	}
+.label .spinner.spinner-right {
+	margin-left: 8px;
+}
 
-	&.spinner-right {
-		margin-left: 10px;
-	}
+.label .spinner:not(:required):before {
+	top: 0px;
+	font-size: 16px;
+	font-family: 'icon-16';
+	line-height: 24px;
+	content: "\E056";
+	background: rgba($white, 0);
+	border: 0px solid $white;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	animation: rotate-360-inverse 1s linear infinite;
+	-webkit-animation: rotate-360-inverse 1s linear infinite;
+}
+
+.label .spinner,
+.label .spinner.spinner-success {
+	color: $brand-success;
+}
+
+.label .spinner.spinner-danger {
+	color: $brand-danger;
+}
+
+.label .spinner.spinner-warning {
+	color: $brand-warning;
+}
+
+.label .spinner.spinner-white {
+	color: $white;
 }
 
 @keyframes rotate-360 {
@@ -146,5 +189,16 @@
 @-webkit-keyframes rotate-360 {
 	to {
 		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate-360-inverse {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+@-webkit-keyframes rotate-360-inverse {
+	to {
+		-webkit-transform: rotate(-360deg);
 	}
 }

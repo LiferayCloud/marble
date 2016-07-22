@@ -6922,17 +6922,54 @@ button.close {
   background: #ffb700;
   border-color: #ffb700; }
 
-.btn .spinner {
+.spinner.spinner-white:not(:required):before {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+  border-top-color: #fff; }
+
+.spinner.spinner-left {
+  margin-right: 10px; }
+
+.spinner.spinner-right {
+  margin-left: 10px; }
+
+.btn .spinner,
+.label .spinner {
   top: 6px; }
-  .btn .spinner.spinner-white:not(:required):before {
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #fff;
-    border-left-color: #fff;
-    border-top-color: #fff; }
-  .btn .spinner.spinner-left {
-    margin-right: 10px; }
-  .btn .spinner.spinner-right {
-    margin-left: 10px; }
+
+.label .spinner.spinner-left {
+  margin-right: 8px; }
+
+.label .spinner.spinner-right {
+  margin-left: 8px; }
+
+.label .spinner:not(:required):before {
+  top: 0px;
+  font-size: 16px;
+  font-family: 'icon-16';
+  line-height: 24px;
+  content: "\E056";
+  background: rgba(255, 255, 255, 0);
+  border: 0px solid #fff;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  animation: rotate-360-inverse 1s linear infinite;
+  -webkit-animation: rotate-360-inverse 1s linear infinite; }
+
+.label .spinner,
+.label .spinner.spinner-success {
+  color: #00d46a; }
+
+.label .spinner.spinner-danger {
+  color: #ff4040; }
+
+.label .spinner.spinner-warning {
+  color: #ffb700; }
+
+.label .spinner.spinner-white {
+  color: #fff; }
 
 @keyframes rotate-360 {
   to {
@@ -6941,6 +6978,14 @@ button.close {
 @-webkit-keyframes rotate-360 {
   to {
     -webkit-transform: rotate(360deg); } }
+
+@keyframes rotate-360-inverse {
+  to {
+    transform: rotate(-360deg); } }
+
+@-webkit-keyframes rotate-360-inverse {
+  to {
+    -webkit-transform: rotate(-360deg); } }
 
 .modal-open {
   overflow: hidden; }

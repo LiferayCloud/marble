@@ -2,10 +2,10 @@
 	 ========================================================================== */
 
 .autocomplete {
-	@include box-shadow(0 2px 8px rgba(0, 0, 0, 0.16));
+	@include box-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
 	background: white;
 	border: 1px transparent;
-	margin-top: 4px;
+	margin-top: 0px;
 	overflow: hidden;
 	position: absolute;
 	z-index: $zindex-modal;

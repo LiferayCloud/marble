@@ -6702,11 +6702,11 @@ button.close {
 /* Autocomplete
 	 ========================================================================== */
 .autocomplete {
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background: white;
   border: 1px transparent;
-  margin-top: 4px;
+  margin-top: 0px;
   overflow: hidden;
   position: absolute;
   z-index: 1050; }

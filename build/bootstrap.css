@@ -3101,8 +3101,10 @@ label {
 
 .help-block {
   color: rgba(14, 20, 26, 0.4);
-  font-size: 12px;
-  margin-top: 4px; }
+  font-size: 14px;
+  margin: 0;
+  line-height: 36px;
+  height: 36px; }
 
 .has-success .form-control,
 .has-success .form-control:focus,

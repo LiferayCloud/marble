@@ -3103,8 +3103,9 @@ label {
   color: rgba(14, 20, 26, 0.4);
   font-size: 14px;
   margin: 0;
-  line-height: 36px;
-  height: 36px; }
+  line-height: 24px;
+  min-height: 36px;
+  padding: 6px 0; }
 
 .has-success .form-control,
 .has-success .form-control:focus,

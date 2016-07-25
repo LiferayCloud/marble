@@ -39,8 +39,9 @@ label {
 	color: rgba($secondary, .4);
 	font-size: 14px;
 	margin: 0;
-	line-height: 36px;
-	height: 36px;
+	line-height: 24px;
+	min-height: 36px;
+	padding: 6px 0;
 }
 
 .has-success,

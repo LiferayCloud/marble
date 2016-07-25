@@ -3794,13 +3794,13 @@ tbody.collapse.in {
    ========================================================================== */
 .dropdown-icon .dropdown-menu {
   list-style: none;
-  padding: 0; }
+  padding: 12px 0; }
 
 .dropdown-icon .dropdown-menu li:first-child {
-  margin-top: 12px; }
+  margin-top: 0px; }
 
 .dropdown-icon .dropdown-menu li:last-child {
-  margin-bottom: 12px; }
+  margin-bottom: 0px; }
 
 .dropdown-icon .dropdown-menu li a,
 .dropdown-icon .dropdown-menu li button {
@@ -3810,7 +3810,8 @@ tbody.collapse.in {
   color: rgba(14, 20, 26, 0.8);
   font-size: 12px;
   margin: 0;
-  padding: 10px 20px; }
+  padding: 0 20px;
+  line-height: 36px; }
   .dropdown-icon .dropdown-menu li a span,
   .dropdown-icon .dropdown-menu li button span {
     -webkit-transition: color 0.3s ease-in-out;

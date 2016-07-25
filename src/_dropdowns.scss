@@ -47,16 +47,16 @@
 
 .dropdown-icon .dropdown-menu {
 	list-style: none;
-	padding: 0;
+	padding: 12px 0;
 }
 
 .dropdown-icon .dropdown-menu li {
 	&:first-child {
-		margin-top: 12px;
+		margin-top: 0px;
 	}
 
 	&:last-child {
-		margin-bottom: 12px;
+		margin-bottom: 0px;
 	}
 }
 
@@ -66,7 +66,8 @@
 	color: rgba($primary, .8);
 	font-size: 12px;
 	margin: 0;
-	padding: 10px 20px;
+	padding: 0 20px;
+	line-height: 36px;
 
 	span {
 		@include anim(color);

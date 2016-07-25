@@ -4163,7 +4163,8 @@ tbody.collapse.in {
 .input-group-addon {
   background: rgba(14, 20, 26, 0.2);
   border: 0;
-  color: rgba(14, 20, 26, 0.6); }
+  color: rgba(14, 20, 26, 0.6);
+  font-size: 16px; }
 
 .has-success .input-group-addon {
   background: rgba(0, 212, 106, 0.2); }

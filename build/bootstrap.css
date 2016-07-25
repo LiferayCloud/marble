@@ -3077,6 +3077,9 @@ label {
   margin-bottom: 0;
   line-height: 36px; }
 
+.form-group {
+  margin-bottom: 0px; }
+
 .form-control {
   -webkit-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;

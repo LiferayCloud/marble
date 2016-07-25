@@ -8,6 +8,10 @@ label {
 	line-height: 36px;
 }
 
+.form-group {
+	margin-bottom: 0px;
+}
+
 .form-control {
 	@include anim(background);
 	background: rgba($primary, .05);

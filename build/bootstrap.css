@@ -6259,13 +6259,13 @@ button.close {
   .sidebar {
     position: fixed;
     height: 100vh;
-    width: 265px; }
+    width: 284px; }
   .sidebar-offset {
-    margin-left: 265px;
+    margin-left: 284px;
     padding-top: 0;
-    width: calc(100% - 265px); }
+    width: calc(100% - 284px); }
     .sidebar-offset .container {
-      width: 695px; }
+      width: 676px; }
   .sidebar-header {
     display: none; }
   .toggler-collapsed {
@@ -6278,7 +6278,9 @@ button.close {
 @media (min-width: 1280px) {
   .sidebar-offset .container,
   .sidebar-offset .container-hybrid {
-    width: 1015px; } }
+    width: 1280px;
+    padding-left: 0px;
+    padding-right: 0px; } }
 
 /* Topbar
 	 ========================================================================== */

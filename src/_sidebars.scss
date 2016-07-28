@@ -261,16 +261,16 @@
 	.sidebar {
 		position: fixed;
 		height: 100vh;
-		width: 265px;
+		width: 284px;
 	}
 
 	.sidebar-offset {
-		margin-left: 265px;
+		margin-left: 284px;
 		padding-top: 0;
-		width: calc(100% - 265px);
+		width: calc(100% - 284px);
 
 		.container {
-			width: $screen-md-min - 265px;
+			width: $screen-md-min - 284px;
 		}
 	}
 
@@ -294,7 +294,9 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: $screen-lg-min - 265px;
+			width: $screen-lg-min;// - 284px;
+			padding-left: 0px;
+			padding-right: 0px;
 		}
 	}
 }

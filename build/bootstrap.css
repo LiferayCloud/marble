@@ -6278,6 +6278,27 @@ button.close {
 @media (min-width: 1280px) {
   .sidebar-offset .container,
   .sidebar-offset .container-hybrid {
+    width: 996px;
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 1440px) {
+  .sidebar-offset .container,
+  .sidebar-offset .container-hybrid {
+    width: 948px;
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 1600px) {
+  .sidebar-offset .container,
+  .sidebar-offset .container-hybrid {
+    width: calc(1440px - 284px);
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (min-width: 1920px) {
+  .sidebar-offset .container,
+  .sidebar-offset .container-hybrid {
     width: 1280px;
     padding-left: 0px;
     padding-right: 0px; } }

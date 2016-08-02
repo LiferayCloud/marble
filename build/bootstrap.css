@@ -5273,105 +5273,53 @@ a.thumbnail.active {
   text-transform: uppercase;
   position: relative;
   top: 1px;
-  -webkit-transition: color 0.2s;
-  -o-transition: color 0.2s;
   transition: color 0.2s; }
 
 .alert-undo-link:hover {
   color: rgba(0, 212, 106, 0.8); }
 
-@-webkit-keyframes slideInLeft {
-  0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible; }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-
 @keyframes slideInLeft {
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     visibility: visible; }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-
-@-webkit-keyframes slideOutLeft {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); } }
 
 @keyframes slideOutLeft {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); } }
-
-@-webkit-keyframes slideInBottom {
-  0% {
-    -webkit-transform: translate3d(0, 300%, 0);
-    transform: translate3d(0, 300%, 0);
-    visibility: visible; }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
 
 @keyframes slideInBottom {
   0% {
-    -webkit-transform: translate3d(0, 300%, 0);
     transform: translate3d(0, 300%, 0);
     visibility: visible; }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-
-@-webkit-keyframes slideOutBottom {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(0, 300%, 0);
-    transform: translate3d(0, 300%, 0); } }
 
 @keyframes slideOutBottom {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(0, 300%, 0);
     transform: translate3d(0, 300%, 0); } }
 
 .slideInBottom {
-  -webkit-animation-name: slideInBottom;
   animation-name: slideInBottom; }
 
 .slideOutBottom {
-  -webkit-animation-name: slideOutBottom;
   animation-name: slideOutBottom; }
 
 .slideInLeft {
-  -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft; }
 
 .slideOutLeft {
-  -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft; }
 
 .animated {
-  -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -6828,10 +6776,7 @@ button.close {
   font: "Lato", sans-serif;
   font-weight: 600;
   text-align: center;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
   position: relative;
   padding: 7px 0;
   left: -5px;
@@ -6839,8 +6784,6 @@ button.close {
   width: 120px;
   background-color: #00d46a;
   color: #fff;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); }
 
 .ribbon-green:before, .ribbon-green:after {
@@ -6933,15 +6876,13 @@ button.close {
   border-bottom-color: #00d46a;
   border-left-color: #00d46a;
   border-top-color: #00d46a;
-  animation: rotate-360 .6s linear infinite;
-  -webkit-animation: rotate-360 .6s linear infinite; }
+  animation: rotate-360 .6s linear infinite; }
 
 .spinner-done:not(:required):before {
   content: "\E01A";
   background: #00d46a;
   border-color: #00d46a;
-  animation: none;
-  -webkit-animation: none; }
+  animation: none; }
 
 .spinner.spinner-danger:not(:required):before {
   border-bottom-color: #ff4040;
@@ -6994,8 +6935,7 @@ button.close {
   width: 24px;
   height: 24px;
   padding: 0;
-  animation: rotate-360-inverse 1s linear infinite;
-  -webkit-animation: rotate-360-inverse 1s linear infinite; }
+  animation: rotate-360-inverse 1s linear infinite; }
 
 .label .spinner,
 .label .spinner.spinner-success {
@@ -7014,17 +6954,9 @@ button.close {
   to {
     transform: rotate(360deg); } }
 
-@-webkit-keyframes rotate-360 {
-  to {
-    -webkit-transform: rotate(360deg); } }
-
 @keyframes rotate-360-inverse {
   to {
     transform: rotate(-360deg); } }
-
-@-webkit-keyframes rotate-360-inverse {
-  to {
-    -webkit-transform: rotate(-360deg); } }
 
 .modal-open {
   overflow: hidden; }
@@ -7155,8 +7087,6 @@ button.close {
   position: absolute;
   top: 50%;
   width: 582px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
 .modal-content {
@@ -7387,10 +7317,6 @@ button.close {
   content: counter(articles);
   top: 50%;
   bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 20px;
   width: 36px;
@@ -7400,8 +7326,6 @@ button.close {
   color: rgba(14, 20, 26, 0.4);
   text-align: center;
   box-shadow: inset 0 0 0 1px #d9d9d9;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  -moz-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s; }
 
 .reading-progress a.reading .reading-title {
@@ -7435,8 +7359,6 @@ button.close {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
   transition: color 0.3s; }
 
 .reading-subtitle {
@@ -7448,10 +7370,6 @@ button.close {
   position: absolute;
   top: 50%;
   bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 20px;
   stroke: #00d46a; }

@@ -41,6 +41,11 @@ gulp.task('fonts16', function() {
 		.pipe(gulp.dest('build/fonts/'));
 });
 
+gulp.task('galano', function () {
+		return gulp.src(['src/fonts/galano/*'])
+				.pipe(gulp.dest('build/fonts/galano'));
+});
+
 //images
 gulp.task('images', function () {
 		return gulp.src(['src/images/*'])

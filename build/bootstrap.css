@@ -1,4 +1,19 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Galano Medium";
+  src: url("fonts/galano/galano-medium.eot");
+  src: url("fonts/galano/galano-medium.eot?#iefix") format("eot"), url("fonts/galano/galano-medium.woff") format("woff"), url("fonts/galano/galano-medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Galano Semibold";
+  src: url("fonts/galano/galano-semibold.eot");
+  src: url("fonts/galano/galano-semibold.eot?#iefix") format("eot"), url("fonts/galano/galano-semibold.woff") format("woff"), url("fonts/galano/galano-semibold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Galano Bold";
+  src: url("fonts/galano/galano-bold.eot");
+  src: url("fonts/galano/galano-bold.eot?#iefix") format("eot"), url("fonts/galano/galano-bold.woff") format("woff"), url("fonts/galano/galano-bold.ttf") format("truetype"); }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -2517,7 +2532,7 @@ table th[class*="col-"] {
 .table > thead > tr > th,
 .table > thead > tr > td {
   color: rgba(14, 20, 26, 0.4);
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   font-size: 11px;
   font-weight: 700;
   padding: 20px 10px 28px;
@@ -3471,7 +3486,7 @@ input[type="button"].btn-block {
   font-size: 16px;
   line-height: 58px;
   border-radius: 4px;
-  font-weight: 600; }
+  font-family: "Galano Semibold", sans-serif; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: none; }
   .btn:active, .btn.active {
@@ -4977,7 +4992,7 @@ a.label:hover, a.label:focus {
 .label {
   border-radius: 4px;
   display: inline-block;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   padding: 0 12px;
   position: relative;
@@ -6273,7 +6288,7 @@ button.close {
   transition: color 0.3s ease-in-out;
   color: white;
   display: flex;
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   font-weight: 700;
   margin: 4px 0; }
 
@@ -6362,7 +6377,7 @@ button.close {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: rgba(255, 255, 255, 0.3);
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none; }
@@ -6500,7 +6515,7 @@ button.close {
   background: rgba(14, 20, 26, 0.3);
   color: white;
   cursor: default;
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -6650,7 +6665,7 @@ button.close {
 .list .list-text-primary {
   color: rgba(14, 20, 26, 0.8);
   font-size: 18px;
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   line-height: 24px;
   position: relative;
   top: 2px; }
@@ -6743,7 +6758,7 @@ button.close {
 .autocomplete-topbar .listitem-title {
   color: #0e141a;
   font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   font-weight: 700; }
 
 .autocomplete-topbar .listitem-description {
@@ -6773,7 +6788,7 @@ button.close {
   right: 9px; }
 
 .ribbon-green {
-  font: "Lato", sans-serif;
+  font: "Galano Medium", sans-serif;
   font-weight: 600;
   text-align: center;
   transform: rotate(45deg);
@@ -7103,7 +7118,7 @@ button.close {
 
 .modal-header .modal-title {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Lato", sans-serif;
+  font-family: "Galano Medium", sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 24px;

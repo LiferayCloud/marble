@@ -129,9 +129,9 @@
 .topbar-link {
 	@include anim(color);
 	color: rgba($white, .3);
-	font-family: $font-family-secondary;
+	font-family: $font-family-secondary-semibold;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 400;
 	text-decoration: none;
 }
 

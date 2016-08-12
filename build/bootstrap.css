@@ -3565,14 +3565,14 @@ input[type="button"].btn-block {
   font-size: 16px;
   line-height: 58px;
   border-radius: 4px;
-  font-weight: 600; }
+  font-weight: 400; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0 24px;
   font-size: 16px;
   line-height: 58px;
   border-radius: 4px;
-  font-weight: 600; }
+  font-weight: 400; }
 
 .btn-transparent {
   background: transparent;
@@ -6362,9 +6362,9 @@ button.close {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: rgba(255, 255, 255, 0.3);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano Semibold", sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none; }
 
 .topbar-link:focus {

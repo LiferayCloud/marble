@@ -9,7 +9,7 @@
 	box-shadow: $shadow-large;
 	height: auto;
 	left: 0;
-	padding: 20px;
+	padding: 0;
 	position: absolute;
 	width: 100%;
 	z-index: 1000;
@@ -22,11 +22,18 @@
 .sidebar-list {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 24px 20px 0;
+
+	height: 100%;
+	overflow-y: auto;
 }
 
 .sidebar-item {
 	display: block;
+
+	&:last-child {
+		margin-bottom: 24px;
+	}
 }
 
 .sidebar-link {
@@ -41,7 +48,7 @@
 }
 
 /* Header
-   ========================================================================== */
+	 ========================================================================== */
 
 .sidebar-header {
 	background: rgba($accent, .1);
@@ -81,7 +88,7 @@
 }
 
 /* Toggle Header
-   ========================================================================== */
+	 ========================================================================== */
 
 .toggler-header-collapsed .icon-12-arrow-up-short   { display: none; }
 .toggler-header-collapsed .icon-12-arrow-down-short { display: inline; }
@@ -94,7 +101,7 @@
 }
 
 /* Search
-   ========================================================================== */
+	 ========================================================================== */
 
 .sidebar-search .form-group {
 	margin: 10px 0;
@@ -111,6 +118,8 @@
 .sidebar-search .input-inner-icon-helper {
 	@include anim(color);
 	color: rgba($primary, .6);
+	line-height: 24px;
+	top: 20px;
 }
 
 .sidebar-search .form-control:focus {
@@ -124,7 +133,7 @@
 }
 
 /* First level
-   ========================================================================== */
+	 ========================================================================== */
 
 .sidebar-list-1 .sidebar-link {
 	color: rgba($secondary, .8);
@@ -162,7 +171,14 @@
 }
 
 /* Second level
-   ========================================================================== */
+	 ========================================================================== */
+.sidebar-list .sidebar-list-2 {
+	padding: 0;
+
+	.sidebar-item:last-child {
+		margin-bottom: 0;
+	}
+}
 
 .sidebar-list-2 .sidebar-link {
 	color: rgba($secondary, .9);
@@ -255,7 +271,7 @@
 }
 
 /* Medium screens
-   ========================================================================== */
+	 ========================================================================== */
 
 @media (min-width: $screen-md-min) {
 	.sidebar {
@@ -288,7 +304,7 @@
 }
 
 /* Large screens
-   ========================================================================== */
+	 ========================================================================== */
 
 @media (min-width: $screen-lg-min) {
 	.sidebar-offset {

@@ -4009,59 +4009,6 @@ tbody.collapse.in {
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
 
-.btn-group {
-  overflow: hidden; }
-
-.btn-group .btn {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 0 45px;
-  text-transform: uppercase; }
-
-.btn-group .btn-default:focus, .btn-group .btn-default.focus {
-  background-color: rgba(14, 20, 26, 0.1); }
-
-.btn-group .btn-default:focus:hover, .btn-group .btn-default.focus:hover {
-  background-color: transparent; }
-
-.btn-group .btn-default:hover, .btn-group .btn-default:focus, .btn-group .btn-default.focus {
-  border-color: transparent; }
-
-.btn-group-label {
-  -webkit-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out;
-  position: relative;
-  top: 0; }
-
-.btn-group-icon {
-  -webkit-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out;
-  background: #fff;
-  border-radius: 50%;
-  color: rgba(14, 20, 26, 0.8);
-  left: 50%;
-  margin-left: -8px;
-  padding: 1px 2px 3px;
-  position: absolute;
-  top: 60px; }
-
-.btn-group .btn-group-selected,
-.btn-group .btn-group-selected:hover,
-.btn-group .btn-group-selected:focus,
-.btn-group .btn-group-selected:focus:hover {
-  background: #0e141a;
-  border-color: transparent;
-  color: #fff;
-  font-weight: 700; }
-
-.btn-group-selected .btn-group-label {
-  top: -10px; }
-
-.btn-group-selected .btn-group-icon {
-  top: 32px; }
-
 .input-group {
   position: relative;
   display: table;

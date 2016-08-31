@@ -7,16 +7,21 @@
 .topbar {
 	background: $primary;
 	height: 60px;
-	padding: 0 20px;
+	padding: 12px 20px;
 	width: 100%;
 	display: flex;
+}
+
+.topbar.topbar-large {
+	height: 84px;
+	padding: 24px 20px 12px;
 }
 
 .topbar-logo {
 	align-items: center;
 	display: flex;
 	align-self: flex-start;
-	margin: 2px 20px 2px 0;
+	margin: 0 20px 0 0;
 	max-width: 280px;
 }
 
@@ -24,9 +29,9 @@
 	@include anim(color);
 	color: rgba($white, 1);
 	display: flex;
-	font-family: $font-family-secondary;
-	font-weight: 700;
-	margin: 4px 0;
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
+	margin: 0;
 }
 
 .topbar-logo-link:hover,
@@ -64,7 +69,6 @@
 	.input-inner-addon {
 		margin: 0 auto;
 		max-width: 608px;
-		top: 12px;
 	}
 
 	.input-inner-icon-helper {
@@ -101,15 +105,19 @@
 
 .topbar-list {
 	align-items: center;
+	align-content: center;
 	display: flex;
-	margin-left: auto;
+	margin: 0 0 0 auto;
 	float: right;
 	font-size: 0;
 	list-style: none;
-	margin-top: 10px;
 	padding: 0;
-	height: 38px;
+	height: 36px;
 	max-width: 300px;
+}
+
+.topbar-large .topbar-list {
+	height: 48px;
 }
 
 .topbar-input + .topbar-list {
@@ -153,9 +161,13 @@
 }
 
 .topbar-avatar {
-	margin-left: 19px;
+	margin-left: 20px;
 	position: relative;
-	top: 3px;
+	height: 36px;
+
+	.topbar-link {
+		height: 36px;
+	}
 }
 
 .topbar-avatar .avatar-container {

@@ -1,0 +1,77 @@
+.topbar .wedeploy-logo {
+	.we {
+		height: 36px;
+		width: 36px;
+		line-height: 36.6px;
+		color: $white;
+		font-size: 17px;
+		font-family: $font-family-secondary-semibold;
+		font-weight: 400;
+		border-radius: 50%;
+		display: inline-block;
+		text-align: center;
+		background: $accent;
+	}
+
+	.deploy {
+		font-size: 17px;
+		line-height: 36px;
+		font-family: $font-family-secondary-bold;
+		font-weight: 400;
+		color: rgba($white, .9);
+		display: none;
+		margin-left: 6px;
+	}
+
+	.liferay {
+		color: rgba($white, .3);
+		font-family: $font-family-secondary;
+		font-weight: 400;
+		font-size: 10px;
+		display: none;
+		margin-left: 4px;
+	}
+}
+
+.topbar.topbar-large .wedeploy-logo {
+	.we {
+		height: 48px;
+		width: 48px;
+		line-height: 48px;
+		font-size: 24px;
+	}
+
+	.deploy {
+		font-size: 24px;
+		line-height: 48px;
+		margin-left: 4px;
+	}
+
+	.liferay {
+		font-size: 12px;
+	}
+}
+
+.topbar.topbar-light .wedeploy-logo {
+	.deploy {
+		color: rgba($primary, .9);
+		display: inline-block;
+	}
+	.liferay {
+		color: rgba($primary, .3);
+		display: none;
+	}
+}
+
+.topbar.topbar-large.topbar-light .wedeploy-logo {
+	.liferay {
+		display: inline-block;
+	}
+}
+
+.topbar.topbar-inverse {
+	.we {
+		color: $accent;
+		background: $white;
+	}
+}

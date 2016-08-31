@@ -3,6 +3,7 @@
 .btn {
 	@include button-size(0, 48px, 16px, 58px, 4px);
 	font-family: $font-family-secondary-semibold;
+	border: 0px solid transparent;
 
 	&,
 	&:active,

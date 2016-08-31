@@ -3471,7 +3471,8 @@ input[type="button"].btn-block {
   font-size: 16px;
   line-height: 58px;
   border-radius: 4px;
-  font-family: "Galano Semibold", sans-serif; }
+  font-family: "Galano Semibold", sans-serif;
+  border: 0px solid transparent; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: none; }
   .btn:active, .btn.active {

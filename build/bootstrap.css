@@ -6529,8 +6529,8 @@ button.close {
   background: rgba(14, 20, 26, 0.3);
   color: white;
   cursor: default;
-  font-family: "Galano Medium", sans-serif;
-  font-weight: 700;
+  font-family: "Galano Bold", sans-serif;
+  font-weight: 400;
   text-transform: uppercase; }
 
 .avatar-initials:hover {

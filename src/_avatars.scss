@@ -5,6 +5,10 @@
 	border-radius: 50%;
 }
 
+.avatar-squared {
+	border-radius: 4px;
+}
+
 .avatar {
 	@extend .avatar-round;
 	display: block;
@@ -51,6 +55,10 @@ $xlarge : 46px;
 
 .avatar-photo img {
 	@extend .avatar-round;
+}
+
+.avatar-photo.avatar-squared img {
+	@extend .avatar-squared;
 }
 
 .avatar-photo.avatar-xsmall img {
@@ -181,6 +189,26 @@ $xlarge : 46px;
 /* Avatar - Icon (Font)
 	 ========================================================================== */
 
+.avatar-icon.avatar-xsmall span{
+	line-height: $xsmall;
+}
+
+.avatar-icon.avatar-small span{
+	line-height: $small;
+}
+
+.avatar-icon.avatar-medium span{
+	line-height: $medium;
+}
+
+.avatar-icon.avatar-large span{
+	line-height: $large;
+}
+
+.avatar-icon.avatar-xlarge span{
+	line-height: $xlarge;
+}
+
 .avatar-icon-12,
 .avatar-icon-16 {
 	@extend .avatar;
@@ -250,4 +278,43 @@ $icon16Large: 92px;
 .avatar-container .avatar-initials {
 	position: absolute;
 	left: 0;
+}
+
+/* Avatar - background white with shadow and status colors
+	 ========================================================================== */
+
+.avatar.avatar-white,
+.avatar-initials.avatar-white
+.avatar-icon.avatar-white {
+	background: $white;
+	box-shadow: 0 2px 8px rgba($primary, 0.1);
+	color: rgba($primary, .8);
+}
+
+.avatar.avatar-success,
+.avatar-initials.avatar-success
+.avatar-icon.avatar-success {
+	background: $brand-success;
+	color: $white;
+}
+
+.avatar.avatar-danger,
+.avatar-initials.avatar-danger
+.avatar-icon.avatar-danger {
+	background: $brand-danger;
+	color: $white;
+}
+
+.avatar.avatar-primary,
+.avatar-initials.avatar-primary
+.avatar-icon.avatar-primary {
+	background: rgba($primary, .8);
+	color: $white;
+}
+
+/* Avatar - We
+	 ========================================================================== */
+.avatar-initials.avatar-we {
+	text-transform: capitalize;
+	font-family: $font-family-secondary-semibold;
 }

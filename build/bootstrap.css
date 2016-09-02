@@ -6490,6 +6490,9 @@ button.close {
 .avatar-icon-16, .avatar-photo img {
   border-radius: 50%; }
 
+.avatar-squared, .avatar-photo.avatar-squared img {
+  border-radius: 4px; }
+
 .avatar, .avatar-initials, .avatar-number, .avatar-icon, .avatar-icon-12,
 .avatar-icon-16 {
   display: block;
@@ -6609,6 +6612,21 @@ button.close {
 
 /* Avatar - Icon (Font)
 	 ========================================================================== */
+.avatar-icon.avatar-xsmall span, .avatar-photo.avatar-xsmall img.avatar-icon span {
+  line-height: 32px; }
+
+.avatar-icon.avatar-small span, .avatar-photo.avatar-small img.avatar-icon span {
+  line-height: 34px; }
+
+.avatar-icon.avatar-medium span, .avatar-photo.avatar-medium img.avatar-icon span {
+  line-height: 36px; }
+
+.avatar-icon.avatar-large span, .avatar-photo.avatar-large img.avatar-icon span {
+  line-height: 44px; }
+
+.avatar-icon.avatar-xlarge span, .avatar-photo.avatar-xlarge img.avatar-icon span {
+  line-height: 46px; }
+
 .avatar-icon-12.avatar-medium, .avatar-photo.avatar-medium img.avatar-icon-12 {
   width: 36px;
   height: 36px; }
@@ -6654,6 +6672,39 @@ button.close {
 .avatar-container .avatar-initials {
   position: absolute;
   left: 0; }
+
+/* Avatar - background white with shadow and status colors
+	 ========================================================================== */
+.avatar.avatar-white, .avatar-white.avatar-initials, .avatar-white.avatar-number, .avatar-white.avatar-icon, .avatar-white.avatar-icon-12,
+.avatar-white.avatar-icon-16,
+.avatar-initials.avatar-white .avatar-icon.avatar-white {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(14, 20, 26, 0.1);
+  color: rgba(14, 20, 26, 0.8); }
+
+.avatar.avatar-success, .avatar-success.avatar-initials, .avatar-success.avatar-number, .avatar-success.avatar-icon, .avatar-success.avatar-icon-12,
+.avatar-success.avatar-icon-16,
+.avatar-initials.avatar-success .avatar-icon.avatar-success {
+  background: #00d46a;
+  color: #fff; }
+
+.avatar.avatar-danger, .avatar-danger.avatar-initials, .avatar-danger.avatar-number, .avatar-danger.avatar-icon, .avatar-danger.avatar-icon-12,
+.avatar-danger.avatar-icon-16,
+.avatar-initials.avatar-danger .avatar-icon.avatar-danger {
+  background: #ff4040;
+  color: #fff; }
+
+.avatar.avatar-primary, .avatar-primary.avatar-initials, .avatar-primary.avatar-number, .avatar-primary.avatar-icon, .avatar-primary.avatar-icon-12,
+.avatar-primary.avatar-icon-16,
+.avatar-initials.avatar-primary .avatar-icon.avatar-primary {
+  background: rgba(14, 20, 26, 0.8);
+  color: #fff; }
+
+/* Avatar - We
+	 ========================================================================== */
+.avatar-initials.avatar-we {
+  text-transform: capitalize;
+  font-family: "Galano Semibold", sans-serif; }
 
 /* List
 	 ========================================================================== */

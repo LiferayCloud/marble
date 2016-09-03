@@ -3564,14 +3564,14 @@ input[type="button"].btn-block {
 .btn-lg, .btn-group-lg > .btn {
   padding: 0 72px;
   font-size: 16px;
-  line-height: 58px;
+  line-height: 60px;
   border-radius: 4px;
   font-weight: 400; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0 24px;
   font-size: 16px;
-  line-height: 58px;
+  line-height: 60px;
   border-radius: 4px;
   font-weight: 400; }
 

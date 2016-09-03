@@ -179,12 +179,12 @@
 // Sizes
 
 .btn-lg {
-	@include button-size(0, 72px, 16px, 58px, 4px);
+	@include button-size(0, 72px, 16px, 60px, 4px);
 	font-weight: 400;
 }
 
 .btn-sm {
-	@include button-size(0, 24px, 16px, 58px, 4px);
+	@include button-size(0, 24px, 16px, 60px, 4px);
 	font-weight: 400;
 }
 

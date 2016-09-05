@@ -1,115 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 960 959" enable-background="new 0 0 960 959" xml:space="preserve">
-<g id="row-5">
-</g>
-<g id="row-4">
-</g>
-<g id="row-3">
-	<g id="alert">
-	</g>
-	<g id="expand">
-	</g>
-	<g id="collapse">
-	</g>
-	<g id="colections">
-	</g>
-	<g id="briefcase">
-	</g>
-	<g id="flag">
-	</g>
-	<g id="flag-small">
-	</g>
-	<g id="signpost">
-	</g>
-	<g id="info-card">
-	</g>
-	<g id="journal">
-	</g>
-	<g id="network">
-	</g>
-	<g id="trash">
-	</g>
-	<g id="card">
-	</g>
-	<g id="browser">
-	</g>
-	<g id="arrows">
-	</g>
-	<g id="arrow-left-rod">
-	</g>
-</g>
-<g id="row-2">
-	<g id="arrow-right-rod">
-	</g>
-	<g id="arrow-up-short">
-	</g>
-	<g id="arrow-down-short">
-	</g>
-	<g id="heart-full">
-	</g>
-	<g id="balloon-comments-inline">
-	</g>
-	<g id="balloon-comments">
-	</g>
-	<g id="check">
-	</g>
-	<g id="balloon-topic">
-	</g>
-	<g id="persons">
-	</g>
-	<g id="groups">
-	</g>
-	<g id="building-big">
-		<g>
-			<path d="M400-80v400H0v560h960V-80H400z M400,800h-80V560H160v240H80V400h320V800z M640,720h-80V560h80V720z M640,480h-80V320h80
-				V480z M640,240h-80V80h80V240z M800,720h-80V560h80V720z M800,480h-80V320h80V480z M800,240h-80V80h80V240z"/>
-		</g>
-	</g>
-	<g id="person-card-2">
-	</g>
-	<g id="person-card-3">
-	</g>
-	<g id="plus">
-	</g>
-	<g id="arrow-right-long">
-	</g>
-	<g id="arrow-left-long">
-	</g>
-</g>
-<g id="row-1">
-	<g id="heart-inline">
-	</g>
-	<g id="close-short">
-	</g>
-	<g id="hash">
-	</g>
-	<g id="people">
-	</g>
-	<g id="building-small">
-	</g>
-	<g id="person">
-	</g>
-	<g id="close-long">
-	</g>
-	<g id="post">
-	</g>
-	<g id="star">
-	</g>
-	<g id="heart">
-	</g>
-	<g id="link">
-	</g>
-	<g id="camera">
-	</g>
-	<g id="balloon-text">
-	</g>
-	<g id="pin">
-	</g>
-	<g id="clock">
-	</g>
-</g>
-<g id="guides">
-</g>
+<path id="building-big_1_" d="M840-80c-160,0-160,0-320,0c-66.3,0-120,53.7-120,120c0,40,0,226.7,0,280c-92.8,0-130.7,0-280,0
+	C53.7,320,0,373.7,0,440c0,54.2,0,344.9,0,360c0,44.2,35.8,80,80,80c3.9,0,790.6,0,800,0c44.2,0,80-35.8,80-80v0c0-12.4,0-720,0-760
+	C960-26.3,906.3-80,840-80z M400,800c-24.1,0-51.5,0-80,0c0-43.3,0-56.2,0-120c0-22.1-17.9-40-40-40c-40,0-40,0-80,0
+	c-22.1,0-40,17.9-40,40c0,63.8,0,76.7,0,120c-14.7,0-28.2,0-40,0c-22.1,0-40-17.9-40-40c0-80,0-240,0-320c0-22.1,17.9-40,40-40
+	c68.2,0,194.6,0,280,0V800z M640,680c0,22.1-17.9,40-40,40s-40-17.9-40-40c0-80,0,0,0-80c0-22.1,17.9-40,40-40s40,17.9,40,40
+	C640,680,640,600,640,680z M640,440c0,22.1-17.9,40-40,40s-40-17.9-40-40c0-80,0,0,0-80c0-22.1,17.9-40,40-40s40,17.9,40,40
+	C640,440,640,360,640,440z M640,200c0,22.1-17.9,40-40,40s-40-17.9-40-40c0-80,0,0,0-80c0-22.1,17.9-40,40-40s40,17.9,40,40
+	C640,200,640,120,640,200z M800,680c0,22.1-17.9,40-40,40s-40-17.9-40-40c0-80,0,0,0-80c0-22.1,17.9-40,40-40s40,17.9,40,40
+	C800,680,800,600,800,680z M800,440c0,22.1-17.9,40-40,40s-40-17.9-40-40c0-80,0,0,0-80c0-22.1,17.9-40,40-40s40,17.9,40,40
+	C800,440,800,360,800,440z M800,200c0,22.1-17.9,40-40,40s-40-17.9-40-40c0-80,0,0,0-80c0-22.1,17.9-40,40-40s40,17.9,40,40
+	C800,200,800,120,800,200z"/>
 </svg>

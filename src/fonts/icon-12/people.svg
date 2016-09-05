@@ -1,116 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1040 960" enable-background="new 0 0 1040 960" xml:space="preserve">
-<g id="row-5">
-</g>
-<g id="row-4">
-</g>
-<g id="row-3">
-	<g id="alert">
-	</g>
-	<g id="expand">
-	</g>
-	<g id="collapse">
-	</g>
-	<g id="colections">
-	</g>
-	<g id="briefcase">
-	</g>
-	<g id="flag">
-	</g>
-	<g id="flag-small">
-	</g>
-	<g id="signpost">
-	</g>
-	<g id="info-card">
-	</g>
-	<g id="journal">
-	</g>
-	<g id="network">
-	</g>
-	<g id="trash">
-	</g>
-	<g id="card">
-	</g>
-	<g id="browser">
-	</g>
-	<g id="arrows">
-	</g>
-	<g id="arrow-left-rod">
-	</g>
-</g>
-<g id="row-2">
-	<g id="arrow-right-rod">
-	</g>
-	<g id="arrow-up-short">
-	</g>
-	<g id="arrow-down-short">
-	</g>
-	<g id="heart-full">
-	</g>
-	<g id="balloon-comments-inline">
-	</g>
-	<g id="balloon-comments">
-	</g>
-	<g id="check">
-	</g>
-	<g id="balloon-topic">
-	</g>
-	<g id="persons">
-	</g>
-	<g id="groups">
-	</g>
-	<g id="building-big">
-	</g>
-	<g id="person-card-2">
-	</g>
-	<g id="person-card-3">
-	</g>
-	<g id="plus">
-	</g>
-	<g id="arrow-right-long">
-	</g>
-	<g id="arrow-left-long">
-	</g>
-</g>
-<g id="row-1">
-	<g id="heart-inline">
-	</g>
-	<g id="close-short">
-	</g>
-	<g id="hash">
-	</g>
-	<g id="people">
-		<path fill-rule="evenodd" clip-rule="evenodd" d="M240,880H0V600c0-66.3,53.7-120,120-120h0c66.3,0,120,53.7,120,120V880z
-			 M1040,600c0-66.3-53.7-120-120-120h0c-66.3,0-120,53.7-120,120v280h240V600z M720,520c0-66.3-53.7-120-120-120H440
-			c-66.3,0-120,53.7-120,120v360h400V520z M120,400c66.3,0,120-53.7,120-120s-53.7-120-120-120S0,213.7,0,280S53.7,400,120,400z
-			 M920,400c66.3,0,120-53.7,120-120s-53.7-120-120-120s-120,53.7-120,120S853.7,400,920,400z M520-80C409.5-80,320,9.5,320,120
-			s89.5,200,200,200s200-89.5,200-200S630.5-80,520-80z"/>
-	</g>
-	<g id="building-small">
-	</g>
-	<g id="person">
-	</g>
-	<g id="close-long">
-	</g>
-	<g id="post">
-	</g>
-	<g id="star">
-	</g>
-	<g id="heart">
-	</g>
-	<g id="link">
-	</g>
-	<g id="camera">
-	</g>
-	<g id="balloon-text">
-	</g>
-	<g id="pin">
-	</g>
-	<g id="clock">
-	</g>
-</g>
-<g id="guides">
-</g>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1360 960" enable-background="new 0 0 1360 960" xml:space="preserve">
+<path id="people_1_" d="M479.2,200c0-110.5,89.5-200,200-200c110.5,0,200,89.5,200,200s-89.5,200-200,200
+	C568.7,400,479.2,310.5,479.2,200z M1200,480c88.4,0,160-71.6,160-160c0-88.4-71.6-160-160-160s-160,71.6-160,160
+	C1040,408.4,1111.6,480,1200,480z M720,480c-13.3,0-66.7,0-80,0c-132.5,0-240,107.5-240,240c0,102.9,0,102.9,0,120
+	c0,15.3,8.6,28.6,21.3,35.4c3.2,1.7,5.8,3.1,8.7,4.6h500c2.9-1.6,5.5-2.9,8.7-4.6c12.7-6.7,21.3-20,21.3-35.4c0-17.1,0-17.1,0-120
+	C960,587.5,852.5,480,720,480z M1200,560c-88.4,0-160,71.6-160,160c0,96,0,96,0,120c0,22.1,17.9,40,40,40c23.5,0,24,0,114.2,0
+	c1.9,0,3.8,0,5.8,0c4.4,0,5.9,0,5.8,0c76.2,0,83.2,0,114.2,0c22.1,0,40-17.9,40-40c0-24,0-24,0-120C1360,631.6,1288.4,560,1200,560z
+	 M160,480c88.4,0,160-71.6,160-160c0-88.4-71.6-160-160-160S0,231.6,0,320C0,408.4,71.6,480,160,480z M160,560
+	C71.6,560,0,631.6,0,720c0,96,0,96,0,120c0,22.1,17.9,40,40,40c23.5,0,24,0,114.2,0c1.9,0,3.8,0,5.8,0c4.4,0,5.9,0,5.8,0
+	c76.2,0,83.2,0,114.2,0c22.1,0,40-17.9,40-40c0-24,0-24,0-120C320,631.6,248.4,560,160,560z"/>
 </svg>

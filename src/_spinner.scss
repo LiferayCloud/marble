@@ -86,7 +86,7 @@
 }
 
 .spinner-done:not(:required):before {
-	content: "\E01A";
+	content: "\E01B";
 	background: $brand-success;
 	border-color: $brand-success;
 	animation: none;

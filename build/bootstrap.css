@@ -6956,7 +6956,7 @@ button.close {
   animation: rotate-360 .6s linear infinite; }
 
 .spinner-done:not(:required):before {
-  content: "\E01A";
+  content: "\E01B";
   background: #00d46a;
   border-color: #00d46a;
   animation: none; }

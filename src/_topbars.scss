@@ -94,11 +94,10 @@
 		@include anim(all);
 		background: rgba(white, .3);
 		color: white;
-		font-weight: 400;
+		font-weight: 600;
 		height: 36px;
 		padding-left: 60px;
 		text-overflow: ellipsis;
-		font-family: $font-family-secondary-semibold;
 		font-size: 14px;
 
 		&:focus {
@@ -115,6 +114,11 @@
 	::-webkit-input-placeholder {
 		color: white;
 	}
+}
+
+.topbar-spacebetween .topbar-input .form-control {
+	font-weight: 400;
+	font-family: $font-family-secondary-semibold;
 }
 
 .topbar-list {

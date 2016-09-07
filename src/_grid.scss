@@ -23,17 +23,9 @@
 	padding-right: $grid-margin-width;
 }
 
-.container-hybrid-2 {
+.container-hybrid-half {
 	width: calc(100% - 40px);
 	max-width: 648px;
 	padding: 0 20px;
 	margin: 0 auto;
-}
-
-.container-hybrid {
-	.container-hybrid-2 {
-		@media (max-width: $screen-sm-min) {
-			padding: 0;
-		}
-	}
 }

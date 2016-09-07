@@ -3855,7 +3855,8 @@ tbody.collapse.in {
   font-size: 14px;
   padding: 10px 40px;
   text-decoration: none;
-  width: 100%; }
+  width: 100%;
+  white-space: nowrap; }
   .dropdown-menu li a:hover, .dropdown-menu li a:focus,
   .dropdown-menu li button:hover,
   .dropdown-menu li button:focus {

@@ -2280,6 +2280,16 @@ pre {
   padding-left: 20px;
   padding-right: 20px; }
 
+.container-hybrid-2 {
+  width: calc(100% - 40px);
+  max-width: 648px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+@media (max-width: 600px) {
+  .container-hybrid .container-hybrid-2 {
+    padding: 0; } }
+
 table {
   background-color: transparent; }
 

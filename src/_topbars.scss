@@ -10,6 +10,19 @@
 	padding: 12px 20px;
 	width: 100%;
 	display: flex;
+
+	&.topbar-spacebetween {
+		justify-content: space-between;
+
+		.topbar-right {
+			display: flex;
+			flex-direction: row;
+
+			.input-inner-addon {
+				min-width: 310px;
+			}
+		}
+	}
 }
 
 .topbar.topbar-large {
@@ -81,11 +94,12 @@
 		@include anim(all);
 		background: rgba(white, .3);
 		color: white;
-		font-weight: 600;
+		font-weight: 400;
 		height: 36px;
 		padding-left: 60px;
 		text-overflow: ellipsis;
-		font-size: 1.4rem;
+		font-family: $font-family-secondary-semibold;
+		font-size: 14px;
 
 		&:focus {
 			background: white;
@@ -114,6 +128,10 @@
 	padding: 0;
 	height: 36px;
 	max-width: 300px;
+}
+
+.topbar-spacebetween .topbar-list {
+	float: none;
 }
 
 .topbar-large .topbar-list {

@@ -7056,6 +7056,60 @@ button.close {
   to {
     transform: rotate(-360deg); } }
 
+.datatable {
+  overflow-x: auto; }
+  .datatable .table {
+    margin: 0;
+    table-layout: fixed;
+    border: 0px solid #fff; }
+    .datatable .table tr {
+      height: 36px; }
+      .datatable .table tr th,
+      .datatable .table tr td {
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+        min-width: 160px;
+        padding: 0 20px;
+        letter-spacing: -0.5px; }
+      .datatable .table tr th {
+        font-weight: 700;
+        color: #00d46a;
+        line-height: 34px;
+        text-transform: none; }
+      .datatable .table tr th:nth-child(odd) {
+        background: rgba(0, 212, 106, 0.05); }
+      .datatable .table tr th:nth-child(even) {
+        background: rgba(0, 212, 106, 0.1); }
+    .datatable .table tr:nth-child(odd) {
+      background: rgba(14, 20, 26, 0.02); }
+    .datatable .table tr:nth-child(even) {
+      background: rgba(14, 20, 26, 0.04); }
+  .datatable .datatable-type {
+    margin-left: 8px;
+    font-size: 10px;
+    color: rgba(14, 20, 26, 0.4);
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .datatable .datatable-type::first-letter {
+    text-transform: uppercase; }
+  .datatable .datatable-string,
+  .datatable .datatable-number,
+  .datatable .datatable-boolean,
+  .datatable .datatable-object,
+  .datatable .datatable-array {
+    font-weight: 500;
+    color: rgba(14, 20, 26, 0.6); }
+  .datatable .datatable-undefined,
+  .datatable .datatable-null {
+    font-weight: 500;
+    color: rgba(14, 20, 26, 0.2); }
+
 .modal-open {
   overflow: hidden; }
 

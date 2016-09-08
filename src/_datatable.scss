@@ -1,0 +1,84 @@
+
+.datatable {
+	overflow-x: auto;
+
+	.table {
+		margin: 0;
+		table-layout: fixed;
+		border: 0px solid #fff;
+
+		tr {
+			height: 36px;
+
+			th,
+			td {
+				font-family: 'Roboto Mono', sans-serif;
+				font-size: 13px;
+
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+
+				vertical-align: middle;
+
+				min-width: 160px;
+				padding: 0 20px;
+				letter-spacing: -0.5px;
+			}
+
+			th {
+				font-weight: 700;
+				color: $accent;
+				line-height: 34px;
+				text-transform: none;
+			}
+
+			th:nth-child(odd) {
+				background: rgba($accent, 0.05);
+			}
+
+			th:nth-child(even) {
+				background: rgba($accent, 0.1);
+			}
+		}
+
+		tr:nth-child(odd) {
+			background: rgba($primary, 0.02);
+		}
+
+		tr:nth-child(even) {
+			background: rgba($primary, 0.04);
+		}
+	}
+
+	.datatable-type {
+		margin-left: 8px;
+		font-size: 10px;
+		color: rgba($primary, 0.4);
+		text-transform: capitalize;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.datatable-type::first-letter {
+		text-transform: uppercase;
+	}
+
+	.datatable-string,
+	.datatable-number,
+	.datatable-boolean,
+	.datatable-object,
+	.datatable-array {
+		font-weight: 500;
+		color: rgba($primary, 0.6);
+	}
+
+	.datatable-undefined,
+	.datatable-null {
+		font-weight: 500;
+		color: rgba($primary, 0.2);
+	}
+}
+

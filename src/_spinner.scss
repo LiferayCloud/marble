@@ -86,7 +86,7 @@
 }
 
 .spinner-done:not(:required):before {
-	content: "\E01B";
+	content: "\E01A";
 	background: $brand-success;
 	border-color: $brand-success;
 	animation: none;
@@ -147,7 +147,7 @@
 	font-size: 16px;
 	font-family: 'icon-16';
 	line-height: 24px;
-	content: "\E056";
+	content: "\E05F";
 	background: rgba($white, 0);
 	border: 0px solid $white;
 	width: 24px;

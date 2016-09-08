@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+<path id="table" d="M800,0H160C71.6,0,0,71.6,0,160v640c0,88.4,71.6,160,160,160h640c88.4,0,160-71.6,160-160V160
+	C960,71.6,888.4,0,800,0z M720,160c44.2,0,80,35.8,80,80v160H560V160H720z M240,160h160v240H160V240C160,195.8,195.8,160,240,160z
+	 M240,800c-44.2,0-80-35.8-80-80V560h240v240H240z M720,800H560V560h240v160C800,764.2,764.2,800,720,800z"/>
+</svg>

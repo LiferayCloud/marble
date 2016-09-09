@@ -260,5 +260,38 @@
 			</li>
 		</ul>
 	</nav>
+
+	<h1>Topbar Primary with Search right</h1>
+
+	<nav class="topbar topbar-primary topbar-spacebetween">
+		<div class="topbar-logo">
+			<a class="topbar-logo-link" href="#">
+				<span class="wedeploy-logo">
+					<span class="we">We</span>
+					<span class="deploy">Deploy™</span>
+					<span class="liferay">by Liferay</span>
+				</span>
+			</a>
+		</div>
+
+		<div class="topbar-right">
+			<form class="topbar-input" action="http://liferay.io/docs/search/" method="GET" enctype="multipart/form-data">
+				<div class="input-inner-addon input-inner-addon-right">
+					<input name="q" class="form-control" type="text" placeholder="Search on Docs" autocomplete="off" required>
+					<span class="input-inner-icon-helper icon-16-magnifier"></span>
+				</div>
+			</form>
+			<ul class="topbar-list">
+				<li class="topbar-item topbar-avatar">
+					<button class="topbar-link btn-transparent">
+						<span class="avatar-container avatar-medium" alt="Zeno Rocha">
+							<span class="avatar-initials avatar-medium">Z</span>
+						</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+
+	</nav>
 </body>
 </html>

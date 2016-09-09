@@ -190,6 +190,24 @@
 	.topbar-link {
 		height: 36px;
 	}
+
+	.dropdown-menu {
+		border-top: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		margin: 12px 0 0 -102px;
+	}
+
+	.avatar-photo {
+		overflow: hidden;
+		img {
+			width: 38px;
+			height: 38px;
+			position: relative;
+			top: -1px;
+		}
+	}
+
 }
 
 .topbar-avatar .avatar-container {
@@ -287,6 +305,32 @@
 }
 
 .topbar .form-control::-moz-placeholder {
-    color: rgba($white, 0.8);
-    opacity: 1;
+	color: rgba($white, 0.8);
+	opacity: 1;
 }
+
+/* Topbar input disabled
+	 ========================================================================== */
+
+.topbar .topbar-input.disabled ::-webkit-input-placeholder {
+	color: rgba($white, .4);
+}
+.topbar .topbar-input.disabled :-moz-placeholder {
+	color: rgba($white, .4);
+}
+.topbar .topbar-input.disabled ::-moz-placeholder {
+	color: rgba($white, .4);
+}
+.topbar .topbar-input.disabled :-ms-input-placeholder {
+	color: rgba($white, .4);
+}
+
+.topbar .topbar-input.disabled {
+	.form-control {
+		background: rgba(255, 255, 255, 0.1);
+	}
+	.input-inner-icon-helper {
+		color: rgba($white, .4);
+	}
+}
+

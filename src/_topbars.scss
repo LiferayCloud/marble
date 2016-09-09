@@ -182,7 +182,7 @@
 	padding-bottom: 5px;
 }
 
-.topbar-avatar {
+.topbar .topbar-avatar {
 	margin-left: 20px;
 	position: relative;
 	height: 36px;
@@ -198,7 +198,7 @@
 		margin: 12px 0 0 -102px;
 	}
 
-	.avatar-photo {
+	.avatar-photo.avatar-medium {
 		overflow: hidden;
 		img {
 			width: 38px;

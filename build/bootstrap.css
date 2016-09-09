@@ -6445,20 +6445,20 @@ button.close {
   color: #fff;
   padding-bottom: 5px; }
 
-.topbar-avatar {
+.topbar .topbar-avatar {
   margin-left: 20px;
   position: relative;
   height: 36px; }
-  .topbar-avatar .topbar-link {
+  .topbar .topbar-avatar .topbar-link {
     height: 36px; }
-  .topbar-avatar .dropdown-menu {
+  .topbar .topbar-avatar .dropdown-menu {
     border-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin: 12px 0 0 -102px; }
-  .topbar-avatar .avatar-photo {
+  .topbar .topbar-avatar .avatar-photo.avatar-medium, .topbar .topbar-avatar .avatar-photo.avatar-medium img.avatar-photo, .avatar-photo.avatar-medium .topbar .topbar-avatar img.avatar-photo {
     overflow: hidden; }
-    .topbar-avatar .avatar-photo img {
+    .topbar .topbar-avatar .avatar-photo.avatar-medium img, .avatar-photo.avatar-medium .topbar .topbar-avatar img.avatar-photo img {
       width: 38px;
       height: 38px;
       position: relative;

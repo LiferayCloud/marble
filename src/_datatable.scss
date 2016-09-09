@@ -43,11 +43,11 @@
 		}
 
 		tr:nth-child(odd) {
-			background: rgba($primary, 0.02);
+			background: rgba($primary, 0.00);
 		}
 
 		tr:nth-child(even) {
-			background: rgba($primary, 0.04);
+			background: rgba($primary, 0.02);
 		}
 	}
 

@@ -6457,7 +6457,7 @@ button.close {
     border-top-right-radius: 0;
     margin: 12px 0 0 -102px; }
   .topbar .topbar-avatar .avatar-photo.avatar-medium, .topbar .topbar-avatar .avatar-photo.avatar-medium img.avatar-photo, .avatar-photo.avatar-medium .topbar .topbar-avatar img.avatar-photo {
-    overflow: hidden; }
+    overflow: visible; }
     .topbar .topbar-avatar .avatar-photo.avatar-medium img, .avatar-photo.avatar-medium .topbar .topbar-avatar img.avatar-photo img {
       width: 38px;
       height: 38px;

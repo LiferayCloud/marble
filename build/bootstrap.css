@@ -3905,23 +3905,23 @@ tbody.collapse.in {
     .dropdown-icon .dropdown-menu li button:focus span {
       color: #00d46a; }
 
-.dropdown-logs .icon {
+.dropdown.dropdown-logs .icon {
   line-height: 34px;
   margin-right: 20px;
   display: inline-block;
   position: relative;
   top: 2px; }
 
-.dropdown-logs .icon-red {
+.dropdown.dropdown-logs .icon-red {
   color: #ff4040; }
 
-.dropdown-logs .icon-orange {
+.dropdown.dropdown-logs .icon-orange {
   color: #ff6e00; }
 
-.dropdown-logs .icon-yellow {
+.dropdown.dropdown-logs .icon-yellow {
   color: #ffb700; }
 
-.dropdown-logs .icon-primary {
+.dropdown.dropdown-logs .icon-primary {
   color: rgba(14, 20, 26, 0.8); }
 
 .btn-group,

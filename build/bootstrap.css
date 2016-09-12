@@ -6048,6 +6048,25 @@ button.close {
   height: 100%;
   overflow-y: auto; }
 
+.sidebar-list-header {
+  margin: 36px 20px; }
+  .sidebar-list-header .sidebar-list-header-title {
+    color: rgba(14, 20, 26, 0.8);
+    font-size: 19px;
+    font-family: "Galano Bold", sans-serif;
+    line-height: 36px;
+    padding: 0;
+    margin: 0; }
+  .sidebar-list-header .sidebar-list-header-subtitle {
+    color: rgba(14, 20, 26, 0.4);
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -5px; }
+
 .sidebar-item {
   display: block; }
   .sidebar-item:last-child {

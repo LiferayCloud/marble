@@ -41,6 +41,8 @@ $container-tablet: $screen-sm - $grid-margin-width;
 $container-desktop: $screen-md - $grid-margin-width;
 $container-large-desktop: $screen-lg;
 
+$sidebar-width: 260px;
+
 // Scaffolding
 
 $body-bg: $white;

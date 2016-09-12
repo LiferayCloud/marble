@@ -277,16 +277,16 @@
 	.sidebar {
 		position: fixed;
 		height: 100vh;
-		width: 284px;
+		width: $sidebar-width;
 	}
 
 	.sidebar-offset {
-		margin-left: 284px;
+		margin-left: $sidebar-width;
 		padding-top: 0;
-		width: calc(100% - 284px);
+		width: calc(100% - #{$sidebar-width});
 
 		.container {
-			width: $screen-md-min - 284px;
+			width: $screen-md-min - $sidebar-width;
 		}
 	}
 
@@ -310,7 +310,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: $screen-lg-min - 284px;
+			width: $screen-lg-min - $sidebar-width;
 			padding-left: 0px;
 			padding-right: 0px;
 		}
@@ -332,7 +332,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: calc(1440px - 284px);
+			width: calc(1440px - #{$sidebar-width});
 			padding-left: 0px;
 			padding-right: 0px;
 		}
@@ -343,7 +343,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: $screen-lg-min;// - 284px;
+			width: $screen-lg-min;
 			padding-left: 0px;
 			padding-right: 0px;
 		}

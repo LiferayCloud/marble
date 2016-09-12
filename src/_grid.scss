@@ -38,3 +38,12 @@
 	flex-wrap: nowrap;
 	align-items: center;
 }
+
+.col-flex-row-spacebetween-center {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-content: center;
+	flex-wrap: nowrap;
+	align-items: center;
+}

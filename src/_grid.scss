@@ -29,3 +29,12 @@
 	padding: 0 20px;
 	margin: 0 auto;
 }
+
+.col-flex-row-left-center {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	align-content: center;
+	flex-wrap: nowrap;
+	align-items: center;
+}

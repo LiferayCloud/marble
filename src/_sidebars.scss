@@ -41,6 +41,7 @@
 	}
 
 	.sidebar-list-header-subtitle {
+		@include anim(color);
 		color: rgba($primary, .4);
 		font-size: 14px;
 		font-family: $font-family-sans-serif;
@@ -50,6 +51,10 @@
 
 		position:relative;
 		top: -5px;
+
+		&:hover {
+			color: $accent;
+		}
 	}
 }
 

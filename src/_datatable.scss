@@ -1,10 +1,11 @@
 
 .datatable {
 	overflow-x: auto;
+	width: 100%;
 
 	.table {
 		margin: 0;
-		table-layout: fixed;
+		table-layout: auto;
 		border: 0px solid #fff;
 
 		tr {
@@ -21,7 +22,8 @@
 
 				vertical-align: middle;
 
-				min-width: 160px;
+				min-width: 140px;
+				max-width: 280px;
 				padding: 0 20px;
 				letter-spacing: -0.5px;
 			}

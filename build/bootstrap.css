@@ -7148,10 +7148,11 @@ button.close {
     transform: rotate(-360deg); } }
 
 .datatable {
-  overflow-x: auto; }
+  overflow-x: auto;
+  width: 100%; }
   .datatable .table {
     margin: 0;
-    table-layout: fixed;
+    table-layout: auto;
     border: 0px solid #fff; }
     .datatable .table tr {
       height: 36px; }
@@ -7163,7 +7164,8 @@ button.close {
         text-overflow: ellipsis;
         white-space: nowrap;
         vertical-align: middle;
-        min-width: 160px;
+        min-width: 140px;
+        max-width: 280px;
         padding: 0 20px;
         letter-spacing: -0.5px; }
       .datatable .table tr th {
@@ -7176,9 +7178,9 @@ button.close {
       .datatable .table tr th:nth-child(even) {
         background: rgba(0, 212, 106, 0.1); }
     .datatable .table tr:nth-child(odd) {
-      background: rgba(14, 20, 26, 0.02); }
+      background: rgba(14, 20, 26, 0); }
     .datatable .table tr:nth-child(even) {
-      background: rgba(14, 20, 26, 0.04); }
+      background: rgba(14, 20, 26, 0.02); }
   .datatable .datatable-type {
     margin-left: 8px;
     font-size: 10px;

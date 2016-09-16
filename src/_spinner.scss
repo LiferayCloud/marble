@@ -86,7 +86,7 @@
 }
 
 .spinner-done:not(:required):before {
-	content: "\E01A";
+	content: "\E018";
 	background: $brand-success;
 	border-color: $brand-success;
 	animation: none;
@@ -147,13 +147,13 @@
 	font-size: 16px;
 	font-family: 'icon-16';
 	line-height: 24px;
-	content: "\E05F";
+	content: "\E060";
 	background: rgba($white, 0);
 	border: 0px solid $white;
 	width: 24px;
 	height: 24px;
 	padding: 0;
-	animation: rotate-360-inverse 1s linear infinite;
+	animation: rotate-360 1s linear infinite;
 }
 
 .label .spinner,

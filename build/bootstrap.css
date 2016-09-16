@@ -3623,10 +3623,11 @@ input[type="button"].btn-block {
   height: 48px;
   width: 48px; }
   .btn-icon:hover, .btn-icon:focus, .btn-icon.focus {
-    background: rgba(0, 212, 106, 0.2); }
+    color: #00d46a;
+    background: rgba(0, 212, 106, 0.1); }
   .btn-icon:focus, .btn-icon.focus, .btn-icon:active:focus, .btn-icon:active.focus, .btn-icon.active:focus, .btn-icon.active.focus {
     color: #00d46a;
-    background: rgba(0, 212, 106, 0.2);
+    background: rgba(0, 212, 106, 0.1);
     outline: none; }
 
 .topbar .wedeploy-logo .we {

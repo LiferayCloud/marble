@@ -208,7 +208,7 @@
 // Icon
 
 .btn-icon {
-	@include anim(background);
+	@include anim(all);
 	background: none;
 	border: 0;
 	border-radius: 50%;

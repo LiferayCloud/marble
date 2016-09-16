@@ -47,3 +47,12 @@
 	flex-wrap: nowrap;
 	align-items: center;
 }
+
+.col-flex-row-spacebetween-start {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-content: flex-start;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}

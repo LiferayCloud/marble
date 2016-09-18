@@ -6301,13 +6301,13 @@ button.close {
   .sidebar {
     position: fixed;
     height: 100vh;
-    width: 200px; }
+    width: 240px; }
   .sidebar-offset {
-    margin-left: 200px;
+    margin-left: 240px;
     padding-top: 0;
-    width: calc(100% - 200px); }
+    width: calc(100% - 240px); }
     .sidebar-offset .container {
-      width: 760px; }
+      width: 720px; }
   .sidebar-header {
     display: none; }
   .toggler-collapsed {
@@ -6320,7 +6320,7 @@ button.close {
 @media (min-width: 1280px) {
   .sidebar-offset .container,
   .sidebar-offset .container-hybrid {
-    width: 1080px;
+    width: 1040px;
     padding-left: 0px;
     padding-right: 0px; } }
 
@@ -6334,7 +6334,7 @@ button.close {
 @media (min-width: 1600px) {
   .sidebar-offset .container,
   .sidebar-offset .container-hybrid {
-    width: calc(1440px - 200px);
+    width: calc(1440px - 240px);
     padding-left: 0px;
     padding-right: 0px; } }
 

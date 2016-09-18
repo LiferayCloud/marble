@@ -36,43 +36,43 @@
   content: "\E004";
 }
 
-.icon-12-arrow-left-rod:before {
+.icon-12-arrow-increase:before {
   content: "\E005";
 }
 
-.icon-12-arrow-left-short:before {
+.icon-12-arrow-left-rod:before {
   content: "\E006";
 }
 
-.icon-12-arrow-right-long:before {
+.icon-12-arrow-left-short:before {
   content: "\E007";
 }
 
-.icon-12-arrow-right-rod:before {
+.icon-12-arrow-right-long:before {
   content: "\E008";
 }
 
-.icon-12-arrow-right-short:before {
+.icon-12-arrow-right-rod:before {
   content: "\E009";
 }
 
-.icon-12-arrow-up-rod:before {
+.icon-12-arrow-right-short:before {
   content: "\E00A";
 }
 
-.icon-12-arrow-up-short:before {
+.icon-12-arrow-up-rod:before {
   content: "\E00B";
 }
 
-.icon-12-arrows:before {
+.icon-12-arrow-up-short:before {
   content: "\E00C";
 }
 
-.icon-12-balloon-comments-inline:before {
+.icon-12-arrows-expand:before {
   content: "\E00D";
 }
 
-.icon-12-balloon-comments:before {
+.icon-12-arrows:before {
   content: "\E00E";
 }
 
@@ -276,7 +276,7 @@
   content: "\E040";
 }
 
-.icon-12-network:before {
+.icon-12-overlap:before {
   content: "\E041";
 }
 

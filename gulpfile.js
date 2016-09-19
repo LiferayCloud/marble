@@ -81,12 +81,7 @@ gulp.task('minify', function() {
 });
 
 gulp.task('clean', function () {
-  return del([
-    'build/fonts/galano/galano.css',
-    'build/fonts/icon-12/icon-12.css',
-    'build/fonts/icon-16/icon-16.css',
-    'build/bootstrap.css',
-  ]);
+  return del(['build/bootstrap.css']);
 });
 
 gulp.task('optimize', function(callback) {

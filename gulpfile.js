@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
@@ -73,6 +74,12 @@ gulp.task('concat', function() {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('minify', function() {
+  return gulp.src('build/westyle.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('build'));
+});
+
 gulp.task('clean', function () {
   return del([
     'build/icon-12.css',
@@ -82,5 +89,5 @@ gulp.task('clean', function () {
 });
 
 gulp.task('optimize', function(callback) {
-  runSequence('concat', 'clean', callback);
+  runSequence('concat', 'minify', 'clean', callback);
 });

@@ -6,6 +6,7 @@
     "bootstrap-sass": "^3.3.6",
     "del": "^2.2.2",
     "gulp": "^3.9.0",
+    "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",

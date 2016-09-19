@@ -1,14 +1,15 @@
 {
-	"private": true,
-	"name": "westyle",
-	"version": "2.1.0",
-	"dependencies": {
-		"bootstrap-sass": "^3.3.6"
-	},
-	"devDependencies": {
-		"gulp": "^3.9.0",
-		"gulp-iconfont": "^2.0.0",
-		"gulp-iconfont-css": "0.0.9",
-		"gulp-sass": "^2.3.1"
-	}
+  "private": true,
+  "name": "westyle",
+  "version": "2.1.0",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-iconfont": "^2.0.0",
+    "gulp-iconfont-css": "0.0.9",
+    "gulp-sass": "^2.3.1",
+    "run-sequence": "^1.2.2"
+  }
 }

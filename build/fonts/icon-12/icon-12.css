@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icon-12";
-  src: url('fonts/icon-12/icon-12.eot');
-  src: url('fonts/icon-12/icon-12.eot?#iefix') format('eot'),
-    url('fonts/icon-12/icon-12.woff') format('woff'),
-    url('fonts/icon-12/icon-12.ttf') format('truetype'),
-    url('fonts/icon-12/icon-12.svg#icon-12') format('svg');
+  src: url('./icon-12.eot');
+  src: url('./icon-12.eot?#iefix') format('eot'),
+    url('./icon-12.woff') format('woff'),
+    url('./icon-12.ttf') format('truetype'),
+    url('./icon-12.svg#icon-12') format('svg');
 }
 
 [class^="icon-12-"], [class*="icon-12-"] {

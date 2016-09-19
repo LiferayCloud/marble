@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icon-16";
-  src: url('fonts/icon-16/icon-16.eot');
-  src: url('fonts/icon-16/icon-16.eot?#iefix') format('eot'),
-    url('fonts/icon-16/icon-16.woff') format('woff'),
-    url('fonts/icon-16/icon-16.ttf') format('truetype'),
-    url('fonts/icon-16/icon-16.svg#icon-16') format('svg');
+  src: url('./icon-16.eot');
+  src: url('./icon-16.eot?#iefix') format('eot'),
+    url('./icon-16.woff') format('woff'),
+    url('./icon-16.ttf') format('truetype'),
+    url('./icon-16.svg#icon-16') format('svg');
 }
 
 [class^="icon-16-"], [class*="icon-16-"] {

@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "westyle",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"devDependencies": {
 		"metal-toggler": "metal/metal-toggler#master",
 		"soyutils": "~2012.12.21"

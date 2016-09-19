@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "westyle",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "del": "^2.2.2",

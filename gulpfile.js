@@ -35,7 +35,7 @@ gulp.task('font-icon-12', function() {
 			fontName: 'icon-12',
 			fontPath: 'fonts/icon-12/',
 			path: 'src/fonts/.template-12',
-			targetPath: '../../icon-12.css'
+			targetPath: 'icon-12.css'
 		}))
 		.pipe(iconfont({
 			fontName: 'icon-12',
@@ -51,7 +51,7 @@ gulp.task('font-icon-16', function() {
 			fontName: 'icon-16',
 			fontPath: 'fonts/icon-16/',
 			path: 'src/fonts/.template-16',
-			targetPath: '../../icon-16.css'
+			targetPath: 'icon-16.css'
 		}))
 		.pipe(iconfont({
 			fontName: 'icon-16',
@@ -69,7 +69,7 @@ gulp.task('font-galano', function () {
 // Optimization ----------------------------------------------------------------
 
 gulp.task('concat', function() {
-  return gulp.src('build/*.css')
+  return gulp.src('build/**/*.css')
     .pipe(concat('westyle.css'))
     .pipe(gulp.dest('build'));
 });
@@ -82,8 +82,9 @@ gulp.task('minify', function() {
 
 gulp.task('clean', function () {
   return del([
-    'build/icon-12.css',
-    'build/icon-16.css',
+    'build/fonts/galano/galano.css',
+    'build/fonts/icon-12/icon-12.css',
+    'build/fonts/icon-16/icon-16.css',
     'build/bootstrap.css',
   ]);
 });

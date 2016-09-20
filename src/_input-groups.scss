@@ -7,6 +7,11 @@
 	border: 0;
 	color: rgba($primary, .6);
 	font-size: 16px;
+
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .has-success {

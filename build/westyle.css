@@ -1491,6 +1491,14 @@ pre {
   flex-wrap: nowrap;
   align-items: center; }
 
+.col-flex-row-right-center {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center; }
+
 .col-flex-row-spacebetween-center {
   display: flex;
   justify-content: space-between;

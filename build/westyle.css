@@ -1483,6 +1483,12 @@ pre {
   padding: 0 20px;
   margin: 0 auto; }
 
+.container-hybrid-account {
+  width: calc(100% - 40px);
+  max-width: 490px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
 .col-flex-row-left-center {
   display: flex;
   justify-content: flex-start;

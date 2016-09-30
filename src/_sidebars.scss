@@ -17,6 +17,19 @@
 
 .sidebar-offset {
 	padding-top: 100px;
+
+	.container-hybrid .flex-row {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		align-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+
+		> * {
+			float: none;
+		}
+	}
 }
 
 .sidebar-list {
@@ -317,19 +330,6 @@
 
 		.container {
 			width: $screen-md-min - $sidebar-width;
-		}
-
-		.container-hybrid .flex-row {
-			display: flex;
-			justify-content: flex-start;
-			flex-direction: row;
-			align-content: center;
-			flex-wrap: wrap;
-			align-items: center;
-
-			> * {
-				float: none;
-			}
 		}
 	}
 

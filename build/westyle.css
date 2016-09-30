@@ -5519,6 +5519,15 @@ button.close {
     width: calc(100% - 240px); }
     .sidebar-offset .container {
       width: 720px; }
+    .sidebar-offset .container-hybrid .flex-row {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-content: center;
+      flex-wrap: wrap;
+      align-items: center; }
+      .sidebar-offset .container-hybrid .flex-row > * {
+        float: none; }
   .sidebar-header {
     display: none; }
   .toggler-collapsed {

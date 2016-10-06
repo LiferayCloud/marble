@@ -37,6 +37,15 @@
 	margin: 0 auto;
 }
 
+.col-flex-row-left-start {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	align-content: flex-start;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+
 .col-flex-row-left-center {
 	display: flex;
 	justify-content: flex-start;

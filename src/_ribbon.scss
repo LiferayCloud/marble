@@ -21,8 +21,8 @@
 }
 
 .ribbon-green {
-	font: $font-family-secondary;
-	font-weight: 600;
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
 	text-align: center;
 	transform: rotate(45deg);
 	position: relative;
@@ -33,6 +33,7 @@
 	background-color: $accent;
 	color: $white;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	font-size: 14px;
 }
 
 .ribbon-green:before, .ribbon-green:after {

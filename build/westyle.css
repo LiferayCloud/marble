@@ -6200,8 +6200,8 @@ button.close {
   right: 9px; }
 
 .ribbon-green {
-  font: "Galano Medium", sans-serif;
-  font-weight: 600;
+  font-family: "Galano Semibold", sans-serif;
+  font-weight: 400;
   text-align: center;
   transform: rotate(45deg);
   position: relative;
@@ -6211,7 +6211,8 @@ button.close {
   width: 120px;
   background-color: #00d46a;
   color: #fff;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  font-size: 14px; }
 
 .ribbon-green:before, .ribbon-green:after {
   content: "";

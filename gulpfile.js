@@ -16,7 +16,8 @@ gulp.task('watch', function() {
 gulp.task('bootstrap', function() {
 	return gulp.src('src/*.scss')
 		.pipe(sass({includePaths: ['node_modules']}))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('demos/build'));
 });
 
 // Fonts -----------------------------------------------------------------------
@@ -35,7 +36,8 @@ gulp.task('font-icon-12', function() {
 			normalize: true,
 			log: function() {}
 		}))
-		.pipe(gulp.dest('build/fonts/icon-12'));
+		.pipe(gulp.dest('build/fonts/icon-12'))
+		.pipe(gulp.dest('demos/build/fonts/icon-12'));
 });
 
 gulp.task('font-icon-16', function() {
@@ -50,10 +52,12 @@ gulp.task('font-icon-16', function() {
 			normalize: true,
 			log: function() {}
 		}))
-		.pipe(gulp.dest('build/fonts/icon-16'));
+		.pipe(gulp.dest('build/fonts/icon-16'))
+		.pipe(gulp.dest('demos/build/fonts/icon-16'));
 });
 
 gulp.task('font-galano', function () {
 	return gulp.src(['src/fonts/galano/*'])
-		.pipe(gulp.dest('build/fonts/galano'));
+		.pipe(gulp.dest('build/fonts/galano'))
+		.pipe(gulp.dest('demos/build/fonts/galano'));
 });

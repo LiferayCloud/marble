@@ -1,7 +1,7 @@
 /* RIBBON
 	 ========================================================================== */
 
-.ribbon {
+.ribbon-container {
 	width: 85px;
 	height: 88px;
 	overflow: hidden;
@@ -10,17 +10,7 @@
 	right: 9px;
 }
 
-.ribbon-container {
-	top: 18px;
-	right: 9px;
-}
-
-.ribbon-project-list {
-	top: -3px;
-	right: 9px;
-}
-
-.ribbon-green {
+.ribbon {
 	font-family: $font-family-secondary-semibold;
 	font-weight: 400;
 	text-align: center;
@@ -30,13 +20,25 @@
 	left: -5px;
 	top: 15px;
 	width: 120px;
-	background-color: $accent;
 	color: $white;
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+	background-color: rgba($primary, 0.8);
+	box-shadow: 0px 0px 3px rgba($primary, 0.3);
 	font-size: 14px;
 }
 
-.ribbon-green:before, .ribbon-green:after {
+.ribbon.ribbon-accent {
+	background-color: $accent;
+}
+
+.ribbon.ribbon-warning {
+	background-color: $brand-warning;
+}
+
+.ribbon.ribbon-danger {
+	background-color: $brand-danger;
+}
+
+.ribbon:before, .ribbon:after {
 	content: "";
 	border-top:   3px solid #6e8900;
 	border-left:  3px solid transparent;
@@ -45,9 +47,10 @@
 	bottom: -3px;
 }
 
-.ribbon-green:before {
+.ribbon:before {
 	left: 0;
 }
-.ribbon-green:after {
+
+.ribbon:after {
 	right: 0;
 }

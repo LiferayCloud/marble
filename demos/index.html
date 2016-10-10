@@ -26,6 +26,21 @@
 
 		.section-labels .label {
 			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+
+		.box {
+			height: 200px;
+			border-radius: 4px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+			display: block;
+			padding: 0;
+			position: relative;
+		}
+
+		.box .ribbon-container {
+			top: -5px;
+			right: -4px;
 		}
 
 	</style>
@@ -865,6 +880,55 @@
 			</div>
 
 		</div><!-- end labels -->
+
+		<!-- labels -->
+		<div class="row section-labels">
+
+			<div class="col-xs-16">
+				<h3 class="content-body-title ws-demo">Ribbon</h3>
+			</div>
+
+			<div class="col-xs-16 col-sm-8 col-md-4">
+				<h4 class="content-body-subtitle">Default</h4>
+
+				<div class="box">
+					<div class="ribbon-container">
+						<div class="ribbon">New</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-16 col-md-4">
+				<h4 class="content-body-subtitle">Accent</h4>
+
+				<div class="box">
+					<div class="ribbon-container">
+						<div class="ribbon ribbon-accent">New</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-16 col-md-4">
+				<h4 class="content-body-subtitle">Warning</h4>
+
+				<div class="box">
+					<div class="ribbon-container">
+						<div class="ribbon ribbon-warning">New</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-16 col-md-4">
+				<h4 class="content-body-subtitle">Danger</h4>
+
+				<div class="box">
+					<div class="ribbon-container">
+						<div class="ribbon ribbon-danger">New</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 
 	</div><!-- end content-body -->
 

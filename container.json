@@ -1,0 +1,7 @@
+{
+	"id": "demos",
+	"type": "wedeploy/hosting:latest",
+	"env": {
+		"WEDEPLOY_WEB_PATH": "/demos/"
+	}
+}

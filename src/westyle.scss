@@ -48,6 +48,11 @@
 @import "spinner";
 @import "datatable";
 
+//Custom components
+@import "content-body";
+@import "content-footer";
+@import "content-header";
+
 // Components w/ JavaScript
 @import "modals";
 @import "tooltip";
@@ -58,3 +63,10 @@
 // Utility classes
 @import "bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+.truncate {
+	white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+}
+

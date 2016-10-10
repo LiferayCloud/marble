@@ -14,26 +14,195 @@
 			padding: 50px 0;
 		}
 
+		.avatar-initials,
+		.avatar-number,
+		.avatar-icon,
+		.avatar-icon-16,
+		.avatar-icon-12,
+		.avatar-container {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
 	</style>
 
 </head>
 <body>
 
-	<div class="container-hybrid">
+<div class="container-hybrid">
 
+	<!-- header -->
+	<div class="row">
+		<div class="content-header">
+			<div class="header-title">
+				WeStyle Styleguide
+			</div>
+		</div>
+	</div>
+
+	<div class="content-body">
+		<!-- alerts -->
 		<div class="row">
-
-			<div class="col-xs-4">
-				<a href="alerts.html" class="btn btn-accent btn-block">Alerts</a>
+			<div class="col-xs-16">
+				<h3 class="content-body-title">Alerts</h3>
 			</div>
-
-			<div class="col-xs-4">
-				<a href="avatars.html" class="btn btn-accent btn-block">Avatars</a>
+			<div class="col-xs-16">
+				<a href="alerts.html" class="btn btn-accent">Show Alerts</a>
 			</div>
-
 		</div>
 
-	</div>
+		<!-- avatars -->
+		<div class="row">
+
+			<div class="col-xs-16">
+				<h3 class="content-body-title ws-demo">Avatars</h3>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Icon Fonts</h4>
+
+				<a class="avatar-icon-16 avatar-large" href="#" style="background: #9552ef;">
+					<span class="icon-16-heart" style="color: white;"></span>
+				</a>
+
+				<a class="avatar-icon-12 avatar-large" href="#" style="background: #647efb;">
+					<span class="icon-12-link" style="color: white;"></span>
+				</a>
+
+				<a class="avatar-icon-16 avatar-medium" href="#" style="background: #c25daa;">
+					<span class="icon-16-bell" style="color: white;"></span>
+				</a>
+
+				<a class="avatar-icon-12 avatar-medium" href="#" style="background: #ff7175">
+					<span class="icon-12-star" style="color: white;"></span>
+				</a>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Icon SVG</h4>
+
+				<a class="avatar-icon avatar-xlarge" href="#" style="background: #647efb;">
+					<img src="back.svg" alt="Back Icon">
+				</a>
+
+				<a class="avatar-icon avatar-large" href="#" style="background: #647efb;">
+					<img src="back.svg" alt="Back Icon">
+				</a>
+
+				<a class="avatar-icon avatar-medium" href="#" style="background: #647efb;">
+					<img src="back.svg" alt="Back Icon">
+				</a>
+
+				<a class="avatar-icon avatar-small" href="#" style="background: #647efb;">
+					<img src="back.svg" alt="Back Icon">
+				</a>
+
+				<a class="avatar-icon avatar-xsmall" href="#" style="background: #647efb;">
+					<img src="back.svg" alt="Back Icon">
+				</a>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Initials</h4>
+
+				<a class="avatar-initials avatar-xlarge" href="#">a</a>
+
+				<a class="avatar-initials avatar-large" href="#">b</a>
+
+				<a class="avatar-initials avatar-medium" href="#">c</a>
+
+				<a class="avatar-initials avatar-small" href="#">d</a>
+
+				<a class="avatar-initials avatar-xsmall" href="#">e</a>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Number</h4>
+
+				<a class="avatar-number avatar-xlarge" href="#">+1</a>
+
+				<a class="avatar-number avatar-large" href="#">+1</a>
+
+				<a class="avatar-number avatar-medium" href="#">+1</a>
+
+				<a class="avatar-number avatar-small" href="#">+1</a>
+
+				<a class="avatar-number avatar-xsmall" href="#">+1</a>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Photo</h4>
+
+				<a class="avatar-photo avatar-xlarge" href="#">
+					<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Chloe Hart">
+				</a>
+
+				<a class="avatar-photo avatar-large" href="#">
+					<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Chloe Hart">
+				</a>
+
+				<a class="avatar-photo avatar-medium" href="#">
+					<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Bobbie Flores">
+				</a>
+
+				<a class="avatar-photo avatar-small" href="#">
+					<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Maureen Cruz">
+				</a>
+
+				<a class="avatar-photo avatar-xsmall" href="#">
+					<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Maureen Cruz">
+				</a>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Photo + Initials</h4>
+
+				<a class="avatar-container avatar-medium" href="#">
+					<span class="avatar-photo avatar-medium">
+						<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Eduardo Lundgren">
+					</span>
+					<span class="avatar-initials avatar-medium">
+						E
+					</span>
+				</a>
+
+				<a class="avatar-container avatar-medium" href="#">
+					<span class="avatar-photo avatar-medium">
+						<img src="http://www.gravatar.com/avatar/0?d=blank&s=100" alt="Eduardo Lundgren">
+					</span>
+					<span class="avatar-initials avatar-medium">
+						E
+					</span>
+				</a>
+			</div>
+
+			<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Squared</h4>
+
+				<a class="avatar-photo avatar-medium avatar-squared" href="#">
+					<img src="http://www.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?d=blank&s=100" alt="Chloe Hart">
+				</a>
+				<a class="avatar-icon avatar-medium avatar-squared avatar-white avatar-we" href="#">
+					<span class="icon-16-arrow-up-rod"></span>
+				</a>
+				<a class="avatar-initials avatar-medium avatar-squared avatar-white avatar-we" href="#">We</a>
+				<a class="avatar-initials avatar-medium avatar-squared avatar-success avatar-we" href="#">We</a>
+				<a class="avatar-initials avatar-medium avatar-squared avatar-primary avatar-we" href="#">We</a>
+				<a class="avatar-initials avatar-medium avatar-squared avatar-danger avatar-we" href="#">We</a>
+		</div>
+
+		<div class="col-xs-16">
+				<h4 class="content-body-subtitle">Avatar Colors</h4>
+
+				<a class="avatar-initials avatar-medium avatar-success avatar-we" href="#">We</a>
+				<a class="avatar-initials avatar-medium avatar-primary avatar-we" href="#">We</a>
+				<a class="avatar-initials avatar-medium avatar-danger avatar-we" href="#">We</a>
+				<a class="avatar-initials avatar-medium avatar-white avatar-we" href="#">We</a>
+		</div>
+
+	</div><!-- end content-body -->
+
+</div>
 
 </body>
 </html>

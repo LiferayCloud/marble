@@ -508,3 +508,48 @@
 		}
 	}
 }
+
+/* Not found
+   ========================================================================== */
+
+.notfound {
+	text-align: center;
+}
+
+.notfound-icon {
+	background: rgba($accent, .2);
+	border-radius: 50%;
+	display: block;
+	height: 120px;
+	margin: 0 auto 36px;
+	width: 120px;
+
+	@media (max-width: $screen-sm-min) {
+		height: 60px;
+		width: 60px;
+		margin: 0 auto 12px;
+	}
+}
+
+.notfound-icon span {
+	color: $accent;
+	font-size: 36px;
+	line-height: 128px;
+	position: relative;
+
+	@media (max-width: $screen-sm-min) {
+		font-size: 24px;
+		line-height: 60px;
+	}
+}
+
+.notfound-text {
+	color: rgba($primary, .8);
+	font-family: $font-family-secondary-bold;
+	font-size: 18px;
+	font-weight: 400;
+
+	@media (max-width: $screen-sm-min) {
+		font-size: 12px;
+	}
+}

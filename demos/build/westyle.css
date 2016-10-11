@@ -6444,6 +6444,48 @@ button.close {
     font-weight: 500;
     color: rgba(14, 20, 26, 0.2); }
 
+/* Loading
+	====================================================================== */
+.light-loader {
+  position: absolute;
+  z-index: 97;
+  width: 100%;
+  display: none;
+  height: 100%; }
+  .light-loader .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
+
+.loading .light-loader {
+  display: block; }
+
+/* Empty Collections
+/* Empty Data
+	====================================================================== */
+.empty-collection,
+.empty-data {
+  position: absolute;
+  z-index: 97;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: none;
+  -webkit-animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
+  animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards; }
+  .empty-collection .notfound,
+  .empty-data .notfound {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.no-collections .empty-collection {
+  display: block; }
+
+.no-data .empty-data {
+  display: block; }
+
 /* ==========================================================================
    Content Body
    ========================================================================== */
@@ -6789,6 +6831,43 @@ button.close {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; } }
+
+/* Not found
+   ========================================================================== */
+.notfound {
+  text-align: center; }
+
+.notfound-icon {
+  background: rgba(0, 212, 106, 0.2);
+  border-radius: 50%;
+  display: block;
+  height: 120px;
+  margin: 0 auto 36px;
+  width: 120px; }
+  @media (max-width: 600px) {
+    .notfound-icon {
+      height: 60px;
+      width: 60px;
+      margin: 0 auto 12px; } }
+
+.notfound-icon span {
+  color: #00d46a;
+  font-size: 36px;
+  line-height: 128px;
+  position: relative; }
+  @media (max-width: 600px) {
+    .notfound-icon span {
+      font-size: 24px;
+      line-height: 60px; } }
+
+.notfound-text {
+  color: rgba(14, 20, 26, 0.8);
+  font-family: "Galano Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 400; }
+  @media (max-width: 600px) {
+    .notfound-text {
+      font-size: 12px; } }
 
 /* Footer
    ========================================================================== */

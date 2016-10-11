@@ -32,6 +32,16 @@
 		top: 8px;
 		font-size: 18px;
 	}
+
+	.size-container {
+		color: black;
+		position: absolute;
+		left: 50%;
+		top: 8px;
+		font-size: 18px;
+		transform: translateX(-50%);
+	}
+
 	</style>
 </head>
 <body>
@@ -56,15 +66,22 @@
 		</div>
 	</div>
 
+	<span class="size-container"></span>
+
 	<span class="size"></span>
 
 	<script>
-	var size = document.querySelector('.size');
-	size.innerHTML = window.innerWidth + 'px';
-
-	window.addEventListener('resize', function(e) {
+		var size = document.querySelector('.size');
 		size.innerHTML = window.innerWidth + 'px';
-	});
+
+		var sizeContainer = document.querySelector('.size-container');
+		var containerHybrid = document.querySelector('.container-hybrid');
+		sizeContainer.innerHTML = containerHybrid.offsetWidth + 'px';
+
+		window.addEventListener('resize', function(e) {
+			size.innerHTML = window.innerWidth + 'px';
+			sizeContainer.innerHTML = containerHybrid.offsetWidth + 'px';
+		});
 	</script>
 </body>
 </html>

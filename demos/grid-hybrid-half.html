@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Demo: Grid Fixed</title>
+	<title>Demo: Grid Hybrid - Half</title>
 
 	<link rel="stylesheet" href="../build/westyle.css">
 	<style>
-	.container {
+	.container-hybrid {
 		background-color: rgba(31, 122, 255, .2);
 	}
 
@@ -45,24 +45,24 @@
 	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="container-hybrid-half">
 		<div class="row">
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
-			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
+			<div class="col-xs-16 col-sm-8"></div>
 		</div>
 	</div>
 
@@ -75,7 +75,7 @@
 		size.innerHTML = window.innerWidth + 'px';
 
 		var sizeContainer = document.querySelector('.size-container');
-		var containerHybrid = document.querySelector('.container');
+		var containerHybrid = document.querySelector('.container-hybrid-half');
 		sizeContainer.innerHTML = containerHybrid.offsetWidth + 'px';
 
 		window.addEventListener('resize', function(e) {

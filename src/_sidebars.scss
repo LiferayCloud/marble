@@ -234,6 +234,11 @@
 	padding: 0 20px;
 }
 
+.sidebar-list-1 .sidebar-settings-item .sidebar-link {
+	height: 48px;
+	line-height: 48px;
+}
+
 .sidebar-list-1 .sidebar-link:hover,
 .sidebar-list-1 .sidebar-link:focus {
 	background: rgba($accent, .1);

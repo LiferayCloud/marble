@@ -10,10 +10,10 @@
 		text-align: center;
 	}
 
-	.container-xs { width: 344px; }
-	.container-sm { width: 584px; }
-	.container-md { width: 984px; }
-	.container-lg { width: 1224px; }
+	.container-xs { max-width: 344px; }
+	.container-sm { max-width: 584px; }
+	.container-md { max-width: 984px; }
+	.container-lg { max-width: 1224px; }
 
 	[class^="col-"] {
 		background-color: rgba(31, 122, 255, .2);
@@ -24,6 +24,7 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 18px;
+		margin-bottom: 24px;
 	}
 
 	[class^="col-"]:after {
@@ -40,57 +41,57 @@
 	</style>
 </head>
 <body>
-	<h1>Small (320px)</h1>
-	<div class="container container-xs">
+	<h1>Extra Small (360px)</h1>
+	<div class="container-hybrid container-xs">
 		<div class="row">
-			<div class="col-xs-8">8</div>
-			<div class="col-xs-8">8</div>
+			<div class="col-xs-8">xs</div>
+			<div class="col-xs-8">xs</div>
 		</div>
 	</div>
 
-	<h1>Medium (560px)</h1>
-	<div class="container container-sm">
+	<h1>Small (600px)</h1>
+	<div class="container-hybrid container-sm">
 		<div class="row">
-			<div class="col-sm-4">4</div>
-			<div class="col-sm-4">4</div>
-			<div class="col-sm-4">4</div>
-			<div class="col-sm-4">4</div>
+			<div class="col-xs-8 col-sm-4">sm</div>
+			<div class="col-xs-8 col-sm-4">sm</div>
+			<div class="col-xs-8 col-sm-4">sm</div>
+			<div class="col-xs-8 col-sm-4">sm</div>
 		</div>
 	</div>
 
-	<h1>Large (960px)</h1>
-	<div class="container container-md">
+	<h1>Medium (960px)</h1>
+	<div class="container-hybrid container-md">
 		<div class="row">
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
-			<div class="col-md-2">2</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
+			<div class="col-xs-8 col-sm-4 col-md-2">md</div>
 		</div>
 	</div>
 
-	<h1>Extra Large (1200px)</h1>
-	<div class="container container-lg">
+	<h1>Large (1280px)</h1>
+	<div class="container-hybrid container-lg">
 		<div class="row">
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
-			<div class="col-lg-1">1</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
+			<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>
 		</div>
 	</div>
 </body>

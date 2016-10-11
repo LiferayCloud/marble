@@ -4,12 +4,15 @@
 	background: white;
 	border-radius: $border-radius-base;
 	box-shadow: 0 2px 8px rgba(black, .1);
-	color: rgba($primary, .6);
-	font-size: 13px;
 	max-width: 220px;
 	min-width: initial;
 	padding: 12px;
 	text-align: left;
+
+	font-size: 12px;
+	font-weight: 400;
+	font-family: $font-family-secondary-bold;
+	color: rgba($primary, 0.8);
 }
 
 .tooltip-arrow {

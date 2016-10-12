@@ -1,0 +1,99 @@
+.chart-container {
+	position: relative;
+	background-color: rgba($accent, 0.8);
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+
+	.chart__value {
+		font-family: $font-family-secondary-bold;
+		font-size: 28px;
+		color: $white;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+.pie {
+	position:absolute;
+	width:100px;
+	height:200px;
+	overflow:hidden;
+	left:150px;
+	-moz-transform-origin:left center;
+	-ms-transform-origin:left center;
+	-o-transform-origin:left center;
+	-webkit-transform-origin:left center;
+	transform-origin:left center;
+}
+.pie.big {
+	width:200px;
+	height:200px;
+	left:0px;
+	-moz-transform-origin:center center;
+	-ms-transform-origin:center center;
+	-o-transform-origin:center center;
+	-webkit-transform-origin:center center;
+	transform-origin:center center;
+}
+
+.pie:before {
+	content:"";
+	position:absolute;
+	width:100px;
+	height:200px;
+	left:-100px;
+	border-radius:100px 0 0 100px;
+	-moz-transform-origin:right center;
+	-ms-transform-origin:right center;
+	-o-transform-origin:right center;
+	-webkit-transform-origin:right center;
+	transform-origin:right center;
+}
+
+.pie.big:before {
+	left:0px;
+}
+
+.pie.big:after {
+	content:"";
+	position:absolute;
+	width:100px;
+	height:200px;
+	left:100px;
+	border-radius:0 100px 100px 0;
+}
+
+.pie:before,
+.pie:after {
+	background-color: $accent;
+}
+
+@mixin dataStart {
+	@for $i from 0 through 360 {
+		.pie[data-start="#{$i}"] {
+			-moz-transform: rotate(#{$i}deg); /* Firefox */
+			-ms-transform: rotate(#{$i}deg); /* IE */
+			-webkit-transform: rotate(#{$i}deg); /* Safari and Chrome */
+			-o-transform: rotate(#{$i}deg); /* Opera */
+			transform:rotate(#{$i}deg);
+		}
+	}
+}
+@include dataStart;
+
+@mixin dataValue {
+	@for $i from 0 through 360 {
+		.pie[data-value="#{$i}"]:before {
+			-moz-transform: rotate(#{$i}deg); /* Firefox */
+			-ms-transform: rotate(#{$i}deg); /* IE */
+			-webkit-transform: rotate(#{$i}deg); /* Safari and Chrome */
+			-o-transform: rotate(#{$i}deg); /* Opera */
+			transform:rotate(#{$i}deg);
+		}
+	}
+}
+@include dataValue;

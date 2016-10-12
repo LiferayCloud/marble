@@ -97,3 +97,11 @@ label {
 		border-color: $input-inverse-border-focus;
 	}
 }
+
+input[type="file"] {
+	padding: 22px 20px;
+	line-height: 10px;
+	font-size: 13px;
+	font-family: $font-family-secondary-semibold, sans-serif;
+	vertical-align: middle;
+}

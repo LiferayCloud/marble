@@ -2397,6 +2397,13 @@ label {
   .input-inverse-accent:focus {
     border-color: #fff; }
 
+input[type="file"] {
+  padding: 22px 20px;
+  line-height: 10px;
+  font-size: 13px;
+  font-family: "Galano Semibold", sans-serif, sans-serif;
+  vertical-align: middle; }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;

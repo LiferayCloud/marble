@@ -44,6 +44,10 @@
 .sidebar-list-header {
 	margin: 36px 20px;
 
+	img {
+		height: 32px;
+	}
+
 	.sidebar-list-header-title {
 		color: rgba($primary, .8);
 		font-size: 18px;
@@ -84,6 +88,18 @@
 	border-radius: $border-radius-large;
 	display: block;
 	text-decoration: none;
+
+	img {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+	span {
+		line-height: 24px;
+		display: inline-block;
+		position: relative;
+		top: 1px;
+	}
 }
 
 .sidebar-link:focus {

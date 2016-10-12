@@ -1,4 +1,5 @@
 // Core variables and mixins
+// Core variables and mixins
 @import "variables";
 @import "mixins";
 
@@ -49,9 +50,12 @@
 @import "datatable";
 
 //Custom components
+@import "box";
 @import "content-body";
 @import "content-footer";
 @import "content-header";
+@import "content-placeholder";
+@import "content-tabs";
 
 // Components w/ JavaScript
 @import "modals";

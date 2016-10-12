@@ -8,6 +8,7 @@
 	border-radius: 4px;
 	padding: 24px 20px;
 	margin-bottom: 24px;
+	background: $white;
 
 	@media (max-width: $screen-sm-min) {
 		padding: 12px;
@@ -326,6 +327,7 @@
 	}
 
 	.content-table-row {
+		display: block;
 		padding: 12px 20px;
 		box-shadow: 0px 2px 12px rgba($primary, 0.12);
 		border-radius: 4px;

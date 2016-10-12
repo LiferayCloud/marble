@@ -5304,6 +5304,8 @@ button.close {
 
 .sidebar-list-header {
   margin: 36px 20px; }
+  .sidebar-list-header img {
+    height: 32px; }
   .sidebar-list-header .sidebar-list-header-title {
     color: rgba(14, 20, 26, 0.8);
     font-size: 18px;
@@ -5339,6 +5341,15 @@ button.close {
   border-radius: 4px;
   display: block;
   text-decoration: none; }
+  .sidebar-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; }
+  .sidebar-link span {
+    line-height: 24px;
+    display: inline-block;
+    position: relative;
+    top: 1px; }
 
 .sidebar-link:focus {
   outline: none; }
@@ -6533,6 +6544,127 @@ button.close {
   display: block; }
 
 /* ==========================================================================
+   Box
+   ========================================================================== */
+.box {
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  background: #fff;
+  display: inline-block;
+  padding: 0 12px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  color: rgba(14, 20, 26, 0.8);
+  box-shadow: 0 2px 12px rgba(14, 20, 26, 0.12);
+  font-family: "Galano Bold", sans-serif;
+  border-radius: 4px; }
+  .box.show-custom-tooltip:hover {
+    box-shadow: 0 2px 8px rgba(14, 20, 26, 0.2); }
+  .box .bullet {
+    margin: 14px 0 0; }
+
+.box.box-img {
+  margin: 18px 8px 0 0;
+  padding: 0;
+  width: 36px;
+  text-align: center; }
+
+.box.box-label {
+  color: rgba(14, 20, 26, 0.8);
+  margin: 0;
+  padding: 0 12px;
+  width: auto;
+  text-align: center; }
+
+.box.box-icon {
+  margin: 18px 8px 0 0;
+  padding: 0; }
+  .box.box-icon span {
+    line-height: 24px;
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+    color: #00d46a; }
+
+.box.box-plus {
+  margin: 18px 8px 0 0;
+  padding: 0;
+  width: 36px;
+  text-align: center; }
+
+.box.box-disabled {
+  margin: 18px 0 0;
+  color: rgba(14, 20, 26, 0.4); }
+
+.box.box-project {
+  margin: 18px 0 0; }
+  .box.box-project span {
+    line-height: 36px;
+    color: rgba(14, 20, 26, 0.4);
+    display: inline-block;
+    float: left; }
+    .box.box-project span.icon-success {
+      color: #00d46a; }
+    .box.box-project span.icon-danger {
+      color: #ff4040; }
+    .box.box-project span.icon-warning {
+      color: #ffb700; }
+  .box.box-project span.label-status {
+    color: rgba(14, 20, 26, 0.8);
+    margin-left: 12px; }
+
+/* ==========================================================================
+   Box Small
+   ========================================================================== */
+.box.box--small {
+  height: 24px;
+  line-height: 24px; }
+  .box.box--small.box--icon-label {
+    color: rgba(14, 20, 26, 0.6);
+    margin: 12px 0 0; }
+    .box.box--small.box--icon-label span {
+      color: rgba(14, 20, 26, 0.5);
+      margin: 0 8px 0 0;
+      position: relative;
+      top: 1px; }
+      .box.box--small.box--icon-label span.up {
+        color: #00d46a; }
+      .box.box--small.box--icon-label span.down {
+        color: #ff4040; }
+      .box.box--small.box--icon-label span.warn {
+        color: #ffb700; }
+  .box.box--small .box-label {
+    margin: 12px 0 0; }
+  .box.box--small .bullet {
+    margin: 8px 0 0; }
+
+/* ==========================================================================
+   Bullet status
+   ========================================================================== */
+.bullet {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-top: 7px;
+  margin-right: 8px;
+  background: rgba(14, 20, 26, 0.6); }
+  .bullet.up {
+    background: #00d46a; }
+  .bullet.down {
+    background: #ff4040; }
+  .bullet.warn {
+    background: #ffb700; }
+
+.project-activity .bullet,
+.project-overview .bullet {
+  background: none; }
+
+/* ==========================================================================
    Content Body
    ========================================================================== */
 .content-body {
@@ -6543,6 +6675,7 @@ button.close {
   border-radius: 4px;
   padding: 24px 20px;
   margin-bottom: 24px;
+  background: #fff;
   /* Data
    ========================================================================== */
   /* Form
@@ -6759,6 +6892,7 @@ button.close {
       margin-bottom: 12px;
       display: inline-block; }
   .content-body .content-table-row {
+    display: block;
     padding: 12px 20px;
     box-shadow: 0px 2px 12px rgba(14, 20, 26, 0.12);
     border-radius: 4px;
@@ -7103,6 +7237,84 @@ button.close {
     text-align: center;
     font-size: 19px;
     line-height: 48px; } }
+
+/* ==========================================================================
+   Content Placeholder
+   ========================================================================== */
+.content-placeholder {
+  text-align: center; }
+  .content-placeholder.content-placeholder--data {
+    padding: 24px 0; }
+  .content-placeholder .content-placeholder__title {
+    color: rgba(14, 20, 26, 0.8);
+    font-family: "Galano Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 36px; }
+  .content-placeholder .content-placeholder__subtitle {
+    color: rgba(14, 20, 26, 0.6);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+    line-height: 24px;
+    position: relative;
+    top: -6px; }
+  .content-placeholder .content-placeholder__link {
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    color: #00d46a;
+    font-size: 12px;
+    font-weight: 600; }
+    .content-placeholder .content-placeholder__link:hover, .content-placeholder .content-placeholder__link:focus {
+      color: rgba(0, 212, 106, 0.8); }
+  .content-placeholder.content-placeholder--dark .content-placeholder__title {
+    color: rgba(255, 255, 255, 0.8); }
+  .content-placeholder.content-placeholder--dark .content-placeholder__subtitle {
+    color: rgba(255, 255, 255, 0.6); }
+  .content-placeholder.content-placeholder--logs {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
+
+/* ==========================================================================
+   Content Tabs
+   ========================================================================== */
+.content-tabs {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 12px 8px;
+  margin-top: -24px; }
+  @media (max-width: 960px) {
+    .content-tabs {
+      padding: 12px 0; } }
+  .content-tabs ul {
+    margin: 0;
+    padding: 0; }
+  .content-tabs li {
+    display: inline-block;
+    line-height: 36px;
+    list-style: none;
+    margin: 0 12px; }
+    @media (max-width: 960px) {
+      .content-tabs li {
+        margin: 0 24px 0 0; } }
+    .content-tabs li.content-tab-selected a {
+      color: rgba(0, 212, 106, 0.9); }
+    .content-tabs li a {
+      -webkit-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
+      color: rgba(14, 20, 26, 0.6);
+      font-family: "Galano Bold", sans-serif;
+      font-size: 15px;
+      font-weight: 400; }
+      .content-tabs li a:hover, .content-tabs li a:focus {
+        color: rgba(0, 212, 106, 0.9); }
 
 .modal-open {
   overflow: hidden; }

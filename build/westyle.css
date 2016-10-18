@@ -4576,7 +4576,7 @@ a.thumbnail.active {
   top: inherit; }
 
 .alert .close:hover {
-  color: rgba(14, 20, 26, 0.2);
+  color: rgba(14, 20, 26, 0.6);
   opacity: 1; }
 
 .alert .spinner {

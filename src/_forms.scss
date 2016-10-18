@@ -1,15 +1,25 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/forms";
 
 label {
+	font-family: $font-family-sans-serif;
 	color: rgba($primary, 0.6);
-	font-size: 14px;
-	font-weight: 400;
+	font-size: 12px;
+	font-weight: 600;
 	margin-bottom: 0;
-	line-height: 36px;
+	margin-left: 2px;
+	line-height: 24px;
+
+	position: relative;
+	top: -4px;
 }
 
 .form-group {
-	margin-bottom: 0px;
+	margin-bottom: 36px;
+
+	textarea:focus,
+	input:focus {
+		outline: none;
+	}
 }
 
 .form-control {
@@ -21,6 +31,11 @@ label {
 	font-size: 16px;
 	padding: 0 20px;
 
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
+	font-size: 14px;
+	color: rgba($primary, 0.8);
+
 	&:focus {
 		background: rgba($primary, .1);
 		box-shadow: none;
@@ -28,7 +43,8 @@ label {
 
 	&[disabled],
 	&[readonly] {
-		background: rgba($primary, .2);
+		background: rgba($primary, .02);
+		color: rgba($primary, .6);
 	}
 }
 
@@ -40,12 +56,13 @@ label {
 }
 
 .help-block {
+	font-family: $font-family-sans-serif;
 	color: rgba($secondary, .4);
-	font-size: 14px;
-	margin: 0;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-left: 2px;
 	line-height: 24px;
-	min-height: 36px;
-	padding: 6px 0;
 }
 
 .has-success,

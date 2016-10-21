@@ -60,3 +60,55 @@
 	width: 48px;
 	height: 48px;
 }
+
+/* List v - 2.0
+	 ========================================================================== */
+
+.list {
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.list.list--inline {
+	@extends .flex-container--row-left-center;
+	display: flex !important;
+}
+
+.list.list--inline .list__item {
+	display: inline-flex;
+	flex: 0 1 auto;
+	margin-right: 10px;
+}
+
+.list--children {
+	width: 100%;
+}
+
+.list.list--numeric {
+	margin: 0;
+	padding: 0 0 0 40px;
+	color: rgba($primary, .8);
+}
+.list.list--numeric li {
+	font-family: 'Open Sans Regular', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 0 40px;
+	padding: 0;
+	list-style-type: none;
+	counter-increment: list;
+	position: relative;
+}
+
+.list.list--numeric li:after {
+	content: counter(list) ".";
+	position: absolute;
+	left: -68px;
+	width: 40px;
+	text-align: right;
+	color: rgba($primary, .4);
+}
+
+

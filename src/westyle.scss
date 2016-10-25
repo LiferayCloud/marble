@@ -1,5 +1,4 @@
 // Core variables and mixins
-// Core variables and mixins
 @import "variables";
 @import "mixins";
 
@@ -48,6 +47,7 @@
 @import "ribbon";
 @import "spinner";
 @import "datatable";
+@import "input-matrix";
 
 //Custom components
 @import "box";
@@ -72,7 +72,7 @@
 
 .truncate {
 	white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 

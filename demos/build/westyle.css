@@ -6524,6 +6524,30 @@ button.close {
   top: 19px;
   z-index: 20; }
 
+.progress {
+  height: 8px;
+  background: rgba(14, 20, 26, 0.1);
+  border-radius: 4px;
+  margin: 0 0 12px;
+  box-shadow: none;
+  outline: 0; }
+  .progress .progress-bar {
+    box-shadow: none; }
+  .progress .progress-bar-success {
+    background: #00d46a; }
+  .progress .progress-bar-info {
+    background: #00a4ff; }
+  .progress .progress-bar-warning {
+    background: #ffb700; }
+  .progress .progress-bar-danger {
+    background: #ff4040; }
+  .progress .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(0, 212, 106, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 212, 106, 0.15) 50%, rgba(0, 212, 106, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px; }
+  .progress .show-tooltip {
+    cursor: pointer;
+    min-height: 8px; }
+
 /* ==========================================================================
    Box
    ========================================================================== */

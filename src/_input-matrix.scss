@@ -2,6 +2,17 @@
 	padding: 0 48px 0 20px;
 }
 
+.form-group {
+	margin-bottom: 0px;
+	.help-block {
+		min-height: 24px;
+		padding: 0;
+		color: $brand-danger;
+		font-weight: 600;
+		margin: 0 2px;
+	}
+}
+
 .input-matrix .input-matrix-fields {
 	position: relative;
 }

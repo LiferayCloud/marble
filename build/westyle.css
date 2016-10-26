@@ -6501,6 +6501,12 @@ button.close {
 .form-control.input-matrix-field {
   padding: 0 48px 0 20px; }
 
+.input-matrix .input-matrix-fields .input-matrix-fields-right {
+  position: absolute;
+  right: 20px;
+  top: 19px;
+  z-index: 20; }
+
 /* ==========================================================================
    Box
    ========================================================================== */

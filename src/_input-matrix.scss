@@ -2,6 +2,16 @@
 	padding: 0 48px 0 20px;
 }
 
+.input-matrix .input-matrix-fields {
+	position: relative;
+}
+
+.input-matrix .input-matrix-fields .input-matrix-fields-left {
+	position: relative;
+	left: 0;
+	z-index: 10;
+}
+
 .input-matrix .input-matrix-fields .input-matrix-fields-right {
 	position: absolute;
 	right: 20px;

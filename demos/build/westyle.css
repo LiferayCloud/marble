@@ -3141,6 +3141,9 @@ tbody.collapse.in {
   width: 14px;
   transition: color 0.3s ease-in-out; }
 
+.dropdown.dropdown-settings .dropdown-menu li a:hover span {
+  color: #00d46a; }
+
 .btn-group,
 .btn-group-vertical {
   position: relative;

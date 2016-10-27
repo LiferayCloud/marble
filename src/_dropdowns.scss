@@ -224,3 +224,7 @@
 
 	transition: color 0.3s ease-in-out;
 }
+
+.dropdown.dropdown-settings .dropdown-menu li a:hover span {
+	color: $accent;
+}

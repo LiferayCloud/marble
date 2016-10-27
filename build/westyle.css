@@ -3114,8 +3114,8 @@ tbody.collapse.in {
   list-style: none;
   padding: 12px 0; }
 
-.dropdown.dropdown-settings .dropdown-menu li:first-child {
-  margin-top: 0px; }
+.dropdown.dropdown-settings .dropdown-menu li {
+  margin: 0; }
 
 .dropdown.dropdown-settings .dropdown-menu li a {
   font-family: "Galano Semibold", sans-serif;
@@ -3126,6 +3126,10 @@ tbody.collapse.in {
   padding: 0 20px;
   line-height: 36px;
   transition: all 0.3s ease-in-out; }
+
+.dropdown.dropdown-settings .dropdown-menu li a:hover {
+  color: #00d46a;
+  background-color: rgba(0, 212, 106, 0.1); }
 
 .dropdown.dropdown-settings .dropdown-menu li a span {
   color: rgba(14, 20, 26, 0.8);

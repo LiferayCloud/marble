@@ -192,8 +192,8 @@
 	padding: 12px 0;
 }
 
-.dropdown.dropdown-settings .dropdown-menu li:first-child {
-	margin-top: 0px;
+.dropdown.dropdown-settings .dropdown-menu li {
+	margin: 0;
 }
 
 .dropdown.dropdown-settings .dropdown-menu li a {
@@ -206,6 +206,11 @@
 	line-height: 36px;
 
 	transition: all 0.3s ease-in-out;
+}
+
+.dropdown.dropdown-settings .dropdown-menu li a:hover {
+	color: $accent;
+	background-color: rgba($accent, 0.1);
 }
 
 .dropdown.dropdown-settings .dropdown-menu li a span {

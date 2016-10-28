@@ -6777,6 +6777,37 @@ button.close {
 .avatar-icon-16 span {
   line-height: 36px; }
 
+.slider {
+  position: relative;
+  text-align: center;
+  cursor: pointer; }
+  .slider span {
+    display: none; }
+  .slider .rail {
+    border-radius: 4px;
+    height: 8px;
+    position: relative;
+    z-index: 1;
+    background: rgba(14, 20, 26, 0.1); }
+  .slider .rail-handle {
+    position: absolute;
+    z-index: 10;
+    top: -5px;
+    height: 18px;
+    width: 18px; }
+  .slider .rail-active {
+    background-color: #00d46a;
+    border-radius: 4px;
+    height: 100%;
+    position: relative; }
+  .slider .handle {
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 -9px;
+    height: 18px;
+    width: 18px;
+    box-shadow: 0 2px 12px rgba(14, 20, 26, 0.12); }
+
 /* ==========================================================================
    Box
    ========================================================================== */

@@ -2183,6 +2183,9 @@ label {
   margin-bottom: 24px; }
   .input-group.has-action-button .form-control {
     background: rgba(14, 20, 26, 0.05); }
+    .input-group.has-action-button .form-control:first-child {
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px; }
   .input-group.has-action-button .input-group-btn {
     position: absolute;
     right: 12px;

@@ -2174,8 +2174,62 @@ label {
     background: rgba(14, 20, 26, 0.1);
     box-shadow: none; }
   .form-control[disabled], .form-control[readonly] {
-    background: rgba(14, 20, 26, 0.02);
+    background: rgba(14, 20, 26, 0.05);
     color: rgba(14, 20, 26, 0.6); }
+
+.input-group.has-action-button {
+  display: block;
+  height: 60px;
+  margin-bottom: 24px; }
+  .input-group.has-action-button .form-control {
+    background: rgba(14, 20, 26, 0.05); }
+  .input-group.has-action-button .input-group-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 36px;
+    height: 36px;
+    display: block; }
+    .input-group.has-action-button .input-group-btn .btn-primary {
+      background-color: rgba(14, 20, 26, 0.1);
+      color: rgba(14, 20, 26, 0.6);
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      position: relative;
+      padding: 0; }
+      .input-group.has-action-button .input-group-btn .btn-primary [classˆ="icon-12-"], .input-group.has-action-button .input-group-btn .btn-primary [class*="icon-12-"] {
+        line-height: 36px;
+        width: 36px;
+        text-align: center;
+        display: block; }
+      .input-group.has-action-button .input-group-btn .btn-primary:hover, .input-group.has-action-button .input-group-btn .btn-primary:focus, .input-group.has-action-button .input-group-btn .btn-primary.focus {
+        background-color: rgba(14, 20, 26, 0.2);
+        color: rgba(14, 20, 26, 0.6); }
+      .input-group.has-action-button .input-group-btn .btn-primary:active:hover, .input-group.has-action-button .input-group-btn .btn-primary:active:focus, .input-group.has-action-button .input-group-btn .btn-primary:active.focus, .input-group.has-action-button .input-group-btn .btn-primary.active:hover, .input-group.has-action-button .input-group-btn .btn-primary.active:focus, .input-group.has-action-button .input-group-btn .btn-primary.active.focus {
+        background-color: rgba(14, 20, 26, 0.2);
+        color: rgba(14, 20, 26, 0.6); }
+      .input-group.has-action-button .input-group-btn .btn-primary:hover .btn-tooltip {
+        opacity: 1; }
+      .input-group.has-action-button .input-group-btn .btn-primary .btn-tooltip {
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: calc(100% + 6px);
+        height: 36px;
+        border-radius: 4px;
+        padding: 0 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        color: #0e141a;
+        line-height: 36px;
+        box-shadow: 0 10px 20px rgba(14, 20, 26, 0.1); }
 
 .form-control-borderless {
   border: 0;
@@ -3494,11 +3548,11 @@ tbody.collapse.in {
 
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
-  margin-right: -2px; }
+  margin-right: 0; }
 
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group {
-  margin-left: -2px; }
+  margin-left: 0; }
 
 .input-btn-right,
 .input-group-addon-input-left {

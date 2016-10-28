@@ -398,9 +398,48 @@
 						</div>
 
 						<div class="form-group">
-							<label for="input-disabled">Input readonly</label>
-							<input id="input-disabled" class="form-control" type="text" value="Something to read" readonly>
+							<label for="input-readonly">Input readonly</label>
+							<input id="input-readonly" class="form-control" type="text" value="Something to read" readonly>
 							<p class="help-block"></p>
+						</div>
+
+						<div class="form-group">
+							<label>Input readonly + Copy to Clipboard</label>
+							<div class="input-group has-action-button">
+								<input class="input-btn-right form-control" type="text" onfocus="this.select();" onmouseup="return false;" value="Click to copy to clipboard" readonly>
+								<span class="input-group-btn">
+									<button class="btn btn-sm btn-primary" type="button">
+										<span class="icon-12-overlap"></span>
+										<div class="btn-tooltip">Copy to clipboard</div>
+									</button>
+								</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label>Input readonly + Click to Show</label>
+							<div class="input-group has-action-button">
+								<input class="form-control" type="password" value="B76BABB1377E5CDC8364AF4355659" readonly>
+								<span class="input-group-btn">
+									<button class="btn btn-sm btn-primary" type="button">
+										<span class="icon-12-eye"></span>
+										<div class="btn-tooltip">Show</div>
+									</button>
+								</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label>Input readonly + Click to Hide</label>
+							<div class="input-group has-action-button">
+								<input class="form-control" type="text" value="B76BABB1377E5CDC8364AF4355659" readonly>
+								<span class="input-group-btn">
+									<button class="btn btn-sm btn-primary" type="button">
+										<span class="icon-12-eye-off"></span>
+										<div class="btn-tooltip">Hide</div>
+									</button>
+								</span>
+							</div>
 						</div>
 
 						<div class="form-group has-success">

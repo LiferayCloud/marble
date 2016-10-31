@@ -228,3 +228,49 @@
 .dropdown.dropdown-settings .dropdown-menu li a:hover span {
 	color: $accent;
 }
+
+/* ==========================================================================
+	Dropdown Confirmation
+	========================================================================== */
+.dropdown.dropdown-confirmation .btn [class^="icon-12-"],
+.dropdown.dropdown-confirmation .btn [class*="icon-12-"] {
+	line-height: 36px;
+}
+
+.dropdown.dropdown-confirmation .dropdown-menu {
+	width: 218px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	margin: 0;
+	list-style: none;
+	padding: 12px;
+	text-align: center;
+}
+
+.dropdown.dropdown-confirmation .dropdown-menu h3 {
+	color: rgba($primary, 0.8);
+	font-size: 14px;
+	font-family: $font-family-secondary-bold
+}
+
+.dropdown.dropdown-confirmation .dropdown-menu p {
+	color: rgba($primary, 0.4);
+	font-size: 11px;
+	font-family: $font-family-sans-serif;
+	font-weight: 600;
+}
+
+.dropdown.dropdown-confirmation .dropdown-menu .btn {
+	width: calc(50% - 6px);
+	height: 36px;
+	margin-right: 12px;
+	font-size: 12px;
+	font-family: $font-family-secondary-semibold;
+	line-height: 36px;
+	padding: 0;
+}
+
+.dropdown.dropdown-confirmation .dropdown-menu .btn:last-child {
+	margin-right: 0;
+}

@@ -2748,9 +2748,28 @@ input[type="button"].btn-block {
 
 .topbar .wedeploy-logo {
   position: relative; }
+  .topbar .wedeploy-logo.dashboard-logo {
+    z-index: 999;
+    width: 96px; }
+    .topbar .wedeploy-logo.dashboard-logo .alpha-container {
+      position: absolute;
+      left: 48px;
+      bottom: 6px;
+      width: 48px;
+      height: 24px; }
+      .topbar .wedeploy-logo.dashboard-logo .alpha-container .alpha {
+        bottom: 0;
+        width: 48px;
+        height: 24px;
+        background: rgba(255, 255, 255, 0.8); }
+      .topbar .wedeploy-logo.dashboard-logo .alpha-container .arrow-left {
+        top: 6px;
+        border-top: 6px solid transparent !important;
+        border-bottom: 6px solid transparent !important;
+        border-right: 6px solid rgba(255, 255, 255, 0.8); }
   .topbar .wedeploy-logo .we-circle {
-    height: 48px;
-    width: 48px;
+    height: 36px;
+    width: 36px;
     background: #00d46a;
     display: inline-block;
     border-radius: 50%; }
@@ -2759,7 +2778,7 @@ input[type="button"].btn-block {
     width: 36px;
     line-height: 36.6px;
     color: #fff;
-    font-size: 17px;
+    font-size: 15px;
     font-family: "Galano Bold", sans-serif;
     font-weight: 400;
     border-radius: 50%;
@@ -2784,7 +2803,8 @@ input[type="button"].btn-block {
   .topbar .wedeploy-logo .alpha-container {
     position: absolute;
     bottom: -7px;
-    width: 48px; }
+    width: 48px;
+    z-index: 999; }
     .topbar .wedeploy-logo .alpha-container .alpha {
       position: absolute;
       bottom: -30px;
@@ -2805,6 +2825,18 @@ input[type="button"].btn-block {
       border-bottom: 6px solid rgba(14, 20, 26, 0.05);
       position: absolute;
       left: 20px; }
+    .topbar .wedeploy-logo .alpha-container .arrow-left {
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-right: 6px solid rgba(14, 20, 26, 0.05);
+      position: absolute;
+      left: -6px; }
+
+.topbar.topbar-large .wedeploy-logo .we-circle {
+  height: 48px;
+  width: 48px; }
 
 .topbar.topbar-large .wedeploy-logo .we {
   height: 48px;

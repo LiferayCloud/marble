@@ -1,9 +1,36 @@
 .topbar .wedeploy-logo {
 	position: relative;
 
+	&.dashboard-logo {
+		z-index: 999;
+		width: 96px;
+
+		.alpha-container {
+			position: absolute;
+			left: 48px;
+			bottom: 6px;
+			width: 48px;
+			height: 24px;
+
+			.alpha {
+				bottom: 0;
+				width: 48px;
+				height: 24px;
+				background: rgba($white, 0.8);
+			}
+
+			.arrow-left {
+				top: 6px;
+				border-top: 6px solid transparent !important;
+				border-bottom: 6px solid transparent !important;
+				border-right: 6px solid rgba($white, 0.8);
+			}
+		}
+	}
+
 	.we-circle {
-		height: 48px;
-		width: 48px;
+		height: 36px;
+		width: 36px;
 		background: #00d46a;
 		display: inline-block;
 		border-radius: 50%;
@@ -14,7 +41,7 @@
 		width: 36px;
 		line-height: 36.6px;
 		color: $white;
-		font-size: 17px;
+		font-size: 15px;
 		font-family: $font-family-secondary-bold;
 		font-weight: 400;
 		border-radius: 50%;
@@ -46,6 +73,7 @@
 		position: absolute;
 		bottom: -7px;
 		width: 48px;
+		z-index: 999;
 
 		.alpha {
 			position: absolute;
@@ -72,10 +100,27 @@
 			position: absolute;
 			left: 20px;
 		}
+
+		.arrow-left {
+			width: 0;
+			height: 0;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+
+			border-right: 6px solid rgba($primary, 0.05);
+
+			position: absolute;
+			left: -6px;
+		}
 	}
 }
 
 .topbar.topbar-large .wedeploy-logo {
+	.we-circle {
+		height: 48px;
+		width: 48px;
+	}
+
 	.we {
 		height: 48px;
 		width: 48px;

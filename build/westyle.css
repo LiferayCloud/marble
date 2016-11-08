@@ -1542,7 +1542,6 @@ pre {
 
 .table tr th,
 .table tr td {
-  font-size: 16px;
   line-height: 24px;
   padding: 18px 20px;
   text-align: left;
@@ -1555,9 +1554,13 @@ pre {
   border-left: 1px solid rgba(14, 20, 26, 0.2); }
 
 .table tr th {
+  font-size: 16px;
   border-top: 1px solid rgba(14, 20, 26, 0.2);
   font-family: "Galano Bold", sans-serif;
   font-weight: 400; }
+
+.table tr td {
+  font-size: 14px; }
 
 .table.no-header tr:first-child td {
   border-top: 1px solid rgba(14, 20, 26, 0.2); }

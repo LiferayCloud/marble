@@ -1529,7 +1529,9 @@ pre {
   align-items: flex-start; }
 
 .table {
-  display: table; }
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0; }
 
 .table thead,
 .table tbody {
@@ -1540,25 +1542,11 @@ pre {
 
 .table tr th,
 .table tr td {
-  line-height: 60px;
-  padding: 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 18px 20px;
   text-align: left;
-  color: rgba(14, 20, 26, 0.8); }
-
-.table tr th {
-  font-family: 'Open Sans Bold', sans-serif; }
-
-.table > tbody > tr > th,
-.table > tbody > tr > td {
-  color: rgba(14, 20, 26, 0.7);
-  font-size: 14px; }
-
-.table {
-  border-collapse: separate;
-  border-spacing: 0; }
-
-.table tr th,
-.table tr td {
+  color: rgba(14, 20, 26, 0.8);
   border-right: 1px solid rgba(14, 20, 26, 0.2);
   border-bottom: 1px solid rgba(14, 20, 26, 0.2); }
 
@@ -1566,12 +1554,10 @@ pre {
 .table tr td:first-child {
   border-left: 1px solid rgba(14, 20, 26, 0.2); }
 
-.table tr th:first-child,
-.table tr td:first-child {
-  border-left: 1px solid rgba(14, 20, 26, 0.2); }
-
 .table tr th {
-  border-top: 1px solid rgba(14, 20, 26, 0.2); }
+  border-top: 1px solid rgba(14, 20, 26, 0.2);
+  font-family: "Galano Bold", sans-serif;
+  font-weight: 400; }
 
 .table.no-header tr:first-child td {
   border-top: 1px solid rgba(14, 20, 26, 0.2); }

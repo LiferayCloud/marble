@@ -91,5 +91,42 @@
 			</tr>
 		</tbody>
 	</table>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Variable</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>$auth</td>
+				<td>The authenticated user of this request. If the request was not authenticated, it will be null.</td>
+			</tr>
+			<tr>
+				<td>$config</td>
+				<td>The raw JSON data stored in the service's config.json file.</td>
+			</tr>
+			<tr>
+				<td>$session</td>
+				<td>All stored session data. If the request had no session cookie, it will be an empty map for the new session created for this request.</td>
+			</tr>
+			<tr>
+				<td>$params</td>
+				<td>The request params as they were loaded from url query and request body. All query and form parameters will be strings here.</td>
+			</tr>
+			<tr>
+				<td>$values</td>
+				<td>The parsed request params, as they are used for parameter validation. All query and form parameters will be parsed to JSON values.</td>
+			</tr>
+			<tr>
+				<td>$body</td>
+				<td>The parsed request body, according to the request Content-Type.</td>
+			</tr>
+			<tr>
+				<td>$data</td>
+				<td>The data view for this request, if a data path is mounted in the API path, and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be null otherwise.</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>

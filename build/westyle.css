@@ -268,6 +268,7 @@ a {
     color: #0e141a;
     text-decoration: none; }
   a:focus {
+    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -1531,7 +1532,8 @@ pre {
 .table {
   display: table;
   border-collapse: separate;
-  border-spacing: 0; }
+  border-spacing: 0;
+  margin-bottom: 10px; }
 
 .table thead,
 .table tbody {
@@ -1565,25 +1567,21 @@ pre {
 .table.no-header tr:first-child td {
   border-top: 1px solid rgba(14, 20, 26, 0.2); }
 
-/* top-left border-radius */
 .table tr:first-child th:first-child {
   border-top-left-radius: 4px; }
 
 .table.no-header tr:first-child td:first-child {
   border-top-left-radius: 4px; }
 
-/* top-right border-radius */
 .table tr:first-child th:last-child {
   border-top-right-radius: 4px; }
 
 .table.no-header tr:first-child td:last-child {
   border-top-right-radius: 4px; }
 
-/* bottom-left border-radius */
 .table tr:last-child td:first-child {
   border-bottom-left-radius: 4px; }
 
-/* bottom-right border-radius */
 .table tr:last-child td:last-child {
   border-bottom-right-radius: 4px; }
 
@@ -1635,6 +1633,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2306,6 +2305,7 @@ input[type="file"] {
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {

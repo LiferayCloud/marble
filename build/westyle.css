@@ -6781,6 +6781,9 @@ button.close {
       margin-right: 0;
       margin-bottom: 12px; } }
 
+.input-matrix.input-matrix--inline .input-group.has-action-button {
+  margin-bottom: 0px; }
+
 .input-matrix .input-matrix-fields {
   margin-bottom: 12px; }
 

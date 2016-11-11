@@ -392,6 +392,19 @@
 						</div>
 
 						<div class="form-group">
+							<label>Input + Copy to Clipboard</label>
+							<div class="input-group has-action-button">
+								<input class="form-control" type="text" onfocus="this.select();" onmouseup="return false;" value="Click to copy to clipboard">
+								<span class="input-group-btn">
+									<button class="btn btn-sm btn-primary" type="button">
+										<span class="icon-12-overlap"></span>
+										<div class="btn-tooltip">Copy to clipboard</div>
+									</button>
+								</span>
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label for="input-disabled">Input disabled</label>
 							<input id="input-disabled" class="form-control" type="text" placeholder="Write something here..." disabled>
 							<p class="help-block"></p>

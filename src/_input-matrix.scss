@@ -54,6 +54,23 @@
 
 //INLINE
 
+.input-matrix.input-matrix--inline .input-matrix-labels {
+	width: calc(100% - 72px);
+
+	@media (max-width: $screen-md-min) {
+		display: none;
+	}
+
+	.input-matrix-label {
+		width: calc(50% - 8px);
+		margin-right: 12px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
 .input-matrix.input-matrix--inline .input-matrix-fields {
 	margin-bottom: 12px;
 }

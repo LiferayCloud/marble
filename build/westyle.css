@@ -6760,6 +6760,17 @@ button.close {
       background: rgba(255, 64, 64, 0.1);
       color: #ff4040; }
 
+.input-matrix.input-matrix--inline .input-matrix-labels {
+  width: calc(100% - 72px); }
+  @media (max-width: 960px) {
+    .input-matrix.input-matrix--inline .input-matrix-labels {
+      display: none; } }
+  .input-matrix.input-matrix--inline .input-matrix-labels .input-matrix-label {
+    width: calc(50% - 8px);
+    margin-right: 12px; }
+    .input-matrix.input-matrix--inline .input-matrix-labels .input-matrix-label:last-child {
+      margin-right: 0; }
+
 .input-matrix.input-matrix--inline .input-matrix-fields {
   margin-bottom: 12px; }
 

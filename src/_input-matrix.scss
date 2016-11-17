@@ -21,14 +21,12 @@
 .input-matrix .input-matrix-fields .input-matrix-fields-left {
 	position: relative;
 	left: 0;
-	z-index: 10;
 	width: 100%;
 	flex-grow: 1;
 }
 
 .input-matrix .input-matrix-fields .input-matrix-fields-right {
 	position: relative;
-	z-index: 20;
 	margin: 0 0 0 12px;
 	width: 60px;
 	height: 60px;
@@ -48,8 +46,8 @@
 		color: rgba($primary, 0.4);
 
 		&:hover {
-			background: rgba($accent, 0.1);
-			color: $accent;
+			background: rgba($brand-danger, 0.1);
+			color: $brand-danger;
 		}
 	}
 }

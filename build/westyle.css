@@ -2171,59 +2171,59 @@ label {
   margin-bottom: 24px; }
   .input-group.has-action-button .form-control {
     background: rgba(14, 20, 26, 0.05);
-    padding: 0 60px 0 20px; }
+    padding: 0 60px 0 20px;
+    z-index: 0; }
     .input-group.has-action-button .form-control[readonly] {
       background: rgba(14, 20, 26, 0.2); }
     .input-group.has-action-button .form-control:first-child {
       border-bottom-right-radius: 4px;
       border-top-right-radius: 4px; }
-  .input-group.has-action-button .input-group-btn {
-    position: absolute;
-    right: 12px;
-    top: 12px;
+  .input-group.has-action-button .btn-primary {
+    background-color: rgba(14, 20, 26, 0.1);
+    color: rgba(14, 20, 26, 0.6);
     width: 36px;
     height: 36px;
-    display: block; }
-    .input-group.has-action-button .input-group-btn .btn-primary {
-      background-color: rgba(14, 20, 26, 0.1);
-      color: rgba(14, 20, 26, 0.6);
+    border-radius: 4px;
+    position: absolute;
+    padding: 0;
+    overflow: hidden;
+    top: 12px;
+    right: 12px; }
+    .input-group.has-action-button .btn-primary [classˆ="icon-12-"], .input-group.has-action-button .btn-primary [class*="icon-12-"] {
+      line-height: 36px;
       width: 36px;
+      text-align: center;
+      display: block; }
+    .input-group.has-action-button .btn-primary:hover, .input-group.has-action-button .btn-primary:focus, .input-group.has-action-button .btn-primary.focus {
+      background-color: rgba(14, 20, 26, 0.2);
+      color: rgba(14, 20, 26, 0.6); }
+    .input-group.has-action-button .btn-primary:active:hover, .input-group.has-action-button .btn-primary:active:focus, .input-group.has-action-button .btn-primary:active.focus, .input-group.has-action-button .btn-primary.active:hover, .input-group.has-action-button .btn-primary.active:focus, .input-group.has-action-button .btn-primary.active.focus {
+      background-color: rgba(14, 20, 26, 0.2);
+      color: rgba(14, 20, 26, 0.6); }
+    .input-group.has-action-button .btn-primary:hover {
+      overflow: visible; }
+      .input-group.has-action-button .btn-primary:hover .btn-tooltip {
+        opacity: 1; }
+    .input-group.has-action-button .btn-primary .btn-tooltip {
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+      position: absolute;
+      top: calc(100% + 6px);
       height: 36px;
       border-radius: 4px;
-      position: relative;
-      padding: 0; }
-      .input-group.has-action-button .input-group-btn .btn-primary [classˆ="icon-12-"], .input-group.has-action-button .input-group-btn .btn-primary [class*="icon-12-"] {
-        line-height: 36px;
-        width: 36px;
-        text-align: center;
-        display: block; }
-      .input-group.has-action-button .input-group-btn .btn-primary:hover, .input-group.has-action-button .input-group-btn .btn-primary:focus, .input-group.has-action-button .input-group-btn .btn-primary.focus {
-        background-color: rgba(14, 20, 26, 0.2);
-        color: rgba(14, 20, 26, 0.6); }
-      .input-group.has-action-button .input-group-btn .btn-primary:active:hover, .input-group.has-action-button .input-group-btn .btn-primary:active:focus, .input-group.has-action-button .input-group-btn .btn-primary:active.focus, .input-group.has-action-button .input-group-btn .btn-primary.active:hover, .input-group.has-action-button .input-group-btn .btn-primary.active:focus, .input-group.has-action-button .input-group-btn .btn-primary.active.focus {
-        background-color: rgba(14, 20, 26, 0.2);
-        color: rgba(14, 20, 26, 0.6); }
-      .input-group.has-action-button .input-group-btn .btn-primary:hover .btn-tooltip {
-        opacity: 1; }
-      .input-group.has-action-button .input-group-btn .btn-primary .btn-tooltip {
-        -webkit-transition: opacity 0.3s ease-in-out;
-        -o-transition: opacity 0.3s ease-in-out;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top: calc(100% + 6px);
-        height: 36px;
-        border-radius: 4px;
-        padding: 0 12px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #fff;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 600;
-        font-size: 12px;
-        color: #0e141a;
-        line-height: 36px;
-        box-shadow: 0 10px 20px rgba(14, 20, 26, 0.1); }
+      padding: 0 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      color: #0e141a;
+      line-height: 36px;
+      box-shadow: 0 10px 20px rgba(14, 20, 26, 0.1);
+      z-index: 9999; }
 
 .form-control-borderless {
   border: 0;
@@ -6734,13 +6734,11 @@ button.close {
 .input-matrix .input-matrix-fields .input-matrix-fields-left {
   position: relative;
   left: 0;
-  z-index: 10;
   width: 100%;
   flex-grow: 1; }
 
 .input-matrix .input-matrix-fields .input-matrix-fields-right {
   position: relative;
-  z-index: 20;
   margin: 0 0 0 12px;
   width: 60px;
   height: 60px;
@@ -6759,8 +6757,8 @@ button.close {
     background: rgba(14, 20, 26, 0.05);
     color: rgba(14, 20, 26, 0.4); }
     .input-matrix .input-matrix-fields .input-matrix-fields-right .close:hover {
-      background: rgba(0, 212, 106, 0.1);
-      color: #00d46a; }
+      background: rgba(255, 64, 64, 0.1);
+      color: #ff4040; }
 
 .input-matrix.input-matrix--inline .input-matrix-fields {
   margin-bottom: 12px; }

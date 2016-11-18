@@ -49,15 +49,15 @@ label {
 
 }
 
-.input-group.has-action-button {
+.has-action-button {
 	display: block;
 	height: 60px;
 	margin-bottom: 24px;
+	position: relative;
 
 	.form-control {
 		background: rgba($primary, .05);
 		padding: 0 60px 0 20px;
-		z-index: 0;
 
 		&[readonly] {
 			background: rgba($primary, .2);

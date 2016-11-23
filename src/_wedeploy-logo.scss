@@ -158,6 +158,20 @@
 		color: rgba($primary, .3);
 		display: none;
 	}
+
+	&.dashboard-logo {
+		.alpha {
+			background: rgba($primary, 0.05);
+		}
+
+		.arrow-up {
+			border-bottom: 6px solid rgba($primary, 0.05);
+		}
+
+		.arrow-left {
+			border-right: 6px solid rgba($primary, 0.05);
+		}
+	}
 }
 
 .topbar.topbar-large.topbar-light .wedeploy-logo {

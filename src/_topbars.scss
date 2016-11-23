@@ -40,7 +40,7 @@
 
 .topbar-logo-link {
 	@include anim(color);
-	color: rgba($white, 1);
+	color: $white;
 	display: flex;
 	font-family: $font-family-secondary-semibold;
 	font-weight: 400;
@@ -56,12 +56,25 @@
 	font-size: 48px;
 }
 
+.topbar .topbar-logo-image {
+	height: 36px;
+	margin-right: 20px;
+}
+
+.topbar.topbar-large .topbar-logo-image {
+	height: 48px;
+}
+
 .topbar-logo-text {
-	font-size: 14px;
-	letter-spacing: 0px;
-	margin-left: 20px;
-	position: relative;
-	top: 5px;
+	font-size: 17px;
+	line-height: 36px;
+	margin: 0 20px 0 0;
+}
+
+.topbar-logo-icon {
+	font-size: 36px;
+	line-height: 36px;
+	margin: 0 20px 0 0;
 }
 
 .topbar-logo-label {
@@ -233,12 +246,12 @@
 }
 
 .topbar-light .topbar-logo-link {
-	color: rgba($accent, .8);
+	color: rgba($primary, .8);
 }
 
 .topbar-light .topbar-logo-link:hover,
 .topbar-light .topbar-logo-link:focus {
-	color: $accent;
+	color: $primary;
 }
 
 .topbar-light .topbar-logo-label {
@@ -247,12 +260,12 @@
 }
 
 .topbar-light .topbar-link {
-	color: rgba($accent, .4);
+	color: rgba($primary, .6);
 }
 
 .topbar-light .topbar-link:hover,
 .topbar-light .topbar-link:focus {
-	color: rgba($accent, .8);
+	color: rgba($primary, .8);
 }
 
 .topbar-light .topbar-link-selected,

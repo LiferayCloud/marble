@@ -5859,7 +5859,7 @@ button.close {
   list-style: none;
   padding: 0;
   height: 36px;
-  max-width: 300px; }
+  max-width: 100%; }
 
 .topbar-spacebetween .topbar-list {
   float: none; }

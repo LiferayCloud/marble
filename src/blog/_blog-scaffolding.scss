@@ -1,0 +1,22 @@
+$min_width: 600;
+$max_width: 1800;
+
+:root {
+	font-size: 12px;
+	[class*='icon-12'] {
+		font-size: 12px;
+	}
+	[class*='icon-16'] {
+		font-size: 16px;
+	}
+}
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+  :root {
+    font-size: 16px;
+  }
+}
+@media (min-width: #{$max_width}px){
+   :root {
+     font-size: 20px;
+   }
+}

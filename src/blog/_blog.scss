@@ -110,40 +110,40 @@
   font-size: 1.125rem;//18px;
   line-height: 2;//2rem;
   color: rgba($primary, 0.8);
+}
 
-  a {
-    @include anim(color);
-    font-family: inherit;
-    font-size: inherit;
-    border-bottom: 1px dashed rgba($primary, 0.4);
-    color: inherit;
+.container-blog .content a {
+  @include anim(color);
+  font-family: inherit;
+  font-size: inherit;
+  border-bottom: 1px dashed rgba($primary, 0.4);
+  color: inherit;
 
-    &:hover,
-    &:focus {
-      border-color: $accent;
-      color: $accent;
-    }
+  &:hover,
+  &:focus {
+    border-color: $accent;
+    color: $accent;
   }
+}
 
-  em {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    font-style: italic;
-  }
+.container-blog .content em {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: italic;
+}
 
-  strong {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: 700;
-  }
+.container-blog .content strong {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
 
-  strike {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    text-decoration: line-through;
-  }
+.container-blog .content strike {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: line-through;
 }
 
 .container-blog .content h3 {
@@ -156,7 +156,10 @@
 
 .container-blog figure {
   width: 100%;
+  text-align: center;
+
   img {
+    display: block;
     width: calc(100% + 5rem);
     position: relative;
     left: -2.5rem;
@@ -164,7 +167,15 @@
     @media (min-width: 600px) {
       border-radius: 4px;
     }
+
+    &.original-size {
+      width: auto;
+      max-width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
+
   figcaption {
     color: rgba($primary, 0.4);
     font-family: $font-family-sans-serif;

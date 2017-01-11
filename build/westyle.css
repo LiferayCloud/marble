@@ -2758,6 +2758,9 @@ input[type="button"].btn-block {
         border-top: 6px solid transparent !important;
         border-bottom: 6px solid transparent !important;
         border-right: 6px solid rgba(255, 255, 255, 0.8); }
+  .topbar .wedeploy-logo .docs-nav-container {
+    position: relative;
+    display: none; }
   .topbar .wedeploy-logo .we-circle {
     height: 36px;
     width: 36px;
@@ -2796,6 +2799,12 @@ input[type="button"].btn-block {
     bottom: -7px;
     width: 48px;
     z-index: 999; }
+    @media (min-width: 320px) {
+      .topbar .wedeploy-logo .alpha-container {
+        display: none; } }
+    @media (min-width: 960px) {
+      .topbar .wedeploy-logo .alpha-container {
+        display: block; } }
     .topbar .wedeploy-logo .alpha-container .alpha {
       position: absolute;
       bottom: -30px;
@@ -5860,6 +5869,34 @@ button.close {
   padding: 0;
   height: 36px;
   max-width: 100%; }
+  @media (max-width: 599px) {
+    .topbar-list .topbar-item {
+      margin: 0; }
+      .topbar-list .topbar-item:not(.login) {
+        display: none; } }
+  @media (min-width: 600px) {
+    .topbar-list .topbar-item {
+      margin: 0 12px;
+      display: inline-block; } }
+  @media (min-width: 720px) {
+    .topbar-list .topbar-item {
+      margin: 0 10px; } }
+  @media (min-width: 1024px) {
+    .topbar-list .topbar-item {
+      margin: 0 16px; } }
+  @media (min-width: 1280px) {
+    .topbar-list .topbar-item {
+      margin: 0 20px; } }
+  .topbar-list .topbar-link {
+    white-space: nowrap;
+    font-family: "Galano Bold", sans-serif;
+    font-size: 15px;
+    color: rgba(14, 20, 26, 0.6); }
+    .topbar-list .topbar-link.topbar-link-selected {
+      color: #00d46a; }
+  @media (max-width: 720px) {
+    .topbar-list .topbar-item.get-started {
+      display: none; } }
 
 .topbar-spacebetween .topbar-list {
   float: none; }

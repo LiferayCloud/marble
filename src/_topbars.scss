@@ -145,6 +145,51 @@
 	padding: 0;
 	height: 36px;
 	max-width: 100%;
+
+	.topbar-item {
+
+		@media	(max-width: 599px) {
+			margin: 0;
+			&:not(.login) {
+				display: none;
+			}
+		}
+
+		@media	(min-width: 600px) {
+			margin: 0 12px;
+			display: inline-block;
+		}
+
+		@media	(min-width: 720px) {
+			margin: 0 10px;
+		}
+
+		@media	(min-width: 1024px) {
+			margin: 0 16px;
+		}
+
+		@media	(min-width: 1280px) {
+			margin: 0 20px;
+		}
+	}
+
+	.topbar-link {
+		white-space: nowrap;
+
+		font-family: $font-family-secondary-bold;
+		font-size: 15px;
+		color: rgba($primary, 0.6);
+
+		&.topbar-link-selected {
+			color: $accent;
+		}
+	}
+
+	.topbar-item.get-started {
+		@media	(max-width: 720px) {
+			display: none;
+		}
+	}
 }
 
 .topbar-spacebetween .topbar-list {

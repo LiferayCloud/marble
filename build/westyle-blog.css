@@ -1,5 +1,5 @@
 :root {
-  font-size: 12px; }
+  font-size: 14px; }
   :root [class*='icon-12'] {
     font-size: 12px; }
   :root [class*='icon-16'] {
@@ -11,7 +11,7 @@
 
 @media (min-width: 1800px) {
   :root {
-    font-size: 20px; } }
+    font-size: 18px; } }
 
 .container-blog {
   width: 100%;
@@ -104,7 +104,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 2;
+  line-height: 1.6;
   color: rgba(14, 20, 26, 0.8); }
 
 .container-blog .content a {
@@ -145,7 +145,8 @@
 
 .container-blog figure {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  padding: 1rem 0; }
   .container-blog figure img {
     display: block;
     width: calc(100% + 5rem);

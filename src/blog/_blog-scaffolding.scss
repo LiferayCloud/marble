@@ -2,7 +2,7 @@ $min_width: 600;
 $max_width: 1800;
 
 :root {
-	font-size: 12px;
+	font-size: 14px;
 	[class*='icon-12'] {
 		font-size: 12px;
 	}
@@ -17,6 +17,6 @@ $max_width: 1800;
 }
 @media (min-width: #{$max_width}px){
    :root {
-     font-size: 20px;
+     font-size: 18px;
    }
 }

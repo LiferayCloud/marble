@@ -1,6 +1,6 @@
 .container-blog {
   width: 100%;
-  max-width: 34rem;//608px;
+  max-width: 34rem;
   padding: 0 2.5rem 0;
 	margin: 0 auto;
 
@@ -17,8 +17,8 @@
   color: rgba($primary, 0.8);
   font-family: $font-family-secondary-bold;
   font-weight: 400;
-  font-size: 2.75rem;//44px;
-  line-height: 1.2;//54px;
+  font-size: 2.75rem;
+  line-height: 1.2;
   margin: 0;
   text-align: left;
 }
@@ -27,8 +27,8 @@
   display: block;
   font-family: $font-family-secondary-semibold;
   font-weight: 700;
-  font-size: 0.75rem;//12px;
-  line-height: 2;//24px;
+  font-size: 0.75rem;
+  line-height: 2;
   text-transform: uppercase;;
   color: rgba($primary, 0.6);
   margin: 0 0 1rem;
@@ -78,8 +78,8 @@
 
 .container-blog .content blockquote {
   font-family: $font-family-secondary-bold;
-  font-size: 2rem;//2rem;
-  line-height: 1.2;//2.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
   color: rgba($primary, 0.8);
   border: 0px;
   padding: 16px;
@@ -107,8 +107,8 @@
 .container-blog .content li {
   font-family: $font-family-sans-serif;
   font-weight: 400;
-  font-size: 1.125rem;//18px;
-  line-height: 2;//2rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
   color: rgba($primary, 0.8);
 }
 
@@ -149,14 +149,15 @@
 .container-blog .content h3 {
   font-family: $font-family-secondary-bold;
   font-weight: 400;
-  font-size: 1.5rem;//24px;
-  line-height: 1.2;//2rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
   color: rgba($primary, 0.8);
 }
 
 .container-blog figure {
   width: 100%;
   text-align: center;
+  padding: 1rem 0;
 
   img {
     display: block;
@@ -180,14 +181,14 @@
     color: rgba($primary, 0.4);
     font-family: $font-family-sans-serif;
     font-weight: 400;
-    font-size: 0.75rem;//12px;
-    line-height: 2;//24px;
+    font-size: 0.75rem;
+    line-height: 2;
     text-align: center;
     margin-top: 0.5rem;
   }
 }
 
-//POSTS LIST
+
 .posts-list {
   background: rgba($primary, 0.02);
   padding: 5rem 0;
@@ -213,8 +214,8 @@
   color: rgba($primary, 0.8);
   font-family: $font-family-secondary-bold;
   font-weight: 400;
-  font-size: 2rem;//2rem;
-  line-height: 1.2;//2.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin: 0;
   text-align: left;
 }
@@ -224,7 +225,7 @@
   display: block;
   font-family: $font-family-secondary-semibold;
   font-weight: 700;
-  font-size: 0.75rem;//12px;
+  font-size: 0.75rem;
   line-height: 2;
   text-transform: uppercase;;
   color: rgba($primary, 0.6);
@@ -235,7 +236,7 @@
   }
 }
 
-//WEDEPLOY LOGO
+
 .we-container {
   padding: 2.5rem 0;
   text-align: center;

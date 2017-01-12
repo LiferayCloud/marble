@@ -26,10 +26,8 @@
 .container-blog .docs-top-date {
   display: block;
   font-family: $font-family-secondary-semibold;
-  font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 2;
-  text-transform: uppercase;
   color: rgba($primary, 0.4);
   margin: 0 0 1rem;
 
@@ -224,10 +222,8 @@
   @include anim(color);
   display: block;
   font-family: $font-family-secondary-semibold;
-  font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 2;
-  text-transform: uppercase;;
   color: rgba($primary, 0.4);
   margin: 0 0 0.5rem;
 

@@ -41,10 +41,10 @@
   font-size: 0.75rem;
   line-height: 2;
   text-transform: uppercase;
-  color: rgba(14, 20, 26, 0.6);
+  color: rgba(14, 20, 26, 0.4);
   margin: 0 0 1rem; }
   .container-blog .docs-top-date .date {
-    letter-spacing: 0.055rem; }
+    color: rgba(14, 20, 26, 0.6); }
 
 .container-blog .content section {
   margin: 0 0 2.75rem; }

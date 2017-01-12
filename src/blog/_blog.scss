@@ -228,11 +228,11 @@
   font-size: 0.75rem;
   line-height: 2;
   text-transform: uppercase;;
-  color: rgba($primary, 0.6);
+  color: rgba($primary, 0.4);
   margin: 0 0 0.5rem;
 
   .date {
-    letter-spacing: 0.05rem;
+    color: rgba($primary, 0.5);
   }
 }
 

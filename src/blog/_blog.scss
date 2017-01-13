@@ -93,13 +93,18 @@
   top: 4px;
 }
 
-.container-blog .content blockquote {
+.container-blog .content blockquote,
+.container-blog .content blockquote p {
   font-family: $font-family-secondary-bold;
   font-size: 2rem;
   line-height: 1.2;
   color: rgba($primary, 0.8);
   border: 0px;
   padding: 16px;
+}
+
+.container-blog .content blockquote p {
+  padding: 0px;
 }
 
 .container-blog .content blockquote::before {

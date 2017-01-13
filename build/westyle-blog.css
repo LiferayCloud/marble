@@ -47,17 +47,19 @@
 .container-blog .content section {
   margin: 0 0 2.75rem; }
   .container-blog .content section > * {
-    margin: 0 0 2rem; }
+    margin-bottom: 2rem; }
     .container-blog .content section > *:last-child {
-      margin: 0; }
+      margin-bottom: 0; }
 
 .container-blog .content ul,
 .container-blog .content ol {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0 0 0 2rem; }
 
 .container-blog .content ol li {
-  counter-increment: list; }
+  counter-increment: list;
+  position: relative; }
 
 .container-blog .content ol li:before {
   font-family: "Galano Bold", sans-serif;
@@ -65,13 +67,27 @@
   display: inline-block;
   content: counter(list) ".";
   width: 2rem;
-  text-align: left; }
+  text-align: left;
+  position: absolute;
+  left: -2rem; }
+
+.container-blog .content ul li {
+  position: relative; }
 
 .container-blog .content ul li:before {
   font-family: "Galano Bold", sans-serif;
   display: inline-block;
   content: '\2022';
-  width: 2rem; }
+  width: 2rem;
+  position: absolute;
+  left: -2rem; }
+
+.container-blog .content ul.checklist li:before {
+  color: #00d46a;
+  font-family: "icon-16";
+  content: "\E014";
+  font-size: 16px;
+  top: 4px; }
 
 .container-blog .content blockquote {
   font-family: "Galano Bold", sans-serif;

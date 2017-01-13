@@ -40,10 +40,10 @@
   margin: 0 0 2.75rem;
 
   > * {
-    margin: 0 0 2rem;
+    margin-bottom: 2rem;
 
     &:last-child {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -52,10 +52,12 @@
 .container-blog .content ol {
   list-style: none;
   padding: 0;
+  margin: 0 0 0 2rem;
 }
 
 .container-blog .content ol li {
   counter-increment: list;
+  position: relative;
 }
 
 .container-blog .content ol li:before {
@@ -65,6 +67,12 @@
   content: counter(list) ".";
   width: 2rem;
   text-align: left;
+  position: absolute;
+  left: -2rem;
+}
+
+.container-blog .content ul li {
+  position: relative;
 }
 
 .container-blog .content ul li:before {
@@ -72,6 +80,16 @@
   display: inline-block;
   content: '\2022';
   width: 2rem;
+  position: absolute;
+  left: -2rem;
+}
+
+.container-blog .content ul.checklist li:before {
+  color: $accent;
+  font-family: "icon-16";
+  content: "\E014";
+  font-size: 16px;
+  top: 4px;
 }
 
 .container-blog .content blockquote {

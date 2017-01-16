@@ -82,15 +82,16 @@
   content: '\2022';
   width: 2rem;
   position: absolute;
-  left: -2rem;
+  left: -1.5rem;
 }
 
 .container-blog .content ul.checklist li:before {
   color: $accent;
   font-family: "icon-16";
-  content: "\E014";
+  content: "\E017";
   font-size: 16px;
-  top: 4px;
+  top: 2px;
+  left: -2rem;
 }
 
 .container-blog .content blockquote,

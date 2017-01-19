@@ -1,0 +1,58 @@
+.header {
+	padding: 75px 0 0;
+	text-align: center;
+}
+
+.header-title {
+	font-family: $font-family-secondary-bold;
+	font-size: 57px;
+	margin: 0;
+}
+
+.header-subtitle {
+	font-family: $font-family-sans-serif;
+	font-size: 19px;
+	line-height: 24px;
+	margin: 25px 0 35px;
+}
+
+.header-cta a {
+	font-size: 17px;
+	margin: 0 20px 20px;
+}
+
+.gh-btns {
+	margin: 0;
+	margin-top: 75px;
+	background: rgba($primary, .07);
+	padding-top: 16px;
+	padding-bottom: 10.5px;
+}
+
+@media (min-width: $screen-sm-min) {
+	.header-title {
+		font-size: 99px;
+	}
+
+	.header-subtitle {
+		font-size: 24px;
+	}
+
+	.header {
+		padding: 75px 0 0;
+	}
+
+	.gh-btns {
+		margin-top: 75px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.header {
+		padding: 200px 0 0;
+	}
+
+	.gh-btns {
+		margin-top: 140px;
+	}
+}

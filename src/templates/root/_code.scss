@@ -1,0 +1,41 @@
+.code, .CodeMirror {
+	margin: 20px 0;
+	border-radius: 4px;
+}
+
+.CodeMirror {
+	font-family: 'Roboto Mono', monaco, monospace;
+	height: auto;
+	z-index: 0;
+}
+
+.docs-content .CodeMirror pre {
+	font-size: 14px;
+}
+
+.code-container {
+	position: relative;
+}
+
+.btn-copy {
+	@include anim(background);
+	background: rgba(white, .3);
+	height: 36px;
+	line-height: 36px;
+	padding: 0;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 36px;
+	z-index: 1;
+
+	&:hover,
+	&:focus {
+		background: rgba(white, .5);
+	}
+}
+
+.tooltip-inner {
+    text-align: center;
+	width: 66px;
+}

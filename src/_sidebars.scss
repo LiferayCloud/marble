@@ -18,6 +18,11 @@
 .sidebar-offset {
 	padding-top: 100px;
 
+	.container,
+	.container-hybrid {
+		width: 100%;
+	}
+
 	.container-hybrid .flex-row {
 		display: flex;
 		justify-content: flex-start;
@@ -409,7 +414,7 @@
 		width: calc(100% - #{$sidebar-width});
 
 		.container {
-			width: $screen-md-min - $sidebar-width;
+			max-width: $screen-md-min - $sidebar-width;
 		}
 	}
 
@@ -434,7 +439,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: $screen-lg-min - $sidebar-width;
+			max-width: $screen-lg-min - $sidebar-width;
 			padding-left: 0px;
 			padding-right: 0px;
 		}
@@ -445,7 +450,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: 948px;
+			max-width: 948px;
 			padding-left: 0px;
 			padding-right: 0px;
 		}
@@ -456,7 +461,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: calc(1440px - #{$sidebar-width});
+			max-width: calc(1440px - #{$sidebar-width});
 			padding-left: 0px;
 			padding-right: 0px;
 		}
@@ -467,7 +472,7 @@
 	.sidebar-offset {
 		.container,
 		.container-hybrid {
-			width: $screen-lg-min;
+			max-width: $screen-lg-min;
 			padding-left: 0px;
 			padding-right: 0px;
 		}

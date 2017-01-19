@@ -8,5 +8,8 @@
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",
     "gulp-sass": "^2.3.1"
+  },
+  "devDependencies": {
+    "mathsass": "^0.9.5"
   }
 }

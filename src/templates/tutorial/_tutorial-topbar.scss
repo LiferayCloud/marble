@@ -1,0 +1,59 @@
+.tutorial .sidebar-offset .topbar {
+  width: 100%;
+  height: calc(2.5rem * #{$lineHeight});
+  box-shadow: 0 2px 8px rgba($primary, 0.12);
+  padding: 0 calc(1rem * #{$lineHeight});
+  background: $accent;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+
+  .topbar-logo {
+    align-self: center;
+    .name {
+      font-family: $font-family-secondary-semibold;
+      font-size: 1rem;
+      color: rgba($white, 0.8);
+      margin: 0;
+    }
+  }
+
+  .time-remaining {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+
+    align-self: center;
+
+    font-size: 0.8125rem;
+    font-family: $font-family-secondary-semibold;
+    color: rgba($white, 0.8);
+
+    > * {
+      margin-right: calc(0.5rem * #{$lineHeight});
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.topbar-light,
+  &.topbar--light {
+    background: white;
+  }
+
+  &.topbar-light .name,
+  &.topbar--light .name ,
+  &.topbar-light .time-remaining,
+  &.topbar--light .time-remaining {
+    color: rgba($primary, 0.8);
+  }
+}

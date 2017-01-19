@@ -1,0 +1,60 @@
+.tutorial {
+
+  .container {
+    padding: calc(1.5rem * #{$lineHeight}) calc(1rem * #{$lineHeight}) 0;
+  }
+
+  .container .card {
+    max-width: calc(34rem + 10rem);
+    padding: calc(1rem * #{$lineHeight}) calc(2rem * #{$lineHeight});
+  }
+
+  .container .content section:last-child {
+    margin: 0;
+  }
+
+  .container .content a {
+    @include anim(none);
+    color: $accent;
+    text-decoration: none;
+    border-bottom-width: 0px;
+  }
+  .container .content a:hover {
+    color: rgba($accent, 0.6);
+  }
+
+  .container .content ul.checklist li:before {
+    content: "\E017";
+    top: 1px;
+  }
+
+  .container .content .aside {
+    margin: calc(2rem * #{$lineHeight}) 0;
+
+    p,
+    li,
+    li label {
+      font-size: 0.8125rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    ul.radio-group li label {
+      padding-left: 1.75rem;
+    }
+  }
+
+  .container .content figure {
+    text-align: left;
+    padding: 0;
+  }
+
+  .container .content figure img {
+    max-width: 100%;
+    width: auto;
+    left: 0;
+  }
+
+}

@@ -1,0 +1,103 @@
+.blog {
+
+  .topbar.topbar-large {
+    height: 72px;
+    padding: 12px 20px;
+
+    .btn {
+      line-height: 48px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 34rem;
+    padding: 0 2.5rem 0;
+  	margin: 0 auto;
+
+    @media (min-width: 600px) {
+      padding: 0;
+    }
+  }
+
+  .container p,
+  .container li {
+    font-size: $font-h6;
+  }
+
+  .container blockquote p {
+    font-size: $font-h4;
+  }
+
+  .container a {
+    @include anim(color);
+    border-bottom: 1px dashed rgba($primary, 0.4);
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      border-color: $accent;
+      color: $accent;
+    }
+  }
+
+  .posts-list {
+    background: rgba($primary, 0.02);
+    padding: calc(3rem * #{$lineHeight}) 0;
+  }
+
+  .post-item {
+    margin-bottom: calc(2rem * #{$lineHeight});
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .posts-list a {
+    border-width: 0px;
+  }
+
+  .posts-list a small {
+    @include anim(color);
+    margin-bottom: 0;
+  }
+
+  .posts-list a:hover small {
+    color: rgba($primary, 0.8);
+  }
+
+  .posts-list a h4 {
+    @include anim(color);
+  }
+
+  .posts-list a:hover h4 {
+    color: $accent;
+  }
+
+  ///////////////////////////SIGNATURE///////////////////////////
+  .we-container {
+    padding: calc(2rem * #{$lineHeight}) 0;
+    text-align: center;
+
+    .we-circle {
+      width: calc(2rem * #{$lineHeight});
+      height: calc(2rem * #{$lineHeight});
+      border-radius: 50%;
+      background: rgba($primary, 0.1);
+      display: inline-block;
+    }
+
+    .we {
+      font-family: $font-family-secondary-bold;
+      font-size: $font-h6;
+      color: $white;
+      line-height: calc(2rem * #{$lineHeight});
+      width: 2rem;
+      text-align: center;
+      position: relative;
+      top: 0.5px;
+      left: 0.5px;
+    }
+  }
+
+}

@@ -14,7 +14,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('bootstrap', function() {
-	return gulp.src('src/*.scss')
+	return gulp.src('src/**/*.scss')
 		.pipe(sass({includePaths: ['node_modules']}))
 		.pipe(gulp.dest('build'));
 });

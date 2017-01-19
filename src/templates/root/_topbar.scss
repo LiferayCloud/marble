@@ -41,9 +41,12 @@
 
 @media (min-width: $screen-md-min) {
 	.topbar {
-		position: fixed;
 		top: 0;
 		z-index: 2;
+	}
+	
+	.topbar.topbar-fixed{
+		position: fixed;
 	}
 }
 

@@ -33,9 +33,10 @@
 
 @media (min-width: 960px) {
   .topbar {
-    position: fixed;
     top: 0;
-    z-index: 2; } }
+    z-index: 2; }
+  .topbar.topbar-fixed {
+    position: fixed; } }
 
 @media (min-width: 600px) {
   .topbar-logo-link .by {

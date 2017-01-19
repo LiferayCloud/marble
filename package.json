@@ -2,6 +2,7 @@
   "private": true,
   "name": "westyle",
   "version": "2.2.1",
+  "main": "index.js",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "mathsass": "^0.9.5"

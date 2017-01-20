@@ -1,0 +1,27 @@
+$accent: #ffb700;
+
+@import "node_modules/westyle/src/westyle";
+
+// Root
+@import "node_modules/westyle/src/templates/root";
+
+// Landing
+@import "node_modules/westyle/src/templates/landing";
+
+// Docs
+@import "node_modules/westyle/src/templates/docs";
+
+// Guide
+@import "node_modules/westyle/src/templates/guide";
+
+// Search
+@import "node_modules/westyle/src/templates/search";
+
+// Updates
+@import "node_modules/westyle/src/templates/updates";
+
+// Blog
+@import "node_modules/westyle/src/templates/blog";
+
+// Tutorial
+@import "node_modules/westyle/src/templates/tutorial";

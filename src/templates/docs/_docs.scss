@@ -642,3 +642,22 @@
   width: 32px !important;
   padding: 0;
 }
+
+.docs .docs-content p code {
+  line-height: 24px;
+  display: inline-block;
+  color: rgba($primary, 0.6);
+  background: rgba($primary, 0.1);
+  font-size: 100%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.docs p a {
+  border-bottom: 1px dashed rgba($primary, 0.4);
+  color: inherit;
+
+  &:hover {
+    border-bottom: 1px dashed $accent;
+    color: $accent;
+  }
+}

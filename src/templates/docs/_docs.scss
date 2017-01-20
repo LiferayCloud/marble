@@ -589,3 +589,56 @@
 .docs .sidebar-list-2 .sidebar-link.sidebar-link-selected span {
 	font-weight: 400;
 }
+
+.docs .search {
+	margin: 0;
+}
+
+.docs .docs-home-top {
+  margin-bottom: 16px;
+}
+
+.docs .guide-header {
+  padding: 60px 0;
+  margin-top: 0;
+
+  @media (min-width: 960px) {
+    margin-top: 60px;
+  }
+}
+
+.docs .guide-header-title {
+  margin: 0;
+}
+
+.docs .btn-copy {
+  background: rgba($white, 0.6);
+  border-radius: 2px;
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+  top: 4px;
+
+  &:hover {
+    background: rgba($white, 0.8);
+  }
+
+  > [class*="icon-"] {
+    font-size: 10px;
+  }
+}
+
+.docs .CodeMirror-sizer {
+  margin-left: 40px !important;
+}
+
+.docs .CodeMirror-gutter-wrapper {
+  left: -28px !important;
+}
+
+.docs .CodeMirror-linenumber {
+  line-height: 24px;
+  text-align: left;
+  width: 32px !important;
+  padding: 0;
+}

@@ -643,14 +643,27 @@
   padding: 0;
 }
 
-.docs .docs-content p code {
-	line-height: 22px;
+.docs * code,
+.docs .docs-content * code {
   display: inline-block;
   color: rgba($primary, 0.6);
   background: rgba($primary, 0.1);
   font-size: 100%;
   font-family: 'Roboto Mono', monospace;
 	padding: 0 4px;
+}
+
+.docs p code,
+.docs .docs-content p code {
+	line-height: 22px;
+}
+.docs h4 code,
+.docs .docs-content h4 code {
+	line-height: 24px;
+}
+.docs h6 code,
+.docs .docs-content h6 code {
+	line-height: 26px;
 }
 
 .docs p a {

@@ -13,6 +13,9 @@
   :root {
     font-size: 18px; } }
 
+.content .topbar.topbar-fixed + .blog {
+  padding-top: 60px; }
+
 .blog .container header {
   margin: calc(2rem * 1.5) auto; }
 

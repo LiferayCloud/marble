@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "westyle",
+  "name": "marble",
   "version": "2.2.1",
   "main": "index.js",
   "dependencies": {

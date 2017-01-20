@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "westyle",
+	"name": "marble",
 	"version": "2.2.1",
 	"devDependencies": {
 		"metal-toggler": "metal/metal-toggler#master",

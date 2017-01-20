@@ -644,12 +644,13 @@
 }
 
 .docs .docs-content p code {
-  line-height: 24px;
+	line-height: 22px;
   display: inline-block;
   color: rgba($primary, 0.6);
   background: rgba($primary, 0.1);
   font-size: 100%;
   font-family: 'Roboto Mono', monospace;
+	padding: 0 4px;
 }
 
 .docs p a {

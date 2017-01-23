@@ -72,14 +72,14 @@
 	color: rgba($primary, .6);
 }
 
-.docs-content a {
+.docs-content a:not(.btn) {
 	@include anim(color);
 	color: $accent;
 	font-weight: 400;
 }
 
-.docs-content a:hover,
-.docs-content a:focus {
+.docs-content a:not(.btn):hover,
+.docs-content a:not(.btn):focus {
 	color: rgba($accent, .6);
 	text-decoration: none;
 }

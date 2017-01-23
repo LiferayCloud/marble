@@ -666,7 +666,7 @@
 	line-height: 26px;
 }
 
-.docs p a {
+.docs p a:not(.btn) {
   border-bottom: 1px dashed rgba($primary, 0.4);
   color: inherit;
 

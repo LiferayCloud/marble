@@ -678,3 +678,28 @@
 .docs .docs-content .guide-github {
 	margin: 24px 0 60px;
 }
+
+/* sidebar docs */
+.docs .sidebar-list li .sidebar-list {
+	padding: 0;
+	display: none;
+}
+
+.docs .sidebar-list li.active .sidebar-list {
+	display: block;
+}
+
+.docs .sidebar-list li .sidebar-list li .sidebar-link {
+	padding: 0 20px 0 56px;
+	font-size: 13px;
+	line-height: 36px;
+	height: 36px;
+
+	.sidebar-icon {
+		display: none;
+	}
+}
+
+.docs .sidebar-list li .sidebar-list li:last-child {
+	margin-bottom: 0;
+}

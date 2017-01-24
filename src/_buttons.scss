@@ -282,6 +282,7 @@ fieldset[disabled] .btn-link {
 	padding: 0;
 	color: rgba($primary, .6);
 
+	&,
 	&:active,
 	&.active {
 		&:focus,

@@ -22,12 +22,13 @@
 
 .btn-default {
 	@include anim(all);
+	background-color: rgba($primary, .1);
+	color: rgba($primary, 0.6);
 
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($accent, .2);
-		color: $accent;
+		background-color: rgba($primary, .2);
 	}
 
 	&:active,
@@ -35,19 +36,20 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($accent, .2);
-			color: $accent;
+			background-color: rgba($primary, .2);
 		}
 	}
 }
 
 .btn-primary {
 	@include anim(all);
+	background-color: rgba($primary, .8);
+	color: $white;
 
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($accent, .3);
+		background-color: rgba($primary, .6);
 	}
 
 	&:active,
@@ -55,13 +57,15 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($accent, .3);
+			background-color: rgba($primary, .6);
 		}
 	}
 }
 
 .btn-success {
 	@include anim(all);
+	background-color: $brand-success;
+	color: $white;
 
 	&:hover,
 	&:focus,
@@ -81,6 +85,8 @@
 
 .btn-danger {
 	@include anim(all);
+	background-color: $brand-danger;
+	color: $white;
 
 	&:hover,
 	&:focus,
@@ -100,14 +106,14 @@
 
 .btn-accent {
 	@include anim(all);
-	background: $btn-accent-bg;
-	color: $btn-accent-color;
+	background-color: $accent;
+	color: $white;
 
 	&:hover,
 	&:focus,
 	&.focus {
 		background-color: rgba($accent, .8);
-		color: $btn-accent-color;
+		color: $white;
 	}
 
 	&:active,
@@ -116,21 +122,21 @@
 		&:focus,
 		&.focus {
 			background-color: rgba($accent, .8);
-			color: $btn-accent-color;
+			color: $white;
 		}
 	}
 }
 
 .btn-inverse {
 	@include anim(all);
-	color: $btn-inverse-color;
-	background: $btn-inverse-bg;
+	color: rgba($primary, .8);
+	background: $white;
 
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($white, .15);
-		color: $btn-inverse-color;
+		color: rgba($primary, .6);
+		background: rgba($white, .15);
 	}
 
 	&:active,
@@ -138,22 +144,22 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($white, .15);
-			color: $btn-inverse-color;
+			color: rgba($primary, .6);
+			background: rgba($white, .15);
 		}
 	}
 }
 
 .btn-inverse-accent {
 	@include anim(all);
-	background: $btn-inverse-accent-bg;
-	color: $btn-inverse-accent-color;
+	color: $accent;
+	background: $white;
 
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($btn-inverse-accent-bg, .8);
-		color: $btn-inverse-accent-color;
+		color: rgba($accent, .6);
+		background: rgba($white, .15);
 	}
 
 	&:active,
@@ -161,8 +167,8 @@
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($btn-inverse-accent-bg, .8);
-			color: $btn-inverse-accent-color;
+			color: rgba($accent, .6);
+			background: rgba($white, .15);
 		}
 	}
 }

@@ -280,13 +280,14 @@ fieldset[disabled] .btn-link {
 	background: transparent;
 	border: 0;
 	padding: 0;
+	color: rgba($primary, .6);
 
-	&,
 	&:active,
 	&.active {
 		&:focus,
 		&.focus {
 			outline: none;
+			color: rgba($primary, .8);
 		}
 	}
 }

@@ -162,7 +162,7 @@
 	color: rgba($primary, .6);
 }
 
-.docs-content p,
+.docs-content p:not([class]),
 .docs-content li,
 .docs-content pre {
 	font-size: 15px;

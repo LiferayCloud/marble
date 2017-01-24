@@ -72,14 +72,14 @@
 	color: rgba($primary, .6);
 }
 
-.docs-content a:not(.btn):not(.avatar-initials) {
+.docs-content a:not([class]) {
 	@include anim(color);
 	color: $accent;
 	font-weight: 400;
 }
 
-.docs-content a:not(.btn):not(.avatar-initials):hover,
-.docs-content a:not(.btn):not(.avatar-initials):focus {
+.docs-content a:not([class]):hover,
+.docs-content a:not([class]):focus {
 	color: rgba($accent, .6);
 	text-decoration: none;
 }
@@ -662,7 +662,7 @@
 	line-height: 26px;
 }
 
-.docs p a:not(.btn):not(.avatar-initials) {
+.docs p a:not([class]) {
   border-bottom: 1px dashed rgba($primary, 0.4);
   color: inherit;
 

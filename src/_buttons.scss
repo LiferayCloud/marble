@@ -302,6 +302,10 @@ fieldset[disabled] .btn-link {
 	height: 48px;
 	width: 48px;
 
+	&.btn-squared {
+		border-radius: 4px;
+	}
+
 	&:hover,
 	&:focus,
 	&.focus {

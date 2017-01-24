@@ -19,11 +19,11 @@
 /* Avatar - Sizes
 	 ========================================================================== */
 
-$xsmall : 32px;
-$small  : 34px;
-$medium : 36px;
-$large  : 44px;
-$xlarge : 46px;
+$xsmall : 24px;
+$small  : 36px;
+$medium : 48px;
+$large  : 60px;
+$xlarge : 72px;
 
 .avatar-xsmall {
 	width: $xsmall;
@@ -89,7 +89,7 @@ $xlarge : 46px;
 	background: rgba($primary, .3);
 	color: white;
 	cursor: default;
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-family-secondary-bold;
 	font-weight: 400;
 	text-transform: uppercase;
 }
@@ -106,7 +106,8 @@ $xlarge : 46px;
 	@include anim(background);
 	background: rgba($primary, .1);
 	color: rgba($primary, .6);
-	font-weight: 600;
+	font-family: $font-family-secondary-bold;
+	font-weight: 400;
 }
 
 .avatar-number:hover {
@@ -124,25 +125,25 @@ $xlarge : 46px;
 
 .avatar-initials.avatar-small,
 .avatar-number.avatar-small {
-	font-size: 13px;
+	font-size: 14px;
 	line-height: $small;
 }
 
 .avatar-initials.avatar-medium,
 .avatar-number.avatar-medium {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: $medium;
 }
 
 .avatar-initials.avatar-large,
 .avatar-number.avatar-large {
-	font-size: 15px;
+	font-size: 18px;
 	line-height: $large;
 }
 
 .avatar-initials.avatar-xlarge,
 .avatar-number.avatar-xlarge {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: $xlarge;
 }
 

@@ -129,7 +129,7 @@
     left: -2rem;
   }
   ///////////////////////////LINK///////////////////////////
-  a:not(.btn) {
+  a:not([class]) {
     @include anim(color);
     font-family: inherit;
     font-size: inherit;

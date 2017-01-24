@@ -70,13 +70,13 @@
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary {
-	background-color: rgba($primary, .6);
+	background-color: rgba($primary, .8);
 	color: $white;
 
 	&:hover,
 	&:focus,
 	&.focus {
-		background-color: rgba($primary, .6);
+		background-color: rgba($primary, .8);
 		color: $white;
 	}
 
@@ -85,7 +85,7 @@ fieldset[disabled] .btn-primary {
 		&:hover,
 		&:focus,
 		&.focus {
-			background-color: rgba($primary, .6);
+			background-color: rgba($primary, .8);
 			color: $white;
 		}
 	}
@@ -215,7 +215,7 @@ fieldset[disabled] .btn-primary {
 	&:focus,
 	&.focus {
 		background: transparent;
-		color: rgba($accent, .6);
+		color: rgba($primary, .6);
 	}
 
 	&:active,
@@ -224,7 +224,31 @@ fieldset[disabled] .btn-primary {
 		&:focus,
 		&.focus {
 			background: transparent;
-			color: rgba($accent, .6);
+			color: rgba($primary, .6);
+		}
+	}
+}
+
+.btn-link.disabled,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+	background-color: rgba($primary, .8);
+	color: $white;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		background-color: rgba($primary, .8);
+		color: $white;
+	}
+
+	&:active,
+	&.active {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: rgba($primary, .8);
+			color: $white;
 		}
 	}
 }

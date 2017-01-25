@@ -172,6 +172,10 @@
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+
+		.notfound-icon [class*="icon-"] {
+			font-size: 36px;
+		}
 	}
 }
 

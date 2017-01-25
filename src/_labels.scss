@@ -4,23 +4,33 @@
 // Base ------------------------------------------------------------------------
 
 .label {
-	border-radius: $border-radius-base;
+	border-radius: 4px;
 	display: inline-block;
-	font-family: $font-family-sans-serif;
+	font-family: $font-family-secondary-semibold;
 	font-size: 14px;
 	padding: 0 12px;
 	position: relative;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 36px;
 
 	&.label-sm {
 		padding: 0 12px;
-		font-size: 10px;
+		font-size: 12px;
 		line-height: 24px;
 	}
 }
 
 // Colors ----------------------------------------------------------------------
+
+.label-accent {
+	background: $accent;
+	color: $white;
+}
+
+.label-inverse-accent {
+	background: rgba($accent, .1);
+	color: $accent;
+}
 
 .label-default {
 	background: rgba($primary, .1);
@@ -33,8 +43,8 @@
 }
 
 .label-primary {
-	background: rgba($accent, .2);
-	color: $accent;
+	background: rgba($primary, .8);
+	color: $white;
 }
 
 .label-success {

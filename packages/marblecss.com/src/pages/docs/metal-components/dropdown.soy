@@ -1,0 +1,118 @@
+---
+description: "Create description."
+title: "Dropdown"
+---
+
+{namespace pageMetalComponentsDropdown}
+
+/**
+ */
+{template .render}
+	{call styleguide.render data="all"}
+		{param content kind="html"}
+			{call .dropdown data="all" /}
+		{/param}
+	{/call}
+		
+{/template}
+
+/**
+ */
+{template .dropdown}
+	<h5>Dropdown Settings</h5>
+	{call .dropdownSettings data="all" /}
+
+	<h5>Dropdown Filter</h5>
+	
+	<h5>Dropdown Confirmation</h5>
+	
+{/template}
+
+/**
+ */
+{template .dropdownSettings}
+	{call Dropdown.render}
+		{param elementClasses: 'dropdown-settings' /}
+		{param header kind="html"}
+			<button class="btn-icon icon-16-ellipsis" data-onclick="toggle" type="button"></button>
+		{/param}
+		{param body kind="html"}
+			<li>
+				<a href="javascript:;">
+					<span class="icon-12-spinner-double-arrow"></span>Restart Service
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span class="icon-12-arrow-increase"></span>Scale Containers
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span class="icon-12-overlap"></span>Copy Service URL
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span class="icon-12-house"></span>Set as Home Service
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<span class="icon-12-trash"></span>Delete Service
+				</a>
+			</li>
+		{/param}
+	{/call}
+{/template}
+
+/**
+ */
+{template .dropdownFilter}
+	{call Dropdown.render}
+		{param elementClasses: 'dropdown-filter' /}
+		{param header kind="html"}
+			<button class="btn btn-default" data-onclick="toggle" type="button">
+				Alphanumeric<span class="icon-12-arrow-down-short"></span>
+			</button>
+		{/param}
+		{param body kind="html"}
+			<li>
+				<a href="javascript:;">
+					Last Activity
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					Newest
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					Alphanumeric
+				</a>
+			</li>
+		{/param}
+	{/call}
+{/template}
+
+/**
+ * @param title
+ * @param subtitle
+ */
+{template .dropdownConfirmation}
+	{call Dropdown.render}
+		{param elementClasses: 'dropdown-confirmation' /}
+		{param header kind="html"}
+			<button class="btn btn-default" data-onclick="toggle" type="button">
+				<span class="icon-12-trash"></span>
+			</button>
+		{/param}
+		{param body kind="html"}
+			<h3>{$title}</h3>
+			<p>{$subtitle}</p>
+			<button class="btn btn-default">Cancel</button>
+			<button class="btn btn-danger">Delete</button>
+		{/param}
+	{/call}
+{/template}

@@ -1,0 +1,56 @@
+{namespace styleguide}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .render}
+	{call main.render data="all"}
+		{param elementClasses: 'docs styleguide' /}
+		{param content kind="html"}
+			{call SideBar.render}
+				{param section: $site.index.children[1] /}
+			{/call}
+
+			{call .styleguide data="all" /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ * @param page
+ * @param content
+ */
+{template .styleguide}
+	<div class="sidebar-offset">
+		
+		<div class="container">
+			<div class="docs-guide row card">
+				<div class="docs-content col-xs-16">
+					{$content}
+
+					{call .styleguideFeedback data="all" /}
+				</div>
+			</div>
+		</div>
+
+	</div>
+{/template}
+
+/**
+ * @param page
+ * @param site
+ */
+{template .styleguideFeedback}
+	<div>
+		<div class="guide-github">
+			<div class="guide-github-img">
+				<span class="icon-16-github"></span>
+			</div>
+
+			<div class="guide-github-text">
+				<p>Contribute on Github! <a href="{$site.repo ?: ''}/tree/master/{$page.srcFilePath}" class="docs-github-link" target="_blank">Edit this section</a>.</p>
+			</div>
+		</div>
+	</div>
+{/template}

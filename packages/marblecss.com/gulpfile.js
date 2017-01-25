@@ -23,8 +23,15 @@ gulp.task('css', () => {
 // Fonts -----------------------------------------------------------------------
 
 gulp.task('fonts', () => {
-	return gulp.src('node_modules/westyle/build/fonts/**')
+	return gulp.src('node_modules/marble/build/fonts/**')
 		.pipe(gulp.dest('dist/fonts'));
+});
+
+// Images ----------------------------------------------------------------------
+
+gulp.task('images', () => {
+	return gulp.src('src/images/**')
+		.pipe(gulp.dest('dist/images'));
 });
 
 // Server ----------------------------------------------------------------------
@@ -60,7 +67,7 @@ gulp.task('watch', () => {
 // Build -----------------------------------------------------------------------
 
 gulp.task('build', (callback) => {
-	runSequence('generate', ['css', 'fonts', 'wedeploy'], callback);
+	runSequence('generate', ['css', 'fonts', 'images', 'wedeploy'], callback);
 });
 
 gulp.task('default', (callback) => {

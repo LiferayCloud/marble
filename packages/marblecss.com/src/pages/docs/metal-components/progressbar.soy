@@ -1,0 +1,41 @@
+---
+description: "Create description."
+title: "ProgressBar"
+---
+
+{namespace pageMetalComponentsProgressBar}
+
+/**
+ */
+{template .render}
+	{call styleguide.render data="all"}
+		{param content kind="html"}
+			<h5>Types / States</h5>
+			{call ProgressBar.render}
+				{param barClass: 'progress-bar-success' /}
+				{param min: 0 /}
+				{param max: 5 /}
+				{param value: 3 /}
+			{/call}
+			{call ProgressBar.render}
+				{param barClass: 'progress-bar-info' /}
+				{param min: 0 /}
+				{param max: 5 /}
+				{param value: 4 /}
+			{/call}
+			{call ProgressBar.render}
+				{param barClass: 'progress-bar-warning' /}
+				{param min: 0 /}
+				{param max: 5 /}
+				{param value: 1 /}
+			{/call}
+			{call ProgressBar.render}
+				{param barClass: 'progress-bar-danger' /}
+				{param min: 0 /}
+				{param max: 5 /}
+				{param value: 2 /}
+			{/call}
+		{/param}
+	{/call}	
+{/template}
+

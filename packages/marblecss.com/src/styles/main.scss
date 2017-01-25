@@ -1,27 +1,103 @@
 $accent: #ffb700;
 
-@import "node_modules/westyle/src/westyle";
+@import "node_modules/marble/src/marble";
 
 // Root
-@import "node_modules/westyle/src/templates/root";
+@import "node_modules/marble/src/templates/root";
 
 // Landing
-@import "node_modules/westyle/src/templates/landing";
+@import "node_modules/marble/src/templates/landing";
 
 // Docs
-@import "node_modules/westyle/src/templates/docs";
+@import "node_modules/marble/src/templates/docs";
 
 // Guide
-@import "node_modules/westyle/src/templates/guide";
+@import "node_modules/marble/src/templates/guide";
 
 // Search
-@import "node_modules/westyle/src/templates/search";
+@import "node_modules/marble/src/templates/search";
 
 // Updates
-@import "node_modules/westyle/src/templates/updates";
+@import "node_modules/marble/src/templates/updates";
 
 // Blog
-@import "node_modules/westyle/src/templates/blog";
+@import "node_modules/marble/src/templates/blog";
 
 // Tutorial
-@import "node_modules/westyle/src/templates/tutorial";
+@import "node_modules/marble/src/templates/tutorial";
+
+
+@import "styleguide";
+
+.group-demo > * {
+	display: inline-block;
+	margin: 0 12px 12px 0;
+}
+
+.group-demo [class*="avatar-"] [class*="icon-12-"],
+.group-demo [class*="avatar-"] [class*="icon-16-"],
+.group-demo .label .label-icon,
+.group-demo .label .label-action {
+	color: inherit;
+}
+
+.group-demo [class*="icon-12-"] {
+	color: rgba($primary, 0.8);
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	width: 24px;
+}
+
+.group-demo [class*="icon-16-"] {
+	color: rgba($primary, 0.8);
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	width: 36px;
+}
+
+.demo .box-ws {
+	width: 100%;
+	max-width: 200px;
+	height: 100px;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba($primary, .1);
+	display: block;
+	padding: 0;
+	position: relative;
+
+	text-align: center;
+	vertical-align: middle;
+}
+
+.demo.container-xs { max-width: 360px; }
+.demo.container-sm { max-width: 600px; }
+.demo.container-md { max-width: 960px; }
+.demo.container-lg { max-width: 1280px; }
+
+.styleguide .demo [class^="col-"] {
+	background-color: rgba(31, 122, 255, .2);
+	color: white;
+	height: 50px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+
+.styleguide .demo [class^="col-"]:after {
+	background-color: rgba(31, 122, 255, .5);
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 12px;
+	right: 12px;
+	bottom: 0;
+	z-index: -1;
+}

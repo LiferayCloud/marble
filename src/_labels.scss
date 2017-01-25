@@ -65,10 +65,11 @@
 
 // Icon ------------------------------------------------------------------------
 
-.label-icon {
+.label .label-icon {
 	margin-right: 6px;
 	position: relative;
 	top: 2px;
+	color: inherit;
 }
 
 // Clickable -------------------------------------------------------------------

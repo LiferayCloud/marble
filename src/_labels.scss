@@ -82,9 +82,9 @@
 	.label-action {
 		@include anim(top, 0.2s);
 		left: 50%;
-		margin-left: -6px;
 		position: absolute;
-		top: -24px;
+		top: -100%;
+		transform: translateX(-25%);
 	}
 
 	.label-icon {
@@ -100,7 +100,8 @@
 
 	&:hover {
 		.label-action {
-			top: 12px;
+			top: 50%;
+			transform: translateX(-25%) translateY(-50%);
 		}
 
 		.label-icon {

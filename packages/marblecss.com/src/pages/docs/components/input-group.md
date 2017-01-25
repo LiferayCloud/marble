@@ -439,5 +439,29 @@ Input with button and icon-12 suffix
 </div>
 ```
 
+Input with button and icon-16 suffix
 
+<div class="form-group">
+	<label>Example</label>
+	<div class="input-group">
+		<div class="input-inner-addon input-inner-addon-right">
+			<span class="icon-16-info"></span>
+			<input class="input-btn-right form-control" type="text" placeholder="Invite people to this app">
+		</div>
+		<span class="input-group-btn">
+			<button class="btn btn-sm btn-accent" type="button">Send Invite</button>
+		</span>
+	</div>
+</div>
 
+```htmlmixed
+<div class="input-group">
+	<div class="input-inner-addon input-inner-addon-right">
+		<span class="icon-16-info"></span>
+		<input class="input-btn-right form-control" type="text" placeholder="Invite people to this app">
+	</div>
+	<span class="input-group-btn">
+		<button class="btn btn-sm btn-accent" type="button">Send Invite</button>
+	</span>
+</div>
+```

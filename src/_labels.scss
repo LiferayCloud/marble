@@ -84,7 +84,7 @@
 		left: 50%;
 		position: absolute;
 		top: -100%;
-		transform: translateX(-25%);
+		transform: translateX(-50%);
 	}
 
 	.label-icon {
@@ -101,7 +101,7 @@
 	&:hover {
 		.label-action {
 			top: 50%;
-			transform: translateX(-25%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
 		}
 
 		.label-icon {

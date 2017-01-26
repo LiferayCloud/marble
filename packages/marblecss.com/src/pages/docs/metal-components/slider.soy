@@ -1,0 +1,28 @@
+---
+description: "Create description."
+title: "Slider"
+---
+
+{namespace pageMetalComponentsSlider}
+
+/**
+ * @param scaleValueChanged
+ */
+{template .render}
+	{let $slider kind="html"}
+		<h5>Default Slider</h5>
+		
+		{call MarbleSlider.render}
+			{param elementClasses: 'hidden-xs hidden-sm' /}
+			{param events: ['valueChanged': $scaleValueChanged] /}
+			{param max: 5 /}
+			{param value: 1 /}
+		{/call}
+
+	{/let}
+
+	{call styleguide.render data="all"}
+		{param content: $slider /}
+	{/call}
+		
+{/template}

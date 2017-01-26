@@ -1,0 +1,16 @@
+{namespace MarbleSlider}
+
+/**
+ * @param elementClasses
+ * @param events
+ * @param max
+ * @param value
+ */
+{template .render}
+	{call Slider.render}
+		{param elementClasses: $elementClasses /}
+		{param events: $events /}
+		{param max: $max /}
+		{param value: $value /}
+	{/call}
+{/template}

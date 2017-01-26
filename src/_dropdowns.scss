@@ -27,7 +27,6 @@
 .dropdown-menu li a,
 .dropdown-menu li button {
 	@include anim(color);
-	border-bottom-width: 0px;
 	color: $dropdown-link-color;
 	display: block;
 	font-size: 14px;
@@ -156,9 +155,10 @@
 }
 
 .dropdown.dropdown-filter .dropdown-menu li a {
+	border-bottom-width: 0px;
+	color: rgba($primary, 0.8);
 	font-family: $font-family-secondary-semibold;
 	font-weight: 400;
-	color: rgba($primary, 0.8);
 	font-size: 12px;
 	padding: 0 20px;
 	line-height: 36px;
@@ -200,9 +200,10 @@
 }
 
 .dropdown.dropdown-settings .dropdown-menu li a {
+	border-bottom-width: 0px;
+	color: rgba(14, 20, 26, 0.8);
 	font-family: "Galano Semibold", sans-serif;
 	font-weight: 400;
-	color: rgba(14, 20, 26, 0.8);
 	font-size: 12px;
 	margin: 0;
 	padding: 0 20px;

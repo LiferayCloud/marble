@@ -13,6 +13,7 @@
 
 .dropdown-menu li {
 	margin: 0;
+	padding: 0;
 
 	&:first-child {
 		margin-top: 24px;
@@ -26,6 +27,7 @@
 .dropdown-menu li a,
 .dropdown-menu li button {
 	@include anim(color);
+	border-bottom-width: 0px;
 	color: $dropdown-link-color;
 	display: block;
 	font-size: 14px;
@@ -150,6 +152,7 @@
 
 .dropdown.dropdown-filter .dropdown-menu li {
 	margin: 0;
+	padding: 0;
 }
 
 .dropdown.dropdown-filter .dropdown-menu li a {

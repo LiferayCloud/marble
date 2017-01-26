@@ -1,0 +1,16 @@
+{namespace MarbleProgressBar}
+
+/**
+ * @param barClass
+ * @param min
+ * @param max
+ * @param value
+ */
+{template .render}
+	{call ProgressBar.render}
+		{param barClass: $barClass /}
+		{param min: $min /}
+		{param max: $max /}
+		{param value: $value /}
+	{/call}
+{/template}

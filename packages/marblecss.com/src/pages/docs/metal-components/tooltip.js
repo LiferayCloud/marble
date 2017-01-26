@@ -3,7 +3,6 @@
 import { core, string } from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
-import 'metal-tooltip';
 
 import templates from './tooltip.soy';
 

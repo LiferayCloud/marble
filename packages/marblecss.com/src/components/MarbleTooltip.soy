@@ -1,0 +1,20 @@
+{namespace MarbleTooltip}
+
+/**
+ * @param elementClasses
+ * @param events
+ * @param ref
+ * @param selector
+ * @param visible
+ */
+{template .render}
+	
+	{call Tooltip.render}
+		{param elementClasses: $elementClasses /}
+		{param events: $events /}
+		{param ref: $ref /}
+		{param selector: $selector /}
+		{param visible: $visible /}
+	{/call}
+
+{/template}

@@ -73,6 +73,11 @@ $accent: #ffb700;
 	vertical-align: middle;
 }
 
+.demo .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .demo.container-xs { max-width: 360px; }
 .demo.container-sm { max-width: 600px; }
 .demo.container-md { max-width: 960px; }

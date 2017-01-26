@@ -1,0 +1,71 @@
+---
+description: "Create description."
+title: "Select"
+---
+
+{namespace pageMetalComponentsSelect}
+
+/**
+ *
+ */
+{template .render}
+	{let $select kind="html"}
+		<h5>Types</h5>
+
+		<p>Using String List as Content</p>
+
+		{call Select.render}
+			{param arrowClass: 'icon-16-arrow-down-short' /}
+			{param buttonClass: 'btn btn-default btn-block' /}
+			{param hiddenInputName: 'browser' /}
+			{param items: ['Chrome', 'Safari', 'Firefox', 'Internet Explorer', 'Opera'] /}
+			{param ref: 'browserSelector' /}
+			{param values: ['chrome', 'safari', 'firefox', 'internet-explorer', 'opera'] /}
+			{param selectedIndex: 0 /}
+		{/call}
+
+		<p>WeDeploy Dashboard: Deployment > Github Account </p>	
+
+		{let $item1 kind="html"}
+			<img src="https://avatars.githubusercontent.com/u/19154228?v=3" width="24" height="24"> ygorcosta
+		{/let}
+		{let $item2 kind="html"}
+			<img src="https://avatars.githubusercontent.com/u/10002920?v=3" width="24" height="24"> wedeploy
+		{/let}
+		{call Select.render}
+			{param arrowClass: 'icon-16-arrow-down-short' /}
+			{param buttonClass: 'btn btn-default btn-block' /}
+			{param hiddenInputName: 'githubUser' /}
+			{param items: [$item1, $item2] /}
+			{param ref: 'githubRepository' /}
+			{param values: ['1', '2'] /}
+			{param selectedIndex: 0 /}
+		{/call}
+
+		<p>WeDeploy Dashboard: Settings > Home Container</p>
+		
+		{let $selectDown1 kind="html"}
+			<span class="none"><span class="avatar avatar-white avatar-squared"><span class="icon-16-house"></span></span>none</span>
+		{/let}
+		{let $selectDown2 kind="html"}
+			<img src="http://api.dashboard.wedeploy.com/static/registry/wedeploy-hosting/icon.png" width="36" height="36">images
+		{/let}
+		{call Select.render}
+			{param elementClasses: 'select-large' /}
+			{param arrowClass: 'icon-16-arrow-down-short' /}
+			{param buttonClass: 'btn btn-default btn-block' /}
+			{param hiddenInputName: 'githubUser' /}
+			{param items: [$selectDown1, $selectDown2] /}
+			{param ref: 'homeContainer' /}
+			{param values: ['1', '2'] /}
+			{param selectedIndex: 0 /}
+		{/call}
+
+	{/let}
+
+	{call styleguide.render data="all"}
+		{param content: $select /}
+	{/call}
+
+{/template}
+

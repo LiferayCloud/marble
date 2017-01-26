@@ -1,0 +1,22 @@
+{namespace MarbleSelect}
+
+/**
+ * @param arrowClass
+ * @param buttonClass
+ * @param hiddenInputName
+ * @param items
+ * @param ref
+ * @param values
+ * @param selectedIndex
+ */
+{template .render}
+	{call Select.render}
+		{param arrowClass: $arrowClass /}
+		{param buttonClass: $buttonClass /}
+		{param hiddenInputName: $hiddenInputName /}
+		{param items: $items /}
+		{param ref: $ref /}
+		{param values: $values /}
+		{param selectedIndex: $selectedIndex /}
+	{/call}
+{/template}

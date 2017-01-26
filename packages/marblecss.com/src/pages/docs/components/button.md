@@ -14,7 +14,7 @@ title: "Button"
 	<button class="btn btn-link" href="#">Link</button>
 </div>
 
-```htmlmixed
+```xml
 <button class="btn btn-accent" href="#">Accent</button>
 <button class="btn btn-default" href="#">Default</button>
 <button class="btn btn-primary" href="#">Primary</button>
@@ -34,7 +34,7 @@ title: "Button"
 	<button class="btn btn-link" disabled="" href="#">Link</button>
 </div>
 
-```htmlmixed
+```xml
 <button class="btn btn-accent" disabled="" href="#">Accent</button>
 <button class="btn btn-default" disabled="" href="#">Default</button>
 <button class="btn btn-primary" disabled="" href="#">Primary</button>
@@ -51,7 +51,7 @@ title: "Button"
 	<button class="btn btn-primary btn-lg" href="#">Large</button>
 </div>
 
-```htmlmixed
+```xml
 <button class="btn btn-primary btn-sm" href="#">Small</button>
 <button class="btn btn-primary" href="#">Regular</button>
 <button class="btn btn-primary btn-lg" href="#">Large</button>
@@ -67,7 +67,7 @@ title: "Button"
 	<input class="btn btn-primary" type="reset" value="Reset">
 </div>
 
-```htmlmixed
+```xml
 <a class="btn btn-primary" href="#">Link</a>
 <button class="btn btn-primary" type="submit">Button</button>
 <input class="btn btn-primary" type="button" value="Input">
@@ -98,7 +98,7 @@ title: "Button"
 	</a>
 </div>
 
-```htmlmixed
+```xml
 <a class="btn btn-accent" href="#">
 	<span class="icon-16-star"></span> Accent
 </a>
@@ -126,7 +126,7 @@ title: "Button"
 	<button class="btn-transparent icon-16-ellipsis"></button>
 </div>
 
-```htmlmixed
+```xml
 <button class="btn-transparent icon-16-flash"></button>
 <button class="btn-transparent icon-16-ellipsis"></button>
 ```
@@ -138,7 +138,7 @@ title: "Button"
 	<button class="btn-icon icon-16-ellipsis"></button>
 </div>
 
-```htmlmixed
+```xml
 <button class="btn-icon btn-squared icon-16-ellipsis"></button>
 <button class="btn-icon icon-16-ellipsis"></button>
 ```

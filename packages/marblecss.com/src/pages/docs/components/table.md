@@ -17,7 +17,7 @@ title: "Table"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="no-collections">
 	<div class="empty-collection">
 		<div class="notfound">
@@ -43,7 +43,7 @@ title: "Table"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="no-data">
 	<div class="empty-data">
 		<div class="notfound">
@@ -63,7 +63,7 @@ title: "Table"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="loading">
 	<div class="light-loader">
 		<span class="spinner spinner-medium"></span>
@@ -116,7 +116,7 @@ title: "Table"
 	</table>
 </div>
 
-```htmlmixed
+```xml
 <div class="datatable">
 	<table class="table">
 		<thead>

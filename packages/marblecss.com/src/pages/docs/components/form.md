@@ -14,7 +14,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <form>
 	<div class="form-group">
 		<label for="input-regular">Label</label>
@@ -52,7 +52,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="has-action-button">
 	<input class="form-control" type="text" value="Click to copy to clipboard">
 	<button class="btn btn-sm btn-primary" type="button">
@@ -71,7 +71,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="form-group">
 	<label for="input-disabled">Example</label>
 	<input id="input-disabled" class="form-control" type="text" placeholder="Write something here..." disabled="">
@@ -87,7 +87,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="form-group">
 	<label for="input-readonly">Example</label>
 	<input id="input-readonly" class="form-control" type="text" value="Something to read" readonly="">
@@ -109,7 +109,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="has-action-button">
 	<input class="form-control" type="text" value="Click to copy to clipboard" readonly="">
 	<button class="btn btn-sm btn-primary" type="button">
@@ -134,7 +134,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="has-action-button">
 	<input class="form-control" type="password" value="B76BABB1377E5CDC8364AF4355659" readonly="">
 	<button class="btn btn-sm btn-primary" type="button">
@@ -159,7 +159,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="has-action-button">
 	<input class="form-control" type="text" value="B76BABB1377E5CDC8364AF4355659" readonly="">
 	<button class="btn btn-sm btn-primary" type="button">
@@ -178,7 +178,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="form-group has-success">
 	<label for="input-success">Success</label>
 	<input id="input-success" class="form-control" type="text">
@@ -194,7 +194,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="form-group has-warning">
 	<label for="input-warning">Warning</label>
 	<input id="input-warning" class="form-control" type="text">
@@ -210,7 +210,7 @@ title: "Forms"
 	</div>
 </form>
 
-```htmlmixed
+```xml
 <div class="form-group has-error">
 	<label for="input-error">Error</label>
 	<input id="input-error" class="form-control" type="text">

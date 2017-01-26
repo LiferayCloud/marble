@@ -15,7 +15,7 @@ Extra Small (360px)
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="container-hybrid">
 	<div class="row">
 		<div class="col-xs-8">xs</div>
@@ -35,7 +35,7 @@ Small (600px)
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="container-hybrid">
 	<div class="row">
 		<div class="col-xs-8 col-sm-4">sm</div>
@@ -61,7 +61,7 @@ Medium (960px)
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="container-hybrid">
 	<div class="row">
 		<div class="col-xs-8 col-sm-4 col-md-2">md</div>
@@ -96,7 +96,7 @@ Large (1280px)
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="container-hybrid">
 	<div class="row">
 		<div class="col-xs-8 col-sm-4 col-md-2 col-lg-1">lg</div>

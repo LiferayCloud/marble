@@ -16,7 +16,7 @@ Input with preffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon">http://</div>
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url">
@@ -33,7 +33,7 @@ Input with suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url">
 	<div class="input-group-addon">.appland.com</div>
@@ -51,7 +51,7 @@ Input with preffix and suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon">http://</div>
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url">
@@ -71,7 +71,7 @@ Input with preffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon disabled">http://</div>
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url" disabled="">
@@ -88,7 +88,7 @@ Input with suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url" disabled="">
 	<div class="input-group-addon disabled">.appland.com</div>
@@ -126,7 +126,7 @@ Input - Error
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon">http://</div>
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url">
@@ -143,7 +143,7 @@ Input - Warning
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url">
 	<div class="input-group-addon">.appland.com</div>
@@ -161,7 +161,7 @@ Input - Success
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon">http://</div>
 	<input type="text" class="input-group-addon-input form-control" placeholder="app-url">
@@ -181,7 +181,7 @@ Input - right icon 12 preffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-inner-addon input-inner-addon-left">
 	<span class="input-inner-icon-helper icon-12-person"></span>
 	<input class="form-control" type="text" placeholder="app-url">
@@ -198,7 +198,7 @@ Input - right icon 16 preffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-inner-addon input-inner-addon-left">
 	<span class="input-inner-icon-helper icon-16-info"></span>
 	<input class="form-control" type="text" placeholder="app-url">
@@ -215,7 +215,7 @@ Input - left icon 12 suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-inner-addon input-inner-addon-right">
 	<input class="form-control" type="text" placeholder="app-url">
 	<span class="input-inner-icon-helper icon-12-person"></span>
@@ -232,7 +232,7 @@ Input - left icon 16 suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-inner-addon input-inner-addon-right">
 	<input class="form-control" type="text" placeholder="app-url">
 	<span class="input-inner-icon-helper icon-16-info"></span>
@@ -254,7 +254,7 @@ Preffix Addon and Icon on Right
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon">http://</div>
 	<div class="input-inner-addon input-inner-addon-left">
@@ -277,7 +277,7 @@ Suffix Addon and Icon on Right
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-inner-addon input-inner-addon-left">
 		<span class="icon-16-info"></span>
@@ -301,7 +301,7 @@ Preffix and Suffix Addons and Icon on Right
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-group-addon">http://</div>
 	<div class="input-inner-addon input-inner-addon-left">
@@ -326,7 +326,7 @@ Input - Preffix Button
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<span class="input-group-btn">
 		<button class="btn btn-sm btn-accent" type="button">Send Invite</button>
@@ -347,7 +347,7 @@ Input - Suffix Button
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<input class="input-btn-right form-control" type="text" placeholder="Invite people to this app">
 	<span class="input-group-btn">
@@ -373,7 +373,7 @@ Input with button and icon-12 suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<span class="input-group-btn">
 		<button class="btn btn-sm btn-accent" type="button">Send Invite</button>
@@ -400,7 +400,7 @@ Input with button and icon-16 suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<span class="input-group-btn">
 		<button class="btn btn-sm btn-accent" type="button">Send Invite</button>
@@ -427,7 +427,7 @@ Input with button and icon-12 suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-inner-addon input-inner-addon-right">
 		<span class="icon-12-person"></span>
@@ -454,7 +454,7 @@ Input with button and icon-16 suffix
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="input-group">
 	<div class="input-inner-addon input-inner-addon-right">
 		<span class="icon-16-info"></span>

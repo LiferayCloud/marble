@@ -12,7 +12,7 @@ title: "Spinner"
 	<span class="spinner spinner-medium spinner-danger"></span>
 </div>
 
-```htmlmixed
+```xml
 <span class="spinner spinner-medium"></span>
 <span class="spinner spinner-medium spinner-warning"></span>
 <span class="spinner spinner-medium spinner-danger"></span>
@@ -26,7 +26,7 @@ title: "Spinner"
 	<span class="spinner spinner-small"></span>
 </div>
 
-```htmlmixed
+```xml
 <span class="spinner spinner-large"></span>
 <span class="spinner spinner-medium"></span>
 <span class="spinner spinner-small"></span>
@@ -40,7 +40,7 @@ title: "Spinner"
 	<span class="spinner spinner-medium spinner-danger spinner-done"></span>
 </div>
 
-```htmlmixed
+```xml
 <span class="spinner spinner-medium spinner-done"></span>
 <span class="spinner spinner-medium spinner-warning spinner-done"></span>
 <span class="spinner spinner-medium spinner-danger spinner-done"></span>
@@ -54,7 +54,7 @@ title: "Spinner"
 	<span class="spinner spinner-small spinner-done"></span>
 </div>
 
-```htmlmixed
+```xml
 <span class="spinner spinner-large spinner-done"></span>
 <span class="spinner spinner-medium spinner-done"></span>
 <span class="spinner spinner-small spinner-done"></span>

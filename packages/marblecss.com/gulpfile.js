@@ -9,7 +9,8 @@ const sass = require('gulp-sass');
 
 electric.registerTasks({
 	gulp: gulp,
-	plugins: ['electric-components']
+	plugins: ['electric-components'],
+	codeMirrorLanguages: ['xml', 'javascript', 'soy']
 });
 
 // CSS -------------------------------------------------------------------------

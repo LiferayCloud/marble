@@ -14,7 +14,7 @@ title: "Ribbon"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="ribbon-container">
 	<div class="ribbon">New</div>
 </div>
@@ -30,7 +30,7 @@ title: "Ribbon"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="ribbon-container">
 	<div class="ribbon ribbon-accent">New</div>
 </div>
@@ -46,7 +46,7 @@ title: "Ribbon"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="ribbon-container">
 	<div class="ribbon ribbon-success">New</div>
 </div>
@@ -62,7 +62,7 @@ title: "Ribbon"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="ribbon-container">
 	<div class="ribbon ribbon-warning">New</div>
 </div>
@@ -78,7 +78,7 @@ title: "Ribbon"
 	</div>
 </div>
 
-```htmlmixed
+```xml
 <div class="ribbon-container">
 	<div class="ribbon ribbon-danger">New</div>
 </div>

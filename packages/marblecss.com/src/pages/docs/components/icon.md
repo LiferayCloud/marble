@@ -92,7 +92,7 @@ title: "Icons"
 	<span title="icon-12-upload" class="icon-12-upload"></span>
 </div>
 
-```htmlmixed
+```xml
 <span class="icon-12-alert"></span>
 <span class="icon-12-apps"></span>
 [...]
@@ -214,7 +214,7 @@ title: "Icons"
 	<span title="icon-16-upload" class="icon-16-upload"></span>
 </div>
 
-```htmlmixed
+```xml
 <span class="icon-16-apps"></span>
 <span class="icon-16-arrow-down-rod"></span>
 [...]

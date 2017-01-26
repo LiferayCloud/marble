@@ -24,7 +24,7 @@ title: "Labels"
 	</span>
 </div>
 
-```htmlmixed
+```xml
 <span class="label label-default">
 	<span class="label-text">Default</span>
 </span>
@@ -51,7 +51,7 @@ title: "Labels"
 	<span class="label label-primary">Regular</span>
 </div>
 
-```htmlmixed
+```xml
 <span class="label label-default label-sm">Small</span>
 <span class="label label-primary label-sm">Small</span>
 <span class="label label-default">Regular</span>
@@ -78,7 +78,7 @@ title: "Labels"
 	</span>
 </div>
 
-```htmlmixed
+```xml
 <span class="label label-default">
 	<span class="label-icon icon-12-person"></span>Default
 </span>
@@ -126,7 +126,7 @@ title: "Labels"
 	</button>
 </div>
 
-```htmlmixed
+```xml
 <button class="btn-transparent label label-default label-clickable">
 	<span class="label-action icon-12-trash"></span>
 	<span class="label-icon icon-12-person"></span>

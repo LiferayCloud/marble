@@ -84,18 +84,18 @@
     }
   }
   ///////////////////////////LISTs///////////////////////////
-  ul,
-  ol {
+  ul:not(.dropdown-menu),
+  ol:not(.dropdown-menu) {
     list-style: none;
     padding: 0;
     margin-left: 2rem;
   }
 
-  ul li {
+  ul:not(.dropdown-menu) li {
     position: relative;
   }
 
-  ul li:before {
+  ul:not(.dropdown-menu) li:before {
     font-family: $font-family-secondary-bold;
     display: inline-block;
     content: '\2022';

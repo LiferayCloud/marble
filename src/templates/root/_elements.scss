@@ -84,24 +84,30 @@
     }
   }
   ///////////////////////////LISTs///////////////////////////
-  ul:not(.dropdown-menu):not(.radio-group),
-  ol:not(.dropdown-menu):not(.radio-group) {
+  ul:not(.dropdown-menu):not(.radio-group):not(.checklist),
+  ol:not(.dropdown-menu):not(.radio-group):not(.checklist) {
     list-style: none;
     padding: 0;
     margin-left: 2rem;
   }
 
-  ul:not(.dropdown-menu):not(.radio-group) li {
+  ul:not(.dropdown-menu):not(.radio-group):not(.checklist) li {
     position: relative;
   }
 
-  ul:not(.dropdown-menu):not(.radio-group) li:before {
+  ul:not(.dropdown-menu):not(.radio-group):not(.checklist) li:before {
     font-family: $font-family-secondary-bold;
     display: inline-block;
     content: '\2022';
     width: 2rem;
     position: absolute;
     left: -1.5rem;
+  }
+
+  ul.checklist {
+  	list-style: none;
+  	padding: 0;
+    margin-left: 0;
   }
 
   ul.checklist li:before {

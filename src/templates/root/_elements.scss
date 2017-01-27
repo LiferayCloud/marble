@@ -241,19 +241,19 @@
   }
 
   ///////////////////////////RADIO///////////////////////////
-  .radio-group {
+  ul.radio-group {
     margin-left: 0;
   }
 
-  .radio-group * {
+  ul.radio-group * {
     position: relative;
   }
 
-  .radio-group *:before {
+  ul.radio-group *:before {
     content: "";
   }
 
-  .radio-group * label {
+  ul.radio-group * label {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
@@ -265,11 +265,11 @@
     top: 0;
   }
 
-  .radio-group * input[type="radio"] {
+  ul.radio-group * input[type="radio"] {
     display: none;
   }
 
-  .radio-group * input[type="radio"] + label:before {
+  ul.radio-group * input[type="radio"] + label:before {
     @include anim(all);
     color: rgba($primary, 0.8);
     content: "\E059";

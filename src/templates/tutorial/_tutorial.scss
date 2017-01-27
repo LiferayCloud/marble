@@ -25,11 +25,6 @@
     color: rgba($accent, 0.6);
   }
 
-  .container .content ul.checklist li:before {
-    content: "\E017";
-    top: 1px;
-  }
-
   .container .content .aside {
     margin: calc(2rem * #{$lineHeight}) 0;
 

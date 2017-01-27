@@ -112,12 +112,13 @@
 
   ul.checklist li:before {
     color: $accent;
-    width: 2rem;
-    font-family: "icon-16";
     content: "\E017";
+    font-family: "icon-16";
     font-size: 16px;
+    left: 0;
+    position; relative;
     top: 2px;
-    left: -2rem;
+    width: 2rem;
   }
 
   ol li {

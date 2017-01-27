@@ -20,8 +20,21 @@ title: "Tooltip"
 			{param ref: 'tooltip' /}
 			{param selector: '.show-tooltip' /}
 			{param visible: false /}
+			{param title: 'Select the service that will respond to requests made on project main domain.' /}
 		{/call}
 
+		<h5>Default Tooltip - Text Align Left</h5>
+
+		<p>Home Service <span class="icon-12-info show-tooltip-2 icon-info" alt="Select the service that will respond to requests made on project main domain."></span></p>
+		
+		{call MarbleTooltip.render}
+			{param elementClasses: 'fade text-left' /}
+			{param events: ['alignElementChanged': $tooltipAlignElementChanged] /}
+			{param ref: 'tooltip2' /}
+			{param selector: '.show-tooltip-2' /}
+			{param visible: false /}
+			{param title: 'Select the service that will respond to requests made on project main domain.' /}
+		{/call}
 	{/let}
 
 	{call styleguide.render data="all"}

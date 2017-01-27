@@ -1,30 +1,30 @@
 $accent: #ffb700;
 
-@import "node_modules/marble/src/marble";
+@import "marble";
 
 // Root
-@import "node_modules/marble/src/templates/root";
+@import "templates/root";
 
 // Landing
-@import "node_modules/marble/src/templates/landing";
+@import "templates/landing";
 
 // Docs
-@import "node_modules/marble/src/templates/docs";
+@import "templates/docs";
 
 // Guide
-@import "node_modules/marble/src/templates/guide";
+@import "templates/guide";
 
 // Search
-@import "node_modules/marble/src/templates/search";
+@import "templates/search";
 
 // Updates
-@import "node_modules/marble/src/templates/updates";
+@import "templates/updates";
 
 // Blog
-@import "node_modules/marble/src/templates/blog";
+@import "templates/blog";
 
 // Tutorial
-@import "node_modules/marble/src/templates/tutorial";
+@import "templates/tutorial";
 
 
 @import "styleguide";

@@ -6,6 +6,8 @@ const ghPages = require('gulp-gh-pages');
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
+const marble = require('marble');
+
 
 electric.registerTasks({
 	gulp: gulp,
@@ -17,7 +19,7 @@ electric.registerTasks({
 
 gulp.task('css', () => {
 	return gulp.src('src/styles/**/*.scss')
-		.pipe(sass({includePaths: ['node_modules']}))
+		.pipe(sass({includePaths: ['node_modules', marble.src]}))
 		.pipe(gulp.dest('dist/styles'));
 });
 

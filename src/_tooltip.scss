@@ -1,18 +1,23 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 
 .tooltip-inner {
+	width: 100%;
+	max-width: 220px;
+	padding: 12px;
+
 	background: white;
 	border-radius: $border-radius-base;
 	box-shadow: 0 2px 8px rgba(black, .1);
-	max-width: 220px;
-	min-width: initial;
-	padding: 12px;
-	text-align: left;
 
+	color: rgba($primary, 0.8);
 	font-size: 12px;
 	font-weight: 400;
 	font-family: $font-family-secondary-bold;
-	color: rgba($primary, 0.8);
+	text-align: center;
+}
+
+.tooltip-inner.text-left {
+	text-align: left;
 }
 
 .tooltip-arrow {

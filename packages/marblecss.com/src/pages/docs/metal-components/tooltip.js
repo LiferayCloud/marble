@@ -6,7 +6,7 @@ import Soy from 'metal-soy';
 
 import templates from './tooltip.soy';
 
-class tooltip extends Component {
+class Tooltip extends Component {
 
 	tooltipAlignElementChanged(event) {
 		const value = event.newVal.getAttribute('alt');
@@ -16,6 +16,6 @@ class tooltip extends Component {
 	}
 };
 
-Soy.register(tooltip, templates);
+Soy.register(Tooltip, templates);
 
-export default tooltip;
+export default Tooltip;

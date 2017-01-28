@@ -7,13 +7,13 @@ import 'metal-slider'
 
 import templates from './slider.soy';
 
-class slider extends Component {
+class Slider extends Component {
 
 	scaleValueChanged(event, payload) {
 		console.log("scaleValueChanged: " + event.newVal);
 	}
 };
 
-Soy.register(slider, templates);
+Soy.register(Slider, templates);
 
-export default slider;
+export default Slider;

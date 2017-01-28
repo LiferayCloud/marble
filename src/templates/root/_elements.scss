@@ -183,7 +183,7 @@
   }
   ///////////////////////////BLOCKQUOTE///////////////////////////
   blockquote,
-  blockquote p {
+  blockquote p:not([class]) {
     font-family: $font-family-secondary-bold;
     font-size: $font-h4;
     line-height: calc(2rem * #{$lineHeight});

@@ -4,9 +4,8 @@
     margin: calc(2rem * #{$lineHeight}) auto;
   }
 
-  .content section {
-    margin: 0 0 calc(3rem * #{$lineHeight});
-
+  .content section,
+  .content article {
     > * {
       margin-top: 0;
       margin-bottom: calc(1rem * #{$lineHeight});

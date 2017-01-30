@@ -313,9 +313,9 @@
 	color: rgba($primary, .8);
 }
 
-.topbar.topbar-light .topbar-link-selected,
-.topbar.topbar-light .topbar-link-selected:hover,
-.topbar.topbar-light .topbar-link-selected:focus {
+.topbar.topbar-light .topbar-link.topbar-link-selected,
+.topbar.topbar-light .topbar-link.topbar-link-selected:hover,
+.topbar.topbar-light .topbar-link.topbar-link-selected:focus {
 	color: $accent;
 	border-bottom: 0px solid $accent;
 }

@@ -1,7 +1,9 @@
 {
-  "private": true,
   "name": "marble",
+  "description": "WeDeploy's style guide and UI components",
   "version": "2.2.1",
+  "repository": "wedeploy/marble",
+  "homepage": "marblecss.com",
   "main": "index.js",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",

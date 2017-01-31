@@ -18,6 +18,10 @@
 	&.active {
 		box-shadow: none;
 	}
+
+	&.btn-block {
+		padding: 0;
+	}
 }
 
 .btn-default {

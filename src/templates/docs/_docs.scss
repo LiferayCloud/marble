@@ -1,6 +1,10 @@
 /* Navigation
 	 ========================================================================== */
 
+.docs .sidebar {
+	overflow-y: auto;
+}
+
 .docs-nav-container {
 	position: relative;
 	display: none;

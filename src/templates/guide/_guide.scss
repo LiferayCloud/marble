@@ -249,4 +249,12 @@
 	}
 }
 
+//codemirror effect
+.code-container .btn-copy {
+	@include anim(opacity);
+	opacity: 0;
+}
 
+.code-container:hover .btn-copy {
+	opacity: 1;
+}

@@ -26,16 +26,16 @@
     }
   }
 
-  .container p,
-  .container li {
+  .container .content p,
+  .container .content li {
     font-size: $font-h6;
   }
 
-  .container blockquote p {
+  .container .content blockquote p {
     font-size: $font-h4;
   }
 
-  .container a {
+  .container .content a {
     @include anim(color);
     border-bottom: 1px dashed rgba($primary, 0.4);
     color: inherit;

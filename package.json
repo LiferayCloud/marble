@@ -5,6 +5,7 @@
   "repository": "wedeploy/marble",
   "homepage": "marblecss.com",
   "main": "index.js",
+  "license" : "BSD",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "mathsass": "^0.9.5"

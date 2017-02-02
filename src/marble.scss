@@ -71,9 +71,11 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
+// Navigation
+@import "senna";
+
 .truncate {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-

@@ -44,17 +44,25 @@
   .topbar-item {
     margin: 0 20px; } }
 
-.code, .CodeMirror {
-  margin: 20px 0;
-  border-radius: 4px; }
-
 .CodeMirror {
-  font-family: 'Roboto Mono', monaco, monospace;
+  border-radius: 4px;
   height: auto;
   z-index: 0; }
 
-.docs-content .CodeMirror pre {
+.CodeMirror,
+.docs-content pre {
+  font-family: 'Roboto Mono', monaco, monospace;
+  margin: 20px 0; }
+
+.docs-content pre {
+  border: 0;
+  padding: 4px;
   font-size: 14px; }
+
+.docs-content .CodeMirror pre {
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
 
 .code-container {
   position: relative; }
@@ -74,7 +82,3 @@
   z-index: 1; }
   .btn-copy:hover, .btn-copy:focus {
     background: rgba(255, 255, 255, 0.5); }
-
-.tooltip-inner {
-  text-align: center;
-  width: 66px; }

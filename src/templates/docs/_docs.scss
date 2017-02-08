@@ -167,8 +167,7 @@
 }
 
 .docs-content p:not([class]),
-.docs-content li,
-.docs-content pre {
+.docs-content li {
 	font-size: 15px;
 	line-height: 24px;
 }
@@ -652,6 +651,12 @@
   font-size: 100%;
   font-family: 'Roboto Mono', monospace;
 	padding: 0 4px;
+}
+
+.docs * .code,
+.docs .docs-content * .code {
+	margin: 0;
+	background: transparent;
 }
 
 .docs p code,

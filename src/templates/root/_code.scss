@@ -1,16 +1,25 @@
-.code, .CodeMirror {
-	margin: 20px 0;
-	border-radius: 4px;
-}
-
 .CodeMirror {
-	font-family: 'Roboto Mono', monaco, monospace;
+	border-radius: 4px;
 	height: auto;
 	z-index: 0;
 }
 
+.CodeMirror,
+.docs-content pre {
+	font-family: 'Roboto Mono', monaco, monospace;
+	margin: 20px 0;
+}
+
+.docs-content pre {
+	border: 0;
+	padding: 4px;
+	font-size: 14px;
+}
+
 .docs-content .CodeMirror pre {
 	font-size: 14px;
+	margin: 0;
+	padding: 0;
 }
 
 .code-container {
@@ -34,4 +43,3 @@
 		background: rgba(white, .5);
 	}
 }
-

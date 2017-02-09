@@ -20,7 +20,7 @@
 
 	.container,
 	.container-hybrid {
-		width: 100%;
+		width: calc(100% - 40px);
 	}
 
 	.container-hybrid .flex-row {

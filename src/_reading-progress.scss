@@ -1,6 +1,7 @@
 .reading-progress {
-	background: rgba($primary, .05);
+	background: $white;
 	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba($primary, 0.1);
 	position: relative;
 	width: 255px;
 }
@@ -17,7 +18,7 @@
 .reading-progress a {
 	display: block;
 	position: relative;
-	padding: 16px 11px 16px 80px;
+	padding: 12px 12px 12px 60px;
 }
 
 .reading-progress a::before,
@@ -27,19 +28,21 @@
 
 .reading-progress a::before {
 	background: transparent;
-	content: counter(articles);
-	top: 50%;
-	bottom: auto;
-	transform: translateY(-50%);
-	left: 20px;
-	width: 36px;
-	height: 36px;
-	line-height: 36px;
 	border-radius: 50%;
+	bottom: auto;
+	box-shadow: 0 2px 8px rgba($primary, 0.2);
 	color: rgba($primary, .4);
+	content: counter(articles);
+	font-family: $font-family-secondary;
+	font-size: 12px;
+	height: 36px;
+	left: 12px;
+	line-height: 36px;
 	text-align: center;
-	box-shadow: inset 0 0 0 1px #d9d9d9;
+	top: 12px;
 	transition: background-color 0.3s, color 0.3s;
+	transform: none;
+	width: 36px;
 }
 
 .reading-progress a.reading .reading-title {
@@ -56,7 +59,8 @@
 }
 
 .reading-progress a.read .reading-title {
-	color: #a6a6a6;
+	color: rgba($primary, 0.6)
+	text-decoration: line-through;
 }
 
 .reading-progress a.reading.read svg {
@@ -68,32 +72,39 @@
 	color: #b3b3b3;
 }
 
+.reading-progress a.reading:not(.read)::before {
+	color: $accent;
+}
+
 .reading-progress li:last-of-type a::after {
 	display: none;
 }
 
 .reading-title {
+	color: rgba($primary, 0.6);
 	display: block;
-	font-size: 15px;
-	line-height: 1.2;
-	color: rgba($primary, .6);
-	white-space: nowrap;
+	font-family: $font-family-secondary;
+	font-size: 14px;
+	line-height: 24px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	transition: color 0.3s;
+	white-space: normal;
 }
 
 .reading-subtitle {
-	color: rgba($primary, .4);
-	font-size: 12px;
+	color: rgba($primary, 0.4);
+	font-size: 10px;
 }
 
 .reading-progress svg {
-	display: none;
-	position: absolute;
-	top: 50%;
 	bottom: auto;
-	transform: translateY(-50%);
-	left: 20px;
+	display: none;
+	height: 38px;
+	left: 11px;
+	position: absolute;
 	stroke: $accent;
+	top: 11px;
+	transform: none;
+	width: 38px;
 }

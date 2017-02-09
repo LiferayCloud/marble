@@ -1,29 +1,38 @@
 .CodeMirror {
+	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
 	border-radius: 4px;
 	height: auto;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 	z-index: 0;
 }
 
 .CodeMirror,
 .docs-content pre {
 	font-family: 'Roboto Mono', monaco, monospace;
-	margin: 20px 0;
 }
 
 .docs-content pre {
 	border: 0;
-	padding: 4px;
 	font-size: 14px;
+	margin: 0;
+	opacity: 0;
+	padding: 4px;
+	position: relative;
 }
 
 .docs-content .CodeMirror pre {
 	font-size: 14px;
 	margin: 0;
 	padding: 0;
+	opacity: 1;
 }
 
 .code-container {
 	position: relative;
+	margin: 20px 0;
 }
 
 .btn-copy {

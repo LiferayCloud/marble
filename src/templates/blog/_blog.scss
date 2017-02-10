@@ -79,6 +79,42 @@
   .posts-list a:hover h4 {
     color: $accent;
   }
+	
+	.iframe-container {
+	height: 400px;
+	position: relative;
+	width: calc(100% + 5rem);
+	left: -2.5rem;
+	padding: 0 15px;
+
+	display: none;
+		@media (min-width: 600px) {
+			display: block;
+		}
+	}
+
+	.no-iframe {
+		display: block;
+		@media (min-width: 600px) {
+			display: none;
+		}
+	}
+
+	.iframe-container iframe {
+		min-width: 100%;
+		width: 1px;
+		border: 3px solid;
+		position: relative;
+		top: -3px;
+		height: calc(100% - 23px);
+		left: 0;
+		right: 0;
+	}
+
+	.iframe-container .iframe-frame {
+		width: 100%;
+		position: relative;
+	}
 
   ///////////////////////////SIGNATURE///////////////////////////
   .we-container {

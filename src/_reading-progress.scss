@@ -26,6 +26,11 @@
 	position: absolute;
 }
 
+.docs .reading-progress li a:not([class]),
+.docs .reading-progress p a:not([class]) {
+	border-bottom: 0px dashed rgba($primary, 0.4);
+}
+
 .reading-progress a::before {
 	background: transparent;
 	border-radius: 50%;

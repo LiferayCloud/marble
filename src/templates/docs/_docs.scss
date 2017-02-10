@@ -604,58 +604,58 @@
 }
 
 .docs .guide-header {
-  padding: 60px 0;
-  margin-top: 0;
+	padding: 60px 0;
+	margin-top: 0;
 
-  @media (min-width: 960px) {
-    margin-top: 60px;
-  }
+	@media (min-width: 960px) {
+		margin-top: 60px;
+	}
 }
 
 .docs .guide-header-title {
-  margin: 0;
+	margin: 0;
 }
 
 .docs .btn-copy {
-  background: rgba($white, 0.6);
-  border-radius: 2px;
-  height: 24px;
-  line-height: 24px;
-  padding: 0;
-  width: 24px;
-  top: 4px;
+	background: rgba($white, 0.6);
+	border-radius: 2px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0;
+	width: 24px;
+	top: 4px;
 
-  &:hover {
-    background: rgba($white, 0.8);
-  }
+	&:hover {
+		background: rgba($white, 0.8);
+	}
 
-  > [class*="icon-"] {
-    font-size: 10px;
-  }
+	> [class*="icon-"] {
+		font-size: 10px;
+	}
 }
 
 .docs .CodeMirror-sizer {
-  margin-left: 40px !important;
+	margin-left: 40px !important;
 }
 
 .docs .CodeMirror-gutter-wrapper {
-  left: -28px !important;
+	left: -28px !important;
 }
 
 .docs .CodeMirror-linenumber {
-  line-height: 24px;
-  text-align: left;
-  width: 32px !important;
-  padding: 0;
+	line-height: 24px;
+	text-align: left;
+	width: 32px !important;
+	padding: 0;
 }
 
 .docs * code,
 .docs .docs-content * code {
-  display: inline-block;
-  color: rgba($primary, 0.6);
-  background: rgba($primary, 0.1);
-  font-size: 100%;
-  font-family: 'Roboto Mono', monospace;
+	display: inline-block;
+	color: rgba($primary, 0.6);
+	background: rgba($primary, 0.1);
+	font-size: 100%;
+	font-family: 'Roboto Mono', monospace;
 	padding: 0 4px;
 }
 
@@ -678,14 +678,15 @@
 	line-height: 26px;
 }
 
-.docs p a:not([class]) {
-  border-bottom: 1px dashed rgba($primary, 0.4);
-  color: inherit;
+.docs p a:not([class]),
+.docs li a:not([class]) {
+	border-bottom: 1px dashed rgba($primary, 0.4);
+	color: inherit;
 
-  &:hover {
-    border-bottom: 1px dashed $accent;
-    color: $accent;
-  }
+	&:hover {
+		border-bottom: 1px dashed $accent;
+		color: $accent;
+	}
 }
 .docs .docs-content .guide-github {
 	margin: 24px 0 60px;

@@ -81,13 +81,13 @@
   }
 	
 	.iframe-container {
-	height: 400px;
-	position: relative;
-	width: calc(100% + 5rem);
-	left: -2.5rem;
-	padding: 0 15px;
+		height: 400px;
+		position: relative;
+		width: calc(100% + 5rem);
+		left: -2.5rem;
+		padding: 0 15px;
 
-	display: none;
+		display: none;
 		@media (min-width: 600px) {
 			display: block;
 		}

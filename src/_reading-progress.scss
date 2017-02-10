@@ -29,6 +29,10 @@
 .docs .reading-progress li a:not([class]),
 .docs .reading-progress p a:not([class]) {
 	border-bottom: 0px dashed rgba($primary, 0.4);
+
+	&:hover {
+		border-bottom: 0px dashed $accent;
+	}
 }
 
 .reading-progress a::before {

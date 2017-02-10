@@ -24,6 +24,10 @@
 	position: relative;
 }
 
+.docs-content pre code {
+	white-space: pre;
+}
+
 .docs-content .CodeMirror pre {
 	font-size: 14px;
 	line-height: 24px;

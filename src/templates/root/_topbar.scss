@@ -1,4 +1,4 @@
-.topbar-logo-link {
+.topbar .topbar-logo-link {
 	.icon {
 		color: $accent;
 		font-size: 24px;
@@ -44,7 +44,7 @@
 		top: 0;
 		z-index: 2;
 	}
-	
+
 	.topbar.topbar-fixed{
 		position: fixed;
 	}

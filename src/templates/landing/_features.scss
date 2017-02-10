@@ -26,14 +26,15 @@
 	text-align: center;
 }
 
-.feature-graphic [class^="icon-16-"], 
-.feature-graphic [class*="icon-16-"] {
+.feature .feature-graphic [class^="icon-16-"],
+.feature .feature-graphic [class*="icon-16-"] {
 	box-shadow: 0 2px 8px rgba($primary, .2);
 	border-radius: 50%;
-	font-size: 38px;
-	line-height: 84px;
 	color: $accent;
-	width: 84px;
 	display: block;
+	font-size: 28px;
+	height: 84px;
+	line-height: 84px;
 	margin: auto;
+	width: 84px;
 }

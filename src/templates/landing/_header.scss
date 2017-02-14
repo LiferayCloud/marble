@@ -1,5 +1,5 @@
 .header {
-	padding: 75px 0 0;
+	padding: 75px 0 55px;
 	text-align: center;
 }
 
@@ -21,14 +21,6 @@
 	margin: 0 20px 20px;
 }
 
-.gh-btns {
-	margin: 0;
-	margin-top: 75px;
-	background: rgba($primary, .07);
-	padding-top: 16px;
-	padding-bottom: 10.5px;
-}
-
 @media (min-width: $screen-sm-min) {
 	.header-title {
 		font-size: 99px;
@@ -37,22 +29,10 @@
 	.header-subtitle {
 		font-size: 24px;
 	}
-
-	.header {
-		padding: 75px 0 0;
-	}
-
-	.gh-btns {
-		margin-top: 75px;
-	}
 }
 
 @media (min-width: $screen-md-min) {
 	.header {
-		padding: 200px 0 0;
-	}
-
-	.gh-btns {
-		margin-top: 140px;
+		padding: 200px 0 180px;
 	}
 }

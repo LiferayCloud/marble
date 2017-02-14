@@ -1,11 +1,11 @@
 {
   "name": "marble",
   "description": "WeDeploy's style guide and UI components",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "repository": "wedeploy/marble",
   "homepage": "marblecss.com",
   "main": "index.js",
-  "license" : "BSD",
+  "license": "BSD",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "mathsass": "^0.9.5"

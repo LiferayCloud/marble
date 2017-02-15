@@ -636,6 +636,12 @@
 	margin-top: 0;
 }
 
+.docs .guide-header.topbar-is-fixed {
+	@media (min-width: 960px) {
+		margin-top: 60px;
+	}
+}
+
 .docs .guide-header-title {
 	margin: 0;
 }

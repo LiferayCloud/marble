@@ -1,5 +1,9 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 
+.tooltip {
+	position: fixed;
+}
+
 .tooltip-inner {
 	width: 100%;
 	max-width: 220px;

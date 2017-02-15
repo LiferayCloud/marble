@@ -1,10 +1,10 @@
-.topbar-logo-link .icon {
+.topbar .topbar-logo-link .icon {
   color: #00d46a;
   font-size: 24px;
   position: relative;
   top: 5px; }
 
-.topbar-logo-link .name {
+.topbar .topbar-logo-link .name {
   color: rgba(255, 255, 255, 0.9);
   font-family: "Galano Bold", sans-serif;
   font-size: 17px;
@@ -12,7 +12,7 @@
   line-height: 36px;
   margin-left: 8px; }
 
-.topbar-logo-link .by {
+.topbar .topbar-logo-link .by {
   color: rgba(255, 255, 255, 0.3);
   font-family: "Galano Medium", sans-serif;
   font-size: 12px;
@@ -61,13 +61,18 @@
 .docs-content pre {
   border: 0;
   font-size: 14px;
+  line-height: 24px;
   margin: 0;
   opacity: 0;
   padding: 4px;
   position: relative; }
 
+.docs-content pre code {
+  white-space: pre; }
+
 .docs-content .CodeMirror pre {
   font-size: 14px;
+  line-height: 24px;
   margin: 0;
   padding: 0;
   opacity: 1; }

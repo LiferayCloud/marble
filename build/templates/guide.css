@@ -193,32 +193,6 @@
 .code-container:hover .btn-copy {
   opacity: 1; }
 
-.guide .docs .sidebar-list {
-  padding: 0 12px; }
-
-.guide .docs .sidebar-list.sidebar-list-1 .sidebar-link {
-  font-size: 13px;
-  height: auto;
-  line-height: 24px;
-  padding: 18px 12px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center; }
-  .guide .docs .sidebar-list.sidebar-list-1 .sidebar-link .sidebar-icon {
-    margin-right: 12px; }
-
-.guide .docs .sidebar-list li .sidebar-list li .sidebar-link {
-  padding: 12px 20px 12px 40px;
-  font-size: 12px;
-  line-height: 24px;
-  height: auto; }
-  .guide .docs .sidebar-list li .sidebar-list li .sidebar-link .sidebar-icon {
-    display: none; }
-
-.guide .docs .guide-header {
-  margin-top: 0; }
-
 .guide table {
   display: table;
   border-collapse: separate;

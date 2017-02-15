@@ -8259,6 +8259,9 @@ button.close {
   border-width: 0 5px 5px;
   border-bottom-color: #000; }
 
+.tooltip {
+  position: fixed; }
+
 .tooltip-inner {
   width: 100%;
   max-width: 220px;
@@ -8300,6 +8303,13 @@ button.close {
 .reading-progress a::before,
 .reading-progress a::after {
   position: absolute; }
+
+.docs .reading-progress li a:not([class]),
+.docs .reading-progress p a:not([class]) {
+  border-bottom: 0px dashed rgba(14, 20, 26, 0.4); }
+  .docs .reading-progress li a:not([class]):hover,
+  .docs .reading-progress p a:not([class]):hover {
+    border-bottom: 0px dashed #00d46a; }
 
 .reading-progress a::before {
   background: transparent;

@@ -3,7 +3,7 @@
   @import "../root/elements";
 
   .container {
-    padding: calc(1.5rem * #{$lineHeight}) calc(1rem * #{$lineHeight}) 0;
+    padding: calc(1.5rem * #{$lineHeight}) calc(1rem * #{$lineHeight});
   }
 
   .container .card {

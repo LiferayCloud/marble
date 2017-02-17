@@ -51,6 +51,7 @@
 		font-family: $font-family-secondary-bold;
 		font-weight: 400;
 		border-radius: 50%;
+		display: inline-block;
 		text-align: center;
 		background: none;
 	}
@@ -167,6 +168,13 @@
 }
 
 .topbar.topbar-light .wedeploy-logo {
+	.deploy {
+		color: rgba($primary, .9);
+	}
+	.liferay {
+		color: rgba($primary, .3);
+	}
+
 	&.dashboard-logo {
 		.alpha {
 			background: rgba($primary, 0.05);

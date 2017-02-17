@@ -51,7 +51,6 @@
 		font-family: $font-family-secondary-bold;
 		font-weight: 400;
 		border-radius: 50%;
-		display: inline-block;
 		text-align: center;
 		background: none;
 	}
@@ -62,7 +61,6 @@
 		font-family: $font-family-secondary-bold;
 		font-weight: 400;
 		color: rgba($white, .9);
-		display: none;
 		margin-left: 6px;
 	}
 
@@ -71,7 +69,6 @@
 		font-family: $font-family-secondary;
 		font-weight: 400;
 		font-size: 10px;
-		display: none;
 		margin-left: 4px;
 	}
 
@@ -170,15 +167,6 @@
 }
 
 .topbar.topbar-light .wedeploy-logo {
-	.deploy {
-		color: rgba($primary, .9);
-		display: inline-block;
-	}
-	.liferay {
-		color: rgba($primary, .3);
-		display: none;
-	}
-
 	&.dashboard-logo {
 		.alpha {
 			background: rgba($primary, 0.05);
@@ -191,12 +179,6 @@
 		.arrow-left {
 			border-right: 6px solid rgba($primary, 0.05);
 		}
-	}
-}
-
-.topbar.topbar-large.topbar-light .wedeploy-logo {
-	.liferay {
-		display: inline-block;
 	}
 }
 

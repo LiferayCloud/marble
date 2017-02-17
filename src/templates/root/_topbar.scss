@@ -8,7 +8,7 @@
 
 	.name {
 		color: rgba(255, 255, 255, 0.9);
-		font-family: "Galano Bold", sans-serif;
+		font-family: $font-family-secondary-bold;
 		font-size: 17px;
 		font-weight: 400;
 		line-height: 36px;
@@ -17,7 +17,7 @@
 
 	.by {
 		color: rgba(255, 255, 255, 0.3);
-		font-family: "Galano Medium", sans-serif;
+		font-family: $font-family-secondary;
 		font-size: 12px;
 		font-weight: 400;
 		margin-left: 8px;

@@ -7,109 +7,109 @@ $accent   : #00d46a !default;
 $black: #000 !default;
 $white: #fff !default;
 
-$brand-primary : $primary;
-$brand-success : #00d46a;
-$brand-warning : #ffb700;
-$brand-danger  : #ff4040;
+$brand-primary : $primary !default;
+$brand-success : #00d46a !default;
+$brand-warning : #ffb700 !default;
+$brand-danger  : #ff4040 !default;
 
-$http-get    : #0080ff;
-$http-head   : #9343ff;
-$http-post   : #6dd64d;
-$http-put    : #ffc021;
-$http-patch  : #35d6c3;
-$http-delete : #ff5653;
+$http-get    : #0080ff !default;
+$http-head   : #9343ff !default;
+$http-post   : #6dd64d !default;
+$http-put    : #ffc021 !default;
+$http-patch  : #35d6c3 !default;
+$http-delete : #ff5653 !default;
 
-$color-green	:	#00d46a;
-$color-blue		:	#00a4ff;
-$color-violet	:	#9552ef;
-$color-red		:	#ff4040;
-$color-orange	:	#ff6e00;
-$color-yellow	:	#ffb700;
+$color-green  : #00d46a !default;
+$color-blue   : #00a4ff !default;
+$color-violet : #9552ef !default;
+$color-red    : #ff4040 !default;
+$color-orange : #ff6e00 !default;
+$color-yellow : #ffb700 !default;
 
 // Grid
 
-$grid-columns: 16;
-$grid-gutter-width: 24px;
-$grid-margin-width: 20px;
+$grid-columns: 16 !default;
+$grid-gutter-width: 24px !default;
+$grid-margin-width: 20px !default;
 
-$screen-xs: 360px;
-$screen-sm: 600px;
-$screen-md: 960px;
-$screen-lg: 1280px;
+$screen-xs: 360px !default;
+$screen-sm: 600px !default;
+$screen-md: 960px !default;
+$screen-lg: 1280px !default;
 
-$container-tablet: $screen-sm - $grid-margin-width;
-$container-desktop: $screen-md - $grid-margin-width;
-$container-large-desktop: $screen-lg;
+$container-tablet: $screen-sm - $grid-margin-width !default;
+$container-desktop: $screen-md - $grid-margin-width !default;
+$container-large-desktop: $screen-lg !default;
 
-$sidebar-width: 240px;
+$sidebar-width: 240px !default;
 
 // Scaffolding
 
-$body-bg: $white;
-$link-color: $primary;
-$link-hover-color: $primary;
-$link-hover-decoration: none;
+$body-bg: $white !default;
+$link-color: $primary !default;
+$link-hover-color: $primary !default;
+$link-hover-decoration: none !default;
 
 // Typography
 
-$font-family-sans-serif: "Open Sans", sans-serif;
-$font-family-secondary: "Galano Medium", sans-serif;
-$font-family-secondary-semibold: "Galano Semibold", sans-serif;
-$font-family-secondary-bold: "Galano Bold", sans-serif;
-$font-size-base: 14px;
-$font-size-h1: 20px;
-$font-size-h2: 18px;
-$font-size-h3: 16px;
-$font-size-h4: 14px;
-$font-size-h5: 13px;
-$font-size-h6: 12px;
+$font-family-sans-serif: "Open Sans", sans-serif !default;
+$font-family-secondary: "Galano Medium", sans-serif !default;
+$font-family-secondary-semibold: "Galano Semibold", sans-serif !default;
+$font-family-secondary-bold: "Galano Bold", sans-serif !default;
+$font-size-base: 14px !default;
+$font-size-h1: 20px !default;
+$font-size-h2: 18px !default;
+$font-size-h3: 16px !default;
+$font-size-h4: 14px !default;
+$font-size-h5: 13px !default;
+$font-size-h6: 12px !default;
 
 // Buttons
 
-$btn-default-color: rgba($primary, .6);
-$btn-default-bg: rgba($primary, .1);
-$btn-default-border: transparent;
+$btn-default-color: rgba($primary, .6) !default;
+$btn-default-bg: rgba($primary, .1) !default;
+$btn-default-border: transparent !default;
 
-$btn-primary-color: $accent;
-$btn-primary-bg: rgba($accent, .2);
-$btn-primary-border: transparent;
+$btn-primary-color: $accent !default;
+$btn-primary-bg: rgba($accent, .2) !default;
+$btn-primary-border: transparent !default;
 
-$btn-success-border: transparent;
-$btn-danger-border: transparent;
+$btn-success-border: transparent !default;
+$btn-danger-border: transparent !default;
 
-$btn-accent-color: white;
-$btn-accent-bg: $accent;
-$btn-accent-border: transparent;
+$btn-accent-color: white !default;
+$btn-accent-bg: $accent !default;
+$btn-accent-border: transparent !default;
 
-$btn-inverse-color: $white;
-$btn-inverse-bg: rgba($white, .1);
-$btn-inverse-border: transparent;
+$btn-inverse-color: $white !default;
+$btn-inverse-bg: rgba($white, .1) !default;
+$btn-inverse-border: transparent !default;
 
-$btn-inverse-accent-color: $accent;
-$btn-inverse-accent-bg: $white;
-$btn-inverse-accent-border: transparent;
+$btn-inverse-accent-color: $accent !default;
+$btn-inverse-accent-bg: $white !default;
+$btn-inverse-accent-border: transparent !default;
 
 // Forms
 
-$input-bg: rgba($white, .2);
-$input-border-focus: $accent;
-$input-border: rgba($secondary, .2);
-$input-color: $primary;
-$input-color-placeholder: rgba($primary, .3);
-$input-group-addon-bg: transparent;
-$input-height-base: 60px;
-$input-bg-disabled: white;
+$input-bg: rgba($white, .2) !default;
+$input-border-focus: $accent !default;
+$input-border: rgba($secondary, .2) !default;
+$input-color: $primary !default;
+$input-color-placeholder: rgba($primary, .3) !default;
+$input-group-addon-bg: transparent !default;
+$input-height-base: 60px !default;
+$input-bg-disabled: white !default;
 
-$input-inverse-bg: rgba($primary, .05);
-$input-inverse-border-focus: $white;
-$input-inverse-border: rgba($white, .8);
-$input-inverse-color: $white;
-$input-inverse-color-placeholder: rgba($white, .8);
+$input-inverse-bg: rgba($primary, .05) !default;
+$input-inverse-border-focus: $white !default;
+$input-inverse-border: rgba($white, .8) !default;
+$input-inverse-color: $white !default;
+$input-inverse-color-placeholder: rgba($white, .8) !default;
 
 // Form states
 
-$state-success-text: $brand-success;
-$state-danger-text: $brand-danger;
+$state-success-text: $brand-success !default;
+$state-danger-text: $brand-danger !default;
 
 // Components
 
@@ -118,10 +118,10 @@ $border-radius-large: 4px !default;
 
 // Dropdowns
 
-$dropdown-border: rgba($primary, 0.12);
-$dropdown-link-color: rgba($primary, .5);
-$dropdown-link-hover-color: rgba($primary, .9);
-$dropdown-link-hover-bg: none;
+$dropdown-border: rgba($primary, 0.12) !default;
+$dropdown-link-color: rgba($primary, .5) !default;
+$dropdown-link-hover-color: rgba($primary, .9) !default;
+$dropdown-link-hover-bg: none !default;
 
 // Bonus
 

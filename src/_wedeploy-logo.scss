@@ -2,8 +2,9 @@
 	position: relative;
 
 	&.dashboard-logo {
+		display: inline-block;
+		width: auto;
 		z-index: 999;
-		width: 96px;
 
 		.alpha-container {
 			position: absolute;
@@ -128,6 +129,11 @@
 	}
 }
 
+.topbar.topbar-large .dashboard-logo .alpha-container {
+	left: 60px;
+	top: 12px;
+}
+
 .topbar.topbar-large .wedeploy-logo {
 	.we-circle {
 		height: 48px;
@@ -160,6 +166,7 @@
 		letter-spacing: 0.003em;
 		left: -2px;
 	}
+
 }
 
 .topbar.topbar-light .wedeploy-logo {

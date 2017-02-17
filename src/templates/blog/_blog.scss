@@ -1,85 +1,76 @@
 .content .topbar.topbar-fixed + .blog {
-  padding-top: 60px;
+	padding-top: 60px;
 }
 
 .blog {
 
-  @import "../root/elements";
+	@import "../root/elements";
 
-  .topbar.topbar-large {
-    height: 72px;
-    padding: 12px 20px;
+	.container {
+		width: 100%;
+		max-width: 34rem;
+		padding: 0 2.5rem 0;
+		margin: 0 auto;
 
-    .btn {
-      line-height: 48px;
-    }
-  }
+		@media (min-width: 600px) {
+			padding: 0;
+		}
+	}
 
-  .container {
-    width: 100%;
-    max-width: 34rem;
-    padding: 0 2.5rem 0;
-  	margin: 0 auto;
+	.container .content p,
+	.container .content li {
+		font-size: $font-h6;
+	}
 
-    @media (min-width: 600px) {
-      padding: 0;
-    }
-  }
+	.container .content blockquote p {
+		font-size: $font-h4;
+	}
 
-  .container .content p,
-  .container .content li {
-    font-size: $font-h6;
-  }
+	.container .content a {
+		@include anim(color);
+		border-bottom: 1px dashed rgba($primary, 0.4);
+		color: inherit;
 
-  .container .content blockquote p {
-    font-size: $font-h4;
-  }
+		&:hover,
+		&:focus {
+			border-color: $accent;
+			color: $accent;
+		}
+	}
 
-  .container .content a {
-    @include anim(color);
-    border-bottom: 1px dashed rgba($primary, 0.4);
-    color: inherit;
+	.posts-list {
+		background: rgba($primary, 0.02);
+		padding: calc(3rem * #{$lineHeight}) 0;
+	}
 
-    &:hover,
-    &:focus {
-      border-color: $accent;
-      color: $accent;
-    }
-  }
+	.post-item {
+		margin-bottom: calc(2rem * #{$lineHeight});
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-  .posts-list {
-    background: rgba($primary, 0.02);
-    padding: calc(3rem * #{$lineHeight}) 0;
-  }
+	.posts-list a {
+		border-width: 0px;
+	}
 
-  .post-item {
-    margin-bottom: calc(2rem * #{$lineHeight});
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+	.posts-list a small {
+		@include anim(color);
+		margin-bottom: 0;
+	}
 
-  .posts-list a {
-    border-width: 0px;
-  }
+	.posts-list a:hover small {
+		color: rgba($primary, 0.8);
+	}
 
-  .posts-list a small {
-    @include anim(color);
-    margin-bottom: 0;
-  }
+	.posts-list a h4 {
+		@include anim(color);
+	}
 
-  .posts-list a:hover small {
-    color: rgba($primary, 0.8);
-  }
+	.posts-list a:hover h4 {
+		color: $accent;
+	}
 
-  .posts-list a h4 {
-    @include anim(color);
-  }
-
-  .posts-list a:hover h4 {
-    color: $accent;
-  }
-	
 	.iframe-container {
 		height: 400px;
 		position: relative;
@@ -116,30 +107,30 @@
 		position: relative;
 	}
 
-  ///////////////////////////SIGNATURE///////////////////////////
-  .we-container {
-    padding: calc(4rem * #{$lineHeight}) 0;
-    text-align: center;
+	///////////////////////////SIGNATURE///////////////////////////
+	.we-container {
+		padding: calc(4rem * #{$lineHeight}) 0;
+		text-align: center;
 
-    .we-circle {
-      width: calc(2rem * #{$lineHeight});
-      height: calc(2rem * #{$lineHeight});
-      border-radius: 50%;
-      background: rgba($primary, 0.1);
-      display: inline-block;
-    }
+		.we-circle {
+			width: calc(2rem * #{$lineHeight});
+			height: calc(2rem * #{$lineHeight});
+			border-radius: 50%;
+			background: rgba($primary, 0.1);
+			display: inline-block;
+		}
 
-    .we {
-      font-family: $font-family-secondary-bold;
-      font-size: $font-h6;
-      color: $white;
-      line-height: calc(2rem * #{$lineHeight});
-      width: 2rem;
-      text-align: center;
-      position: relative;
-      top: 0.5px;
-      left: 0.5px;
-    }
-  }
+		.we {
+			font-family: $font-family-secondary-bold;
+			font-size: $font-h6;
+			color: $white;
+			line-height: calc(2rem * #{$lineHeight});
+			width: 2rem;
+			text-align: center;
+			position: relative;
+			top: 0.5px;
+			left: 0.5px;
+		}
+	}
 
 }

@@ -38,8 +38,6 @@
     align-items: center;
     padding: 0;
     border-radius: 4px; }
-    .tutorial .sidebar .sidebar-item.sidebar-item-selected {
-      background: rgba(0, 212, 106, 0.1); }
   .tutorial .sidebar .sidebar-link {
     display: flex;
     justify-content: flex-start;
@@ -51,10 +49,12 @@
     font-family: "Galano Semibold", sans-serif;
     font-size: 0.8125rem;
     color: rgba(14, 20, 26, 0.8); }
+    .tutorial .sidebar .sidebar-link.sidebar-link-selected {
+      background: rgba(0, 212, 106, 0.1); }
+    .tutorial .sidebar .sidebar-link.sidebar-link-read {
+      color: rgba(14, 20, 26, 0.8); }
     .tutorial .sidebar .sidebar-link span:not(.tutorial-step) {
       line-height: calc(1rem * 1.5); }
-  .tutorial .sidebar .sidebar-link-read .sidebar-link {
-    color: rgba(14, 20, 26, 0.8); }
   .tutorial .sidebar .tutorial-step {
     font-family: "Galano Semibold", sans-serif;
     display: block;
@@ -73,7 +73,7 @@
   .tutorial .sidebar .sidebar-link {
     position: relative;
     height: 100%; }
-  .tutorial .sidebar .sidebar-item .before {
+  .tutorial .sidebar .sidebar-link .before {
     background: rgba(14, 20, 26, 0.1);
     display: block;
     position: absolute;
@@ -81,12 +81,12 @@
     left: 28px;
     height: 50%;
     width: 4px; }
-  .tutorial .sidebar .sidebar-item.sidebar-item-read .before,
-  .tutorial .sidebar .sidebar-item.sidebar-item-selected .before {
+  .tutorial .sidebar .sidebar-link.sidebar-link-read .before,
+  .tutorial .sidebar .sidebar-link.sidebar-link-selected .before {
     background: #00d46a; }
-  .tutorial .sidebar .sidebar-item:first-child .before {
+  .tutorial .sidebar .sidebar-item:first-child .sidebar-link .before {
     display: none; }
-  .tutorial .sidebar .sidebar-item .after {
+  .tutorial .sidebar .sidebar-item .sidebar-link .after {
     background: rgba(14, 20, 26, 0.1);
     top: 50%;
     display: block;
@@ -94,16 +94,16 @@
     left: 28px;
     position: absolute;
     width: 4px; }
-  .tutorial .sidebar .sidebar-item.sidebar-item-read .after {
+  .tutorial .sidebar .sidebar-link.sidebar-link-read .after {
     background: #00d46a; }
-  .tutorial .sidebar .sidebar-item:last-child .after {
+  .tutorial .sidebar .sidebar-item:last-child .sidebar-link .after {
     display: none; }
-  .tutorial .sidebar .sidebar-item .section-title {
+  .tutorial .sidebar .sidebar-link .section-title {
     font-size: 0.8125rem; }
-  .tutorial .sidebar .sidebar-item.sidebar-item-read .section-title {
+  .tutorial .sidebar .sidebar-link.sidebar-link-read .section-title {
     color: rgba(14, 20, 26, 0.6);
     text-decoration: line-through; }
-  .tutorial .sidebar .sidebar-item.sidebar-item-selected .tutorial-step {
+  .tutorial .sidebar .sidebar-link.sidebar-link-selected .tutorial-step {
     color: #00d46a;
     box-shadow: 0 2px 8px rgba(0, 212, 106, 0.1); }
 
@@ -469,7 +469,7 @@
     background: rgba(14, 20, 26, 0.2); }
 
 .tutorial .container {
-  padding: calc(1.5rem * 1.5) calc(1rem * 1.5) 0; }
+  padding: calc(1.5rem * 1.5) calc(1rem * 1.5); }
 
 .tutorial .container .card {
   max-width: calc(34rem + 10rem);

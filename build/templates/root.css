@@ -1,49 +1,3 @@
-.topbar .topbar-logo-link .icon {
-  color: #00d46a;
-  font-size: 24px;
-  position: relative;
-  top: 5px; }
-
-.topbar .topbar-logo-link .name {
-  color: rgba(255, 255, 255, 0.9);
-  font-family: "Galano Bold", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 36px;
-  margin-left: 8px; }
-
-.topbar .topbar-logo-link .by {
-  color: rgba(255, 255, 255, 0.3);
-  font-family: "Galano Medium", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  margin-left: 8px;
-  position: relative;
-  top: 10px;
-  display: none; }
-
-.topbar-item {
-  margin: 0 10px; }
-
-.topbar-list .topbar-link {
-  color: rgba(255, 255, 255, 0.3); }
-
-.topbar-list .topbar-link:hover {
-  color: rgba(255, 255, 255, 0.6); }
-
-@media (min-width: 960px) {
-  .topbar {
-    top: 0;
-    z-index: 2; }
-  .topbar.topbar-fixed {
-    position: fixed; } }
-
-@media (min-width: 600px) {
-  .topbar-logo-link .by {
-    display: block; }
-  .topbar-item {
-    margin: 0 20px; } }
-
 .CodeMirror {
   animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
   border-radius: 4px;
@@ -96,3 +50,35 @@
   z-index: 1; }
   .btn-copy:hover, .btn-copy:focus {
     background: rgba(255, 255, 255, 0.5); }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar {
+  width: 12px; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar:horizontal {
+  height: 12px; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb {
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-track {
+  background-color: #222426; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-track:vertical {
+  border-left: 1px solid #303236; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-track:horizontal {
+  border-top: 1px solid #303236; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar {
+  background-color: #222426; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border: 1px solid #222426; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb:hover {
+  background-color: #888; }
+
+.CodeMirror.cm-s-dracula ::-webkit-scrollbar-corner {
+  background-color: #222426; }

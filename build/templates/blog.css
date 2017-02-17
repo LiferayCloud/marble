@@ -335,12 +335,6 @@
   .blog .container .content .btn.btn-inverse-accent:focus, .blog .container .content .btn.btn-inverse-accent:hover {
     background: rgba(14, 20, 26, 0.2); }
 
-.blog .topbar.topbar-large {
-  height: 72px;
-  padding: 12px 20px; }
-  .blog .topbar.topbar-large .btn {
-    line-height: 48px; }
-
 .blog .container {
   width: 100%;
   max-width: 34rem;

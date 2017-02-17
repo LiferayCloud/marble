@@ -557,9 +557,10 @@
 .docs .guide-header {
   padding: 60px 0;
   margin-top: 0; }
-  @media (min-width: 960px) {
-    .docs .guide-header {
-      margin-top: 60px; } }
+
+@media (min-width: 960px) {
+  .docs .guide-header.topbar-is-fixed {
+    margin-top: 60px; } }
 
 .docs .guide-header-title {
   margin: 0; }
@@ -634,14 +635,6 @@
 
 .docs .sidebar-list li.active .sidebar-list {
   display: block; }
-
-.docs .sidebar-list li .sidebar-list li .sidebar-link {
-  padding: 0 20px 0 56px;
-  font-size: 13px;
-  line-height: 36px;
-  height: 36px; }
-  .docs .sidebar-list li .sidebar-list li .sidebar-link .sidebar-icon {
-    display: none; }
 
 .docs .sidebar-list li .sidebar-list li:last-child {
   margin-bottom: 0; }

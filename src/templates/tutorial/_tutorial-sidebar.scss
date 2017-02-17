@@ -38,7 +38,9 @@
 		flex-wrap: nowrap;
 		align-content: center;
 		align-items: center;
+
 		padding: calc(0.5rem * #{$lineHeight});
+		width: 100%;
 
 		font-family: $font-family-secondary-semibold;
 		font-size: 0.8125rem;

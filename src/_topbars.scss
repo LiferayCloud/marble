@@ -69,9 +69,13 @@
 	}
 
 	.topbar-logo-text {
+		font-family: $font-family-secondary-bold;
+		font-weight: 400;
 		font-size: 17px;
 		line-height: 36px;
 		margin: 0 12px 0 0;
+
+		flex-shrink: 1;
 	}
 
 	.topbar-list-container {

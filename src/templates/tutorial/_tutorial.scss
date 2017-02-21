@@ -101,11 +101,7 @@
 		margin-top: 36px;
 
 		.btn {
-			margin-right: 12px;
-			margin-bottom: 12px;
-			&:last-child {
-				margin-right: 0px;
-			}
+			margin: 0 6px 12px;
 
 			max-width: 100%;
 			white-space: nowrap;

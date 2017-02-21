@@ -2,13 +2,25 @@
 
 	@import "../root/elements";
 
+	.sidebar-offset {
+		padding-top: 0px;
+	}
+
 	.container {
+		width: 100%;
+		max-width: 750px;
+
 		padding: calc(1.5rem * #{$lineHeight}) calc(1rem * #{$lineHeight});
 	}
 
 	.container .card {
-		max-width: calc(34rem + 10rem);
-		padding: calc(1rem * #{$lineHeight}) calc(2rem * #{$lineHeight});
+		max-width: 100%;
+		padding: calc(1rem * #{$lineHeight}) calc(1rem * #{$lineHeight});
+
+		@media (min-width: 960px) {
+			max-width: calc(34rem + 10rem);
+			padding: calc(1rem * #{$lineHeight}) calc(2rem * #{$lineHeight});
+		}
 	}
 
 	.container .content section:last-child {
@@ -54,4 +66,93 @@
 		left: 0;
 	}
 
+	//topbar
+	.topbar {
+		min-height: 60px;
+
+		.topbar-logo {
+			margin: 0;
+		}
+
+		.btn-icon {
+			height: 36px;
+			width: 36px;
+			line-height: 36px;
+			border-radius: 4px;
+			text-align: center;
+			margin-right: 12px;
+
+			display: inline-block;
+			@media (min-width: 960px) {
+				display: none;
+			}
+
+			span {
+				top: 0;
+				margin: 0;
+				line-height: 36px;
+			}
+		}
+	}
+
+	//page-nav
+	.tutorial-page-nav {
+		text-align: center;
+		margin-top: 36px;
+
+		.btn {
+			margin-right: 12px;
+			margin-bottom: 12px;
+			&:last-child {
+				margin-right: 0px;
+			}
+
+			max-width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+}
+
+//ANIMATIONS
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeInToRight {
+	0% {
+		-webkit-transform: translate3d(-252px, 0, 0);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInToRight {
+	0% {
+		transform: translate3d(-252px, 0, 0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }

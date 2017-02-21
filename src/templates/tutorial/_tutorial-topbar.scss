@@ -6,7 +6,7 @@
 	background: $accent;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-content: center;
@@ -14,12 +14,14 @@
 
 	.topbar-logo {
 		align-self: center;
-		.name {
-			font-family: $font-family-secondary-semibold;
-			font-size: 1rem;
-			color: rgba($white, 0.8);
-			margin: 0;
-		}
+	}
+
+	.topbar-logo-text {
+		font-size: 16px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		flex: 1 1 auto;
 	}
 
 	.time-remaining {
@@ -35,6 +37,7 @@
 		font-size: 0.8125rem;
 		font-family: $font-family-secondary-semibold;
 		color: rgba($white, 0.8);
+		flex-shrink: 0;
 
 		> * {
 			margin-right: calc(0.5rem * #{$lineHeight});

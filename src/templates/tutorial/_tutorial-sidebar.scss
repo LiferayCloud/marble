@@ -10,7 +10,6 @@
 
 .tutorial .sidebar {
 	top: 0;
-	width: 100%;
 
 	@media (min-width: 960px) {
 		width: calc((0.5rem * #{$lineHeight}) * 21);

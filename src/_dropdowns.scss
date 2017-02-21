@@ -27,9 +27,12 @@
 .dropdown-menu li a,
 .dropdown-menu li button {
 	@include anim(color);
-	color: $dropdown-link-color;
+	font-family: $font-family-secondary-semibold;
+	font-weight: 400;
+	color: rgba($primary, 0.8);
+	font-size: 12px;
+
 	display: block;
-	font-size: 14px;
 	padding: 10px 40px;
 	text-decoration: none;
 	width: 100%;
@@ -37,9 +40,7 @@
 
 	&:hover,
 	&:focus {
-		text-decoration: none;
-		background-color: $dropdown-link-hover-bg;
-		color: $dropdown-link-hover-color;
+		color: $accent;
 	}
 }
 

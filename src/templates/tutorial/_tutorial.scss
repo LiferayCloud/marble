@@ -66,35 +66,6 @@
 		left: 0;
 	}
 
-	//topbar
-	.topbar {
-		min-height: 60px;
-
-		.topbar-logo {
-			margin: 0;
-		}
-
-		.btn-icon {
-			height: 36px;
-			width: 36px;
-			line-height: 36px;
-			border-radius: 4px;
-			text-align: center;
-			margin-right: 12px;
-
-			display: inline-block;
-			@media (min-width: 960px) {
-				display: none;
-			}
-
-			span {
-				top: 0;
-				margin: 0;
-				line-height: 36px;
-			}
-		}
-	}
-
 	//page-nav
 	.tutorial-page-nav {
 		text-align: center;

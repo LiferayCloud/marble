@@ -16,7 +16,7 @@
 	}
 
 	.sidebar-list {
-		padding: calc(0.5rem * #{$lineHeight});
+		padding: calc(1rem * #{$lineHeight}) calc(0.5rem * #{$lineHeight});
 	}
 
 	.sidebar-item {

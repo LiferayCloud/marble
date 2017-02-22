@@ -17,14 +17,15 @@
 				bottom: 0;
 				width: 48px;
 				height: 24px;
-				background: rgba($white, 0.8);
+				background: $white;
+				color: rgba($primary, 0.8);
 			}
 
 			.arrow-left {
 				top: 6px;
 				border-top: 6px solid transparent !important;
 				border-bottom: 6px solid transparent !important;
-				border-right: 6px solid rgba($white, 0.8);
+				border-right: 6px solid $white;
 			}
 		}
 	}

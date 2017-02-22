@@ -394,7 +394,6 @@
   height: 400px;
   position: relative;
   width: calc(100% + 5rem);
-  left: -2.5rem;
   padding: 0 15px;
   display: none; }
   @media (min-width: 600px) {
@@ -419,7 +418,8 @@
 
 .blog .iframe-container .iframe-frame {
   width: 100%;
-  position: relative; }
+  position: relative;
+  left: 0; }
 
 .blog .we-container {
   padding: calc(4rem * 1.5) 0;

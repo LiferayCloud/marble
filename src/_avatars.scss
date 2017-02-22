@@ -10,10 +10,32 @@
 }
 
 .avatar {
-	display: block;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+
 	text-align: center;
 	text-decoration: none;
-	overflow: hidden;
+
+	img {
+		width: inherit;
+		height: inherit;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	.avatar-initials {
+		box-sizing: border-box;
+		border: 1px solid white;
+	}
+}
+
+//topbar variation (default primary)
+.topbar .avatar .avatar-initials {
+	box-sizing: border-box;
+	border: 1px solid $primary;
 }
 
 /* Avatar - Sizes
@@ -85,7 +107,6 @@ $xlarge : 72px;
 	 ========================================================================== */
 
 .avatar-initials {
-	@extend .avatar;
 	background: rgba($primary, .3);
 	color: white;
 	cursor: default;

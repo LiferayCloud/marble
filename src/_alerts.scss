@@ -144,3 +144,75 @@
 	animation-duration: 0.2s;
 	animation-fill-mode: both;
 }
+
+/*
+ PAGE ALERT ------------*/
+.alert.alert-inline {
+	position: static;
+	box-shadow: none;
+	bottom: auto;
+	left: auto;
+	padding: 12px;
+	height: auto;
+	text-align: left;
+	width: 100%;
+	max-width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+
+	> * {
+		display: inline-block;
+		line-height: 24px;
+		margin: 0 12px 0 0;
+		min-height: 24px;
+		flex: 0 1 auto;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	> .alert-body {
+		flex-grow: 1;
+		flex-shrink: 1;
+
+		color: rgba($primary, 0.8);
+		font-family: $font-family-sans-serif;
+		font-weight: 400;
+
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+
+		> .alert-link {
+			border-bottom: 1px dashed rgba($primary, 0.4);
+			color: rgba($primary, 0.8);
+			font-weight: 700;
+		}
+	}
+
+	> .close {
+		height: 24px;
+	}
+}
+
+.alert.alert-inline.alert-warning {
+	background: rgba($color-yellow, 0.1);
+
+	> span[class*="icon-16"]{
+		color: $color-yellow;
+	}
+}
+
+.alert.alert-inline.alert-danger {
+	background: rgba($color-red, 0.1);
+
+	> span[class*="icon-16"]{
+		color: $color-red;
+	}
+}

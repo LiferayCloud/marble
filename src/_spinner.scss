@@ -31,11 +31,11 @@
 }
 
 .spinner.spinner-medium {
-	line-height: 24px;
+	line-height: 26px;
 	height: 36px;
 	width: 36px;
 	&:before {
-		font-size: 24px;
+		font-size: 16px;
 		height: 36px;
 		width: 36px;
 		margin-left: -18px;
@@ -54,7 +54,7 @@
 	height: 48px;
 	width: 48px;
 	&:before {
-		font-size: 32px;
+		font-size: 24px;
 		height: 48px;
 		width: 48px;
 		margin-left: -24px;
@@ -86,7 +86,7 @@
 }
 
 .spinner-done:not(:required):before {
-	content: "\E018";
+	content: "\E01A";
 	background: $brand-success;
 	border-color: $brand-success;
 	animation: none;
@@ -147,7 +147,7 @@
 	font-size: 16px;
 	font-family: 'icon-16';
 	line-height: 24px;
-	content: "\E060";
+	content: "\E061";
 	background: rgba($white, 0);
 	border: 0px solid $white;
 	width: 24px;

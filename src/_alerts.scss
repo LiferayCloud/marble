@@ -153,6 +153,7 @@
 	bottom: auto;
 	left: auto;
 	padding: 12px;
+	margin-bottom: 12px;
 	height: auto;
 	text-align: left;
 	width: 100%;
@@ -164,6 +165,11 @@
 	justify-content: flex-start;
 	align-content: flex-start;
 	align-items: flex-start;
+
+	&.alert-inline--vcenter {
+		align-content: center;
+		align-items: center;
+	}
 
 	> * {
 		display: inline-block;

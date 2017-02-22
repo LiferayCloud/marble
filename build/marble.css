@@ -4832,6 +4832,7 @@ a.thumbnail.active {
   bottom: auto;
   left: auto;
   padding: 12px;
+  margin-bottom: 12px;
   height: auto;
   text-align: left;
   width: 100%;
@@ -4842,6 +4843,9 @@ a.thumbnail.active {
   justify-content: flex-start;
   align-content: flex-start;
   align-items: flex-start; }
+  .alert.alert-inline.alert-inline--vcenter {
+    align-content: center;
+    align-items: center; }
   .alert.alert-inline > * {
     display: inline-block;
     line-height: 24px;

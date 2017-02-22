@@ -4824,6 +4824,58 @@ a.thumbnail.active {
   animation-duration: 0.2s;
   animation-fill-mode: both; }
 
+/*
+ PAGE ALERT ------------*/
+.alert.alert-inline {
+  position: static;
+  box-shadow: none;
+  bottom: auto;
+  left: auto;
+  padding: 12px;
+  height: auto;
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start; }
+  .alert.alert-inline > * {
+    display: inline-block;
+    line-height: 24px;
+    margin: 0 12px 0 0;
+    min-height: 24px;
+    flex: 0 1 auto; }
+    .alert.alert-inline > *:last-child {
+      margin: 0; }
+  .alert.alert-inline > .alert-body {
+    flex-grow: 1;
+    flex-shrink: 1;
+    color: rgba(14, 20, 26, 0.8);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip; }
+    .alert.alert-inline > .alert-body > .alert-link {
+      border-bottom: 1px dashed rgba(14, 20, 26, 0.4);
+      color: rgba(14, 20, 26, 0.8);
+      font-weight: 700; }
+  .alert.alert-inline > .close {
+    height: 24px; }
+
+.alert.alert-inline.alert-warning {
+  background: rgba(255, 183, 0, 0.1); }
+  .alert.alert-inline.alert-warning > span[class*="icon-16"] {
+    color: #ffb700; }
+
+.alert.alert-inline.alert-danger {
+  background: rgba(255, 64, 64, 0.1); }
+  .alert.alert-inline.alert-danger > span[class*="icon-16"] {
+    color: #ff4040; }
+
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }

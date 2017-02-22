@@ -10,10 +10,10 @@
 }
 
 .avatar {
-	@extend .avatar-round;
 	display: block;
 	text-align: center;
 	text-decoration: none;
+	overflow: hidden;
 }
 
 /* Avatar - Sizes

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
 <path id="lock_1_" d="M840,360h-60V240C780,74.3,645.7-60,480-60h0C314.3-60,180,74.3,180,240v120h-60C53.7,360,0,413.7,0,480v360
 	c0,66.3,53.7,120,120,120h720c66.3,0,120-53.7,120-120V480C960,413.7,906.3,360,840,360z M540,720c0,33.1-26.9,60-60,60l0,0
 	c-33.1,0-60-26.9-60-60V600c0-33.1,26.9-60,60-60l0,0c33.1,0,60,26.9,60,60V720z M660,360H300V240c0-48.1,18.7-93.3,52.7-127.3

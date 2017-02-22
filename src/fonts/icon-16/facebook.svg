@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 540 960" enable-background="new 0 0 540 960" xml:space="preserve">
-<path id="facebook_1_" d="M529.6-52.6v161.8h-96.2c-70.5,0-89.5,29.4-89.5,88.3V300h179.6l-23.9,181.4H343.9V960H156.3V481.4H0V300
-	h156.3V179.7c0-152,91.9-239.7,233.5-239.7C449.9-60,496.5-57.5,529.6-52.6z"/>
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
+<path id="facebook" d="M907,0H53C23.7,0,0,23.7,0,53v854c0,29.3,23.7,53,53,53h459.8V588.2H387.7V443.4h125.1V336.5
+	c0-124,75.7-191.5,186.3-191.5c53,0,98.5,3.9,111.8,5.7v129.6l-76.7,0c-60.2,0-71.8,28.6-71.8,70.5v92.5h143.5l-18.7,144.9H662.4
+	V960H907c29.3,0,53-23.7,53-53V53C960,23.7,936.3,0,907,0z"/>
 </svg>

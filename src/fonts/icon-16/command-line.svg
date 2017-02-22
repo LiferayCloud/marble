@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
 <path id="command-line" d="M780,900H180C80.7,900,0,819.3,0,720V240C0,140.7,80.7,60,180,60h600c99.3,0,180,80.7,180,180v480
 	C960,819.3,879.3,900,780,900z M180,180c-33.1,0-60,26.9-60,60v480c0,33.1,26.9,60,60,60h600c33.1,0,60-26.9,60-60V240
 	c0-33.1-26.9-60-60-60H180z M282.4,642.4l120-120c23.4-23.4,23.4-61.4,0-84.9l-120-120c-23.4-23.4-61.4-23.4-84.9,0

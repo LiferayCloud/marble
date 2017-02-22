@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 301 960" enable-background="new 0 0 301 960" xml:space="preserve">
+	 viewBox="0 0 301 960" style="enable-background:new 0 0 301 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
 <path id="ellipsis-vertical" d="M301,870c0,82.8-67.2,150-150,150S1,952.8,1,870s67.2-150,150-150S301,787.2,301,870z M151,180
 	c82.8,0,150-67.2,150-150s-67.2-150-150-150S1-52.8,1,30S68.2,180,151,180z M151,300C68.2,300,1,367.2,1,450s67.2,150,150,150
 	s150-67.2,150-150S233.8,300,151,300z"/>

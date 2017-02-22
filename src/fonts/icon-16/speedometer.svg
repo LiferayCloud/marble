@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
 <path id="speedometer_1_" d="M480,0C214.9,0,0,214.9,0,480s214.9,480,480,480s480-214.9,480-480S745.1,0,480,0z M811.8,620.1
 	c-18.1,42.9-44.1,81.4-77.2,114.5s-71.6,59.1-114.5,77.2C575.8,830.5,528.7,840,480,840c-48.7,0-95.8-9.5-140.1-28.2
 	c-42.9-18.1-81.4-44.1-114.5-77.2c-33.1-33.1-59.1-71.6-77.2-114.5C129.5,575.8,120,528.7,120,480s9.5-95.8,28.2-140.1

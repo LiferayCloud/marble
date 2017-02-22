@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1020 960" enable-background="new 0 0 1020 960" xml:space="preserve">
-<path id="speaker-on_1_" fill="#29ABE2" d="M480,60h60v840h-60L240,660H60c-33.1,0-60-26.9-60-60V360c0-33.1,26.9-60,60-60h180
-	L480,60z M719.5,378.8c-7.5-17.8-17-34.6-28.1-50.2l-57.7,57.7c16.7,27.3,26.3,59.4,26.3,93.7s-9.6,66.4-26.3,93.7l57.7,57.7
+	 viewBox="0 0 1020 960" style="enable-background:new 0 0 1020 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
+<path id="speaker-on_1_" class="st1" d="M480,60h60v840h-60L240,660H60c-33.1,0-60-26.9-60-60V360c0-33.1,26.9-60,60-60h180L480,60z
+	 M719.5,378.8c-7.5-17.8-17-34.6-28.1-50.2l-57.7,57.7c16.7,27.3,26.3,59.4,26.3,93.7s-9.6,66.4-26.3,93.7l57.7,57.7
 	c11.2-15.6,20.6-32.3,28.1-50.2C733.1,549.1,740,515.1,740,480S733.1,410.9,719.5,378.8z M880,480c0-51.3-10.1-101-29.9-147.9
 	c-15.5-36.6-36.3-70.1-62.1-100l-56.8,56.8c43,51.9,68.8,118.5,68.8,191.2s-25.8,139.3-68.8,191.2L788,728
 	c25.8-29.9,46.7-63.5,62.1-100C869.9,581,880,531.3,880,480z M980.7,285.4c-23.4-55.2-56-105.2-97.3-148.8l-56.6,56.6

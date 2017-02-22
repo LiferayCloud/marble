@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1080 960" enable-background="new 0 0 1080 960" xml:space="preserve">
+	 viewBox="0 0 1080 960" style="enable-background:new 0 0 1080 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
 <path id="camera_1_" d="M900,60h-60c0-99.4-80.6-180-180-180H420c-99.4,0-180,80.6-180,180h-60C80.6,60,0,140.6,0,240v480
 	c0,99.4,80.6,180,180,180h720c99.4,0,180-80.6,180-180V240C1080,140.6,999.4,60,900,60z M540,720c-165.7,0-300-134.3-300-300
 	s134.3-300,300-300s300,134.3,300,300S705.7,720,540,720z M540,600c-99.4,0-180-80.6-180-180s80.6-180,180-180s180,80.6,180,180

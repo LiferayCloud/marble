@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1120 960" enable-background="new 0 0 1120 960" xml:space="preserve">
-<path id="info-card_1_" fill="#29ABE2" d="M1040-80H80C35.8-80,0-44.2,0,0v800c0,44.2,35.8,80,80,80h960c44.2,0,80-35.8,80-80V0
-	C1120-44.2,1084.2-80,1040-80z M1040,800H80V0h960V800z M480,720H160V480h320V720z M160,240c0-88.4,71.6-160,160-160
-	s160,71.6,160,160s-71.6,160-160,160S160,328.4,160,240z M960,240H560v-80h400V240z M960,400H560v-80h400V400z M960,560H560v-80h400
-	V560z"/>
+<path id="info-card_1_" fill="#29ABE2" d="M1040,0H80C35.8,0,0,35.8,0,80v800c0,44.2,35.8,80,80,80h960c44.2,0,80-35.8,80-80V80
+	C1120,35.8,1084.2,0,1040,0z M1040,880H80V80h960V880z M480,800H160V560h320V800z M160,320c0-88.4,71.6-160,160-160
+	s160,71.6,160,160s-71.6,160-160,160S160,408.4,160,320z M960,320H560v-80h400V320z M960,480H560v-80h400V480z M960,640H560v-80h400
+	V640z"/>
 </svg>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
-<path id="menu_1_" d="M870,180H90c-49.7,0-90-40.3-90-90v0C0,40.3,40.3,0,90,0l780,0c49.7,0,90,40.3,90,90v0
-	C960,139.7,919.7,180,870,180z M960,450L960,450c0-49.7-40.3-90-90-90H90c-49.7,0-90,40.3-90,90v0c0,49.7,40.3,90,90,90h780
-	C919.7,540,960,499.7,960,450z M960,810L960,810c0-49.7-40.3-90-90-90H90c-49.7,0-90,40.3-90,90v0c0,49.7,40.3,90,90,90h780
-	C919.7,900,960,859.7,960,810z"/>
+	 viewBox="0 0 900 960" style="enable-background:new 0 0 900 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
+<path id="menu" d="M0,210c0-49.7,40.3-90,90-90c180,0,540,0,720,0c49.7,0,90,40.3,90,90s-40.3,90-90,90c-180,0-540,0-720,0
+	C40.3,300,0,259.7,0,210z M810,420c-180,0-540,0-720,0c-49.7,0-90,40.3-90,90s40.3,90,90,90c180,0,540,0,720,0c49.7,0,90-40.3,90-90
+	S859.7,420,810,420z M810,720c-180,0-540,0-720,0c-49.7,0-90,40.3-90,90s40.3,90,90,90c180,0,540,0,720,0c49.7,0,90-40.3,90-90
+	S859.7,720,810,720z"/>
 </svg>

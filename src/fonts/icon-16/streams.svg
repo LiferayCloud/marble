@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 960 960" enable-background="new 0 0 960 960" xml:space="preserve">
-<path id="streams_1_" fill="#29ABE2" d="M120,0v120H0v780h840V780h120V0H120z M780,840H60V180h60v600h660V840z M900,720H180V60h720
-	V720z M420,300H240V120h180V300z M420,540H240V360h180V540z M840,180H480v-60h360V180z M840,300H480v-60h360V300z M840,420H480v-60
-	h360V420z M840,540H480v-60h360V540z M840,660H240v-60h600V660z"/>
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
+<path id="streams_1_" class="st1" d="M120,0v120H0v780h840V780h120V0H120z M780,840H60V180h60v600h660V840z M900,720H180V60h720V720
+	z M420,300H240V120h180V300z M420,540H240V360h180V540z M840,180H480v-60h360V180z M840,300H480v-60h360V300z M840,420H480v-60h360
+	V420z M840,540H480v-60h360V540z M840,660H240v-60h600V660z"/>
 </svg>

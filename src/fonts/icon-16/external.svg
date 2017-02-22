@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 840 960" enable-background="new 0 0 840 960" xml:space="preserve">
-<path id="external" fill="#29ABE2" d="M720,540v300c0,33.1-26.9,60-60,60H60c-33.1,0-60-26.9-60-60V240c0-33.1,26.9-60,60-60h300
-	c33.1,0,60,26.9,60,60v0c0,33.1-26.9,60-60,60H120v480h480V540c0-33.1,26.9-60,60-60h0C693.1,480,720,506.9,720,540z M840,60H540
-	l107.6,107.6l-330,330c-23.4,23.4-23.4,61.4,0,84.9c11.7,11.7,27.1,17.6,42.4,17.6s30.7-5.9,42.4-17.6l330-330L840,360V60z"/>
+	 viewBox="0 0 960 960" style="enable-background:new 0 0 960 960;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+	.st1{fill:#29ABE2;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+	.st3{fill:#FF0000;}
+</style>
+<path id="external" d="M780,0C480,0,480,0,180,0C80.6,0,0,80.6,0,180c0,300,0,300,0,600c0,99.4,80.6,180,180,180c300,0,300,0,600,0
+	c99.4,0,180-80.6,180-180c0-300,0-300,0-600C960,80.6,879.4,0,780,0z M780,690c0,49.7-40.3,90-90,90s-90-40.3-90-90
+	c0-86.4,0-145.1,0-202.7c-91.2,91.2-186.3,186.3-266.4,266.4C317.4,769.9,294.9,780,270,780c-49.7,0-90-40.3-90-90
+	c0-24.9,10.1-47.4,26.4-63.6l0,0c80-80,175.1-175.1,266.4-266.4c-57.6,0-116.4,0-202.7,0c-49.7,0-90-40.3-90-90s40.3-90,90-90
+	c180,0,240,0,420,0c49.7,0,90,40.3,90,90C780,450,780,510,780,690z"/>
 </svg>

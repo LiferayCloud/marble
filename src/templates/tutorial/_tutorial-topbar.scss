@@ -3,7 +3,7 @@
 	height: calc(2.5rem * #{$lineHeight});
 	min-height: 60px;
 	box-shadow: 0 2px 8px rgba($primary, 0.12);
-	padding: 0 calc(1rem * #{$lineHeight});
+	padding: 0 12px;
 	background: $accent;
 
 	display: flex;
@@ -14,8 +14,9 @@
 	align-items: center;
 
 	.topbar-logo {
-		margin: 0 12px 0 0;
+		align-self: center;
 		flex-shrink: 0;
+		margin: 0 12px 0 0;
 	}
 
 	.btn-icon {

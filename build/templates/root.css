@@ -10,7 +10,7 @@
 
 .CodeMirror,
 .docs-content pre {
-  font-family: 'Roboto Mono', monaco, monospace; }
+  font-family: "Roboto Mono", sans-serif; }
 
 .docs-content pre {
   border: 0;

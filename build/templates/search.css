@@ -5,7 +5,7 @@
 
 .search-result-container .search-result-summary {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
   font-weight: 400;
   font-size: 24px;
   margin: 0 0 50px; }
@@ -31,8 +31,8 @@
   transition: color 0.3s ease-in-out;
   color: rgba(14, 20, 26, 0.8);
   display: block;
-  font-family: "Galano Medium", sans-serif;
   font-size: 18px;
+  font-family: "Galano", sans-serif;
   font-weight: 700;
   margin-left: 70px; }
 

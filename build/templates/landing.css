@@ -3,7 +3,8 @@
   text-align: center; }
 
 .header-title {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 57px;
   margin: 0; }
 
@@ -34,7 +35,8 @@
 
 .about-title {
   color: white;
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 36px;
   margin: 20px 0; }
 
@@ -54,7 +56,8 @@
   margin-bottom: 60px; }
 
 .feature-title {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 32px;
   margin: 20px 0; }
 
@@ -84,7 +87,8 @@
   margin: 150px 0; }
 
 .highlight-title {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 48px;
   margin: 20px 0; }
 

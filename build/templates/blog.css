@@ -35,32 +35,38 @@
   text-align: left; }
 
 .blog .container h1 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 4.2358rem;
   line-height: calc(3rem * 1.5); }
 
 .blog .container h2 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 3.42676rem;
   line-height: calc(3rem * 1.5); }
 
 .blog .container h3 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 2.77225rem;
   line-height: calc(2rem * 1.5); }
 
 .blog .container h4 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   line-height: calc(2rem * 1.5); }
 
 .blog .container h5 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 1.618rem;
   line-height: calc(2rem * 1.5); }
 
 .blog .container h6 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 1.05895rem;
   line-height: calc(1rem * 1.5); }
 
@@ -74,7 +80,8 @@
 
 .blog .container small {
   display: inline-block;
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 0.809rem;
   line-height: calc(1rem * 1.5);
   color: rgba(14, 20, 26, 0.4);
@@ -92,7 +99,8 @@
   position: relative; }
 
 .blog .container ul:not(.dropdown-menu):not(.radio-group):not(.checklist) li:before {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   display: inline-block;
   content: '\2022';
   width: 2rem;
@@ -120,7 +128,8 @@
   position: relative; }
 
 .blog .container ol li:before {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   color: inherit;
   display: inline-block;
   content: counter(list) ".";
@@ -144,7 +153,7 @@
 .blog .container code {
   background: rgba(14, 20, 26, 0.1);
   display: inline-block;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", sans-serif;
   font-size: 0.809rem;
   line-height: cacl(1rem*1.5);
   padding: 0 4px;
@@ -169,7 +178,8 @@
 
 .blog .container blockquote,
 .blog .container blockquote p:not([class]) {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   line-height: calc(2rem * 1.5);
   color: rgba(14, 20, 26, 0.8);
@@ -431,7 +441,8 @@
     background: rgba(14, 20, 26, 0.1);
     display: inline-block; }
   .blog .we-container .we {
-    font-family: "Galano Bold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     font-size: 1.05895rem;
     color: #fff;
     line-height: calc(2rem * 1.5);

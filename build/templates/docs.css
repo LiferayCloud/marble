@@ -52,8 +52,8 @@
 .autocomplete-title {
   color: #0e141a;
   font-size: 16px;
-  font-weight: 700;
-  font-family: "Galano Medium", sans-serif; }
+  font-family: "Galano", sans-serif;
+  font-weight: 700; }
 
 .autocomplete-text {
   color: #0e141a;
@@ -96,7 +96,8 @@
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   margin-bottom: 36px; }
 
@@ -157,11 +158,12 @@
 .docs-content h5,
 .docs-content h6 {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 600; }
 
 .docs-content h1 {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   font-size: 36px;
   margin: 0 0 32px; }
 
@@ -183,14 +185,14 @@
   margin: 18px 0; }
 
 .docs-content h6 {
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   border-bottom: 2px solid rgba(14, 20, 26, 0.1);
   color: rgba(14, 20, 26, 0.4);
   font-size: 18px;
   line-height: 24px;
   margin: 0;
-  padding-bottom: 36px;
-  font-weight: 400; }
+  padding-bottom: 36px; }
 
 .docs-content ul,
 .docs-content ol {
@@ -226,7 +228,8 @@
   margin-bottom: 72px; }
 
 .docs-home-top-title {
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   color: rgba(14, 20, 26, 0.9);
   font-size: 57px;
   letter-spacing: -1px;
@@ -236,7 +239,8 @@
 
 .docs-home-top-description {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 36px;
   margin: 0 0 78px;
@@ -272,9 +276,9 @@
 .docs-home-what-subtitle,
 .newsletter-subtitle {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Medium", sans-serif;
-  font-size: 24px;
+  font-family: "Galano", sans-serif;
   font-weight: 700;
+  font-size: 24px;
   line-height: 36px;
   margin: 0 0 40px;
   text-align: center; }
@@ -283,7 +287,8 @@
 .docs-home-what-description,
 .newsletter-description {
   color: rgba(14, 20, 26, 0.6);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   margin: 0;
@@ -328,18 +333,18 @@
 
 .newsletter .newsletter-subtitle {
   font-size: 33px;
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   color: rgba(14, 20, 26, 0.8);
   line-height: 48px;
-  font-weight: 400;
   margin: 0 0 12px; }
 
 .newsletter .newsletter-description {
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   color: rgba(14, 20, 26, 0.6);
-  line-height: 36px;
-  font-weight: 600; }
+  line-height: 36px; }
 
 .newsletter-form {
   margin: 60px 0 120px; }
@@ -384,7 +389,8 @@
       margin: 0 20px; } }
   .topbar-docs .topbar-list .topbar-link {
     white-space: nowrap;
-    font-family: "Galano Bold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     font-size: 15px;
     color: rgba(14, 20, 26, 0.6); }
     .topbar-docs .topbar-list .topbar-link.topbar-link-selected {
@@ -596,7 +602,7 @@
   color: rgba(14, 20, 26, 0.6);
   background: rgba(14, 20, 26, 0.1);
   font-size: 100%;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", sans-serif;
   padding: 0 4px; }
 
 .docs * .code,
@@ -660,9 +666,9 @@
 
 .topic-title {
   color: #0e141a;
-  font-family: "Galano Medium", sans-serif;
-  font-size: 20px;
+  font-family: "Galano", sans-serif;
   font-weight: 700;
+  font-size: 20px;
   text-transform: uppercase; }
 
 .topic-description {
@@ -700,9 +706,9 @@
   padding-bottom: 30px; }
 
 .docs-home-topics .topic-title {
-  font-family: "Galano Medium", sans-serif;
-  font-size: 24px;
+  font-family: "Galano", sans-serif;
   font-weight: 700;
+  font-size: 24px;
   margin: 0;
   opacity: 1;
   text-transform: none; }

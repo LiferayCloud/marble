@@ -247,7 +247,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -1557,8 +1557,8 @@ pre {
 .table tr th {
   font-size: 16px;
   border-top: 1px solid rgba(14, 20, 26, 0.2);
-  font-family: "Galano Bold", sans-serif;
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 700; }
 
 .table tr td {
   font-size: 14px; }
@@ -2127,9 +2127,9 @@ select[multiple].input-lg,
 
 label {
   font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   color: rgba(14, 20, 26, 0.6);
   font-size: 12px;
-  font-weight: 600;
   margin-bottom: 0;
   margin-left: 2px;
   line-height: 24px;
@@ -2152,8 +2152,8 @@ label {
   color: rgba(14, 20, 26, 0.8);
   font-size: 16px;
   padding: 0 20px;
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(14, 20, 26, 0.8); }
   .form-control:focus {
@@ -2231,9 +2231,9 @@ label {
 
 .help-block {
   font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   color: rgba(14, 20, 26, 0.4);
   font-size: 12px;
-  font-weight: 600;
   margin-bottom: 0;
   margin-left: 2px;
   line-height: 24px; }
@@ -2282,7 +2282,8 @@ input[type="file"] {
   padding: 22px 20px;
   line-height: 10px;
   font-size: 13px;
-  font-family: "Galano Semibold", sans-serif, sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   vertical-align: middle; }
 
 .btn {
@@ -2605,7 +2606,8 @@ input[type="button"].btn-block {
   font-size: 16px;
   line-height: 60px;
   border-radius: 4px;
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   border: 0px solid transparent; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: none; }
@@ -2866,8 +2868,8 @@ fieldset[disabled] .btn-link {
     line-height: 36.6px;
     color: #fff;
     font-size: 15px;
-    font-family: "Galano Bold", sans-serif;
-    font-weight: 400;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     border-radius: 50%;
     display: inline-block;
     text-align: center;
@@ -2875,13 +2877,13 @@ fieldset[disabled] .btn-link {
   .topbar .wedeploy-logo .deploy {
     font-size: 17px;
     line-height: 36px;
-    font-family: "Galano Bold", sans-serif;
-    font-weight: 400;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     color: rgba(255, 255, 255, 0.9);
     margin-left: 6px; }
   .topbar .wedeploy-logo .liferay {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "Galano Medium", sans-serif;
+    font-family: "Galano", sans-serif;
     font-weight: 400;
     font-size: 10px;
     margin-left: 4px; }
@@ -3159,8 +3161,8 @@ tbody.collapse.in {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   color: rgba(14, 20, 26, 0.8);
   font-size: 12px;
   display: block;
@@ -3250,7 +3252,8 @@ tbody.collapse.in {
   padding: 0 33px 0 12px;
   margin: 0;
   font-size: 14px;
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   position: relative;
   text-align: left; }
 
@@ -3273,8 +3276,8 @@ tbody.collapse.in {
 .dropdown.dropdown-filter .dropdown-menu li a {
   border-bottom-width: 0px;
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 12px;
   padding: 0 20px;
   line-height: 36px; }
@@ -3312,8 +3315,8 @@ tbody.collapse.in {
 .dropdown.dropdown-settings .dropdown-menu li a {
   border-bottom-width: 0px;
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 12px;
   margin: 0;
   padding: 0 20px;
@@ -3357,7 +3360,8 @@ tbody.collapse.in {
 .dropdown.dropdown-confirmation .dropdown-menu h3 {
   color: rgba(14, 20, 26, 0.8);
   font-size: 14px;
-  font-family: "Galano Bold", sans-serif; }
+  font-family: "Galano", sans-serif;
+  font-weight: 700; }
 
 .dropdown.dropdown-confirmation .dropdown-menu p {
   color: rgba(14, 20, 26, 0.4);
@@ -3370,7 +3374,8 @@ tbody.collapse.in {
   height: 36px;
   margin-right: 12px;
   font-size: 12px;
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   line-height: 36px;
   padding: 0; }
 
@@ -3654,8 +3659,8 @@ tbody.collapse.in {
   background: rgba(14, 20, 26, 0.2);
   border: 0;
   color: rgba(14, 20, 26, 0.6);
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   max-width: 200px;
   white-space: nowrap;
@@ -4469,11 +4474,11 @@ a.label:hover, a.label:focus {
 .label {
   border-radius: 4px;
   display: inline-block;
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   padding: 0 12px;
   position: relative;
-  font-weight: 400;
   line-height: 36px; }
   .label.label-sm {
     padding: 0 12px;
@@ -5592,7 +5597,8 @@ button.close {
   .sidebar-list-header .sidebar-list-header-title {
     color: rgba(14, 20, 26, 0.8);
     font-size: 18px;
-    font-family: "Galano Bold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     line-height: 36px;
     padding: 0;
     margin: 0; }
@@ -5640,8 +5646,8 @@ button.close {
 .sidebar-item-title {
   color: rgba(14, 20, 26, 0.8);
   font-size: 18px;
-  font-weight: 400;
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   line-height: 36px;
   margin: 36px 20px 24px; }
 
@@ -5758,8 +5764,8 @@ button.close {
   border-radius: 0;
   line-height: 72px;
   height: 72px;
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   padding: 0 20px; }
 
@@ -5781,8 +5787,8 @@ button.close {
   padding-left: 16px; }
 
 .sidebar-list-1 .sidebar-link-selected span {
-  font-family: "Galano Bold", sans-serif;
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 700; }
 
 .sidebar-list-1 .sidebar-avatar {
   background-color: #fff;
@@ -5982,8 +5988,8 @@ button.close {
       -o-transition: color 0.3s ease-in-out;
       transition: color 0.3s ease-in-out;
       color: #fff;
-      font-family: "Galano Bold", sans-serif;
-      font-weight: 400;
+      font-family: "Galano", sans-serif;
+      font-weight: 700;
       margin: 0;
       display: flex;
       flex-direction: row;
@@ -6003,8 +6009,8 @@ button.close {
       line-height: 36px;
       margin: 0 12px 0 0; }
   .topbar .topbar-logo-text {
-    font-family: "Galano Bold", sans-serif;
-    font-weight: 400;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     font-size: 17px;
     line-height: 36px;
     margin: 0 12px 0 0;
@@ -6039,7 +6045,8 @@ button.close {
         transition: color 0.3s ease-in-out;
         white-space: nowrap;
         font-size: 16px;
-        font-family: "Galano Bold", sans-serif;
+        font-family: "Galano", sans-serif;
+        font-weight: 700;
         color: rgba(255, 255, 255, 0.4);
         line-height: 36px; }
         .topbar .topbar-list .topbar-item .topbar-link.topbar-link-selected, .topbar .topbar-list .topbar-item .topbar-link:hover {
@@ -6177,8 +6184,8 @@ button.close {
   background: rgba(14, 20, 26, 0.3);
   color: white;
   cursor: default;
-  font-family: "Galano Bold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0 auto; }
 
@@ -6193,8 +6200,8 @@ button.close {
   transition: background 0.3s ease-in-out;
   background: rgba(14, 20, 26, 0.1);
   color: rgba(14, 20, 26, 0.6);
-  font-family: "Galano Bold", sans-serif;
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 700; }
 
 .avatar-number:hover {
   background: rgba(14, 20, 26, 0.2); }
@@ -6354,7 +6361,8 @@ button.close {
 	 ========================================================================== */
 .avatar-initials.avatar-we {
   text-transform: capitalize;
-  font-family: "Galano Semibold", sans-serif; }
+  font-family: "Galano", sans-serif;
+  font-weight: 600; }
 
 /* List
 	 ========================================================================== */
@@ -6377,7 +6385,8 @@ button.close {
 .list .list-text-primary {
   color: rgba(14, 20, 26, 0.8);
   font-size: 18px;
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   line-height: 24px;
   position: relative;
   top: 2px; }
@@ -6436,7 +6445,7 @@ button.close {
   color: rgba(14, 20, 26, 0.8); }
 
 .list.list--numeric li {
-  font-family: 'Open Sans Regular', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 0 40px;
@@ -6514,7 +6523,7 @@ button.close {
 .autocomplete-topbar .listitem-title {
   color: #0e141a;
   font-size: 16px;
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
   font-weight: 700; }
 
 .autocomplete-topbar .listitem-description {
@@ -6536,8 +6545,8 @@ button.close {
   right: -4px; }
 
 .ribbon {
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   text-align: center;
   transform: rotate(45deg);
   position: relative;
@@ -6746,7 +6755,7 @@ button.close {
       height: 36px; }
       .datatable .table tr th,
       .datatable .table tr td {
-        font-family: 'Roboto Mono', sans-serif;
+        font-family: "Roboto Mono", sans-serif;
         font-size: 13px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -7020,7 +7029,8 @@ button.close {
   height: 36px;
   padding: 6px 20px;
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   margin: 0; }
 
@@ -7042,7 +7052,8 @@ button.close {
   margin: 0; }
 
 .select.select-large .dropdown .btn {
-  font-family: "Galano Semibold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(14, 20, 26, 0.8);
   background: rgba(14, 20, 26, 0.05); }
@@ -7163,7 +7174,8 @@ button.close {
   font-size: 12px;
   color: rgba(14, 20, 26, 0.8);
   box-shadow: 0 2px 12px rgba(14, 20, 26, 0.12);
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   border-radius: 4px; }
   .box.show-custom-tooltip:hover {
     box-shadow: 0 2px 8px rgba(14, 20, 26, 0.2); }
@@ -7299,7 +7311,8 @@ button.close {
     margin: 0 0 12px; }
   .content-body .content-body-title {
     color: rgba(14, 20, 26, 0.8);
-    font-family: "Galano Semibold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 600;
     font-size: 19px;
     padding: 0;
     line-height: 36px;
@@ -7313,7 +7326,8 @@ button.close {
       margin-left: 8px; }
   .content-body .content-body-subtitle {
     color: rgba(14, 20, 26, 0.6);
-    font-family: "Galano Semibold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 600;
     font-size: 16px;
     padding: 0;
     line-height: 24px;
@@ -7419,7 +7433,8 @@ button.close {
         width: 100%;
         text-align: left; }
         .content-body.content-body-data .dropdown .btn .instance-name {
-          font-family: "Galano Bold", sans-serif;
+          font-family: "Galano", sans-serif;
+          font-weight: 700;
           display: block;
           width: inherit;
           text-align: left; }
@@ -7459,13 +7474,13 @@ button.close {
     align-content: center;
     align-items: center; }
     .content-body .read-only .title {
+      color: rgba(14, 20, 26, 0.8);
       line-height: 24px;
       margin-right: 20px;
       flex: 0 1 auto;
       font-size: 14px;
-      font-family: "Galano Semibold", sans-serif;
-      color: rgba(14, 20, 26, 0.8);
-      font-weight: 400;
+      font-family: "Galano", sans-serif;
+      font-weight: 600;
       display: block;
       flex: 1 0 auto; }
   .content-body .dropdown .icon-16-arrow-down-short {
@@ -7491,9 +7506,9 @@ button.close {
     .content-body .content-table-header span {
       font-size: 12px;
       font-family: "Open Sans", sans-serif;
+      font-weight: 600;
       color: rgba(14, 20, 26, 0.6);
       line-height: 24px;
-      font-weight: 600;
       margin-bottom: 12px;
       display: inline-block; }
   .content-body .content-table-row {
@@ -7533,17 +7548,17 @@ button.close {
     .content-body .content-table-row .no-shrink {
       flex-shrink: 0; }
     .content-body .content-table-row .title {
-      font-family: "Galano Semibold", sans-serif;
+      font-family: "Galano", sans-serif;
+      font-weight: 600;
       font-size: 14px;
       color: rgba(14, 20, 26, 0.8);
-      font-weight: 400;
       text-align: left;
       line-height: 36px; }
     .content-body .content-table-row .subtitle {
       font-family: "Open Sans", sans-serif;
+      font-weight: 600;
       font-size: 11px;
       color: rgba(14, 20, 26, 0.6);
-      font-weight: 600;
       text-align: left;
       line-height: 24px; }
     .content-body .content-table-row .box.box--small {
@@ -7647,9 +7662,9 @@ button.close {
 
 .notfound-text {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Bold", sans-serif;
-  font-size: 18px;
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
+  font-size: 18px; }
   @media (max-width: 600px) {
     .notfound-text {
       font-size: 12px; } }
@@ -7666,8 +7681,8 @@ button.close {
 .content-footer .content-footer__link {
   color: #00d46a;
   font-size: 13px;
-  font-family: "Galano Semibold", sans-serif;
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 600; }
 
 /* ==========================================================================
    Content Header
@@ -7689,9 +7704,9 @@ button.close {
     margin: 0;
     padding: 0;
     display: block;
-    font-family: "Galano Bold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     font-size: 29px;
-    font-weight: 400;
     color: rgba(14, 20, 26, 0.9);
     position: relative;
     top: 2px; }
@@ -7719,7 +7734,8 @@ button.close {
     line-height: 48px;
     font-size: 13px;
     padding: 0 12px;
-    font-family: "Galano Bold", sans-serif; }
+    font-family: "Galano", sans-serif;
+    font-weight: 700; }
     .content-header .btn-install span {
       display: inline-block;
       line-height: 48px;
@@ -7815,7 +7831,8 @@ button.close {
     padding: 0 32px 0 12px;
     margin: 0;
     font-size: 13px;
-    font-family: "Galano Bold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     position: relative;
     text-align: left; }
     .content-header .dropdown .btn.btn-default [class^="icon-12-"],
@@ -7852,9 +7869,9 @@ button.close {
     padding: 24px 0; }
   .content-placeholder .content-placeholder__title {
     color: rgba(14, 20, 26, 0.8);
-    font-family: "Galano Bold", sans-serif;
+    font-family: "Galano", sans-serif;
+    font-weight: 700;
     font-size: 16px;
-    font-weight: 400;
     margin: 0;
     line-height: 36px; }
   .content-placeholder .content-placeholder__subtitle {
@@ -7915,9 +7932,9 @@ button.close {
       -o-transition: color 0.3s ease-in-out;
       transition: color 0.3s ease-in-out;
       color: rgba(14, 20, 26, 0.6);
-      font-family: "Galano Bold", sans-serif;
-      font-size: 15px;
-      font-weight: 400; }
+      font-family: "Galano", sans-serif;
+      font-weight: 700;
+      font-size: 15px; }
       .content-tabs li a:hover, .content-tabs li a:focus {
         color: rgba(0, 212, 106, 0.9); }
 
@@ -8066,9 +8083,9 @@ button.close {
 
 .modal-header .modal-title {
   color: rgba(14, 20, 26, 0.8);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 600;
   font-size: 28px;
-  font-weight: 500;
   line-height: 24px;
   margin: 49px 0 0 0;
   text-transform: capitalize; }
@@ -8134,7 +8151,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8251,8 +8268,8 @@ button.close {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: rgba(14, 20, 26, 0.8);
   font-size: 12px;
-  font-weight: 400;
-  font-family: "Galano Bold", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
   text-align: center; }
 
 .text-left .tooltip-inner {
@@ -8298,7 +8315,8 @@ button.close {
   box-shadow: 0 2px 8px rgba(14, 20, 26, 0.2);
   color: rgba(14, 20, 26, 0.4);
   content: counter(articles);
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   font-size: 12px;
   height: 36px;
   left: 12px;
@@ -8339,7 +8357,8 @@ button.close {
 .reading-title {
   color: rgba(14, 20, 26, 0.6);
   display: block;
-  font-family: "Galano Medium", sans-serif;
+  font-family: "Galano", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   overflow: hidden;
@@ -8370,7 +8389,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;

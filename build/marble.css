@@ -5740,7 +5740,8 @@ button.close {
   background: rgba(14, 20, 26, 0.05);
   border-color: white;
   color: rgba(14, 20, 26, 0.4);
-  font-weight: 400; }
+  font-family: "Galano", sans-serif;
+  font-weight: 600; }
 
 .sidebar-search .input-inner-icon-helper {
   -webkit-transition: color 0.3s ease-in-out;

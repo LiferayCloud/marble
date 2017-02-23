@@ -223,7 +223,8 @@
 	background: rgba($primary, .05);
 	border-color: white;
 	color: rgba($primary, .4);
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 600;
 }
 
 .sidebar-search .input-inner-icon-helper {

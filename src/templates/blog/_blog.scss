@@ -121,7 +121,8 @@
 		}
 
 		.we {
-			font-family: $font-family-secondary-bold;
+			font-family: $font-primary;
+			font-weight: 700;
 			font-size: $font-h6;
 			color: $white;
 			line-height: calc(2rem * #{$lineHeight});

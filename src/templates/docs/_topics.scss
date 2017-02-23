@@ -26,9 +26,9 @@
 
 .topic-title {
 	color: $primary;
-	font-family: $font-family-secondary;
-	font-size: 20px;
+	font-family: $font-primary;
 	font-weight: 700;
+	font-size: 20px;
 	text-transform: uppercase;
 }
 
@@ -74,9 +74,9 @@
 }
 
 .docs-home-topics .topic-title {
-	font-family: $font-family-secondary;
-	font-size: 24px;
+	font-family: $font-primary;
 	font-weight: 700;
+	font-size: 24px;
 	margin: 0;
 	opacity: 1;
 	text-transform: none;

@@ -41,7 +41,8 @@
 		padding: calc(0.5rem * #{$lineHeight});
 		width: 100%;
 
-		font-family: $font-family-secondary-semibold;
+		font-family: $font-primary;
+		font-weight: 600;
 		font-size: 0.8125rem;
 		color: rgba($primary, 0.8);
 
@@ -60,7 +61,8 @@
 
 
 	.tutorial-step {
-		font-family: $font-family-secondary-semibold;
+		font-family: $font-primary;
+		font-weight: 600;
 		display: block;
 		margin-right: calc(0.5rem * #{$lineHeight});
 		width: calc(1.5rem * #{$lineHeight});

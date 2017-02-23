@@ -6,11 +6,11 @@
 .label {
 	border-radius: 4px;
 	display: inline-block;
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 14px;
 	padding: 0 12px;
 	position: relative;
-	font-weight: 400;
 	line-height: 36px;
 
 	&.label-sm {

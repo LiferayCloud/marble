@@ -21,7 +21,8 @@
 .list .list-text-primary {
 	color: rgba($primary, .8);
 	font-size: 18px;
-	font-family: $font-family-secondary;
+	font-family: $font-primary;
+	font-weight: 400;
 	line-height: 24px;
 	position: relative;
 	top: 2px;
@@ -30,7 +31,7 @@
 .list .list-text-secondary {
 	color: rgba($primary, .4);
 	font-size: 14px;
-	font-family: $font-family-sans-serif;
+	font-family: $font-secondary;
 	line-height: 24px;
 	position: relative;
 	top: 4px;
@@ -92,7 +93,7 @@
 	color: rgba($primary, .8);
 }
 .list.list--numeric li {
-	font-family: 'Open Sans Regular', sans-serif;
+	font-family: $font-secondary;
 	font-size: 16px;
 	line-height: 24px;
 	margin: 0 0 0 40px;

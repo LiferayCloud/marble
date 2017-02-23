@@ -9,13 +9,14 @@
 }
 
 .feature-title {
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	font-size: 32px;
 	margin: 20px 0;
 }
 
 .feature-description {
-	font-family: $font-family-sans-serif;
+	font-family: $font-secondary;
 	font-size: 16px;
 	line-height: 26px;
 	margin: 0;

@@ -56,7 +56,8 @@
 	.sidebar-list-header-title {
 		color: rgba($primary, .8);
 		font-size: 18px;
-		font-family: $font-family-secondary-bold;
+		font-family: $font-primary;
+		font-weight: 700;
 		line-height: 36px;
 		padding: 0;
 		margin: 0;
@@ -66,7 +67,7 @@
 		@include anim(color);
 		color: rgba($primary, .4);
 		display: block;
-		font-family: $font-family-sans-serif;
+		font-family: $font-secondary;
 		font-size: 13px;
 		line-height: 24px;
 		margin: 0;
@@ -115,8 +116,8 @@
 .sidebar-item-title {
 	color: rgba($primary, .8);
 	font-size: 18px;
-	font-weight: 400;
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	line-height: 36px;
 	margin: 36px 20px 24px;
 }
@@ -249,8 +250,8 @@
 	border-radius: 0;
 	line-height: 72px;
 	height: 72px;
-	font-family: $font-family-secondary-semibold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 14px;
 	padding: 0 20px;
 }
@@ -276,8 +277,8 @@
 }
 
 .sidebar-list-1 .sidebar-link-selected span {
-	font-family: $font-family-secondary-bold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
 }
 
 .sidebar-list-1 .sidebar-avatar {

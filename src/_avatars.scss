@@ -110,8 +110,8 @@ $xlarge : 72px;
 	background: rgba($primary, .3);
 	color: white;
 	cursor: default;
-	font-family: $font-family-secondary-bold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin: 0 auto;
 }
@@ -128,8 +128,8 @@ $xlarge : 72px;
 	@include anim(background);
 	background: rgba($primary, .1);
 	color: rgba($primary, .6);
-	font-family: $font-family-secondary-bold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
 }
 
 .avatar-number:hover {
@@ -339,5 +339,6 @@ $icon16Large: 96px;
 	 ========================================================================== */
 .avatar-initials.avatar-we {
 	text-transform: capitalize;
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 }

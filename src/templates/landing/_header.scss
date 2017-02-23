@@ -4,13 +4,14 @@
 }
 
 .header-title {
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	font-size: 57px;
 	margin: 0;
 }
 
 .header-subtitle {
-	font-family: $font-family-sans-serif;
+	font-family: $font-secondary;
 	font-size: 19px;
 	line-height: 24px;
 	margin: 25px 0 35px;

@@ -7,7 +7,7 @@
 
 .search-result-container .search-result-summary {
 	color: rgba($primary, .8);
-	font-family: $font-family-secondary;
+	font-family: $font-primary;
 	font-weight: 400;
 	font-size: 24px;
 	margin: 0 0 50px;
@@ -35,8 +35,8 @@
 	@include anim(color);
 	color: rgba($primary, .8);
 	display: block;
-	font-family: $font-family-secondary;
 	font-size: 18px;
+	font-family: $font-primary;
 	font-weight: 700;
 	margin-left: 70px;
 }

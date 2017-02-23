@@ -11,7 +11,7 @@
 
 .CodeMirror,
 .docs-content pre {
-	font-family: 'Roboto Mono', monaco, monospace;
+	font-family: $font-mono;
 }
 
 .docs-content pre {
@@ -111,7 +111,7 @@
 
 @mixin scrollbar-light() {
 	@include scrollbar();
-	
+
 	::-webkit-scrollbar-track {
 		background-color: white;
 	}

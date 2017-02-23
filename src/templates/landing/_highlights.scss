@@ -3,13 +3,14 @@
 }
 
 .highlight-title {
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	font-size: 48px;
 	margin: 20px 0;
 }
 
 .highlight-description {
-	font-family: $font-family-sans-serif;
+	font-family: $font-secondary;
 	font-size: 18px;
 	line-height: 28px;
 	margin: 0 0 20px;

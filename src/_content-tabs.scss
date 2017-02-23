@@ -34,9 +34,9 @@
 		a {
 			@include anim(color);
 			color: rgba($primary, .6);
-			font-family: $font-family-secondary-bold;
+			font-family: $font-primary;
+			font-weight: 700;
 			font-size: 15px;
-			font-weight: 400;
 
 			&:hover,
 			&:focus {

@@ -12,7 +12,8 @@
 	font-size: 12px;
 	color: rgba($primary, 0.8);
 	box-shadow: 0 2px 12px rgba($primary, 0.12);
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	border-radius: 4px;
 
 	&.show-custom-tooltip:hover {

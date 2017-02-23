@@ -40,16 +40,16 @@
 
 .guide-header-title {
 	color: rgba($primary, .9);
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	font-size: 53px;
-	font-weight: 400;
 	line-height: 60px;
 }
 
 .guide-header-title span {
 	color: rgba($primary, .9);
-	font-family: $font-family-secondary-bold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 700;
 }
 
 /* Topics Button Group
@@ -103,7 +103,8 @@
 
 	p {
 		line-height: 36px;
-		font-family: $font-family-secondary-semibold;
+		font-family: $font-primary;
+		font-weight: 600;
 		font-size: 19px;
 		color: rgba($primary, .8);
 		margin: 0 0 24px;
@@ -294,8 +295,8 @@
 	table tr th {
 		font-size: 16px;
 		border-top: 1px solid rgba($primary, .2);
-		font-family: $font-family-secondary-bold;
-		font-weight: 400;
+		font-family: $font-primary;
+		font-weight: 700;
 	}
 
 	table tr td {

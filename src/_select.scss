@@ -54,7 +54,8 @@
 	height: 36px;
 	padding: 6px 20px;
 	color: rgba($primary, 0.8);
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 14px;
 	margin: 0;
 }
@@ -80,7 +81,8 @@
 }
 
 .select.select-large .dropdown .btn {
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 14px;
 	color: rgba($primary, 0.8);
 	background: rgba($primary, 0.05);

@@ -42,7 +42,8 @@
 	box-shadow: 0 2px 8px rgba($primary, 0.2);
 	color: rgba($primary, .4);
 	content: counter(articles);
-	font-family: $font-family-secondary;
+	font-family: $font-primary;
+	font-weight: 400;
 	font-size: 12px;
 	height: 36px;
 	left: 12px;
@@ -92,7 +93,8 @@
 .reading-title {
 	color: rgba($primary, 0.6);
 	display: block;
-	font-family: $font-family-secondary;
+	font-family: $font-primary;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
 	overflow: hidden;

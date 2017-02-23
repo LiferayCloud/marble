@@ -11,16 +11,16 @@
 
 	.content-placeholder__title {
 		color: rgba($primary, .8);
-		font-family: $font-family-secondary-bold;
+		font-family: $font-primary;
+		font-weight: 700;
 		font-size: 16px;
-		font-weight: 400;
 		margin: 0;
 		line-height: 36px;
 	}
 
 	.content-placeholder__subtitle {
 		color: rgba($primary, .6);
-		font-family: $font-family-sans-serif;
+		font-family: $font-secondary;
 		font-weight: 600;
 		font-size: 12px;
 		margin: 0;

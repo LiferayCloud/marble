@@ -27,8 +27,8 @@
 .dropdown-menu li a,
 .dropdown-menu li button {
 	@include anim(color);
-	font-family: $font-family-secondary-semibold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 600;
 	color: rgba($primary, 0.8);
 	font-size: 12px;
 
@@ -131,7 +131,8 @@
 	padding: 0 33px 0 12px;
 	margin: 0;
 	font-size: 14px;
-	font-family: $font-family-secondary-bold;
+	font-family: $font-primary;
+	font-weight: 700;
 	position: relative;
 	text-align: left;
 }
@@ -158,8 +159,8 @@
 .dropdown.dropdown-filter .dropdown-menu li a {
 	border-bottom-width: 0px;
 	color: rgba($primary, 0.8);
-	font-family: $font-family-secondary-semibold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 12px;
 	padding: 0 20px;
 	line-height: 36px;
@@ -203,8 +204,8 @@
 .dropdown.dropdown-settings .dropdown-menu li a {
 	border-bottom-width: 0px;
 	color: rgba(14, 20, 26, 0.8);
-	font-family: $font-family-secondary-semibold;
-	font-weight: 400;
+	font-family: $font-primary;
+	font-weight: 600;
 	font-size: 12px;
 	margin: 0;
 	padding: 0 20px;
@@ -256,13 +257,14 @@
 .dropdown.dropdown-confirmation .dropdown-menu h3 {
 	color: rgba($primary, 0.8);
 	font-size: 14px;
-	font-family: $font-family-secondary-bold
+	font-family: $font-primary;
+	font-weight: 700;
 }
 
 .dropdown.dropdown-confirmation .dropdown-menu p {
 	color: rgba($primary, 0.4);
 	font-size: 11px;
-	font-family: $font-family-sans-serif;
+	font-family: $font-secondary;
 	font-weight: 600;
 }
 
@@ -271,7 +273,8 @@
 	height: 36px;
 	margin-right: 12px;
 	font-size: 12px;
-	font-family: $font-family-secondary-semibold;
+	font-family: $font-primary;
+	font-weight: 600;
 	line-height: 36px;
 	padding: 0;
 }

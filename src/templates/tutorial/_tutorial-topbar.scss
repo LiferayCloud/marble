@@ -17,6 +17,10 @@
 		align-self: center;
 		flex-shrink: 0;
 		margin: 0 12px 0 0;
+
+		> * {
+			margin: 0;
+		}
 	}
 
 	.btn-icon {

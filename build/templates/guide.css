@@ -121,15 +121,22 @@
   height: 96px;
   margin-left: 96px;
   padding: 0 20px; }
-  .docs-content .guide-github-text a {
-    font-weight: 600; }
 
 .docs-content .guide-github-text p {
   font-family: "Galano", sans-serif;
   margin: 0; }
 
 .docs-content .guide-github-link {
-  font-weight: 600; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border-bottom: 1px dashed rgba(14, 20, 26, 0.4); }
+  .docs-content .guide-github-link:hover {
+    color: #00d46a;
+    border-bottom: 1px dashed #00d46a; }
 
 .guide-topic .docs-content pre code {
   background: transparent;

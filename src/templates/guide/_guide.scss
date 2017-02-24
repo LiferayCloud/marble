@@ -150,10 +150,6 @@
 	height: 96px;
 	margin-left: 96px;
 	padding: 0 20px;
-
-	a {
-		font-weight: 600;
-	}
 }
 
 .docs-content .guide-github-text p {
@@ -162,7 +158,16 @@
 }
 
 .docs-content .guide-github-link {
-	font-weight: 600;
+	@include anim(all);
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	border-bottom: 1px dashed rgba($primary, 0.4);
+
+	&:hover {
+		color: $accent;
+		border-bottom: 1px dashed $accent;
+	}
 }
 
 .guide-topic .docs-content pre code {

@@ -307,7 +307,7 @@
   position: relative; }
   @media (min-width: 960px) {
     .docs-guide {
-      margin-top: 80px; } }
+      margin-top: 48px; } }
 
 .docs .guide-content h1, .docs .guide-content h2, .docs .guide-content h3, .docs .guide-content h4, .docs .guide-content h5, .docs .guide-content h6 {
   color: rgba(14, 20, 26, 0.8);

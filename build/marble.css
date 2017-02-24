@@ -2791,15 +2791,13 @@ fieldset[disabled] .btn-link {
   padding: 0 72px;
   font-size: 16px;
   line-height: 60px;
-  border-radius: 4px;
-  font-weight: 400; }
+  border-radius: 4px; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0 24px;
   font-size: 16px;
   line-height: 60px;
-  border-radius: 4px;
-  font-weight: 400; }
+  border-radius: 4px; }
 
 .btn-transparent {
   background: transparent;

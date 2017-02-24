@@ -1,0 +1,22 @@
+.guide:not(.content) .topbar {
+	background: rgba($primary, 0.02)
+}
+
+.docs .topbar-docs-main {
+	display: flex;
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+
+.docs .sidebar-offset .topbar {
+	display: none;
+
+	@media (min-width: $screen-md-min) {
+		display: flex;
+	}
+}
+
+.topbar.topbar-large .wedeploy-logo .liferay {
+	display: none;
+}

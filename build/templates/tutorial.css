@@ -530,6 +530,10 @@
     .tutorial .container .card {
       max-width: calc(34rem + 10rem);
       padding: calc(1rem * 1.5) calc(2rem * 1.5); } }
+  .tutorial .container .card > * {
+    margin-bottom: calc(1rem * 1.5); }
+    .tutorial .container .card > *:last-child {
+      margin-bottom: 0; }
 
 .tutorial .container .content section:last-child {
   margin: 0; }

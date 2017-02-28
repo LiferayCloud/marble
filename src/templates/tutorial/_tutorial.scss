@@ -21,6 +21,14 @@
 			max-width: calc(34rem + 10rem);
 			padding: calc(1rem * #{$lineHeight}) calc(2rem * #{$lineHeight});
 		}
+
+		> * {
+			margin-bottom: calc(1rem * #{$lineHeight});
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	.container .content section:last-child {

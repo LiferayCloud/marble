@@ -1,3 +1,8 @@
+.code-container {
+	position: relative;
+	margin: calc(1rem * #{$lineHeight}) 0;
+}
+
 .CodeMirror {
 	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
 	border-radius: 4px;
@@ -10,11 +15,11 @@
 }
 
 .CodeMirror,
-.docs-content pre {
+.code-container pre {
 	font-family: $font-mono;
 }
 
-.docs-content pre {
+.code-container pre {
 	border: 0;
 	font-size: 14px;
 	line-height: 24px;
@@ -24,11 +29,11 @@
 	position: relative;
 }
 
-.docs-content pre code {
+.code-container pre code {
 	white-space: pre;
 }
 
-.docs-content .CodeMirror pre {
+.code-container .CodeMirror pre {
 	font-size: 14px;
 	line-height: 24px;
 	margin: 0;
@@ -36,26 +41,24 @@
 	opacity: 1;
 }
 
-.code-container {
-	position: relative;
-	margin: 20px 0;
-}
-
 .btn-copy {
-	@include anim(background);
-	background: rgba(white, .3);
-	height: 36px;
-	line-height: 36px;
+	@include anim(all);
+	background: rgba($white, 0.6);
+	border-radius: 2px;
+	height: 24px;
+	line-height: 24px;
+	opacity: 0;
 	padding: 0;
-	position: absolute;
-	right: 5px;
-	top: 5px;
-	width: 36px;
-	z-index: 1;
+	top: 4px;
+	width: 24px;
 
-	&:hover,
-	&:focus {
-		background: rgba(white, .5);
+	&:hover {
+		background: rgba($white, 0.8);
+		opacity: 1;
+	}
+
+	> [class*="icon-"] {
+		font-size: 10px;
 	}
 }
 

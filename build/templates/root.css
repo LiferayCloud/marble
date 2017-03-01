@@ -1,3 +1,56 @@
+:root {
+  font-size: 14px; }
+  :root [class*='icon-12'] {
+    font-size: 12px; }
+  :root [class*='icon-16'] {
+    font-size: 16px; }
+
+@media (min-width: 600px) and (max-width: 1800px) {
+  :root {
+    font-size: 16px; } }
+
+@media (min-width: 1800px) {
+  :root {
+    font-size: 18px; } }
+
+/* Code
+   ========================================================================== */
+* code {
+  display: inline-block;
+  color: rgba(14, 20, 26, 0.6);
+  background: rgba(14, 20, 26, 0.1);
+  font-size: 100%;
+  font-family: "Roboto Mono", sans-serif;
+  padding: 0 4px; }
+
+* .code {
+  margin: 0;
+  background: transparent; }
+
+p code {
+  line-height: 22px; }
+
+h4 code {
+  line-height: 24px; }
+
+h6 code {
+  line-height: 26px; }
+
+p a:not([class]),
+li a:not([class]) {
+  border-bottom: 1px dashed rgba(14, 20, 26, 0.4);
+  color: inherit; }
+  p a:not([class]):hover,
+  li a:not([class]):hover {
+    border-bottom: 1px dashed #00d46a;
+    color: #00d46a; }
+
+/* CodeMirror
+   ========================================================================== */
+.code-container {
+  position: relative;
+  margin: calc(1rem * 1.5) 0; }
+
 .CodeMirror {
   animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
   border-radius: 4px;
@@ -8,11 +61,23 @@
   width: 100%;
   z-index: 0; }
 
+.code-container .CodeMirror-sizer {
+  margin-left: 40px !important; }
+
+.code-container .CodeMirror-gutter-wrapper {
+  left: -28px !important; }
+
+.code-container .CodeMirror-linenumber {
+  line-height: 24px;
+  text-align: left;
+  width: 32px !important;
+  padding: 0; }
+
 .CodeMirror,
-.docs-content pre {
+.code-container pre {
   font-family: "Roboto Mono", sans-serif; }
 
-.docs-content pre {
+.code-container pre {
   border: 0;
   font-size: 14px;
   line-height: 24px;
@@ -21,35 +86,33 @@
   padding: 4px;
   position: relative; }
 
-.docs-content pre code {
+.code-container pre code {
   white-space: pre; }
 
-.docs-content .CodeMirror pre {
+.code-container .CodeMirror pre {
   font-size: 14px;
   line-height: 24px;
   margin: 0;
   padding: 0;
   opacity: 1; }
 
-.code-container {
-  position: relative;
-  margin: 20px 0; }
-
 .btn-copy {
-  -webkit-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.3);
-  height: 36px;
-  line-height: 36px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  height: 24px;
+  line-height: 24px;
+  opacity: 0;
   padding: 0;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 36px;
-  z-index: 1; }
-  .btn-copy:hover, .btn-copy:focus {
-    background: rgba(255, 255, 255, 0.5); }
+  top: 4px;
+  width: 24px; }
+  .btn-copy:hover {
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 1; }
+  .btn-copy > [class*="icon-"] {
+    font-size: 10px; }
 
 .CodeMirror.cm-s-dracula ::-webkit-scrollbar {
   width: 12px; }

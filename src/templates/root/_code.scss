@@ -95,6 +95,10 @@ li a:not([class]) {
 	opacity: 1;
 }
 
+.code-container:hover .btn-copy {
+	opacity: 1;
+}
+
 .btn-copy {
 	@include anim(all);
 	background: rgba($white, 0.6);
@@ -108,7 +112,6 @@ li a:not([class]) {
 
 	&:hover {
 		background: rgba($white, 0.8);
-		opacity: 1;
 	}
 
 	> [class*="icon-"] {

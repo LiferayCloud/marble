@@ -99,16 +99,13 @@ li a:not([class]) {
 	opacity: 1;
 }
 
-.btn-sm.btn-cody {
-	padding: 0;
-}
-
-.btn-copy {
+.code-container .btn-copy {
 	@include anim(all);
 	background: rgba($white, 0.6);
 	border-radius: 2px;
 	height: 24px;
 	line-height: 24px;
+	padding: 0;
 	opacity: 0;
 	top: 4px;
 	width: 24px;

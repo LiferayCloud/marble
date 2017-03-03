@@ -112,6 +112,9 @@ li a:not([class]) {
 	opacity: 0;
 	top: 4px;
 	width: 24px;
+	position: absolute;
+	right: 6px;
+	z-index: 999;
 
 	&:hover {
 		background: rgba($white, 0.8);

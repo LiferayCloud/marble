@@ -99,6 +99,10 @@ li a:not([class]) {
 	opacity: 1;
 }
 
+.btn-sm.btn-cody {
+	padding: 0;
+}
+
 .btn-copy {
 	@include anim(all);
 	background: rgba($white, 0.6);
@@ -106,7 +110,6 @@ li a:not([class]) {
 	height: 24px;
 	line-height: 24px;
 	opacity: 0;
-	padding: 0;
 	top: 4px;
 	width: 24px;
 

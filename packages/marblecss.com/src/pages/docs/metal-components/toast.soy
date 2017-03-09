@@ -16,9 +16,11 @@ title: "Toast"
 	{let $tootlip kind="html"}
 		<h5>Default Tooltip</h5>
 
-		{call MarbleToast.render}
+		{call Toast.render}
 			{param animClasses: $animClasses /}
-			{param body: 'User was deleted successfully<button class="alert-undo-link">undo</button>' /}
+			{param body kind="html"}
+				User was deleted successfully<button class="alert-undo-link">undo</button>
+			{/param}
 			{param dismissible: true /}
 			{param elementClasses: 'hidden alert-danger' /}
 			{param hideDelay: 6000 /}

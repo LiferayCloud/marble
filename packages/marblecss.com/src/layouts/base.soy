@@ -15,12 +15,9 @@
 		<meta content="minimum-scale=1.0, width=device-width" name="viewport">
 		<meta name="description" content="{$page.description ?: ''}">
 
-		<title>{$page.title} - {$site.title}</title>
+		<title>{$site.title} - {$page.title}</title>
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono">
-		<link rel="stylesheet" href="/fonts/galano/galano.css">
-		<link rel="stylesheet" href="/fonts/icon-12/icon-12.css">
-		<link rel="stylesheet" href="/fonts/icon-16/icon-16.css">
 
 		<!-- inject:css -->
 		<!-- endinject -->
@@ -30,12 +27,15 @@
 
 		<link rel="stylesheet" href="/styles/main.css">
 	</head>
-	<body>
-		<!-- inject:metal:js -->
-			<div>
-				{$content}
-			</div>
-		<!-- endinject -->
+	<body data-senna>
+		<div data-senna-surface id="wrapper">
+			<div class="senna-loading-bar"></div>
+			<!-- inject:metal:js -->
+				<div>
+					{$content}
+				</div>
+			<!-- endinject -->
+		</div>
 
 		{if $scripts}
 			{foreach $script in $scripts}
@@ -43,7 +43,7 @@
 			{/foreach}
 		{/if}
 
-		<!-- inject:codemirror:js -->
+		<!-- inject:vendor:js -->
 		<!-- endinject -->
 	</body>
 </html>

@@ -9,7 +9,7 @@
 		{param elementClasses: 'docs styleguide' /}
 		{param content kind="html"}
 			{call SideBar.render}
-				{param section: $site.index.children[1] /}
+				{param section: $site.index.children['docs'] /}
 			{/call}
 			{call .styleguideFull data="all" /}
 		{/param}
@@ -26,7 +26,7 @@
 			<div class="docs-guide row card">
 				<div class="docs-content col-xs-16">
 					{$content}
-					{call .styleguideFullFeedback data="all" /}
+					{call .contribute data="all" /}
 				</div>
 			</div>
 		</div>
@@ -37,15 +37,14 @@
  * @param page
  * @param site
  */
-{template .styleguideFullFeedback}
-	<div>
-		<div class="guide-github">
-			<div class="guide-github-img">
-				<span class="icon-16-github"></span>
-			</div>
-			<div class="guide-github-text">
-				<p>Contribute on Github! <a href="{$site.repo ?: ''}/tree/master/{$page.srcFilePath}" class="docs-github-link" target="_blank">Edit this section</a>.</p>
-			</div>
+{template .contribute}
+	<div class="contribute">
+		<div class="contribute-img">
+			<span class="icon-16-github"></span>
+		</div>
+
+		<div class="contribute-text">
+			<p>Contribute on Github! <a href="https://github.com/{$site.githubRepo}/tree/master/ui/{$page.srcFilePath}" class="contribute-link " target="_blank">Edit this section</a>.</p>
 		</div>
 	</div>
 {/template}

@@ -11,14 +11,14 @@ title: "Input Matrix"
 {template .render}
 	{let $progressBar kind="html"}
 		<h5>Single Field</h5>
-		{call MarbleInputMatrix.render }
+		{call InputMatrix.render }
 			{param fieldsConfig: [
 				['label': '', 'name': 'customDomains', 'placeholder': 'myproject.com', 'isArray': true, 'maxLength' : 263, 'autocomplete' : 'off']
 			] /}
 		{/call}
 
 		<h5>Double Fields</h5>
-		{call MarbleInputMatrix.render }
+		{call InputMatrix.render }
 			{param elementClasses: 'input-matrix--inline' /}
 			{param fieldsConfig: [
 				['label': '', 'name': 'key', 'placeholder': 'Key', 'isArray': true, 'maxLength': 255, 'autocomplete': false],

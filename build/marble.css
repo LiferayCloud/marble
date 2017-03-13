@@ -5671,6 +5671,8 @@ button.close {
 .sidebar-header .sidebar-icon-right {
   flex: 0 1 auto;
   margin-right: 0; }
+  .sidebar-header .sidebar-icon-right > * {
+    margin-right: 0; }
 
 /* Sidebar > Toggle Header
 	 ========================================================================== */

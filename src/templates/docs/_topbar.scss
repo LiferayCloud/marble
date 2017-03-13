@@ -20,3 +20,12 @@
 .topbar.topbar-large .wedeploy-logo .liferay {
 	display: none;
 }
+
+.topbar.topbar-docs {
+	display: flex !important;
+
+	@media (min-width: 960px) {
+		width: calc(100% - 284px);
+		margin-left: 284px;
+	}
+}

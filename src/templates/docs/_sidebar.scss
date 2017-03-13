@@ -1,8 +1,11 @@
 .docs .sidebar {
 	overflow-y: auto;
+	top: 0;
 	width: 100%;
+	position: relative;
 
 	@media (min-width: $screen-md-min) {
+		position: fixed;
 		width: 284px;
 	}
 }
@@ -56,7 +59,7 @@
 	height: auto;
 	line-height: 24px;
 	padding: 18px 12px;
-	font-family: $font-secondary;
+	font-family: $font-primary;
 
 	display: flex;
 	justify-content: flex-start;
@@ -65,7 +68,7 @@
 }
 
 .docs .sidebar-list-1 .sidebar-link.sidebar-link-selected span {
-	font-family: $font-secondary;
+	font-family: $font-primary;
 	font-weight: 600;
 }
 
@@ -100,7 +103,7 @@
 .docs .sidebar-list-1 .sidebar-link-selected:focus {
 	background: rgba($accent, .1);
 	color: $accent;
-	font-family: $font-secondary;
+	font-family: $font-primary;
 	font-weight: 600;
 	border: none;
 	border-radius: 4px;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Demo: Sidebar</title>
+	<title>Demo: Sidebar Docs</title>
 
 	<link rel="stylesheet" href="../build/marble.css">
 	<link rel="stylesheet" href="../build/templates/docs.css">
@@ -12,62 +12,71 @@
 	<link rel="stylesheet" href="../build/fonts/icon-16/icon-16.css">
 </head>
 <body>
-	<div>
+	<div class="docs">
 		<nav class="sidebar">
 			<a class="sidebar-header toggler-header-collapsed">
 				<span class="sidebar-icon icon-16-menu"></span>
-				<span>Services Menu</span>
+				<span>Docs Menu</span>
 				<span class="sidebar-icon-right">
 					<span class="icon-12-arrow-down-short"></span>
 					<span class="icon-12-arrow-up-short"></span>
 				</span>
 			</a>
-			<ul class="sidebar-list sidebar-list-1 toggler-collapsed">
-				<li class="sidebar-list-header">
-					<h3 class="sidebar-list-header-title truncate">fermi93</h3>
-					<a href="javascript:;" target="_blank" class="sidebar-list-header-subtitle truncate">fermi93.wedeploy.io</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link sidebar-link-selected" href="javascript:;">
-						<span>Overview</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Services</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Activity</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Metrics</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Logs</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Collaborators</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Deployment</span>
-					</a>
-				</li>
-				<li class="sidebar-item sidebar-settings-item">
-					<a class="sidebar-link " href="javascript:;">
-						<span>Settings</span>
-					</a>
-				</li>
-			</ul>
+			<div class="sidebar-toggler-content toggler-collapsed">
+				<div class="sidebar-search">
+					<div class="page-autocomplete">
+						<div class="form-group">
+							<div class="input-inner-addon input-inner-addon-right">
+								<input autocomplete="off" class="form-control" name="q" placeholder="Search Docs" ref="input" required="" type="text" aria-activedescendant="" aria-autocomplete="list" aria-haspopup="true" aria-owns="autocomplete-6" role="combobox">
+								<span class="input-inner-icon-helper icon-16-magnifier"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="sidebar-list sidebar-list-1">
+					<li class="sidebar-item active">
+						<a class="sidebar-link sidebar-link-selected" href="javascript:;">
+							<span class="sidebar-icon icon-16-flash"></span>
+							<span>Create</span>
+						</a>
+						<ul class="sidebar-list sidebar-list-1">
+							<li class="sidebar-item">
+								<a class="sidebar-link " href="javascript:;">
+									<span>Lorem Ipsum</span>
+								</a>
+							</li>
+							<li class="sidebar-item active">
+								<a class="sidebar-link sidebar-link-selected" href="javascript:;">
+									<span>Etiam Cursus</span>
+								</a>
+							</li>
+							<li class="sidebar-item">
+								<a class="sidebar-link" href="javascript:;">
+									<span>Nulla Eget</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="javascript:;">
+							<span class="sidebar-icon icon-16-code-file"></span>
+							<span>Develop</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="javascript:;">
+							<span class="sidebar-icon icon-16-hammer"></span>
+							<span>Build</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="javascript:;">
+							<span class="sidebar-icon icon-16-cloud"></span>
+							<span>Deploy</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 
 		<div class="sidebar-offset">

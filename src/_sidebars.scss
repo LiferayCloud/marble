@@ -238,63 +238,6 @@
 	color: $accent;
 }
 
-/* Sidebar Inverse
-	 ========================================================================== */
-
-@media (max-width: $screen-md-min) {
-	.sidebar.sidebar-inverse {
-		background: $accent;
-	}
-
-	// Header --------------------------------------------------------------------
-
-	.sidebar-inverse .sidebar-header {
-		background: rgba(white, .3);
-		color: white;
-	}
-
-	.sidebar-inverse .sidebar-header:hover,
-	.sidebar-inverse .sidebar-header:focus,
-	.sidebar-inverse .sidebar-header .sidebar-icon {
-		color: white;
-	}
-
-	// Search --------------------------------------------------------------------
-
-	.sidebar-inverse .sidebar-search .form-control {
-		background: white;
-	}
-
-	.sidebar-inverse .sidebar-search .form-control:focus {
-		border-color: white;
-	}
-
-	// First level ---------------------------------------------------------------
-
-	.sidebar-inverse .sidebar-list .sidebar-link {
-		color: rgba(white, .8);
-	}
-
-	.sidebar-inverse .sidebar-list .sidebar-icon {
-		color: rgba(white, .6);
-	}
-
-	.sidebar-inverse .sidebar-list .sidebar-link:hover,
-	.sidebar-inverse .sidebar-list .sidebar-link:focus,
-	.sidebar-inverse .sidebar-list .sidebar-link-selected,
-	.sidebar-inverse .sidebar-list .sidebar-link-selected:hover,
-	.sidebar-inverse .sidebar-list .sidebar-link-selected:focus {
-		background: rgba(white, .1);
-		color: white;
-	}
-
-	.sidebar-inverse .sidebar-list .sidebar-link:hover .sidebar-icon,
-	.sidebar-inverse .sidebar-list .sidebar-link:focus .sidebar-icon,
-	.sidebar-inverse .sidebar-list .sidebar-link-selected .sidebar-icon {
-		color: white;
-	}
-}
-
 /* Medium screens
 	 ========================================================================== */
 

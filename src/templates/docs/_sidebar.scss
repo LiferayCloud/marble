@@ -144,9 +144,11 @@
 
 	&:hover
 	&.sidebar-link-selected {
-		font-family: $font-secondary;
-		font-size: 13px;
-		font-weight: 400;
+		span {
+			font-family: $font-secondary;
+			font-size: 13px;
+			font-weight: 400;
+		}
 	}
 
 	.sidebar-icon {

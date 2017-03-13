@@ -5636,37 +5636,41 @@ button.close {
 /* Sidebar > Header
 	 ========================================================================== */
 .sidebar-header {
-  background: rgba(0, 212, 106, 0.1);
-  border-radius: 4px;
-  color: #00d46a;
+  -webkit-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: rgba(14, 20, 26, 0.05);
+  color: rgba(14, 20, 26, 0.8);
   cursor: pointer;
   display: block;
   font-size: 14px;
   font-weight: 600;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 20px 0 20px;
+  line-height: 24px;
+  padding: 18px 12px;
   user-select: none;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center; }
 
 .sidebar-header:hover,
 .sidebar-header:focus {
-  color: #00d46a; }
+  background: rgba(14, 20, 26, 0.1); }
+
+.sidebar-header span {
+  flex: 1 1 auto;
+  margin-right: 12px; }
 
 .sidebar-header .sidebar-icon {
-  color: #00d46a;
   display: inline-block;
-  margin-right: 20px;
-  margin-top: -1px;
-  text-align: center;
-  vertical-align: middle;
-  width: 16px; }
+  flex: 0 1 auto; }
 
 .sidebar-header .sidebar-icon-right {
-  float: right;
-  line-height: 60px;
-  margin-top: -1px;
-  vertical-align: middle; }
+  flex: 0 1 auto;
+  margin-right: 0; }
 
 /* Sidebar > Toggle Header
 	 ========================================================================== */
@@ -5756,38 +5760,6 @@ button.close {
 .sidebar-list .sidebar-link-selected:focus {
   background: rgba(0, 212, 106, 0.1);
   color: #00d46a; }
-
-/* Sidebar Inverse
-	 ========================================================================== */
-@media (max-width: 960px) {
-  .sidebar.sidebar-inverse {
-    background: #00d46a; }
-  .sidebar-inverse .sidebar-header {
-    background: rgba(255, 255, 255, 0.3);
-    color: white; }
-  .sidebar-inverse .sidebar-header:hover,
-  .sidebar-inverse .sidebar-header:focus,
-  .sidebar-inverse .sidebar-header .sidebar-icon {
-    color: white; }
-  .sidebar-inverse .sidebar-search .form-control {
-    background: white; }
-  .sidebar-inverse .sidebar-search .form-control:focus {
-    border-color: white; }
-  .sidebar-inverse .sidebar-list .sidebar-link {
-    color: rgba(255, 255, 255, 0.8); }
-  .sidebar-inverse .sidebar-list .sidebar-icon {
-    color: rgba(255, 255, 255, 0.6); }
-  .sidebar-inverse .sidebar-list .sidebar-link:hover,
-  .sidebar-inverse .sidebar-list .sidebar-link:focus,
-  .sidebar-inverse .sidebar-list .sidebar-link-selected,
-  .sidebar-inverse .sidebar-list .sidebar-link-selected:hover,
-  .sidebar-inverse .sidebar-list .sidebar-link-selected:focus {
-    background: rgba(255, 255, 255, 0.1);
-    color: white; }
-  .sidebar-inverse .sidebar-list .sidebar-link:hover .sidebar-icon,
-  .sidebar-inverse .sidebar-list .sidebar-link:focus .sidebar-icon,
-  .sidebar-inverse .sidebar-list .sidebar-link-selected .sidebar-icon {
-    color: white; } }
 
 /* Medium screens
 	 ========================================================================== */

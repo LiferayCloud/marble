@@ -142,6 +142,10 @@
 	line-height: 24px;
 	height: auto;
 
+	&:hover {
+		font-weight: 400;
+	}
+
 	.sidebar-icon {
 		display: none;
 	}

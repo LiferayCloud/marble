@@ -141,6 +141,10 @@
 .sidebar-header .sidebar-icon-right {
 	flex: 0 1 auto;
 	margin-right: 0;
+
+	> * {
+		margin-right: 0;
+	}
 }
 
 /* Sidebar > Toggle Header

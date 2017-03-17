@@ -378,7 +378,7 @@
 	}
 
 	///////////////////////////BUTTON///////////////////////////
-	.content .btn {
+	.content > .btn {
 		@include anim(none);
 		font-size: $font-small;
 		padding: 0 calc(1rem * #{$lineHeight});
@@ -396,7 +396,7 @@
 		}
 	}
 
-	.content .btn.btn-inverse-accent {
+	.content > .btn.btn-inverse-accent {
 		background: rgba($primary, 0.1);
 		color: rgba($primary, 0.8);
 		&:focus,

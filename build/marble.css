@@ -5848,6 +5848,7 @@ button.close {
 
 .sidebar-navigation.open .sidebar {
   opacity: 0;
+  position: absolute;
   animation: fadeInToRight 0.3s cubic-bezier(0.3, 0, 0.3, 1) 0.1s 1 forwards; }
 
 /* (Mobile First)

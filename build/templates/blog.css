@@ -323,6 +323,31 @@
   vertical-align: top;
   height: calc(2rem * 1.5); }
 
+.blog .container table {
+  border-collapse: collapse;
+  margin-bottom: calc(1rem * 1.5);
+  width: 100%; }
+  .blog .container table * {
+    border-width: 0px !important; }
+
+.blog .container table thead tr {
+  background: rgba(14, 20, 26, 0.05); }
+
+.blog .container table tbody tr:nth-child(odd) {
+  background: rgba(14, 20, 26, 0.02); }
+
+.blog .container table tbody tr:nth-child(even) {
+  background: rgba(14, 20, 26, 0.05); }
+
+.blog .container table tr th,
+.blog .container table tr td {
+  border-width: 0px;
+  font-size: 0.809rem;
+  line-height: calc(1rem * 1.5);
+  padding: calc(0.5rem * 1.5) calc(1rem * 1.5);
+  vertical-align: top;
+  height: calc(2rem * 1.5); }
+
 .blog .container .content > .btn {
   -webkit-transition: none 0.3s ease-in-out;
   -o-transition: none 0.3s ease-in-out;

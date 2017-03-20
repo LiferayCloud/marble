@@ -10,8 +10,9 @@
 .docs .guide-content {
 
 	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-primary;
 		color: rgba($primary, 0.8);
-		font-weight: 400;
+		font-weight: 700;
 		margin: 0;
 		padding: 0;
 		text-align: left;
@@ -20,29 +21,32 @@
 	}
 
 	h1 {
-		font-family: $font-primary;
-		font-weight: 700;
+		font-size: $font-h1;
+		line-height: calc(3rem * #{$lineHeight});
+	}
+
+	h2 {
+		font-size: $font-h2;
+		line-height: calc(3rem * #{$lineHeight});
+	}
+
+	h3 {
+		font-size: $font-h3;
+		line-height: calc(2rem * #{$lineHeight});
+	}
+
+	h4 {
 		font-size: $font-h4;
 		line-height: calc(2rem * #{$lineHeight});
 	}
 
-	h2 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h5;
-		line-height: calc(1.5rem * #{$lineHeight});
-	}
-
 	h5 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h6;
-		line-height: calc(1rem * #{$lineHeight});
+		font-size: $font-h5;
+		line-height: calc(2rem * #{$lineHeight});
 	}
 
 	h6 {
 		color: rgba($primary, 0.6);
-		font-family: $font-primary;
 		font-weight: 600;
 		font-size: $font-h6;
 		line-height: calc(1rem * #{$lineHeight});

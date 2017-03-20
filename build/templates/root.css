@@ -96,10 +96,10 @@ li a:not([class]) {
   padding: 0;
   opacity: 1; }
 
-.code-container:hover .btn.btn-copy {
+.code-container:hover .btn-copy {
   opacity: 1; }
 
-.code-container > .btn.btn-copy {
+.code-container .btn-copy {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -114,9 +114,9 @@ li a:not([class]) {
   position: absolute;
   right: 6px;
   z-index: 999; }
-  .code-container > .btn.btn-copy:hover {
+  .code-container .btn-copy:hover {
     background: rgba(255, 255, 255, 0.8); }
-  .code-container > .btn.btn-copy > [class*="icon-"] {
+  .code-container .btn-copy > [class*="icon-"] {
     font-size: 10px; }
 
 .CodeMirror.cm-s-dracula ::-webkit-scrollbar {

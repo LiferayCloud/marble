@@ -239,34 +239,36 @@
       margin-top: 48px; } }
 
 .docs .guide-content h1, .docs .guide-content h2, .docs .guide-content h3, .docs .guide-content h4, .docs .guide-content h5, .docs .guide-content h6 {
+  font-family: "Galano", sans-serif;
   color: rgba(14, 20, 26, 0.8);
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   text-align: left;
   margin-bottom: calc(1rem * 1.5); }
 
 .docs .guide-content h1 {
-  font-family: "Galano", sans-serif;
-  font-weight: 700;
+  font-size: 4.2358rem;
+  line-height: calc(3rem * 1.5); }
+
+.docs .guide-content h2 {
+  font-size: 3.42676rem;
+  line-height: calc(3rem * 1.5); }
+
+.docs .guide-content h3 {
+  font-size: 2.77225rem;
+  line-height: calc(2rem * 1.5); }
+
+.docs .guide-content h4 {
   font-size: 2rem;
   line-height: calc(2rem * 1.5); }
 
-.docs .guide-content h2 {
-  font-family: "Galano", sans-serif;
-  font-weight: 700;
-  font-size: 1.618rem;
-  line-height: calc(1.5rem * 1.5); }
-
 .docs .guide-content h5 {
-  font-family: "Galano", sans-serif;
-  font-weight: 700;
-  font-size: 1.05895rem;
-  line-height: calc(1rem * 1.5); }
+  font-size: 1.618rem;
+  line-height: calc(2rem * 1.5); }
 
 .docs .guide-content h6 {
   color: rgba(14, 20, 26, 0.6);
-  font-family: "Galano", sans-serif;
   font-weight: 600;
   font-size: 1.05895rem;
   line-height: calc(1rem * 1.5); }

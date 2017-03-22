@@ -54,7 +54,7 @@ li a:not([class]) {
 }
 
 .code-container .CodeMirror-sizer {
-	margin-left: 40px !important;
+	margin-left: 60px !important;
 }
 
 .code-container .CodeMirror-gutter-wrapper {
@@ -119,6 +119,7 @@ li a:not([class]) {
 	@include anim(all);
 	background: $primary;
 	border-radius: 4px;
+	color: $white;
 	height: 36px;
 	line-height: 24px;
 	padding: 0;

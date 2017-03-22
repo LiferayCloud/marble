@@ -37,6 +37,7 @@
 		flex-wrap: nowrap;
 		align-content: center;
 		align-items: center;
+		border-radius: $border-radius-large;
 
 		padding: calc(0.5rem * #{$lineHeight});
 		width: 100%;

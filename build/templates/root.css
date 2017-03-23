@@ -74,11 +74,14 @@ li a:not([class]) {
   border-width: 0px;
   color: #00d46a; }
 
+.nav.nav-tabs.nav-code-tabs ~ .code-container {
+  margin: 0 0 calc(1rem * 1.5); }
+
 /* CodeMirror
    ========================================================================== */
 .code-container {
   position: relative;
-  margin: 0; }
+  margin: calc(1rem * 1.5) 0; }
 
 .code-container .CodeMirror {
   animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;

@@ -72,11 +72,15 @@ li a:not([class]) {
 	color: $accent;
 }
 
+.nav.nav-tabs.nav-code-tabs ~ .code-container {
+	margin: 0 0 calc(1rem * #{$lineHeight});
+}
+
 /* CodeMirror
    ========================================================================== */
 .code-container {
 	position: relative;
-	margin: 0;
+	margin: calc(1rem * #{$lineHeight}) 0;
 }
 
 .code-container .CodeMirror {

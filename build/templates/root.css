@@ -45,11 +45,40 @@ li a:not([class]) {
     border-bottom: 1px dashed #00d46a;
     color: #00d46a; }
 
+/* Navigation Tabs
+   ========================================================================== */
+.nav.nav-tabs.nav-code-tabs {
+  border-width: 0px;
+  padding: 0 24px; }
+
+.nav.nav-tabs.nav-code-tabs > li > a {
+  background: transparent;
+  border-width: 0px;
+  color: rgba(14, 20, 26, 0.8);
+  font-family: "Galano", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 0;
+  margin-right: 12px; }
+  .nav.nav-tabs.nav-code-tabs > li > a:hover, .nav.nav-tabs.nav-code-tabs > li > a:focus {
+    background: transparent;
+    color: rgba(14, 20, 26, 0.6);
+    outline: none; }
+
+.nav.nav-tabs.nav-code-tabs > li:last-child > a {
+  margin-right: 0; }
+
+.nav.nav-tabs.nav-code-tabs > li.active > a {
+  border-width: 0px;
+  color: #00d46a; }
+
 /* CodeMirror
    ========================================================================== */
 .code-container {
   position: relative;
-  margin: calc(1rem * 1.5) 0; }
+  margin: 0; }
 
 .code-container .CodeMirror {
   animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;

@@ -42,7 +42,7 @@ li a:not([class]) {
 	margin: calc(1rem * #{$lineHeight}) 0;
 }
 
-.CodeMirror {
+.code-container .CodeMirror {
 	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
 	border-radius: 4px;
 	height: auto;
@@ -83,7 +83,7 @@ li a:not([class]) {
 	left: 0 !important;
 }
 
-.CodeMirror,
+.code-container .CodeMirror,
 .code-container pre {
 	font-family: $font-mono;
 }
@@ -239,6 +239,6 @@ li a:not([class]) {
 	}
 }
 
-.CodeMirror.cm-s-dracula {
+.code-container .CodeMirror.cm-s-dracula {
 	@include scrollbar-dark();
 }

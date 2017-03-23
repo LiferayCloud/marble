@@ -4867,9 +4867,14 @@ a.thumbnail.active {
     overflow: visible;
     text-overflow: clip; }
     .alert.alert-inline > .alert-body > .alert-link {
+      -webkit-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
       border-bottom: 1px dashed rgba(14, 20, 26, 0.4);
       color: rgba(14, 20, 26, 0.8);
       font-weight: 700; }
+      .alert.alert-inline > .alert-body > .alert-link:hover {
+        color: #00d46a; }
   .alert.alert-inline > .close {
     height: 24px; }
 

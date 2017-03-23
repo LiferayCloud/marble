@@ -51,7 +51,7 @@ li a:not([class]) {
   position: relative;
   margin: calc(1rem * 1.5) 0; }
 
-.CodeMirror {
+.code-container .CodeMirror {
   animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
   border-radius: 4px;
   height: auto;
@@ -85,7 +85,7 @@ li a:not([class]) {
 .code-container .CodeMirror-gutters {
   left: 0 !important; }
 
-.CodeMirror,
+.code-container .CodeMirror,
 .code-container pre {
   font-family: "Roboto Mono", sans-serif; }
 
@@ -148,34 +148,34 @@ li a:not([class]) {
   .code-container .btn-copy > [class*="icon-"] {
     font-size: 12px; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar {
   width: 12px; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar:horizontal {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar:horizontal {
   height: 12px; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb {
   transition: all 0.3s ease-in-out;
   border-radius: 12px; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-track {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-track {
   background-color: #222426; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-track:vertical {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-track:vertical {
   border-left: 1px solid #303236; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-track:horizontal {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-track:horizontal {
   border-top: 1px solid #303236; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar {
   background-color: #222426; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb {
   background-color: #666;
   border: 1px solid #222426; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb:hover {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-thumb:hover {
   background-color: #888; }
 
-.CodeMirror.cm-s-dracula ::-webkit-scrollbar-corner {
+.code-container .CodeMirror.cm-s-dracula ::-webkit-scrollbar-corner {
   background-color: #222426; }

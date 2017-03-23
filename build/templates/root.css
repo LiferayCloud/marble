@@ -62,16 +62,28 @@ li a:not([class]) {
   z-index: 0; }
 
 .code-container .CodeMirror-sizer {
-  margin-left: 40px !important; }
+  margin-left: 60px !important; }
 
 .code-container .CodeMirror-gutter-wrapper {
-  left: -28px !important; }
+  left: -60px !important; }
+
+.code-container .CodeMirror-gutter.CodeMirror-linenumbers {
+  width: 60px !important; }
 
 .code-container .CodeMirror-linenumber {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
   line-height: 24px;
+  left: 24px !important;
+  padding: 0;
   text-align: left;
-  width: 32px !important;
-  padding: 0; }
+  width: 36px !important; }
+
+.code-container .CodeMirror-lines {
+  padding: 12px 0; }
+
+.code-container .CodeMirror-gutters {
+  left: 0 !important; }
 
 .CodeMirror,
 .code-container pre {
@@ -83,18 +95,19 @@ li a:not([class]) {
   line-height: 24px;
   margin: 0;
   opacity: 0;
-  padding: 4px;
+  padding: 12px 4px;
   position: relative; }
 
 .code-container pre code {
   white-space: pre; }
 
 .code-container .CodeMirror pre {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 24px;
-  margin: 0;
+  opacity: 1;
   padding: 0;
-  opacity: 1; }
+  margin: 0;
+  z-index: 6; }
 
 .code-container:hover .btn-copy {
   opacity: 1; }
@@ -103,21 +116,37 @@ li a:not([class]) {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 2px;
-  height: 24px;
+  background: #0e141a;
+  border-radius: 4px;
+  color: #fff;
+  height: 36px;
   line-height: 24px;
   padding: 0;
   opacity: 0;
-  top: 4px;
-  width: 24px;
   position: absolute;
   right: 6px;
+  top: 6px;
+  width: 36px;
   z-index: 999; }
+  .code-container .btn-copy:before {
+    -webkit-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1; }
   .code-container .btn-copy:hover {
-    background: rgba(255, 255, 255, 0.8); }
+    background: #0e141a; }
+    .code-container .btn-copy:hover:before {
+      background: rgba(255, 255, 255, 0.4); }
   .code-container .btn-copy > [class*="icon-"] {
-    font-size: 10px; }
+    font-size: 12px; }
 
 .CodeMirror.cm-s-dracula ::-webkit-scrollbar {
   width: 12px; }

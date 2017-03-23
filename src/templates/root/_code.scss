@@ -35,11 +35,48 @@ li a:not([class]) {
 	}
 }
 
+/* Navigation Tabs
+   ========================================================================== */
+.nav.nav-tabs.nav-code-tabs {
+	border-width: 0px;
+	padding: 0 24px;
+}
+
+.nav.nav-tabs.nav-code-tabs > li > a {
+	background: transparent;
+	border-width: 0px;
+	color: rgba($primary, 0.8);
+	font-family: $font-primary;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+	padding: 0;
+
+	margin-right: 12px;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		color: rgba($primary, 0.6);
+		outline: none;
+	}
+}
+
+.nav.nav-tabs.nav-code-tabs > li:last-child > a {
+	margin-right: 0;
+}
+
+.nav.nav-tabs.nav-code-tabs > li.active > a {
+	border-width: 0px;
+	color: $accent;
+}
+
 /* CodeMirror
    ========================================================================== */
 .code-container {
 	position: relative;
-	margin: calc(1rem * #{$lineHeight}) 0;
+	margin: 0;
 }
 
 .code-container .CodeMirror {

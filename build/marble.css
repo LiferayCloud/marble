@@ -8801,6 +8801,34 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInToRight {
+  0% {
+    -webkit-transform: translate3d(-252px, 0, 0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+@keyframes fadeInToRight {
+  0% {
+    transform: translate3d(-252px, 0, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
 .senna-loading-bar {
   background: #00d46a; }
 

@@ -6486,14 +6486,14 @@ button.close {
   font-family: "icon-12";
   font-size: 12px;
   font-weight: 900;
-  line-height: 17px;
+  line-height: 18px;
   min-height: 24px;
   min-width: 24px;
   position: relative;
   text-align: center; }
 
 .spinner.spinner-small {
-  line-height: 17px;
+  line-height: 18px;
   height: 24px;
   width: 24px; }
   .spinner.spinner-small:before {
@@ -6559,7 +6559,7 @@ button.close {
   animation: rotate-360 .6s linear infinite; }
 
 .spinner-done:not(:required):before {
-  content: "\E01A";
+  content: "\E018";
   background: #00d46a;
   border-color: #00d46a;
   animation: none; }

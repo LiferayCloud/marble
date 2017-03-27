@@ -10,7 +10,7 @@
 [class^="<%= fontName %>-"], [class*="<%= fontName %>-"] {
   speak: none;
   font-family: "<%= fontName %>";
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;

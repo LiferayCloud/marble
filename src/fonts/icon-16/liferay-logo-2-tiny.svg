@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="icon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 900 960" style="enable-background:new 0 0 900 960;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;}
-	.st1{fill:#29ABE2;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
-	.st3{fill:#FF0000;}
-</style>
-<path id="liferay-logo-2-tiny" d="M840,0H60C26.9,0,0,26.9,0,60v780c0,33.1,26.9,60,60,60h780c33.1,0,60-26.9,60-60V60
-	C900,26.9,873.1,0,840,0z M240,600H120V480h120V600z M240,420H120V300h120V420z M240,240H120V120h120V240z M420,780H300V660h120V780
-	z M420,420H300V300h120V420z M420,240H300V120h120V240z M600,780H480V660h120V780z M600,600H480V480h120V600z M600,240H480V120h120
-	V240z M780,780H660V660h120V780z M780,600H660V480h120V600z M780,420H660V300h120V420z"/>
+	 viewBox="0 0 900 1440" enable-background="new 0 0 900 1440" xml:space="preserve">
+<path id="liferay-logo-2-tiny" d="M840,240H60c-33.1,0-60,26.9-60,60v780c0,33.1,26.9,60,60,60h780c33.1,0,60-26.9,60-60V300
+	C900,266.9,873.1,240,840,240z M240,840H120V720h120V840z M240,660H120V540h120V660z M240,480H120V360h120V480z M420,1020H300V900
+	h120V1020z M420,660H300V540h120V660z M420,480H300V360h120V480z M600,1020H480V900h120V1020z M600,840H480V720h120V840z M600,480
+	H480V360h120V480z M780,1020H660V900h120V1020z M780,840H660V720h120V840z M780,660H660V540h120V660z"/>
 </svg>

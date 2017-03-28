@@ -4739,7 +4739,10 @@ a.thumbnail.active {
   display: inline-block;
   line-height: 60px;
   min-height: 60px;
-  margin: 0 20px; }
+  margin: 0 20px;
+  font-family: "Galano", sans-serif;
+  font-size: 13px;
+  font-weight: 700; }
 
 .alert .close {
   -webkit-transition: color 0.3s ease-in-out;

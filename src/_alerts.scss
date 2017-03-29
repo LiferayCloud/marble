@@ -17,6 +17,13 @@
 	margin: 0;
 	height: 60px;
 	padding: 0;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
 }
 
 .alert-danger {
@@ -29,8 +36,8 @@
 
 .alert-body {
 	display: inline-block;
-	line-height: 60px;
-	min-height: 60px;
+	line-height: 24px;
+	min-height: 24px;
 	margin: 0 20px;
 
 	font-family: $font-primary;
@@ -40,15 +47,18 @@
 
 .alert .close {
 	@include anim(color);
-	opacity: 1;
-	outline: none;
-	text-shadow: none;
+
 	color: rgba($primary, .4);
 	font-size: 24px;
-	line-height: 59px;
+	height: 24px;
+	line-height: 24px;
 	margin: 0 20px 0 0;
-	right: inherit;
-	top: inherit;
+	min-width: 13px;
+	opacity: 1;
+	outline: none;
+	padding: 0;
+	text-shadow: none;
+
 }
 
 .alert .close:hover {
@@ -58,26 +68,21 @@
 
 .alert .spinner {
 	margin: 0 0 0 20px;
-	top: 7px;
-}
-
-.alert-alert-content {
-	margin: 0 0 0 20px;
 }
 
 .alert-undo-link {
-	outline: none;
-	background: rgba($white, 0);
-	border: 0px solid $white;
-	padding: 0;
+	@include anim(color);
+
+	background: transparent;
+	border-width: 0px;
 	color: $accent;
+	font-family: $font-primary;
 	font-size: 14px;
 	font-weight: 700;
 	margin: 0 0 0 20px;
+	outline: none;
+	padding: 0;
 	text-transform: uppercase;
-	position: relative;
-	top: 1px;
-	transition: color 0.2s;
 }
 
 .alert-undo-link:hover {
@@ -200,13 +205,14 @@
 		text-overflow: clip;
 
 		> .alert-link {
-			@include anim(color);
+			@include anim(all);
 			border-bottom: 1px dashed rgba($primary, 0.4);
 			color: rgba($primary, 0.8);
 			font-weight: 700;
 
 			&:hover {
 				color: $accent;
+				border-bottom: 1px dashed rgba($accent, 0.4);
 			}
 		}
 	}

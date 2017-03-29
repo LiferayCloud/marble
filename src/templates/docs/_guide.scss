@@ -368,4 +368,28 @@
 		vertical-align: top;
 		height: calc(2rem * #{$lineHeight});
 	}
+
+	.table-container {
+		left: -20px;
+		margin-bottom: calc(1rem * #{$lineHeight});
+		overflow-x: auto;
+		position: relative;
+		width: calc(100% + 40px);
+
+		@media (min-width: $screen-sm-min) {
+			width: 100%;
+			left: 0px;
+		}
+
+		> table {
+			width: 100%;
+			margin-bottom: 0;
+			min-width: 560px;
+		}
+
+		> table th {
+			text-align: left;
+			white-space: nowrap;
+		}
+	}
 }

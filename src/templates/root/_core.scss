@@ -21,10 +21,10 @@ $font-mini: 1rem / 2;//0.5rem;
 :root {
 	font-size: 14px;
 	[class*='icon-12'] {
-		font-size: 12px;
+		font-size: 16px;
 	}
 	[class*='icon-16'] {
-		font-size: 16px;
+		font-size: 24px;
 	}
 }
 @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){

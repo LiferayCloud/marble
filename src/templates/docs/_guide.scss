@@ -99,6 +99,15 @@
 		margin-left: 2rem;
 	}
 
+	ul .code-container,
+	ol .code-container {
+		width: calc(100% + 68px);
+
+		@media (min-width: $screen-sm-min) {
+			width: calc(100% + 72px);
+		}
+	}
+
 	ul:not([class]) li {
 		position: relative;
 	}

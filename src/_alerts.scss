@@ -59,6 +59,14 @@
 	padding: 0;
 	text-shadow: none;
 
+	> span:not([class]) {
+		font-family: $font-primary;
+		font-size: 22px;
+		font-weight: 600;
+		position: relative;
+		top: -3px;
+	}
+
 }
 
 .alert .close:hover {

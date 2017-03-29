@@ -7,6 +7,12 @@
 	}
 }
 
+//overwrite docs > container-hybrid
+.docs .container-hybrid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .docs .guide-content {
 
 	h1, h2, h3, h4, h5, h6 {

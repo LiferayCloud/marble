@@ -80,11 +80,11 @@
 		margin-left: 2rem;
 	}
 
-	ul:not(.dropdown-menu):not(.radio-group):not(.checklist) li {
+	ul:not(.dropdown-menu):not(.radio-group):not(.checklist) > li {
 		position: relative;
 	}
 
-	ul:not(.dropdown-menu):not(.radio-group):not(.checklist) li:before {
+	ul:not(.dropdown-menu):not(.radio-group):not(.checklist) > li:before {
 		font-family: $font-primary;
 		font-weight: 700;
 		display: inline-block;
@@ -100,14 +100,14 @@
 		margin-left: 0;
 	}
 
-	ul.checklist li {
+	ul.checklist > li {
 		display: flex;
 		justify-content: flex-start;
 		align-content: flex-start;
 		align-items: flex-start;
 	}
 
-	ul.checklist li:before {
+	ul.checklist > li:before {
 		color: $accent;
 		content: "\E018";
 		display: inline-block;
@@ -120,12 +120,12 @@
 		flex: 0 0 auto;
 	}
 
-	ol li {
+	ol > li {
 		counter-increment: list;
 		position: relative;
 	}
 
-	ol li:before {
+	ol > li:before {
 		font-family: $font-primary;
 		font-weight: 700;
 		color: inherit;

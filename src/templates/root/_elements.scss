@@ -17,54 +17,67 @@
 	}
 
 	///////////////////////////HEADERS///////////////////////////
+	@mixin h1 {
+		font-size: $font-h1;
+		line-height: calc(3rem * #{$lineHeight});
+	}
+
+	@mixin h2 {
+		font-size: $font-h2;
+		line-height: calc(3rem * #{$lineHeight});
+	}
+
+	@mixin h3 {
+		font-size: $font-h3;
+		line-height: calc(2rem * #{$lineHeight});
+	}
+
+	@mixin h4 {
+		font-size: $font-h4;
+		line-height: calc(2rem * #{$lineHeight});
+	}
+
+	@mixin h5 {
+		font-size: $font-h5;
+		line-height: calc(2rem * #{$lineHeight});
+	}
+
+	@mixin h6 {
+		font-size: $font-h6;
+		line-height: calc(1rem * #{$lineHeight});
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: rgba($primary, 0.8);
-		font-weight: 400;
+		font-family: $font-primary;
+		font-weight: 700;
 		margin: 0;
 		padding: 0;
 		text-align: left;
 	}
 
 	h1 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h1;
-		line-height: calc(3rem * #{$lineHeight});
+		@include h1;
 	}
 
 	h2 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h2;
-		line-height: calc(3rem * #{$lineHeight});
+		@include h2;
 	}
 
 	h3 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h3;
-		line-height: calc(2rem * #{$lineHeight});
+		@include h3;
 	}
 
 	h4 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h4;
-		line-height: calc(2rem * #{$lineHeight});
+		@include h4;
 	}
 
 	h5 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h5;
-		line-height: calc(2rem * #{$lineHeight});
+		@include h5;
 	}
 
 	h6 {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: $font-h6;
-		line-height: calc(1rem * #{$lineHeight});
+		@include h6;
 	}
 
 	///////////////////////////BODY///////////////////////////

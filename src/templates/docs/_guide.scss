@@ -79,7 +79,7 @@
 		}
 	}
 
-	small {
+	.guide-info {
 		display: inline-block;
 		font-family: $font-primary;
 		font-weight: 600;
@@ -87,7 +87,8 @@
 		line-height: calc(1rem * #{$lineHeight});
 		color: rgba($primary, 0.4);
 		margin-bottom: calc(1rem * #{$lineHeight});
-		span {
+
+		.guide-info-separator {
 			color: rgba($primary, 0.6);
 		}
 	}

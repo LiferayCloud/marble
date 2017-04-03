@@ -13,6 +13,11 @@
 	padding-right: 0;
 }
 
+//overwrite docs > guide-content li rule
+.docs .guide-content .nav.nav-code-tabs li {
+	margin-bottom: 0;
+}
+
 .docs .guide-content {
 
 	h1, h2, h3, h4, h5, h6 {

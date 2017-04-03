@@ -2,6 +2,11 @@
 	padding-top: 60px;
 }
 
+//overwrite blog > container > content li rule
+.blog .container .content .nav.nav-code-tabs li {
+	margin-bottom: 0;
+}
+
 .blog {
 
 	@import "../root/elements";

@@ -10,7 +10,7 @@ gulp.task('default', ['bootstrap', 'fonts']);
 // Bootstrap -------------------------------------------------------------------
 
 gulp.task('watch', function() {
-	gulp.watch('src/*.scss', ['bootstrap']);
+	gulp.watch('src/**/*.scss', ['bootstrap']);
 });
 
 gulp.task('bootstrap', function() {

@@ -29,6 +29,21 @@
 		text-align: left;
 
 		margin-bottom: calc(1rem * #{$lineHeight});
+
+		display: flex;
+		flex-direaction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		align-content: flex-start;
+
+		> [class*="icon-"] {
+			flex: 0 0 auto;
+			display: inline-block;
+			line-height: inherit;
+			vertical-align: middle;
+			height: auto;
+			margin-right: 12px;
+		}
 	}
 
 	h1 {

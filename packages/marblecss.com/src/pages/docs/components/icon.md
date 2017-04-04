@@ -7,7 +7,6 @@ title: "Icons"
 ##### Icon 12
 
 <div class="group-demo">
-<span title="icon-12-alert" class="icon-12-alert"></span>
 	<span title="icon-12-alert" class="icon-12-alert"></span>
 	<span title="icon-12-apps" class="icon-12-apps"></span>
 	<span title="icon-12-arrow-down-rod" class="icon-12-arrow-down-rod"></span>

@@ -37,22 +37,32 @@ $accent: #ffb700;
 	color: inherit;
 }
 
-.group-demo [class*="icon-12-"] {
+.group-demo [class*="icon-"] {
 	color: rgba($primary, 0.8);
+	cursor: pointer;
 	display: inline-block;
+	text-align: center;
+	&:hover {
+		color: rgba($primary, 0.4);
+	}
+}
+
+.group-demo [class*="icon-12-"] {
 	height: 24px;
 	line-height: 24px;
-	text-align: center;
 	width: 24px;
+	&:before {
+		line-height: 24px;
+	}
 }
 
 .group-demo [class*="icon-16-"] {
-	color: rgba($primary, 0.8);
-	display: inline-block;
 	height: 36px;
 	line-height: 36px;
-	text-align: center;
 	width: 36px;
+	&:before {
+		line-height: 36px;
+	}
 }
 
 .demo .box-ws {

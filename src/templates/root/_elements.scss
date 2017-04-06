@@ -116,10 +116,8 @@
 	}
 
 	ul.checklist > li {
-		display: flex;
-		justify-content: flex-start;
-		align-content: flex-start;
-		align-items: flex-start;
+		display: block;
+		line-height: 24px;
 	}
 
 	ul.checklist > li:before {
@@ -130,7 +128,7 @@
 		font-size: 24px;
 		left: 0;
 		position: relative;
-		top: 0px;
+		top: 6px;
 		width: 2rem;
 		flex: 0 0 auto;
 	}

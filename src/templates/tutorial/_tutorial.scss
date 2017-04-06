@@ -36,13 +36,12 @@
 	}
 
 	.container .content a {
-		@include anim(none);
-		color: $accent;
-		text-decoration: none;
-		border-bottom-width: 0px;
+		transition: color 0.333s, border-bottom-width 0.333s;
+		color: rgba($primary, 0.8);
+		border-bottom-width: 1px;
 	}
 	.container .content a:hover {
-		color: rgba($accent, 0.6);
+		color: $accent;
 	}
 
 	.container .content .aside {

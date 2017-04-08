@@ -31,12 +31,13 @@
 		}
 	}
 
-	.content .container a:not(.btn) {
+	.container a:not(.btn) {
 		transition: color 0.333s, border-bottom-width 0.333s;
 		color: rgba($primary, 0.8);
 		border-bottom-width: 1px;
 	}
-	.content .container a:not(.btn):hover {
+
+	.container a:not(.btn):hover {
 		color: $accent;
 	}
 

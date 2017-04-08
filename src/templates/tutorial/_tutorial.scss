@@ -31,46 +31,13 @@
 		}
 	}
 
-	.container .content section:last-child {
-		margin: 0;
-	}
-
-	.container .content a {
+	.content .container a:not(.btn) {
 		transition: color 0.333s, border-bottom-width 0.333s;
 		color: rgba($primary, 0.8);
 		border-bottom-width: 1px;
 	}
-	.container .content a:hover {
+	.content .container a:not(.btn):hover {
 		color: $accent;
-	}
-
-	.container .content .aside {
-		margin: calc(2rem * #{$lineHeight}) 0;
-
-		p,
-		li,
-		li label {
-			font-size: 0.8125rem;
-		}
-
-		h6 {
-			font-size: 1rem;
-		}
-
-		ul.radio-group li label {
-			padding-left: 1.75rem;
-		}
-	}
-
-	.container .content figure {
-		text-align: left;
-		padding: 0;
-	}
-
-	.container .content figure img {
-		max-width: 100%;
-		width: auto;
-		left: 0;
 	}
 
 	//page-nav
@@ -79,6 +46,7 @@
 		margin-top: 36px;
 
 		.btn {
+			transition: background 0.333s;
 			margin: 0 6px 12px;
 			font-size: 1rem;
 

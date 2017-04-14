@@ -33,7 +33,7 @@
 	flex-shrink: 0;
 
 	.close {
-		@include anim(background);
+		transition: color 0.333s, background 0.333s;
 		text-align: center;
 		width: 20px;
 		border-radius: 4px;
@@ -48,6 +48,12 @@
 		&:hover {
 			background: rgba($brand-danger, 0.1);
 			color: $brand-danger;
+		}
+
+		> [class*="icon-16-close"] {
+			position: relative;
+			left: 0.5px;
+			top: 1.5px;
 		}
 	}
 }

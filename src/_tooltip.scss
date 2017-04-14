@@ -2,7 +2,43 @@
 
 .tooltip {
 	position: fixed;
-	padding: 6px;
+}
+
+.tooltip-inner {
+	width: 100%;
+	max-width: 220px;
+	padding: 12px;
+
+	background: white;
+	border-radius: $border-radius-base;
+	box-shadow: 0 2px 8px rgba(black, .1);
+
+	color: rgba($primary, 0.8);
+	font-size: 12px;
+	font-family: $font-primary;
+	font-weight: 700;
+	text-align: center;
+}
+
+.text-left .tooltip-inner {
+	text-align: left;
+}
+
+.tooltip-arrow {
+	display: none;
+}
+
+.tooltip.text-left .tooltip-inner {
+	text-align: left;
+}
+
+//////////////////////////////////////////////////////
+//new version
+.tooltip.tooltip-dark,
+.tooltip.tooltip-light {
+	position: fixed;
+	padding: 0px;
+	margin: 0px;
 
 	//animations
 	transition: opacity 0.333s, transform 0.333s, visibility 0.333s;
@@ -10,21 +46,18 @@
 	visibility: hidden;
 	opacity: 0;
 
-	.tooltip-arrow {
-		display: none;
+	&.showing {
+		transform: translateY(0px);
+		visibility: visible;
+		opacity: 1;
+		will-change: opacity;
 	}
 }
 
-.tooltip.showing {
-	transform: translateY(0px);
-	visibility: visible;
-	opacity: 1;
-	will-change: opacity;
-}
-
-.tooltip-inner {
+.tooltip.tooltip-dark .tooltip-inner,
+.tooltip.tooltip-light .tooltip-inner {
 	display: inline-block;
-	margin: 0;
+	margin: 12px;
 	max-width: 300px;
 	padding: 12px;
 	width: auto;
@@ -81,10 +114,6 @@
 	}
 }
 
-.tooltip.text-left .tooltip-inner {
-	text-align: left;
-}
-
 
 /* Skin dark
 	 ========================================================================== */
@@ -99,16 +128,5 @@
 			border-bottom: 1px dashed $accent;
 		}
 	}
-
-	&:before {
-		content: "";
-		position: absolute;
-		top: 6px;
-		left: 0;
-		width: 100%;
-		height: calc(100% - 12px);
-		border-radius: 4px;
-		background: rgba($white, 0.1);
-		z-index: 1;
-	}
 }
+

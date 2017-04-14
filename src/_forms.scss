@@ -151,6 +151,21 @@ label {
 	margin-bottom: 0;
 	margin-left: 2px;
 	line-height: 24px;
+
+	transition: opacity 0.333s, visibility 0.333s, transform 0.333s;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(-10%);
+}
+
+.has-success,
+.has-warning,
+.has-error {
+	.help-block {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .has-success,

@@ -3,6 +3,8 @@
 // Addon -----------------------------------------------------------------------
 
 .input-group-addon {
+	transition: color 0.333s, background 0.333s;
+
 	background: rgba($primary, .2);
 	border: 0;
 	color: rgba($primary, .6);

@@ -2,28 +2,113 @@
 
 .tooltip {
 	position: fixed;
+	padding: 6px;
+
+	//animations
+	transition: opacity 0.333s, transform 0.333s, visibility 0.333s;
+	transform: translateY(-6px);
+	visibility: hidden;
+	opacity: 0;
+
+	.tooltip-arrow {
+		display: none;
+	}
+}
+
+.tooltip.showing {
+	transform: translateY(0px);
+	visibility: visible;
+	opacity: 1;
+	will-change: opacity;
 }
 
 .tooltip-inner {
-	width: 100%;
-	max-width: 220px;
+	display: inline-block;
+	margin: 0;
+	max-width: 300px;
 	padding: 12px;
+	width: auto;
 
-	background: white;
-	border-radius: $border-radius-base;
-	box-shadow: 0 2px 8px rgba(black, .1);
+	border-radius: $border-radius-large;
+	box-shadow: $shadow-tooltip;
 
+	background: $white;
 	color: rgba($primary, 0.8);
-	font-size: 12px;
+	font-size: 13px;
 	font-family: $font-primary;
 	font-weight: 700;
+	line-height: 24px;
 	text-align: center;
+
+	.tooltip-title {
+		position:relative;
+		z-index: 2;
+
+		color: inherit;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		text-align: inherit;
+	}
+
+	.tooltip-description {
+		position:relative;
+		z-index: 2;
+
+		color: inherit;
+		font-size: 10px;
+		font-family: $font-secondary;
+		font-weight: 400;
+		line-height: inherit;
+		text-align: inherit;
+	}
+
+	a {
+		@include anim(all);
+		color: inherit;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		text-align: inherit;
+		border-bottom: 1px dashed rgba($primary, 0.8);
+
+		&:hover {
+			color: $accent;
+			border-bottom: 1px dashed $accent;
+		}
+	}
 }
 
-.text-left .tooltip-inner {
+.tooltip.text-left .tooltip-inner {
 	text-align: left;
 }
 
-.tooltip-arrow {
-	display: none;
+
+/* Skin dark
+	 ========================================================================== */
+.tooltip.tooltip-dark .tooltip-inner {
+	background: $primary;
+	color: white;
+
+	a {
+		border-bottom: 1px dashed $white;
+
+		&:hover {
+			border-bottom: 1px dashed $accent;
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 6px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 12px);
+		border-radius: 4px;
+		background: rgba($white, 0.1);
+		z-index: 1;
+	}
 }

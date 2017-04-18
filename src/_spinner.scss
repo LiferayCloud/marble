@@ -23,8 +23,16 @@
 		padding-left: 1px;
 	}
 }
+
 .spinner.spinner-small:not(:required):before {
-	border: 3px solid rgba($white, 0);
+	border: 3px solid $white;
+	border-bottom-color: $brand-success;
+	border-left-color: $brand-success;
+	border-top-color: $brand-success;
+}
+
+.alert-dark .spinner.spinner-small:not(:required):before {
+	border: 3px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
 	border-top-color: $brand-success;
@@ -42,8 +50,16 @@
 		padding-left: 2px;
 	}
 }
+
 .spinner.spinner-medium:not(:required):before {
-	border: 4px solid rgba($white, 0);
+	border: 4px solid $white;
+	border-bottom-color: $brand-success;
+	border-left-color: $brand-success;
+	border-top-color: $brand-success;
+}
+
+.alert-dark .spinner.spinner-medium:not(:required):before {
+	border: 4px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
 	border-top-color: $brand-success;
@@ -61,8 +77,16 @@
 		padding-left: 2px;
 	}
 }
+
 .spinner.spinner-large:not(:required):before {
-	border: 5px solid rgba($white, 0);
+	border: 5px solid $white;
+	border-bottom-color: $brand-success;
+	border-left-color: $brand-success;
+	border-top-color: $brand-success;
+}
+
+.alert-dark .spinner.spinner-large:not(:required):before {
+	border: 5px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
 	border-top-color: $brand-success;
@@ -78,11 +102,18 @@
 .spinner:not(:required):before {
 	content: "";
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid $white;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
 	border-top-color: $brand-success;
 	animation: rotate-360 .6s linear infinite;
+}
+
+.alert-dark .spinner:not(:required):before {
+	border: 3px solid transparent;
+	border-bottom-color: $brand-success;
+	border-left-color: $brand-success;
+	border-top-color: $brand-success;
 }
 
 .spinner-done:not(:required):before {
@@ -112,13 +143,6 @@
 .spinner.spinner-warning.spinner-done:not(:required):before {
 	background: $brand-warning;
 	border-color: $brand-warning;
-}
-
-.spinner.spinner-white:not(:required):before {
-	border-color: rgba($white, 0);
-	border-bottom-color: $white;
-	border-left-color: $white;
-	border-top-color: $white;
 }
 
 .spinner.spinner-left {
@@ -167,20 +191,4 @@
 
 .label .spinner.spinner-warning {
 	color: $brand-warning;
-}
-
-.label .spinner.spinner-white {
-	color: $white;
-}
-
-@keyframes rotate-360 {
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes rotate-360-inverse {
-	to {
-		transform: rotate(-360deg);
-	}
 }

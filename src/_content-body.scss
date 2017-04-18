@@ -491,29 +491,6 @@
 
 }
 
-.alert {
-	@media (max-width: $screen-sm-min) {
-		left: 20px;
-		bottom: 20px;
-		max-width: calc(100% - 40px);
-		display: flex;
-	}
-
-	.spinner {
-		@media (max-width: $screen-sm-min) {
-			top: 17px;
-		}
-	}
-
-	.alert-body {
-		@media (max-width: $screen-sm-min) {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-	}
-}
-
 /* Not found
    ========================================================================== */
 

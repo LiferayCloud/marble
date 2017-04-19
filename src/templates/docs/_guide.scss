@@ -279,52 +279,6 @@
 		}
 	}
 
-	///////////////////////////RADIO///////////////////////////
-	ul.radio-group {
-		list-style: none;
-		padding: 0;
-		margin-left: 0;
-	}
-
-	ul.radio-group * {
-		position: relative;
-	}
-
-	ul.radio-group *:before {
-		content: "";
-	}
-
-	ul.radio-group * label {
-		color: inherit;
-		font-family: inherit;
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		cursor: pointer;
-		padding-left: 2rem;
-		margin: 0;
-		top: 0;
-	}
-
-	ul.radio-group * input[type="radio"] {
-		display: none;
-	}
-
-	ul.radio-group * input[type="radio"] + label:before {
-		@include anim(all);
-		color: rgba($primary, 0.8);
-		content: "\E059";
-		font-family: 'icon-16';
-		font-size: 16px;
-		position: absolute;
-		left: 0;
-	}
-
-	ul.radio-group * input[type="radio"]:checked + label:before {
-		content: "\E058";
-		color: $accent;
-	}
-
 	ul .code-container,
 	ol .code-container {
 		margin-left: -2rem;

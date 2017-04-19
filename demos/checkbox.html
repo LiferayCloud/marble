@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Checkbox</title>
+
+	<link rel="stylesheet" href="../build/marble.css">
+	<link rel="stylesheet" href="../build/fonts/galano/galano.css">
+	<link rel="stylesheet" href="../build/fonts/icon-12/icon-12.css">
+	<link rel="stylesheet" href="../build/fonts/icon-16/icon-16.css">
+
+</head>
+<body>
+	<div class="container-hybrid">
+		<h1>checkbox</code></h1>
+		<h2>Vehicles</h2>
+		<div class="checkbox">
+			<input type="checkbox" id="ck-1-1" name="check-1" value="ck-1-1">
+			<label for="ck-1-1">Honda</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="ck-1-2" name="check-1" value="ck-1-2">
+			<label for="ck-1-2">Toyota</label>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="ck-1-3" name="check-1" value="ck-1-3">
+			<label for="ck-1-3">Jeep</label>
+		</div>
+
+		<h1>checkbox groups inline</code></h1>
+		<h2>Vehicles</h2>
+		<div class="checkbox-group checkbox-group-inline">
+			<div class="checkbox">
+				<input type="checkbox" id="ck-2-1" name="check-2" value="ck-2-1">
+				<label for="ck-2-1">Honda</label>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="ck-2-2" name="check-2" value="ck-2-2">
+				<label for="ck-2-2">Toyota</label>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="ck-2-3" name="check-2" value="ck-2-3">
+				<label for="ck-2-3">Jeep</label>
+			</div>
+		</div>
+
+		<h1>checkbox indeterminate</code></h1>
+		<div class="checkbox">
+			<input type="checkbox" id="ck-3-1" name="check-3" value="ck-3-1">
+			<label for="ck-3-1">Do you agree with the terms?</label>
+		</div>
+		<script type="text/javascript">
+			var checkbox = document.getElementById('ck-3-1');
+			checkbox.indeterminate = true;
+		</script>
+
+	</div>
+</body>
+</html>
+

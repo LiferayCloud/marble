@@ -5,7 +5,7 @@
   "repository": "wedeploy/marblecss.com",
 	"devDependencies": {
     "electric-marble-components": "alpha",
-    "marble": "~2.9.0",
+    "marble": "~2.10.0",
     "metal-dropdown": "^2.0.0",
     "metal-input-matrix": "^2.1.3",
     "metal-progressbar": "^2.0.1",

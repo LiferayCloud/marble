@@ -25,7 +25,7 @@ $accent: #ffb700;
 
 @import "styleguide";
 
-.group-demo > * {
+.group-demo > *:not(.checkbox) {
 	display: inline-block;
 	margin: 0 12px 12px 0;
 }

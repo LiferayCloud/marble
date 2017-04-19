@@ -21,8 +21,9 @@
 .docs .guide-content {
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: $font-primary;
 		color: rgba($primary, 0.8);
+		display: block;
+		font-family: $font-primary;
 		font-weight: 700;
 		margin: 0;
 		padding: 0;
@@ -30,17 +31,10 @@
 
 		margin-bottom: calc(1rem * #{$lineHeight});
 
-		display: flex;
-		flex-direaction: row;
-		justify-content: flex-start;
-		align-items: flex-start;
-		align-content: flex-start;
-
 		> [class*="icon-"] {
-			flex: 0 0 auto;
+			float: left;
 			display: inline-block;
 			line-height: inherit;
-			vertical-align: middle;
 			height: auto;
 			margin-right: 12px;
 		}

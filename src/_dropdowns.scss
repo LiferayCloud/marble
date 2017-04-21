@@ -1,6 +1,10 @@
 .dropdown {
-	display: inline-block;
+	display: none;
 	position: relative;
+
+	&.open {
+		display: inline-block;
+	}
 
 	* {
 		list-style: none;

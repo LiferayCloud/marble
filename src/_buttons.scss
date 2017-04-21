@@ -36,6 +36,10 @@
 		&.icon-right {
 			margin-left: 12px;
 		}
+		&.icon-only {
+			margin-right: -6px;
+			margin-left: -6px;
+		}
 	}
 }
 
@@ -49,6 +53,11 @@
 
 	> span[class*="icon-"] {
 		line-height: 60px;
+
+		&.icon-only {
+			margin-right: -12px;
+			margin-left: -12px;
+		}
 	}
 }
 

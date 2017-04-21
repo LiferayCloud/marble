@@ -5,8 +5,11 @@
 	<title>Demo: Dropdowns</title>
 
 	<link rel="stylesheet" href="../build/marble.css">
+	<link rel="stylesheet" href="../build/fonts/galano/galano.css">
+	<link rel="stylesheet" href="../build/fonts/icon-12/icon-12.css">
+	<link rel="stylesheet" href="../build/fonts/icon-16/icon-16.css">
 
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:700,400,300|Open+Sans:700,400,300">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?Open+Sans:700,400,300">
 
 	<style>
 	body {
@@ -17,11 +20,11 @@
 <body>
 	<div class="row">
 		<div class="col-md-4">
-			<h1>Dropdown Menu</h1>
+			<h1>Standard</h1>
 			<div class="dropdown open">
-				<button class="btn btn-default btn-sm dropdown-select dropdown-select-group-left" type="button">
+				<button class="btn btn-sm" type="button">
 					GET
-					<span class="icon-12-arrow-down-short"></span>
+					<span class="icon-12-arrow-down-short right"></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><button class="btn-transparent">GET</button></li>
@@ -33,12 +36,31 @@
 				</ul>
 			</div>
 		</div>
+
 		<div class="col-md-4">
-			<h1>Dropdown Menu Icon</h1>
+			<h1>Align Right</h1>
+			<div class="dropdown dropdown-right open">
+				<button class="btn btn-sm" type="button">
+					GET
+					<span class="icon-12-arrow-down-short right"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><button class="btn-transparent">GET</button></li>
+					<li><button class="btn-transparent">HEAD</button></li>
+					<li><button class="btn-transparent">POST</button></li>
+					<li><button class="btn-transparent">PUT</button></li>
+					<li><button class="btn-transparent">PATCH</button></li>
+					<li><button class="btn-transparent">DELETE</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<h1>With Icons</h1>
 			<div class="dropdown dropdown-icon open">
-				<button class="btn btn-default btn-sm dropdown-select dropdown-select-group-left" type="button">
+				<button class="btn btn-sm" type="button">
 					Dropdown
-					<span class="icon-12-arrow-down-short"></span>
+					<span class="icon-12-arrow-down-short right"></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li>
@@ -53,7 +75,7 @@
 					</li>
 					<li>
 						<button class="btn-transparent">
-							<span class="icon-12-network"></span>Item
+							<span class="icon-12-bug"></span>Item
 						</button>
 					</li>
 					<li>
@@ -68,7 +90,50 @@
 					</li>
 					<li>
 						<button class="btn-transparent">
-							<span class="icon-12-heart"></span>Item
+							<span class="icon-12-github"></span>Item
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<h1>Dark</h1>
+			<div class="dropdown dropdown-dark open">
+				<button class="btn btn-sm" type="button">
+					<span class="icon-12-mail left"></span>
+					Mail
+					<span class="icon-12-arrow-down-short right"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<button class="btn-transparent">
+							<span class="icon-12-mail"></span>Mail
+						</button>
+					</li>
+					<li>
+						<button class="btn-transparent">
+							<span class="icon-12-menu"></span>Menu
+						</button>
+					</li>
+					<li>
+						<button class="btn-transparent">
+							<span class="icon-12-bug"></span>Bug
+						</button>
+					</li>
+					<li>
+						<button class="btn-transparent">
+							<span class="icon-12-pen"></span>Pen
+						</button>
+					</li>
+					<li>
+						<button class="btn-transparent">
+							<span class="icon-12-person"></span>Person
+						</button>
+					</li>
+					<li>
+						<button class="btn-transparent">
+							<span class="icon-12-github"></span>Github
 						</button>
 					</li>
 				</ul>

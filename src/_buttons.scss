@@ -25,15 +25,12 @@
 	}
 
 	> span[class*="icon-"] {
-		float: left;
+		display: inline-block;
 		line-height: 48px;
+		vertical-align: top;
+		margin-right: 12px;
 
-		&.left {
-			margin-right: 12px;
-		}
-
-		&.right {
-			float: right;
+		&.icon-right {
 			margin-right: 0px;
 			margin-left: 12px;
 		}

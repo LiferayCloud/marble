@@ -1,10 +1,6 @@
 .dropdown {
-	display: none;
+	display: inline-block;
 	position: relative;
-
-	&.open {
-		display: inline-block;
-	}
 
 	* {
 		list-style: none;
@@ -25,6 +21,11 @@
 	right: auto;
 	top: 100%;
 
+	display: none;
+}
+
+.open .dropdown-menu {
+	display: inline-block;
 }
 
 .dropdown-menu li {

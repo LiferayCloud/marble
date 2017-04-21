@@ -28,10 +28,12 @@
 		display: inline-block;
 		line-height: 48px;
 		vertical-align: top;
-		margin-right: 12px;
 
+		&.icon-left {
+			margin-right: 12px;
+
+		}
 		&.icon-right {
-			margin-right: 0px;
 			margin-left: 12px;
 		}
 	}

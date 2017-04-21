@@ -57,34 +57,6 @@
 		}
 	}
 
-	.btn-install {
-		height: 48px;
-		line-height: 48px;
-		font-size: 13px;
-		padding: 0 12px;
-		font-family: $font-primary;
-		font-weight: 700;
-
-		span {
-			display: inline-block;
-			line-height: 48px;
-			margin-right: 12px;
-			position: relative;
-			top: 0px;
-			float: left;
-
-			@media (max-width: $screen-md-min) {
-				height: 36px;
-				line-height: 36px;
-			}
-		}
-
-		@media (max-width: $screen-md-min) {
-			height: 36px;
-			line-height: 36px;
-		}
-	}
-
 	.nav-container {
 		display: flex;
 		justify-content: flex-start;
@@ -149,73 +121,6 @@
 			&.loading {
 				color: rgba($primary, 0.8);
 				background: rgba($primary, 0.1);
-			}
-		}
-	}
-
-	.dropdown.dropdown-last {
-		display: inline-block;
-		margin-left: 8px;
-
-		.dropdown-menu {
-			margin: 0px 0 0 -120px;
-		}
-	}
-
-	.btn.btn-default.btn-icon,
-	.dropdown.dropdown-last .btn-icon {
-		@include anim(all);
-		border-radius: 4px;
-		width: 48px;
-		height: 48px;
-		padding: 0;
-		margin: 0;
-		text-align: center;
-		display: inline-block;
-		background: rgba($primary, 0.05);
-
-		&:hover {
-			background: rgba($accent, 0.1);
-			color: $accent;
-		}
-
-		span {
-			line-height: 48px;
-			margin: 0px;
-			display: block;
-			top: 1px;
-			left: 1px;
-		}
-	}
-
-	.dropdown .btn.btn-default {
-		border-radius: 4px;
-		height: 48px;
-		line-height: 48px;
-		padding: 0 32px 0 12px;
-		margin: 0;
-		font-size: 13px;
-		font-family: $font-primary;
-		font-weight: 700;
-		position: relative;
-		text-align: left;
-
-		[class^="icon-12-"],
-		[class*="icon-12-"] {
-			line-height: 46px;
-			position: absolute;
-			right: 12px;
-		}
-	}
-
-	.dropdown {
-		.dropdown-menu {
-			margin: 0px;
-			padding: 12px 0;
-			li,
-			li:first-child,
-			li:last-child {
-				margin: 0;
 			}
 		}
 	}

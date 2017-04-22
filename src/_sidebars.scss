@@ -25,9 +25,9 @@
 	 ========================================================================== */
 .sidebar-offset {
 	.container,
-	.container-hybrid {
+	.container-hybrid,
+	.container-fluid {
 		max-width: $screen-lg-min - $sidebar-width;
-		width: calc(100% - 24px);
 	}
 
 	.container-hybrid .flex-row {

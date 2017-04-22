@@ -26,7 +26,8 @@
 .sidebar-offset {
 	.container,
 	.container-hybrid {
-		width: calc(100% - 40px);
+		max-width: $screen-lg-min - $sidebar-width;
+		width: calc(100% - 24px);
 	}
 
 	.container-hybrid .flex-row {
@@ -250,10 +251,6 @@
 		margin-left: $sidebar-width;
 		padding-top: 0;
 		width: calc(100% - #{$sidebar-width});
-
-		.container {
-			max-width: $screen-md-min - $sidebar-width;
-		}
 	}
 
 	.sidebar-header {
@@ -270,52 +267,6 @@
 
 }
 
-/* SIDEBAR-OFFSET => Large screens
-	 ========================================================================== */
-
-@media (min-width: $screen-lg-min) {
-	.sidebar-offset {
-		.container,
-		.container-hybrid {
-			max-width: $screen-lg-min - $sidebar-width;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-	}
-}
-
-@media (min-width: 1440px) {
-	.sidebar-offset {
-		.container,
-		.container-hybrid {
-			max-width: 948px;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-	}
-}
-
-@media (min-width: 1600px) {
-	.sidebar-offset {
-		.container,
-		.container-hybrid {
-			max-width: calc(1440px - #{$sidebar-width});
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-	}
-}
-
-@media (min-width: 1920px) {
-	.sidebar-offset {
-		.container,
-		.container-hybrid {
-			max-width: $screen-lg-min;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-	}
-}
 
 /* SIDEBAR NAVIGATION MENU
 	 ========================================================================== */

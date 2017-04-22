@@ -1,3 +1,11 @@
 .select {
 	margin-bottom: 24px;
+
+	&.block {
+		display: block;
+
+		> .dropdown {
+			display: block;
+		}
+	}
 }

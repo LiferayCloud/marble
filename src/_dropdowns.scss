@@ -5,6 +5,10 @@
 	* {
 		list-style: none;
 	}
+
+	&.block {
+		display: block;
+	}
 }
 
 .dropdown-menu {

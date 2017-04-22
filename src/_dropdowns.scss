@@ -74,6 +74,11 @@
 		margin-right: 12px;
 		display: inline-block;
 		vertical-align: top;
+
+		&.icon-right {
+			margin-left: 12px;
+			margin-right: 0px;
+		}
 	}
 }
 

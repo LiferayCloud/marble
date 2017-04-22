@@ -2,24 +2,21 @@
 
 .container,
 .container-hybrid,
-.container-fluid {
+.container-fluid,
+.container-hybrid-half,
+.container-hybrid-account {
 	max-width: $screen-lg;
 	width: calc(100% - 24px);
-	padding: 0 12px;
+	padding: 0;
+	margin: 0 auto;
 }
 
 .container-hybrid-half {
-	width: calc(100% - 24px);
 	max-width: 648px;
-	padding: 0 12px;
-	margin: 0 auto;
 }
 
 .container-hybrid-account {
-	width: calc(100% - 24px);
 	max-width: 490px;
-	padding: 0 12px;
-	margin: 0 auto;
 }
 
 .col-flex-row-left-start {

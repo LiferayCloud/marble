@@ -3,6 +3,7 @@
 .btn {
 	border-radius: $border-radius-large;
 	border-width: 0px;
+	display: inline-block;
 	font-family: $font-primary;
 	font-size: 14px;
 	font-weight: 700;
@@ -12,6 +13,11 @@
 	transition: background 0.333s;
 	background: rgba($primary, 0.05);
 	color: rgba($primary, 0.6);
+
+	&.block {
+		display: block;
+		width: 100%;
+	}
 
 	&:active,
 	&:focus {
@@ -74,7 +80,7 @@
 }
 
 /* ==========================================================================
-	COLLOR - accemt
+	COLLOR - accent
 	========================================================================== */
 .btn.btn-accent {
 	background: $accent;

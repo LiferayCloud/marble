@@ -29,9 +29,6 @@
 		font-size: 29px;
 		color: rgba($primary, 0.9);
 
-		position: relative;
-		top: 2px;
-
 		span {
 			@include anim(color);
 			color: rgba($primary, 0.4);
@@ -44,7 +41,6 @@
 		}
 
 		@media (max-width: $screen-sm-min) {
-			text-align: left;
 			font-size: 19px;
 			line-height: 36px;
 		}
@@ -73,54 +69,6 @@
 					margin-left: 0;
 					margin-right: 8px;
 				}
-			}
-		}
-
-		.service-health {
-			cursor: pointer;
-		}
-
-		.avatar-status {
-			display: inline-block;
-			width: 48px;
-			height: 48px;
-			text-align: center;
-			background: rgba($primary, .05);
-
-			@media (max-width: $screen-sm-min) {
-				width: 36px;
-				height: 36px;
-			}
-
-			[class^="icon-16-"],
-			[class*="icon-16-"] {
-				line-height: 48px;
-			}
-
-			[class^="icon-12-"],
-			[class*="icon-12-"] {
-				line-height: 36px;
-			}
-
-			&.up {
-				color: $brand-success;
-				background: rgba($brand-success, 0.1);
-			}
-
-			&.down {
-				color: $brand-danger;
-				background: rgba($brand-danger, 0.1);
-			}
-
-			&.warn {
-				color: $brand-warning;
-				background: rgba($brand-warning, 0.1);
-			}
-
-			&.unknown,
-			&.loading {
-				color: rgba($primary, 0.8);
-				background: rgba($primary, 0.1);
 			}
 		}
 	}

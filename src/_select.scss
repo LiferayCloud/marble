@@ -4,11 +4,15 @@
 	&.block {
 		display: block;
 
-		> .dropdown,
-		> .dropdown .dropdown-menu {
+		> .dropdown {
+			display: block;
+		}
+
+		> .dropdown.open > .dropdown-menu {
 			display: block;
 		}
 	}
+
 
 	.dropdown .btn {
 		text-align: left;

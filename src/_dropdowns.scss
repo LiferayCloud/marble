@@ -18,6 +18,7 @@
 	box-shadow: 0 2px 8px rgba($primary, .1);
 	margin: 6px 0 0;
 	min-width: 140px;
+	overflow: hidden;
 	padding: 0;
 
 	position: absolute;
@@ -38,14 +39,6 @@
 	padding: 0;
 	position: relative;
 	z-index: 2;
-
-	&:first-child {
-		margin-top: 12px;
-	}
-
-	&:last-child {
-		margin-bottom: 12px;
-	}
 }
 
 .dropdown-menu li a,

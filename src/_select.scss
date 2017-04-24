@@ -4,7 +4,8 @@
 	&.block {
 		display: block;
 
-		> .dropdown {
+		> .dropdown,
+		> .dropdown .dropdown-menu {
 			display: block;
 		}
 	}

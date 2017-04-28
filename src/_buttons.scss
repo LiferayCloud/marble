@@ -57,6 +57,10 @@
 	line-height: 60px;
 	padding: 0 24px;
 
+	&.squared {
+		width: 60px;
+	}
+
 	> span[class*="icon-"] {
 		line-height: 60px;
 
@@ -74,6 +78,10 @@
 	font-size: 13px;
 	line-height: 36px;
 
+	&.squared {
+		width: 36px;
+	}
+
 	> span[class*="icon-"] {
 		line-height: 36px;
 	}
@@ -85,6 +93,10 @@
 .btn.btn-xs {
 	font-size: 11px;
 	line-height: 24px;
+
+	&.squared {
+		width: 24px;
+	}
 
 	> span[class*="icon-"] {
 		line-height: 24px;

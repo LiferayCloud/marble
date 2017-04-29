@@ -77,6 +77,18 @@
 			margin-right: 0px;
 			float: right;
 		}
+
+		&.icon-red {
+			color: $color-red;
+		}
+
+		&.icon-orange {
+			color: $color-orange;
+		}
+
+		&.icon-yellow {
+			color: $color-yellow;
+		}
 	}
 }
 

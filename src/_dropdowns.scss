@@ -16,7 +16,7 @@
 	border: 0;
 	border-radius: $border-radius-base;
 	box-shadow: 0 2px 8px rgba($primary, .1);
-	margin: 6px 0 0;
+	margin: 6px 0;
 	min-width: 140px;
 	overflow: hidden;
 	padding: 0;
@@ -122,6 +122,15 @@
 		background: rgba($white, 0.1);
 		color: $white;
 	}
+}
+
+/* ==========================================================================
+	Dropdown up
+	========================================================================== */
+
+.dropdown-up .dropdown-menu {
+	bottom: 100%;
+	top: auto;
 }
 
 /* ==========================================================================

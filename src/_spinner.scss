@@ -25,13 +25,6 @@
 }
 
 .spinner.spinner-small:not(:required):before {
-	border: 3px solid $white;
-	border-bottom-color: $brand-success;
-	border-left-color: $brand-success;
-	border-top-color: $brand-success;
-}
-
-.alert-dark .spinner.spinner-small:not(:required):before {
 	border: 3px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
@@ -52,13 +45,6 @@
 }
 
 .spinner.spinner-medium:not(:required):before {
-	border: 4px solid $white;
-	border-bottom-color: $brand-success;
-	border-left-color: $brand-success;
-	border-top-color: $brand-success;
-}
-
-.alert-dark .spinner.spinner-medium:not(:required):before {
 	border: 4px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
@@ -79,13 +65,6 @@
 }
 
 .spinner.spinner-large:not(:required):before {
-	border: 5px solid $white;
-	border-bottom-color: $brand-success;
-	border-left-color: $brand-success;
-	border-top-color: $brand-success;
-}
-
-.alert-dark .spinner.spinner-large:not(:required):before {
 	border: 5px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
@@ -102,18 +81,11 @@
 .spinner:not(:required):before {
 	content: "";
 	border-radius: 50%;
-	border: 3px solid $white;
-	border-bottom-color: $brand-success;
-	border-left-color: $brand-success;
-	border-top-color: $brand-success;
-	animation: rotate-360 .6s linear infinite;
-}
-
-.alert-dark .spinner:not(:required):before {
 	border: 3px solid transparent;
 	border-bottom-color: $brand-success;
 	border-left-color: $brand-success;
 	border-top-color: $brand-success;
+	animation: rotate-360 .6s linear infinite;
 }
 
 .spinner-done:not(:required):before {

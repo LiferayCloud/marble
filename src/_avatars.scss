@@ -47,6 +47,7 @@ $medium : 48px;
 $large  : 60px;
 $xlarge : 72px;
 $xxlarge : 84px;
+$xxxlarge : 96px;
 
 .avatar-xsmall {
 	width: $xsmall;
@@ -76,6 +77,11 @@ $xxlarge : 84px;
 .avatar-xxlarge {
 	width: $xxlarge;
 	height: $xxlarge;
+}
+
+.avatar-xxxlarge {
+	width: $xxxlarge;
+	height: $xxxlarge;
 }
 
 

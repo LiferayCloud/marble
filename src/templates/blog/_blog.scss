@@ -112,9 +112,13 @@
 		left: 0;
 	}
 
+	article:last-child {
+		margin-bottom: calc(4rem * #{$lineHeight});
+	}
+
 	///////////////////////////SIGNATURE///////////////////////////
 	.we-container {
-		padding: calc(4rem * #{$lineHeight}) 0;
+		padding: calc(4rem * #{$lineHeight}) 0 0;
 		text-align: center;
 
 		.we-circle {

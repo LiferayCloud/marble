@@ -155,7 +155,7 @@
 	left: 0;
     z-index: 9999;
 
-    @media (min-width: 960px) {
+    @media (min-width: $screen-md-min) {
 		position: fixed;
 	}
 }
@@ -185,7 +185,7 @@
 /* Topbar DEFAULT NOT Mobile Site
 	========================================================================== */
 .topbar {
-	@media (min-width: 960px) {
+	@media (min-width: $screen-md-min) {
 		height: 60px;
 		min-height: 60px;
 
@@ -218,7 +218,7 @@
 /* Topbar LARGE NOT Mobile Site
 	========================================================================== */
 .topbar.topbar-large {
-	@media (min-width: 960px) {
+	@media (min-width: $screen-md-min) {
 		height: 84px;
 		min-height: 84px;
 

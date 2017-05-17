@@ -7,6 +7,16 @@
 	margin-bottom: 0;
 }
 
+.blog .container .content .nav.nav-tabs.nav-code-tabs {
+	border-width: 0px;
+	padding: 0 24px;
+	margin: 0;
+
+	li:before {
+		content: "";
+	}
+}
+
 .blog {
 
 	@import "../root/elements";

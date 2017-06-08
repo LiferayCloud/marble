@@ -164,7 +164,7 @@ li a:not([class]) {
 	z-index: 6;
 }
 
-.code-container:hover .btn-copy {
+.code-container .btn-copy:focus, .code-container:hover .btn-copy {
 	opacity: 1;
 }
 

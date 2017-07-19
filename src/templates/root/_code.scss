@@ -42,7 +42,7 @@ li a:not([class]) {
 	padding: 0 24px;
 }
 
-.nav.nav-tabs.nav-code-tabs > li > a {
+.nav.nav-tabs.nav-code-tabs > li > button {
 	background: transparent;
 	border-width: 0px;
 	color: rgba($primary, 0.8);
@@ -52,7 +52,6 @@ li a:not([class]) {
 	line-height: 24px;
 	text-transform: uppercase;
 	padding: 0;
-
 	margin-right: 12px;
 
 	&:hover,
@@ -63,11 +62,11 @@ li a:not([class]) {
 	}
 }
 
-.nav.nav-tabs.nav-code-tabs > li:last-child > a {
+.nav.nav-tabs.nav-code-tabs > li:last-child > button {
 	margin-right: 0;
 }
 
-.nav.nav-tabs.nav-code-tabs > li.active > a {
+.nav.nav-tabs.nav-code-tabs > li.active > button {
 	border-width: 0px;
 	color: $accent;
 }

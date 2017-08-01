@@ -6,14 +6,14 @@
 		width: auto;
 		z-index: 999;
 
-		.alpha-container {
+		.version-container {
 			position: absolute;
 			left: 48px;
 			bottom: 6px;
 			width: 48px;
 			height: 24px;
 
-			.alpha {
+			.version {
 				bottom: 0;
 				width: 48px;
 				height: 25px;
@@ -74,7 +74,7 @@
 		margin-left: 4px;
 	}
 
-	.alpha-container {
+	.version-container {
 		position: absolute;
 		bottom: -7px;
 		width: 48px;
@@ -88,7 +88,7 @@
 			display: block;
 		}
 
-		.alpha {
+		.version {
 			position: absolute;
 			bottom: -30px;
 			width: 48px;
@@ -128,7 +128,7 @@
 	}
 }
 
-.topbar.topbar-large .dashboard-logo .alpha-container {
+.topbar.topbar-large .dashboard-logo .version-container {
 	left: 60px;
 	top: 12px;
 }
@@ -177,7 +177,7 @@
 	}
 
 	&.dashboard-logo {
-		.alpha {
+		.version {
 			background: rgba($primary, 0.05);
 		}
 

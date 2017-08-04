@@ -256,6 +256,18 @@
 		}
 	}
 
+	///////////////////////////VIDEO///////////////////////////
+	.video-container {
+		position: relative;
+	}
+
+	.video-container iframe {
+		width: calc(100% + 5rem);
+		position: relative;
+		left: -2.5rem;
+		border-radius: 4px;
+	}
+
 	///////////////////////////CARD///////////////////////////
 	.card {
 		box-shadow: 0 2px 12px rgba($primary, 0.12);

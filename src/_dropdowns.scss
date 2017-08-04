@@ -97,20 +97,7 @@
 	========================================================================== */
 
 .dropdown-dark .dropdown-menu {
-	background: $primary;
-}
-
-.dropdown-dark .dropdown-menu:before {
-	background: rgba($white, 0.1);
-	content: '';
-
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 1;
-
-	height: 100%;
-	width: 100%;
+	background: #272c32;
 }
 
 .dropdown-dark .dropdown-menu li a,

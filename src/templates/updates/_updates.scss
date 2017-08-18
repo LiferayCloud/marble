@@ -78,14 +78,13 @@
 .update-feature {
 	.feature-icon {
 		color: rgba(14, 20, 26, 0.6);
+		margin-right: 10px;
 	}
 
 	.feature-header {
 		border-width: 0;
 		font-size: 19px;
-		margin-left: 10px;
 		margin: 0;
-		padding: 0 15px 0 13px;
 	}
 
 	.feature-lead {
@@ -146,7 +145,7 @@
 	}
 }
 
-@media (min-width: $screen-md-min) { 
+@media (min-width: $screen-md-min) {
 	.updates {
 		margin-top: 105px;
 	}

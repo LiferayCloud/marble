@@ -15,5 +15,14 @@
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",
     "gulp-sass": "^2.3.1"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/gulp",
+    "b:watch": "node_modules/.bin/gulp watch",
+    "b:bootstrap": "node_modules/.bin/gulp bootstrap",
+    "b:fonts": "node_modules/.bin/gulp fonts",
+    "b:fonts-12": "node_modules/.bin/gulp font-icon-12",
+    "b:fonts-16": "node_modules/.bin/gulp font-icon-16",
+    "b:fonts-galano": "node_modules/.bin/gulp font-galano"
   }
 }

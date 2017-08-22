@@ -18,5 +18,14 @@
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^2.3.1",
     "postcss-scss": "^1.0.2"
-  }
+  },
+  "browserslist": [
+    "ie 11",
+    "last 2 android versions",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 ios versions",
+    "last 2 safari versions"
+  ]
 }

@@ -1,3 +1,7 @@
+$facebook-color: #38589a;
+$twitter-color: #27aae5;
+$linkedin-color: #007ab7;
+
 .content .topbar.topbar-fixed + .blog {
 	padding-top: 60px;
 }
@@ -125,32 +129,66 @@
 	article:last-child {
 		margin-bottom: calc(4rem * #{$lineHeight});
 	}
+}
 
-	///////////////////////////SIGNATURE///////////////////////////
-	.we-container {
-		padding: calc(4rem * #{$lineHeight}) 0;
-		text-align: center;
+.social {
+	text-align: center;
+	margin-top: 96px;
+	margin-bottom: 144px;
 
-		.we-circle {
-			width: calc(2rem * #{$lineHeight});
-			height: calc(2rem * #{$lineHeight});
-			border-radius: 50%;
-			background: rgba($primary, 0.1);
-			display: inline-block;
-		}
+	.social-banner {
+		margin-bottom: 12px;
+		height: 30px;
+		line-height: 30px;
 
-		.we {
+		.social-banner-title {
 			font-family: $font-primary;
-			font-weight: 700;
 			font-size: $font-h6;
-			color: $white;
-			line-height: calc(2rem * #{$lineHeight});
-			width: 2rem;
-			text-align: center;
-			position: relative;
-			top: 0.5px;
-			left: 0.5px;
+			font-weight: bold;
 		}
 	}
 
+	.social-buttons {
+		.social-button {
+			@include anim(background-color);
+			display: inline-block;
+			margin-right: 24px;
+			height: 48px;
+			width: 48px;
+			border-bottom: none;
+			border-radius: 50%;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.facebook {
+				background-color: $facebook-color;
+
+				&:hover {
+					background-color: rgba($facebook-color, .8);
+				}
+			}
+
+			&.twitter {
+				background-color: $twitter-color;
+				&:hover {
+					background-color: rgba($twitter-color, .8);
+				}
+			}
+
+			&.linkedin {
+				background-color: $linkedin-color;
+				&:hover {
+					background-color: rgba($linkedin-color, .8);
+				}
+			}
+
+			span {
+				font-size: 2rem;
+				color: #FFFFFF;
+				line-height: 48px;
+			}
+		}
+	}
 }

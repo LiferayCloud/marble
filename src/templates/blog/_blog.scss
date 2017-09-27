@@ -192,3 +192,29 @@ $linkedin-color: #007ab7;
 		}
 	}
 }
+
+.we-container {
+	padding: calc(4rem * #{$lineHeight}) 0;
+	text-align: center;
+
+	.we-circle {
+		width: calc(2rem * #{$lineHeight});
+		height: calc(2rem * #{$lineHeight});
+		border-radius: 50%;
+		background: rgba($primary, 0.1);
+		display: inline-block;
+	}
+
+	.we {
+		font-family: $font-primary;
+		font-weight: 700;
+		font-size: $font-h6;
+		color: $white;
+		line-height: calc(2rem * #{$lineHeight});
+		width: 2rem;
+		text-align: center;
+		position: relative;
+		top: 0.5px;
+		left: 0.5px;
+	}
+}

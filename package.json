@@ -8,7 +8,8 @@
   "license": "BSD",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "mathsass": "^0.9.5"
+    "mathsass": "^0.9.5",
+    "metal-toggler": "^2.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

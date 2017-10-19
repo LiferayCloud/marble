@@ -1,253 +1,202 @@
 @import "variables";
 @import "mixins";
 
-/* (Mobile First)
-	Topbar DEFAULT
-	========================================================================== */
+/* Topbar
+/* ========================================================================== */
+
 .topbar {
-	background: $primary;
-
-	width: 100%;
-	height: auto;
-	min-height: 132px;
-	padding: 12px 20px;
-
+	align-items: center;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 18px 24px;
+	position: relative;
+}
 
-	.topbar-logo {
-		display: flex;
-		align-items: center;
-		align-self: center;
+.topbar-dark {
+	background-color: $primary;
+	color: $white;
+}
 
-		margin: 0 0 12px 0;
-		max-width: 100%;
+.topbar-light {
+	background-color: $white;
+	color: $primary;
+}
 
-		.wedeploy-logo {
-			.deploy,
-			.liferay,
-			.version-container {
-				display: none;
-			}
-		}
+.topbar-shaded {
+	box-shadow: 0px 2px 8px rgba(12, 14, 26, 0.1);
+}
 
-		.topbar-logo-link {
-			@include anim(color);
-			color: $white;
-			font-family: $font-primary;
-			font-weight: 700;
-			margin: 0;
+/* Topbar Logo
+/* ========================================================================== */
 
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-content: center;
-			align-items: center;
+.topbar-logo {
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0;
+}
 
-			&:hover,
-			&:focus {
-				color: rgba($white, 0.6);
-			}
+.topbar-logo-link {
+	color: inherit;
+	display: flex;
 
-			> *:last-child {
-				margin: 0;
-			}
-		}
+	&:hover, &:focus {
+		color: inherit;
+	}
+}
 
-		.topbar-logo-image {
-			height: 36px;
-			margin: 0 12px 0 0;
-		}
+.topbar-logo-text {
+	display: block;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0 -12px;
+	padding: 9px 12px;
 
-		.topbar-logo-icon {
-			color: $accent;
-			font-size: 24px;
-			line-height: 36px;
-			margin: 0 12px 0 0;
-		}
+	* + & {
+		margin-left: 0;
+	}
+}
+
+.topbar-logo-icon {
+	color: #00d46a;
+	display: block;
+	line-height: 36px;
+
+	:root & {
+		font-size: 36px;
+	}
+}
+
+.topbar-logo-image {
+	display: block;
+	height: 36px;
+	width: 36px;
+}
+
+/* Topbar Menu
+/* ========================================================================== */
+
+.topbar-menu {
+	margin-left: auto;
+}
+
+.topbar-menu-toggle {
+	background-color: transparent;
+	border-width: 0;
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 6px 24px;
+	-webkit-tap-highlight-color: transparent;
+
+	@media (min-width: 840px) {
+		display: none;
 	}
 
-	.topbar-logo-text {
-		font-family: $font-primary;
-		font-weight: 700;
-		font-size: 17px;
-		line-height: 36px;
-		margin: 0 12px 0 0;
-
-		flex-shrink: 1;
+	&::after {
+		display: inline-block;
+		height: 7px;
+		line-height: 0;
+		margin-left: 6px;
+		transform: scaleY(1) translate3d(0, -.5px, 0);
+		transition: transform .3s ease-in-out,top .3s ease-out;
+		vertical-align: middle;
+		width: 8px;
 	}
 
-	.topbar-list-container {
-		display: flex;
-		justify-content: center;
+	.topbar-dark &::after {
+		content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 .8c0 .16-.04.32-.14.44-.88 1.34-2.3 3.48-3.2 4.8-.14.22-.38.36-.66.36s-.52-.14-.66-.36c-.9-1.32-2.32-3.46-3.2-4.8A.682.682 0 0 1 0 .8C0 .36.36 0 .8 0h6.4c.44 0 .8.36.8.8z' fill='#{$white}'/%3E%3C/svg%3E");
+	}
 
-		max-width: 100%;
+	.topbar-light &::after {
+		content: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 .8c0 .16-.04.32-.14.44-.88 1.34-2.3 3.48-3.2 4.8-.14.22-.38.36-.66.36s-.52-.14-.66-.36c-.9-1.32-2.32-3.46-3.2-4.8A.682.682 0 0 1 0 .8C0 .36.36 0 .8 0h6.4c.44 0 .8.36.8.8z' fill='#{$primary}'/%3E%3C/svg%3E");
+	}
 
+	&.toggler-header-expanded::after {
+		transform: scaleY(-1) translate3d(0, calc(50% - 2.5px), 0);
+	}
+}
+
+.topbar-list {
+	list-style-type: none;
+	margin: 0;
+
+	@media (max-width: 839px) {
+		left: 0;
+		max-height: 0;
+		overflow: hidden;
 		padding: 0;
-		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 72px;
+		transition: max-height .05s, padding .3s;
+		visibility: hidden;
+		z-index: 1;
 	}
 
-	.topbar-list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
+	@media (min-width: 840px) {
 		align-items: center;
-		align-content: center;
-
-		font-size: 0;
-		list-style: none;
-
+		display: flex;
 		padding: 0;
-		margin: 0;
-
-		.topbar-item {
-			align-self: center;
-			display: inline-block;
-			height: 36px;
-			margin: 0 20px;
-
-			&:last-child {
-				margin: 0 0 0 20px;
-			}
-
-			.topbar-link {
-				@include anim(color);
-
-				white-space: nowrap;
-
-				font-size: 16px;
-				font-family: $font-primary;
-				font-weight: 700;
-				color: rgba($white, 0.4);
-				line-height: 36px;
-
-				&.topbar-link-selected,
-				&:hover {
-					color: rgba($white, 0.8);
-				}
-			}
-		}
-
-		.topbar-avatar {
-			.avatar-initials {
-				background: $accent;
-				color: $white;
-			}
-
-			.dropdown-menu {
-				border-top: 0;
-				border-top-left-radius: 0;
-				border-top-right-radius: 0;
-				margin: 12px 0 0 -102px;
-			}
-		}
 	}
 
-}
-
-/* Topbar Fixed
-	========================================================================== */
-
-.topbar.topbar-fixed {
-	top: 0;
-	left: 0;
-	z-index: 9999;
-
-	@media (min-width: $screen-md-min) {
-		position: fixed;
+	.topbar-dark & {
+		background-color: $primary;
 	}
-}
 
-/* Topbar Large
-	========================================================================== */
-.topbar.topbar-large {
-
-	.topbar-logo {
-
-		.topbar-logo-image {
-			height: 48px;
-		}
-
-		.topbar-logo-text {
-			font-size: 22px;
-		}
-
-		.topbar-logo-icon {
-			font-size: 36px;
-			line-height: 48px;
-		}
-
+	.topbar-light & {
+		background-color: $white;
 	}
-}
 
-/* Topbar DEFAULT NOT Mobile Site
-	========================================================================== */
-.topbar {
-	@media (min-width: $screen-md-min) {
-		height: 60px;
-		min-height: 60px;
-
-		flex-direction: row;
-		justify-content: space-between;
-
-		.topbar-logo {
-			align-self: flex-start;
-			margin: 0 12px 0 0;
-
-			.wedeploy-logo {
-				.deploy,
-				.liferay,
-				.version-container {
-					display: inline-block;
-				}
-			}
-		}
-
-		.topbar-list-container {
-			justify-content: flex-end;
-		}
-
-		.topbar-list {
-			margin: 0 0 0 auto;
+	&.toggler-expanded {
+		@media (max-width: 839px) {
+			max-height: 100vh;
+			padding: 12px 0;
+			visibility: visible;
 		}
 	}
 }
 
-/* Topbar LARGE NOT Mobile Site
-	========================================================================== */
-.topbar.topbar-large {
-	@media (min-width: $screen-md-min) {
-		height: 84px;
-		min-height: 84px;
+.topbar-link {
+	color: inherit;
+	display: block;
 
-		padding: 24px 20px 12px;
+	@media (max-width: 839px) {
+		font-size: 18px;
+		line-height: 24px;
+		padding: 9px 24px;
+	}
+
+	@media (min-width: 840px) {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 9px 12px;
+	}
+
+	&:hover, &:focus {
+		color: inherit;
 	}
 }
 
-/* Topbar LIGHT
-	========================================================================== */
-.topbar.topbar-light {
-	background: white;
+.topbar-link-text {
+	background-image: linear-gradient(currentColor 25%,transparent 50%);
+	background-position: calc(200% - 2px) 100%;
+	background-repeat: no-repeat;
+	background-size: 200% 2px;
+	display: inline-block;
+	margin-bottom: -3px;
+	padding-bottom: 3px;
+	transition: background-position .25s;
+	vertical-align: top;
 
-	.topbar-logo {
-		.topbar-logo-link {
-			color: rgba($primary, 0.8);
-		}
+	:hover > & {
+		background-position: 100% 100%;
 	}
+}
 
-	.topbar-list {
-		.topbar-item {
-			.topbar-link {
-				color: rgba($primary, 0.4);
+/* Topbar Button
+/* ========================================================================== */
 
-				&.topbar-link-selected,
-				&:hover {
-					color: rgba($primary, 0.6);
-				}
-			}
-		}
-	}
-
+.topbar-button {
+	margin-left: 6px;
 }

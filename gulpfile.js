@@ -1,16 +1,27 @@
 var gulp = require('gulp');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
+var metal = require('gulp-metal');
 var sass = require('gulp-sass');
 
 // All -------------------------------------------------------------------------
 
-gulp.task('default', ['bootstrap', 'fonts']);
+gulp.task('default', ['build:globals', 'bootstrap', 'fonts']);
+
+// Metal -----------------------------------------------------------------------
+
+metal.registerTasks({
+	buildSrc: 'js/**/*.js',
+	bundleFileName: 'marble.js',
+	mainBuildJsTasks: ['build:globals'],
+	moduleName: 'marble'
+});
 
 // Bootstrap -------------------------------------------------------------------
 
 gulp.task('watch', function() {
 	gulp.watch('src/**/*.scss', ['bootstrap']);
+	gulp.watch('js/**/*.js', ['build:globals']);
 });
 
 gulp.task('bootstrap', function() {

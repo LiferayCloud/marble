@@ -13,7 +13,7 @@ node -v && npm -v
 2. Install our global dependencies:
 
 ```sh
-[sudo] npm i -g electric-cli@alpha
+[sudo] npm i -g electric-cli
 ```
 
 3. Install our local dependencies:

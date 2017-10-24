@@ -1,9 +1,7 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
 @mixin anim($property, $duration: $transition-duration, $function: $transition-function) {
-	-webkit-transition: $property $duration $function;
-       -o-transition: $property $duration $function;
-          transition: $property $duration $function;
+	transition: $property $duration $function;
 }
 
 @mixin selection {

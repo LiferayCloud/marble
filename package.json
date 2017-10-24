@@ -14,13 +14,25 @@
     "mathsass": "^0.9.5"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
     "gulp": "^3.9.0",
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",
+    "gulp-postcss": "^7.0.0",
     "gulp-sass": "^2.3.1",
+    "postcss-scss": "^1.0.2",
     "stylelint": "^8.0.0",
     "stylelint-config-dev": "^2.0.0"
   },
+  "browserslist": [
+    "ie 11",
+    "last 2 android versions",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 ios versions",
+    "last 2 safari versions"
+  ],
   "stylelint": {
     "extends": "stylelint-config-dev"
   }

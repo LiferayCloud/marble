@@ -1,6 +1,9 @@
 var gulp = require('gulp');
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
+var postcss = require('gulp-postcss');
+var postcssAutoprefixer = require('autoprefixer');
+var postcssScss = require('postcss-scss');
 var sass = require('gulp-sass');
 
 // All -------------------------------------------------------------------------
@@ -16,6 +19,11 @@ gulp.task('watch', function() {
 gulp.task('bootstrap', function() {
 	return gulp.src('src/**/*.scss')
 		.pipe(sass({includePaths: ['node_modules'], outputStyle: 'compressed'}))
+		.pipe(postcss([
+			postcssAutoprefixer()
+		], {
+			syntax: postcssScss
+		}))
 		.pipe(gulp.dest('build'));
 });
 

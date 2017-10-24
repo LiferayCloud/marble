@@ -24,7 +24,7 @@ title: "Select"
 			{param selectedIndex: 0 /}
 		{/call}
 
-		<p>WeDeploy Dashboard: Deployment > Github Account </p>	
+		<p>WeDeploy Dashboard: Deployment > Github Account </p>
 
 		{let $item1 kind="html"}
 			<img src="https://avatars.githubusercontent.com/u/19154228?v=3" width="24" height="24"> ygorcosta
@@ -43,7 +43,7 @@ title: "Select"
 		{/call}
 
 		<p>WeDeploy Dashboard: Settings > Home Container</p>
-		
+
 		{let $selectDown1 kind="html"}
 			<span class="none"><span class="avatar avatar-white avatar-squared"><span class="icon-16-house"></span></span>none</span>
 		{/let}
@@ -60,12 +60,9 @@ title: "Select"
 			{param values: ['1', '2'] /}
 			{param selectedIndex: 0 /}
 		{/call}
-
 	{/let}
 
 	{call styleguide.render data="all"}
 		{param content: $select /}
 	{/call}
-
 {/template}
-

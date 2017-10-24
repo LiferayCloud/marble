@@ -5,15 +5,15 @@
  * @param site
  */
 {template .render}
-	{call main.render data="all"}
-		{param elementClasses: 'docs styleguide' /}
-		{param content kind="html"}
-			{call SideBar.render}
-				{param section: $site.index.children['docs'] /}
-			{/call}
-			{call .styleguideFull data="all" /}
-		{/param}
-	{/call}
+  {call main.render data="all"}
+    {param elementClasses: 'docs styleguide' /}
+    {param content kind="html"}
+      {call SideBar.render}
+        {param section: $site.index.children['docs'] /}
+      {/call}
+      {call .styleguideFull data="all" /}
+    {/param}
+  {/call}
 {/template}
 
 /**
@@ -21,16 +21,16 @@
  * @param content
  */
 {template .styleguideFull}
-	<div class="sidebar-offset">
-		<div class="container container-hybrid">
-			<div class="docs-guide row card">
-				<div class="docs-content col-xs-16">
-					{$content}
-					{call .contribute data="all" /}
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="sidebar-offset">
+    <div class="container container-hybrid">
+      <div class="docs-guide row card">
+        <div class="docs-content col-xs-16">
+          {$content}
+          {call .contribute data="all" /}
+        </div>
+      </div>
+    </div>
+  </div>
 {/template}
 
 /**
@@ -38,13 +38,13 @@
  * @param site
  */
 {template .contribute}
-	<div class="contribute">
-		<div class="contribute-img">
-			<span class="icon-16-github"></span>
-		</div>
+  <div class="contribute">
+    <div class="contribute-img">
+      <span class="icon-16-github"></span>
+    </div>
 
-		<div class="contribute-text">
-			<p>Contribute on Github! <a href="https://github.com/{$site.githubRepo}/edit/master/{$page.srcFilePath}" class="contribute-link " target="_blank">Edit this section</a>.</p>
-		</div>
-	</div>
+    <div class="contribute-text">
+      <p>Contribute on Github! <a href="https://github.com/{$site.githubRepo}/edit/master/{$page.srcFilePath}" class="contribute-link " target="_blank">Edit this section</a>.</p>
+    </div>
+  </div>
 {/template}

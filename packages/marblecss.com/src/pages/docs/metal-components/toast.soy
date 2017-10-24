@@ -8,32 +8,31 @@ title: "Toast"
 /**
  */
 {template .render}
-	{let $animClasses: [
-			'show': 'animated slideInBottom',
-			'hide': 'hidden'
-		] /}
+  {let $animClasses: [
+    'show': 'animated slideInBottom',
+    'hide': 'hidden'
+  ] /}
 
-	{let $tootlip kind="html"}
-		<h5>Default Tooltip</h5>
+  {let $tootlip kind="html"}
+    <h5>Default Tooltip</h5>
 
-		{call Toast.render}
-			{param animClasses: $animClasses /}
-			{param body kind="html"}
-				User was deleted successfully<button class="alert-undo-link">undo</button>
-			{/param}
-			{param dismissible: true /}
-			{param elementClasses: 'hidden alert-danger' /}
-			{param hideDelay: 6000 /}
-			{param visible: true /}
-			{param spinner: true /}
-			{param spinnerDone: true /}
-			{param spinnerClasses: 'spinner-danger' /}
-			{param closeButton: true /}
-		{/call}
-	{/let}
+    {call Toast.render}
+      {param animClasses: $animClasses /}
+      {param body kind="html"}
+        User was deleted successfully<button class="alert-undo-link">undo</button>
+      {/param}
+      {param dismissible: true /}
+      {param elementClasses: 'hidden alert-danger' /}
+      {param hideDelay: 6000 /}
+      {param visible: true /}
+      {param spinner: true /}
+      {param spinnerDone: true /}
+      {param spinnerClasses: 'spinner-danger' /}
+      {param closeButton: true /}
+    {/call}
+  {/let}
 
-	{call styleguide.render data="all"}
-		{param content: $tootlip /}
-	{/call}
-		
+  {call styleguide.render data="all"}
+    {param content: $tootlip /}
+  {/call}
 {/template}

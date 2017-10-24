@@ -1,37 +1,37 @@
 .styleguide {
 
-	@import "node_modules/marble/src/templates/root/elements";
+  @import "node_modules/marble/src/templates/root/elements";
 
-	.container {
-		padding: 120px 0 60px 0;
-	}
+  .container {
+    padding: 120px 0 60px 0;
+  }
 
-	.avatar {
-		color: $white;
-		background: rgba($primary, 0.8);
-	}
+  .avatar {
+    color: $white;
+    background: rgba($primary, 0.8);
+  }
 
-	.sidebar {
-		@media (min-width: 960px) {
-			top: 60px;
-			height: calc(100vh - 60px);
-		}
-	}
+  .sidebar {
+    @media (min-width: 960px) {
+      top: 60px;
+      height: calc(100vh - 60px);
+    }
+  }
 
-	.docs-guide .docs-content > * {
-		margin: 0 0 24px;
-	}
+  .docs-guide .docs-content > * {
+    margin: 0 0 24px;
+  }
 
-	.docs-guide .docs-content .code-container {
-		margin: 0 0 48px;
-	}
+  .docs-guide .docs-content .code-container {
+    margin: 0 0 48px;
+  }
 
-	&.docs .docs-content .guide-github {
-		margin: 48px 0 60px;
-	}
+  &.docs .docs-content .guide-github {
+    margin: 48px 0 60px;
+  }
 
-	.container.container-hybrid .card {
-		max-width: 1280px;
-	}
+  .container.container-hybrid .card {
+    max-width: 1280px;
+  }
 
 }

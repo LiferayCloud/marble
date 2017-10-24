@@ -26,62 +26,62 @@ $accent: #ffb700;
 @import "styleguide";
 
 .group-demo > *:not(.checkbox) {
-	display: inline-block;
-	margin: 0 12px 12px 0;
+  display: inline-block;
+  margin: 0 12px 12px 0;
 }
 
 .group-demo [class*="avatar-"] [class*="icon-12-"],
 .group-demo [class*="avatar-"] [class*="icon-16-"],
 .group-demo .label .label-icon,
 .group-demo .label .label-action {
-	color: inherit;
+  color: inherit;
 }
 
 .group-demo [class*="icon-"] {
-	color: rgba($primary, 0.8);
-	cursor: pointer;
-	display: inline-block;
-	text-align: center;
-	&:hover {
-		color: rgba($primary, 0.4);
-	}
+  color: rgba($primary, 0.8);
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    color: rgba($primary, 0.4);
+  }
 }
 
 .group-demo [class*="icon-12-"] {
-	height: 24px;
-	line-height: 24px;
-	width: 24px;
-	&:before {
-		line-height: 24px;
-	}
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+  &:before {
+    line-height: 24px;
+  }
 }
 
 .group-demo [class*="icon-16-"] {
-	height: 36px;
-	line-height: 36px;
-	width: 36px;
-	&:before {
-		line-height: 36px;
-	}
+  height: 36px;
+  line-height: 36px;
+  width: 36px;
+  &:before {
+    line-height: 36px;
+  }
 }
 
 .demo .box-ws {
-	width: 100%;
-	max-width: 200px;
-	height: 100px;
-	border-radius: 4px;
-	box-shadow: 0 2px 8px rgba($primary, .1);
-	display: block;
-	padding: 0;
-	position: relative;
+  width: 100%;
+  max-width: 200px;
+  height: 100px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba($primary, .1);
+  display: block;
+  padding: 0;
+  position: relative;
 
-	text-align: center;
-	vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .demo .row {
-	margin-left: 0;
-	margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .demo.container-xs { max-width: 360px; }
@@ -90,25 +90,25 @@ $accent: #ffb700;
 .demo.container-lg { max-width: 1280px; }
 
 .styleguide .demo [class^="col-"] {
-	background-color: rgba(31, 122, 255, .2);
-	color: white;
-	height: 50px;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 18px;
-	margin-bottom: 24px;
+  background-color: rgba(31, 122, 255, .2);
+  color: white;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 24px;
 }
 
 .styleguide .demo [class^="col-"]:after {
-	background-color: rgba(31, 122, 255, .5);
-	content: '';
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 12px;
-	right: 12px;
-	bottom: 0;
-	z-index: -1;
+  background-color: rgba(31, 122, 255, .5);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  z-index: -1;
 }

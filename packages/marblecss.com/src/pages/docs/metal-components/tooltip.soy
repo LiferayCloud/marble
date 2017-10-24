@@ -9,40 +9,39 @@ title: "Tooltip"
  * @param tooltipAlignElementChanged
  */
 {template .render}
-	{let $tootlip kind="html"}
-		<h5>Default Tooltip</h5>
+  {let $tootlip kind="html"}
+    <h5>Default Tooltip</h5>
 
-		<p>Home Service <span class="icon-12-info show-tooltip icon-info" alt="Select the service that will respond to requests made on project main domain."></span></p>
-		
-		{call Tooltip.render}
-			{param elementClasses: 'fade' /}
-			{param events: ['alignElementChanged': $tooltipAlignElementChanged] /}
-			{param ref: 'tooltip' /}
-			{param selector: '.show-tooltip' /}
-			{param visible: false /}
-			{param title kind="html"}
-				Select the service that will respond to requests made on project main domain.
-			{/param}
-		{/call}
+    <p>Home Service <span class="icon-12-info show-tooltip icon-info" alt="Select the service that will respond to requests made on project main domain."></span></p>
 
-		<h5>Default Tooltip - Text Align Left</h5>
+    {call Tooltip.render}
+      {param elementClasses: 'fade' /}
+      {param events: ['alignElementChanged': $tooltipAlignElementChanged] /}
+      {param ref: 'tooltip' /}
+      {param selector: '.show-tooltip' /}
+      {param visible: false /}
+      {param title kind="html"}
+        Select the service that will respond to requests made on project main domain.
+      {/param}
+    {/call}
 
-		<p>Home Service <span class="icon-12-info show-tooltip-2 icon-info" alt="Select the service that will respond to requests made on project main domain."></span></p>
-		
-		{call Tooltip.render}
-			{param elementClasses: 'fade text-left' /}
-			{param events: ['alignElementChanged': $tooltipAlignElementChanged] /}
-			{param ref: 'tooltip2' /}
-			{param selector: '.show-tooltip-2' /}
-			{param visible: false /}
-			{param title kind="html"}
-				Select the service that will respond to requests made on project main domain.
-			{/param}
-		{/call}
-	{/let}
+    <h5>Default Tooltip - Text Align Left</h5>
 
-	{call styleguide.render data="all"}
-		{param content: $tootlip /}
-	{/call}
-		
+    <p>Home Service <span class="icon-12-info show-tooltip-2 icon-info" alt="Select the service that will respond to requests made on project main domain."></span></p>
+
+    {call Tooltip.render}
+      {param elementClasses: 'fade text-left' /}
+      {param events: ['alignElementChanged': $tooltipAlignElementChanged] /}
+      {param ref: 'tooltip2' /}
+      {param selector: '.show-tooltip-2' /}
+      {param visible: false /}
+      {param title kind="html"}
+        Select the service that will respond to requests made on project main domain.
+      {/param}
+    {/call}
+  {/let}
+
+  {call styleguide.render data="all"}
+    {param content: $tootlip /}
+  {/call}
 {/template}

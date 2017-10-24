@@ -10,43 +10,43 @@
 {template .render private="true"}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta content="minimum-scale=1.0, width=device-width" name="viewport">
-		<meta name="description" content="{$page.description ?: ''}">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="minimum-scale=1.0, width=device-width" name="viewport">
+    <meta name="description" content="{$page.description ?: ''}">
 
-		<title>{$site.title} - {$page.title}</title>
+    <title>{$site.title} - {$page.title}</title>
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono">
 
-		<!-- inject:css -->
-		<!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
 
-		<!-- inject:js -->
-		<!-- endinject -->
+    <!-- inject:js -->
+    <!-- endinject -->
 
-		<script src="/js/example.js"></script>
+    <script src="/js/example.js"></script>
 
-		<link rel="stylesheet" href="/styles/main.css">
-	</head>
-	<body data-senna>
-		<div data-senna-surface id="wrapper">
-			<div class="senna-loading-bar"></div>
-			<!-- inject:metal:js -->
-				<div>
-					{$content}
-				</div>
-			<!-- endinject -->
-		</div>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body data-senna>
+    <div data-senna-surface id="wrapper">
+      <div class="senna-loading-bar"></div>
+      <!-- inject:metal:js -->
+        <div>
+          {$content}
+        </div>
+      <!-- endinject -->
+    </div>
 
-		{if $scripts}
-			{foreach $script in $scripts}
-				<script src="{$script}"></script>
-			{/foreach}
-		{/if}
+    {if $scripts}
+      {foreach $script in $scripts}
+        <script src="{$script}"></script>
+      {/foreach}
+    {/if}
 
-		<!-- inject:vendor:js -->
-		<!-- endinject -->
-	</body>
+    <!-- inject:vendor:js -->
+    <!-- endinject -->
+  </body>
 </html>
 {/template}

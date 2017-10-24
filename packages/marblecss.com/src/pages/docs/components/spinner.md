@@ -7,9 +7,9 @@ title: "Spinner"
 ##### Loading - Types
 
 <div class="group-demo">
-	<span class="spinner spinner-medium"></span>
-	<span class="spinner spinner-medium spinner-warning"></span>
-	<span class="spinner spinner-medium spinner-danger"></span>
+  <span class="spinner spinner-medium"></span>
+  <span class="spinner spinner-medium spinner-warning"></span>
+  <span class="spinner spinner-medium spinner-danger"></span>
 </div>
 
 ```xml
@@ -21,9 +21,9 @@ title: "Spinner"
 ##### Loading - Sizes
 
 <div class="group-demo">
-	<span class="spinner spinner-large"></span>
-	<span class="spinner spinner-medium"></span>
-	<span class="spinner spinner-small"></span>
+  <span class="spinner spinner-large"></span>
+  <span class="spinner spinner-medium"></span>
+  <span class="spinner spinner-small"></span>
 </div>
 
 ```xml
@@ -35,9 +35,9 @@ title: "Spinner"
 ##### Done - Types
 
 <div class="group-demo">
-	<span class="spinner spinner-medium spinner-done"></span>
-	<span class="spinner spinner-medium spinner-warning spinner-done"></span>
-	<span class="spinner spinner-medium spinner-danger spinner-done"></span>
+  <span class="spinner spinner-medium spinner-done"></span>
+  <span class="spinner spinner-medium spinner-warning spinner-done"></span>
+  <span class="spinner spinner-medium spinner-danger spinner-done"></span>
 </div>
 
 ```xml
@@ -49,9 +49,9 @@ title: "Spinner"
 ##### Done - Sizes
 
 <div class="group-demo">
-	<span class="spinner spinner-large spinner-done"></span>
-	<span class="spinner spinner-medium spinner-done"></span>
-	<span class="spinner spinner-small spinner-done"></span>
+  <span class="spinner spinner-large spinner-done"></span>
+  <span class="spinner spinner-medium spinner-done"></span>
+  <span class="spinner spinner-small spinner-done"></span>
 </div>
 
 ```xml

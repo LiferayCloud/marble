@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "repository": "wedeploy/marblecss.com",
-	"devDependencies": {
+  "devDependencies": {
     "electric-marble-components": "^2.0.0",
     "marble": "~2.10.0",
     "metal-dropdown": "^2.0.0",
@@ -13,5 +13,5 @@
     "metal-slider": "^2.1.1",
     "metal-toast": "^2.0.0",
     "metal-toggler": "^2.0.0"
-  }	
+  }
 }

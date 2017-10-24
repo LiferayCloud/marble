@@ -7,12 +7,12 @@ import Toggler from 'metal-toggler';
 import templates from './SideBar.soy';
 
 class SideBar extends Component {
-	attached() {
-		new Toggler({
-			content: '.sidebar-toggler-content',
-			header: '.sidebar-header'
-		});
-	}
+  attached() {
+    new Toggler({
+      content: '.sidebar-toggler-content',
+      header: '.sidebar-header'
+    });
+  }
 };
 
 Soy.register(SideBar, templates);

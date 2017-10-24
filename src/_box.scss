@@ -43,6 +43,7 @@
 .box.box-icon {
 	margin: 18px 8px 0 0;
 	padding: 0;
+
 	span {
 		line-height: 24px;
 		width: 24px;
@@ -76,9 +77,11 @@
 		&.icon-success {
 			color: $brand-success;
 		}
+
 		&.icon-danger {
 			color: $brand-danger;
 		}
+
 		&.icon-warning {
 			color: $brand-warning;
 		}
@@ -101,6 +104,7 @@
 	&.box--icon-label {
 		color: rgba($primary, 0.6);
 		margin: 12px 0 0;
+
 		span {
 			color: rgba($primary, 0.5);
 			margin: 0 8px 0 0;

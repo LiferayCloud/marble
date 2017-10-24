@@ -4,7 +4,7 @@
   "private": true,
   "repository": "wedeploy/marblecss.com",
 	"devDependencies": {
-    "electric-marble-components": "alpha",
+    "electric-marble-components": "^2.0.0",
     "marble": "~2.10.0",
     "metal-dropdown": "^2.0.0",
     "metal-input-matrix": "^2.1.3",

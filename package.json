@@ -5,22 +5,19 @@
   "repository": "wedeploy/marble",
   "homepage": "marblecss.com",
   "main": "index.js",
-	"license": "BSD",
+  "license": "BSD",
   "scripts": {
-    "start": "gulp",
-		"test": "stylelint src/*.scss --syntax scss"
-	},
+    "test": "stylelint src/*.scss --syntax scss"
+  },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "mathsass": "^0.9.5",
-    "metal-toggler": "^2.2.0"
+    "mathsass": "^0.9.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "gulp": "^3.9.0",
     "gulp-iconfont": "^2.0.0",
     "gulp-iconfont-css": "0.0.9",
-    "gulp-metal": "^2.2.2",
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^2.3.1",
     "postcss-scss": "^1.0.2",

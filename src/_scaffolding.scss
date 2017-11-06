@@ -1,31 +1,35 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 
+/* ==========================================================================
+   Scaffolding
+   ========================================================================== */
+
 body {
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-size-adjust: 100%;
-	letter-spacing: -0.02rem;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  letter-spacing: -0.02rem;
 }
 
 body.fade-out {
-	@include anim(opacity);
-	display: block;
-	opacity: 0;
-	overflow: hidden;
+  @include anim(opacity);
+  display: block;
+  opacity: 0;
+  overflow: hidden;
 }
 
 body.fade-in {
-	@include anim(opacity);
-	opacity: 1;
+  @include anim(opacity);
+  opacity: 1;
 }
 
 .primary-bg {
-	background: $primary;
+  background: $primary;
 }
 
 .accent-bg {
-	background: $accent;
+  background: $accent;
 }
 
 .http-get-bg,
@@ -33,7 +37,7 @@ body.fade-in {
 .btn-group .btn-group-selected.http-get-bg:hover,
 .btn-group .btn-group-selected.http-get-bg:focus,
 .btn-group .btn-group-selected.http-get-bg:focus:hover {
-	background: $http-get;
+  background: $http-get;
 }
 
 .http-head-bg,
@@ -41,7 +45,7 @@ body.fade-in {
 .btn-group .btn-group-selected.http-head-bg:hover,
 .btn-group .btn-group-selected.http-head-bg:focus,
 .btn-group .btn-group-selected.http-head-bg:focus:hover {
-	background: $http-head;
+  background: $http-head;
 }
 
 .http-post-bg,
@@ -49,7 +53,7 @@ body.fade-in {
 .btn-group .btn-group-selected.http-post-bg:hover,
 .btn-group .btn-group-selected.http-post-bg:focus,
 .btn-group .btn-group-selected.http-post-bg:focus:hover {
-	background: $http-post;
+  background: $http-post;
 }
 
 .http-put-bg,
@@ -57,7 +61,7 @@ body.fade-in {
 .btn-group .btn-group-selected.http-put-bg:hover,
 .btn-group .btn-group-selected.http-put-bg:focus,
 .btn-group .btn-group-selected.http-put-bg:focus:hover {
-	background: $http-put;
+  background: $http-put;
 }
 
 .http-patch-bg,
@@ -65,7 +69,7 @@ body.fade-in {
 .btn-group .btn-group-selected.http-patch-bg:hover,
 .btn-group .btn-group-selected.http-patch-bg:focus,
 .btn-group .btn-group-selected.http-patch-bg:focus:hover {
-	background: $http-patch;
+  background: $http-patch;
 }
 
 .http-delete-bg,
@@ -73,35 +77,35 @@ body.fade-in {
 .btn-group .btn-group-selected.http-delete-bg:hover,
 .btn-group .btn-group-selected.http-delete-bg:focus,
 .btn-group .btn-group-selected.http-delete-bg:focus:hover {
-	background: $http-delete;
+  background: $http-delete;
 }
 
 .http-get-bg.label-multiple::after,
 .http-get-bg.label-multiple::before {
-	border: 1px solid $http-get;
+  border: 1px solid $http-get;
 }
 
 .http-head-bg.label-multiple::after,
 .http-head-bg.label-multiple::before {
-	border: 1px solid $http-head;
+  border: 1px solid $http-head;
 }
 
 .http-post-bg.label-multiple::after,
 .http-post-bg.label-multiple::before {
-	border: 1px solid $http-post;
+  border: 1px solid $http-post;
 }
 
 .http-put-bg.label-multiple::after,
 .http-put-bg.label-multiple::before {
-	border: 1px solid $http-put;
+  border: 1px solid $http-put;
 }
 
 .http-patch-bg.label-multiple::after,
 .http-patch-bg.label-multiple::before {
-	border: 1px solid $http-patch;
+  border: 1px solid $http-patch;
 }
 
 .http-delete-bg.label-multiple::after,
 .http-delete-bg.label-multiple::before {
-	border: 1px solid $http-delete;
+  border: 1px solid $http-delete;
 }

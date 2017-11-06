@@ -1,12 +1,18 @@
-// Core variables and mixins
+/* Core Variables and Mixins
+   ========================================================================== */
+
 @import "variables";
 @import "mixins";
 
-// Reset and dependencies
+/* Reset and Dependencies
+   ========================================================================== */
+
 @import "bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/print";
 
-// Core CSS
+/* Core CSS
+   ========================================================================== */
+
 @import "scaffolding";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/code";
@@ -15,7 +21,9 @@
 @import "forms";
 @import "buttons";
 
-// Components
+/* Components
+   ========================================================================== */
+
 @import "wedeploy-logo";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
 @import "dropdowns";
@@ -55,7 +63,9 @@
 @import "radio";
 @import "pill";
 
-//Custom components
+/* Custom Components
+   ========================================================================== */
+
 @import "box";
 @import "content-body";
 @import "content-footer";
@@ -63,25 +73,29 @@
 @import "content-placeholder";
 @import "content-tabs";
 
-// Components w/ JavaScript
+/* Components w/ JavaScript
+   ========================================================================== */
 @import "modals";
 @import "tooltip";
 @import "reading-progress";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/popovers";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/carousel";
 
-// Utility classes
+/* Utility Classes
+   ========================================================================== */
 @import "bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
-// Animations
+/* Animations
+   ========================================================================== */
 @import "animations";
 
-// Navigation
+/* Navigation
+   ========================================================================== */
 @import "senna";
 
 .truncate {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -1,50 +1,54 @@
+/* ==========================================================================
+   Pill
+   ========================================================================== */
+
 .pill {
-	color: rgba($primary, 0.8);
-	background: rgba($primary, 0.05);
-	border-radius: 12px;
+  color: rgba($primary, 0.8);
+  background: rgba($primary, 0.05);
+  border-radius: 12px;
 
-	padding: 0 8px;
-	height: 24px;
+  padding: 0 8px;
+  height: 24px;
 
-	display: inline-flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 
-	.pill-label {
-		font-family: $font-primary;
-		font-size: 10px;
-		font-weight: 700;
-		line-height: 24px;
-		display: inline-flex;
-		margin: 0;
-	}
+  .pill-label {
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-flex;
+    margin: 0;
+  }
 
-	.pill-bullet + .pill-label {
-		margin: 0 0 0 8px;
-	}
+  .pill-bullet + .pill-label {
+    margin: 0 0 0 8px;
+  }
 
-	.pill-bullet {
-		background: rgba($primary, 0.4);
-		border-radius: 50%;
-		width: 8px;
-		height: 8px;
-		flex: 0 0 auto;
-		margin: 0;
-		padding: 0;
+  .pill-bullet {
+    background: rgba($primary, 0.4);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
 
-		&.up {
-			background: $accent;
-		}
+    &.up {
+      background: $accent;
+    }
 
-		&.down {
-			background: $brand-danger;
-		}
+    &.down {
+      background: $brand-danger;
+    }
 
-		&.warn {
-			background: $brand-warning;
-		}
-	}
+    &.warn {
+      background: $brand-warning;
+    }
+  }
 }

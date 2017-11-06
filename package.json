@@ -1,14 +1,14 @@
 {
   "name": "marble",
   "description": "WeDeploy's style guide and UI components",
-  "version": "2.12.2",
+  "version": "2.12.3",
   "repository": "wedeploy/marble",
   "homepage": "marblecss.com",
   "main": "index.js",
-	"license": "BSD",
-	"scripts": {
-		"test": "stylelint src/*.scss --syntax scss"
-	},
+  "license": "BSD",
+  "scripts": {
+    "test": "stylelint src/*.scss --syntax scss"
+  },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "mathsass": "^0.9.5"

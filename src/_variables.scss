@@ -1,11 +1,12 @@
 // Colors
 
-$primary  : #0e141a !default;
-$secondary: #0e141a !default;
-$accent   : #00d46a !default;
+$primary   : #0e141a !default;
+$secondary : $primary !default;
+$accent    : #00d46a !default;
 
-$black: #000 !default;
-$white: #fff !default;
+$black      : #000 !default;
+$white      : #fff !default;
+$gray-light : #888 !default;
 
 $brand-primary : $primary !default;
 $brand-success : #00d46a !default;
@@ -19,12 +20,18 @@ $http-put    : #ffc021 !default;
 $http-patch  : #35d6c3 !default;
 $http-delete : #ff5653 !default;
 
-$color-green  : #00d46a !default;
-$color-blue   : #00a4ff !default;
-$color-violet : #9552ef !default;
-$color-red    : #ff4040 !default;
-$color-orange : #ff6e00 !default;
-$color-yellow : #ffb700 !default;
+$color-charade : #282a36 !default;
+$color-green   : #00d46a !default;
+$color-blue    : #00a4ff !default;
+$color-violet  : #9552ef !default;
+$color-red     : $brand-danger !default;
+$color-orange  : #ff6e00 !default;
+$color-yellow  : $brand-warning !default;
+
+$color-facebook : #38589a;
+$color-twitter  : #27aae5;
+$color-linkedin : #007ab7;
+
 
 // Grid
 

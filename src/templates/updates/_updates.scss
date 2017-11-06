@@ -20,7 +20,7 @@
 		margin-top: 20px;
 
 		a {
-			color: #282828;
+			color: $gray-darker;
 			font-weight: 400;
 			text-decoration: underline;
 		}
@@ -44,7 +44,7 @@
 }
 
 .update-point {
-	background-color: #FFF;
+	background-color: $white;
 	border-radius: 50%;
 	border: solid 2px $accent;
 }
@@ -88,7 +88,7 @@
 	}
 
 	.feature-lead {
-		color: #777;
+		color: $gray-light;
 		font-size: 18px;
 		margin: 0;
 		margin-top: 20px;

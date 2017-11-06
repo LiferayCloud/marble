@@ -3,33 +3,33 @@
    ========================================================================== */
 
 .guide:not(.content) .topbar {
-	background: rgba($primary, 0.02)
+  background: rgba($primary, 0.02)
 }
 
 .docs .topbar-docs-main {
-	display: flex;
-	@media (min-width: $screen-md-min) {
-		display: none;
-	}
+  display: flex;
+  @media (min-width: $screen-md-min) {
+    display: none;
+  }
 }
 
 .docs .sidebar-offset .topbar {
-	display: none;
+  display: none;
 
-	@media (min-width: $screen-md-min) {
-		display: flex;
-	}
+  @media (min-width: $screen-md-min) {
+    display: flex;
+  }
 }
 
 .topbar.topbar-large .wedeploy-logo .liferay {
-	display: none;
+  display: none;
 }
 
 .topbar.topbar-docs {
-	display: flex !important;
+  display: flex !important;
 
-	@media (min-width: 960px) {
-		width: calc(100% - 284px);
-		margin-left: 284px;
-	}
+  @media (min-width: 960px) {
+    width: calc(100% - 284px);
+    margin-left: 284px;
+  }
 }

@@ -6,138 +6,138 @@
    ========================================================================== */
 
 .topbar {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 16px;
-	line-height: 24px;
-	padding: 12px 24px;
-	position: relative;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px;
+  position: relative;
 
-	@media (min-width: $screen-md-min) {
-		flex-wrap: nowrap;
-	}
+  @media (min-width: $screen-md-min) {
+    flex-wrap: nowrap;
+  }
 
-	&:not(.topbar-light) {
-		background-color: $primary;
-		color: $white;
-	}
+  &:not(.topbar-light) {
+    background-color: $primary;
+    color: $white;
+  }
 
-	&.topbar-light {
-		background-color: $white;
-		color: $primary;
-	}
+  &.topbar-light {
+    background-color: $white;
+    color: $primary;
+  }
 }
 
 /* Topbar: Logo
 /* ========================================================================== */
 
 .topbar-logo {
-	font-size: inherit;
-	font-weight: inherit;
-	margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }
 
 .topbar-logo-link {
-	color: inherit;
-	display: flex;
+  color: inherit;
+  display: flex;
 
-	&:hover, &:focus {
-		color: inherit;
-	}
+  &:hover, &:focus {
+    color: inherit;
+  }
 }
 
 .topbar-logo-text {
-	display: block;
-	font-size: 14px;
-	line-height: 18px;
-	margin: 0 -12px;
-	padding: 9px 12px;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 -12px;
+  padding: 9px 12px;
 
-	* + & {
-		margin-left: 0;
-	}
+  * + & {
+    margin-left: 0;
+  }
 }
 
 .topbar-logo-icon {
-	color: $accent;
-	display: block;
-	line-height: 36px;
+  color: $accent;
+  display: block;
+  line-height: 36px;
 
-	:root & {
-		font-size: 36px;
-	}
+  :root & {
+    font-size: 36px;
+  }
 }
 
 .topbar-logo-image {
-	display: block;
-	height: 36px;
-	width: 36px;
+  display: block;
+  height: 36px;
+  width: 36px;
 }
 
 /* Topbar: List
 /* ========================================================================== */
 
 .topbar-list-container {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 .topbar-list {
-	flex-basis: calc(100% + 24px * 2);
-	list-style-type: none;
-	margin: 12px -24px 0;
-	padding: 0;
+  flex-basis: calc(100% + 24px * 2);
+  list-style-type: none;
+  margin: 12px -24px 0;
+  padding: 0;
 
-	@media (min-width: $screen-md-min) {
-		align-items: center;
-		display: flex;
-		flex-basis: auto;
-		margin: 0 0 0 auto;
-	}
+  @media (min-width: $screen-md-min) {
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    margin: 0 0 0 auto;
+  }
 
-	&:not(.topbar-light) & {
-		background-color: $primary;
-	}
+  &:not(.topbar-light) & {
+    background-color: $primary;
+  }
 
-	.topbar-light & {
-		background-color: $white;
-	}
+  .topbar-light & {
+    background-color: $white;
+  }
 }
 
 .topbar-link {
-	color: inherit;
-	display: block;
-	font-size: 18px;
-	line-height: 24px;
-	padding: 9px 24px;
+  color: inherit;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 9px 24px;
 
-	@media (min-width: $screen-md-min) {
-		font-size: 14px;
-		line-height: 18px;
-		padding: 9px 12px;
-	}
+  @media (min-width: $screen-md-min) {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 9px 12px;
+  }
 
-	&:hover, &:focus {
-		color: inherit;
-	}
+  &:hover, &:focus {
+    color: inherit;
+  }
 
-	&.btn-transparent {
-		margin-left: 24px;
-		margin-top: 18px;
-		padding: 0;
+  &.btn-transparent {
+    margin-left: 24px;
+    margin-top: 18px;
+    padding: 0;
 
-		@media (min-width: $screen-md-min) {
-			margin-left: 6px;
-			margin-top: 0;
-		}
+    @media (min-width: $screen-md-min) {
+      margin-left: 6px;
+      margin-top: 0;
+    }
 
-		& > object {
-			vertical-align: top;
-		}
-	}
+    & > object {
+      vertical-align: top;
+    }
+  }
 
-	& .avatar-initials {
-		border-radius: 50%;
-		display: inline-block;
-	}
+  & .avatar-initials {
+    border-radius: 50%;
+    display: inline-block;
+  }
 }

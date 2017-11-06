@@ -18,21 +18,21 @@ Or if you're not into package management, just [download a ZIP](https://github.c
 
 1. Install local dependencies:
 
-	```sh
-	npm install
-	```
+   ```sh
+   npm install
+   ```
 
 2. Compile scripts and styles:
 
-	```sh
-	npm start
-	```
+   ```sh
+   npm start
+   ```
 
 3. Watch for file changes:
 
-	```sh
-	npm run watch
-	```
+   ```sh
+   npm run watch
+   ```
 
 ## License
 

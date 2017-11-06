@@ -13,7 +13,7 @@
 .header-subtitle {
 	font-family: $font-secondary;
 	font-size: 19px;
-	line-height: 24px;
+	line-height: calc(1.5rem * #{$lineHeight});
 	margin: 25px 0 35px;
 }
 

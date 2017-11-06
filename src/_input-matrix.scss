@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Input Matrix
+   ========================================================================== */
+
 .form-control.input-matrix-field {
 	padding: 0 48px 0 20px;
 }
@@ -58,7 +62,8 @@
 	}
 }
 
-//INLINE
+/* Inline
+   ========================================================================== */
 
 .input-matrix.input-matrix--inline .input-matrix-labels {
 	width: calc(100% - 72px);
@@ -109,7 +114,9 @@
 	margin-bottom: 0px;
 }
 
-//NO VALIDATION
+/* No Validation
+   ========================================================================== */
+
 .input-matrix .input-matrix-fields {
 	margin-bottom: 12px;
 }

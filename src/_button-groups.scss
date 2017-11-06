@@ -1,5 +1,9 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
 
+/* ==========================================================================
+   Button Groups
+   ========================================================================== */
+
 .btn-group {
 	overflow: hidden;
 }
@@ -49,7 +53,8 @@
 	top: 60px;
 }
 
-// Selected --------------------------------------------------------------------
+/* Selected
+   ========================================================================== */
 
 .btn-group .btn-group-selected,
 .btn-group .btn-group-selected:hover,

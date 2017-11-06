@@ -1,8 +1,14 @@
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
 .content .topbar.topbar-fixed + .blog {
 	padding-top: 60px;
 }
 
-//overwrite blog > container > content li rule
+/* Overwrite blog > container > content li rule
+   ========================================================================== */
+
 .blog .container .content .nav.nav-code-tabs li {
 	margin-bottom: 0;
 }

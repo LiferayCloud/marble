@@ -1,5 +1,9 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 
+/* ==========================================================================
+   Tooltip
+   ========================================================================== */
+
 .tooltip {
 	position: fixed;
 }
@@ -32,15 +36,18 @@
 	text-align: left;
 }
 
-//////////////////////////////////////////////////////
-//new version
+/* New Version
+   ========================================================================== */
+
 .tooltip.tooltip-dark,
 .tooltip.tooltip-light {
 	position: fixed;
 	padding: 0px;
 	margin: 0px;
 
-	//animations
+	/* Animations
+	   ======================================================================== */
+
 	transition: opacity 0.333s, transform 0.333s, visibility 0.333s;
 	transform: translateY(-6px);
 	visibility: hidden;
@@ -115,8 +122,9 @@
 }
 
 
-/* Skin dark
-	 ========================================================================== */
+/* Skin Dark
+   ========================================================================== */
+
 .tooltip.tooltip-dark .tooltip-inner {
 	background: $primary;
 	color: white;

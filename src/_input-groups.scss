@@ -1,6 +1,8 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
 
-// Addon -----------------------------------------------------------------------
+/* ==========================================================================
+   Input Groups
+   ========================================================================== */
 
 .input-group-addon {
 	transition: color 0.333s, background 0.333s;
@@ -40,7 +42,8 @@
 	background: rgba($primary, .3);
 }
 
-// Inner Addon -----------------------------------------------------------------
+/* Inner Addon
+   ========================================================================== */
 
 .input-inner-addon {
 	position: relative;
@@ -98,7 +101,8 @@
 	color: rgba($primary, .6);
 }
 
-// Button Addon -----------------------------------------------------------------
+/* Button Addon
+   ========================================================================== */
 
 .input-group-btn {
 	z-index: 3;
@@ -134,7 +138,9 @@
 	border-radius: 0;
 }
 
-//BUTTON Addon but separated -------------------
+/* Button Addon but separated
+   ========================================================================== */
+
 .form-group .input-group .form-control.input-btn-separated {
 	width: calc(100% - 8px);
 	border-radius: 4px;

@@ -1,5 +1,7 @@
-/* Code
+/* ==========================================================================
+   Code
    ========================================================================== */
+
 * code {
 	display: inline-block;
 	color: rgba($primary, 0.6);
@@ -36,7 +38,8 @@ li a:not([class]) {
 }
 
 /* Navigation Tabs
-   ========================================================================== */
+	 ========================================================================== */
+
 .nav.nav-tabs.nav-code-tabs {
 	border-width: 0px;
 	padding: 0 24px;
@@ -76,7 +79,8 @@ li a:not([class]) {
 }
 
 /* CodeMirror
-   ========================================================================== */
+	 ========================================================================== */
+
 .code-container {
 	position: relative;
 	margin: calc(1rem * #{$lineHeight}) 0;
@@ -208,20 +212,21 @@ li a:not([class]) {
 	}
 }
 
-// Scrollbar
+/* Scrollbar
+   ========================================================================== */
 
 @mixin scrollbar() {
 	::-webkit-scrollbar {
-	  width: 16px;
+		width: 16px;
 	}
 
 	::-webkit-scrollbar:horizontal {
-	  height: 16px;
+		height: 16px;
 	}
 
 	::-webkit-scrollbar-thumb {
-	  transition: all 0.3s ease-in-out;
-	  border-radius: 12px;
+		transition: all 0.3s ease-in-out;
+		border-radius: 12px;
 	}
 }
 
@@ -247,8 +252,8 @@ li a:not([class]) {
 	}
 
 	::-webkit-scrollbar-thumb {
-	  background-color: rgba($white, 0.4);
-	  border: 4px solid $color-charade;
+		background-color: rgba($white, 0.4);
+		border: 4px solid $color-charade;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
@@ -256,7 +261,7 @@ li a:not([class]) {
 	}
 
 	::-webkit-scrollbar-corner {
-	  background-color: transparent;
+		background-color: transparent;
 	}
 }
 
@@ -282,8 +287,8 @@ li a:not([class]) {
 	}
 
 	::-webkit-scrollbar-thumb {
-	  background-color: $gray-light;
-	  border: 4px solid $gray-lighter;
+		background-color: $gray-light;
+		border: 4px solid $gray-lighter;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
@@ -291,7 +296,7 @@ li a:not([class]) {
 	}
 
 	::-webkit-scrollbar-corner {
-	  background-color: $gray-lighter;
+		background-color: $gray-lighter;
 	}
 }
 

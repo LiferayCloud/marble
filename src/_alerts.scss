@@ -1,6 +1,10 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
 @import "variables";
 
+/* ==========================================================================
+   Alerts
+   ========================================================================== */
+
 .alert {
 	border: 0;
 	border-radius: 4px;
@@ -146,8 +150,9 @@
 	animation-fill-mode: both;
 }
 
-/*
- PAGE ALERT ------------*/
+/* Page Alert
+   ========================================================================== */
+
 .alert.alert-inline {
 	position: static;
 	box-shadow: none;
@@ -232,8 +237,9 @@
 	}
 }
 
-/*
- DARK TOAST ------------*/
+/* Dark Toast
+   ========================================================================== */
+
 .alert.alert-dark {
 	background-color: rgba($primary, 0.9);
 	color: $white;

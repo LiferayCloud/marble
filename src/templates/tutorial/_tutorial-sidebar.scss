@@ -1,9 +1,13 @@
+/* ==========================================================================
+   Tutorial Sidebar
+   ========================================================================== */
+
 .tutorial .sidebar-offset {
 	margin-left: 0px;
 	width: 100%;
 
 	@media (min-width: 960px) {
-		margin-left: calc((0.5rem * #{$lineHeight}) * 21); //252px;
+		margin-left: calc((0.5rem * #{$lineHeight}) * 21); // 252px;
 		width: calc(100% - ((0.5rem * #{$lineHeight}) * 21));
 	}
 }

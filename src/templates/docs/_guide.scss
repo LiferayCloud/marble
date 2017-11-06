@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Guide
+   ========================================================================== */
+
 .docs-guide {
 	margin-top: 36px;
 	position: relative;
@@ -7,13 +11,17 @@
 	}
 }
 
-//overwrite docs > container-hybrid
+/* Overwrite docs > container-hybrid
+/* ========================================================================== */
+
 .docs .container-hybrid {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-//overwrite docs > guide-content li rule
+/* Overwrite docs > guide-content li rule
+/* ========================================================================== */
+
 .docs .guide-content .nav.nav-code-tabs li {
 	margin-bottom: 0;
 }
@@ -171,7 +179,10 @@
 		position: absolute;
 		left: -2rem;
 	}
-	///////////////////////////LINK///////////////////////////
+
+	/* Link
+	/* ======================================================================== */
+
 	p a:not([class]),
 	a:not([class]) {
 		@include anim(color);
@@ -186,7 +197,10 @@
 			color: rgba($accent, 0.6);
 		}
 	}
-	///////////////////////////CODE///////////////////////////
+
+	/* CODE
+	/* ======================================================================== */
+
 	code {
 		background: rgba($primary, 0.1);
 		display: inline-block;
@@ -196,7 +210,10 @@
 		padding: 0 4px;
 		color: inherit;
 	}
-	///////////////////////////WORDs///////////////////////////
+
+	/* WORDs
+	/* ======================================================================== */
+
 	em,
 	strong {
 		font-family: inherit;
@@ -206,7 +223,7 @@
 	strong {
 		font-weight: 700;
 	}
-	
+
 	em {
 		font-style: italic;
 	}
@@ -217,7 +234,10 @@
 		font-weight: inherit;
 		text-decoration: line-through;
 	}
-	///////////////////////////BLOCKQUOTE///////////////////////////
+
+	/* Blockquote
+	/* ======================================================================== */
+
 	blockquote,
 	blockquote p:not([class]) {
 		font-family: $font-primary;
@@ -251,7 +271,9 @@
 		top: 1rem;
 	}
 
-	///////////////////////////FIGURE///////////////////////////
+	/* Figure
+	/* ======================================================================== */
+
 	figure {
 		width: 100%;
 		text-align: center;
@@ -290,7 +312,9 @@
 		margin-left: -2rem;
 	}
 
-	///////////////////////////ASIDE///////////////////////////
+	/* Aside
+	/* ======================================================================== */
+
 	aside {
 		padding: calc(1rem * #{$lineHeight});
 		background: rgba($primary, 0.05);
@@ -325,7 +349,8 @@
 		}
 	}
 
-	///////////////////////////TABLE///////////////////////////
+	/* Table
+	/* ======================================================================== */
 
 	.table-container {
 		left: -20px;

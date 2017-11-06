@@ -1,5 +1,9 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
 .btn {
 	@include button-size(0, 48px, 16px, 60px, 4px);
 	font-family: $font-primary;
@@ -258,7 +262,8 @@ fieldset[disabled] .btn-link {
 	}
 }
 
-// Icons
+/* Icons
+   ========================================================================== */
 
 .btn span[class^="icon-16-"],
 .btn span[class*="icon-16-"] {
@@ -268,7 +273,8 @@ fieldset[disabled] .btn-link {
 	color: inherit;
 }
 
-// Sizes
+/* Sizes
+   ========================================================================== */
 
 .btn-lg {
 	@include button-size(0, 72px, 16px, 60px, 4px);
@@ -278,7 +284,8 @@ fieldset[disabled] .btn-link {
 	@include button-size(0, 24px, 16px, 60px, 4px);
 }
 
-// Transparent
+/* Transparent
+   ========================================================================== */
 
 .btn-transparent {
 	background: transparent;
@@ -297,7 +304,8 @@ fieldset[disabled] .btn-link {
 	}
 }
 
-// Icon
+/* Icon
+   ========================================================================== */
 
 .btn-icon {
 	@include anim(all);

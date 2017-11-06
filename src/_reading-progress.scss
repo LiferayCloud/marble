@@ -78,8 +78,8 @@
 }
 
 .reading-progress a.read::before {
-	background-color: #d9d9d9;
-	color: #b3b3b3;
+	background-color: $gray-lighter;
+	color: lighten($gray-base, 70%);
 }
 
 .reading-progress a.reading:not(.read)::before {

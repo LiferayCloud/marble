@@ -46,7 +46,7 @@
 
 .autocomplete-link {
 	@include anim(background);
-	background-color: #FFF;
+	background-color: $white;
 	cursor: pointer;
 	display: block;
 	padding: 20px;

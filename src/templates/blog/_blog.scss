@@ -1,7 +1,3 @@
-$facebook-color: #38589a;
-$twitter-color: #27aae5;
-$linkedin-color: #007ab7;
-
 .content .topbar.topbar-fixed + .blog {
 	padding-top: 60px;
 }
@@ -163,30 +159,30 @@ $linkedin-color: #007ab7;
 			}
 
 			&.facebook {
-				background-color: $facebook-color;
+				background-color: $color-facebook;
 
 				&:hover {
-					background-color: rgba($facebook-color, .8);
+					background-color: rgba($color-facebook, .8);
 				}
 			}
 
 			&.twitter {
-				background-color: $twitter-color;
+				background-color: $color-twitter;
 				&:hover {
-					background-color: rgba($twitter-color, .8);
+					background-color: rgba($color-twitter, .8);
 				}
 			}
 
 			&.linkedin {
-				background-color: $linkedin-color;
+				background-color: $color-linkedin;
 				&:hover {
-					background-color: rgba($linkedin-color, .8);
+					background-color: rgba($color-linkedin, .8);
 				}
 			}
 
 			span {
 				font-size: 2rem;
-				color: #FFFFFF;
+				color: $whiteFFF;
 				line-height: 48px;
 			}
 		}

@@ -95,14 +95,6 @@
     flex-basis: auto;
     margin: 0 0 0 auto;
   }
-
-  &:not(.topbar-light) & {
-    background-color: $primary;
-  }
-
-  .topbar-light & {
-    background-color: $white;
-  }
 }
 
 .topbar-link {

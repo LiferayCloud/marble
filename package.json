@@ -7,6 +7,7 @@
   "main": "index.js",
   "license": "BSD",
   "scripts": {
+    "start": "gulp",
     "test": "stylelint src/*.scss --syntax scss"
   },
   "dependencies": {

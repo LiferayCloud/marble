@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "repository": "wedeploy/marblecss.com",
+  "scripts": {
+    "start": "electric"
+  },
   "devDependencies": {
+    "electric-cli": "^2.2.0",
     "electric-marble-components": "^2.0.0",
     "marble": "~2.10.0",
     "metal-dropdown": "^2.0.0",

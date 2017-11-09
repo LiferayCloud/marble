@@ -48,20 +48,34 @@ var MarbleTooltip = function (_TooltipBase) {
 	_createClass(MarbleTooltip, [{
 		key: 'syncVisible',
 		value: function syncVisible(visible) {
-			if (visible) _metalDom2.default.addClasses(this.element, 'showing');else _metalDom2.default.removeClasses(this.element, 'showing');
-
 			_get(MarbleTooltip.prototype.__proto__ || Object.getPrototypeOf(MarbleTooltip.prototype), 'syncVisible', this).call(this, visible);
+
+			if (visible) {
+				_metalDom2.default.addClasses(this.element, 'showing');
+			} else {
+				_metalDom2.default.removeClasses(this.element, 'showing');
+			}
 		}
 	}, {
 		key: 'syncCurrentAlignElement',
 		value: function syncCurrentAlignElement(alignElement, prevAlignElement) {
-			_get(MarbleTooltip.prototype.__proto__ || Object.getPrototypeOf(MarbleTooltip.prototype), 'syncCurrentAlignElement', this).call(this, alignElement, prevAlignElement);
+			this.currentAlignElement = alignElement;
 			if (alignElement) {
+				var dataTitle = alignElement.getAttribute('data-title');
+				if (dataTitle) {
+					this.title = dataTitle;
+				} else {
+					this.title = '';
+				}
+
 				var dataDescription = alignElement.getAttribute('data-description');
 				if (dataDescription) {
 					this.description = dataDescription;
+				} else {
+					this.description = '';
 				}
 			}
+			_get(MarbleTooltip.prototype.__proto__ || Object.getPrototypeOf(MarbleTooltip.prototype), 'syncCurrentAlignElement', this).call(this, alignElement, prevAlignElement);
 		}
 	}]);
 

@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "Metal.js Toast component",
   "license": "BSD",
-  "repository": "wedeploy/metal-toast",
+  "repository": "wedeploy/marble",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"

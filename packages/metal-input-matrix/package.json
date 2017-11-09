@@ -3,7 +3,7 @@
   "version": "2.1.4",
   "description": "Metal.js component that automatically adds new fields to guarantee that there will always be an empty field at the end",
   "license": "BSD",
-  "repository": "wedeploy/metal-input-matrix",
+  "repository": "wedeploy/marble",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"

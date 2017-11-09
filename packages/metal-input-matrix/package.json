@@ -1,6 +1,6 @@
 {
   "name": "metal-input-matrix",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Metal.js component that automatically adds new fields to guarantee that there will always be an empty field at the end",
   "license": "BSD",
   "repository": "wedeploy/marble",
@@ -27,8 +27,8 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "metal-soy": "^2.0.0",
-    "metal-input": "^1.0.3"
+    "metal-input": "^1.0.3",
+    "metal-soy": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",

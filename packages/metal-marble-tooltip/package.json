@@ -1,6 +1,6 @@
 {
   "name": "metal-marble-tooltip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Marble's metal tooltip component",
   "license": "BSD",
   "repository": "wedeploy/marble",
@@ -32,13 +32,13 @@
     "babel-preset-metal": "^4.0.0",
     "gulp": "^3.8.11",
     "gulp-metal": "^1.9.14",
+    "marble": "^2.10.0",
     "metal": "^2.0.0",
     "metal-component": "^2.0.0",
     "metal-dom": "^2.0.0",
     "metal-events": "^2.0.0",
     "metal-position": "^2.0.0",
     "metal-soy": "^2.0.0",
-    "metal-tooltip": "^2.0.0",
-    "marble": "^2.10.0"
+    "metal-tooltip": "^2.0.0"
   }
 }

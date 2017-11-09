@@ -1,0 +1,42 @@
+{
+  "name": "metal-toast",
+  "version": "2.1.0",
+  "description": "Metal.js Toast component",
+  "license": "BSD",
+  "repository": "wedeploy/metal-toast",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/Toast.js",
+  "jsnext:main": "src/Toast.js",
+  "files": [
+    "lib",
+    "src",
+    "test",
+    "build"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "compile": "babel --presets es2015 -d lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "gulp test",
+    "watch": "gulp build:watch"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "dependencies": {
+    "metal-alert": "^2.0.1",
+    "metal-dom": "^2.4.7",
+    "metal-soy": "^2.4.7",
+    "run-sequence": "^1.2.2"
+  },
+  "devDependencies": {
+    "gulp-metal": "^1.9.8",
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "gulp": "^3.8.11",
+    "marble": "^2.8.0"
+  }
+}

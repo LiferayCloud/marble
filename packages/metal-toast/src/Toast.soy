@@ -1,0 +1,31 @@
+{namespace Toast}
+
+/**
+ * This renders the main element
+ * @param closeButton
+ * @param spinner
+ * @param spinnerDone
+ * @param? elementClasses
+ * @param? spinnerClasses
+ */
+{template .render}
+	{@param? body: html}
+	{@param? closeButtonHtml: html|string}
+	<div class="alert{$elementClasses ? ' ' + $elementClasses : ''}" role="alert">
+		{if $spinner}
+			<span class="spinner{$spinnerClasses ? ' ' + $spinnerClasses : ''}{$spinnerDone ? ' spinner-done' : ''}"></span>
+		{/if}
+		{if $body}
+			<span class="alert-body">{$body}</span>
+		{/if}
+		{if $closeButton}
+			<button type="button" class="close" aria-label="Close" data-onclick="toggle">
+				{if $closeButtonHtml}
+					{$closeButtonHtml}
+				{else}
+					<span aria-hidden="true">×</span>
+				{/if}
+			</button>
+		{/if}
+	</div>
+{/template}

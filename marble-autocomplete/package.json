@@ -47,7 +47,6 @@
     "gulp-metal": "^1.0.0",
     "metal-tools-soy": "^4.2.6",
     "metal-useragent": "^2.1.1",
-    "steel-bootstrap": "metal/steel-bootstrap#master",
     "webpack": "^3.5.5"
   }
 }

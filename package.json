@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "lerna"
+  },
+  "devDependencies": {
+    "lerna": "^2.5.1"
+  }
+}

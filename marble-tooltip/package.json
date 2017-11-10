@@ -12,8 +12,8 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "jsnext:main": "src/MarbleTooltip.js",
-  "main": "lib/MarbleTooltip.js",
+  "jsnext:main": "src/Tooltip.js",
+  "main": "lib/Tooltip.js",
   "files": [
     "lib",
     "src"

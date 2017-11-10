@@ -4,13 +4,13 @@ import dom from 'metal-dom';
 import Soy from 'metal-soy';
 import TooltipBase from 'metal-tooltip';
 
-import templates from './MarbleTooltip.soy.js';
+import templates from './Tooltip.soy.js';
 
 /**
- * MarbleTooltip component.
+ * Tooltip component.
  */
-class MarbleTooltip extends TooltipBase {
-	
+class Tooltip extends TooltipBase {
+
 	syncVisible(visible) {
 		super.syncVisible(visible);
 
@@ -41,9 +41,9 @@ class MarbleTooltip extends TooltipBase {
 		super.syncCurrentAlignElement(alignElement, prevAlignElement);
 	}
 }
-Soy.register(MarbleTooltip, templates);
+Soy.register(Tooltip, templates);
 
-MarbleTooltip.Align = TooltipBase.Align;
+Tooltip.Align = TooltipBase.Align;
 
-export default MarbleTooltip;
-export { MarbleTooltip, TooltipBase };
+export default Tooltip;
+export { Tooltip, TooltipBase };

@@ -4,7 +4,7 @@ import core from 'metal';
 import templates from './InputMatrix.soy.js';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
-import 'metal-input';
+import 'marble-input';
 
 /**
  * This component automatically adds new fields to guarantee that there will

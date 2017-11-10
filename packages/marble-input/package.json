@@ -1,0 +1,36 @@
+{
+  "name": "marble-input",
+  "version": "1.0.9",
+  "description": "Custom input Metal.js component",
+  "license": "BSD",
+  "repository": "wedeploy/marble",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/Input.js",
+  "jsnext:main": "src/Input.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "compile": "babel --presets metal -d lib/ src/",
+    "prepublish": "gulp soy && npm run compile",
+    "test": "gulp test",
+    "watch": "gulp build:watch"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-metal": "^4.0.0",
+    "gulp": "^3.8.11",
+    "gulp-metal": "^1.0.0",
+    "metal-soy": "^2.0.0",
+    "marble": "~2.7.0"
+  }
+}

@@ -1,0 +1,102 @@
+{namespace Input}
+
+/**
+ * @param? autocomplete
+ * @param? classes
+ * @param? fieldIndex
+ * @param? isShowing_
+ * @param? isTogglePassword
+ * @param? maxLength
+ * @param? name
+ * @param? onInput
+ * @param? readonly
+ * @param? rowIndex
+ * @param? type
+ * @param? value
+ */
+{template .render}
+	
+	{if $isTogglePassword}
+		<div class="has-action-button">
+			{call .input data="all" }
+				{param type : $isShowing_ ? 'text' : 'password' /}
+			{/call}
+			{call .togglePassword data="all" /}
+		</div>
+	{else}
+		{call .input data="all" /}
+	{/if}
+
+{/template}
+
+/**
+ * @param? type
+ */
+{template .input kind="html"}
+	<input type="{$type ?: 'text'}"
+		{call .fieldAttrs data="all" /}
+	/>
+{/template}
+
+/**
+ * @param? autocomplete
+ * @param? classes
+ * @param? fieldIndex
+ * @param? maxLength
+ * @param? name
+ * @param? onInput
+ * @param? placeholder
+ * @param? readonly
+ * @param? rowIndex
+ * @param? value
+ */
+{template .fieldAttrs kind="attributes"}
+	
+	autocomplete="{$autocomplete ?: 'on'}"
+
+	{if isNonnull($classes)}
+		class="{$classes}"
+	{/if}
+	
+	{if isNonnull($fieldIndex)}
+		data-field-index="{$fieldIndex}"
+	{/if}
+	
+	{if isNonnull($maxLength)}
+		maxlength="{$maxLength}"
+	{/if}
+
+	{if isNonnull($name)}
+		name="{$name}"
+	{/if}
+	
+	{if isNonnull($onInput)}
+		data-oninput="{$onInput}"
+	{/if}
+
+	{if isNonnull($placeholder)}
+		placeholder="{$placeholder}"
+	{/if}
+	
+	{if isNonnull($readonly) and $readonly}
+		readonly
+	{/if}
+
+	{if isNonnull($rowIndex)}
+		data-row-index="{$rowIndex}"
+	{/if}
+
+	{if isNonnull($value)}
+		value="{$value}"
+	{/if}
+{/template}
+
+/**
+ * @param isShowing_
+ */
+{template .togglePassword kind="html"}
+	<button class="btn btn-sm btn-primary" type="button" data-onclick="toggle">
+		<span class="{$isShowing_ ? 'icon-12-eye-off' : 'icon-12-eye'}"></span>
+		<div class="btn-tooltip">{$isShowing_ ? 'Hide' : 'Show'}</div>
+	</button>
+{/template}

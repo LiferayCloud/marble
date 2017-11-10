@@ -1,6 +1,7 @@
-bower_components
+.sass-cache
 build
 coverage
+lib
 node_modules
-/lib
 **/*.soy.js
+*.log

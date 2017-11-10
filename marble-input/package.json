@@ -25,12 +25,16 @@
   "keywords": [
     "metal"
   ],
+  "dependencies": {
+    "metal": "^2.14.0",
+    "metal-component": "^2.14.0",
+    "metal-soy": "^2.14.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-preset-metal": "^4.0.0",
     "gulp": "^3.8.11",
     "gulp-metal": "^1.0.0",
-    "marble": "~2.7.0",
-    "metal-soy": "^2.0.0"
+    "marble": "~2.7.0"
   }
 }

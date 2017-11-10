@@ -26,7 +26,6 @@
     "metal"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "marble-input": "^1.0.11",
     "metal-soy": "^2.0.0"
   },

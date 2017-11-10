@@ -1,6 +1,6 @@
 {
   "name": "marble-input",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Custom input Metal.js component",
   "license": "BSD",
   "repository": "wedeploy/marble",
@@ -30,7 +30,7 @@
     "babel-preset-metal": "^4.0.0",
     "gulp": "^3.8.11",
     "gulp-metal": "^1.0.0",
-    "metal-soy": "^2.0.0",
-    "marble": "~2.7.0"
+    "marble": "~2.7.0",
+    "metal-soy": "^2.0.0"
   }
 }

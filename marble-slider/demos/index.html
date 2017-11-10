@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Slider</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../build/globals/slider.css">
+
+	<script src="../build/globals/slider.js"></script>
+</head>
+<body>
+	<h1>Slider</h1>
+	<div id="sliderWrapper" style="width: 70%;"></div>
+
+	<script type="text/javascript">
+		window.slider = new metal.Slider(
+			{
+				max: 10,
+				value: 8
+			},
+			'#sliderWrapper'
+		);
+	</script>
+</body>
+</html>

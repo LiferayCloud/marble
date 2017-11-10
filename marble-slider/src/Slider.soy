@@ -1,0 +1,34 @@
+{namespace Slider}
+
+/**
+ * This renders the main element.
+ * @param? elementClasses
+ * @param? inputName
+ * @param? max
+ * @param? min
+ * @param? value
+ */
+{template .render}
+	{let $maxNumber: $max ?: 100 /}
+	{let $minNumber: $min ?: 0 /}
+	{let $valueNumber: $value ?: 0 /}
+	<div class="slider {$elementClasses ?: ''}">
+		<input name="{$inputName ?: ''}" type="hidden" value="{$valueNumber}">
+		<span>{$valueNumber}</span>
+		{let $percentage: (100 * ($valueNumber - $minNumber) / ($maxNumber - $minNumber)) + '%' /}
+		<div class="rail" data-onclick="onRailClick_" ref="rail">
+			<div class="rail-active" style="width: {$percentage}"></div>
+			<div class="rail-handle" style="left: {$percentage}">
+				<div
+					class="handle"
+					ref="handle"
+					tabindex="0"
+					role="slider"
+					aria-valuemin="{$minNumber}"
+					aria-valuemax="{$maxNumber}"
+					aria-valuenow="{$valueNumber}">
+				</div>
+			</div>
+		</div>
+	</div>
+{/template}

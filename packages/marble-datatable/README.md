@@ -1,6 +1,6 @@
-# metal-select
+# marble-datatable
 
-Metal's select component
+Datatable visualization
 
 ## Setup
 

@@ -1,7 +1,7 @@
 {
-  "name": "metal-select",
+  "name": "marble-select",
   "version": "2.1.0",
-  "description": "Steel's select component",
+  "description": "Marble select component",
   "license": "BSD",
   "repository": "wedeploy/marble",
   "engines": {

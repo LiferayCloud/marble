@@ -1,6 +1,6 @@
-# metal-datatable
+# marble-autocomplete
 
-Datatable visualization
+Metal's autocomplete component
 
 ## Setup
 

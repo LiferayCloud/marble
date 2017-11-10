@@ -1,6 +1,6 @@
-# metal-autocomplete
+# marble-select
 
-Metal's autocomplete component
+Metal's select component
 
 ## Setup
 

@@ -6,5 +6,5 @@ metal.registerTasks({
 	bundleCssFileName: 'select.css',
 	bundleFileName: 'select.js',
 	mainBuildJsTasks: ['build:globals'],
-	moduleName: 'metal-select'
+	moduleName: 'marble-select'
 });

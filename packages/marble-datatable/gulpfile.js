@@ -5,5 +5,5 @@ var metal = require('gulp-metal');
 metal.registerTasks({
 	bundleCssFileName: 'datatable.css',
 	bundleFileName: 'datatable.js',
-	moduleName: 'metal-datatable'
+	moduleName: 'marble-datatable'
 });

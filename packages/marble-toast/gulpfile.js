@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 
 metal.registerTasks({
 	bundleFileName: 'toast.js',
-	moduleName: 'metal-toast'
+	moduleName: 'marble-toast'
 });
 
 gulp.task('soy:copy', function() {

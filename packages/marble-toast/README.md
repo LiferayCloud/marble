@@ -1,6 +1,6 @@
-# metal-input-matrix
+# marble-toast
 
-Metal.js component that automatically adds new fields to guarantee that there will always be an empty field at the end
+Metal.js Toast component
 
 ## Setup
 

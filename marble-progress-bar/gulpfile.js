@@ -6,5 +6,5 @@ metal.registerTasks({
 	bundleCssFileName: 'progressBar.css',
 	bundleFileName: 'progressBar.js',
 	mainBuildJsTasks: ['build:globals'],
-	moduleName: 'metal-progressBar'
+	moduleName: 'marble-progress-bar'
 });

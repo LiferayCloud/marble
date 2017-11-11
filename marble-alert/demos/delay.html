@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Alert delay</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+	<script src="../build/globals/alert.js"></script>
+</head>
+<body>
+	<h1>Alert delay</h1>
+	<script>
+		new metal.Alert({
+			visible: true,
+			body: 'Success',
+			elementClasses: 'alert-success',
+			hideDelay: 1000
+		});
+	</script>
+</body>
+</html>

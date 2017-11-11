@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Alert dismissible</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+	<script src="../build/globals/alert.js"></script>
+</head>
+<body>
+	<h1>Alert dismissible</h1>
+	<script>
+		new metal.Alert({
+			visible: true,
+			body: 'Danger',
+			elementClasses: 'alert-danger',
+			dismissible: false
+		});
+	</script>
+</body>
+</html>

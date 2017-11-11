@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Alert default</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../node_modules/marble/build/fonts/icon-16/icon-16.css">
+
+	<script src="../build/globals/alert.js"></script>
+</head>
+<body>
+	<h1>Alert default</h1>
+	<script>
+		window.alertDanger = new metal.Alert({
+			visible: true,
+			body: '<b>Danger</b>',
+			elementClasses: 'alert-danger'
+		});
+
+		window.alertWarning = new metal.Alert({
+			visible: true,
+			body: '<b>Warning</b>',
+			closeButtonHtml: '<span class="icon-16-cancel"></span>',
+			elementClasses: 'alert-warning'
+		});
+
+		window.alertSuccess = new metal.Alert({
+			visible: true,
+			body: '<b>Success</b>',
+			closeButtonHtml: '<span class="icon-16-cancel"></span>',
+			elementClasses: 'alert-success'
+		});
+	</script>
+</body>
+</html>

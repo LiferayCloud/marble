@@ -153,4 +153,5 @@ InputMatrix.STATE = {
 	}
 };
 
+export { InputMatrix };
 export default InputMatrix;

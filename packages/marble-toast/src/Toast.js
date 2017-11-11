@@ -65,4 +65,5 @@ Toast.STATE = {
 
 Soy.register(Toast, templates);
 
+export { Toast };
 export default Toast;

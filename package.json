@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "lerna"
+    "start": "lerna bootstrap",
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "lerna": "^2.5.1"

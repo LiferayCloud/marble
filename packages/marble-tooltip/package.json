@@ -34,7 +34,6 @@
     "metal-events": "^2.0.0",
     "metal-position": "^2.0.0",
     "metal-soy": "^2.0.0",
-    "metal-tooltip": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",

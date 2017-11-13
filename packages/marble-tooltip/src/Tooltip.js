@@ -2,7 +2,7 @@
 
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
-import TooltipBase from 'metal-tooltip';
+import TooltipBase from './TooltipBase';
 
 import templates from './Tooltip.soy.js';
 
@@ -41,9 +41,10 @@ class Tooltip extends TooltipBase {
 		super.syncCurrentAlignElement(alignElement, prevAlignElement);
 	}
 }
+
 Soy.register(Tooltip, templates);
 
 Tooltip.Align = TooltipBase.Align;
 
+export { Tooltip };
 export default Tooltip;
-export { Tooltip, TooltipBase };

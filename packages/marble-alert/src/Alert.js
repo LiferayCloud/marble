@@ -66,7 +66,7 @@ class Alert extends Component {
 		if (!this.isDisposed() && !this.visible) {
 			super.syncVisible(false);
 		}
- 	}
+	}
 
 	/**
 	 * Toggles the visibility of the alert.

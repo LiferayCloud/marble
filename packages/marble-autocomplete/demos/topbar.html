@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Demo: Autocomplete</title>
+  <meta charset="UTF-8">
+  <title>Demo: Autocomplete</title>
 
-	<link rel="stylesheet" href="../node_modules/steel-bootstrap/build/bootstrap.css">
-	<link rel="stylesheet" href="../node_modules/steel-bootstrap/build/fonts/icon-12.css">
-	<link rel="stylesheet" href="../node_modules/steel-bootstrap/build/fonts/icon-16.css">
+  <link rel="stylesheet" href="../node_modules/steel-bootstrap/build/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/steel-bootstrap/build/fonts/icon-12.css">
+  <link rel="stylesheet" href="../node_modules/steel-bootstrap/build/fonts/icon-16.css">
 
-	<script src="../build/globals/autocomplete.js"></script>
+  <script src="../build/globals/autocomplete.js"></script>
 </head>
 <body>
-	<nav class="topbar topbar-inverse">
-		<div class="topbar-logo">
-			<a class="topbar-logo-link" href="/">
-				<span class="icon-12-rocket"></span>
-				<span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project</span></span>
-			</a>
-		</div>
-		<form class="topbar-input" action="http://liferay.io/docs/search/" method="GET" enctype="multipart/form-data">
-			<div class="input-inner-addon input-inner-addon-right">
-				<input name="q" class="form-control" type="text" placeholder="Search on Docs" autocomplete="off" required>
-				<span class="input-inner-icon-helper icon-16-magnifier"></span>
-			</div>
-		</form>
-		<ul class="topbar-list">
-			<li class="topbar-item">
-				<a class="topbar-link topbar-link-selected" href="docs.html">Docs</a>
-			</li>
-			<li class="topbar-item">
-				<a class="topbar-link" href="/dashboard/login/signin">Faq</a>
-			</li>
-			<li class="topbar-item topbar-avatar">
-				<button class="topbar-link btn-transparent">
-					<span class="avatar-container avatar-medium" alt="Zeno Rocha">
-						<span class="avatar-photo avatar-medium">
-							<img src="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120">
-						</span>
-						<span class="avatar-initials avatar-medium">Z</span>
-					</span>
-					<span class="topbar-caret icon-12-arrow-down-short"></span>
-				</button>
-			</li>
-		</ul>
-	</nav>
+  <nav class="topbar topbar-inverse">
+    <div class="topbar-logo">
+      <a class="topbar-logo-link" href="/">
+        <span class="icon-12-rocket"></span>
+        <span class="topbar-logo-text">Launchpad <span class="topbar-logo-complementary">Project</span></span>
+      </a>
+    </div>
+    <form class="topbar-input" action="http://liferay.io/docs/search/" method="GET" enctype="multipart/form-data">
+      <div class="input-inner-addon input-inner-addon-right">
+        <input name="q" class="form-control" type="text" placeholder="Search on Docs" autocomplete="off" required>
+        <span class="input-inner-icon-helper icon-16-magnifier"></span>
+      </div>
+    </form>
+    <ul class="topbar-list">
+      <li class="topbar-item">
+        <a class="topbar-link topbar-link-selected" href="docs.html">Docs</a>
+      </li>
+      <li class="topbar-item">
+        <a class="topbar-link" href="/dashboard/login/signin">Faq</a>
+      </li>
+      <li class="topbar-item topbar-avatar">
+        <button class="topbar-link btn-transparent">
+          <span class="avatar-container avatar-medium" alt="Zeno Rocha">
+            <span class="avatar-photo avatar-medium">
+              <img src="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120">
+            </span>
+            <span class="avatar-initials avatar-medium">Z</span>
+          </span>
+          <span class="topbar-caret icon-12-arrow-down-short"></span>
+        </button>
+      </li>
+    </ul>
+  </nav>
 
-	<script>
-		var autocomplete = new metal.Autocomplete({
-			elementClasses: 'autocomplete-topbar',
-			inputElement: document.querySelector('input'),
-			data: function(query) {
-				return ['Alabama', 'Alaska'].filter(function(item) {
-					return query && item.toLowerCase().indexOf(query.toLowerCase()) === 0;
-				});
-			},
-			format: function() {
-				return {
-					textPrimary: '<a class="listitem-link" href="#">' +
-						'<p class="listitem-title">Building APIs with cURL</p>' +
-						'<p class="listitem-description">In Launchpad you can create apps, each composed of one or more services. A service exposes a REST interface that can be accessed via HTTP. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code...</p></a>'
-				}
-			},
-			select: function() {}
-		});
+  <script>
+    var autocomplete = new metal.Autocomplete({
+      elementClasses: 'autocomplete-topbar',
+      inputElement: document.querySelector('input'),
+      data: function(query) {
+        return ['Alabama', 'Alaska'].filter(function(item) {
+          return query && item.toLowerCase().indexOf(query.toLowerCase()) === 0;
+        });
+      },
+      format: function() {
+        return {
+          textPrimary: '<a class="listitem-link" href="#">' +
+            '<p class="listitem-title">Building APIs with cURL</p>' +
+            '<p class="listitem-description">In Launchpad you can create apps, each composed of one or more services. A service exposes a REST interface that can be accessed via HTTP. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code...</p></a>'
+        }
+      },
+      select: function() {}
+    });
 
-		autocomplete.on('visibleChanged', function(e) {
-			document.body.classList.toggle('modal-backdrop');
-		});
-	</script>
+    autocomplete.on('visibleChanged', function(e) {
+      document.body.classList.toggle('modal-backdrop');
+    });
+  </script>
 </body>
 </html>

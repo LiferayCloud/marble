@@ -11,35 +11,35 @@ import templates from './Tooltip.soy.js';
  */
 class Tooltip extends TooltipBase {
 
-	syncVisible(visible) {
-		super.syncVisible(visible);
+  syncVisible(visible) {
+    super.syncVisible(visible);
 
-		if(visible) {
-			dom.addClasses(this.element, 'showing');
-		} else {
-			dom.removeClasses(this.element, 'showing');
-		}
-	}
+    if(visible) {
+      dom.addClasses(this.element, 'showing');
+    } else {
+      dom.removeClasses(this.element, 'showing');
+    }
+  }
 
-	syncCurrentAlignElement(alignElement, prevAlignElement) {
-		this.currentAlignElement = alignElement;
-		if (alignElement) {
-			const dataTitle = alignElement.getAttribute('data-title');
-			if (dataTitle) {
-				this.title = dataTitle;
-			} else {
-				this.title = '';
-			}
+  syncCurrentAlignElement(alignElement, prevAlignElement) {
+    this.currentAlignElement = alignElement;
+    if (alignElement) {
+      const dataTitle = alignElement.getAttribute('data-title');
+      if (dataTitle) {
+        this.title = dataTitle;
+      } else {
+        this.title = '';
+      }
 
-			const dataDescription = alignElement.getAttribute('data-description');
-			if (dataDescription) {
-				this.description = dataDescription;
-			} else {
-				this.description = '';
-			}
-		}
-		super.syncCurrentAlignElement(alignElement, prevAlignElement);
-	}
+      const dataDescription = alignElement.getAttribute('data-description');
+      if (dataDescription) {
+        this.description = dataDescription;
+      } else {
+        this.description = '';
+      }
+    }
+    super.syncCurrentAlignElement(alignElement, prevAlignElement);
+  }
 }
 
 Soy.register(Tooltip, templates);

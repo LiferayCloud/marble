@@ -7,25 +7,25 @@
  * @param? position
  */
 {template .render}
-	{@param? title: html|string}
-	{@param? description: html|string}
+  {@param? title: html|string}
+  {@param? description: html|string}
 
-	{let $positionClasses: ['top', 'top', 'right', 'bottom', 'bottom', 'bottom', 'left', 'top'] /}
-	{let $currentPosition: isNonnull($alignedPosition) ? $alignedPosition : $position /}
-	{let $positionClass: isNonnull($currentPosition) ? $positionClasses[$currentPosition] : 'bottom' /}
+  {let $positionClasses: ['top', 'top', 'right', 'bottom', 'bottom', 'bottom', 'left', 'top'] /}
+  {let $currentPosition: isNonnull($alignedPosition) ? $alignedPosition : $position /}
+  {let $positionClass: isNonnull($currentPosition) ? $positionClasses[$currentPosition] : 'bottom' /}
 
-	<div class="tooltip {$positionClass}{$elementClasses ? ' ' + $elementClasses : ''}" role="tooltip">
-		<section class="tooltip-inner">
-			{if $title}
-				<div class="tooltip-title">
-					{$title}
-				</div>
-			{/if}
-			{if $description}
-				<div class="tooltip-description">
-					{$description}
-				</div>
-			{/if}
-		</section>
-	</div>
+  <div class="tooltip {$positionClass}{$elementClasses ? ' ' + $elementClasses : ''}" role="tooltip">
+    <section class="tooltip-inner">
+      {if $title}
+        <div class="tooltip-title">
+          {$title}
+        </div>
+      {/if}
+      {if $description}
+        <div class="tooltip-description">
+          {$description}
+        </div>
+      {/if}
+    </section>
+  </div>
 {/template}

@@ -1,117 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Demo: Metal Input</title>
-	<!-- marble -->
-	<link rel="stylesheet" href="../node_modules/marble/build/fonts/galano/galano.css">
-	<link rel="stylesheet" href="../node_modules/marble/build/fonts/icon-12/icon-12.css">
-	<link rel="stylesheet" href="../node_modules/marble/build/fonts/icon-16/icon-16.css">
-	<link rel="stylesheet" href="../node_modules/marble/build/marble.css">
+  <meta charset="UTF-8">
+  <title>Demo: Metal Input</title>
+  <!-- marble -->
+  <link rel="stylesheet" href="../node_modules/marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../node_modules/marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../node_modules/marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../node_modules/marble/build/marble.css">
 
-	<script src="../build/globals/input.js"></script>
+  <script src="../build/globals/input.js"></script>
 
-	<style type="text/css">
-		.form-control {
-			margin-bottom: 24px;
-		}
-	</style>
+  <style type="text/css">
+    .form-control {
+      margin-bottom: 24px;
+    }
+  </style>
 </head>
 <body>
-	<div class="container-hybrid-half">
-		<div class="row">
-			<div class="content-header">
-				<div class="header-title">
-					Metal Input
-				</div>
-			</div>
-		</div>
-		<div class="content-body">
-			<section class="row">
-				<div class="col-xs-16">
-					<div id="form"></div>
-				</div>
-			</section>
-		</div>
-	</div>
-	<script type="text/javascript">
-		window.text = new metal.Input({
-			classes: 'form-control',
-			placeholder: 'Name',
-			fieldIndex: 0,
-			value: 'aaa'
-		}, '#form');
+  <div class="container-hybrid-half">
+    <div class="row">
+      <div class="content-header">
+        <div class="header-title">
+          Metal Input
+        </div>
+      </div>
+    </div>
+    <div class="content-body">
+      <section class="row">
+        <div class="col-xs-16">
+          <div id="form"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.text = new metal.Input({
+      classes: 'form-control',
+      placeholder: 'Name',
+      fieldIndex: 0,
+      value: 'aaa'
+    }, '#form');
 
-		window.text = new metal.Input({
-			classes: 'form-control',
-			placeholder: 'Email',
-			type: 'email',
-			readonly : false,
-			fieldIndex: 1,
-			value: 'bbb'
-		}, '#form');
+    window.text = new metal.Input({
+      classes: 'form-control',
+      placeholder: 'Email',
+      type: 'email',
+      readonly : false,
+      fieldIndex: 1,
+      value: 'bbb'
+    }, '#form');
 
-		window.password = new metal.Input({
-			classes: 'form-control',
-			placeholder: 'Password',
-			type: 'password',
-			maxLength: 10,
-			readonly : false,
-			fieldIndex: 2
-		}, '#form');
+    window.password = new metal.Input({
+      classes: 'form-control',
+      placeholder: 'Password',
+      type: 'password',
+      maxLength: 10,
+      readonly : false,
+      fieldIndex: 2
+    }, '#form');
 
-		window.readonlyTrue = new metal.Input({
-			classes: 'form-control',
-			initialShow: true,
-			isTogglePassword: true,
-			placeholder: 'Always readonly',
-			readonly : true,
-			value: 'I\'m a readonly everytime',
-			fieldIndex: 3
-		}, '#form');
+    window.readonlyTrue = new metal.Input({
+      classes: 'form-control',
+      initialShow: true,
+      isTogglePassword: true,
+      placeholder: 'Always readonly',
+      readonly : true,
+      value: 'I\'m a readonly everytime',
+      fieldIndex: 3
+    }, '#form');
 
-		window.readonlyFalse = new metal.Input({
-			classes: 'form-control',
-			initialShow: true,
-			isTogglePassword: true,
-			placeholder: 'Always editable',
-			readonly : false,
-			value: 'I\'m editable everytime',
-			fieldIndex: 4
-		}, '#form');
+    window.readonlyFalse = new metal.Input({
+      classes: 'form-control',
+      initialShow: true,
+      isTogglePassword: true,
+      placeholder: 'Always editable',
+      readonly : false,
+      value: 'I\'m editable everytime',
+      fieldIndex: 4
+    }, '#form');
 
-		window.editableWhileVisible = new metal.Input({
-			classes: 'form-control',
-			initialShow: false,
-			isTogglePassword: true,
-			placeholder: 'editableWhileVisible - value empty',
-			readonly : true,
-			editableWhileVisible : true,
-			fieldIndex: 7
-		}, '#form');
+    window.editableWhileVisible = new metal.Input({
+      classes: 'form-control',
+      initialShow: false,
+      isTogglePassword: true,
+      placeholder: 'editableWhileVisible - value empty',
+      readonly : true,
+      editableWhileVisible : true,
+      fieldIndex: 7
+    }, '#form');
 
-		window.editableWhileVisible1 = new metal.Input({
-			classes: 'form-control',
-			initialShow: true,
-			isTogglePassword: true,
-			placeholder: 'editableWhileVisible - initialShow = true',
-			readonly : false,
-			editableWhileVisible : true,
-			value: 'editableWhileVisible - initialShow = true',
-			fieldIndex: 5
-		}, '#form');
+    window.editableWhileVisible1 = new metal.Input({
+      classes: 'form-control',
+      initialShow: true,
+      isTogglePassword: true,
+      placeholder: 'editableWhileVisible - initialShow = true',
+      readonly : false,
+      editableWhileVisible : true,
+      value: 'editableWhileVisible - initialShow = true',
+      fieldIndex: 5
+    }, '#form');
 
-		window.editableWhileVisible2 = new metal.Input({
-			classes: 'form-control',
-			initialShow: false,
-			isTogglePassword: true,
-			placeholder: 'editableWhileVisible - initialShow = false',
-			readonly : true,
-			editableWhileVisible : true,
-			value: 'editableWhileVisible - initialShow = false',
-			fieldIndex: 6
-		}, '#form');
+    window.editableWhileVisible2 = new metal.Input({
+      classes: 'form-control',
+      initialShow: false,
+      isTogglePassword: true,
+      placeholder: 'editableWhileVisible - initialShow = false',
+      readonly : true,
+      editableWhileVisible : true,
+      value: 'editableWhileVisible - initialShow = false',
+      fieldIndex: 6
+    }, '#form');
 
-	</script>
+  </script>
 </body>
 </html>

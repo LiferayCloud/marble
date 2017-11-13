@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Demo: ProgressBar</title>
+  <meta charset="UTF-8">
+  <title>Demo: ProgressBar</title>
 
-	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="../build/globals/progressBar.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../build/globals/progressBar.css">
 
-	<script src="../build/globals/progressBar.js"></script>
+  <script src="../build/globals/progressBar.js"></script>
 </head>
 <body>
-	<h1>ProgressBar</h1>
-	<script type="text/javascript">
-		window.bar = new metal.ProgressBar({
-			value: 90
-		});
+  <h1>ProgressBar</h1>
+  <script type="text/javascript">
+    window.bar = new metal.ProgressBar({
+      value: 90
+    });
 
-		new metal.ProgressBar({
-			barClass: 'progress-bar-danger',
-			label: '40%',
-			value: 40
-		});
+    new metal.ProgressBar({
+      barClass: 'progress-bar-danger',
+      label: '40%',
+      value: 40
+    });
 
-		new metal.ProgressBar({
-			barClass: 'progress-bar-striped progress-bar-success',
-			max: 200,
-			min: 100,
-			label: '<strong>90%</strong>',
-			value: 190
-		});
-	</script>
+    new metal.ProgressBar({
+      barClass: 'progress-bar-striped progress-bar-success',
+      max: 200,
+      min: 100,
+      label: '<strong>90%</strong>',
+      value: 190
+    });
+  </script>
 </body>
 </html>

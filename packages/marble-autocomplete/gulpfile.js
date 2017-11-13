@@ -3,7 +3,7 @@
 var metal = require('gulp-metal');
 
 metal.registerTasks({
-	bundleCssFileName: 'autocomplete.css',
-	bundleFileName: 'autocomplete.js',
-	moduleName: 'marble-autocomplete'
+  bundleCssFileName: 'autocomplete.css',
+  bundleFileName: 'autocomplete.js',
+  moduleName: 'marble-autocomplete'
 });

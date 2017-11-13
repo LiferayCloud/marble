@@ -157,7 +157,7 @@ describe('Alert', function() {
 		});
 
 		let closeButton = component.element.querySelector('span');
-	 	assert.ok(dom.hasClass(closeButton, 'icon-16-cancel'));
+		assert.ok(dom.hasClass(closeButton, 'icon-16-cancel'));
 	});
 
 	it('should set a text as the close button value', function() {
@@ -166,6 +166,6 @@ describe('Alert', function() {
 		});
 
 		let closeButton = component.element.querySelector('button');
-	 	assert.strictEqual(closeButton.textContent, 'close');
+		assert.strictEqual(closeButton.textContent, 'close');
 	});
 });

@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Demo: Dropdown</title>
+  <meta charset="UTF-8">
+  <title>Demo: Dropdown</title>
 
-	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 
-	<script src="../build/globals/dropdown.js"></script>
-	<style>
-	.dropdown {
-		margin: 20px;
-	}
+  <script src="../build/globals/dropdown.js"></script>
+  <style>
+  .dropdown {
+    margin: 20px;
+  }
 
-	.dropup {
-		margin: 20px;
-		margin-top: 300px;
-	}
-	</style>
+  .dropup {
+    margin: 20px;
+    margin-top: 300px;
+  }
+  </style>
 </head>
 <body>
-	<h1>Dropdown</h1>
+  <h1>Dropdown</h1>
 
-	<h3>From HTML</h3>
-	<div id="htmlDropdown" class="dropdown">
-		<button data-onclick="toggle" class="btn btn-primary">HTML <span class="caret"></span></button>
-		<div class="dropdown-menu">
-			<li><a href="#">HTML Content</a></li>
-		</div>
-	</div>
+  <h3>From HTML</h3>
+  <div id="htmlDropdown" class="dropdown">
+    <button data-onclick="toggle" class="btn btn-primary">HTML <span class="caret"></span></button>
+    <div class="dropdown-menu">
+      <li><a href="#">HTML Content</a></li>
+    </div>
+  </div>
 
-	<h3>From JS</h3>
+  <h3>From JS</h3>
 
-	<script type="text/javascript">
-		window.dropdown = new metal.Dropdown({
-			alignElementSelector: 'button',
-			header: '<button data-onclick="toggle" class="btn btn-primary">Dropdown <span class="caret"></span></button>',
-			body: '<li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li><li><a href="#">Separated link</a></li>'
-		});
+  <script type="text/javascript">
+    window.dropdown = new metal.Dropdown({
+      alignElementSelector: 'button',
+      header: '<button data-onclick="toggle" class="btn btn-primary">Dropdown <span class="caret"></span></button>',
+      body: '<li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li><li><a href="#">Separated link</a></li>'
+    });
 
-		new metal.Dropdown({
-			position: 'up',
-			header: '<button data-onclick="toggle" class="btn btn-primary">Dropup <span class="caret"></span></button>',
-			body: '<li><a href="#">Sign out</a></li>'
-		});
+    new metal.Dropdown({
+      position: 'up',
+      header: '<button data-onclick="toggle" class="btn btn-primary">Dropup <span class="caret"></span></button>',
+      body: '<li><a href="#">Sign out</a></li>'
+    });
 
-		new metal.Dropdown({
-			element: '#htmlDropdown'
-		});
-	</script>
+    new metal.Dropdown({
+      element: '#htmlDropdown'
+    });
+  </script>
 </body>
 </html>

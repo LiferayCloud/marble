@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Demo: Select</title>
+  <meta charset="UTF-8">
+  <title>Demo: Select</title>
 
   <link rel="stylesheet" href="../../marble/build/marble.css">
   <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
@@ -12,26 +12,26 @@
   <script src="../build/globals/marble-select.js"></script>
 </head>
 <body>
-	<div class="col-md-4">
-		<h1>Select + input group left</h1>
-		<div id="first"></div>
-	</div>
-	<div class="col-md-4">
-		<h1>Select + label</h1>
-		<div id="second"></div>
-	</div>
-	<script type="text/javascript">
-		window.select1 = new metal.Select({
-			label: '<i>Select</i>',
-			items: ['GET', 'HEAD', 'POST', 'PATCH', 'PUT', 'DELETE'],
-			hiddenFieldName: 'method'
-		}, '#first');
+  <div class="col-md-4">
+    <h1>Select + input group left</h1>
+    <div id="first"></div>
+  </div>
+  <div class="col-md-4">
+    <h1>Select + label</h1>
+    <div id="second"></div>
+  </div>
+  <script type="text/javascript">
+    window.select1 = new metal.Select({
+      label: '<i>Select</i>',
+      items: ['GET', 'HEAD', 'POST', 'PATCH', 'PUT', 'DELETE'],
+      hiddenFieldName: 'method'
+    }, '#first');
 
-		window.select2 = new metal.Select({
-			items: ['Number', 'String', 'Boolean', 'Array', '<i>Object</i>'],
-			values: ['Number', 'String', 'Boolean', 'Array', 'Object'],
-			label: 'Type',
-		}, '#second');
-	</script>
+    window.select2 = new metal.Select({
+      items: ['Number', 'String', 'Boolean', 'Array', '<i>Object</i>'],
+      values: ['Number', 'String', 'Boolean', 'Array', 'Object'],
+      label: 'Type',
+    }, '#second');
+  </script>
 </body>
 </html>

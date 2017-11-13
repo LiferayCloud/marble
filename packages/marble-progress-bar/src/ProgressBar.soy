@@ -9,20 +9,20 @@
  * @param? value
  */
 {template .render}
-	{@param? label: html|string}
-	{let $curMax: $max ? $max : 100 /}
-	{let $curMin: $min ? $min : 0 /}
-	{let $curValue: $value ? $value : 0 /}
-	<div
-		class="progress {$elementClasses ? ' ' + $elementClasses : ''}"
-		role="progressbar"
-		aria-valuemax="{$curMax}"
-		aria-valuemin="{$curMin}"
-		aria-valuenow="{$curValue}"
-		tabindex="0">
-		{let $percentage: floor((($curValue - $curMin) * 100) / ($curMax - $curMin)) /}
-		<div
-			class="progress-bar{$barClass ? ' ' + $barClass : ''}"
-			style="width: {$percentage}%">{$label ? $label : ''}</div>
-	</div>
+  {@param? label: html|string}
+  {let $curMax: $max ? $max : 100 /}
+  {let $curMin: $min ? $min : 0 /}
+  {let $curValue: $value ? $value : 0 /}
+  <div
+    class="progress {$elementClasses ? ' ' + $elementClasses : ''}"
+    role="progressbar"
+    aria-valuemax="{$curMax}"
+    aria-valuemin="{$curMin}"
+    aria-valuenow="{$curValue}"
+    tabindex="0">
+    {let $percentage: floor((($curValue - $curMin) * 100) / ($curMax - $curMin)) /}
+    <div
+      class="progress-bar{$barClass ? ' ' + $barClass : ''}"
+      style="width: {$percentage}%">{$label ? $label : ''}</div>
+  </div>
 {/template}

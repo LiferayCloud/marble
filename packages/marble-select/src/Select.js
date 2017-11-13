@@ -4,8 +4,8 @@ import { core, array } from 'metal';
 import dom from 'metal-dom';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
+import 'marble-dropdown';
 
-import 'metal-dropdown';
 import templates from './Select.soy.js';
 
 /**

@@ -1,5 +1,6 @@
 'use strict';
 
+import { assert } from 'chai';
 import dom from 'metal-dom';
 import ReadingProgress from '../src/ReadingProgress';
 

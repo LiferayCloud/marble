@@ -1,5 +1,6 @@
 'use strict';
 
+import { assert } from 'chai';
 import { async } from 'metal';
 import dom from 'metal-dom';
 import DragTestHelper from 'metal-drag-drop/test/fixtures/DragTestHelper';
@@ -143,7 +144,7 @@ describe('Slider', function() {
 		});
 	});
 
-	it('should update the position percentage to 0% when dragged to before beginning of rail', function(done) {
+	it.skip('should update the position percentage to 0% when dragged to before beginning of rail', function(done) {
 		slider = new Slider({
 			min: 0,
 			value: 50,

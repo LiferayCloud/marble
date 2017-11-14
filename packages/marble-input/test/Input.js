@@ -1,5 +1,7 @@
 'use strict';
 
+import {assert} from 'chai';
+import sinon from 'sinon';
 import dom from 'metal-dom';
 import Input from '../src/Input';
 

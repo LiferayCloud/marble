@@ -1,7 +1,8 @@
 'use strict';
 
+import { assert } from 'chai';
 import dom from 'metal-dom';
-import Dropdown from 'metal-dropdown';
+import Dropdown from 'marble-dropdown';
 import Select from '../src/Select';
 
 describe('Select', function() {

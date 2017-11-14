@@ -1,5 +1,7 @@
 'use strict';
 
+import { assert } from 'chai';
+import sinon from 'sinon';
 import { async } from 'metal';
 import dom from 'metal-dom';
 import { Align } from 'metal-position';

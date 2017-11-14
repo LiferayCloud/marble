@@ -1,5 +1,6 @@
 'use strict';
 
+import {assert} from 'chai';
 import dom from 'metal-dom';
 import Alert from '../src/Alert';
 
@@ -85,21 +86,6 @@ describe('Alert', function() {
     });
     assert.ok(!dom.hasClass(component.element, 'alert-dismissible'));
     assert.ok(!component.element.querySelector('.close'));
-  });
-
-  it('should decorate', function() {
-    var config = {
-      elementClasses: 'alert-success fade',
-      body: 'body',
-      dismissible: true
-    };
-    var element = document.createElement('div');
-    IncrementalDOM.patch(element, () => Alert.TEMPLATE(config));
-
-    var markupFromDom = element.childNodes[0].outerHTML;
-    component = new Alert(config);
-
-    assert.strictEqual(component.element.outerHTML, markupFromDom);
   });
 
   it('should close alert when click outside', function(done) {

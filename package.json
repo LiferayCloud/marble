@@ -1,9 +1,22 @@
 {
   "scripts": {
     "start": "lerna bootstrap",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "test": "jest"
   },
   "devDependencies": {
-    "lerna": "^2.5.1"
+    "babel-jest": "^21.2.0",
+    "chai": "^4.1.2",
+    "jest": "^21.2.1",
+    "lerna": "^2.5.1",
+    "regenerator-runtime": "^0.11.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "generator-marble"
+    ]
   }
 }

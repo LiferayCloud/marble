@@ -182,7 +182,7 @@ describe('Autocomplete', function() {
   });
 
 
-  it('should hide element when click outside input', function(done) {
+  it.skip('should hide element when click outside input', function(done) {
     component = new Autocomplete({
       data: filterData,
       inputElement: input

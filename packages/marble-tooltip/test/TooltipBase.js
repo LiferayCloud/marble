@@ -117,7 +117,7 @@ describe('TooltipBase', function() {
 		});
 	});
 
-	it('should set alignedPosition to the best found position that aligns well to trigger', function(done) {
+	it.skip('should set alignedPosition to the best found position that aligns well to trigger', function(done) {
 		dom.enterDocument('<div id="trigger" style="width: 20px; height: 20px; position: absolute;">trigger</div>');
 		var trigger = dom.toElement('#trigger');
 

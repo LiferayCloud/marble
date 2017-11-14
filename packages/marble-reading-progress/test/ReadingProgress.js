@@ -7,7 +7,7 @@ import ReadingProgress from '../src/ReadingProgress';
 describe('ReadingProgress', function() {
   var readingProgress;
 
-  before(function() {
+  beforeAll(function() {
     dom.enterDocument('<style id="style">body{margin:0;padding:0;}');
     dom.enterDocument('<div id="content">' +
       '<div id="content1" style="height:5000px;"><h1>Title 1</h1><p>Content1</p></div>' +
@@ -22,7 +22,7 @@ describe('ReadingProgress', function() {
     }
   });
 
-  after(function() {
+  afterAll(function() {
     document.body.innerHTML = '';
   });
 

@@ -1,6 +1,6 @@
 {
   "name": "marble-input-matrix",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "description": "Metal.js component that automatically adds new fields to guarantee that there will always be an empty field at the end",
   "license": "BSD",
   "repository": "wedeploy/marble",
@@ -26,7 +26,7 @@
     "metal"
   ],
   "dependencies": {
-    "marble-input": "^1.0.14",
+    "marble-input": "^1.0.15",
     "metal-soy": "^2.0.0"
   },
   "devDependencies": {

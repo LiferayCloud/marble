@@ -19,7 +19,7 @@ module.exports = {
   output: {
     library: 'metal',
     libraryTarget: 'this',
-    filename: './build/globals/datatable.js'
+    filename: './build/globals/marble-datatable.js'
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()

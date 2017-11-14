@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/Slider.js',
+  entry: './src/Input.js',
   module: {
     rules: [{
       test: /\.js$/,
@@ -19,7 +19,7 @@ module.exports = {
   output: {
     library: 'metal',
     libraryTarget: 'this',
-    filename: './build/globals/marble-slider.js'
+    filename: './build/globals/marble-input.js'
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()

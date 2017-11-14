@@ -16,11 +16,11 @@
     "test"
   ],
   "scripts": {
-    "build": "gulp build",
+    "build": "npm run soy && webpack",
     "compile": "babel --presets metal -d lib/ src/",
-    "prepublish": "gulp soy && npm run compile",
-    "test": "gulp test",
-    "watch": "gulp build:watch"
+    "prepublish": "npm run soy && npm run compile",
+    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy",
+    "test": "gulp test"
   },
   "keywords": [
     "metal"
@@ -32,9 +32,12 @@
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-node-env-inline": "^0.2.0",
     "babel-preset-metal": "^4.0.0",
     "gulp": "^3.8.11",
     "gulp-metal": "^1.0.0",
-    "marble": "~2.7.0"
+    "metal-tools-soy": "^4.2.6",
+    "webpack": "^3.5.5"
   }
 }

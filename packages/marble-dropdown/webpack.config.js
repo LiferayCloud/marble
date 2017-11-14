@@ -19,7 +19,7 @@ module.exports = {
   output: {
     library: 'metal',
     libraryTarget: 'this',
-    filename: './build/globals/dropdown.js'
+    filename: './build/globals/marble-dropdown.js'
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()

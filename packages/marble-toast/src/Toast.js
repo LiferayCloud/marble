@@ -2,7 +2,7 @@
 
 import templates from './Toast.soy.js';
 import Soy from 'metal-soy';
-import Alert from 'metal-alert';
+import Alert from 'marble-alert';
 
 class Toast extends Alert {}
 

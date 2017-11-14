@@ -137,6 +137,10 @@ module.exports = yeoman.generators.Base.extend({
       this.templatePath('_LICENSE.md'),
       this.destinationPath('LICENSE.md')
     );
+    this.fs.copy(
+      this.templatePath('_gitignore'),
+      this.destinationPath('.gitignore')
+    );
     this.fs.copyTpl(
       this.templatePath('_webpack.config.js'),
       this.destinationPath('webpack.config.js'),

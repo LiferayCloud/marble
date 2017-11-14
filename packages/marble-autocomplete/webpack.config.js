@@ -19,7 +19,7 @@ module.exports = {
   output: {
     library: 'metal',
     libraryTarget: 'this',
-    filename: './build/globals/autocomplete.js'
+    filename: './build/globals/marble-autocomplete.js'
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()

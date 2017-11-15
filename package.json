@@ -10,7 +10,10 @@
     "chai": "^4.1.2",
     "jest": "^21.2.1",
     "lerna": "^2.5.1",
-    "regenerator-runtime": "^0.11.0"
+    "metal": "^2.14.0",
+    "metal-dom": "^2.14.0",
+    "regenerator-runtime": "^0.11.0",
+    "sinon": "^4.1.2"
   },
   "jest": {
     "testMatch": [

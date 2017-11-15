@@ -3,7 +3,7 @@
   "version": "2.1.4",
   "description": "Steel's alert component",
   "license": "BSD",
-  "repository": "wedeploy/marble",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-alert",
   "engines": {
     "node": ">=0.12.0"
   },

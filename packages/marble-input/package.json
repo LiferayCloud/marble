@@ -3,7 +3,7 @@
   "version": "1.0.15",
   "description": "Custom input Metal.js component",
   "license": "BSD",
-  "repository": "wedeploy/marble",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-input",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"

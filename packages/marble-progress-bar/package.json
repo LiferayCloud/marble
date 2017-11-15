@@ -3,7 +3,7 @@
   "version": "2.0.7",
   "description": "Metal's progress bar component",
   "license": "BSD",
-  "repository": "wedeploy/marble",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-progress-bar",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"

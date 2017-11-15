@@ -1,8 +1,9 @@
 {
+  "private": true,
   "scripts": {
-    "start": "lerna bootstrap",
+    "start": "lerna bootstrap -- --no-optional --no-package-lock",
     "publish": "lerna publish",
-    "test": "jest"
+    "test": "lerna run soy && jest"
   },
   "devDependencies": {
     "babel-jest": "^21.2.0",
@@ -19,8 +20,13 @@
     "testMatch": [
       "**/test/*.js"
     ],
-    "testPathIgnorePatterns": [
-      "generator-marble"
-    ]
-  }
+    "transformIgnorePatterns": [
+      "<rootDir>.*(node_modules)(?!.*marble.*).*$"
+    ],
+    "testPathIgnorePatterns": ["generator-marble"],
+    "resolver": "./jest-marble-lerna-resolver"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

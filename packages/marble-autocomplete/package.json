@@ -19,7 +19,7 @@
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run soy && npm run compile",
-    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy"
+    "soy": "metalsoy"
   },
   "keywords": [
     "autocomplete",

@@ -2,7 +2,7 @@
   "name": "marble-progress-bar",
   "version": "2.0.7",
   "description": "Metal's progress bar component",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-progress-bar",
   "engines": {
     "node": ">=0.12.0",

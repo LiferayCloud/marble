@@ -2,7 +2,7 @@
   "name": "marble-input-matrix",
   "version": "2.1.13",
   "description": "Metal.js component that automatically adds new fields to guarantee that there will always be an empty field at the end",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-input-matrix",
   "engines": {
     "node": ">=0.12.0",

@@ -2,7 +2,7 @@
   "name": "marble-datatable",
   "version": "2.1.7",
   "description": "Datatable visualization",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-datatable",
   "engines": {
     "node": ">=0.12.0",

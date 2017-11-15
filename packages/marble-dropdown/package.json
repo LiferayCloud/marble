@@ -2,7 +2,7 @@
   "name": "marble-dropdown",
   "version": "3.0.6",
   "description": "Metal's dropdown component",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-dropdown",
   "engines": {
     "node": ">=0.12.0",

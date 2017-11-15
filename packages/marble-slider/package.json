@@ -2,7 +2,7 @@
 	"name": "marble-slider",
 	"version": "2.1.6",
 	"description": "Crystal's slider component",
-	"license": "BSD",
+	"license": "BSD-3-Clause",
 	"repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-slider",
 	"engines": {
 		"node": ">=0.12.0",

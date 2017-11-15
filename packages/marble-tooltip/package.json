@@ -2,7 +2,7 @@
   "name": "marble-tooltip",
   "version": "1.0.2",
   "description": "Marble's metal tooltip component",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-tooltip",
   "author": {
     "name": "Ygor Costa",

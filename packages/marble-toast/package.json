@@ -2,7 +2,7 @@
   "name": "marble-toast",
   "version": "2.1.7",
   "description": "Metal.js Toast component",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-toast",
   "engines": {
     "node": ">=0.12.0",

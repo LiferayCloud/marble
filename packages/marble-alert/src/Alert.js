@@ -1,10 +1,10 @@
 'use strict';
 
-import { core } from 'metal';
+import {core} from 'metal';
 import dom from 'metal-dom';
 import Anim from 'metal-anim';
 import Component from 'metal-component';
-import { EventHandler } from 'metal-events';
+import {EventHandler} from 'metal-events';
 import Soy from 'metal-soy';
 
 import templates from './Alert.soy.js';
@@ -89,7 +89,9 @@ class Alert extends Component {
    */
   syncDismissible(dismissible) {
     if (dismissible) {
-      this.eventHandler_.add(dom.on(document, 'click', this.handleDocClick_.bind(this)));
+      this.eventHandler_.add(
+        dom.on(document, 'click', this.handleDocClick_.bind(this))
+      );
     } else {
       this.eventHandler_.removeAllListeners();
     }
@@ -113,7 +115,7 @@ class Alert extends Component {
    * @param {boolean} visible
    */
   syncVisible(visible, prevVisible) {
-    var shouldAsync = false;
+    let shouldAsync = false;
     if (!visible) {
       dom.once(this.element, 'animationend', this.hideCompletely_.bind(this));
       dom.once(this.element, 'transitionend', this.hideCompletely_.bind(this));
@@ -122,12 +124,15 @@ class Alert extends Component {
       super.syncVisible(true);
     }
 
-    var showOrHide = () => {
+    let showOrHide = () => {
       if (this.isDisposed()) {
         return;
       }
 
-      dom.removeClasses(this.element, this.animClasses[visible ? 'hide' : 'show']);
+      dom.removeClasses(
+        this.element,
+        this.animClasses[visible ? 'hide' : 'show']
+      );
       dom.addClasses(this.element, this.animClasses[visible ? 'show' : 'hide']);
 
       // Some browsers do not fire transitionend events when running in background
@@ -165,23 +170,21 @@ Alert.STATE = {
     validator: core.isObject,
     value: {
       show: 'fade in',
-      hide: 'fade'
-    }
+      hide: 'fade',
+    },
   },
 
   /**
    * The body content of the alert.
    * @type {html|string}
    */
-  body: {
-  },
+  body: {},
 
   /**
    * The content of close button of the alert.
    * @type {html|string}
    */
-  closeButtonHtml: {
-  },
+  closeButtonHtml: {},
 
   /**
    * Flag indicating if the alert should be dismissable (closeable).
@@ -190,7 +193,7 @@ Alert.STATE = {
    */
   dismissible: {
     validator: core.isBoolean,
-    value: true
+    value: true,
   },
 
   /**
@@ -199,7 +202,7 @@ Alert.STATE = {
    * @default 'alert-success'
    */
   elementClasses: {
-    value: 'alert-success'
+    value: 'alert-success',
   },
 
   /**
@@ -207,7 +210,7 @@ Alert.STATE = {
    * @type {?number}
    */
   hideDelay: {
-    validator: core.isNumber
+    validator: core.isNumber,
   },
 
   /**
@@ -217,9 +220,9 @@ Alert.STATE = {
    */
   visible: {
     validator: core.isBoolean,
-    value: false
-  }
+    value: false,
+  },
 };
 
-export { Alert };
+export {Alert};
 export default Alert;

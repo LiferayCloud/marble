@@ -1,6 +1,6 @@
 'use strict';
 
-import { core, object } from 'metal';
+import {core, object} from 'metal';
 import templates from './ReadingProgress.soy.js';
 import Component from 'metal-component';
 import ReadingProgressTracker from './ReadingProgressTracker';
@@ -30,14 +30,14 @@ class ReadingProgress extends Component {
       return;
     }
 
-    var element = document.getElementById(item.href.substr(1));
+    let element = document.getElementById(item.href.substr(1));
     if (!item.title) {
       let titleElement = element.querySelector(this.titleSelector);
       item.title = titleElement ? titleElement.textContent : '';
     }
     if (!item.time) {
-      var charCount = element.textContent.length;
-      item.time = Math.round((charCount * 60) / 1500); // Assumes 1500 chars/min
+      let charCount = element.textContent.length;
+      item.time = Math.round(charCount * 60 / 1500); // Assumes 1500 chars/min
     }
   }
 
@@ -57,9 +57,14 @@ class ReadingProgress extends Component {
    */
   rendered(firstRender) {
     if (firstRender) {
-      this.tracker_ = new ReadingProgressTracker(object.mixin({
-        element: this.element
-      }, this.trackerConfig));
+      this.tracker_ = new ReadingProgressTracker(
+        object.mixin(
+          {
+            element: this.element,
+          },
+          this.trackerConfig
+        )
+      );
       this.tracker_.on('progressChanged', this.updateProgress.bind(this));
       this.updateProgress();
     }
@@ -73,10 +78,10 @@ class ReadingProgress extends Component {
    * @protected
    */
   setterItemsFn_(items) {
-    for (var i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length; i++) {
       if (core.isString(items[i])) {
         items[i] = {
-          href: items[i]
+          href: items[i],
         };
       }
       this.generateItemMissingData_(items[i]);
@@ -88,13 +93,12 @@ class ReadingProgress extends Component {
    * Updates the UI according to the new progress value.
    */
   updateProgress() {
-    var activeIndex = this.tracker_.activeIndex;
+    let activeIndex = this.tracker_.activeIndex;
     if (activeIndex >= 0) {
-      var link = this.tracker_.getElementForIndex(activeIndex);
-      link.querySelector('circle').setAttribute(
-        'stroke-dashoffset',
-        100 - this.tracker_.progress
-      );
+      let link = this.tracker_.getElementForIndex(activeIndex);
+      link
+        .querySelector('circle')
+        .setAttribute('stroke-dashoffset', 100 - this.tracker_.progress);
     }
   }
 }
@@ -120,7 +124,7 @@ ReadingProgress.STATE = {
   items: {
     setter: 'setterItemsFn_',
     validator: Array.isArray,
-    value: []
+    value: [],
   },
 
   /**
@@ -130,7 +134,7 @@ ReadingProgress.STATE = {
    */
   titleSelector: {
     validator: core.isString,
-    value: 'h1'
+    value: 'h1',
   },
 
   /**
@@ -139,9 +143,9 @@ ReadingProgress.STATE = {
    */
   trackerConfig: {
     validator: core.isObject,
-    writeOnce: true
-  }
+    writeOnce: true,
+  },
 };
 
-export { ReadingProgress };
+export {ReadingProgress};
 export default ReadingProgress;

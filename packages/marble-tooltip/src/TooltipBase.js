@@ -2,9 +2,9 @@
 
 import core from 'metal';
 import dom from 'metal-dom';
-import { Align } from 'metal-position';
+import {Align} from 'metal-position';
 import Component from 'metal-component';
-import { EventHandler } from 'metal-events';
+import {EventHandler} from 'metal-events';
 
 /**
  * The base class to be shared between components that have tooltip behavior.
@@ -72,7 +72,8 @@ class TooltipBase extends Component {
    */
   handleHide(event) {
     const delegateTarget = event.delegateTarget;
-    const interactingWithDifferentTarget = delegateTarget && (delegateTarget !== this.currentAlignElement);
+    const interactingWithDifferentTarget =
+      delegateTarget && delegateTarget !== this.currentAlignElement;
     this.callAsync_(function() {
       if (this.locked_) {
         return;
@@ -154,7 +155,11 @@ class TooltipBase extends Component {
         this.title = dataTitle;
       }
       if (this.inDocument) {
-        this.alignedPosition = TooltipBase.Align.align(this.element, alignElement, this.position);
+        this.alignedPosition = TooltipBase.Align.align(
+          this.element,
+          alignElement,
+          this.position
+        );
       }
     }
   }
@@ -189,15 +194,33 @@ class TooltipBase extends Component {
 
     this.eventHandler_.add(
       this.on('mouseenter', this.lock),
-      this.on('mouseleave', this.unlock));
+      this.on('mouseleave', this.unlock)
+    );
 
     if (triggerEvents[0] === triggerEvents[1]) {
       this.eventHandler_.add(
-        dom.delegate(document, triggerEvents[0], selector, this.handleToggle.bind(this)));
+        dom.delegate(
+          document,
+          triggerEvents[0],
+          selector,
+          this.handleToggle.bind(this)
+        )
+      );
     } else {
       this.eventHandler_.add(
-        dom.delegate(document, triggerEvents[0], selector, this.handleShow.bind(this)),
-        dom.delegate(document, triggerEvents[1], selector, this.handleHide.bind(this)));
+        dom.delegate(
+          document,
+          triggerEvents[0],
+          selector,
+          this.handleShow.bind(this)
+        ),
+        dom.delegate(
+          document,
+          triggerEvents[1],
+          selector,
+          this.handleHide.bind(this)
+        )
+      );
     }
   }
 
@@ -227,7 +250,7 @@ TooltipBase.STATE = {
    * @type {number}
    */
   alignedPosition: {
-    validator: TooltipBase.Align.isValidPosition
+    validator: TooltipBase.Align.isValidPosition,
   },
 
   /**
@@ -235,7 +258,7 @@ TooltipBase.STATE = {
    * @type {Element}
    */
   alignElement: {
-    setter: dom.toElement
+    setter: dom.toElement,
   },
 
   /**
@@ -244,7 +267,7 @@ TooltipBase.STATE = {
    */
   currentAlignElement: {
     internal: true,
-    setter: dom.toElement
+    setter: dom.toElement,
   },
 
   /**
@@ -254,7 +277,7 @@ TooltipBase.STATE = {
    */
   delay: {
     validator: Array.isArray,
-    value: [500, 250]
+    value: [500, 250],
   },
 
   /**
@@ -264,7 +287,7 @@ TooltipBase.STATE = {
    */
   triggerEvents: {
     validator: Array.isArray,
-    value: ['mouseenter', 'mouseleave']
+    value: ['mouseenter', 'mouseleave'],
   },
 
   /**
@@ -273,7 +296,7 @@ TooltipBase.STATE = {
    * @type {?string}
    */
   selector: {
-    validator: core.isString
+    validator: core.isString,
   },
 
   /**
@@ -284,15 +307,14 @@ TooltipBase.STATE = {
    */
   position: {
     validator: TooltipBase.Align.isValidPosition,
-    value: TooltipBase.Align.Bottom
+    value: TooltipBase.Align.Bottom,
   },
 
   /**
    * Content to be placed inside tooltip.
    * @type {string}
    */
-  title: {
-  }
+  title: {},
 };
 
 /**
@@ -302,5 +324,5 @@ TooltipBase.STATE = {
  */
 TooltipBase.PositionClasses = ['top', 'right', 'bottom', 'left'];
 
-export { TooltipBase };
+export {TooltipBase};
 export default TooltipBase;

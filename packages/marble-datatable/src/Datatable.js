@@ -9,7 +9,6 @@ import Soy from 'metal-soy';
 import UA from 'metal-useragent';
 
 class Datatable extends Component {
-
   /**
    * Visits array items and asserts that it only contains one literal type.
    * @param {array} value
@@ -17,14 +16,14 @@ class Datatable extends Component {
    * @throws {Error} If types are different.
    */
   assertNoMixedTypesInArrays_(value) {
-    var lastType;
-    var acceptArray = (v) => {
-      var type = this.getValueType_(v);
+    let lastType;
+    let acceptArray = v => {
+      let type = this.getValueType_(v);
       this.assertSameTypes_(lastType, type);
       lastType = type;
       this.assertNoMixedTypesInArrays_(v);
     };
-    var acceptObject = (v) => this.assertNoMixedTypesInArrays_(v);
+    let acceptObject = v => this.assertNoMixedTypesInArrays_(v);
     this.visit_(value, acceptArray, acceptObject);
   }
 
@@ -96,15 +95,18 @@ class Datatable extends Component {
    * @protected
    */
   collectColumnsFromArrayValues_(expandedValue) {
-    var value = expandedValue.value;
-    var isFirstArrayItemObject = value[0] && value[0].type === Datatable.TYPES.OBJECT;
+    let value = expandedValue.value;
+    let isFirstArrayItemObject =
+      value[0] && value[0].type === Datatable.TYPES.OBJECT;
     if (isFirstArrayItemObject) {
       let columns = {};
       let columnsType = {};
-      value.forEach((item) => Object.keys(item.value).forEach((key) => {
-        columns[key] = true;
-        columnsType[key] = item.value[key].type;
-      }));
+      value.forEach(item =>
+        Object.keys(item.value).forEach(key => {
+          columns[key] = true;
+          columnsType[key] = item.value[key].type;
+        })
+      );
       expandedValue.columns = this.formatColumns(Object.keys(columns));
       expandedValue.columnsType = this.formatColumnsType(columnsType);
     }
@@ -116,10 +118,10 @@ class Datatable extends Component {
    * @protected
    */
   collectColumnsFromObjectKeys_(expandedValue) {
-    var value = expandedValue.value;
+    let value = expandedValue.value;
     let columns = {};
     let columnsType = {};
-    Object.keys(value).forEach((key) => {
+    Object.keys(value).forEach(key => {
       columns[key] = true;
       columnsType[key] = value[key].type;
     });
@@ -135,12 +137,12 @@ class Datatable extends Component {
    */
   collectColumnsFromValues_(expandedValue) {
     switch (expandedValue.type) {
-      case Datatable.TYPES.ARRAY:
-        this.collectColumnsFromArrayValues_(expandedValue);
-        break;
-      case Datatable.TYPES.OBJECT:
-        this.collectColumnsFromObjectKeys_(expandedValue);
-        break;
+    case Datatable.TYPES.ARRAY:
+      this.collectColumnsFromArrayValues_(expandedValue);
+      break;
+    case Datatable.TYPES.OBJECT:
+      this.collectColumnsFromObjectKeys_(expandedValue);
+      break;
     }
   }
 
@@ -165,7 +167,7 @@ class Datatable extends Component {
     return {
       col: parseInt(matches[2], 10),
       prefix: ref.substr(0, ref.length - matches[0].length),
-      row: parseInt(matches[1], 10)
+      row: parseInt(matches[1], 10),
     };
   }
 
@@ -293,25 +295,25 @@ class Datatable extends Component {
    */
   handleNextFocusData_(event, data) {
     switch (event.keyCode) {
-      case 13:
-      case 32:
-        return this.handleEnterKey_(event, data);
-      case 33:
-        return this.buildRef_(data.prefix, 0, data.col);
-      case 34:
-        return this.buildRefLastRow_(event, data);
-      case 35:
-        return this.buildRefLastColumn_(event, data);
-      case 36:
-        return this.buildRef_(data.prefix, data.row, 0);
-      case 37:
-        return this.handleLeftArrowKey_(event, data);
-      case 38:
-        return this.handleUpArrowKey_(event, data);
-      case 39:
-        return this.handleRightArrowKey_(event, data);
-      case 40:
-        return this.handleDownArrowKey_(event, data);
+    case 13:
+    case 32:
+      return this.handleEnterKey_(event, data);
+    case 33:
+      return this.buildRef_(data.prefix, 0, data.col);
+    case 34:
+      return this.buildRefLastRow_(event, data);
+    case 35:
+      return this.buildRefLastColumn_(event, data);
+    case 36:
+      return this.buildRef_(data.prefix, data.row, 0);
+    case 37:
+      return this.handleLeftArrowKey_(event, data);
+    case 38:
+      return this.handleUpArrowKey_(event, data);
+    case 39:
+      return this.handleRightArrowKey_(event, data);
+    case 40:
+      return this.handleDownArrowKey_(event, data);
     }
   }
 
@@ -373,12 +375,12 @@ class Datatable extends Component {
    */
   visit_(value, acceptArray, acceptObject) {
     switch (this.getValueType_(value)) {
-      case Datatable.TYPES.ARRAY:
-        value.forEach((v, k) => acceptArray(v, k, value));
-        break;
-      case Datatable.TYPES.OBJECT:
-        Object.keys(value).forEach((k) => acceptObject(value[k], k, value));
-        break;
+    case Datatable.TYPES.ARRAY:
+      value.forEach((v, k) => acceptArray(v, k, value));
+      break;
+    case Datatable.TYPES.OBJECT:
+      Object.keys(value).forEach(k => acceptObject(value[k], k, value));
+      break;
     }
   }
 
@@ -390,13 +392,15 @@ class Datatable extends Component {
    * @protected
    */
   visitValuesAndExpandType_(value) {
-    var acceptArray = (val, key, reference) => reference[key] = this.visitValuesAndExpandType_(val);
-    var acceptObject = (val, key, reference) => reference[key] = this.visitValuesAndExpandType_(val);
+    let acceptArray = (val, key, reference) =>
+      (reference[key] = this.visitValuesAndExpandType_(val));
+    let acceptObject = (val, key, reference) =>
+      (reference[key] = this.visitValuesAndExpandType_(val));
     this.visit_(value, acceptArray, acceptObject);
-    var type = this.getValueType_(value);
-    var expanded = {
+    let type = this.getValueType_(value);
+    let expanded = {
       type: type,
-      value: value
+      value: value,
     };
     this.collectColumnsFromValues_(expanded);
     return expanded;
@@ -410,18 +414,19 @@ class Datatable extends Component {
    * @protected
    */
   visitValuesAndWrapStringValues_(value) {
-    var acceptArray = (val, key, reference) => reference[key] = this.visitValuesAndWrapStringValues_(val);
-    var acceptObject = (val, key, reference) => reference[key] = this.visitValuesAndWrapStringValues_(val);
+    let acceptArray = (val, key, reference) =>
+      (reference[key] = this.visitValuesAndWrapStringValues_(val));
+    let acceptObject = (val, key, reference) =>
+      (reference[key] = this.visitValuesAndWrapStringValues_(val));
     this.visit_(value, acceptArray, acceptObject);
     if (core.isObject(value)) {
-      var type = this.getValueType_(value.value);
+      let type = this.getValueType_(value.value);
       if (type === Datatable.TYPES.STRING) {
         value.value = Soy.toIncDom(value.value);
       }
     }
     return value;
   }
-
 }
 Soy.register(Datatable, templates);
 
@@ -432,7 +437,7 @@ Datatable.STATE = {
    * @type {*}
    */
   data: {
-    setter: 'setData_'
+    setter: 'setData_',
   },
 
   /**
@@ -442,7 +447,7 @@ Datatable.STATE = {
    */
   displayColumnsType: {
     validator: core.isBoolean,
-    value: true
+    value: true,
   },
 
   /**
@@ -454,7 +459,7 @@ Datatable.STATE = {
     validator: core.isFunction,
     value: function(columns) {
       return columns.sort();
-    }
+    },
   },
 
   /**
@@ -466,7 +471,7 @@ Datatable.STATE = {
     validator: core.isFunction,
     value: function(columnstype) {
       return columnstype;
-    }
+    },
   },
 
   /**
@@ -476,7 +481,7 @@ Datatable.STATE = {
    */
   hiddenClasses: {
     validator: core.isString,
-    value: 'hidden'
+    value: 'hidden',
   },
 
   /**
@@ -486,7 +491,7 @@ Datatable.STATE = {
    */
   labelClasses: {
     validator: core.isString,
-    value: 'collapsed expanded'
+    value: 'collapsed expanded',
   },
 
   /**
@@ -496,8 +501,8 @@ Datatable.STATE = {
    */
   tableClasses: {
     validator: core.isString,
-    value: 'table table-bordered table-condensed table-hover'
-  }
+    value: 'table table-bordered table-condensed table-hover',
+  },
 };
 
 // The regex used to extract the row/column positions from an element's ref.
@@ -515,8 +520,8 @@ Datatable.TYPES = {
   NUMBER: 'number',
   OBJECT: 'object',
   STRING: 'string',
-  UNDEFINED: 'undefined'
+  UNDEFINED: 'undefined',
 };
 
-export { Datatable };
+export {Datatable};
 export default Datatable;

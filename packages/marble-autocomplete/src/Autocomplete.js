@@ -3,8 +3,8 @@
 import core from 'metal';
 import debounce from 'metal-debounce';
 import dom from 'metal-dom';
-import { CancellablePromise as Promise } from 'metal-promise';
-import { Align } from 'metal-position';
+import {CancellablePromise as Promise} from 'metal-promise';
+import {Align} from 'metal-position';
 import AutocompleteBase from './AutocompleteBase';
 import Soy from 'metal-soy';
 
@@ -26,11 +26,25 @@ class Autocomplete extends AutocompleteBase {
   attached() {
     super.attached();
     this.setAriaAttributes_();
-    this.eventHandler_.add(dom.on(this.inputElement, 'focus', this.handleInputFocus_.bind(this)));
-    this.eventHandler_.add(dom.on(document, 'click', this.handleDocClick_.bind(this)));
-    this.eventHandler_.add(dom.on(window, 'resize', debounce(this.handleWindowResize_.bind(this), 100)));
-    this.eventHandler_.add(dom.on(this.inputElement, 'keydown', this.handleKeyDown_.bind(this)));
-    this.eventHandler_.add(this.getList().on('rendered', this.handleListRender_.bind(this)));
+    this.eventHandler_.add(
+      dom.on(this.inputElement, 'focus', this.handleInputFocus_.bind(this))
+    );
+    this.eventHandler_.add(
+      dom.on(document, 'click', this.handleDocClick_.bind(this))
+    );
+    this.eventHandler_.add(
+      dom.on(
+        window,
+        'resize',
+        debounce(this.handleWindowResize_.bind(this), 100)
+      )
+    );
+    this.eventHandler_.add(
+      dom.on(this.inputElement, 'keydown', this.handleKeyDown_.bind(this))
+    );
+    this.eventHandler_.add(
+      this.getList().on('rendered', this.handleListRender_.bind(this))
+    );
     if (this.visible) {
       this.align();
     }
@@ -41,23 +55,27 @@ class Autocomplete extends AutocompleteBase {
    */
   align() {
     this.element.style.width = this.inputElement.offsetWidth + 'px';
-    var position = Align.align(this.element, this.inputElement, Align.Bottom, this.autoBestAlign);
+    let position = Align.align(
+      this.element,
+      this.inputElement,
+      Align.Bottom,
+      this.autoBestAlign
+    );
 
     dom.removeClasses(this.element, this.positionCss_);
     switch (position) {
-      case Align.Top:
-      case Align.TopLeft:
-      case Align.TopRight:
-        this.positionCss_ = 'autocomplete-top';
-        break;
-      case Align.Bottom:
-      case Align.BottomLeft:
-      case Align.BottomRight:
-        this.positionCss_ = 'autocomplete-bottom';
-        break;
-      default:
-        this.positionCss_ = null;
-
+    case Align.Top:
+    case Align.TopLeft:
+    case Align.TopRight:
+      this.positionCss_ = 'autocomplete-top';
+      break;
+    case Align.Bottom:
+    case Align.BottomLeft:
+    case Align.BottomRight:
+      this.positionCss_ = 'autocomplete-bottom';
+      break;
+    default:
+      this.positionCss_ = null;
     }
     dom.addClasses(this.element, this.positionCss_);
   }
@@ -71,7 +89,10 @@ class Autocomplete extends AutocompleteBase {
     let option = this.currentList_[index];
     dom.removeClasses(this.currentList_[this.activeIndex_], 'active');
     this.activeIndex_ = index;
-    this.inputElement.setAttribute('aria-activedescendant', option.getAttribute('id'));
+    this.inputElement.setAttribute(
+      'aria-activedescendant',
+      option.getAttribute('id')
+    );
     dom.addClasses(option, 'active');
   }
 
@@ -81,7 +102,9 @@ class Autocomplete extends AutocompleteBase {
    * @return {number} Index
    */
   decreaseIndex_() {
-    return this.activeIndex_ === 0 ? this.getLastIndex_() : this.activeIndex_ - 1;
+    return this.activeIndex_ === 0
+      ? this.getLastIndex_()
+      : this.activeIndex_ - 1;
   }
 
   /**
@@ -160,18 +183,18 @@ class Autocomplete extends AutocompleteBase {
   handleKeyDown_(event) {
     if (this.visible) {
       switch (event.keyCode) {
-        case UP:
-          this.activateListItem_(this.decreaseIndex_());
-          event.preventDefault();
-          break;
-        case DOWN:
-          this.activateListItem_(this.increaseIndex_());
-          event.preventDefault();
-          break;
-        case ENTER:
-        case SPACE:
-          this.handleActionKeys_();
-          event.preventDefault();
+      case UP:
+        this.activateListItem_(this.decreaseIndex_());
+        event.preventDefault();
+        break;
+      case DOWN:
+        this.activateListItem_(this.increaseIndex_());
+        event.preventDefault();
+        break;
+      case ENTER:
+      case SPACE:
+        this.handleActionKeys_();
+        event.preventDefault();
         break;
       }
     }
@@ -193,7 +216,9 @@ class Autocomplete extends AutocompleteBase {
    * @return {number} Index
    */
   increaseIndex_() {
-    return this.activeIndex_ === this.getLastIndex_() ? 0 : this.activeIndex_ + 1;
+    return this.activeIndex_ === this.getLastIndex_()
+      ? 0
+      : this.activeIndex_ + 1;
   }
 
   /**
@@ -219,7 +244,7 @@ class Autocomplete extends AutocompleteBase {
       return;
     }
 
-    var self = this;
+    let self = this;
     return super.request(query).then(function(data) {
       if (data) {
         data.forEach(self.assertItemObjectStructure_);
@@ -274,10 +299,14 @@ class Autocomplete extends AutocompleteBase {
    */
   assertItemObjectStructure_(item) {
     if (!core.isObject(item)) {
-      throw new Promise.CancellationError('Autocomplete item must be an object');
+      throw new Promise.CancellationError(
+        'Autocomplete item must be an object'
+      );
     }
     if (!item.hasOwnProperty('textPrimary')) {
-      throw new Promise.CancellationError('Autocomplete item must be an object with \'textPrimary\' key');
+      throw new Promise.CancellationError(
+        'Autocomplete item must be an object with \'textPrimary\' key'
+      );
     }
   }
 }
@@ -298,7 +327,7 @@ Autocomplete.STATE = {
    */
   autoBestAlign: {
     value: true,
-    validator: core.isBoolean
+    validator: core.isBoolean,
   },
 
   /**
@@ -310,16 +339,16 @@ Autocomplete.STATE = {
     value: function(item) {
       if (core.isString(item)) {
         item = {
-          textPrimary: item
+          textPrimary: item,
         };
       }
       if (core.isObject(item) && !item.text) {
         item.text = item.textPrimary;
       }
       return item;
-    }
-  }
+    },
+  },
 };
 
-export { Autocomplete };
+export {Autocomplete};
 export default Autocomplete;

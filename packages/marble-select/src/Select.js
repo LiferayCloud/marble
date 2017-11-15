@@ -1,6 +1,6 @@
 'use strict';
 
-import { core, array } from 'metal';
+import {core, array} from 'metal';
 import dom from 'metal-dom';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
@@ -41,7 +41,9 @@ class Select extends Component {
    * @protected
    */
   focusIndex_(index) {
-    const option = this.element.querySelector(`.select-option:nth-child(${index + 1}) a`);
+    const option = this.element.querySelector(
+      `.select-option:nth-child(${index + 1}) a`
+    );
     if (option) {
       this.focusedIndex_ = index;
       option.focus();
@@ -89,7 +91,7 @@ class Select extends Component {
    * Handles the `itemsChanged` event. Sets the default value to the `selectedIndex`.
    * @param {!Object} data
    * @protected
-  */
+   */
   handleItemsChanged_(event) {
     if (event.prevVal && !array.equal(event.newVal, event.prevVal)) {
       this.selectedIndex = this.getSelectedIndexDefaultValue_();
@@ -131,22 +133,37 @@ class Select extends Component {
     const {keyCode} = event;
     if (this.expanded_) {
       switch (keyCode) {
-        case 27:
-          this.closedWithKeyboard_ = true;
-          this.expanded_ = false;
-          break;
-        case 38:
-          this.focusedIndex_ = core.isDefAndNotNull(this.focusedIndex_) ? this.focusedIndex_ : 1;
-          this.focusIndex_(this.focusedIndex_ === 0 ? this.items.length - 1 : this.focusedIndex_ - 1);
-          event.preventDefault();
-          break;
-        case 40:
-          this.focusedIndex_ = core.isDefAndNotNull(this.focusedIndex_) ? this.focusedIndex_ : -1;
-          this.focusIndex_(this.focusedIndex_ === this.items.length - 1 ? 0 : this.focusedIndex_ + 1);
-          event.preventDefault();
-          break;
+      case 27:
+        this.closedWithKeyboard_ = true;
+        this.expanded_ = false;
+        break;
+      case 38:
+        this.focusedIndex_ = core.isDefAndNotNull(this.focusedIndex_)
+          ? this.focusedIndex_
+          : 1;
+        this.focusIndex_(
+          this.focusedIndex_ === 0
+            ? this.items.length - 1
+            : this.focusedIndex_ - 1
+        );
+        event.preventDefault();
+        break;
+      case 40:
+        this.focusedIndex_ = core.isDefAndNotNull(this.focusedIndex_)
+          ? this.focusedIndex_
+          : -1;
+        this.focusIndex_(
+          this.focusedIndex_ === this.items.length - 1
+            ? 0
+            : this.focusedIndex_ + 1
+        );
+        event.preventDefault();
+        break;
       }
-    } else if ((keyCode === 13 || keyCode === 32) && dom.hasClass(event.target, 'dropdown-select')) {
+    } else if (
+      (keyCode === 13 || keyCode === 32) &&
+      dom.hasClass(event.target, 'dropdown-select')
+    ) {
       this.openedWithKeyboard_ = true;
       this.expanded_ = true;
       event.preventDefault();
@@ -210,7 +227,7 @@ Select.STATE = {
    * @default 'caret'
    */
   arrowClass: {
-    value: 'caret'
+    value: 'caret',
   },
 
   /**
@@ -220,7 +237,7 @@ Select.STATE = {
    */
   buttonClass: {
     validator: core.isString,
-    value: 'btn btn-default'
+    value: 'btn btn-default',
   },
 
   /**
@@ -230,7 +247,7 @@ Select.STATE = {
    */
   disabled: {
     validator: core.isBoolean,
-    value: false
+    value: false,
   },
 
   /**
@@ -243,7 +260,7 @@ Select.STATE = {
     },
     validator: core.isBoolean,
     value: false,
-    internal: true
+    internal: true,
   },
 
   /**
@@ -251,7 +268,7 @@ Select.STATE = {
    * @type {string}
    */
   hiddenInputName: {
-    validator: core.isString
+    validator: core.isString,
   },
 
   /**
@@ -262,7 +279,7 @@ Select.STATE = {
    */
   items: {
     validator: val => val instanceof Array,
-    value: []
+    value: [],
   },
 
   /**
@@ -271,7 +288,7 @@ Select.STATE = {
    * @type {string}
    */
   label: {
-    validator: core.isString
+    validator: core.isString,
   },
 
   /**
@@ -280,7 +297,7 @@ Select.STATE = {
    */
   selectedIndex: {
     validator: core.isNumber,
-    valueFn: 'getSelectedIndexDefaultValue_'
+    valueFn: 'getSelectedIndexDefaultValue_',
   },
 
   /**
@@ -288,8 +305,8 @@ Select.STATE = {
    * @type {Array<string>=}
    */
   values: {
-    validator: val => val instanceof Array
-  }
+    validator: val => val instanceof Array,
+  },
 };
 
 /**
@@ -299,5 +316,5 @@ Select.STATE = {
  */
 Select.ELEMENT_CLASSES = 'select';
 
-export { Select };
+export {Select};
 export default Select;

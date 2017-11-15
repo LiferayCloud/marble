@@ -10,11 +10,10 @@ import templates from './Tooltip.soy.js';
  * Tooltip component.
  */
 class Tooltip extends TooltipBase {
-
   syncVisible(visible) {
     super.syncVisible(visible);
 
-    if(visible) {
+    if (visible) {
       dom.addClasses(this.element, 'showing');
     } else {
       dom.removeClasses(this.element, 'showing');
@@ -46,5 +45,5 @@ Soy.register(Tooltip, templates);
 
 Tooltip.Align = TooltipBase.Align;
 
-export { Tooltip };
+export {Tooltip};
 export default Tooltip;

@@ -13,8 +13,8 @@ Toast.STATE = {
   animClasses: {
     value: {
       show: 'animated slideInBottom',
-      hide: 'animated slideOutBottom'
-    }
+      hide: 'animated slideOutBottom',
+    },
   },
 
   /**
@@ -23,15 +23,14 @@ Toast.STATE = {
    * @default true
    */
   closeButton: {
-    value: true
+    value: true,
   },
 
   /**
    * The content of close button of the alert.
    * @type {html|string}
    */
-  closeButtonHtml: {
-  },
+  closeButtonHtml: {},
 
   /**
    * Spinner indicating.
@@ -39,15 +38,14 @@ Toast.STATE = {
    * @default true
    */
   spinner: {
-    value: true
+    value: true,
   },
 
   /**
    * The CSS classes that should be added to the spinner.
    * @type {string}
    */
-  spinnerClasses: {
-  },
+  spinnerClasses: {},
 
   /**
    * Spinner is marked as done.
@@ -55,15 +53,15 @@ Toast.STATE = {
    * @default false
    */
   spinnerDone: {
-    value: false
+    value: false,
   },
 
   visible: {
-    value: true
-  }
+    value: true,
+  },
 };
 
 Soy.register(Toast, templates);
 
-export { Toast };
+export {Toast};
 export default Toast;

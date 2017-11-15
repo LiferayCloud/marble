@@ -47,7 +47,8 @@ class InputMatrix extends Component {
     const element = event.delegateTarget;
     const fieldIndex = this.convertAttrToInt_(element, 'data-field-index');
     const rowIndex = this.convertAttrToInt_(element, 'data-row-index');
-    this.currentFields_[rowIndex][fieldIndex] = this.currentFields_[rowIndex][fieldIndex] || {};
+    this.currentFields_[rowIndex][fieldIndex] =
+      this.currentFields_[rowIndex][fieldIndex] || {};
     this.currentFields_[rowIndex][fieldIndex].value = element.value;
     this.currentFields_ = this.currentFields_;
   }
@@ -81,8 +82,8 @@ class InputMatrix extends Component {
 
     const lastRow = fields[fields.length - 1];
     for (let i = 0; i < this.fieldsConfig.length; i++) {
-      var config = this.fieldsConfig[i];
-      var hasValue = lastRow[i] && lastRow[i].value && lastRow[i].value !== '';
+      let config = this.fieldsConfig[i];
+      let hasValue = lastRow[i] && lastRow[i].value && lastRow[i].value !== '';
       if (hasValue && !config.disableDuplication) {
         fields.push([]);
         break;
@@ -99,8 +100,7 @@ InputMatrix.STATE = {
    * The content of close button of the alert.
    * @type {html|string}
    */
-  closeButtonHtml: {
-  },
+  closeButtonHtml: {},
 
   /**
    * Internal information for each rendered field, in each row. Each field object can
@@ -113,7 +113,7 @@ InputMatrix.STATE = {
     internal: true,
     setter: 'setFieldsFn_',
     validator: core.isArray,
-    valueFn: () => []
+    valueFn: () => [],
   },
 
   /**
@@ -126,7 +126,7 @@ InputMatrix.STATE = {
   fields: {
     setter: 'setFieldsFn_',
     validator: core.isArray,
-    valueFn: () => []
+    valueFn: () => [],
   },
 
   /**
@@ -149,9 +149,9 @@ InputMatrix.STATE = {
    */
   fieldsConfig: {
     validator: core.isArray,
-    valueFn: () => [{}]
-  }
+    valueFn: () => [{}],
+  },
 };
 
-export { InputMatrix };
+export {InputMatrix};
 export default InputMatrix;

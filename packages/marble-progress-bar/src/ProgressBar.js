@@ -59,7 +59,7 @@ ProgressBar.STATE = {
    * @type {string}
    */
   barClass: {
-    validator: core.isString
+    validator: core.isString,
   },
 
   /**
@@ -69,10 +69,12 @@ ProgressBar.STATE = {
    */
   label: {
     validator: label => {
-      return !core.isDefAndNotNull(label) ||
+      return (
+        !core.isDefAndNotNull(label) ||
         core.isString(label) ||
-        core.isFunction(label);
-    }
+        core.isFunction(label)
+      );
+    },
   },
 
   /**
@@ -82,7 +84,7 @@ ProgressBar.STATE = {
    */
   max: {
     validator: core.isNumber,
-    value: 100
+    value: 100,
   },
 
   /**
@@ -92,7 +94,7 @@ ProgressBar.STATE = {
    */
   min: {
     validator: core.isNumber,
-    value: 0
+    value: 0,
   },
 
   /**
@@ -102,10 +104,10 @@ ProgressBar.STATE = {
   value: {
     setter: 'setterValueFn_',
     validator: core.isNumber,
-    value: 0
-  }
+    value: 0,
+  },
 };
 Soy.register(ProgressBar, templates);
 
-export { ProgressBar };
+export {ProgressBar};
 export default ProgressBar;

@@ -4,7 +4,7 @@ import core from 'metal';
 import dom from 'metal-dom';
 import CancellablePromise from 'metal-promise';
 import Component from 'metal-component';
-import { EventHandler } from 'metal-events';
+import {EventHandler} from 'metal-events';
 
 /*
  * AutocompleteBase component.
@@ -23,7 +23,9 @@ class AutocompleteBase extends Component {
    */
   attached() {
     if (this.inputElement) {
-      this.eventHandler_.add(dom.on(this.inputElement, 'input', this.handleUserInput_.bind(this)));
+      this.eventHandler_.add(
+        dom.on(this.inputElement, 'input', this.handleUserInput_.bind(this))
+      );
     }
   }
 
@@ -49,20 +51,22 @@ class AutocompleteBase extends Component {
    * @return {!CancellablePromise} Deferred request.
    */
   request(query) {
-    var self = this;
+    let self = this;
 
     if (this.pendingRequest) {
       this.pendingRequest.cancel('Cancelled by another request');
     }
 
-    var deferredData = self.data(query);
+    let deferredData = self.data(query);
     if (!core.isPromise(deferredData)) {
       deferredData = CancellablePromise.resolve(deferredData);
     }
 
     this.pendingRequest = deferredData.then(function(data) {
       if (Array.isArray(data)) {
-        return data.map(self.format.bind(self)).filter(val => core.isDefAndNotNull(val));
+        return data
+          .map(self.format.bind(self))
+          .filter(val => core.isDefAndNotNull(val));
       }
     });
 
@@ -98,7 +102,7 @@ AutocompleteBase.STATE = {
    * @default autocomplete- + core.getUid()
    */
   listId: {
-    valueFn: () => 'autocomplete-' + core.getUid()
+    valueFn: () => 'autocomplete-' + core.getUid(),
   },
 
   /**
@@ -108,7 +112,7 @@ AutocompleteBase.STATE = {
    * @type {Array.<object>|function}
    */
   data: {
-    setter: 'setData_'
+    setter: 'setData_',
   },
 
   /**
@@ -118,7 +122,7 @@ AutocompleteBase.STATE = {
    */
   format: {
     value: core.identityFunction,
-    validator: core.isFunction
+    validator: core.isFunction,
   },
 
   /**
@@ -126,7 +130,7 @@ AutocompleteBase.STATE = {
    * @type {DOMElement|string}
    */
   inputElement: {
-    setter: dom.toElement
+    setter: dom.toElement,
   },
 
   /**
@@ -144,7 +148,7 @@ AutocompleteBase.STATE = {
       this.inputElement.value = selectedValue.text;
       this.inputElement.focus();
     },
-    validator: core.isFunction
+    validator: core.isFunction,
   },
 
   /**
@@ -153,9 +157,9 @@ AutocompleteBase.STATE = {
    */
   visible: {
     validator: core.isBoolean,
-    value: false
-  }
+    value: false,
+  },
 };
 
-export { AutocompleteBase };
+export {AutocompleteBase};
 export default AutocompleteBase;

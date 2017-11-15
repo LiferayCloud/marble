@@ -1,7 +1,7 @@
 {
   "name": "marble-dropdown",
   "version": "3.0.7",
-  "description": "Metal's dropdown component",
+  "description": "Marble's dropdown component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-dropdown",
   "engines": {

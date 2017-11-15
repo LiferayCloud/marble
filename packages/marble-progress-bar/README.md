@@ -1,28 +1,25 @@
-# metal-progressbar
+# marble-progress-bar
 
-Metal's progress bar component
+Marble's progress-bar component.
 
 ## Setup
 
 1. Install NodeJS >= [v0.12.0](http://nodejs.org/dist/v0.12.0/), if you don't have it yet.
 
-2. Install global dependencies:
-
-  ```
-  [sudo] npm install -g gulp
-  ```
-
-3. Install local dependencies:
+2. Install local dependencies:
 
   ```
   npm install
-  bower install
   ```
 
-4. Build the code:
+3. Build the code:
 
   ```
   npm run build
   ```
 
-5. Open the demo at demos/index.html on your browser.
+4. Open `demos/index.html` on your browser.
+
+## License
+
+[BSD License](https://github.com/wedeploy/marble/blob/master/LICENSE.md) © Liferay, Inc.

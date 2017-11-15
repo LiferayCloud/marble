@@ -2,10 +2,10 @@
   "name": "marble",
   "description": "WeDeploy's style guide and UI components",
   "version": "3.0.6",
-  "repository": "wedeploy/marble",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble",
   "homepage": "marblecss.com",
   "main": "index.js",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "scripts": {
     "start": "gulp",
     "test": "stylelint src/*.scss --syntax scss"

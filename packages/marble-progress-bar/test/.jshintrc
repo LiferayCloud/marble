@@ -1,8 +1,0 @@
-{
-  "mocha": true,
-  "globals": {
-    "assert": true,
-		"IncrementalDOM": true
-  },
-  "extends": "../.jshintrc"
-}

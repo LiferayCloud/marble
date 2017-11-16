@@ -2,8 +2,18 @@
    Topbar
    ========================================================================== */
 
-.guide:not(.content) .topbar {
-  background: rgba($primary, 0.02)
+.guide:not(.content) {
+  .topbar {
+    background: rgba($primary, 0.02);
+  }
+
+  .topbar-list {
+    background-color: transparent;
+  }
+
+  .topbar-list-expanded {
+    background-color: mix($primary, $body-bg, 2%);
+  }
 }
 
 .docs .topbar-docs-main {

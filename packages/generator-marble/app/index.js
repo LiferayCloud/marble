@@ -50,7 +50,7 @@ module.exports = yeoman.generators.Base.extend({
   writing: function() {
     this.destinationRoot('packages/' + this.packageName);
     this.fs.copyTpl(
-      this.templatePath('demos/_index.html'),
+      this.templatePath('_demos/_index.html'),
       this.destinationPath('demos/index.html'),
       {
         camelCaseName: this.camelCaseName,
@@ -60,7 +60,7 @@ module.exports = yeoman.generators.Base.extend({
       }
     );
     this.fs.copyTpl(
-      this.templatePath('src/_Boilerplate.soy'),
+      this.templatePath('_src/_Boilerplate.soy'),
       this.destinationPath('src/' + this.componentName + '.soy'),
       {
         componentName: this.componentName,
@@ -68,7 +68,7 @@ module.exports = yeoman.generators.Base.extend({
       }
     );
     this.fs.copyTpl(
-      this.templatePath('src/_Boilerplate.js'),
+      this.templatePath('_src/_Boilerplate.js'),
       this.destinationPath('src/' + this.componentName + '.js'),
       {
         buildFormat: this.buildFormat,
@@ -79,7 +79,7 @@ module.exports = yeoman.generators.Base.extend({
     );
 
     this.fs.copyTpl(
-      this.templatePath('test/_Boilerplate.js'),
+      this.templatePath('_test/_Boilerplate.js'),
       this.destinationPath('test/' + this.componentName + '.js'),
       {
         componentName: this.componentName,
@@ -87,7 +87,7 @@ module.exports = yeoman.generators.Base.extend({
       }
     );
     this.fs.copyTpl(
-      this.templatePath('test/__snapshots__/_Boilerplate.js.snap'),
+      this.templatePath('_test/__snapshots__/_Boilerplate.js.snap'),
       this.destinationPath(
         'test/__snapshots__/' + this.componentName + '.js.snap'
       ),

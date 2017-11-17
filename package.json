@@ -27,9 +27,6 @@
     "transformIgnorePatterns": [
       "<rootDir>.*(node_modules)(?!.*marble.*).*$"
     ],
-    "testPathIgnorePatterns": [
-      "generator-marble"
-    ],
     "snapshotSerializers": [
       "metal-jest-serializer"
     ],

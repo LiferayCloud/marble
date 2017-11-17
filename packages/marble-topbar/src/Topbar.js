@@ -3,6 +3,7 @@
 import {core} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
+import Toggler from 'metal-toggler';
 
 import templates from './Topbar.soy.js';
 
@@ -10,12 +11,20 @@ import templates from './Topbar.soy.js';
  * Topbar component.
  */
 class Topbar extends Component {
-  created() {
-
+  attached() {
+    this.toggler = new Toggler({
+      content: '.topbar-list',
+      header: '.topbar-toggle',
+      expandedClasses: 'topbar-list-expanded'
+    });
   }
 
   disposed() {
+    let toggler = this.toggler;
 
+    if (toggler) {
+      toggler.dispose();
+    }
   }
 }
 

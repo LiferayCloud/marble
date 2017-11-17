@@ -1,9 +1,9 @@
 {
-  "name": "<%= repoName %>",
+  "name": "<%= packageName %>",
   "version": "0.0.0",
-  "description": "Metal <%= componentName %> component",
-  "license": "BSD",
-  "repository": "wedeploy/marble",
+  "description": "Marble's <%= componentName %> component",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/<%= packageName %>",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
@@ -18,6 +18,8 @@
   ],
   "scripts": {
     "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run soy && npm run compile",
     "soy": "metalsoy"
   },
   "keywords": [
@@ -27,23 +29,15 @@
   "dependencies": {
     "metal": "^2.14.0",
     "metal-component": "^2.14.0",
-    "metal-soy": "^2.14.0",
-    "metal-state": "^2.14.0",
-    "metal-web-component": "^2.14.0"
+    "metal-soy": "^2.14.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-node-env-inline": "^0.1.1",
-    "babel-preset-env": "^1.6.0",
-    "browserslist-config-marble-components": "^1.0.0",
-    "marble": "^2.0.0-beta.1",
-    "metal-dom": "^2.13.2",
-    "metal-tools-soy": "^4.2.1",
-    "webpack": "^3.0.0"
-  },
-  "browserslist": [
-    "extends browserslist-config-marble-components"
-  ]
+    "babel-cli": "^6.4.5",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-node-env-inline": "^0.2.0",
+    "babel-preset-metal": "^4.0.0",
+    "metal-tools-soy": "^4.2.6",
+    "metal-useragent": "^2.1.1",
+    "webpack": "^3.5.5"
+  }
 }

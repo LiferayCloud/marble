@@ -1,14 +1,22 @@
+'use strict';
+
+import {core} from 'metal';
 import Component from 'metal-component';
-import defineWebComponent from 'metal-web-component';
 import Soy from 'metal-soy';
-import {Config} from 'metal-state';
 
 import templates from './<%= componentName %>.soy.js';
 
 /**
- * Metal <%= componentName %> component.
+ * <%= componentName %> component.
  */
 class <%= componentName %> extends Component {
+  created() {
+
+  }
+
+  disposed() {
+
+  }
 }
 
 /**
@@ -18,17 +26,14 @@ class <%= componentName %> extends Component {
  */
 <%= componentName %>.STATE = {
   /**
-   * Id to be applied to the element.
-   * @instance
-   * @memberof <%= componentName %>
-   * @type {?string|undefined}
-   * @default undefined
+   * ID to be applied to the element.
+   * @type {!Object}
    */
-  id: Config.string(),
-
+  id: {
+    validator: core.isString,
+    value: '<%= componentName %>'
+  },
 };
-
-defineWebComponent('<%= repoName %>', <%= componentName %>);
 
 Soy.register(<%= componentName %>, templates);
 

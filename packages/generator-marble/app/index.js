@@ -3,15 +3,8 @@
 let _ = require('lodash');
 let chalk = require('chalk');
 let yeoman = require('yeoman-generator');
-let yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
-  initializing: function() {
-    this.log(
-      yosay('Welcome, let\'s generate a ' + chalk.blue('Marble') + ' component!')
-    );
-  },
-
   prompting: function() {
     let done = this.async();
 
@@ -20,7 +13,7 @@ module.exports = yeoman.generators.Base.extend({
         type: 'input',
         name: 'componentName',
         message: 'How do you want to name your component?',
-        default: 'MarbleComponent',
+        default: 'Component',
         validate: function(input) {
           if (!input) {
             return 'You must provide a component name.';
@@ -36,12 +29,6 @@ module.exports = yeoman.generators.Base.extend({
           return true;
         },
       },
-      {
-        type: 'input',
-        name: 'repoDescription',
-        message: 'How would you describe this component?',
-        default: 'My awesome Marble component',
-      },
     ];
 
     this.prompt(
@@ -49,21 +36,19 @@ module.exports = yeoman.generators.Base.extend({
       function(props) {
         let componentName = props.componentName;
 
-        this.camelCaseName = _.camelCase(componentName);
         this.componentName = componentName;
+        this.camelCaseName = _.camelCase(componentName);
         this.capitalizeName = _.startCase(componentName);
         this.kebabCaseName = _.kebabCase(componentName);
 
-        this.repoName = this.kebabCaseName;
-        this.repoOwner = props.repoOwner;
-        this.repoDescription = props.repoDescription;
+        this.packageName = `marble-${this.kebabCaseName}`;
         done();
       }.bind(this)
     );
   },
 
   writing: function() {
-    this.destinationRoot('packages/' + this.repoName);
+    this.destinationRoot('packages/' + this.packageName);
     this.fs.copyTpl(
       this.templatePath('demos/_index.html'),
       this.destinationPath('demos/index.html'),
@@ -71,8 +56,7 @@ module.exports = yeoman.generators.Base.extend({
         camelCaseName: this.camelCaseName,
         componentName: this.componentName,
         capitalizeName: this.capitalizeName,
-        kebabCaseName: this.kebabCaseName,
-        repoName: this.repoName,
+        packageName: this.packageName,
       }
     );
     this.fs.copyTpl(
@@ -90,27 +74,25 @@ module.exports = yeoman.generators.Base.extend({
         buildFormat: this.buildFormat,
         componentName: this.componentName,
         templateLanguage: this.templateLanguage,
-        kebabCaseName: this.kebabCaseName,
-        repoName: this.repoName,
+        packageName: this.packageName,
       }
     );
 
     this.fs.copyTpl(
-      this.templatePath('src/__tests__/_Boilerplate.js'),
-      this.destinationPath('src/__tests__/' + this.componentName + '.js'),
+      this.templatePath('test/_Boilerplate.js'),
+      this.destinationPath('test/' + this.componentName + '.js'),
       {
         componentName: this.componentName,
         kebabCaseName: this.kebabCaseName,
       }
     );
     this.fs.copyTpl(
-      this.templatePath('src/__tests__/__snapshots__/_Boilerplate.js.snap'),
+      this.templatePath('test/__snapshots__/_Boilerplate.js.snap'),
       this.destinationPath(
-        'src/__tests__/__snapshots__/' + this.componentName + '.js.snap'
+        'test/__snapshots__/' + this.componentName + '.js.snap'
       ),
       {
         componentName: this.componentName,
-        kebabCaseName: this.kebabCaseName,
       }
     );
     this.fs.copyTpl(
@@ -118,24 +100,20 @@ module.exports = yeoman.generators.Base.extend({
       this.destinationPath('package.json'),
       {
         componentName: this.componentName,
-        repoName: this.repoName,
-        repoOwner: this.repoOwner,
-        repoDescription: this.repoDescription,
+        packageName: this.packageName,
       }
     );
     this.fs.copyTpl(
       this.templatePath('_README.md'),
       this.destinationPath('README.md'),
       {
-        repoName: this.repoName,
-        repoDescription: this.repoDescription,
+        packageName: this.packageName,
         componentName: this.componentName,
-        kebabCaseName: this.kebabCaseName,
       }
     );
     this.fs.copy(
-      this.templatePath('_LICENSE.md'),
-      this.destinationPath('LICENSE.md')
+      this.templatePath('_babelrc'),
+      this.destinationPath('.babelrc')
     );
     this.fs.copy(
       this.templatePath('_gitignore'),
@@ -146,16 +124,18 @@ module.exports = yeoman.generators.Base.extend({
       this.destinationPath('webpack.config.js'),
       {
         componentName: this.componentName,
-        kebabCaseName: this.kebabCaseName,
-        repoName: this.repoName,
+        packageName: this.packageName,
       }
     );
   },
 
   install: function() {
+    this.log('\nI\'m all done. Running yarn for you to install the required dependencies.\n');
+
     const ps = this.spawnCommand('yarn', ['install', '--no-lockfile'], {
       stdio: 'ignore',
     });
-    ps.on('close', code => console.log(`yarn install exited with ${code}`));
+
+    ps.on('close', code => this.log('Done!'));
   },
 });

@@ -10,8 +10,7 @@ describe('marble-generator:app', function() {
       .run(path.join(__dirname, '../app'))
       .withOptions({skipInstall: true})
       .withPrompts({
-        componentName: 'MarbleComponent',
-        repoDescription: 'My awesome Marble componentc',
+        componentName: 'MarbleComponent'
       })
       .on('end', done);
   });
@@ -21,10 +20,13 @@ describe('marble-generator:app', function() {
       'demos/index.html',
       'src/MarbleComponent.js',
       'src/MarbleComponent.soy',
-      'src/__tests__/MarbleComponent.js',
-      'webpack.config.js',
+      'test/MarbleComponent.js',
+      'test/__snapshots__/MarbleComponent.js.snap',
+      '.babelrc',
+      '.gitignore',
       'package.json',
       'README.md',
+      'webpack.config.js',
     ]);
   });
 

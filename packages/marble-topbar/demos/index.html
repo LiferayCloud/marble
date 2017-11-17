@@ -12,50 +12,88 @@
 
   <style>
     h1 {
-      margin: 96px 20px 24px;
+      margin: 48px 20px 24px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    .topbar.topbar-light {
+      box-shadow: 0px 2px 8px rgba(12, 14, 26, 0.1);
     }
   </style>
 
   <script src="../build/globals/marble-topbar.js"></script>
 </head>
 <body>
-  <h1>Topbar Default: Logo Text</h1>
+  <section>
+    <h2>Choose a theme</h2>
+    <form>
+      <label>
+        <input type="radio" name="theme" value="default" onclick="changeTheme(this)" checked> Default
+      </label>
+      <label>
+        <input type="radio" name="theme" value="light" onclick="changeTheme(this)"> Light
+      </label>
+    </form>
+  </section>
+
+  <h1>Topbar: Logo Text</h1>
   <div id="logo-text"></div>
 
-  <h1>Topbar Default: Logo Icon</h1>
+  <h1>Topbar: Logo Icon</h1>
   <div id="logo-icon"></div>
 
-  <h1>Topbar Default: Logo Icon + Text</h1>
+  <h1>Topbar: Logo Icon + Text</h1>
   <div id="logo-icon-text"></div>
 
-  <h1>Topbar Default: Logo Image</h1>
+  <h1>Topbar: Logo Image</h1>
   <div id="logo-image"></div>
 
-  <h1>Topbar Default: Logo Image + Text</h1>
+  <h1>Topbar: Logo Image + Text</h1>
   <div id="logo-image-text"></div>
 
   <script>
-    new metal.Topbar({
+    var logoText = new metal.Topbar({
       text: 'Marble'
     }, '#logo-text');
 
-    new metal.Topbar({
+    var logoIcon = new metal.Topbar({
       icon: 'icon-12-github'
     }, '#logo-icon');
 
-    new metal.Topbar({
+    var logoIconText = new metal.Topbar({
       text: 'Marble',
       icon: 'icon-12-github'
     }, '#logo-icon-text');
 
-    new metal.Topbar({
+    var logoImage = new metal.Topbar({
       image: 'logo.svg'
     }, '#logo-image');
 
-    new metal.Topbar({
+    var logoImageText = new metal.Topbar({
       text: 'Marble',
       image: 'logo.svg'
     }, '#logo-image-text');
+
+    // Themes
+
+    var topbars = [
+      logoText, logoIcon, logoIconText, logoImage, logoImageText
+    ];
+
+    function changeTheme(radio) {
+      if (radio.value === 'light') {
+        topbars.forEach(function(topbar) {
+          topbar.elementClasses = 'topbar topbar-light';
+        });
+      } else {
+        topbars.forEach(function(topbar) {
+          topbar.elementClasses = 'topbar';
+        });
+      }
+    }
   </script>
 </body>
 </html>

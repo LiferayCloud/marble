@@ -56,25 +56,35 @@
 
   <script>
     const topbarLogoText = new metal.Topbar({
-      logoText: 'Marble'
+      logo: {
+        text: 'Marble'
+      }
     }, '#logo-text');
 
     const topbarLogoIcon = new metal.Topbar({
-      logoIcon: 'icon-12-github'
+      logo: {
+        icon: 'icon-12-github'
+      }
     }, '#logo-icon');
 
     const topbarLogoIconText = new metal.Topbar({
-      logoText: 'Marble',
-      logoIcon: 'icon-12-github'
+      logo: {
+        text: 'Marble',
+        icon: 'icon-12-github'
+      }
     }, '#logo-icon-text');
 
     const topbarLogoImage = new metal.Topbar({
-      logoImage: 'logo.svg'
+      logo: {
+        image: 'logo.svg'
+      }
     }, '#logo-image');
 
     const topbarLogoImageText = new metal.Topbar({
-      logoText: 'Marble',
-      logoImage: 'logo.svg'
+      logo: {
+        text: 'Marble',
+        image: 'logo.svg'
+      }
     }, '#logo-image-text');
 
     // Themes
@@ -88,11 +98,11 @@
     function changeTheme(radio) {
       if (radio.value === 'light') {
         topbars.forEach((topbar) => {
-          topbar.elementClasses = 'topbar topbar-light';
+          topbar.theme = 'topbar topbar-light';
         });
       } else {
         topbars.forEach((topbar) => {
-          topbar.elementClasses = 'topbar';
+          topbar.theme = 'topbar';
         });
       }
     }

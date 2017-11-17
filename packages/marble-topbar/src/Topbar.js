@@ -1,9 +1,9 @@
 'use strict';
 
-import {core} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import Toggler from 'metal-toggler';
+import {Config} from 'metal-state';
 
 import templates from './Topbar.soy.js';
 
@@ -35,37 +35,25 @@ class Topbar extends Component {
  */
 Topbar.STATE = {
   /**
-   * Text used on the logo
+   * The background theme of the topbar
    * @type {!String}
+   * @default topbar
    */
-  elementClasses: {
-    validator: core.isString,
-    value: 'topbar'
-  },
+  theme: Config.oneOf([
+    'topbar',
+    'topbar topbar-light'
+  ]).value('topbar'),
 
   /**
-   * Icon used on the logo
-   * @type {!String}
+   * Defines how the logo should look like
+   * @type {?Object|undefined}
+   * @default undefined
    */
-  logoIcon: {
-    validator: core.isString
-  },
-
-  /**
-   * Image used on the logo
-   * @type {!String}
-   */
-  logoImage: {
-    validator: core.isString
-  },
-
-  /**
-   * Text used on the logo
-   * @type {!String}
-   */
-  logoText: {
-    validator: core.isString
-  },
+  logo: Config.shapeOf({
+    icon: Config.string(),
+    image: Config.string(),
+    text: Config.string(),
+  })
 };
 
 Soy.register(Topbar, templates);

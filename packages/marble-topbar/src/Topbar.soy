@@ -4,16 +4,16 @@
  *
  */
 {template .render}
-  {@param? elementClasses: string}
-  {@param? logoIcon: string}
-  {@param? logoImage: string}
-  {@param? logoText: string}
+  {@param? theme: string}
+  {@param? logo: [
+    icon: string,
+    image: string,
+    text: string
+  ]}
 
-  <nav class="{$elementClasses}">
+  <nav class="{$theme}">
     {call .logo}
-      {param logoIcon: $logoIcon /}
-      {param logoImage: $logoImage /}
-      {param logoText: $logoText /}
+      {param logo: $logo /}
     {/call}
 
     {call .menu /}
@@ -24,22 +24,24 @@
  *
  */
 {template .logo}
-  {@param? logoIcon: string}
-  {@param? logoImage: string}
-  {@param? logoText: string}
+  {@param? logo: [
+    icon: string,
+    image: string,
+    text: string
+  ]}
 
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="#">
-      {if $logoIcon}
-        <span class="topbar-logo-icon {$logoIcon}"></span>
+      {if $logo and $logo.icon}
+        <span class="topbar-logo-icon {$logo.icon}"></span>
       {/if}
 
-      {if $logoImage}
-        <img class="topbar-logo-image" src="{$logoImage}">
+      {if $logo and $logo.image}
+        <img class="topbar-logo-image" src="{$logo.image}">
       {/if}
 
-      {if $logoText}
-        <h3 class="topbar-logo-text">{$logoText}</h3>
+      {if $logo and $logo.text}
+        <h3 class="topbar-logo-text">{$logo.text}</h3>
       {/if}
     </a>
   </div>

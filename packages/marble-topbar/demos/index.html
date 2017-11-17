@@ -28,6 +28,12 @@
   <h1>Topbar Default: Logo Icon + Text</h1>
   <div id="logo-icon-text"></div>
 
+  <h1>Topbar Default: Logo Image</h1>
+  <div id="logo-image"></div>
+
+  <h1>Topbar Default: Logo Image + Text</h1>
+  <div id="logo-image-text"></div>
+
   <script>
     new metal.Topbar({
       text: 'Marble'
@@ -41,6 +47,15 @@
       text: 'Marble',
       icon: 'icon-12-github'
     }, '#logo-icon-text');
+
+    new metal.Topbar({
+      image: 'logo.svg'
+    }, '#logo-image');
+
+    new metal.Topbar({
+      text: 'Marble',
+      image: 'logo.svg'
+    }, '#logo-image-text');
   </script>
 </body>
 </html>

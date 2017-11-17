@@ -15,8 +15,7 @@
     "eslint-config-liferay": "^2.0.10",
     "jest": "^21.2.1",
     "lerna": "^2.5.1",
-    "metal": "^2.14.0",
-    "metal-dom": "^2.14.0",
+    "metal-jest-serializer": "^1.0.1",
     "prettier-eslint-cli": "^4.4.0",
     "regenerator-runtime": "^0.11.0",
     "sinon": "^4.1.2"
@@ -30,6 +29,9 @@
     ],
     "testPathIgnorePatterns": [
       "generator-marble"
+    ],
+    "snapshotSerializers": [
+      "metal-jest-serializer"
     ],
     "resolver": "./jest-marble-lerna-resolver"
   },

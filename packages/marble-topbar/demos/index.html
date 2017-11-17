@@ -55,41 +55,43 @@
   <div id="logo-image-text"></div>
 
   <script>
-    var logoText = new metal.Topbar({
-      text: 'Marble'
+    const topbarLogoText = new metal.Topbar({
+      logoText: 'Marble'
     }, '#logo-text');
 
-    var logoIcon = new metal.Topbar({
-      icon: 'icon-12-github'
+    const topbarLogoIcon = new metal.Topbar({
+      logoIcon: 'icon-12-github'
     }, '#logo-icon');
 
-    var logoIconText = new metal.Topbar({
-      text: 'Marble',
-      icon: 'icon-12-github'
+    const topbarLogoIconText = new metal.Topbar({
+      logoText: 'Marble',
+      logoIcon: 'icon-12-github'
     }, '#logo-icon-text');
 
-    var logoImage = new metal.Topbar({
-      image: 'logo.svg'
+    const topbarLogoImage = new metal.Topbar({
+      logoImage: 'logo.svg'
     }, '#logo-image');
 
-    var logoImageText = new metal.Topbar({
-      text: 'Marble',
-      image: 'logo.svg'
+    const topbarLogoImageText = new metal.Topbar({
+      logoText: 'Marble',
+      logoImage: 'logo.svg'
     }, '#logo-image-text');
 
     // Themes
 
-    var topbars = [
-      logoText, logoIcon, logoIconText, logoImage, logoImageText
+    const topbars = [
+      topbarLogoText,
+      topbarLogoIcon, topbarLogoIconText,
+      topbarLogoImage, topbarLogoImageText
     ];
 
     function changeTheme(radio) {
       if (radio.value === 'light') {
-        topbars.forEach(function(topbar) {
+        topbars.forEach((topbar) => {
           topbar.elementClasses = 'topbar topbar-light';
         });
       } else {
-        topbars.forEach(function(topbar) {
+        topbars.forEach((topbar) => {
           topbar.elementClasses = 'topbar';
         });
       }

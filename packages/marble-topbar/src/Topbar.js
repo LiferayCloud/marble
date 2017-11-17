@@ -39,22 +39,15 @@ Topbar.STATE = {
    * @type {!String}
    */
   elementClasses: {
-    validator: core.isString
-  },
-
-  /**
-   * Text used on the logo
-   * @type {!String}
-   */
-  text: {
-    validator: core.isString
+    validator: core.isString,
+    value: 'topbar'
   },
 
   /**
    * Icon used on the logo
    * @type {!String}
    */
-  icon: {
+  logoIcon: {
     validator: core.isString
   },
 
@@ -62,7 +55,15 @@ Topbar.STATE = {
    * Image used on the logo
    * @type {!String}
    */
-  image: {
+  logoImage: {
+    validator: core.isString
+  },
+
+  /**
+   * Text used on the logo
+   * @type {!String}
+   */
+  logoText: {
     validator: core.isString
   },
 };

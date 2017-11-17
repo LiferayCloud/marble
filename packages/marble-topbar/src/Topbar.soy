@@ -5,15 +5,15 @@
  */
 {template .render}
   {@param? elementClasses: string}
-  {@param? text: string}
-  {@param? icon: string}
-  {@param? image: string}
+  {@param? logoIcon: string}
+  {@param? logoImage: string}
+  {@param? logoText: string}
 
-  <nav class="{$elementClasses ?: 'topbar'}">
+  <nav class="{$elementClasses}">
     {call .logo}
-      {param text: $text /}
-      {param icon: $icon /}
-      {param image: $image /}
+      {param logoIcon: $logoIcon /}
+      {param logoImage: $logoImage /}
+      {param logoText: $logoText /}
     {/call}
 
     {call .menu /}
@@ -24,22 +24,22 @@
  *
  */
 {template .logo}
-  {@param? text: string}
-  {@param? icon: string}
-  {@param? image: string}
+  {@param? logoIcon: string}
+  {@param? logoImage: string}
+  {@param? logoText: string}
 
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="#">
-      {if $icon}
-        <span class="topbar-logo-icon {$icon}"></span>
+      {if $logoIcon}
+        <span class="topbar-logo-icon {$logoIcon}"></span>
       {/if}
 
-      {if $image}
-        <img class="topbar-logo-image" src="{$image}">
+      {if $logoImage}
+        <img class="topbar-logo-image" src="{$logoImage}">
       {/if}
 
-      {if $text}
-        <h3 class="topbar-logo-text">{$text}</h3>
+      {if $logoText}
+        <h3 class="topbar-logo-text">{$logoText}</h3>
       {/if}
     </a>
   </div>

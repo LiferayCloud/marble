@@ -4,8 +4,13 @@
  *
  */
 {template .render}
+  {@param? text: string}
+
   <nav class="topbar">
-    {call .logo /}
+    {call .logo}
+      {param text: $text /}
+    {/call}
+
     {call .menu /}
   </nav>
 {/template}
@@ -14,9 +19,11 @@
  *
  */
 {template .logo}
+  {@param? text: string}
+
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="#">
-      <h3 class="topbar-logo-text">Metal.js</h3>
+      <h3 class="topbar-logo-text">{$text}</h3>
     </a>
   </div>
 {/template}

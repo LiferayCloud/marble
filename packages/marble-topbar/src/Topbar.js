@@ -35,12 +35,11 @@ class Topbar extends Component {
  */
 Topbar.STATE = {
   /**
-   * ID to be applied to the element.
-   * @type {!Object}
+   * Text used on the logo
+   * @type {!String}
    */
-  id: {
-    validator: core.isString,
-    value: 'Topbar'
+  text: {
+    validator: core.isString
   },
 };
 

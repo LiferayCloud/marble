@@ -5,10 +5,12 @@
  */
 {template .render}
   {@param? text: string}
+  {@param? icon: string}
 
   <nav class="topbar">
     {call .logo}
       {param text: $text /}
+      {param icon: $icon /}
     {/call}
 
     {call .menu /}
@@ -20,10 +22,17 @@
  */
 {template .logo}
   {@param? text: string}
+  {@param? icon: string}
 
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="#">
-      <h3 class="topbar-logo-text">{$text}</h3>
+      {if $text}
+        <h3 class="topbar-logo-text">{$text}</h3>
+      {/if}
+
+      {if $icon}
+        <span class="topbar-logo-icon {$icon}"></span>
+      {/if}
     </a>
   </div>
 {/template}

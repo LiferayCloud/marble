@@ -41,6 +41,14 @@ Topbar.STATE = {
   text: {
     validator: core.isString
   },
+
+  /**
+   * Icon used on the logo
+   * @type {!String}
+   */
+  icon: {
+    validator: core.isString
+  },
 };
 
 Soy.register(Topbar, templates);

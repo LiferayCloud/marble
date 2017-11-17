@@ -74,6 +74,7 @@ module.exports = yeoman.generators.Base.extend({
         buildFormat: this.buildFormat,
         componentName: this.componentName,
         templateLanguage: this.templateLanguage,
+        kebabCaseName: this.kebabCaseName,
         packageName: this.packageName,
       }
     );

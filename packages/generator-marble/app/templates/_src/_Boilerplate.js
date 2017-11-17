@@ -31,7 +31,7 @@ class <%= componentName %> extends Component {
    */
   id: {
     validator: core.isString,
-    value: '<%= componentName %>'
+    value: '<%= kebabCaseName %>'
   },
 };
 

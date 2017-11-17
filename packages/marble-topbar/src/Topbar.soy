@@ -4,11 +4,12 @@
  *
  */
 {template .render}
+  {@param? elementClasses: string}
   {@param? text: string}
   {@param? icon: string}
   {@param? image: string}
 
-  <nav class="topbar">
+  <nav class="{$elementClasses ?: 'topbar'}">
     {call .logo}
       {param text: $text /}
       {param icon: $icon /}

@@ -38,6 +38,14 @@ Topbar.STATE = {
    * Text used on the logo
    * @type {!String}
    */
+  elementClasses: {
+    validator: core.isString
+  },
+
+  /**
+   * Text used on the logo
+   * @type {!String}
+   */
   text: {
     validator: core.isString
   },

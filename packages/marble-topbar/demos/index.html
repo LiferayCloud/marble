@@ -25,6 +25,9 @@
   <h1>Topbar Default: Logo Icon</h1>
   <div id="logo-icon"></div>
 
+  <h1>Topbar Default: Logo Icon + Text</h1>
+  <div id="logo-icon-text"></div>
+
   <script>
     new metal.Topbar({
       text: 'Marble'
@@ -33,6 +36,11 @@
     new metal.Topbar({
       icon: 'icon-12-github'
     }, '#logo-icon');
+
+    new metal.Topbar({
+      text: 'Marble',
+      icon: 'icon-12-github'
+    }, '#logo-icon-text');
   </script>
 </body>
 </html>

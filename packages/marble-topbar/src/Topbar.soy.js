@@ -25,7 +25,7 @@ var soyIdom = goog.require('soy.idom');
 /**
  * @param {{
  *  theme: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  logo: (null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
+ *  logo: (null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
  * }} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
@@ -37,8 +37,8 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_data = opt_data || {};
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var theme = soy.asserts.assertType(opt_data.theme == null || (goog.isString(opt_data.theme) || opt_data.theme instanceof goog.soy.data.SanitizedContent), 'theme', opt_data.theme, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  /** @type {null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}} */
-  var logo = soy.asserts.assertType(opt_data.logo == null || goog.isObject(opt_data.logo), 'logo', opt_data.logo, 'null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}');
+  /** @type {null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}} */
+  var logo = soy.asserts.assertType(opt_data.logo == null || goog.isObject(opt_data.logo), 'logo', opt_data.logo, 'null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}');
   incrementalDom.elementOpenStart('nav');
       incrementalDom.attr('class', theme);
   incrementalDom.elementOpenEnd();
@@ -50,7 +50,7 @@ exports.render = $render;
 /**
  * @typedef {{
  *  theme: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  logo: (null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
+ *  logo: (null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
  * }}
  */
 $render.Params;
@@ -61,7 +61,7 @@ if (goog.DEBUG) {
 
 /**
  * @param {{
- *  logo: (null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
+ *  logo: (null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
  * }} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
@@ -71,14 +71,15 @@ if (goog.DEBUG) {
 function $logo(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   opt_data = opt_data || {};
-  /** @type {null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}} */
-  var logo = soy.asserts.assertType(opt_data.logo == null || goog.isObject(opt_data.logo), 'logo', opt_data.logo, 'null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}');
+  /** @type {null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}} */
+  var logo = soy.asserts.assertType(opt_data.logo == null || goog.isObject(opt_data.logo), 'logo', opt_data.logo, 'null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)}');
   incrementalDom.elementOpenStart('div');
       incrementalDom.attr('class', 'topbar-logo');
   incrementalDom.elementOpenEnd();
+    var href__soy18 = logo && logo.href ? logo.href : '/';
     incrementalDom.elementOpenStart('a');
         incrementalDom.attr('class', 'topbar-logo-link');
-        incrementalDom.attr('href', '#');
+        incrementalDom.attr('href', href__soy18);
     incrementalDom.elementOpenEnd();
       if (logo && logo.icon) {
         incrementalDom.elementOpenStart('span');
@@ -106,7 +107,7 @@ function $logo(opt_data, opt_ijData, opt_ijData_deprecated) {
 exports.logo = $logo;
 /**
  * @typedef {{
- *  logo: (null|undefined|{icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
+ *  logo: (null|undefined|{href: (!goog.soy.data.SanitizedContent|string), icon: (!goog.soy.data.SanitizedContent|string), image: (!goog.soy.data.SanitizedContent|string), text: (!goog.soy.data.SanitizedContent|string)})
  * }}
  */
 $logo.Params;
@@ -203,9 +204,9 @@ if (goog.DEBUG) {
 }
 
 exports.render.params = ["theme","logo"];
-exports.render.types = {"theme":"string","logo":"[\n    icon: string,\n    image: string,\n    text: string\n  ]"};
+exports.render.types = {"theme":"string","logo":"[\n    href: string,\n    icon: string,\n    image: string,\n    text: string\n  ]"};
 exports.logo.params = ["logo"];
-exports.logo.types = {"logo":"[\n    icon: string,\n    image: string,\n    text: string\n  ]"};
+exports.logo.types = {"logo":"[\n    href: string,\n    icon: string,\n    image: string,\n    text: string\n  ]"};
 exports.menu.params = [];
 exports.menu.types = {};
 templates = exports;

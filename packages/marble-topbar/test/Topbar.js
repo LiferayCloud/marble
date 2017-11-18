@@ -17,9 +17,19 @@ describe('Topbar', function() {
     expect(topbar).toMatchSnapshot();
   });
 
-  it('should render a topbar light', () => {
+  it('should render with a light theme', () => {
     topbar = new Topbar({
       theme: 'topbar topbar-light'
+    });
+
+    expect(topbar).toMatchSnapshot();
+  });
+
+  it('should render a logo with href', () => {
+    topbar = new Topbar({
+      logo: {
+        href: '#'
+      }
     });
 
     expect(topbar).toMatchSnapshot();

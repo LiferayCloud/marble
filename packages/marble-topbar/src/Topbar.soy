@@ -6,6 +6,7 @@
 {template .render}
   {@param? theme: string}
   {@param? logo: [
+    href: string,
     icon: string,
     image: string,
     text: string
@@ -25,13 +26,16 @@
  */
 {template .logo}
   {@param? logo: [
+    href: string,
     icon: string,
     image: string,
     text: string
   ]}
 
   <div class="topbar-logo">
-    <a class="topbar-logo-link" href="#">
+    {let $href: $logo and $logo.href ? $logo.href : '/' /}
+
+    <a class="topbar-logo-link" href="{$href}">
       {if $logo and $logo.icon}
         <span class="topbar-logo-icon {$logo.icon}"></span>
       {/if}

@@ -50,6 +50,7 @@ Topbar.STATE = {
    * @default undefined
    */
   logo: Config.shapeOf({
+    href: Config.string(),
     icon: Config.string(),
     image: Config.string(),
     text: Config.string(),

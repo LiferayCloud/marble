@@ -54,7 +54,20 @@ Topbar.STATE = {
     icon: Config.string(),
     image: Config.string(),
     text: Config.string(),
-  })
+  }),
+
+  /**
+   * The list of menu items
+   * @type {?Array|undefined}
+   * @default undefined
+   */
+  items: Config.arrayOf(
+    Config.shapeOf({
+      href: Config.string(),
+      label: Config.string(),
+      selected: Config.bool(),
+    })
+  ).value([]),
 };
 
 Soy.register(Topbar, templates);

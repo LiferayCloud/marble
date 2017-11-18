@@ -86,4 +86,22 @@ describe('Topbar', function() {
 
     expect(topbar).toMatchSnapshot();
   });
+
+  it('should render a list of navigation items', () => {
+    topbar = new Topbar({
+      items: [
+        {
+          label: 'Apps',
+          href: '/apps',
+          selected: true
+        },
+        {
+          label: 'Blog',
+          href: '/blog'
+        }
+      ]
+    });
+
+    expect(topbar).toMatchSnapshot();
+  });
 });

@@ -55,36 +55,63 @@
   <div id="logo-image-text"></div>
 
   <script>
+    const navigation = [
+      {
+        label: 'Apps',
+        href: '/apps',
+        selected: true
+      },
+      {
+        label: 'Blog',
+        href: '/blog'
+      },
+      {
+        label: 'Docs',
+        href: '/docs'
+      },
+      {
+        label: 'Log in',
+        href: '/login'
+      },
+    ];
+
+    // Topbars
+
     const topbarLogoText = new metal.Topbar({
       logo: {
         text: 'Marble'
-      }
+      },
+      items: navigation
     }, '#logo-text');
 
     const topbarLogoIcon = new metal.Topbar({
       logo: {
         icon: 'icon-12-github'
-      }
+      },
+      items: navigation
     }, '#logo-icon');
 
     const topbarLogoIconText = new metal.Topbar({
       logo: {
         text: 'Marble',
         icon: 'icon-12-github'
-      }
+      },
+      items: navigation
     }, '#logo-icon-text');
 
     const topbarLogoImage = new metal.Topbar({
       logo: {
         image: 'logo.svg'
-      }
+      },
+      items: navigation
     }, '#logo-image');
 
     const topbarLogoImageText = new metal.Topbar({
       logo: {
         text: 'Marble',
         image: 'logo.svg'
-      }
+      },
+      items: navigation
     }, '#logo-image-text');
 
     // Themes

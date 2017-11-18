@@ -5,27 +5,22 @@ exports[`Topbar should generate the default markup 1`] = `
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/"></a>
   </div>
+</nav>
+`;
+
+exports[`Topbar should render a list of navigation items 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/"></a>
+  </div>
   <nav class="topbar-menu">
     <button class="topbar-toggle">Menu</button>
     <ul class="topbar-list">
       <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
+        <a class="topbar-link topbar-link-selected" href="/apps">Apps</a>
       </li>
       <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
+        <a class="topbar-link " href="/blog">Blog</a>
       </li>
     </ul>
   </nav>
@@ -37,30 +32,6 @@ exports[`Topbar should render a logo with href 1`] = `
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="#"></a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;
 
@@ -71,30 +42,6 @@ exports[`Topbar should render a logo with icon 1`] = `
       <span class="topbar-logo-icon icon-12-github"></span>
     </a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;
 
@@ -106,30 +53,6 @@ exports[`Topbar should render a logo with icon and text 1`] = `
       <h3 class="topbar-logo-text">Marble</h3>
     </a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;
 
@@ -140,30 +63,6 @@ exports[`Topbar should render a logo with image 1`] = `
       <img class="topbar-logo-image" src="logo.svg">
     </a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;
 
@@ -175,30 +74,6 @@ exports[`Topbar should render a logo with image and text 1`] = `
       <h3 class="topbar-logo-text">Marble</h3>
     </a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;
 
@@ -209,30 +84,6 @@ exports[`Topbar should render a logo with text 1`] = `
       <h3 class="topbar-logo-text">Marble</h3>
     </a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;
 
@@ -241,29 +92,5 @@ exports[`Topbar should render with a light theme 1`] = `
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/"></a>
   </div>
-  <nav class="topbar-menu">
-    <button class="topbar-toggle">Menu</button>
-    <ul class="topbar-list">
-      <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="#">Apps</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Documentation</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Docs</a>
-      </li>
-      <li class="topbar-item">
-        <a class="topbar-link" href="#">Faq</a>
-      </li>
-      <li class="topbar-item topbar-avatar">
-        <button class="topbar-link btn-transparent">
-          <object class="avatar-round avatar-small" data="http://www.gravatar.com/avatar/f159cc42cdb1ea7b0f757474cace8c15?d=blank&amp;s=120" type="image/jpeg">
-            <span class="avatar-initials avatar-small">Z</span>
-          </object>
-        </button>
-      </li>
-    </ul>
-  </nav>
 </nav>
 `;

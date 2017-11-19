@@ -1,23 +1,15 @@
 'use strict';
 
-import {core} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
+import {Config} from 'metal-state';
 
 import templates from './RadioGroup.soy.js';
 
 /**
  * RadioGroup component.
  */
-class RadioGroup extends Component {
-  created() {
-
-  }
-
-  disposed() {
-
-  }
-}
+class RadioGroup extends Component {}
 
 /**
  * State definition.
@@ -26,13 +18,35 @@ class RadioGroup extends Component {
  */
 RadioGroup.STATE = {
   /**
-   * ID to be applied to the element.
-   * @type {!Object}
+   * The list of radio items
+   * @type {?Array|undefined}
+   * @default undefined
    */
-  id: {
-    validator: core.isString,
-    value: 'radio-group'
-  },
+  items: Config.arrayOf(
+    Config.shapeOf({
+      id: Config.string(),
+      checked: Config.bool(),
+      label: Config.string(),
+      value: Config.string(),
+    })
+  ).required(),
+
+  /**
+   * The name param used on each radio
+   * @type {?String}
+   * @default undefined
+   */
+  name: Config.string().required(),
+
+  /**
+   * The style of the radio group
+   * @type {!String}
+   * @default radio-group
+   */
+  style: Config.oneOf([
+    'radio-group',
+    'radio-group radio-group-inline'
+  ]).value('radio-group'),
 };
 
 Soy.register(RadioGroup, templates);

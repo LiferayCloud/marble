@@ -10,20 +10,17 @@
   <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
   <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
 
-  <script src="../build/globals/slider.js"></script>
+  <script src="../build/globals/marble-slider.js"></script>
 </head>
-<body>
+<body class="container">
   <h1>Slider</h1>
-  <div id="sliderWrapper" style="width: 70%;"></div>
+  <div id="slider"></div>
 
   <script>
-    window.slider = new metal.Slider(
-      {
-        max: 10,
-        value: 8
-      },
-      '#sliderWrapper'
-    );
+    new metal.Slider({
+      max: 10,
+      value: 8
+    }, '#slider');
   </script>
 </body>
 </html>

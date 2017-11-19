@@ -45,9 +45,5 @@ describe('marble-generator:app', function() {
 
   it('content of MarbleComponent.soy', function() {
     assert.fileContent('src/MarbleComponent.soy', /{namespace MarbleComponent}/);
-    assert.fileContent(
-      'src/MarbleComponent.soy',
-      /<div class="marble-component">Hello World<\/div>/
-    );
   });
 });

@@ -9,15 +9,7 @@ import templates from './<%= componentName %>.soy.js';
 /**
  * <%= componentName %> component.
  */
-class <%= componentName %> extends Component {
-  created() {
-
-  }
-
-  disposed() {
-
-  }
-}
+class <%= componentName %> extends Component {}
 
 /**
  * State definition.

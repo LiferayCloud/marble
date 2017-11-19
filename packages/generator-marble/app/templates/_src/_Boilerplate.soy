@@ -4,5 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-  <div class="<%= kebabCaseName %>">Hello World</div>
+  {@param? id: string}
+
+  <div id="{$id}">Hello World</div>
 {/template}

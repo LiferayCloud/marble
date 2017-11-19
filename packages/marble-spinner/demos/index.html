@@ -10,15 +10,78 @@
   <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
   <link rel="stylesheet" href="../../marble/build/marble.css">
 
+  <style>
+    section {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  </style>
+
   <script src="../build/globals/marble-spinner.js"></script>
 </head>
 <body class="container">
-  <h1 class="page-title">Spinner</h1>
+  <section>
+    <h2>Choose a size</h2>
+    <form>
+      <label>
+        <input type="radio" name="size" value="small" onclick="changeSize(this)" checked> Small
+      </label>
+      <label>
+        <input type="radio" name="size" value="medium" onclick="changeSize(this)"> Medium
+      </label>
+      <label>
+        <input type="radio" name="size" value="large" onclick="changeSize(this)"> Large
+      </label>
+    </form>
+  </section>
 
-  <div id="container"></div>
+  <section>
+    <h2>Choose a style</h2>
+    <form>
+      <label>
+        <input type="radio" name="size" value="none" onclick="changeStyle(this)" checked> Default
+      </label>
+      <label>
+        <input type="radio" name="size" value="danger" onclick="changeStyle(this)"> Danger
+      </label>
+      <label>
+        <input type="radio" name="size" value="warning" onclick="changeStyle(this)"> Warning
+      </label>
+    </form>
+  </section>
+
+  <section>
+    <h2>Choose a status</h2>
+    <form>
+      <label>
+        <input type="checkbox" name="size" onclick="changeStatus(this)"> Done
+      </label>
+    </form>
+  </section>
+
+  <h1>Spinner</h1>
+  <div id="spinner"></div>
 
   <script>
-    new metal.Spinner({}, '#container');
+    const spinner = new metal.Spinner({}, '#spinner');
+
+    function changeSize(radio) {
+      spinner.size = radio.value;
+    }
+
+    function changeStyle(radio) {
+      let style = radio.value;
+
+      if (style === 'none') {
+        style = undefined;
+      }
+
+      spinner.style = style;
+    }
+
+    function changeStatus(checkbox) {
+      spinner.isDone = checkbox.checked;
+    }
   </script>
 </body>
 </html>

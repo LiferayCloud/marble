@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spinner should generate the default markup 1`] = `<div id="example">Hello World</div>`;
+exports[`Spinner should generate the default markup 1`] = `<span class="spinner   "></span>`;
+
+exports[`Spinner should render with a completion state 1`] = `<span class="spinner spinner-done  "></span>`;
+
+exports[`Spinner should render with a different size 1`] = `<span class="spinner  spinner-large "></span>`;
+
+exports[`Spinner should render with a different style 1`] = `<span class="spinner   spinner-warning"></span>`;

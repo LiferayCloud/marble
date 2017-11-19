@@ -18,11 +18,22 @@ class Spinner extends Component {}
  */
 Spinner.STATE = {
   /**
-   * ID to be applied to the element.
-   * @type {!String}
-   * @default example
+   * Indicates if the spinner rotation is done or not
+   * @type {!Boolean}
    */
-  id: Config.string().value('example'),
+  isDone: Config.bool(),
+
+  /**
+   * The size of the spinner
+   * @type {!String|undefined}
+   */
+  size: Config.oneOf(['small', 'medium', 'large']),
+
+  /**
+   * The style of the spinner
+   * @type {!String|undefined}
+   */
+  style: Config.oneOf(['danger', 'warning']),
 };
 
 Soy.register(Spinner, templates);

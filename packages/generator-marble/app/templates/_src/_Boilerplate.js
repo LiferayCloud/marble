@@ -1,8 +1,8 @@
 'use strict';
 
-import {core} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
+import {Config} from 'metal-state';
 
 import templates from './<%= componentName %>.soy.js';
 
@@ -27,12 +27,10 @@ class <%= componentName %> extends Component {
 <%= componentName %>.STATE = {
   /**
    * ID to be applied to the element.
-   * @type {!Object}
+   * @type {!String}
+   * @default example
    */
-  id: {
-    validator: core.isString,
-    value: '<%= kebabCaseName %>'
-  },
+  id: Config.string().value('example'),
 };
 
 Soy.register(<%= componentName %>, templates);

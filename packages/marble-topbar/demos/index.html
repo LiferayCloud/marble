@@ -125,11 +125,11 @@
     function changeTheme(radio) {
       if (radio.value === 'light') {
         topbars.forEach((topbar) => {
-          topbar.theme = 'topbar topbar-light';
+          topbar.isLight = true;
         });
       } else {
         topbars.forEach((topbar) => {
-          topbar.theme = 'topbar';
+          topbar.isLight = false;
         });
       }
     }

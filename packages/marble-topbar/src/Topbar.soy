@@ -1,12 +1,15 @@
 {namespace Topbar}
 
 /**
- * @param theme
- * @param? logo
  * @param items
+ * @param? isLight
+ * @param? elementClasses
+ * @param? logo
  */
 {template .render}
-  <nav class="{$theme}">
+  {let $lightClass: $isLight ? 'topbar-light' : '' /}
+
+  <nav class="topbar {$lightClass} {$elementClasses}">
     {call .logo}
       {param logo: $logo /}
     {/call}

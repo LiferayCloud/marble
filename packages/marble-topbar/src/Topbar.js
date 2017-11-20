@@ -35,14 +35,18 @@ class Topbar extends Component {
  */
 Topbar.STATE = {
   /**
-   * The background theme of the topbar
+   * Additional CSS classes to be added
    * @type {!String}
-   * @default topbar
+   * @default ''
    */
-  theme: Config.oneOf([
-    'topbar',
-    'topbar topbar-light'
-  ]).value('topbar'),
+  elementClasses: Config.string().value(''),
+
+  /**
+   * Indicates if the background should be light or dark
+   * @type {!Boolean}
+   * @default false
+   */
+  isLight: Config.bool().value(false),
 
   /**
    * Defines how the logo should look like

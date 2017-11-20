@@ -29,8 +29,9 @@ var soyIdom = goog.require('soy.idom');
  */
 function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
+  var lightClass__soy4 = opt_data.isLight ? 'topbar-light' : '';
   incrementalDom.elementOpenStart('nav');
-      incrementalDom.attr('class', opt_data.theme);
+      incrementalDom.attr('class', 'topbar ' + lightClass__soy4 + ' ' + opt_data.elementClasses);
   incrementalDom.elementOpenEnd();
     $logo(opt_data, null, opt_ijData);
     $menu(opt_data, null, opt_ijData);
@@ -55,10 +56,10 @@ function $logo(opt_data, opt_ijData, opt_ijData_deprecated) {
   incrementalDom.elementOpenStart('div');
       incrementalDom.attr('class', 'topbar-logo');
   incrementalDom.elementOpenEnd();
-    var href__soy16 = opt_data.logo && opt_data.logo.href ? opt_data.logo.href : '/';
+    var href__soy19 = opt_data.logo && opt_data.logo.href ? opt_data.logo.href : '/';
     incrementalDom.elementOpenStart('a');
         incrementalDom.attr('class', 'topbar-logo-link');
-        incrementalDom.attr('href', href__soy16);
+        incrementalDom.attr('href', href__soy19);
     incrementalDom.elementOpenEnd();
       if (opt_data.logo && opt_data.logo.icon) {
         incrementalDom.elementOpenStart('span');
@@ -110,19 +111,19 @@ function $menu(opt_data, opt_ijData, opt_ijData_deprecated) {
       incrementalDom.elementOpenStart('ul');
           incrementalDom.attr('class', 'topbar-list');
       incrementalDom.elementOpenEnd();
-        var item52List = opt_data.items;
-        var item52ListLen = item52List.length;
-        for (var item52Index = 0; item52Index < item52ListLen; item52Index++) {
-            var item52Data = item52List[item52Index];
-            var selected__soy44 = item52Data.selected ? 'topbar-link-selected' : '';
+        var item55List = opt_data.items;
+        var item55ListLen = item55List.length;
+        for (var item55Index = 0; item55Index < item55ListLen; item55Index++) {
+            var item55Data = item55List[item55Index];
+            var selected__soy47 = item55Data.selected ? 'topbar-link-selected' : '';
             incrementalDom.elementOpenStart('li');
                 incrementalDom.attr('class', 'topbar-item');
             incrementalDom.elementOpenEnd();
               incrementalDom.elementOpenStart('a');
-                  incrementalDom.attr('class', 'topbar-link ' + selected__soy44);
-                  incrementalDom.attr('href', item52Data.href);
+                  incrementalDom.attr('class', 'topbar-link ' + selected__soy47);
+                  incrementalDom.attr('href', item55Data.href);
               incrementalDom.elementOpenEnd();
-                soyIdom.print(item52Data.label);
+                soyIdom.print(item55Data.label);
               incrementalDom.elementClose('a');
             incrementalDom.elementClose('li');
           }
@@ -135,8 +136,8 @@ if (goog.DEBUG) {
   $menu.soyTemplateName = 'Topbar.menu';
 }
 
-exports.render.params = ["theme","logo","items"];
-exports.render.types = {"theme":"any","logo":"any","items":"any"};
+exports.render.params = ["items","isLight","elementClasses","logo"];
+exports.render.types = {"items":"any","isLight":"any","elementClasses":"any","logo":"any"};
 exports.logo.params = ["logo"];
 exports.logo.types = {"logo":"any"};
 exports.menu.params = ["items"];

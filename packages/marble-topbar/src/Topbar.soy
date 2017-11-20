@@ -11,7 +11,7 @@
     image: string,
     text: string
   ]}
-  {@param items: list<?>}
+  {@param items: ?}
 
   <nav class="{$theme}">
     {call .logo}
@@ -58,7 +58,7 @@
  *
  */
 {template .menu}
-  {@param items: list<?>}
+  {@param items: ?}
 
   {if length($items)}
     <nav class="topbar-menu">

@@ -16,18 +16,12 @@ var soydata = goog.require('soydata');
 
 goog.module('Topbar.incrementaldom');
 
-goog.require('goog.soy.data.SanitizedContent');
 var incrementalDom = goog.require('incrementaldom');
-goog.require('soy.asserts');
 var soyIdom = goog.require('soy.idom');
 
 
 /**
- * @param {{
- *  theme: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  logo: (?),
- *  items: (?)
- * }} opt_data
+ * @param {Object<string, *>=} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
  * @return {void}
@@ -35,37 +29,21 @@ var soyIdom = goog.require('soy.idom');
  */
 function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
-  /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
-  var theme = soy.asserts.assertType(opt_data.theme == null || (goog.isString(opt_data.theme) || opt_data.theme instanceof goog.soy.data.SanitizedContent), 'theme', opt_data.theme, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  /** @type {?} */
-  var logo = opt_data.logo;
-  /** @type {?} */
-  var items = opt_data.items;
   incrementalDom.elementOpenStart('nav');
-      incrementalDom.attr('class', theme);
+      incrementalDom.attr('class', opt_data.theme);
   incrementalDom.elementOpenEnd();
     $logo(opt_data, null, opt_ijData);
     $menu(opt_data, null, opt_ijData);
   incrementalDom.elementClose('nav');
 }
 exports.render = $render;
-/**
- * @typedef {{
- *  theme: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  logo: (?),
- *  items: (?)
- * }}
- */
-$render.Params;
 if (goog.DEBUG) {
   $render.soyTemplateName = 'Topbar.render';
 }
 
 
 /**
- * @param {{
- *  logo: (?)
- * }} opt_data
+ * @param {Object<string, *>=} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
  * @return {void}
@@ -74,55 +52,45 @@ if (goog.DEBUG) {
 function $logo(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   opt_data = opt_data || {};
-  /** @type {?} */
-  var logo = opt_data.logo;
   incrementalDom.elementOpenStart('div');
       incrementalDom.attr('class', 'topbar-logo');
   incrementalDom.elementOpenEnd();
-    var href__soy20 = logo && logo.href ? logo.href : '/';
+    var href__soy16 = opt_data.logo && opt_data.logo.href ? opt_data.logo.href : '/';
     incrementalDom.elementOpenStart('a');
         incrementalDom.attr('class', 'topbar-logo-link');
-        incrementalDom.attr('href', href__soy20);
+        incrementalDom.attr('href', href__soy16);
     incrementalDom.elementOpenEnd();
-      if (logo && logo.icon) {
+      if (opt_data.logo && opt_data.logo.icon) {
         incrementalDom.elementOpenStart('span');
-            incrementalDom.attr('class', 'topbar-logo-icon ' + logo.icon);
+            incrementalDom.attr('class', 'topbar-logo-icon ' + opt_data.logo.icon);
         incrementalDom.elementOpenEnd();
         incrementalDom.elementClose('span');
       }
-      if (logo && logo.image) {
+      if (opt_data.logo && opt_data.logo.image) {
         incrementalDom.elementOpenStart('img');
             incrementalDom.attr('class', 'topbar-logo-image');
-            incrementalDom.attr('src', logo.image);
+            incrementalDom.attr('src', opt_data.logo.image);
         incrementalDom.elementOpenEnd();
         incrementalDom.elementClose('img');
       }
-      if (logo && logo.text) {
+      if (opt_data.logo && opt_data.logo.text) {
         incrementalDom.elementOpenStart('h3');
             incrementalDom.attr('class', 'topbar-logo-text');
         incrementalDom.elementOpenEnd();
-          soyIdom.print(logo.text);
+          soyIdom.print(opt_data.logo.text);
         incrementalDom.elementClose('h3');
       }
     incrementalDom.elementClose('a');
   incrementalDom.elementClose('div');
 }
 exports.logo = $logo;
-/**
- * @typedef {{
- *  logo: (?)
- * }}
- */
-$logo.Params;
 if (goog.DEBUG) {
   $logo.soyTemplateName = 'Topbar.logo';
 }
 
 
 /**
- * @param {{
- *  items: (?)
- * }} opt_data
+ * @param {Object<string, *>=} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
  * @return {void}
@@ -130,9 +98,7 @@ if (goog.DEBUG) {
  */
 function $menu(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
-  /** @type {?} */
-  var items = opt_data.items;
-  if ((items.length)) {
+  if ((opt_data.items.length)) {
     incrementalDom.elementOpenStart('nav');
         incrementalDom.attr('class', 'topbar-menu');
     incrementalDom.elementOpenEnd();
@@ -144,19 +110,19 @@ function $menu(opt_data, opt_ijData, opt_ijData_deprecated) {
       incrementalDom.elementOpenStart('ul');
           incrementalDom.attr('class', 'topbar-list');
       incrementalDom.elementOpenEnd();
-        var item57List = items;
-        var item57ListLen = item57List.length;
-        for (var item57Index = 0; item57Index < item57ListLen; item57Index++) {
-            var item57Data = item57List[item57Index];
-            var selected__soy49 = item57Data.selected ? 'topbar-link-selected' : '';
+        var item52List = opt_data.items;
+        var item52ListLen = item52List.length;
+        for (var item52Index = 0; item52Index < item52ListLen; item52Index++) {
+            var item52Data = item52List[item52Index];
+            var selected__soy44 = item52Data.selected ? 'topbar-link-selected' : '';
             incrementalDom.elementOpenStart('li');
                 incrementalDom.attr('class', 'topbar-item');
             incrementalDom.elementOpenEnd();
               incrementalDom.elementOpenStart('a');
-                  incrementalDom.attr('class', 'topbar-link ' + selected__soy49);
-                  incrementalDom.attr('href', item57Data.href);
+                  incrementalDom.attr('class', 'topbar-link ' + selected__soy44);
+                  incrementalDom.attr('href', item52Data.href);
               incrementalDom.elementOpenEnd();
-                soyIdom.print(item57Data.label);
+                soyIdom.print(item52Data.label);
               incrementalDom.elementClose('a');
             incrementalDom.elementClose('li');
           }
@@ -165,22 +131,16 @@ function $menu(opt_data, opt_ijData, opt_ijData_deprecated) {
   }
 }
 exports.menu = $menu;
-/**
- * @typedef {{
- *  items: (?)
- * }}
- */
-$menu.Params;
 if (goog.DEBUG) {
   $menu.soyTemplateName = 'Topbar.menu';
 }
 
 exports.render.params = ["theme","logo","items"];
-exports.render.types = {"theme":"string","logo":"?","items":"?"};
+exports.render.types = {"theme":"any","logo":"any","items":"any"};
 exports.logo.params = ["logo"];
-exports.logo.types = {"logo":"?"};
+exports.logo.types = {"logo":"any"};
 exports.menu.params = ["items"];
-exports.menu.types = {"items":"?"};
+exports.menu.types = {"items":"any"};
 templates = exports;
 return exports;
 

@@ -1,13 +1,11 @@
 {namespace Topbar}
 
 /**
- *
+ * @param theme
+ * @param? logo
+ * @param items
  */
 {template .render}
-  {@param? theme: string}
-  {@param? logo: ?}
-  {@param items: ?}
-
   <nav class="{$theme}">
     {call .logo}
       {param logo: $logo /}
@@ -20,11 +18,9 @@
 {/template}
 
 /**
- *
+ * @param? logo
  */
 {template .logo}
-  {@param? logo: ?}
-
   <div class="topbar-logo">
     {let $href: $logo and $logo.href ? $logo.href : '/' /}
 
@@ -45,11 +41,9 @@
 {/template}
 
 /**
- *
+ * @param items
  */
 {template .menu}
-  {@param items: ?}
-
   {if length($items)}
     <nav class="topbar-menu">
       <button class="topbar-toggle">Menu</button>

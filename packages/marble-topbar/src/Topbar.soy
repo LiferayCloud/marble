@@ -5,12 +5,7 @@
  */
 {template .render}
   {@param? theme: string}
-  {@param? logo: [
-    href: string,
-    icon: string,
-    image: string,
-    text: string
-  ]}
+  {@param? logo: ?}
   {@param items: ?}
 
   <nav class="{$theme}">
@@ -28,12 +23,7 @@
  *
  */
 {template .logo}
-  {@param? logo: [
-    href: string,
-    icon: string,
-    image: string,
-    text: string
-  ]}
+  {@param? logo: ?}
 
   <div class="topbar-logo">
     {let $href: $logo and $logo.href ? $logo.href : '/' /}

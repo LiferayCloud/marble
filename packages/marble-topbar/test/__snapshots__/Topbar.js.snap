@@ -17,10 +17,14 @@ exports[`Topbar should render a list of navigation items 1`] = `
     <button class="topbar-toggle">Menu</button>
     <ul class="topbar-list">
       <li class="topbar-item">
-        <a class="topbar-link topbar-link-selected" href="/apps">Apps</a>
+        <a class="topbar-link topbar-link-selected" href="/apps">
+          <span>Apps</span>
+        </a>
       </li>
       <li class="topbar-item">
-        <a class="topbar-link " href="/blog">Blog</a>
+        <a class="topbar-link " href="/blog">
+          <span>Blog</span>
+        </a>
       </li>
     </ul>
   </nav>

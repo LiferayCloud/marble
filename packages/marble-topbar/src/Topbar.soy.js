@@ -149,7 +149,9 @@ function __deltemplate_s58_d4587e08(opt_data, opt_ijData, opt_ijData_deprecated)
         incrementalDom.attr('class', 'topbar-link ' + selectedClass__soy60);
         incrementalDom.attr('href', opt_data.href);
     incrementalDom.elementOpenEnd();
-      soyIdom.print(opt_data.label);
+      incrementalDom.elementOpen('span');
+        soyIdom.print(opt_data.label);
+      incrementalDom.elementClose('span');
     incrementalDom.elementClose('a');
   incrementalDom.elementClose('li');
 }

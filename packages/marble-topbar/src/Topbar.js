@@ -70,6 +70,7 @@ Topbar.STATE = {
       href: Config.string(),
       label: Config.string(),
       selected: Config.bool(),
+      variant: Config.string(),
     })
   ).value([]),
 };

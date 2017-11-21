@@ -52,13 +52,28 @@
       <button class="topbar-toggle">Menu</button>
       <ul class="topbar-list">
         {foreach $item in $items}
-          {let $selected: $item.selected ? 'topbar-link-selected' : '' /}
+          {let $localVariant: $item.variant ?: 'default' /}
 
-          <li class="topbar-item">
-            <a class="topbar-link {$selected}" href="{$item.href}">{$item.label}</a>
-          </li>
+          {delcall Topbar.item variant="$localVariant"}
+            {param href: $item.href /}
+            {param label: $item.label /}
+            {param selected: $item.selected /}
+          {/delcall}
         {/foreach}
       </ul>
     </nav>
   {/if}
 {/template}
+
+/**
+ * @param href
+ * @param label
+ * @param? selected
+ */
+{deltemplate Topbar.item variant="'default'"}
+  {let $selectedClass: $selected ? 'topbar-link-selected' : '' /}
+
+  <li class="topbar-item">
+    <a class="topbar-link {$selectedClass}" href="{$href}">{$label}</a>
+  </li>
+{/deltemplate}

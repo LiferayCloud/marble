@@ -64,6 +64,7 @@ Topbar.STATE = {
       label: Config.string(),
       selected: Config.bool(),
       target: Config.string(),
+      type: Config.string(),
       variant: Config.string(),
     })
   ).value([]),

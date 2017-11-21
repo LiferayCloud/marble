@@ -57,6 +57,7 @@
             {param href: $item.href /}
             {param label: $item.label /}
             {param target: $item.target /}
+            {param type: $item.type /}
             {param selected: $item.selected /}
           {/delcall}
         {/foreach}
@@ -69,12 +70,21 @@
  * @param href
  * @param label
  * @param target
+ * @param type
  * @param? selected
  */
 {deltemplate Topbar.item variant="'default'"}
   {let $selectedClass: $selected ? 'topbar-link-selected' : '' /}
 
   <li class="topbar-item">
-    <a class="topbar-link {$selectedClass}" href="{$href}" target="{$target}"><span>{$label}</span></a>
+    {if $type == 'button'}
+      <a class="btn btn-accent" href="{$href}" target="{$target}">
+        {$label}
+      </a>
+    {else}
+      <a class="topbar-link {$selectedClass}" href="{$href}" target="{$target}">
+        <span>{$label}</span>
+      </a>
+    {/if}
   </li>
 {/deltemplate}

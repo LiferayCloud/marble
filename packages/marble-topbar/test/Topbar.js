@@ -99,6 +99,11 @@ describe('Topbar', function() {
           label: 'Blog',
           href: '/blog',
           target: '_blank'
+        },
+        {
+          label: 'Login',
+          href: '/login',
+          type: 'button'
         }
       ]
     });

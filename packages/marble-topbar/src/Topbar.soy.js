@@ -32,9 +32,9 @@ var soyIdom = goog.require('soy.idom');
  */
 function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
-  var lightClass__soy4 = opt_data.isLight ? 'topbar-light' : '';
+  var styleClasses__soy4 = opt_data.style ? 'topbar ' + opt_data.style : 'topbar';
   incrementalDom.elementOpenStart('nav');
-      incrementalDom.attr('class', 'topbar ' + lightClass__soy4 + ' ' + opt_data.elementClasses);
+      incrementalDom.attr('class', styleClasses__soy4);
   incrementalDom.elementOpenEnd();
     $logo(opt_data, null, opt_ijData);
     $menu(opt_data, null, opt_ijData);
@@ -59,10 +59,10 @@ function $logo(opt_data, opt_ijData, opt_ijData_deprecated) {
   incrementalDom.elementOpenStart('div');
       incrementalDom.attr('class', 'topbar-logo');
   incrementalDom.elementOpenEnd();
-    var href__soy19 = opt_data.logo && opt_data.logo.href ? opt_data.logo.href : '/';
+    var href__soy17 = opt_data.logo && opt_data.logo.href ? opt_data.logo.href : '/';
     incrementalDom.elementOpenStart('a');
         incrementalDom.attr('class', 'topbar-logo-link');
-        incrementalDom.attr('href', href__soy19);
+        incrementalDom.attr('href', href__soy17);
     incrementalDom.elementOpenEnd();
       if (opt_data.logo && opt_data.logo.icon) {
         incrementalDom.elementOpenStart('span');
@@ -115,12 +115,12 @@ function $menu(opt_data, opt_ijData, opt_ijData_deprecated) {
       incrementalDom.elementOpenStart('ul');
           incrementalDom.attr('class', 'topbar-list');
       incrementalDom.elementOpenEnd();
-        var item54List = opt_data.items;
-        var item54ListLen = item54List.length;
-        for (var item54Index = 0; item54Index < item54ListLen; item54Index++) {
-            var item54Data = item54List[item54Index];
-            var localVariant__soy47 = ($$temp = item54Data.variant) == null ? 'default' : $$temp;
-            soy.$$getDelegateFn(soy.$$getDelTemplateId('Topbar.item.idom'), localVariant__soy47, false)({href: item54Data.href, label: item54Data.label, selected: item54Data.selected}, null, opt_ijData);
+        var item52List = opt_data.items;
+        var item52ListLen = item52List.length;
+        for (var item52Index = 0; item52Index < item52ListLen; item52Index++) {
+            var item52Data = item52List[item52Index];
+            var localVariant__soy45 = ($$temp = item52Data.variant) == null ? 'default' : $$temp;
+            soy.$$getDelegateFn(soy.$$getDelTemplateId('Topbar.item.idom'), localVariant__soy45, false)({href: item52Data.href, label: item52Data.label, selected: item52Data.selected}, null, opt_ijData);
           }
       incrementalDom.elementClose('ul');
     incrementalDom.elementClose('nav');
@@ -139,14 +139,14 @@ if (goog.DEBUG) {
  * @return {void}
  * @suppress {checkTypes}
  */
-function __deltemplate_s58_d4587e08(opt_data, opt_ijData, opt_ijData_deprecated) {
+function __deltemplate_s56_d4587e08(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
-  var selectedClass__soy60 = opt_data.selected ? 'topbar-link-selected' : '';
+  var selectedClass__soy58 = opt_data.selected ? 'topbar-link-selected' : '';
   incrementalDom.elementOpenStart('li');
       incrementalDom.attr('class', 'topbar-item');
   incrementalDom.elementOpenEnd();
     incrementalDom.elementOpenStart('a');
-        incrementalDom.attr('class', 'topbar-link ' + selectedClass__soy60);
+        incrementalDom.attr('class', 'topbar-link ' + selectedClass__soy58);
         incrementalDom.attr('href', opt_data.href);
     incrementalDom.elementOpenEnd();
       incrementalDom.elementOpen('span');
@@ -155,14 +155,14 @@ function __deltemplate_s58_d4587e08(opt_data, opt_ijData, opt_ijData_deprecated)
     incrementalDom.elementClose('a');
   incrementalDom.elementClose('li');
 }
-exports.__deltemplate_s58_d4587e08 = __deltemplate_s58_d4587e08;
+exports.__deltemplate_s56_d4587e08 = __deltemplate_s56_d4587e08;
 if (goog.DEBUG) {
-  __deltemplate_s58_d4587e08.soyTemplateName = 'Topbar.__deltemplate_s58_d4587e08';
+  __deltemplate_s56_d4587e08.soyTemplateName = 'Topbar.__deltemplate_s56_d4587e08';
 }
-soy.$$registerDelegateFn(soy.$$getDelTemplateId('Topbar.item.idom'), 'default', 0, __deltemplate_s58_d4587e08);
+soy.$$registerDelegateFn(soy.$$getDelTemplateId('Topbar.item.idom'), 'default', 0, __deltemplate_s56_d4587e08);
 
-exports.render.params = ["items","isLight","elementClasses","logo"];
-exports.render.types = {"items":"any","isLight":"any","elementClasses":"any","logo":"any"};
+exports.render.params = ["items","logo","style"];
+exports.render.types = {"items":"any","logo":"any","style":"any"};
 exports.logo.params = ["logo"];
 exports.logo.types = {"logo":"any"};
 exports.menu.params = ["items"];

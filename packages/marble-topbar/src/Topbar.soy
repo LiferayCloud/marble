@@ -2,14 +2,13 @@
 
 /**
  * @param items
- * @param? isLight
- * @param? elementClasses
  * @param? logo
+ * @param? style
  */
 {template .render}
-  {let $lightClass: $isLight ? 'topbar-light' : '' /}
+  {let $styleClasses: $style ? 'topbar ' + $style : 'topbar' /}
 
-  <nav class="topbar {$lightClass} {$elementClasses}">
+  <nav class="{$styleClasses}">
     {call .logo}
       {param logo: $logo /}
     {/call}

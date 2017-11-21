@@ -28,13 +28,13 @@
 </head>
 <body>
   <section>
-    <h2>Choose a theme</h2>
+    <h2>Choose a style</h2>
     <form>
       <label>
-        <input type="radio" name="theme" value="default" onclick="changeTheme(this)" checked> Default
+        <input type="radio" name="style" value="default" onclick="changeStyle(this)" checked> Default
       </label>
       <label>
-        <input type="radio" name="theme" value="light" onclick="changeTheme(this)"> Light
+        <input type="radio" name="style" value="topbar-light" onclick="changeStyle(this)"> Light
       </label>
     </form>
   </section>
@@ -114,7 +114,7 @@
       items: navigation
     }, '#logo-image-text');
 
-    // Themes
+    // Styles
 
     const topbars = [
       topbarLogoText,
@@ -122,14 +122,14 @@
       topbarLogoImage, topbarLogoImageText
     ];
 
-    function changeTheme(radio) {
-      if (radio.value === 'light') {
+    function changeStyle(radio) {
+      if (radio.value === 'topbar-light') {
         topbars.forEach((topbar) => {
-          topbar.isLight = true;
+          topbar.style = radio.value;
         });
       } else {
         topbars.forEach((topbar) => {
-          topbar.isLight = false;
+          topbar.style = '';
         });
       }
     }

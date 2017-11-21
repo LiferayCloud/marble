@@ -37,16 +37,9 @@ Topbar.STATE = {
   /**
    * Additional CSS classes to be added
    * @type {!String}
-   * @default ''
+   * @default undefined
    */
-  elementClasses: Config.string().value(''),
-
-  /**
-   * Indicates if the background should be light or dark
-   * @type {!Boolean}
-   * @default false
-   */
-  isLight: Config.bool().value(false),
+  style: Config.string(),
 
   /**
    * Defines how the logo should look like

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Topbar should generate the default markup 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/"></a>
   </div>
@@ -9,7 +9,7 @@ exports[`Topbar should generate the default markup 1`] = `
 `;
 
 exports[`Topbar should render a list of navigation items 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/"></a>
   </div>
@@ -32,7 +32,7 @@ exports[`Topbar should render a list of navigation items 1`] = `
 `;
 
 exports[`Topbar should render a logo with href 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="#"></a>
   </div>
@@ -40,7 +40,7 @@ exports[`Topbar should render a logo with href 1`] = `
 `;
 
 exports[`Topbar should render a logo with icon 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/">
       <span class="topbar-logo-icon icon-12-github"></span>
@@ -50,7 +50,7 @@ exports[`Topbar should render a logo with icon 1`] = `
 `;
 
 exports[`Topbar should render a logo with icon and text 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/">
       <span class="topbar-logo-icon icon-12-github"></span>
@@ -61,7 +61,7 @@ exports[`Topbar should render a logo with icon and text 1`] = `
 `;
 
 exports[`Topbar should render a logo with image 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/">
       <img class="topbar-logo-image" src="logo.svg">
@@ -71,7 +71,7 @@ exports[`Topbar should render a logo with image 1`] = `
 `;
 
 exports[`Topbar should render a logo with image and text 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/">
       <img class="topbar-logo-image" src="logo.svg">
@@ -82,7 +82,7 @@ exports[`Topbar should render a logo with image and text 1`] = `
 `;
 
 exports[`Topbar should render a logo with text 1`] = `
-<nav class="topbar  ">
+<nav class="topbar">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/">
       <h3 class="topbar-logo-text">Marble</h3>
@@ -91,16 +91,8 @@ exports[`Topbar should render a logo with text 1`] = `
 </nav>
 `;
 
-exports[`Topbar should render with a light theme 1`] = `
-<nav class="topbar topbar-light ">
-  <div class="topbar-logo">
-    <a class="topbar-logo-link" href="/"></a>
-  </div>
-</nav>
-`;
-
 exports[`Topbar should render with an additional class 1`] = `
-<nav class="topbar topbar-docs-main">
+<nav class="topbar topbar-light">
   <div class="topbar-logo">
     <a class="topbar-logo-link" href="/"></a>
   </div>

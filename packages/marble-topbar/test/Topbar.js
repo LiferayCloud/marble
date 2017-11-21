@@ -19,15 +19,7 @@ describe('Topbar', function() {
 
   it('should render with an additional class', () => {
     topbar = new Topbar({
-      elementClasses: 'topbar-docs-main'
-    });
-
-    expect(topbar).toMatchSnapshot();
-  });
-
-  it('should render with a light theme', () => {
-    topbar = new Topbar({
-      isLight: true
+      style: 'topbar-light'
     });
 
     expect(topbar).toMatchSnapshot();

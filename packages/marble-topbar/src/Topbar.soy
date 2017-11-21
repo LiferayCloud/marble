@@ -56,6 +56,7 @@
           {delcall Topbar.item variant="$localVariant"}
             {param href: $item.href /}
             {param label: $item.label /}
+            {param target: $item.target /}
             {param selected: $item.selected /}
           {/delcall}
         {/foreach}
@@ -67,12 +68,13 @@
 /**
  * @param href
  * @param label
+ * @param target
  * @param? selected
  */
 {deltemplate Topbar.item variant="'default'"}
   {let $selectedClass: $selected ? 'topbar-link-selected' : '' /}
 
   <li class="topbar-item">
-    <a class="topbar-link {$selectedClass}" href="{$href}"><span>{$label}</span></a>
+    <a class="topbar-link {$selectedClass}" href="{$href}" target="{$target}"><span>{$label}</span></a>
   </li>
 {/deltemplate}

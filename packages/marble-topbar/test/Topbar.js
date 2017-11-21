@@ -97,7 +97,8 @@ describe('Topbar', function() {
         },
         {
           label: 'Blog',
-          href: '/blog'
+          href: '/blog',
+          target: '_blank'
         }
       ]
     });

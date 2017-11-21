@@ -22,7 +22,7 @@ exports[`Topbar should render a list of navigation items 1`] = `
         </a>
       </li>
       <li class="topbar-item">
-        <a class="topbar-link " href="/blog">
+        <a class="topbar-link " href="/blog" target="_blank">
           <span>Blog</span>
         </a>
       </li>

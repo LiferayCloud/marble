@@ -26,6 +26,9 @@ exports[`Topbar should render a list of navigation items 1`] = `
           <span>Blog</span>
         </a>
       </li>
+      <li class="topbar-item">
+        <a class="btn btn-accent" href="/login">Login</a>
+      </li>
     </ul>
   </nav>
 </nav>

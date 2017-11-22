@@ -18,7 +18,7 @@ gulp.task('watch', function() {
 
 gulp.task('bootstrap', function() {
   return gulp.src('src/**/*.scss')
-    .pipe(sass({includePaths: ['node_modules'], outputStyle: 'compressed'}))
+    .pipe(sass({includePaths: ['../../node_modules'], outputStyle: 'compressed'}))
     .pipe(postcss([
       postcssAutoprefixer()
     ], {

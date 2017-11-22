@@ -18,11 +18,35 @@ class CheckboxGroup extends Component {}
  */
 CheckboxGroup.STATE = {
   /**
-   * ID to be applied to the element.
-   * @type {!String}
-   * @default example
+   * The list of radio items
+   * @type {?Array|undefined}
+   * @default undefined
    */
-  id: Config.string().value('example'),
+  items: Config.arrayOf(
+    Config.shapeOf({
+      id: Config.string(),
+      checked: Config.bool(),
+      label: Config.string(),
+      value: Config.string(),
+    })
+  ).required(),
+
+  /**
+   * The name param used on each radio
+   * @type {?String}
+   * @default undefined
+   */
+  name: Config.string().required(),
+
+  /**
+   * The style of the radio group
+   * @type {!String}
+   * @default radio-group
+   */
+  style: Config.oneOf([
+    'checkbox-group',
+    'checkbox-group checkbox-group-inline'
+  ]).value('checkbox-group'),
 };
 
 Soy.register(CheckboxGroup, templates);

@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/ReadingProgress.js',
+  entry: {
+    'marble-reading-progress': './src/ReadingProgress.js',
+    'marble-reading-progress-tracker': './src/ReadingProgressTracker.js'
+  },
   module: {
     rules: [{
       test: /\.js$/,
@@ -19,7 +22,7 @@ module.exports = {
   output: {
     library: 'metal',
     libraryTarget: 'this',
-    filename: './build/globals/marble-reading-progress.js'
+    filename: './build/globals/[name].js'
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()

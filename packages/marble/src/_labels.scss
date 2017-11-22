@@ -9,16 +9,16 @@
   border-radius: 4px;
   display: inline-block;
   font-family: $font-primary;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
   padding: 0 12px;
   position: relative;
-  line-height: 36px;
 
   &.label-sm {
-    padding: 0 12px;
     font-size: 12px;
     line-height: 24px;
+    padding: 0 12px;
   }
 }
 
@@ -71,10 +71,10 @@
    ========================================================================== */
 
 .label .label-icon {
+  color: inherit;
   margin-right: 6px;
   position: relative;
   top: 2px;
-  color: inherit;
 }
 
 /* Clickable
@@ -86,22 +86,25 @@
   position: relative;
 
   .label-action {
-    @include anim(top, 0.2s);
     left: 50%;
     position: absolute;
     top: -100%;
     transform: translateX(-50%);
+
+    @include anim(top, .2s);
   }
 
   .label-icon {
-    @include anim(top, 0.2s);
     position: relative;
+
+    @include anim(top, .2s);
   }
 
   .label-content {
-    @include anim(top, 0.2s);
     position: relative;
     top: 0;
+
+    @include anim(top, .2s);
   }
 
   &:hover {

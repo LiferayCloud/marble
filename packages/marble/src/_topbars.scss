@@ -116,7 +116,7 @@
   }
 
   &.toggler-header-expanded::after {
-    transform: scaleY(-1) translate3d(0,calc(50% - 2.5px),0);
+    transform: scaleY(-1) translate3d(0, calc(50% - 2.5px), 0);
   }
 }
 
@@ -127,11 +127,11 @@
 .topbar-list {
   background-color: $primary;
   color: $white;
-  overflow: hidden;
   left: 0;
   list-style-type: none;
   margin: 0;
   max-height: 0;
+  overflow: hidden;
   padding: 0;
   position: absolute;
   right: 0;
@@ -146,9 +146,9 @@
   @media (min-width: $screen-md-min) {
     background-color: transparent;
     color: inherit;
-    overflow: visible;
     left: auto;
     max-height: none;
+    overflow: visible;
     position: static;
     right: auto;
     top: auto;
@@ -202,9 +202,9 @@
   }
 
   & > span {
-    background-image: linear-gradient(currentColor 25%,transparent 50%);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(currentColor 25%, transparent 50%);
     background-position: calc(200% - 2px) 100%;
+    background-repeat: no-repeat;
     background-size: 200% 2px;
     margin-bottom: -3px;
     padding-bottom: 3px;

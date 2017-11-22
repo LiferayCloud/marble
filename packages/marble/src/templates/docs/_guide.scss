@@ -29,7 +29,7 @@
 .docs .guide-content {
 
   h1, h2, h3, h4, h5, h6 {
-    color: rgba($primary, 0.8);
+    color: rgba($primary, .8);
     display: block;
     font-family: $font-primary;
     font-weight: 700;
@@ -74,7 +74,7 @@
   }
 
   h6 {
-    color: rgba($primary, 0.6);
+    color: rgba($primary, .6);
     font-weight: 600;
     font-size: $font-h6;
     line-height: calc(1rem * #{$lineHeight});
@@ -86,7 +86,7 @@
     font-weight: 400;
     font-size: $font-p;
     line-height: calc(1rem * #{$lineHeight});
-    color: rgba($primary, 0.8);
+    color: rgba($primary, .8);
   }
 
   p:not([class]) {
@@ -107,11 +107,11 @@
     font-weight: 600;
     font-size: $font-small;
     line-height: calc(1rem * #{$lineHeight});
-    color: rgba($primary, 0.4);
+    color: rgba($primary, .4);
     margin-bottom: calc(1rem * #{$lineHeight});
 
     .guide-info-separator {
-      color: rgba($primary, 0.6);
+      color: rgba($primary, .6);
     }
   }
 
@@ -135,7 +135,7 @@
     position: relative;
   }
 
-  ul:not([class]) li:before {
+  ul:not([class]) li::before {
     font-family: $font-primary;
     font-weight: 700;
     display: inline-block;
@@ -151,7 +151,7 @@
     margin-left: 0;
   }
 
-  ul.checklist li:before {
+  ul.checklist li::before {
     color: $accent;
     content: "\E017";
     display: inline-block;
@@ -168,7 +168,7 @@
     position: relative;
   }
 
-  ol li:before {
+  ol li::before {
     font-family: $font-primary;
     font-weight: 700;
     color: inherit;
@@ -188,13 +188,13 @@
     @include anim(color);
     font-family: inherit;
     font-size: inherit;
-    border-bottom: 1px dashed rgba($primary, 0.4);
+    border-bottom: 1px dashed rgba($primary, .4);
     color: inherit;
 
     &:hover,
     &:focus {
       border-color: $accent;
-      color: rgba($accent, 0.6);
+      color: rgba($accent, .6);
     }
   }
 
@@ -202,7 +202,7 @@
   /* ======================================================================== */
 
   code {
-    background: rgba($primary, 0.1);
+    background: rgba($primary, .1);
     display: inline-block;
     font-family: $font-mono;
     font-size: $font-small;
@@ -244,7 +244,7 @@
     font-weight: 700;
     font-size: $font-h4;
     line-height: calc(2rem * #{$lineHeight});
-    color: rgba($primary, 0.8);
+    color: rgba($primary, .8);
     border: 0px;
     padding: 0;
   }
@@ -255,7 +255,7 @@
 
   blockquote::before {
     content: '\201C';
-    color: rgba($primary, 0.4);
+    color: rgba($primary, .4);
     display: block;
     width: 2.5rem;
     text-align: left;
@@ -264,7 +264,7 @@
   blockquote::after {
     position: relative;
     content: '\201D';
-    color: rgba($primary, 0.4);
+    color: rgba($primary, .4);
     display: block;
     width: 2.5rem;
     text-align: left;
@@ -277,16 +277,16 @@
   figure {
     width: 100%;
     text-align: center;
-    padding: calc(0.5rem * #{$lineHeight}) 0;
+    padding: calc(.5rem * #{$lineHeight}) 0;
 
     figcaption {
-      color: rgba($primary, 0.4);
+      color: rgba($primary, .4);
       font-family: $font-secondary;
       font-weight: 400;
       font-size: $font-small;
       line-height: calc(1rem * #{$lineHeight});
       text-align: center;
-      margin-top: 0.5rem;
+      margin-top: .5rem;
     }
   }
 
@@ -317,7 +317,7 @@
 
   aside {
     padding: calc(1rem * #{$lineHeight});
-    background: rgba($primary, 0.05);
+    background: rgba($primary, .05);
     border-radius: 4px;
     margin-bottom: calc(1rem * #{$lineHeight});
 
@@ -333,7 +333,7 @@
     p,
     li,
     li label {
-      font-size: 0.8125rem;
+      font-size: .8125rem;
 
       code {
         display: inline;

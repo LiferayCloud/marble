@@ -35,6 +35,9 @@
     "last 2 safari versions"
   ],
   "stylelint": {
-    "extends": "stylelint-config-dev"
+    "extends": "stylelint-config-dev",
+    "rules": {
+      "indentation": 2
+    }
   }
 }

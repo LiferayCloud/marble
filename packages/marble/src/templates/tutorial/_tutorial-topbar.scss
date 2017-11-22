@@ -6,7 +6,7 @@
   width: 100%;
   height: calc(2.5rem * #{$lineHeight});
   min-height: 60px;
-  box-shadow: 0 2px 8px rgba($primary, 0.12);
+  box-shadow: 0 2px 8px rgba($primary, .12);
   padding: 0 12px;
   background: $accent;
 
@@ -65,14 +65,14 @@
 
     align-self: center;
 
-    font-size: 0.8125rem;
+    font-size: .8125rem;
     font-family: $font-primary;
     font-weight: 600;
-    color: rgba($white, 0.8);
+    color: rgba($white, .8);
     flex-shrink: 0;
 
     > * {
-      margin-right: calc(0.5rem * #{$lineHeight});
+      margin-right: calc(.5rem * #{$lineHeight});
 
       &:last-child {
         margin-right: 0;
@@ -89,6 +89,6 @@
   &.topbar--light .name ,
   &.topbar-light .time-remaining,
   &.topbar--light .time-remaining {
-    color: rgba($primary, 0.8);
+    color: rgba($primary, .8);
   }
 }

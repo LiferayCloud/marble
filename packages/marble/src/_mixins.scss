@@ -12,8 +12,4 @@
   &::selection {
     background: rgba($primary, .1);
   }
-
-  &::-moz-selection {
-    background: rgba($primary, .1);
-  }
 }

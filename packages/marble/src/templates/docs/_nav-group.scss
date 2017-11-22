@@ -30,7 +30,7 @@
 
 .docs-nav-link {
   @include anim(color);
-  color: rgba($primary, 0.6);
+  color: rgba($primary, .6);
   font-size: 14px;
 }
 

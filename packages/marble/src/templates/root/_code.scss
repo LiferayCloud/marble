@@ -4,8 +4,8 @@
 
 * code {
   display: inline-block;
-  color: rgba($primary, 0.6);
-  background: rgba($primary, 0.1);
+  color: rgba($primary, .6);
+  background: rgba($primary, .1);
   font-size: 100%;
   font-family: $font-mono;
   padding: 0 4px;
@@ -28,7 +28,7 @@ h6 code {
 
 p a:not([class]),
 li a:not([class]) {
-  border-bottom: 1px dashed rgba($primary, 0.4);
+  border-bottom: 1px dashed rgba($primary, .4);
   color: inherit;
 
   &:hover {
@@ -48,7 +48,7 @@ li a:not([class]) {
 .nav.nav-tabs.nav-code-tabs > li > button {
   background: transparent;
   border-width: 0px;
-  color: rgba($primary, 0.8);
+  color: rgba($primary, .8);
   font-family: $font-primary;
   font-size: 13px;
   font-weight: 700;
@@ -60,7 +60,7 @@ li a:not([class]) {
   &:hover,
   &:focus {
     background: transparent;
-    color: rgba($primary, 0.6);
+    color: rgba($primary, .6);
     outline: none;
   }
 }
@@ -95,7 +95,7 @@ li a:not([class]) {
 }
 
 .code-container .CodeMirror {
-  animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
+  animation: fadeIn .5s cubic-bezier(.3, 0, .3, 1) 0s 1 forwards;
   border-radius: 0px;
   height: auto;
   opacity: 0;
@@ -186,7 +186,7 @@ li a:not([class]) {
   width: 36px;
   z-index: 999;
 
-  &:before {
+  &::before {
     @include anim(background);
     content: "";
     position: absolute;
@@ -195,15 +195,15 @@ li a:not([class]) {
     width: 36px;
     height: 36px;
     border-radius: 4px;
-    background: rgba($white, 0.2);
+    background: rgba($white, .2);
     z-index: 1;
   }
 
   &:hover {
     background: $primary;
 
-    &:before {
-      background: rgba($white, 0.4);
+    &::before {
+      background: rgba($white, .4);
     }
   }
 
@@ -225,7 +225,7 @@ li a:not([class]) {
   }
 
   ::-webkit-scrollbar-thumb {
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
     border-radius: 12px;
   }
 }
@@ -234,7 +234,7 @@ li a:not([class]) {
   @include scrollbar();
 
   ::-webkit-scrollbar-track {
-    background-color: rgba($primary, 0.8);
+    background-color: rgba($primary, .8);
   }
 
   ::-webkit-scrollbar-track:vertical {
@@ -252,12 +252,12 @@ li a:not([class]) {
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: rgba($white, 0.4);
+    background-color: rgba($white, .4);
     border: 4px solid $color-charade;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba($white, 0.6);
+    background-color: rgba($white, .6);
   }
 
   ::-webkit-scrollbar-corner {

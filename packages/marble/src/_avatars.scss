@@ -12,24 +12,23 @@
 
 .avatar {
   display: inline-block;
-  position: relative;
   overflow: hidden;
-
+  position: relative;
   text-align: center;
   text-decoration: none;
 
   img {
-    width: inherit;
     height: inherit;
-    position: absolute;
     left: 0;
+    position: absolute;
     top: 0;
+    width: inherit;
     z-index: 1;
   }
 
   .avatar-initials {
+    border: 1px solid $white;
     box-sizing: border-box;
-    border: 1px solid white;
   }
 }
 
@@ -37,8 +36,8 @@
    ========================================================================== */
 
 .topbar .avatar .avatar-initials {
-  box-sizing: border-box;
   border: 1px solid $primary;
+  box-sizing: border-box;
 }
 
 /* Avatar - Sizes
@@ -51,28 +50,28 @@ $large  : 60px;
 $xlarge : 72px;
 
 .avatar-xsmall {
-  width: $xsmall;
   height: $xsmall;
+  width: $xsmall;
 }
 
 .avatar-small {
-  width: $small;
   height: $small;
+  width: $small;
 }
 
 .avatar-medium {
-  width: $medium;
   height: $medium;
+  width: $medium;
 }
 
 .avatar-large {
-  width: $large;
   height: $large;
+  width: $large;
 }
 
 .avatar-xlarge {
-  width: $xlarge;
   height: $xlarge;
+  width: $xlarge;
 }
 
 /* Avatar - Photo
@@ -111,28 +110,30 @@ $xlarge : 72px;
 
 .avatar-initials {
   background: rgba($primary, .3);
-  color: white;
+  color: $white;
   cursor: default;
   font-family: $font-primary;
   font-weight: 700;
-  text-transform: uppercase;
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .avatar-initials:hover {
-  color: white;
+  color: $white;
 }
 
 /* Avatar - Number
    ========================================================================== */
 
 .avatar-number {
-  @extend .avatar;
-  @include anim(background);
   background: rgba($primary, .1);
   color: rgba($primary, .6);
   font-family: $font-primary;
   font-weight: 700;
+
+  @extend .avatar;
+
+  @include anim(background);
 }
 
 .avatar-number:hover {
@@ -183,55 +184,55 @@ $xlarge : 72px;
    ========================================================================== */
 
 .avatar-icon.avatar-xsmall img {
-  width: $xsmall/2;
   height: $xsmall/2;
   margin: $xsmall/4 auto;
+  width: $xsmall/2;
 }
 
 .avatar-icon.avatar-small img {
-  width: $small/2;
   height: $small/2;
   margin: $small/4 auto;
+  width: $small/2;
 }
 
 .avatar-icon.avatar-medium img {
-  width: $medium/2;
   height: $medium/2;
   margin: $medium/4 auto;
+  width: $medium/2;
 }
 
 .avatar-icon.avatar-large img {
-  width: $large/2;
   height: $large/2;
   margin: $large/4 auto;
+  width: $large/2;
 }
 
 .avatar-icon.avatar-xlarge img {
-  width: $xlarge/2;
   height: $xlarge/2;
   margin: $xlarge/4 auto;
+  width: $xlarge/2;
 }
 
 /* Avatar - Icon (Font)
    ========================================================================== */
 
-.avatar-icon.avatar-xsmall span{
+.avatar-icon.avatar-xsmall span {
   line-height: $xsmall;
 }
 
-.avatar-icon.avatar-small span{
+.avatar-icon.avatar-small span {
   line-height: $small;
 }
 
-.avatar-icon.avatar-medium span{
+.avatar-icon.avatar-medium span {
   line-height: $medium;
 }
 
-.avatar-icon.avatar-large span{
+.avatar-icon.avatar-large span {
   line-height: $large;
 }
 
-.avatar-icon.avatar-xlarge span{
+.avatar-icon.avatar-xlarge span {
   line-height: $xlarge;
 }
 
@@ -243,8 +244,8 @@ $xlarge : 72px;
 $icon12Medium: 36px;
 
 .avatar-icon-12.avatar-medium {
-  width: $icon12Medium;
   height: $icon12Medium;
+  width: $icon12Medium;
 }
 
 .avatar-icon-12.avatar-medium span {
@@ -255,8 +256,8 @@ $icon12Medium: 36px;
 $icon12Large: 72px;
 
 .avatar-icon-12.avatar-large {
-  width: $icon12Large;
   height: $icon12Large;
+  width: $icon12Large;
 }
 
 .avatar-icon-12.avatar-large span {
@@ -267,8 +268,8 @@ $icon12Large: 72px;
 $icon16Medium: 56px;
 
 .avatar-icon-16.avatar-medium {
-  width: $icon16Medium;
   height: $icon16Medium;
+  width: $icon16Medium;
 }
 
 .avatar-icon-16.avatar-medium span {
@@ -279,8 +280,8 @@ $icon16Medium: 56px;
 $icon16Large: 96px;
 
 .avatar-icon-16.avatar-large {
-  width: $icon16Large;
   height: $icon16Large;
+  width: $icon16Large;
 }
 
 .avatar-icon-16.avatar-large span {
@@ -302,46 +303,43 @@ $icon16Large: 96px;
 
 .avatar-container .avatar-photo,
 .avatar-container .avatar-initials {
-  position: absolute;
   left: 0;
+  position: absolute;
 }
 
 /* Avatar - background white with shadow and status colors
    ========================================================================== */
 
 .avatar.avatar-white,
-.avatar-initials.avatar-white
-.avatar-icon.avatar-white {
+.avatar-initials.avatar-white .avatar-icon.avatar-white {
   background: $white;
-  box-shadow: 0 2px 8px rgba($primary, 0.1);
+  box-shadow: 0 2px 8px rgba($primary, .1);
   color: rgba($primary, .8);
 }
 
 .avatar.avatar-success,
-.avatar-initials.avatar-success
-.avatar-icon.avatar-success {
+.avatar-initials.avatar-success .avatar-icon.avatar-success {
   background: $brand-success;
   color: $white;
 }
 
 .avatar.avatar-danger,
-.avatar-initials.avatar-danger
-.avatar-icon.avatar-danger {
+.avatar-initials.avatar-danger .avatar-icon.avatar-danger {
   background: $brand-danger;
   color: $white;
 }
 
 .avatar.avatar-primary,
-.avatar-initials.avatar-primary
-.avatar-icon.avatar-primary {
+.avatar-initials.avatar-primary .avatar-icon.avatar-primary {
   background: rgba($primary, .8);
   color: $white;
 }
 
 /* Avatar - We
    ========================================================================== */
+
 .avatar-initials.avatar-we {
-  text-transform: capitalize;
   font-family: $font-primary;
   font-weight: 600;
+  text-transform: capitalize;
 }

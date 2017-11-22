@@ -18,7 +18,7 @@
   padding: 0 24px;
   margin: 0;
 
-  li:before {
+  li::before {
     content: "";
   }
 }
@@ -49,7 +49,7 @@
 
   .container .content a {
     @include anim(color);
-    border-bottom: 1px dashed rgba($primary, 0.4);
+    border-bottom: 1px dashed rgba($primary, .4);
     color: inherit;
 
     &:hover,
@@ -60,7 +60,7 @@
   }
 
   .posts-list {
-    background: rgba($primary, 0.02);
+    background: rgba($primary, .02);
     padding: calc(3rem * #{$lineHeight}) 0;
   }
 
@@ -81,7 +81,7 @@
   }
 
   .posts-list a:hover small {
-    color: rgba($primary, 0.8);
+    color: rgba($primary, .8);
   }
 
   .posts-list a h4 {
@@ -203,7 +203,7 @@
     width: calc(2rem * #{$lineHeight});
     height: calc(2rem * #{$lineHeight});
     border-radius: 50%;
-    background: rgba($primary, 0.1);
+    background: rgba($primary, .1);
     display: inline-block;
   }
 
@@ -216,7 +216,7 @@
     width: 2rem;
     text-align: center;
     position: relative;
-    top: 0.5px;
-    left: 0.5px;
+    top: .5px;
+    left: .5px;
   }
 }

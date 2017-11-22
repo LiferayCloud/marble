@@ -3,28 +3,28 @@
    ========================================================================== */
 
 .slider {
+  cursor: pointer;
   position: relative;
   text-align: center;
-  cursor: pointer;
 
   span {
     display: none;
   }
 
   .rail {
+    background: rgba($primary, .1);
     border-radius: 4px;
     height: 8px;
     position: relative;
     z-index: 1;
-    background: rgba($primary, 0.1)
   }
 
   .rail-handle {
-    position: absolute;
-    z-index: 10;
-    top: -5px;
     height: 18px;
+    position: absolute;
+    top: -5px;
     width: 18px;
+    z-index: 10;
   }
 
   .rail-active {
@@ -37,10 +37,9 @@
   .handle {
     background-color: $white;
     border-radius: 50%;
-    margin: 0 -9px;
+    box-shadow: 0 2px 12px rgba($primary, .12);
     height: 18px;
+    margin: 0 -9px;
     width: 18px;
-    box-shadow: 0 2px 12px rgba($primary, 0.12);
   }
-
 }

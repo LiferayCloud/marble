@@ -7,8 +7,8 @@
   width: 100%;
 
   @media (min-width: 960px) {
-    margin-left: calc((0.5rem * #{$lineHeight}) * 21); // 252px;
-    width: calc(100% - ((0.5rem * #{$lineHeight}) * 21));
+    margin-left: calc((.5rem * #{$lineHeight}) * 21); // 252px;
+    width: calc(100% - ((.5rem * #{$lineHeight}) * 21));
   }
 }
 
@@ -16,11 +16,11 @@
   top: 0;
 
   @media (min-width: 960px) {
-    width: calc((0.5rem * #{$lineHeight}) * 21);
+    width: calc((.5rem * #{$lineHeight}) * 21);
   }
 
   .sidebar-list {
-    padding: calc(1rem * #{$lineHeight}) calc(0.5rem * #{$lineHeight});
+    padding: calc(1rem * #{$lineHeight}) calc(.5rem * #{$lineHeight});
   }
 
   .sidebar-item {
@@ -43,20 +43,20 @@
     align-items: center;
     border-radius: $border-radius-large;
 
-    padding: calc(0.5rem * #{$lineHeight});
+    padding: calc(.5rem * #{$lineHeight});
     width: 100%;
 
     font-family: $font-primary;
     font-weight: 600;
-    font-size: 0.8125rem;
-    color: rgba($primary, 0.8);
+    font-size: .8125rem;
+    color: rgba($primary, .8);
 
     &.sidebar-link-selected {
-      background: rgba($accent, 0.1);
+      background: rgba($accent, .1);
     }
 
     &.sidebar-link-read {
-      color: rgba($primary, 0.8);
+      color: rgba($primary, .8);
     }
 
     span:not(.tutorial-step) {
@@ -69,15 +69,15 @@
     font-family: $font-primary;
     font-weight: 600;
     display: block;
-    margin-right: calc(0.5rem * #{$lineHeight});
+    margin-right: calc(.5rem * #{$lineHeight});
     width: calc(1.5rem * #{$lineHeight});
     height: calc(1.5rem * #{$lineHeight});
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba($primary, 0.12);
+    box-shadow: 0 2px 8px rgba($primary, .12);
     text-align: center;
     line-height: calc(1.5rem * #{$lineHeight});
     background: white;
-    font-size: 0.8125rem;
+    font-size: .8125rem;
     flex-shrink: 0;
     position: relative;
     z-index: 1;
@@ -89,7 +89,7 @@
   }
 
   .sidebar-link .before {
-    background: rgba($primary, 0.1);
+    background: rgba($primary, .1);
     display: block;
     position: absolute;
     top: 0;
@@ -115,7 +115,7 @@
   }
 
   .sidebar-item .sidebar-link .after {
-    background: rgba($primary, 0.1);
+    background: rgba($primary, .1);
     top: 50%;
     display: block;
     height: 50%;
@@ -140,16 +140,16 @@
   }
 
   .sidebar-link .section-title {
-    font-size: 0.8125rem;
+    font-size: .8125rem;
   }
 
   .sidebar-link.sidebar-link-read .section-title {
-    color: rgba($primary, 0.6);
+    color: rgba($primary, .6);
     text-decoration: line-through;
   }
 
   .sidebar-link.sidebar-link-selected .tutorial-step {
     color: $accent;
-    box-shadow: 0 2px 8px rgba($accent, 0.1);
+    box-shadow: 0 2px 8px rgba($accent, .1);
   }
 }

@@ -9,9 +9,9 @@ $primary   : #0e141a !default;
 $secondary : $primary !default;
 $accent    : #00d46a !default;
 
-$black      : #000 !default;
-$white      : #fff !default;
-$gray-light : #888 !default;
+$black      : #000000 !default;
+$white      : #ffffff !default;
+$gray-light : #888888 !default;
 
 $brand-primary : $primary !default;
 $brand-success : #00d46a !default;
@@ -92,7 +92,7 @@ $btn-primary-border: transparent !default;
 $btn-success-border: transparent !default;
 $btn-danger-border: transparent !default;
 
-$btn-accent-color: white !default;
+$btn-accent-color: $white !default;
 $btn-accent-bg: $accent !default;
 $btn-accent-border: transparent !default;
 
@@ -114,7 +114,7 @@ $input-color: $primary !default;
 $input-color-placeholder: rgba($primary, .3) !default;
 $input-group-addon-bg: transparent !default;
 $input-height-base: 60px !default;
-$input-bg-disabled: white !default;
+$input-bg-disabled: $white !default;
 
 $input-inverse-bg: rgba($primary, .05) !default;
 $input-inverse-border-focus: $white !default;
@@ -137,7 +137,7 @@ $border-radius-large: 4px !default;
 /* Dropdowns
    ========================================================================== */
 
-$dropdown-border: rgba($primary, 0.12) !default;
+$dropdown-border: rgba($primary, .12) !default;
 $dropdown-link-color: rgba($primary, .5) !default;
 $dropdown-link-hover-color: rgba($primary, .9) !default;
 $dropdown-link-hover-bg: none !default;
@@ -145,9 +145,9 @@ $dropdown-link-hover-bg: none !default;
 /* Bonus
    ========================================================================== */
 
-$shadow-small: 0 1px 1px rgba($primary, 0.08) !default;
-$shadow-large: 0 2px 4px rgba($primary, 0.12) !default;
-$shadow-tooltip: 0 6px 12px rgba($primary, 0.1) !default;
+$shadow-small: 0 1px 1px rgba($primary, .08) !default;
+$shadow-large: 0 2px 4px rgba($primary, .12) !default;
+$shadow-tooltip: 0 6px 12px rgba($primary, .1) !default;
 
 $transition-duration: .3s !default;
 $transition-function: ease-in-out !default;

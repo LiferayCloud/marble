@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .spinner {
-  color: white;
+  color: $white;
   display: inline-block;
   font-family: "icon-12";
   font-size: 12px;
@@ -16,26 +16,27 @@
 }
 
 .spinner.spinner-small {
-  line-height: 18px;
   height: 24px;
+  line-height: 18px;
   width: 24px;
-  &:before {
+
+  &::before {
     font-size: 12px;
     height: 24px;
-    width: 24px;
     margin-left: -12px;
     padding-left: 1px;
+    width: 24px;
   }
 }
 
-.spinner.spinner-small:not(:required):before {
+.spinner.spinner-small:not(:required)::before {
   border: 3px solid $white;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
   border-top-color: $brand-success;
 }
 
-.alert-dark .spinner.spinner-small:not(:required):before {
+.alert-dark .spinner.spinner-small:not(:required)::before {
   border: 3px solid transparent;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
@@ -43,26 +44,27 @@
 }
 
 .spinner.spinner-medium {
-  line-height: 26px;
   height: 36px;
+  line-height: 26px;
   width: 36px;
-  &:before {
+
+  &::before {
     font-size: 16px;
     height: 36px;
-    width: 36px;
     margin-left: -18px;
     padding-left: 2px;
+    width: 36px;
   }
 }
 
-.spinner.spinner-medium:not(:required):before {
+.spinner.spinner-medium:not(:required)::before {
   border: 4px solid $white;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
   border-top-color: $brand-success;
 }
 
-.alert-dark .spinner.spinner-medium:not(:required):before {
+.alert-dark .spinner.spinner-medium:not(:required)::before {
   border: 4px solid transparent;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
@@ -70,81 +72,82 @@
 }
 
 .spinner.spinner-large {
-  line-height: 34px;
   height: 48px;
+  line-height: 34px;
   width: 48px;
-  &:before {
+
+  &::before {
     font-size: 24px;
     height: 48px;
-    width: 48px;
     margin-left: -24px;
     padding-left: 2px;
+    width: 48px;
   }
 }
 
-.spinner.spinner-large:not(:required):before {
+.spinner.spinner-large:not(:required)::before {
   border: 5px solid $white;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
   border-top-color: $brand-success;
 }
 
-.alert-dark .spinner.spinner-large:not(:required):before {
+.alert-dark .spinner.spinner-large:not(:required)::before {
   border: 5px solid transparent;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
   border-top-color: $brand-success;
 }
 
-.spinner:before {
+.spinner::before {
   height: 24px;
+  margin-left: -12px;
   position: absolute;
   width: 24px;
-  margin-left: -12px;
 }
 
-.spinner:not(:required):before {
-  content: "";
-  border-radius: 50%;
+.spinner:not(:required)::before {
+  animation: rotate-360 .6s linear infinite;
   border: 3px solid $white;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
+  border-radius: 50%;
   border-top-color: $brand-success;
-  animation: rotate-360 .6s linear infinite;
+  content: "";
 }
 
-.alert-dark .spinner:not(:required):before {
+.alert-dark .spinner:not(:required)::before {
   border: 3px solid transparent;
   border-bottom-color: $brand-success;
   border-left-color: $brand-success;
   border-top-color: $brand-success;
 }
 
-.spinner-done:not(:required):before {
-  content: "\E018";
+.spinner-done:not(:required)::before {
+  animation: none;
   background: $brand-success;
   border-color: $brand-success;
-  animation: none;
+  content: "\E018";
 }
 
-.spinner.spinner-danger:not(:required):before {
+.spinner.spinner-danger:not(:required)::before {
   border-bottom-color: $brand-danger;
   border-left-color: $brand-danger;
   border-top-color: $brand-danger;
 }
 
-.spinner.spinner-danger.spinner-done:not(:required):before {
+.spinner.spinner-danger.spinner-done:not(:required)::before {
   background: $brand-danger;
   border-color: $brand-danger;
 }
 
-.spinner.spinner-warning:not(:required):before {
+.spinner.spinner-warning:not(:required)::before {
   border-bottom-color: $brand-warning;
   border-left-color: $brand-warning;
   border-top-color: $brand-warning;
 }
 
-.spinner.spinner-warning.spinner-done:not(:required):before {
+.spinner.spinner-warning.spinner-done:not(:required)::before {
   background: $brand-warning;
   border-color: $brand-warning;
 }
@@ -170,18 +173,18 @@
   margin-left: 8px;
 }
 
-.label .spinner:not(:required):before {
-  top: 0px;
-  font-size: 16px;
-  font-family: 'icon-16';
-  line-height: 24px;
-  content: "\E061";
-  background: rgba($white, 0);
-  border: 0px solid $white;
-  width: 24px;
-  height: 24px;
-  padding: 0;
+.label .spinner:not(:required)::before {
   animation: rotate-360 1s linear infinite;
+  background: rgba($white, 0);
+  border: 0 solid $white;
+  content: "\E061";
+  font-family: "icon-16";
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0;
+  top: 0;
+  width: 24px;
 }
 
 .label .spinner,

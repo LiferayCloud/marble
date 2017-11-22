@@ -3,17 +3,16 @@
    ========================================================================== */
 
 .radio-group {
-  list-style: none;
-  padding: 0;
-  margin-left: 0;
-
   font-family: $font-secondary;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
 
   > * {
-    line-height: 24px;
     display: block;
+    line-height: 24px;
   }
 
   &.radio-group-inline {
@@ -22,7 +21,7 @@
       margin-right: 24px;
 
       &:last-child {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
   }
@@ -34,13 +33,13 @@
 
 .radio-group * label {
   color: inherit;
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-  cursor: pointer;
-  padding-left: 24px;
   margin: 0;
+  padding-left: 24px;
   top: 0;
 }
 
@@ -48,20 +47,21 @@
   display: none;
 }
 
-.radio-group * input[type="radio"] + label:before {
-  @include anim(all);
-  color: rgba($primary, 0.8);
+.radio-group * input[type="radio"] + label::before {
+  color: rgba($primary, .8);
   content: "\E059";
-  font-family: 'icon-16';
+  font-family: "icon-16";
   font-size: 24px;
-  font-weight: normal;
+  font-weight: 400;
+  left: 0;
   line-height: 24px;
   position: absolute;
-  left: 0;
   top: 0;
+
+  @include anim(all);
 }
 
-.radio-group * input[type="radio"]:checked + label:before {
-  content: "\E058";
+.radio-group * input[type="radio"]:checked + label::before {
   color: $accent;
+  content: "\E058";
 }

@@ -36,13 +36,13 @@
 }
 
 .btn-group-label {
-  @include anim(top);
   position: relative;
   top: 0;
+
+  @include anim(top);
 }
 
 .btn-group-icon {
-  @include anim(top);
   background: $white;
   border-radius: 50%;
   color: rgba($primary, .8);
@@ -51,6 +51,8 @@
   padding: 1px 2px 3px;
   position: absolute;
   top: 60px;
+
+  @include anim(top);
 }
 
 /* Selected

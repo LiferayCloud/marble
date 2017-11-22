@@ -13,7 +13,7 @@
   text-align: center;
 
   .topic-icon,
-  &.radial-out:before {
+  &.radial-out::before {
     background: $accent;
   }
 }
@@ -105,7 +105,7 @@
   transform: translateZ(0);
 }
 
-.radial-out:before {
+.radial-out::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -115,17 +115,17 @@
   bottom: 0;
   border-radius: 100%;
   transform: scale(0);
-  transition: transform 0.4s ease-out;
+  transition: transform .4s ease-out;
 }
 
-.radial-out:hover:before,
-.radial-out:focus:before {
+.radial-out:hover::before,
+.radial-out:focus::before {
   transform: scale(2);
 }
 
 .radial-out .topic-icon {
   transform: scale(1);
-  transition: transform 0.4s ease-out;
+  transition: transform .4s ease-out;
 }
 
 .radial-out:hover .topic-icon,
@@ -136,7 +136,7 @@
 .radial-out .topic-title {
   top: 0;
   position: relative;
-  transition: all 0.4s ease-out;
+  transition: all .4s ease-out;
 }
 
 .radial-out:hover .topic-title,

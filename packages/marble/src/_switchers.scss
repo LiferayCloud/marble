@@ -3,50 +3,50 @@
    ========================================================================== */
 
 .switcher {
-  transition: background 0.333s;
-  background: rgba($primary, 0.02);
+  background: rgba($primary, .02);
+  border: 1px solid rgba($primary, .12);
   border-radius: 18px;
-  border: 1px solid rgba($primary, 0.12);
   cursor: pointer;
   height: 36px;
   outline: none;
-  width: 60px;
   position: relative;
+  transition: background .333s;
+  width: 60px;
 
-  &:before:not(.disabled) {
-    content: " ";
-    border-radius: 18px;
-    transition: background 0.333s;
+  &::before:not(.disabled) {
     background: transparent;
-    position: absolute;
-    width: 100%;
+    border-radius: 18px;
+    content: " ";
     height: 100%;
+    position: absolute;
+    transition: background .333s;
+    width: 100%;
   }
 
-  &:hover:before:not(.disabled) {
-    background: rgba($primary, 0.05);
+  &:hover::before:not(.disabled) {
+    background: rgba($primary, .05);
   }
 
   &.disabled {
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: .6;
   }
 }
 
 .switcher-control {
-  position: absolute;
-  transition: left 0.333s;
   background: $white;
   border-radius: 50%;
-  box-shadow: 0 1px 4px rgba($primary, 0.1), 0 2px 4px rgba($primary, 0.05), 0 2px 8px rgba($primary, 0.1);
+  box-shadow: 0 1px 4px rgba($primary, .1), 0 2px 4px rgba($primary, .05), 0 2px 8px rgba($primary, .1);
+  height: 28px;
   left: 0;
   margin: 3px 3px 0;
-  height: 28px;
   outline: none;
+  position: absolute;
+  transition: left .333s;
   width: 28px;
 
   &:hover {
-    box-shadow: 0 1px 4px rgba($primary, 0.15), 0 2px 4px rgba($primary, 0.1), 0 2px 8px rgba($primary, 0.15);
+    box-shadow: 0 1px 4px rgba($primary, .15), 0 2px 4px rgba($primary, .1), 0 2px 8px rgba($primary, .15);
   }
 }
 
@@ -61,7 +61,8 @@
   border-radius: 24px;
   height: 48px;
   width: 72px;
-  &:before {
+
+  &::before {
     border-radius: 24px;
   }
 }
@@ -79,7 +80,8 @@
   border-radius: 12px;
   height: 24px;
   width: 42px;
-  &:before {
+
+  &::before {
     border-radius: 12px;
   }
 }
@@ -137,5 +139,5 @@
 }
 
 .switcher-on.primary {
-  background: rgba($primary, 0.8);
+  background: rgba($primary, .8);
 }

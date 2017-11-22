@@ -19,6 +19,9 @@
   <h1>Checkbox Group Inline</h1>
   <div id="checkbox-group-inline"></div>
 
+  <h1>Checkbox Group Indeterminate</h1>
+  <div id="checkbox-group-indeterminate"></div>
+
   <script>
     new metal.CheckboxGroup({
       name: 'checkbox-group-1',
@@ -42,6 +45,8 @@
       ]
     }, '#checkbox-group');
 
+    // Inline
+
     new metal.CheckboxGroup({
       name: 'checkbox-group-2',
       style: 'checkbox-group checkbox-group-inline',
@@ -64,6 +69,24 @@
         },
       ]
     }, '#checkbox-group-inline');
+
+    // Indeterminate
+
+    new metal.CheckboxGroup({
+      name: 'checkbox-group-1',
+      items: [
+        {
+          id: 'checkbox-3-1',
+          checked: true,
+          label: 'Option 1',
+          value: 'Checkbox 1',
+        }
+      ]
+    }, '#checkbox-group-indeterminate');
+
+    const checkbox = document.getElementById('checkbox-3-1');
+    checkbox.indeterminate = true;
+    </script>
   </script>
 </body>
 </html>

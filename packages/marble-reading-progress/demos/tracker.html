@@ -14,6 +14,7 @@
   <style>
     .reading-progress {
       position: fixed;
+      top: 20px;
     }
   </style>
 </head>
@@ -161,7 +162,7 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript">
+  <script>
     window.progress = new metal.ReadingProgressTracker({
       activeClass: 'reading',
       completedClass: 'read',
@@ -173,6 +174,7 @@
       var circle = document.querySelectorAll('.reading-progress svg circle').item(progress.activeIndex);
       circle.setAttribute('stroke-dashoffset', 100 - progress.progress);
     }
+
     progress.on('progressChanged', updateProgress);
     updateProgress();
   </script>

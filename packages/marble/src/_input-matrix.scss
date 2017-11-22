@@ -7,56 +7,57 @@
 }
 
 .form-group {
-  margin-bottom: 0px;
+  margin-bottom: 0;
+
   .help-block {
-    min-height: 24px;
-    padding: 0;
     color: $brand-danger;
     font-weight: 600;
     margin: 0 2px;
+    min-height: 24px;
+    padding: 0;
   }
 }
 
 .input-matrix .input-matrix-fields {
-  @extend .col-flex-row-left-start;
   position: relative;
+
+  @extend .col-flex-row-left-start;
 }
 
 .input-matrix .input-matrix-fields .input-matrix-fields-left {
-  position: relative;
-  left: 0;
-  width: 100%;
   flex-grow: 1;
+  left: 0;
+  position: relative;
+  width: 100%;
 }
 
 .input-matrix .input-matrix-fields .input-matrix-fields-right {
-  position: relative;
-  margin: 0 0 0 12px;
-  width: 60px;
-  height: 60px;
   flex-shrink: 0;
+  height: 60px;
+  margin: 0 0 0 12px;
+  position: relative;
+  width: 60px;
 
   .close {
-    transition: color 0.333s, background 0.333s;
-    text-align: center;
-    width: 20px;
+    background: rgba($primary, .05);
     border-radius: 4px;
+    color: rgba($primary, .4);
+    height: 60px;
     opacity: 1;
     outline: 0;
-
+    text-align: center;
+    transition: color .333s, background .333s;
+    width: 20px;
     width: 60px;
-    height: 60px;
-    background: rgba($primary, 0.05);
-    color: rgba($primary, 0.4);
 
     &:hover {
-      background: rgba($brand-danger, 0.1);
+      background: rgba($brand-danger, .1);
       color: $brand-danger;
     }
 
     > [class*="icon-16-"] {
+      left: .5px;
       position: relative;
-      left: 0.5px;
       top: 1.5px;
     }
   }
@@ -73,8 +74,8 @@
   }
 
   .input-matrix-label {
-    width: calc(50% - 8px);
     margin-right: 12px;
+    width: calc(50% - 8px);
 
     &:last-child {
       margin-right: 0;
@@ -95,23 +96,23 @@
   }
 
   .form-group {
-    width: 50%;
     margin-right: 12px;
+    width: 50%;
 
     &:last-child {
       margin-right: 0;
     }
 
     @media (max-width: $screen-md-min) {
-      width: 100%;
-      margin-right: 0;
       margin-bottom: 12px;
+      margin-right: 0;
+      width: 100%;
     }
   }
 }
 
 .input-matrix.input-matrix--inline .has-action-button {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 /* No Validation

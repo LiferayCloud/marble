@@ -5,23 +5,25 @@
    ========================================================================== */
 
 body {
-  text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -.02rem;
+  text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  letter-spacing: -0.02rem;
 }
 
 body.fade-out {
-  @include anim(opacity);
   display: block;
   opacity: 0;
   overflow: hidden;
+
+  @include anim(opacity);
 }
 
 body.fade-in {
-  @include anim(opacity);
   opacity: 1;
+
+  @include anim(opacity);
 }
 
 .primary-bg {

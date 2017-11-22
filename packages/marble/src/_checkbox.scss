@@ -4,8 +4,8 @@
 
 .checkbox-group {
   list-style: none;
-  padding: 0;
   margin-left: 0;
+  padding: 0;
 
   &.checkbox-group-inline {
     > .checkbox {
@@ -13,19 +13,18 @@
       margin-right: 24px;
 
       &:last-child {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
   }
 }
 
 .checkbox {
-  font-family: $font-secondary;
-  font-weight: inherit;
-  font-size: inherit;
-
-  line-height: 24px;
   display: block;
+  font-family: $font-secondary;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 24px;
 }
 
 .checkbox {
@@ -34,13 +33,13 @@
 
 .checkbox label {
   color: inherit;
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-  cursor: pointer;
-  padding-left: 24px;
   margin: 0;
+  padding-left: 24px;
   top: 0;
 }
 
@@ -48,25 +47,26 @@
   display: none;
 }
 
-.checkbox input[type="checkbox"] + label:before {
-  @include anim(all);
-  color: rgba($primary, 0.8);
+.checkbox input[type="checkbox"] + label::before {
+  color: rgba($primary, .8);
   content: "\E017";
-  font-family: 'icon-16';
+  font-family: "icon-16";
   font-size: 24px;
-  font-weight: normal;
+  font-weight: 400;
+  left: 0;
   line-height: 24px;
   position: absolute;
-  left: 0;
   top: 0;
+
+  @include anim(all);
 }
 
-.checkbox input[type="checkbox"]:checked + label:before {
-  content: "\E015";
+.checkbox input[type="checkbox"]:checked + label::before {
   color: $accent;
+  content: "\E015";
 }
 
-.checkbox input[type="checkbox"]:indeterminate + label:before {
+.checkbox input[type="checkbox"]:indeterminate + label::before {
+  color: rgba($primary, .4);
   content: "\E016";
-  color: rgba($primary, 0.4);
 }

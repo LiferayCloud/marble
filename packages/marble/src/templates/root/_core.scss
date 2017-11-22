@@ -20,8 +20,8 @@ $font-h4: 1rem * 2; // 2.125rem
 $font-h5: 1rem * $scaleFactor; // 1.5rem
 $font-h6: (1rem * pow($scaleFactor, 3)) / 4; // 1.0625rem
 $font-p: 1rem; // 1rem
-$font-small: (1rem * $scaleFactor) / 2; // 0.75rem
-$font-mini: 1rem / 2; // 0.5rem
+$font-small: (1rem * $scaleFactor) / 2; // .75rem
+$font-mini: 1rem / 2; // .5rem
 
 :root {
   font-size: 14px;

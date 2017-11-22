@@ -5,7 +5,7 @@
 .reading-progress {
   background: $white;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba($primary, 0.1);
+  box-shadow: 0 2px 8px rgba($primary, .1);
   position: relative;
   width: 255px;
 }
@@ -21,8 +21,8 @@
 
 .reading-progress a {
   display: block;
-  position: relative;
   padding: 12px 12px 12px 60px;
+  position: relative;
 }
 
 .reading-progress a::before,
@@ -32,10 +32,10 @@
 
 .docs .reading-progress li a:not([class]),
 .docs .reading-progress p a:not([class]) {
-  border-bottom: 0px dashed rgba($primary, 0.4);
+  border-bottom: 0 dashed rgba($primary, .4);
 
   &:hover {
-    border-bottom: 0px dashed $accent;
+    border-bottom: 0 dashed $accent;
   }
 }
 
@@ -43,19 +43,19 @@
   background: transparent;
   border-radius: 50%;
   bottom: auto;
-  box-shadow: 0 2px 8px rgba($primary, 0.2);
+  box-shadow: 0 2px 8px rgba($primary, .2);
   color: rgba($primary, .4);
   content: counter(articles);
   font-family: $font-primary;
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   height: 36px;
   left: 12px;
   line-height: 36px;
   text-align: center;
   top: 12px;
-  transition: background-color 0.3s, color 0.3s;
   transform: none;
+  transition: background-color .3s, color .3s;
   width: 36px;
 }
 
@@ -68,12 +68,12 @@
 }
 
 .reading-progress a.reading::before {
-  background-color: white;
+  background-color: $white;
   color: rgba($primary, .8);
 }
 
 .reading-progress a.read .reading-title {
-  color: rgba($primary, 0.6);
+  color: rgba($primary, .6);
   text-decoration: line-through;
 }
 
@@ -95,20 +95,20 @@
 }
 
 .reading-title {
-  color: rgba($primary, 0.6);
+  color: rgba($primary, .6);
   display: block;
   font-family: $font-primary;
-  font-weight: 400;
   font-size: 14px;
+  font-weight: 400;
   line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.3s;
+  transition: color .3s;
   white-space: normal;
 }
 
 .reading-subtitle {
-  color: rgba($primary, 0.4);
+  color: rgba($primary, .4);
   font-size: 10px;
 }
 

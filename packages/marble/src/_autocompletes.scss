@@ -3,14 +3,15 @@
    ========================================================================== */
 
 .autocomplete {
-  @include box-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
-  background: white;
+  background: $white;
   border: 1px transparent;
-  margin-top: 0px;
+  border-radius: 4px;
+  margin-top: 0;
   overflow: hidden;
   position: absolute;
   z-index: $zindex-modal;
-  border-radius: 4px;
+
+  @include box-shadow(0 2px 8px rgba(0, 0, 0, .1));
 
   .list {
     padding-bottom: 12px;
@@ -36,10 +37,7 @@
 }
 
 .autocomplete-topbar.autocomplete-bottom {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 0 0 4px 4px;
   margin-top: 22px;
 }
 
@@ -65,9 +63,10 @@
   }
 
   .listitem-link {
-    @include anim(background);
     display: block;
     padding: 23px 20px 32px;
+
+    @include anim(background);
 
     &:hover {
       background: rgba($accent, .1);
@@ -76,8 +75,8 @@
 
   .listitem-title {
     color: $primary;
-    font-size: 16px;
     font-family: $font-primary;
+    font-size: 16px;
     font-weight: 700;
   }
 

@@ -3,8 +3,8 @@
    ========================================================================== */
 
 .content-header {
-  padding: 24px 0 36px;
   min-height: 48px;
+  padding: 24px 0 36px;
 
   @media (max-width: $screen-md-min) {
     padding: 24px 0;
@@ -15,63 +15,64 @@
   }
 
   .header-title {
-    @include anim(color);
-    @extend .truncate;
+    color: rgba($primary, .9);
+    display: block;
+    font-family: $font-primary;
+    font-size: 29px;
+    font-weight: 700;
     line-height: 48px;
-    text-align: center;
     margin: 0;
     padding: 0;
-    display: block;
-
-    font-family: $font-primary;
-    font-weight: 700;
-
-    font-size: 29px;
-    color: rgba($primary, 0.9);
-
     position: relative;
+    text-align: center;
     top: 2px;
 
+    @include anim(color);
+
+    @extend .truncate;
+
     span {
+      color: rgba($primary, .4);
+
       @include anim(color);
-      color: rgba($primary, 0.4);
     }
 
     @media (max-width: $screen-md-min) {
-      text-align: left;
       font-size: 23px;
       line-height: 36px;
+      text-align: left;
     }
 
     @media (max-width: $screen-sm-min) {
-      text-align: left;
       font-size: 19px;
       line-height: 36px;
+      text-align: left;
     }
   }
 
   a.header-title:hover {
     color: $accent;
+
     span {
       color: $accent;
     }
   }
 
   .btn-install {
+    font-family: $font-primary;
+    font-size: 13px;
+    font-weight: 700;
     height: 48px;
     line-height: 48px;
-    font-size: 13px;
     padding: 0 12px;
-    font-family: $font-primary;
-    font-weight: 700;
 
     span {
       display: inline-block;
+      float: left;
       line-height: 48px;
       margin-right: 12px;
       position: relative;
-      top: 0px;
-      float: left;
+      top: 0;
 
       @media (max-width: $screen-md-min) {
         height: 36px;
@@ -86,10 +87,10 @@
   }
 
   .nav-container {
+    align-content: center;
+    align-items: center;
     display: flex;
     justify-content: flex-start;
-    align-items:center;
-    align-content:center;
     width: 100%;
 
     &.nav-container-end {
@@ -97,6 +98,7 @@
 
       .avatar-status {
         margin-left: 8px;
+
         @media (max-width: $screen-md-min) {
           margin-left: 0;
           margin-right: 8px;
@@ -109,15 +111,15 @@
     }
 
     .avatar-status {
+      background: rgba($primary, .05);
       display: inline-block;
-      width: 48px;
       height: 48px;
       text-align: center;
-      background: rgba($primary, .05);
+      width: 48px;
 
       @media (max-width: $screen-sm-min) {
-        width: 36px;
         height: 36px;
+        width: 36px;
       }
 
       [class^="icon-16-"],
@@ -131,24 +133,24 @@
       }
 
       &.up {
+        background: rgba($brand-success, .1);
         color: $brand-success;
-        background: rgba($brand-success, 0.1);
       }
 
       &.down {
+        background: rgba($brand-danger, .1);
         color: $brand-danger;
-        background: rgba($brand-danger, 0.1);
       }
 
       &.warn {
+        background: rgba($brand-warning, .1);
         color: $brand-warning;
-        background: rgba($brand-warning, 0.1);
       }
 
       &.unknown,
       &.loading {
-        color: rgba($primary, 0.8);
-        background: rgba($primary, 0.1);
+        background: rgba($primary, .1);
+        color: rgba($primary, .8);
       }
     }
   }
@@ -158,45 +160,46 @@
     margin-left: 8px;
 
     .dropdown-menu {
-      margin: 0px 0 0 -120px;
+      margin: 0 0 0 -120px;
     }
   }
 
   .btn.btn-default.btn-icon,
   .dropdown.dropdown-last .btn-icon {
-    @include anim(all);
+    background: rgba($primary, .05);
     border-radius: 4px;
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    margin: 0;
-    text-align: center;
     display: inline-block;
-    background: rgba($primary, 0.05);
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 48px;
+
+    @include anim(all);
 
     &:hover {
-      background: rgba($accent, 0.1);
+      background: rgba($accent, .1);
       color: $accent;
     }
 
     span {
-      line-height: 48px;
-      margin: 0px;
       display: block;
-      top: 1px;
       left: 1px;
+      line-height: 48px;
+      margin: 0;
+      top: 1px;
     }
   }
 
   .dropdown .btn.btn-default {
     border-radius: 4px;
+    font-family: $font-primary;
+    font-size: 13px;
+    font-weight: 700;
     height: 48px;
     line-height: 48px;
-    padding: 0 32px 0 12px;
     margin: 0;
-    font-size: 13px;
-    font-family: $font-primary;
-    font-weight: 700;
+    padding: 0 32px 0 12px;
     position: relative;
     text-align: left;
 
@@ -210,8 +213,9 @@
 
   .dropdown {
     .dropdown-menu {
-      margin: 0px;
+      margin: 0;
       padding: 12px 0;
+
       li,
       li:first-child,
       li:last-child {
@@ -223,14 +227,14 @@
 
 .create-project .content-header .header-title {
   @media (max-width: $screen-md-min) {
-    text-align: center;
     font-size: 23px;
     line-height: 48px;
+    text-align: center;
   }
 
   @media (max-width: $screen-sm-min) {
-    text-align: center;
     font-size: 19px;
     line-height: 48px;
+    text-align: center;
   }
 }

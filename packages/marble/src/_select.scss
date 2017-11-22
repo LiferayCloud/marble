@@ -7,8 +7,8 @@
 }
 
 .select .dropdown .btn {
-  background: rgba($primary, 0.05);
-  color: rgba($primary, 0.6);
+  background: rgba($primary, .05);
+  color: rgba($primary, .6);
   font-size: 14px;
   font-weight: 400;
   padding: 0 18px 0 20px;
@@ -17,34 +17,33 @@
 }
 
 .select .dropdown .btn img {
-  margin: 18px 18px 0 0;
-  width: 24px;
-  height: 24px;
   border-radius: 4px;
   float: left;
+  height: 24px;
+  margin: 18px 18px 0 0;
+  width: 24px;
 }
 
 .select .dropdown .btn [class^="icon-12-"],
 .select .dropdown .btn [class*="icon-12-"] {
-  position: absolute;
   line-height: 58px;
+  position: absolute;
   right: 20px;
-  top: 0px;
+  top: 0;
 }
 
-
 .select .dropdown .icon-16-arrow-down-short {
-  position: absolute;
+  color: rgba($primary, .4);
   line-height: 58px;
+  position: absolute;
   right: 12px;
   top: 1px;
-  color: rgba($primary, 0.4);
 }
 
 .select .dropdown .dropdown-menu {
   margin: -60px 0 0;
-  width: 100%;
   padding: 12px 0;
+  width: 100%;
 }
 
 .select .dropdown .dropdown-menu li {
@@ -53,29 +52,29 @@
 }
 
 .select .dropdown .dropdown-menu li a {
-  border-bottom-width: 0px;
-  line-height: 24px;
-  height: 36px;
-  padding: 6px 20px;
-  color: rgba($primary, 0.8);
+  border-bottom-width: 0;
+  color: rgba($primary, .8);
   font-family: $font-primary;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
+  height: 36px;
+  line-height: 24px;
   margin: 0;
+  padding: 6px 20px;
 }
 
 .select .dropdown .dropdown-menu li a img {
-  width: 24px;
-  height: 24px;
   border-radius: 4px;
-  margin: 0 18px 0 0;
   float: left;
-}
-.select .dropdown .dropdown-menu li a:hover {
-  color: rgba($primary, 0.8);
-  background-color: rgba($accent, 0.1);
+  height: 24px;
+  margin: 0 18px 0 0;
+  width: 24px;
 }
 
+.select .dropdown .dropdown-menu li a:hover {
+  background-color: rgba($accent, .1);
+  color: rgba($primary, .8);
+}
 
 /* ==========================================================================
    Select Large
@@ -86,77 +85,77 @@
 }
 
 .select.select-large .dropdown .btn {
+  background: rgba($primary, .05);
+  color: rgba($primary, .8);
   font-family: $font-primary;
-  font-weight: 600;
   font-size: 14px;
-  color: rgba($primary, 0.8);
-  background: rgba($primary, 0.05);
+  font-weight: 600;
 }
 
 .select.select-large .dropdown .btn:hover,
 .select.select-large .dropdown .btn:focus {
-  background: rgba($primary, 0.1);
+  background: rgba($primary, .1);
 }
 
 .select.select-large .dropdown .btn img {
-  margin: 12px 18px 0 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 4px;
-  margin-right: 20px;
-  box-shadow: 0 2px 8px rgba($primary, 0.1);
   background: $white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba($primary, .1);
+  height: 36px;
+  margin: 12px 18px 0 0;
+  margin-right: 20px;
+  width: 36px;
 }
 
 .select.select-large .dropdown .btn .none {
+  color: rgba($primary, .2);
   text-transform: lowercase;
-  color: rgba($primary, 0.2);
 }
 
 .select.select-large .dropdown .btn .none .avatar {
-  width: 36px;
+  background: $white;
+  color: rgba($primary, .2);
+  float: left;
   height: 36px;
   margin-right: 20px;
-  color: rgba($primary, 0.2);
-  float: left;
   margin-top: 12px;
-  background: $white;
+  width: 36px;
 }
 
 .select.select-large .dropdown .btn .none .avatar [class^="icon-16-"],
 .select.select-large .dropdown .btn .none .avatar [class*="icon-16-"] {
-  line-height: 36px;
-  vertical-align: middle;
-  text-align: center;
   display: block;
-  top: 0;
+  line-height: 36px;
   margin: 0;
+  text-align: center;
+  top: 0;
+  vertical-align: middle;
 }
 
 .select.select-large .dropdown .dropdown-menu li a {
-  height: 60px;
-  padding: 12px 20px;
-  cursor: pointer;
-  color: rgba($primary, 0.8);
-  line-height: 36px;
   background: $white;
+  color: rgba($primary, .8);
+  cursor: pointer;
+  height: 60px;
+  line-height: 36px;
+  padding: 12px 20px;
 }
 
 .select.select-large .dropdown .dropdown-menu li a img {
   border-radius: 4px;
+  box-shadow: 0 2px 8px rgba($primary, .1);
+  height: 36px;
   margin-right: 20px;
   width: 36px;
-  height: 36px;
-  box-shadow: 0 2px 8px rgba($primary, 0.1);
 }
 
 .select.select-large .dropdown .dropdown-menu li a .none .avatar {
-  width: 36px;
-  height: 36px;
-  float: left;
-  margin-right: 20px;
-  color: rgba($primary, 0.5);
   background: $white;
+  color: rgba($primary, .5);
+  float: left;
+  height: 36px;
+  margin-right: 20px;
+  width: 36px;
 }
 
 .select.select-large .dropdown .dropdown-menu li a .none .avatar span {

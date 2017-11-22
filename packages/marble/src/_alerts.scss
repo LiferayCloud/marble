@@ -6,35 +6,31 @@
    ========================================================================== */
 
 .alert {
+  align-content: center;
+  align-items: center;
+  background-color: $white;
   border: 0;
   border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  color: rgba($primary, .8);
-
-  position: fixed;
   bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  color: rgba($primary, .8);
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
   left: 12px;
-  z-index: 1051;
-
   margin: 0;
-  padding: 6px 12px;
   max-width: calc(100% - 24px);
   min-height: 60px;
+  padding: 6px 12px;
+  position: fixed;
+  z-index: 1051;
 
   @media (min-width: $screen-sm-min) {
-    left: 48px;
     bottom: 48px;
+    left: 48px;
     max-width: calc(100% - 96px);
     padding: 12px 24px;
   }
-
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
 }
 
 .alert-danger {
@@ -46,36 +42,33 @@
 }
 
 .alert-body {
-  display: inline-flex;
-  flex-direction: row;
   align-content: center;
   align-items: center;
+  display: inline-flex;
   flex: 0 1 auto;
-
-  min-height: 24px;
-  margin: 0;
-
+  flex-direction: row;
   font-family: $font-primary;
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
+  margin: 0;
+  min-height: 24px;
   text-align: left;
 }
 
 .alert .close {
-  @include anim(color);
   color: rgba($primary, .4);
+  font-size: 24px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 0 0 12px;
+  min-width: 13px;
   opacity: 1;
   outline: none;
-
-  height: 24px;
-  min-width: 13px;
-  margin: 0 0 0 12px;
   padding: 0;
-
-  font-size: 24px;
-  line-height: 24px;
   text-shadow: none;
+
+  @include anim(color);
 
   @media (min-width: $screen-sm-min) {
     margin: 0 0 0 24px;
@@ -104,21 +97,19 @@
 }
 
 .alert-undo-link {
-  @include anim(color);
-
   background: transparent;
-  border-width: 0px;
+  border-width: 0;
   color: $accent;
-
   font-family: $font-primary;
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
-
   margin: 0 0 0 12px;
   outline: none;
   padding: 0;
   text-transform: uppercase;
+
+  @include anim(color);
 
   @media (min-width: $screen-sm-min) {
     margin: 0 0 0 24px;
@@ -146,7 +137,7 @@
 }
 
 .animated {
-  animation-duration: 0.2s;
+  animation-duration: .2s;
   animation-fill-mode: both;
 }
 
@@ -154,37 +145,35 @@
    ========================================================================== */
 
 .alert.alert-inline {
-  position: static;
-  box-shadow: none;
-  bottom: auto;
-  left: auto;
-  padding: 12px;
-  margin-bottom: 12px;
-  height: auto;
-  text-align: left;
-  width: 100%;
-  max-width: 100%;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   align-content: center;
   align-items: center;
+  bottom: auto;
+  box-shadow: none;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: flex-start;
+  left: auto;
+  margin-bottom: 12px;
+  max-width: 100%;
+  padding: 12px;
+  position: static;
+  text-align: left;
+  width: 100%;
 
   &.alert-inline--vcenter {
     > .close {
-      margin-top: 6px;
       align-self: flex-start;
+      margin-top: 6px;
     }
   }
 
   > * {
     display: inline-block;
+    flex: 0 1 auto;
     line-height: 24px;
     margin: 0 12px 0 0;
     min-height: 24px;
-    flex: 0 1 auto;
 
     &:last-child {
       margin: 0;
@@ -192,26 +181,25 @@
   }
 
   > .alert-body {
+    color: rgba($primary, .8);
     flex-grow: 1;
     flex-shrink: 1;
-
-    color: rgba($primary, 0.8);
     font-family: $font-secondary;
     font-weight: 400;
-
-    white-space: normal;
     overflow: visible;
     text-overflow: clip;
+    white-space: normal;
 
     > .alert-link {
-      @include anim(all);
-      border-bottom: 1px dashed rgba($primary, 0.4);
-      color: rgba($primary, 0.8);
+      border-bottom: 1px dashed rgba($primary, .4);
+      color: rgba($primary, .8);
       font-weight: 700;
 
+      @include anim(all);
+
       &:hover {
+        border-bottom: 1px dashed rgba($accent, .4);
         color: $accent;
-        border-bottom: 1px dashed rgba($accent, 0.4);
       }
     }
   }
@@ -222,17 +210,17 @@
 }
 
 .alert.alert-inline.alert-warning {
-  background: rgba($color-yellow, 0.1);
+  background: rgba($color-yellow, .1);
 
-  > span[class*="icon-16"]{
+  > span[class*="icon-16"] {
     color: $color-yellow;
   }
 }
 
 .alert.alert-inline.alert-danger {
-  background: rgba($color-red, 0.1);
+  background: rgba($color-red, .1);
 
-  > span[class*="icon-16"]{
+  > span[class*="icon-16"] {
     color: $color-red;
   }
 }
@@ -241,7 +229,7 @@
    ========================================================================== */
 
 .alert.alert-dark {
-  background-color: rgba($primary, 0.9);
+  background-color: rgba($primary, .9);
   color: $white;
   height: auto;
   line-height: 24px;
@@ -251,7 +239,7 @@
     color: $white;
 
     &:hover {
-      color: rgba($white, 0.6);
+      color: rgba($white, .6);
     }
   }
 }

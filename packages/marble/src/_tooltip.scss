@@ -9,19 +9,17 @@
 }
 
 .tooltip-inner {
-  width: 100%;
+  background: $white;
+  border-radius: $border-radius-base;
+  box-shadow: 0 2px 8px rgba($black, .1);
+  color: rgba($primary, .8);
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 700;
   max-width: 220px;
   padding: 12px;
-
-  background: white;
-  border-radius: $border-radius-base;
-  box-shadow: 0 2px 8px rgba(black, .1);
-
-  color: rgba($primary, 0.8);
-  font-size: 12px;
-  font-family: $font-primary;
-  font-weight: 700;
   text-align: center;
+  width: 100%;
 }
 
 .text-left .tooltip-inner {
@@ -41,93 +39,88 @@
 
 .tooltip.tooltip-dark,
 .tooltip.tooltip-light {
+  margin: 0;
+  opacity: 0;
+  padding: 0;
   position: fixed;
-  padding: 0px;
-  margin: 0px;
+  transform: translateY(-6px);
 
   /* Animations
      ======================================================================== */
-
-  transition: opacity 0.333s, transform 0.333s, visibility 0.333s;
-  transform: translateY(-6px);
+  transition: opacity .333s, transform .333s, visibility .333s;
   visibility: hidden;
-  opacity: 0;
 
   &.showing {
-    transform: translateY(0px);
-    visibility: visible;
     opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
     will-change: opacity;
   }
 }
 
 .tooltip.tooltip-dark .tooltip-inner,
 .tooltip.tooltip-light .tooltip-inner {
+  background: $white;
+  border-radius: $border-radius-large;
+  box-shadow: $shadow-tooltip;
+  color: rgba($primary, .8);
   display: inline-block;
+  font-family: $font-primary;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
   margin: 12px;
   max-width: 300px;
   padding: 12px;
+  text-align: center;
   width: auto;
 
-  border-radius: $border-radius-large;
-  box-shadow: $shadow-tooltip;
-
-  background: $white;
-  color: rgba($primary, 0.8);
-  font-size: 13px;
-  font-family: $font-primary;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-
   .tooltip-title {
-    position:relative;
-    z-index: 2;
-
     color: inherit;
-    font-size: inherit;
     font-family: inherit;
+    font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
+    position: relative;
     text-align: inherit;
+    z-index: 2;
   }
 
   .tooltip-description {
-    position:relative;
-    z-index: 2;
-
     color: inherit;
-    font-size: 10px;
     font-family: $font-secondary;
+    font-size: 10px;
     font-weight: 400;
     line-height: inherit;
+    position: relative;
     text-align: inherit;
+    z-index: 2;
   }
 
   a {
-    @include anim(all);
+    border-bottom: 1px dashed rgba($primary, .8);
     color: inherit;
-    font-size: inherit;
     font-family: inherit;
+    font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
     text-align: inherit;
-    border-bottom: 1px dashed rgba($primary, 0.8);
+
+    @include anim(all);
 
     &:hover {
-      color: $accent;
       border-bottom: 1px dashed $accent;
+      color: $accent;
     }
   }
 }
-
 
 /* Skin Dark
    ========================================================================== */
 
 .tooltip.tooltip-dark .tooltip-inner {
   background: $primary;
-  color: white;
+  color: $white;
 
   a {
     border-bottom: 1px dashed $white;

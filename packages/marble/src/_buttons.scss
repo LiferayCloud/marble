@@ -5,10 +5,11 @@
    ========================================================================== */
 
 .btn {
-  @include button-size(0, 48px, 16px, 60px, 4px);
+  border: 0 solid transparent;
   font-family: $font-primary;
   font-weight: 600;
-  border: 0px solid transparent;
+
+  @include button-size(0, 48px, 16px, 60px, 4px);
 
   &,
   &:active,
@@ -30,15 +31,16 @@
 }
 
 .btn-default {
-  @include anim(all);
   background-color: rgba($primary, .1);
-  color: rgba($primary, 0.6);
+  color: rgba($primary, .6);
+
+  @include anim(all);
 
   &:hover,
   &:focus,
   &.focus {
     background-color: rgba($primary, .2);
-    color: rgba($primary, 0.6);
+    color: rgba($primary, .6);
   }
 
   &:active,
@@ -47,15 +49,16 @@
     &:focus,
     &.focus {
       background-color: rgba($primary, .2);
-      color: rgba($primary, 0.6);
+      color: rgba($primary, .6);
     }
   }
 }
 
 .btn-primary {
-  @include anim(all);
   background-color: rgba($primary, .8);
   color: $white;
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -73,7 +76,6 @@
       color: $white;
     }
   }
-
 }
 
 .btn-primary.disabled,
@@ -101,9 +103,10 @@ fieldset[disabled] .btn-primary {
 }
 
 .btn-success {
-  @include anim(all);
   background-color: $brand-success;
   color: $white;
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -124,9 +127,10 @@ fieldset[disabled] .btn-primary {
 }
 
 .btn-danger {
-  @include anim(all);
   background-color: $brand-danger;
   color: $white;
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -147,9 +151,10 @@ fieldset[disabled] .btn-primary {
 }
 
 .btn-accent {
-  @include anim(all);
   background-color: $accent;
   color: $white;
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -170,9 +175,10 @@ fieldset[disabled] .btn-primary {
 }
 
 .btn-inverse {
-  @include anim(all);
   background: $white;
   color: rgba($primary, .8);
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -193,9 +199,10 @@ fieldset[disabled] .btn-primary {
 }
 
 .btn-inverse-accent {
-  @include anim(all);
   background: $white;
   color: $accent;
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -216,9 +223,10 @@ fieldset[disabled] .btn-primary {
 }
 
 .btn-link {
-  @include anim(all);
   background: transparent;
   color: rgba($primary, .8);
+
+  @include anim(all);
 
   &:hover,
   &:focus,
@@ -267,10 +275,10 @@ fieldset[disabled] .btn-link {
 
 .btn span[class^="icon-16-"],
 .btn span[class*="icon-16-"] {
+  color: inherit;
   margin-right: 10px;
   position: relative;
   top: 2px;
-  color: inherit;
 }
 
 /* Sizes
@@ -290,16 +298,16 @@ fieldset[disabled] .btn-link {
 .btn-transparent {
   background: transparent;
   border: 0;
-  padding: 0;
   color: rgba($primary, .6);
+  padding: 0;
 
   &,
   &:active,
   &.active {
     &:focus,
     &.focus {
-      outline: none;
       color: rgba($primary, .8);
+      outline: none;
     }
   }
 }
@@ -308,13 +316,14 @@ fieldset[disabled] .btn-link {
    ========================================================================== */
 
 .btn-icon {
-  @include anim(all);
   background: none;
   border: 0;
   border-radius: 50%;
   color: rgba($primary, .6);
   height: 48px;
   width: 48px;
+
+  @include anim(all);
 
   &.btn-squared {
     border-radius: 4px;
@@ -323,8 +332,8 @@ fieldset[disabled] .btn-link {
   &:hover,
   &:focus,
   &.focus {
-    color: $accent;
     background: rgba($accent, .1);
+    color: $accent;
   }
 
   &,
@@ -332,8 +341,8 @@ fieldset[disabled] .btn-link {
   &.active {
     &:focus,
     &.focus {
-      color: $accent;
       background: rgba($accent, .1);
+      color: $accent;
       outline: none;
     }
   }

@@ -5,8 +5,8 @@
 .content-tabs {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  padding: 12px 8px;
   margin-top: -24px;
+  padding: 12px 8px;
 
   @media (max-width: $screen-md-min) {
     padding: 12px 0;
@@ -32,11 +32,12 @@
     }
 
     a {
-      @include anim(color);
       color: rgba($primary, .6);
       font-family: $font-primary;
-      font-weight: 700;
       font-size: 15px;
+      font-weight: 700;
+
+      @include anim(color);
 
       &:hover,
       &:focus {

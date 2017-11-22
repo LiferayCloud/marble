@@ -5,19 +5,17 @@
    ========================================================================== */
 
 .input-group-addon {
-  transition: color 0.333s, background 0.333s;
-
   background: rgba($primary, .2);
   border: 0;
   color: rgba($primary, .6);
   font-family: $font-primary;
-  font-weight: 600;
   font-size: 14px;
-
+  font-weight: 600;
   max-width: 200px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color .333s, background .333s;
+  white-space: nowrap;
 }
 
 .has-success {
@@ -53,9 +51,10 @@
 .input-inner-addon [class*="icon-12-"],
 .input-inner-addon [class^="icon-16-"],
 .input-inner-addon [class*="icon-16-"] {
-  @include anim(color);
   color: rgba($primary, .3);
   position: absolute;
+
+  @include anim(color);
 }
 
 .input-inner-addon-left [class^="icon-12-"],
@@ -120,18 +119,12 @@
 
 .input-btn-right,
 .input-group-addon-input-left {
-  border-bottom-left-radius: 4px !important;
-  border-top-left-radius: 4px !important;
-  border-bottom-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  border-radius: 4px 0 0 4px !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .input-btn-left,
 .input-group-addon-input-right {
-  border-bottom-left-radius: 0 !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-right-radius: 4px !important;
-  border-top-right-radius: 4px !important;
+  border-radius: 0 4px 4px 0 !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .input-group-addon-input-center {
@@ -142,8 +135,8 @@
    ========================================================================== */
 
 .form-group .input-group .form-control.input-btn-separated {
-  width: calc(100% - 8px);
   border-radius: 4px;
+  width: calc(100% - 8px);
 }
 
 .input-group-btn.input-group-btn-separated:last-child > .btn {

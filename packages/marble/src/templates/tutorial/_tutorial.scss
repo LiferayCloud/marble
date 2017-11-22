@@ -36,8 +36,8 @@
   }
 
   .container a:not(.btn) {
-    transition: color 0.333s, border-bottom-width 0.333s;
-    color: rgba($primary, 0.8);
+    transition: color .333s, border-bottom-width .333s;
+    color: rgba($primary, .8);
     border-bottom-width: 1px;
   }
 
@@ -65,9 +65,9 @@
      ======================================================================== */
 
   .container .tutorial-time-remaining {
-    color: rgba($primary, 0.8);
+    color: rgba($primary, .8);
     font-family: $font-primary;
-    font-size: 0.8125rem;
+    font-size: .8125rem;
     font-weight: 600;
     margin-bottom: 20px;
 
@@ -76,7 +76,7 @@
     }
 
     .icon {
-      margin-right: calc(0.5rem * #{$lineHeight});
+      margin-right: calc(.5rem * #{$lineHeight});
       position: relative;
       top: 8px;
     }
@@ -90,7 +90,7 @@
     margin-top: 36px;
 
     .btn {
-      transition: background 0.333s;
+      transition: background .333s;
       margin: 0 6px 12px;
       font-size: 1rem;
 

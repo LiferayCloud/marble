@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import Toast from '../src/Toast';
 
@@ -11,10 +10,10 @@ describe('Toast', function() {
       spinnerDone: false
     });
 
-    assert.ok(!dom.hasClass(toast.element.querySelector('.spinner'), 'spinner-done'));
+    expect(!dom.hasClass(toast.element.querySelector('.spinner'), 'spinner-done')).toBeTruthy();
 
     toast.once('stateChanged', () => {
-      assert.ok(dom.hasClass(toast.element.querySelector('.spinner'), 'spinner-done'));
+      expect(dom.hasClass(toast.element.querySelector('.spinner'), 'spinner-done')).toBeTruthy();
 
       done();
     });

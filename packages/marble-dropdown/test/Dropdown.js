@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import sinon from 'sinon';
 import { async } from 'metal';
 import dom from 'metal-dom';
@@ -18,14 +17,14 @@ describe('Dropdown', function() {
     component = new Dropdown({
       header: '<div class="myHeader"></div>'
     });
-    assert.ok(component.element.querySelector('.myHeader'));
+    expect(component.element.querySelector('.myHeader')).toBeTruthy();
   });
 
   it('should render html body', function() {
     component = new Dropdown({
       body: '<div class="myBody"></div>'
     });
-    assert.ok(component.element.querySelector('.myBody'));
+    expect(component.element.querySelector('.myBody')).toBeTruthy();
   });
 
   it('should get header content from existing html', function() {
@@ -38,7 +37,7 @@ describe('Dropdown', function() {
       element: element
     });
 
-    assert.strictEqual('<div class="myHeader"></div>', component.header);
+    expect('<div class="myHeader"></div>').toBe(component.header);
   });
 
   it('should get body content from existing html', function() {
@@ -51,17 +50,17 @@ describe('Dropdown', function() {
       element: element
     });
 
-    assert.strictEqual('<div class="myBody"></div>', component.body);
+    expect('<div class="myBody"></div>').toBe(component.body);
   });
 
   it('should open dropdown', function(done) {
     component = new Dropdown();
-    assert.ok(!component.expanded);
-    assert.ok(!dom.hasClass(component.element, 'open'));
+    expect(!component.expanded).toBeTruthy();
+    expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
     component.open();
     component.once('stateChanged', function() {
-      assert.ok(component.expanded);
-      assert.ok(dom.hasClass(component.element, 'open'));
+      expect(component.expanded).toBeTruthy();
+      expect(dom.hasClass(component.element, 'open')).toBeTruthy();
       component.dispose();
       done();
     });
@@ -71,11 +70,11 @@ describe('Dropdown', function() {
     component = new Dropdown({
       expanded: true
     });
-    assert.ok(dom.hasClass(component.element, 'open'));
+    expect(dom.hasClass(component.element, 'open')).toBeTruthy();
     component.close();
     component.once('stateChanged', function() {
-      assert.ok(!component.expanded);
-      assert.ok(!dom.hasClass(component.element, 'open'));
+      expect(!component.expanded).toBeTruthy();
+      expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
       component.dispose();
       done();
     });
@@ -83,16 +82,16 @@ describe('Dropdown', function() {
 
   it('should toggle dropdown', function(done) {
     component = new Dropdown();
-    assert.ok(!component.expanded);
-    assert.ok(!dom.hasClass(component.element, 'open'));
+    expect(!component.expanded).toBeTruthy();
+    expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
     component.toggle();
     component.once('stateChanged', function() {
-      assert.ok(component.expanded);
-      assert.ok(dom.hasClass(component.element, 'open'));
+      expect(component.expanded).toBeTruthy();
+      expect(dom.hasClass(component.element, 'open')).toBeTruthy();
       component.toggle();
       component.once('stateChanged', function() {
-        assert.ok(!component.expanded);
-        assert.ok(!dom.hasClass(component.element, 'open'));
+        expect(!component.expanded).toBeTruthy();
+        expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
         component.dispose();
         done();
       });
@@ -103,13 +102,13 @@ describe('Dropdown', function() {
     component = new Dropdown({
       position: 'up'
     });
-    assert.ok(!dom.hasClass(component.element, 'dropdown'));
-    assert.ok(dom.hasClass(component.element, 'dropup'));
+    expect(!dom.hasClass(component.element, 'dropdown')).toBeTruthy();
+    expect(dom.hasClass(component.element, 'dropup')).toBeTruthy();
 
     component.position = 'down';
     component.once('stateChanged', function() {
-      assert.ok(dom.hasClass(component.element, 'dropdown'));
-      assert.ok(!dom.hasClass(component.element, 'dropup'));
+      expect(dom.hasClass(component.element, 'dropdown')).toBeTruthy();
+      expect(!dom.hasClass(component.element, 'dropup')).toBeTruthy();
       done();
     });
   });
@@ -118,16 +117,16 @@ describe('Dropdown', function() {
     component = new Dropdown({
       position: 'up'
     });
-    assert.strictEqual(Align.TopLeft, component.position);
+    expect(Align.TopLeft).toBe(component.position);
 
     component.position = 'down';
-    assert.strictEqual(Align.BottomLeft, component.position);
+    expect(Align.BottomLeft).toBe(component.position);
 
     component.position = Align.TopCenter;
-    assert.strictEqual(Align.TopCenter, component.position);
+    expect(Align.TopCenter).toBe(component.position);
 
     component.position = 'invalid';
-    assert.strictEqual(Align.TopCenter, component.position);
+    expect(Align.TopCenter).toBe(component.position);
   });
 
   it('should set position css class on dropdown-menu when positionClassOnMenu is true', function() {
@@ -136,8 +135,8 @@ describe('Dropdown', function() {
       positionClassOnMenu: true
     });
     var element = component.element;
-    assert.ok(!dom.hasClass(element, 'dropright'));
-    assert.ok(dom.hasClass(element.querySelector('.dropdown-menu'), 'dropright'));
+    expect(!dom.hasClass(element, 'dropright')).toBeTruthy();
+    expect(dom.hasClass(element.querySelector('.dropdown-menu'), 'dropright')).toBeTruthy();
   });
 
   it('should set class for the current position according to `classMap` state', function() {
@@ -148,8 +147,8 @@ describe('Dropdown', function() {
       position: Align.RightCenter
     });
     var element = component.element;
-    assert.ok(!dom.hasClass(element, 'dropright'));
-    assert.ok(dom.hasClass(element, 'my-right-class'));
+    expect(!dom.hasClass(element, 'dropright')).toBeTruthy();
+    expect(dom.hasClass(element, 'my-right-class')).toBeTruthy();
   });
 
   describe('Align', function() {
@@ -167,10 +166,10 @@ describe('Dropdown', function() {
         header: '<button></button>'
       });
 
-      assert.strictEqual(0, Align.align.callCount);
+      expect(0).toBe(Align.align.callCount);
       component.expanded = true;
       component.once('stateSynced', function() {
-        assert.strictEqual(1, Align.align.callCount);
+        expect(1).toBe(Align.align.callCount);
         done();
       });
     });
@@ -181,10 +180,10 @@ describe('Dropdown', function() {
         header: '<button></button>'
       });
 
-      assert.strictEqual(0, Align.align.callCount);
+      expect(0).toBe(Align.align.callCount);
       component.expanded = true;
       component.once('stateSynced', function() {
-        assert.strictEqual(0, Align.align.callCount);
+        expect(0).toBe(Align.align.callCount);
         done();
       });
     });
@@ -194,13 +193,13 @@ describe('Dropdown', function() {
     component = new Dropdown();
     component.open();
 
-    assert.ok(component.isOpen());
+    expect(component.isOpen()).toBeTruthy();
     dom.triggerEvent(component.element.firstChild, 'click');
     async.nextTick(function() {
-      assert.ok(component.isOpen());
+      expect(component.isOpen()).toBeTruthy();
       dom.triggerEvent(document, 'click');
       async.nextTick(function() {
-        assert.ok(!component.isOpen());
+        expect(!component.isOpen()).toBeTruthy();
         component.dispose();
         done();
       });
@@ -220,6 +219,6 @@ describe('Dropdown', function() {
     var markupFromDom = element.childNodes[0].outerHTML;
     component = new Dropdown(config);
 
-    assert.strictEqual(component.element.outerHTML, markupFromDom);
+    expect(component.element.outerHTML).toBe(markupFromDom);
   });
 });

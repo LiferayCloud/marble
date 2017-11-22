@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import InputMatrix from '../src/InputMatrix';
 
@@ -15,12 +14,12 @@ describe('InputMatrix', function() {
 
   it('should render a single row with a single empty field by default', function() {
     comp = new InputMatrix();
-    assert.strictEqual(2, comp.element.childNodes.length);
-    assert.ok(dom.hasClass(comp.element.childNodes[0], 'input-matrix-labels'));
+    expect(2).toBe(comp.element.childNodes.length);
+    expect(dom.hasClass(comp.element.childNodes[0], 'input-matrix-labels')).toBeTruthy();
 
     let fields = getFieldsForRow(comp.element, 0);
-    assert.strictEqual(1, fields.length);
-    assert.strictEqual('', fields[0].value);
+    expect(1).toBe(fields.length);
+    expect('').toBe(fields[0].value);
   });
 
   it('should render a single text field for the given value plus an empty one below', function() {
@@ -29,15 +28,15 @@ describe('InputMatrix', function() {
         value: 'foo'
       }]]
     });
-    assert.strictEqual(3, comp.element.childNodes.length);
+    expect(3).toBe(comp.element.childNodes.length);
 
     let fields = getFieldsForRow(comp.element, 0);
-    assert.strictEqual(1, fields.length);
-    assert.strictEqual('foo', fields[0].value);
+    expect(1).toBe(fields.length);
+    expect('foo').toBe(fields[0].value);
 
     fields = getFieldsForRow(comp.element, 1);
-    assert.strictEqual(1, fields.length);
-    assert.strictEqual('', fields[0].value);
+    expect(1).toBe(fields.length);
+    expect('').toBe(fields[0].value);
 
     var expectedFields = [
       [{
@@ -45,7 +44,7 @@ describe('InputMatrix', function() {
       }],
       []
     ];
-    assert.deepEqual(expectedFields, comp.fields);
+    expect(expectedFields).toEqual(comp.fields);
   });
 
   it('should render error messages when given', function() {
@@ -54,14 +53,14 @@ describe('InputMatrix', function() {
         error: 'Test error message'
       }]]
     });
-    assert.strictEqual(2, comp.element.childNodes.length);
+    expect(2).toBe(comp.element.childNodes.length);
 
     let fields = getFieldsForRow(comp.element, 0);
-    assert.ok(dom.hasClass(fields[0].parentNode, 'has-error'));
+    expect(dom.hasClass(fields[0].parentNode, 'has-error')).toBeTruthy();
 
     var errorBox = fields[0].nextSibling;
-    assert.ok(errorBox);
-    assert.strictEqual('Test error message', errorBox.textContent);
+    expect(errorBox).toBeTruthy();
+    expect('Test error message').toBe(errorBox.textContent);
   });
 
   it('should render multiples rows with multiple text field for the given value plus empty row', function() {
@@ -86,22 +85,22 @@ describe('InputMatrix', function() {
       ],
       fieldsConfig: [{}, {}]
     });
-    assert.strictEqual(4, comp.element.childNodes.length);
+    expect(4).toBe(comp.element.childNodes.length);
 
     let fields = getFieldsForRow(comp.element, 0);
-    assert.strictEqual(2, fields.length);
-    assert.strictEqual('col1.1', fields[0].value);
-    assert.strictEqual('col1.2', fields[1].value);
+    expect(2).toBe(fields.length);
+    expect('col1.1').toBe(fields[0].value);
+    expect('col1.2').toBe(fields[1].value);
 
     fields = getFieldsForRow(comp.element, 1);
-    assert.strictEqual(2, fields.length);
-    assert.strictEqual('col2.1', fields[0].value);
-    assert.strictEqual('col2.2', fields[1].value);
+    expect(2).toBe(fields.length);
+    expect('col2.1').toBe(fields[0].value);
+    expect('col2.2').toBe(fields[1].value);
 
     fields = getFieldsForRow(comp.element, 2);
-    assert.strictEqual(2, fields.length);
-    assert.strictEqual('', fields[0].value);
-    assert.strictEqual('', fields[1].value);
+    expect(2).toBe(fields.length);
+    expect('').toBe(fields[0].value);
+    expect('').toBe(fields[1].value);
   });
 
   it('should add labels as specified in "fieldsConfig"', function() {
@@ -118,9 +117,9 @@ describe('InputMatrix', function() {
     });
 
     const labels = comp.element.childNodes[0].childNodes;
-    assert.strictEqual(2, labels.length);
-    assert.strictEqual('Label 1', labels[0].textContent);
-    assert.strictEqual('Label 2', labels[1].textContent);
+    expect(2).toBe(labels.length);
+    expect('Label 1').toBe(labels[0].textContent);
+    expect('Label 2').toBe(labels[1].textContent);
   });
 
   it('should add names with "[]" for array fields', function() {
@@ -137,19 +136,19 @@ describe('InputMatrix', function() {
         {}
       ]
     });
-    assert.strictEqual(3, comp.element.childNodes.length);
+    expect(3).toBe(comp.element.childNodes.length);
 
     let fields = getFieldsForRow(comp.element, 0);
-    assert.strictEqual(3, fields.length);
-    assert.strictEqual('address[]', fields[0].getAttribute('name'));
-    assert.strictEqual('age1', fields[1].getAttribute('name'));
-    assert.strictEqual('', fields[2].getAttribute('name'));
+    expect(3).toBe(fields.length);
+    expect('address[]').toBe(fields[0].getAttribute('name'));
+    expect('age1').toBe(fields[1].getAttribute('name'));
+    expect('').toBe(fields[2].getAttribute('name'));
 
     fields = getFieldsForRow(comp.element, 1);
-    assert.strictEqual(3, fields.length);
-    assert.strictEqual('address[]', fields[0].getAttribute('name'));
-    assert.strictEqual('age2', fields[1].getAttribute('name'));
-    assert.strictEqual('', fields[2].getAttribute('name'));
+    expect(3).toBe(fields.length);
+    expect('address[]').toBe(fields[0].getAttribute('name'));
+    expect('age2').toBe(fields[1].getAttribute('name'));
+    expect('').toBe(fields[2].getAttribute('name'));
   });
 
   it('should add new row with empty fields if field in last row is typed on', function(done) {
@@ -182,11 +181,11 @@ describe('InputMatrix', function() {
         }],
         []
       ];
-      assert.deepEqual(expectedFields, comp.fields);
-      assert.strictEqual(5, comp.element.childNodes.length);
+      expect(expectedFields).toEqual(comp.fields);
+      expect(5).toBe(comp.element.childNodes.length);
 
       lastField = getFieldsForRow(comp.element, 3)[0];
-      assert.strictEqual('', lastField.value);
+      expect('').toBe(lastField.value);
       done();
     });
   });
@@ -216,8 +215,8 @@ describe('InputMatrix', function() {
         }],
         []
       ];
-      assert.deepEqual(expectedFields, comp.fields);
-      assert.strictEqual(4, comp.element.childNodes.length);
+      expect(expectedFields).toEqual(comp.fields);
+      expect(4).toBe(comp.element.childNodes.length);
       done();
     });
   });
@@ -254,8 +253,8 @@ describe('InputMatrix', function() {
           value: 'last'
         }]
       ];
-      assert.deepEqual(expectedFields, comp.fields);
-      assert.strictEqual(4, comp.element.childNodes.length);
+      expect(expectedFields).toEqual(comp.fields);
+      expect(4).toBe(comp.element.childNodes.length);
       done();
     });
   });
@@ -274,9 +273,9 @@ describe('InputMatrix', function() {
     });
 
     const children = comp.element.children;
-    assert.ok(children[1].querySelector('button'));
-    assert.ok(children[2].querySelector('button'));
-    assert.ok(!children[3].querySelector('button'));
+    expect(children[1].querySelector('button')).toBeTruthy();
+    expect(children[2].querySelector('button')).toBeTruthy();
+    expect(!children[3].querySelector('button')).toBeTruthy();
   });
 
   it('should remove field when the remove button is clicked', function(done) {
@@ -302,8 +301,8 @@ describe('InputMatrix', function() {
         }],
         []
       ];
-      assert.deepEqual(expectedFields, comp.fields);
-      assert.strictEqual(3, comp.element.childNodes.length);
+      expect(expectedFields).toEqual(comp.fields);
+      expect(3).toBe(comp.element.childNodes.length);
       done();
     });
   });
@@ -321,7 +320,7 @@ describe('InputMatrix', function() {
     ]);
 
     comp.once('stateSynced', function() {
-      assert.strictEqual(4, comp.element.childNodes.length);
+      expect(4).toBe(comp.element.childNodes.length);
       done();
     });
   });

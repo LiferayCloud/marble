@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import TooltipBase from '../src/TooltipBase';
 
@@ -22,11 +21,11 @@ describe('TooltipBase', function() {
       selector: '#tooltipTrigger1',
       visible: false
     });
-    assert.ok(!tooltip.visible);
+    expect(!tooltip.visible).toBeTruthy();
     dom.triggerEvent(trigger, 'mouseover');
     setTimeout(function() {
-      assert.ok(tooltip.visible);
-      assert.strictEqual(trigger, tooltip.currentAlignElement);
+      expect(tooltip.visible).toBeTruthy();
+      expect(trigger).toBe(tooltip.currentAlignElement);
       dom.exitDocument(trigger);
       done();
     }, 25);
@@ -44,7 +43,7 @@ describe('TooltipBase', function() {
     });
     dom.triggerEvent(trigger, 'mouseout');
     setTimeout(function() {
-      assert.ok(!tooltip.visible);
+      expect(!tooltip.visible).toBeTruthy();
       dom.exitDocument(trigger);
       done();
     }, 25);
@@ -62,10 +61,10 @@ describe('TooltipBase', function() {
     });
     dom.triggerEvent(trigger, 'click');
     setTimeout(function() {
-      assert.ok(tooltip.visible);
+      expect(tooltip.visible).toBeTruthy();
       dom.triggerEvent(trigger, 'click');
       setTimeout(function() {
-        assert.ok(!tooltip.visible);
+        expect(!tooltip.visible).toBeTruthy();
         dom.exitDocument(trigger);
         done();
       }, 25);
@@ -83,14 +82,14 @@ describe('TooltipBase', function() {
     });
     dom.triggerEvent(trigger, 'mouseover');
     setTimeout(function() {
-      assert.ok(tooltip.visible);
+      expect(tooltip.visible).toBeTruthy();
       dom.triggerEvent(trigger, 'mouseout');
       dom.triggerEvent(tooltip.element, 'mouseenter');
       setTimeout(function() {
-        assert.ok(tooltip.visible);
+        expect(tooltip.visible).toBeTruthy();
         dom.triggerEvent(tooltip.element, 'mouseleave');
         setTimeout(function() {
-          assert.ok(!tooltip.visible);
+          expect(!tooltip.visible).toBeTruthy();
           dom.exitDocument(trigger);
           done();
         }, 25);
@@ -110,7 +109,7 @@ describe('TooltipBase', function() {
 
     tooltip.once('stateSynced', function() {
       tooltip.once('stateSynced', function() {
-        assert.strictEqual(TooltipBase.Align.Bottom, tooltip.alignedPosition);
+        expect(TooltipBase.Align.Bottom).toBe(tooltip.alignedPosition);
         dom.exitDocument(trigger);
         done();
       });
@@ -131,7 +130,7 @@ describe('TooltipBase', function() {
 
     tooltip.once('stateSynced', function() {
       tooltip.once('stateSynced', function() {
-        assert.strictEqual(TooltipBase.Align.Right, tooltip.alignedPosition);
+        expect(TooltipBase.Align.Right).toBe(tooltip.alignedPosition);
         dom.exitDocument(trigger);
         done();
       });
@@ -150,7 +149,7 @@ describe('TooltipBase', function() {
     tooltip.detach();
     dom.triggerEvent(trigger, 'mouseover');
     setTimeout(function() {
-      assert.ok(!tooltip.visible);
+      expect(!tooltip.visible).toBeTruthy();
       dom.exitDocument(trigger);
       done();
     }, 25);
@@ -172,8 +171,8 @@ describe('TooltipBase', function() {
       dom.triggerEvent(trigger, 'click');
       dom.triggerEvent(triggerOther, 'click');
       setTimeout(function() {
-        assert.ok(tooltip.visible);
-        assert.strictEqual(triggerOther, tooltip.currentAlignElement);
+        expect(tooltip.visible).toBeTruthy();
+        expect(triggerOther).toBe(tooltip.currentAlignElement);
         dom.exitDocument(trigger);
         dom.exitDocument(triggerOther);
         done();

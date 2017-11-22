@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import Dropdown from 'marble-dropdown';
 import Select from '../src/Select';
@@ -16,8 +15,8 @@ describe('Select', function() {
 
   it('should set "items" to an empty array by default', function() {
     select = new Select();
-    assert.deepEqual([], select.items);
-    assert.strictEqual(-1, select.selectedIndex);
+    expect([]).toEqual(select.items);
+    expect(-1).toBe(select.selectedIndex);
   });
 
   it('should render items inside dropdown', function() {
@@ -26,10 +25,10 @@ describe('Select', function() {
     });
 
     var items = select.element.querySelectorAll('.dropdown-menu li');
-    assert.strictEqual(3, items.length);
-    assert.strictEqual('First', items[0].textContent);
-    assert.strictEqual('Second', items[1].textContent);
-    assert.strictEqual('Third', items[2].textContent);
+    expect(3).toBe(items.length);
+    expect('First').toBe(items[0].textContent);
+    expect('Second').toBe(items[1].textContent);
+    expect('Third').toBe(items[2].textContent);
   });
 
   it('should use the "btn btn-default" CSS class for the button by default', function() {
@@ -38,8 +37,8 @@ describe('Select', function() {
       label: 'Foo'
     });
 
-    assert.ok(dom.hasClass(select.element.querySelector('button'), 'btn'));
-    assert.ok(dom.hasClass(select.element.querySelector('button'), 'btn-default'));
+    expect(dom.hasClass(select.element.querySelector('button'), 'btn')).toBeTruthy();
+    expect(dom.hasClass(select.element.querySelector('button'), 'btn-default')).toBeTruthy();
   });
 
   it('should use the CSS class given by the `buttonClass` state', function() {
@@ -49,7 +48,7 @@ describe('Select', function() {
       label: 'Foo'
     });
 
-    assert.ok(dom.hasClass(select.element.querySelector('button'), 'myClass'));
+    expect(dom.hasClass(select.element.querySelector('button'), 'myClass')).toBeTruthy();
   });
 
   it('should render given label inside button', function() {
@@ -58,7 +57,7 @@ describe('Select', function() {
       label: 'Foo'
     });
 
-    assert.strictEqual('Foo ', select.element.querySelector('button').textContent);
+    expect('Foo ').toBe(select.element.querySelector('button').textContent);
   });
 
   it('should render first item inside button if no label is given', function() {
@@ -66,7 +65,7 @@ describe('Select', function() {
       items: ['First', 'Second', 'Third']
     });
 
-    assert.strictEqual('First ', select.element.querySelector('button').textContent);
+    expect('First ').toBe(select.element.querySelector('button').textContent);
   });
 
   it('should automatically select first item if no label is given', function() {
@@ -74,7 +73,7 @@ describe('Select', function() {
       items: ['First', 'Second', 'Third']
     });
 
-    assert.strictEqual(0, select.selectedIndex);
+    expect(0).toBe(select.selectedIndex);
   });
 
   it('should render selected item inside button if there is one', function() {
@@ -84,7 +83,7 @@ describe('Select', function() {
       selectedIndex: 1
     });
 
-    assert.strictEqual('Second ', select.element.querySelector('button').textContent);
+    expect('Second ').toBe(select.element.querySelector('button').textContent);
   });
 
   it('should set the hidden input\'s value as the selected item\'s value', function() {
@@ -95,7 +94,7 @@ describe('Select', function() {
       selectedIndex: 1
     });
 
-    assert.strictEqual('second', select.element.querySelector('input[type="hidden"]').value);
+    expect('second').toBe(select.element.querySelector('input[type="hidden"]').value);
   });
 
   it('should set the hidden input\'s name as specified by the `hiddenInputName` state', function() {
@@ -104,7 +103,7 @@ describe('Select', function() {
       items: ['First', 'Second', 'Third']
     });
 
-    assert.strictEqual('order', select.element.querySelector('input[type="hidden"]').getAttribute('name'));
+    expect('order').toBe(select.element.querySelector('input[type="hidden"]').getAttribute('name'));
   });
 
   it('should create dropdown instance', function() {
@@ -112,8 +111,8 @@ describe('Select', function() {
       items: ['First', 'Second', 'Third']
     });
 
-    assert.ok(select.components.dropdown instanceof Dropdown);
-    assert.ok(select.components.dropdown, select.getDropdown());
+    expect(select.components.dropdown instanceof Dropdown).toBeTruthy();
+    expect(select.components.dropdown).toBeTruthy();
   });
 
   it('should open/close dropdown when button is clicked', function() {
@@ -122,13 +121,13 @@ describe('Select', function() {
     });
 
     var dropdown = select.getDropdown();
-    assert.ok(!dropdown.expanded);
+    expect(!dropdown.expanded).toBeTruthy();
 
     dom.triggerEvent(select.element.querySelector('button'), 'click');
-    assert.ok(dropdown.expanded);
+    expect(dropdown.expanded).toBeTruthy();
 
     dom.triggerEvent(select.element.querySelector('button'), 'click');
-    assert.ok(!dropdown.expanded);
+    expect(!dropdown.expanded).toBeTruthy();
   });
 
   it('should not open dropdown when Select component is disabled', function() {
@@ -138,10 +137,10 @@ describe('Select', function() {
     });
 
     var dropdown = select.getDropdown();
-    assert.ok(!dropdown.expanded);
+    expect(!dropdown.expanded).toBeTruthy();
 
     dom.triggerEvent(select.element.querySelector('button'), 'click');
-    assert.ok(!dropdown.expanded);
+    expect(!dropdown.expanded).toBeTruthy();
   });
 
   it('should close dropdown when Select component gets disabled', function(done) {
@@ -152,11 +151,11 @@ describe('Select', function() {
     dom.triggerEvent(select.element.querySelector('button'), 'click');
 
     var dropdown = select.getDropdown();
-    assert.ok(dropdown.expanded);
+    expect(dropdown.expanded).toBeTruthy();
 
     select.disabled = true;
     select.once('stateChanged', function() {
-      assert.ok(!dropdown.expanded);
+      expect(!dropdown.expanded).toBeTruthy();
       done();
     });
   });
@@ -166,12 +165,12 @@ describe('Select', function() {
       items: ['First', 'Second', 'Third']
     });
 
-    assert.strictEqual(select.selectedIndex, 0);
+    expect(select.selectedIndex).toBe(0);
     select.disabled = true;
     select.selectedIndex = 1;
 
     select.once('stateChanged', function() {
-      assert.strictEqual(select.selectedIndex, 1);
+      expect(select.selectedIndex).toBe(1);
       done();
     });
   });
@@ -183,7 +182,7 @@ describe('Select', function() {
 
     dom.triggerEvent(select.element.querySelectorAll('li')[1], 'click');
     select.components.dropdown.once('stateChanged', function() {
-      assert.strictEqual('Second ', select.element.querySelector('button').textContent);
+      expect('Second ').toBe(select.element.querySelector('button').textContent);
       done();
     });
   });
@@ -196,7 +195,7 @@ describe('Select', function() {
 
     dom.triggerEvent(select.element.querySelectorAll('li')[1], 'click');
     select.components.dropdown.once('stateChanged', function() {
-      assert.strictEqual('second', select.element.querySelector('input[type="hidden"]').value);
+      expect('second').toBe(select.element.querySelector('input[type="hidden"]').value);
       done();
     });
   });
@@ -208,7 +207,7 @@ describe('Select', function() {
 
     dom.triggerEvent(select.element.querySelectorAll('li')[1], 'click');
     select.components.dropdown.once('stateChanged', function() {
-      assert.strictEqual(1, select.selectedIndex);
+      expect(1).toBe(select.selectedIndex);
       done();
     });
   });
@@ -219,10 +218,10 @@ describe('Select', function() {
     });
 
     select.once('stateChanged', () => {
-      assert.strictEqual(0, select.selectedIndex);
+      expect(0).toBe(select.selectedIndex);
       select.selectedIndex = 2;
       select.items = ['New First', 'New Second', 'New Third'];
-      assert.strictEqual(0, select.selectedIndex);
+      expect(0).toBe(select.selectedIndex);
     });
   });
 
@@ -239,8 +238,8 @@ describe('Select', function() {
           keyCode: 27
         });
         dom.on(button, 'focus', function() {
-          assert.ok(!select.getDropdown().expanded);
-          assert.strictEqual(button, document.activeElement);
+          expect(!select.getDropdown().expanded).toBeTruthy();
+          expect(button).toBe(document.activeElement);
           done();
         });
       });
@@ -255,8 +254,8 @@ describe('Select', function() {
         keyCode: 13
       });
       select.getDropdown().once('stateChanged', function() {
-        assert.ok(select.getDropdown().expanded);
-        assert.strictEqual(document.activeElement, select.element.querySelector('.select-option a'));
+        expect(select.getDropdown().expanded).toBeTruthy();
+        expect(document.activeElement).toBe(select.element.querySelector('.select-option a'));
         done();
       });
     });
@@ -270,8 +269,8 @@ describe('Select', function() {
         keyCode: 32
       });
       select.getDropdown().once('stateChanged', function() {
-        assert.ok(select.getDropdown().expanded);
-        assert.strictEqual(document.activeElement, select.element.querySelector('.select-option a'));
+        expect(select.getDropdown().expanded).toBeTruthy();
+        expect(document.activeElement).toBe(select.element.querySelector('.select-option a'));
         done();
       });
     });
@@ -284,7 +283,7 @@ describe('Select', function() {
       dom.triggerEvent(select.element, 'keydown', {
         keyCode: 13
       });
-      assert.ok(!select.getDropdown().expanded);
+      expect(!select.getDropdown().expanded).toBeTruthy();
     });
 
     it('should not throw error when trying to automatically focus first option when there are no items', function(done) {
@@ -294,7 +293,7 @@ describe('Select', function() {
         keyCode: 13
       });
       select.getDropdown().once('stateChanged', function() {
-        assert.ok(select.getDropdown().expanded);
+        expect(select.getDropdown().expanded).toBeTruthy();
         done();
       });
     });
@@ -312,17 +311,17 @@ describe('Select', function() {
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 40
         });
-        assert.strictEqual(document.activeElement, options[1]);
+        expect(document.activeElement).toBe(options[1]);
 
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 40
         });
-        assert.strictEqual(document.activeElement, options[2]);
+        expect(document.activeElement).toBe(options[2]);
 
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 40
         });
-        assert.strictEqual(document.activeElement, options[0]);
+        expect(document.activeElement).toBe(options[0]);
         done();
       });
     });
@@ -338,12 +337,12 @@ describe('Select', function() {
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 40
         });
-        assert.strictEqual(document.activeElement, options[0]);
+        expect(document.activeElement).toBe(options[0]);
 
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 40
         });
-        assert.strictEqual(document.activeElement, options[1]);
+        expect(document.activeElement).toBe(options[1]);
         done();
       });
     });
@@ -361,17 +360,17 @@ describe('Select', function() {
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 38
         });
-        assert.strictEqual(document.activeElement, options[2]);
+        expect(document.activeElement).toBe(options[2]);
 
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 38
         });
-        assert.strictEqual(document.activeElement, options[1]);
+        expect(document.activeElement).toBe(options[1]);
 
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 38
         });
-        assert.strictEqual(document.activeElement, options[0]);
+        expect(document.activeElement).toBe(options[0]);
         done();
       });
     });
@@ -387,12 +386,12 @@ describe('Select', function() {
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 38
         });
-        assert.strictEqual(document.activeElement, options[0]);
+        expect(document.activeElement).toBe(options[0]);
 
         dom.triggerEvent(select.element, 'keydown', {
           keyCode: 38
         });
-        assert.strictEqual(document.activeElement, options[2]);
+        expect(document.activeElement).toBe(options[2]);
         done();
       });
     });
@@ -416,9 +415,9 @@ describe('Select', function() {
           }
         );
         dom.on(button, 'focus', function() {
-          assert.ok(!select.getDropdown().expanded);
-          assert.strictEqual(0, select.selectedIndex);
-          assert.strictEqual(button, document.activeElement);
+          expect(!select.getDropdown().expanded).toBeTruthy();
+          expect(0).toBe(select.selectedIndex);
+          expect(button).toBe(document.activeElement);
           done();
         });
       });
@@ -442,9 +441,9 @@ describe('Select', function() {
             keyCode: 10
           }
         );
-        assert.strictEqual(-1, select.selectedIndex);
-        assert.ok(select.getDropdown().expanded);
-        assert.notStrictEqual(button, document.activeElement);
+        expect(-1).toBe(select.selectedIndex);
+        expect(select.getDropdown().expanded).toBeTruthy();
+        expect(button).not.toBe(document.activeElement);
         done();
       });
     });
@@ -455,12 +454,12 @@ describe('Select', function() {
       });
 
       select.selectedIndex = 1;
-      assert.strictEqual(1, select.selectedIndex);
+      expect(1).toBe(select.selectedIndex);
       select.items = ['First', 'Second', 'Third'];
-      assert.strictEqual(1, select.selectedIndex);
+      expect(1).toBe(select.selectedIndex);
       select.items = ['New First', 'New Second', 'New Third'];
       select.once('stateSynced', function() {
-        assert.strictEqual(0, select.selectedIndex);
+        expect(0).toBe(select.selectedIndex);
         done();
       });
     });
@@ -477,7 +476,7 @@ describe('Select', function() {
           selectedIndex: 1
         });
       });
-      assert.strictEqual('Second', element.childNodes[0].querySelector('input[type="hidden"]').value);
+      expect('Second').toBe(element.childNodes[0].querySelector('input[type="hidden"]').value);
     });
 
     it('should automatically render first item as selected if `selectedIndex` is not given', function() {
@@ -489,7 +488,7 @@ describe('Select', function() {
           values: ['First', 'Second', 'Third']
         });
       });
-      assert.strictEqual('First', element.childNodes[0].querySelector('input[type="hidden"]').value);
+      expect('First').toBe(element.childNodes[0].querySelector('input[type="hidden"]').value);
     });
 
     it('should not select any item if `label` is given but `selectedIndex` is not', function() {
@@ -502,7 +501,7 @@ describe('Select', function() {
           label: 'Order'
         });
       });
-      assert.strictEqual('', element.childNodes[0].querySelector('input[type="hidden"]').value);
+      expect('').toBe(element.childNodes[0].querySelector('input[type="hidden"]').value);
     });
 
     it('should add default button classes in template', () => {
@@ -518,7 +517,7 @@ describe('Select', function() {
       const classNames = Select.STATE.buttonClass.value.split(' ');
       const buttonElement = element.querySelector('button');
 
-      classNames.forEach(className => assert.isTrue(dom.hasClass(buttonElement, className)));
+      classNames.forEach(className => expect(dom.hasClass(buttonElement, className)).toBe(true));
     });
   });
 });

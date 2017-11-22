@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import sinon from 'sinon';
 import core from 'metal';
 import dom from 'metal-dom';
@@ -37,7 +36,7 @@ describe('Datatable', function() {
         data: data_simple
       };
       datatable = new Datatable(data, false);
-      assert.deepEqual(data_simple_expanded_fn(), datatable.data);
+      expect(data_simple_expanded_fn()).toEqual(datatable.data);
     });
 
     it.skip('should expand nested deep data with JSON types', function() {
@@ -45,7 +44,7 @@ describe('Datatable', function() {
         data: data_nested_deep
       };
       datatable = new Datatable(data, false);
-      assert.deepEqual(data_nested_deep_expanded_fn(), datatable.data);
+      expect(data_nested_deep_expanded_fn()).toEqual(datatable.data);
     });
 
     it.skip('should expand nested object data with JSON types', function() {
@@ -53,7 +52,7 @@ describe('Datatable', function() {
         data: data_nested_object
       };
       datatable = new Datatable(data, false);
-      assert.deepEqual(data_nested_object_expanded_fn(), datatable.data);
+      expect(data_nested_object_expanded_fn()).toEqual(datatable.data);
     });
 
     it.skip('should expand nested array data with JSON types', function() {
@@ -61,7 +60,7 @@ describe('Datatable', function() {
         data: data_nested_array
       };
       datatable = new Datatable(data, false);
-      assert.deepEqual(data_nested_array_expanded_fn(), datatable.data);
+      expect(data_nested_array_expanded_fn()).toEqual(datatable.data);
     });
 
     it.skip('should expand null data with JSON type', function() {
@@ -73,7 +72,7 @@ describe('Datatable', function() {
         value: null
       };
       datatable = new Datatable(data);
-      assert.deepEqual(expandedData, datatable.data);
+      expect(expandedData).toEqual(datatable.data);
     });
 
     it.skip('should expand undefined data with JSON type', function() {
@@ -85,7 +84,7 @@ describe('Datatable', function() {
         value: undefined
       };
       datatable = new Datatable(data);
-      assert.deepEqual(expandedData, datatable.data);
+      expect(expandedData).toEqual(datatable.data);
     });
 
     it.skip('should expand string data with JSON type', function() {
@@ -97,7 +96,7 @@ describe('Datatable', function() {
         value: 'string'
       };
       datatable = new Datatable(data, false);
-      assert.deepEqual(expandedData, datatable.data);
+      expect(expandedData).toEqual(datatable.data);
     });
 
     it.skip('should expand number data with JSON type', function() {
@@ -109,7 +108,7 @@ describe('Datatable', function() {
         value: 1
       };
       datatable = new Datatable(data);
-      assert.deepEqual(expandedData, datatable.data);
+      expect(expandedData).toEqual(datatable.data);
     });
 
     it.skip('should expand boolean data with JSON type', function() {
@@ -121,7 +120,7 @@ describe('Datatable', function() {
         value: true
       };
       datatable = new Datatable(data);
-      assert.deepEqual(expandedData, datatable.data);
+      expect(expandedData).toEqual(datatable.data);
     });
 
     it.skip('should expand object data with JSON type', function() {
@@ -131,10 +130,10 @@ describe('Datatable', function() {
       };
       datatable = new Datatable(data);
       var expandedData = datatable.data;
-      assert.strictEqual('object', expandedData.type);
-      assert.strictEqual(object, expandedData.value);
-      assert.ok(Array.isArray(expandedData.columns));
-      assert.ok(core.isObject(expandedData.columnsType));
+      expect('object').toBe(expandedData.type);
+      expect(object).toBe(expandedData.value);
+      expect(Array.isArray(expandedData.columns)).toBeTruthy();
+      expect(core.isObject(expandedData.columnsType)).toBeTruthy();
     });
   });
 
@@ -143,12 +142,12 @@ describe('Datatable', function() {
       data: [1, 2, 3]
     });
     var label = datatable.element.querySelector('.datatable-label');
-    assert.ok(dom.hasClass(label, 'collapsed'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'collapsed')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
 
     dom.triggerEvent(label, 'click');
-    assert.ok(dom.hasClass(label, 'expanded'));
-    assert.ok(!dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'expanded')).toBeTruthy();
+    expect(!dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
     datatable.dispose();
   });
 
@@ -157,20 +156,20 @@ describe('Datatable', function() {
       data: [1, 2, 3]
     });
     var label = datatable.element.querySelector('.datatable-label');
-    assert.ok(dom.hasClass(label, 'collapsed'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'collapsed')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
 
     dom.triggerEvent(label, 'keydown', {
       keyCode: 13
     });
-    assert.ok(dom.hasClass(label, 'expanded'));
-    assert.ok(!dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'expanded')).toBeTruthy();
+    expect(!dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
 
     dom.triggerEvent(label, 'keydown', {
       keyCode: 32
     });
-    assert.ok(!dom.hasClass(label, 'expanded'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(!dom.hasClass(label, 'expanded')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
     datatable.dispose();
   });
 
@@ -179,14 +178,14 @@ describe('Datatable', function() {
       data: [1, 2, 3]
     });
     var label = datatable.element.querySelector('.datatable-label');
-    assert.ok(dom.hasClass(label, 'collapsed'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'collapsed')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
 
     dom.triggerEvent(label, 'keydown', {
       keyCode: 10
     });
-    assert.ok(dom.hasClass(label, 'collapsed'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'collapsed')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
     datatable.dispose();
   });
 
@@ -199,22 +198,22 @@ describe('Datatable', function() {
       ]
     });
     var label = datatable.element.querySelector('.datatable-label');
-    assert.ok(dom.hasClass(label, 'collapsed'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'collapsed')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
 
 
     const col = datatable.refs['table-1-0'];
     dom.triggerEvent(col, 'keydown', {
       keyCode: 13
     });
-    assert.ok(dom.hasClass(label, 'expanded'));
-    assert.ok(!dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(dom.hasClass(label, 'expanded')).toBeTruthy();
+    expect(!dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
 
     dom.triggerEvent(col, 'keydown', {
       keyCode: 32
     });
-    assert.ok(!dom.hasClass(label, 'expanded'));
-    assert.ok(dom.hasClass(dom.next(label, 'table'), 'hidden'));
+    expect(!dom.hasClass(label, 'expanded')).toBeTruthy();
+    expect(dom.hasClass(dom.next(label, 'table'), 'hidden')).toBeTruthy();
     datatable.dispose();
   });
 
@@ -224,14 +223,14 @@ describe('Datatable', function() {
     });
 
     const col = datatable.refs['table-1-0'];
-    assert.doesNotThrow(() => {
+    expect(() => {
       dom.triggerEvent(col, 'keydown', {
         keyCode: 13
       });
       dom.triggerEvent(col, 'keydown', {
         keyCode: 32
       });
-    });
+    }).not.toThrow();
     datatable.dispose();
   });
 
@@ -239,10 +238,10 @@ describe('Datatable', function() {
     datatable = new Datatable({
       data: [0, false]
     }, false);
-    assert.throws(function() {
+    expect(function() {
       // Access data to trigger its setter.
       datatable.data; // jshint ignore:line
-    }, Error);
+    }).toThrow();
   });
 
   it.skip('should display column types', function() {
@@ -256,10 +255,10 @@ describe('Datatable', function() {
       }]
     });
     var types = datatable.element.querySelectorAll('.datatable-type');
-    assert.strictEqual(3, types.length);
-    assert.strictEqual('object', types[0].innerText.trim());
-    assert.strictEqual('object', types[1].innerText.trim());
-    assert.strictEqual('boolean', types[2].innerText.trim());
+    expect(3).toBe(types.length);
+    expect('object').toBe(types[0].innerText.trim());
+    expect('object').toBe(types[1].innerText.trim());
+    expect('boolean').toBe(types[2].innerText.trim());
     datatable.dispose();
   });
 
@@ -275,7 +274,7 @@ describe('Datatable', function() {
       displayColumnsType: false
     });
     var types = datatable.element.querySelectorAll('.datatable-type');
-    assert.strictEqual(0, types.length);
+    expect(0).toBe(types.length);
     datatable.dispose();
   });
 
@@ -287,7 +286,7 @@ describe('Datatable', function() {
     datatable = new Datatable({
       data: expandedData
     });
-    assert.strictEqual(expandedData, datatable.data);
+    expect(expandedData).toBe(datatable.data);
     datatable.dispose();
   });
 
@@ -298,7 +297,7 @@ describe('Datatable', function() {
         contentKind: 'HTML'
       }
     });
-    assert.strictEqual('string', datatable.data.type);
+    expect('string').toBe(datatable.data.type);
     datatable.dispose();
   });
 
@@ -318,12 +317,12 @@ describe('Datatable', function() {
       dom.triggerEvent(datatable.refs['table-0-0'], 'keydown', {
         keyCode: 39
       });
-      assert.strictEqual(datatable.refs['table-0-1'], document.activeElement);
+      expect(datatable.refs['table-0-1']).toBe(document.activeElement);
 
       dom.triggerEvent(datatable.refs['table-0-1'], 'keydown', {
         keyCode: 37
       });
-      assert.strictEqual(datatable.refs['table-0-0'], document.activeElement);
+      expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
     it.skip('should move between rows via the up/down arrow keys', function() {
@@ -337,12 +336,12 @@ describe('Datatable', function() {
       dom.triggerEvent(datatable.refs['table-0-0'], 'keydown', {
         keyCode: 40
       });
-      assert.strictEqual(datatable.refs['table-1-0'], document.activeElement);
+      expect(datatable.refs['table-1-0']).toBe(document.activeElement);
 
       dom.triggerEvent(datatable.refs['table-1-0'], 'keydown', {
         keyCode: 38
       });
-      assert.strictEqual(datatable.refs['table-0-0'], document.activeElement);
+      expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
     it.skip('should move to first row of current column via cmd + up arrow on mac', function() {
@@ -365,7 +364,7 @@ describe('Datatable', function() {
         keyCode: 38,
         metaKey: true
       });
-      assert.strictEqual(datatable.refs['table-0-1'], document.activeElement);
+      expect(datatable.refs['table-0-1']).toBe(document.activeElement);
     });
 
     it.skip('should move to first row of current column via "page up" key', function() {
@@ -385,7 +384,7 @@ describe('Datatable', function() {
       dom.triggerEvent(datatable.refs['table-2-1'], 'keydown', {
         keyCode: 33
       });
-      assert.strictEqual(datatable.refs['table-0-1'], document.activeElement);
+      expect(datatable.refs['table-0-1']).toBe(document.activeElement);
     });
 
     it.skip('should move to last row of current column via cmd + down arrow on mac', function() {
@@ -408,7 +407,7 @@ describe('Datatable', function() {
         keyCode: 40,
         metaKey: true
       });
-      assert.strictEqual(datatable.refs['table-2-1'], document.activeElement);
+      expect(datatable.refs['table-2-1']).toBe(document.activeElement);
     });
 
     it.skip('should move to last row of current column via "page down" key', function() {
@@ -428,7 +427,7 @@ describe('Datatable', function() {
       dom.triggerEvent(datatable.refs['table-0-1'], 'keydown', {
         keyCode: 34
       });
-      assert.strictEqual(datatable.refs['table-2-1'], document.activeElement);
+      expect(datatable.refs['table-2-1']).toBe(document.activeElement);
     });
 
     it.skip('should move to first column of current row via cmd + left arrow on mac', function() {
@@ -446,7 +445,7 @@ describe('Datatable', function() {
         keyCode: 37,
         metaKey: true
       });
-      assert.strictEqual(datatable.refs['table-0-0'], document.activeElement);
+      expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
     it.skip('should move to first column of current row via "home" key', function() {
@@ -461,7 +460,7 @@ describe('Datatable', function() {
       dom.triggerEvent(datatable.refs['table-0-2'], 'keydown', {
         keyCode: 36
       });
-      assert.strictEqual(datatable.refs['table-0-0'], document.activeElement);
+      expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
     it.skip('should move to last column of current row via cmd + right arrow on mac', function() {
@@ -479,7 +478,7 @@ describe('Datatable', function() {
         keyCode: 39,
         metaKey: true
       });
-      assert.strictEqual(datatable.refs['table-0-2'], document.activeElement);
+      expect(datatable.refs['table-0-2']).toBe(document.activeElement);
     });
 
     it.skip('should move to last column of current row via "end" key', function() {
@@ -494,7 +493,7 @@ describe('Datatable', function() {
       dom.triggerEvent(datatable.refs['table-0-0'], 'keydown', {
         keyCode: 35
       });
-      assert.strictEqual(datatable.refs['table-0-2'], document.activeElement);
+      expect(datatable.refs['table-0-2']).toBe(document.activeElement);
     });
   });
 });

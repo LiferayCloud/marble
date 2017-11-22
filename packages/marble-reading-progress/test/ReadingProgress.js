@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import ReadingProgress from '../src/ReadingProgress';
 
@@ -43,12 +42,12 @@ describe('ReadingProgress', function() {
     });
 
     var items = readingProgress.element.querySelectorAll('a');
-    assert.strictEqual('#content1', items.item(0).hash);
-    assert.strictEqual('Chosen Title 1', items.item(0).querySelector('.reading-title').textContent);
-    assert.strictEqual('3 min read', items.item(0).querySelector('.reading-subtitle').textContent);
-    assert.strictEqual('#content2', items.item(1).hash);
-    assert.strictEqual('Chosen Title 2', items.item(1).querySelector('.reading-title').textContent);
-    assert.strictEqual('2 min read', items.item(1).querySelector('.reading-subtitle').textContent);
+    expect('#content1').toBe(items.item(0).hash);
+    expect('Chosen Title 1').toBe(items.item(0).querySelector('.reading-title').textContent);
+    expect('3 min read').toBe(items.item(0).querySelector('.reading-subtitle').textContent);
+    expect('#content2').toBe(items.item(1).hash);
+    expect('Chosen Title 2').toBe(items.item(1).querySelector('.reading-title').textContent);
+    expect('2 min read').toBe(items.item(1).querySelector('.reading-subtitle').textContent);
   });
 
   it('should generate title from the referenced content when none is given', function() {
@@ -57,12 +56,12 @@ describe('ReadingProgress', function() {
     });
 
     var titles = readingProgress.element.querySelectorAll('.reading-title');
-    assert.strictEqual('Title 1', readingProgress.items[0].title);
-    assert.strictEqual('Title 1', titles.item(0).textContent);
-    assert.strictEqual('Title 2', readingProgress.items[1].title);
-    assert.strictEqual('Title 2', titles.item(1).textContent);
-    assert.strictEqual('Title 3', readingProgress.items[2].title);
-    assert.strictEqual('Title 3', titles.item(2).textContent);
+    expect('Title 1').toBe(readingProgress.items[0].title);
+    expect('Title 1').toBe(titles.item(0).textContent);
+    expect('Title 2').toBe(readingProgress.items[1].title);
+    expect('Title 2').toBe(titles.item(1).textContent);
+    expect('Title 3').toBe(readingProgress.items[2].title);
+    expect('Title 3').toBe(titles.item(2).textContent);
   });
 
   it('should generate expected time from the referenced content when none is given', function() {
@@ -75,12 +74,12 @@ describe('ReadingProgress', function() {
     });
 
     var times = readingProgress.element.querySelectorAll('.reading-subtitle');
-    assert.strictEqual(64, readingProgress.items[0].time);
-    assert.strictEqual('1 min read', times.item(0).textContent);
-    assert.strictEqual(30, readingProgress.items[1].time);
-    assert.strictEqual('30 sec read', times.item(1).textContent);
-    assert.strictEqual(124, readingProgress.items[2].time);
-    assert.strictEqual('2 min read', times.item(2).textContent);
+    expect(64).toBe(readingProgress.items[0].time);
+    expect('1 min read').toBe(times.item(0).textContent);
+    expect(30).toBe(readingProgress.items[1].time);
+    expect('30 sec read').toBe(times.item(1).textContent);
+    expect(124).toBe(readingProgress.items[2].time);
+    expect('2 min read').toBe(times.item(2).textContent);
   });
 
   it('should only generate missing item info when href is hash link', function() {
@@ -88,9 +87,9 @@ describe('ReadingProgress', function() {
       items: ['#content1', 'noHash', '#content3']
     });
 
-    assert.strictEqual('Title 1', readingProgress.items[0].title);
-    assert.ok(!readingProgress.items[1].title);
-    assert.strictEqual('Title 3', readingProgress.items[2].title);
+    expect('Title 1').toBe(readingProgress.items[0].title);
+    expect(!readingProgress.items[1].title).toBeTruthy();
+    expect('Title 3').toBe(readingProgress.items[2].title);
   });
 
   it('should not create new ReadingProgressTracker after each render', function(done) {
@@ -99,11 +98,11 @@ describe('ReadingProgress', function() {
     });
 
     var tracker = readingProgress.getTracker();
-    assert.ok(tracker);
+    expect(tracker).toBeTruthy();
 
     readingProgress.items = ['#content1', '#content2'];
     readingProgress.once('stateSynced', function() {
-      assert.strictEqual(tracker, readingProgress.getTracker());
+      expect(tracker).toBe(readingProgress.getTracker());
       done();
     });
   });
@@ -118,10 +117,10 @@ describe('ReadingProgress', function() {
     tracker.progress = 30;
 
     var circle = readingProgress.element.querySelectorAll('circle').item(1);
-    assert.strictEqual('70', circle.getAttribute('stroke-dashoffset'));
+    expect('70').toBe(circle.getAttribute('stroke-dashoffset'));
 
     tracker.progress = 40;
-    assert.strictEqual('60', circle.getAttribute('stroke-dashoffset'));
+    expect('60').toBe(circle.getAttribute('stroke-dashoffset'));
   });
 
   it('should set the title as an empty string if title element is not found', function() {
@@ -130,9 +129,9 @@ describe('ReadingProgress', function() {
       titleSelector: 'h2'
     });
 
-    assert.strictEqual('', readingProgress.items[0].title);
-    assert.strictEqual('', readingProgress.items[1].title);
-    assert.strictEqual('', readingProgress.items[2].title);
+    expect('').toBe(readingProgress.items[0].title);
+    expect('').toBe(readingProgress.items[1].title);
+    expect('').toBe(readingProgress.items[2].title);
   });
 
   function getBigText(charCount) {

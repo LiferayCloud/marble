@@ -10,7 +10,6 @@
   "devDependencies": {
     "babel-jest": "^21.2.0",
     "babel-preset-metal": "^4.0.0",
-    "chai": "^4.1.2",
     "eslint": "^4.11.0",
     "eslint-config-liferay": "^2.0.10",
     "jest": "^21.2.1",

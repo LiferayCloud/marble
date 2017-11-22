@@ -1,6 +1,5 @@
 'use strict';
 
-import {assert} from 'chai';
 import dom from 'metal-dom';
 import Alert from '../src/Alert';
 
@@ -13,9 +12,9 @@ describe('Alert', function() {
 
   it('should show alert and fire transitionend', function(done) {
     component = new Alert();
-    assert.ok(!component.visible);
+    expect(!component.visible).toBeTruthy();
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       component.dispose();
       done();
     });
@@ -26,9 +25,9 @@ describe('Alert', function() {
     component = new Alert({
       visible: true
     });
-    assert.ok(component.visible);
+    expect(component.visible).toBeTruthy();
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(!component.visible);
+      expect(!component.visible).toBeTruthy();
       component.dispose();
       done();
     });
@@ -39,9 +38,9 @@ describe('Alert', function() {
     component = new Alert({
       visible: true
     });
-    assert.ok(component.visible);
+    expect(component.visible).toBeTruthy();
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(!component.visible);
+      expect(!component.visible).toBeTruthy();
       dom.once(component.element, 'transitionend', function() {
         component.dispose();
         done();
@@ -57,7 +56,7 @@ describe('Alert', function() {
     });
     component.close();
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(component.isDisposed());
+      expect(component.isDisposed()).toBeTruthy();
       done();
     });
   });
@@ -68,7 +67,7 @@ describe('Alert', function() {
     });
     dom.triggerEvent(component.element.querySelector('.close'), 'click');
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(!component.visible);
+      expect(!component.visible).toBeTruthy();
       done();
     });
   });
@@ -76,7 +75,7 @@ describe('Alert', function() {
   it('should show alert via `show` method', function() {
     component = new Alert();
     component.show();
-    assert.ok(component.visible);
+    expect(component.visible).toBeTruthy();
   });
 
   it('should alert be not dismissible', function() {
@@ -84,8 +83,8 @@ describe('Alert', function() {
       visible: true,
       dismissible: false
     });
-    assert.ok(!dom.hasClass(component.element, 'alert-dismissible'));
-    assert.ok(!component.element.querySelector('.close'));
+    expect(!dom.hasClass(component.element, 'alert-dismissible')).toBeTruthy();
+    expect(!component.element.querySelector('.close')).toBeTruthy();
   });
 
   it('should close alert when click outside', function(done) {
@@ -93,13 +92,13 @@ describe('Alert', function() {
       visible: true
     });
 
-    assert.ok(component.visible);
+    expect(component.visible).toBeTruthy();
     dom.triggerEvent(component.element, 'click');
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       dom.triggerEvent(document, 'click');
       dom.once(component.element, 'transitionend', function() {
-        assert.ok(!component.visible);
+        expect(!component.visible).toBeTruthy();
         done();
       });
     });
@@ -110,12 +109,12 @@ describe('Alert', function() {
       visible: true
     });
 
-    assert.ok(component.visible);
+    expect(component.visible).toBeTruthy();
     dom.triggerEvent(component.element, 'click');
     dom.once(component.element, 'transitionend', function() {
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       dom.triggerEvent(component.element, 'click');
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       done();
     });
   });
@@ -125,12 +124,12 @@ describe('Alert', function() {
       hideDelay: 0
     });
 
-    assert.ok(!component.visible);
+    expect(!component.visible).toBeTruthy();
     component.visible = true;
     dom.once(component.element, 'transitionend', function() {
       dom.once(component.element, 'transitionend', function() {
         setTimeout(function() {
-          assert.ok(!component.visible);
+          expect(!component.visible).toBeTruthy();
           done();
         }, 100);
       });
@@ -143,7 +142,7 @@ describe('Alert', function() {
     });
 
     let closeButton = component.element.querySelector('span');
-    assert.ok(dom.hasClass(closeButton, 'icon-16-cancel'));
+    expect(dom.hasClass(closeButton, 'icon-16-cancel')).toBeTruthy();
   });
 
   it('should set a text as the close button value', function() {
@@ -152,6 +151,6 @@ describe('Alert', function() {
     });
 
     let closeButton = component.element.querySelector('button');
-    assert.strictEqual(closeButton.textContent, 'close');
+    expect(closeButton.textContent).toBe('close');
   });
 });

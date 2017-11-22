@@ -1,6 +1,5 @@
 'use strict';
 
-import {assert} from 'chai';
 import sinon from 'sinon';
 import dom from 'metal-dom';
 import Input from '../src/Input';
@@ -16,62 +15,62 @@ describe('Input', function() {
 
   it('should render a empty text field by default', function() {
     comp = new Input();
-    assert.equal('text', comp.element.getAttribute('type'));
+    expect('text').toEqual(comp.element.getAttribute('type'));
   });
 
   it('should set password as type to requested field', function() {
     comp = new Input({
       type: 'password'
     });
-    assert.equal('password', comp.element.getAttribute('type'));
+    expect('password').toEqual(comp.element.getAttribute('type'));
   });
 
   it('should add "name" html attribute to requested field', function() {
     comp = new Input({
       name: 'username'
     });
-    assert.equal('username', comp.element.name);
+    expect('username').toEqual(comp.element.name);
   });
 
   it('should add a class to requested field', function() {
     comp = new Input({
       classes: 'form-control'
     });
-    assert.ok(dom.hasClass(comp.element, 'form-control'));
+    expect(dom.hasClass(comp.element, 'form-control')).toBeTruthy();
   });
 
   it('should add more than one class to requested field', function() {
     comp = new Input({
       classes: 'form-control has-error'
     });
-    assert.ok(dom.hasClass(comp.element, 'form-control'));
-    assert.ok(dom.hasClass(comp.element, 'has-error'));
+    expect(dom.hasClass(comp.element, 'form-control')).toBeTruthy();
+    expect(dom.hasClass(comp.element, 'has-error')).toBeTruthy();
   });
 
   it('should add "placeholder" html attribute to requested field', function() {
     comp = new Input({
       placeholder: 'Name'
     });
-    assert.equal('Name', comp.element.getAttribute('placeholder'));
+    expect('Name').toEqual(comp.element.getAttribute('placeholder'));
   });
 
   it('should set a value to requested field', function() {
     comp = new Input({
       value: 'Stephen Hawking'
     });
-    assert.equal('Stephen Hawking', comp.element.value);
+    expect('Stephen Hawking').toEqual(comp.element.value);
   });
 
   it('should add "autocomplete" html attribute to requested field', function() {
     comp = new Input({
       autocomplete: 'on'
     });
-    assert.equal('on', comp.element.getAttribute('autocomplete'));
+    expect('on').toEqual(comp.element.getAttribute('autocomplete'));
 
     comp.autocomplete = 'off';
 
     comp.once('stateSynced', function(done) {
-      assert.equal('off', comp.element.getAttribute('autocomplete'));
+      expect('off').toEqual(comp.element.getAttribute('autocomplete'));
       done();
     });
   });
@@ -80,28 +79,28 @@ describe('Input', function() {
     comp = new Input({
       readonly: true
     });
-    assert.ok(comp.element.hasAttribute('readonly'));
+    expect(comp.element.hasAttribute('readonly')).toBeTruthy();
   });
 
   it('should add "maxlength" html attribute to requested field', function() {
     comp = new Input({
       maxLength: 10
     });
-    assert.equal(10, comp.element.getAttribute('maxlength'));
+    expect(10).toEqual(parseInt(comp.element.getAttribute('maxlength'), 10));
   });
 
   it('should add "data-field-index" custom attribute to requested field', function() {
     comp = new Input({
       fieldIndex: 1
     });
-    assert.equal(1, comp.element.getAttribute('data-field-index'));
+    expect(1).toEqual(parseInt(comp.element.getAttribute('data-field-index'), 10));
   });
 
   it('should add "data-row-index" custom attribute to requested field', function() {
     comp = new Input({
       rowIndex: 0
     });
-    assert.equal(0, comp.element.getAttribute('data-row-index'));
+    expect(0).toEqual(parseInt(comp.element.getAttribute('data-row-index'), 10));
   });
 
   it('should add "data-oninput" custom attribute to requested field', function() {
@@ -116,7 +115,7 @@ describe('Input', function() {
     dom.triggerEvent(testField, 'input');
 
     comp.once('stateSynced', function(done) {
-      assert.equal(1, handlerFunction.callCount);
+      expect(1).toEqual(handlerFunction.callCount);
       done();
     });
   });
@@ -126,14 +125,14 @@ describe('Input', function() {
     comp = new Input({
       isTogglePassword: true
     });
-    assert.ok(dom.hasClass(comp.element, 'has-action-button'));
+    expect(dom.hasClass(comp.element, 'has-action-button')).toBeTruthy();
   });
 
   it('should check if the field is hidden as default (password)', function() {
     comp = new Input({
       isTogglePassword: true
     });
-    assert.equal('password', comp.element.childNodes[0].getAttribute('type'));
+    expect('password').toEqual(comp.element.childNodes[0].getAttribute('type'));
   });
 
   it('should set the related field visibility to exposed (text)', function() {
@@ -141,7 +140,7 @@ describe('Input', function() {
       initialShow: true,
       isTogglePassword: true
     });
-    assert.equal('text', comp.element.childNodes[0].getAttribute('type'));
+    expect('text').toEqual(comp.element.childNodes[0].getAttribute('type'));
   });
 
   it('should change the field visibility by clicking on the toogle button : hidden to exposed', function() {
@@ -153,7 +152,7 @@ describe('Input', function() {
     dom.triggerEvent(toggleButton, 'click');
 
     comp.once('stateSynced', function(done) {
-      assert.equal('text', comp.element.childNodes[0].getAttribute('type'));
+      expect('text').toEqual(comp.element.childNodes[0].getAttribute('type'));
       done();
     });
 
@@ -169,7 +168,7 @@ describe('Input', function() {
     dom.triggerEvent(toggleButton, 'click');
 
     comp.once('stateSynced', function(done) {
-      assert.equal('password', comp.element.childNodes[0].getAttribute('type'));
+      expect('password').toEqual(comp.element.childNodes[0].getAttribute('type'));
       done();
     });
   });
@@ -181,8 +180,8 @@ describe('Input', function() {
       isTogglePassword: true
     });
 
-    assert.notOk(comp.element.childNodes[0].hasAttribute('readonly'));
-    assert.equal('text', comp.element.childNodes[0].getAttribute('type'));
+    expect(comp.element.childNodes[0].hasAttribute('readonly')).toBeFalsy();
+    expect('text').toEqual(comp.element.childNodes[0].getAttribute('type'));
   });
 
   it('should start editable if "initialShow" is true and "value" is not empty', function() {
@@ -193,8 +192,8 @@ describe('Input', function() {
       value: 'John Malkovich'
     });
 
-    assert.notOk(comp.element.childNodes[0].hasAttribute('readonly'));
-    assert.equal('text', comp.element.childNodes[0].getAttribute('type'));
+    expect(comp.element.childNodes[0].hasAttribute('readonly')).toBeFalsy();
+    expect('text').toEqual(comp.element.childNodes[0].getAttribute('type'));
   });
 
   it('should start not editable if "initialShow" is false and "value" is not empty', function() {
@@ -205,8 +204,8 @@ describe('Input', function() {
       value: 'John Malkovich'
     });
 
-    assert.ok(comp.element.childNodes[0].hasAttribute('readonly'));
-    assert.equal('password', comp.element.childNodes[0].getAttribute('type'));
+    expect(comp.element.childNodes[0].hasAttribute('readonly')).toBeTruthy();
+    expect('password').toEqual(comp.element.childNodes[0].getAttribute('type'));
   });
 
 });

@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import { async } from 'metal';
 import dom from 'metal-dom';
 // import DragTestHelper from 'metal-drag-drop/test/fixtures/DragTestHelper';
@@ -24,8 +23,8 @@ describe('Slider', function() {
 
     var sliderInput = slider.element.querySelector('input[name="sliderInput"]');
 
-    assert.ok(sliderInput);
-    assert.strictEqual('50', sliderInput.getAttribute('value'));
+    expect(sliderInput).toBeTruthy();
+    expect('50').toBe(sliderInput.getAttribute('value'));
   });
 
   it('should update the value of the hidden input when the slider value changes', function(done) {
@@ -34,12 +33,16 @@ describe('Slider', function() {
       value: 20
     });
 
-    assert.strictEqual('20', slider.element.querySelector('input[name="sliderInput"]').getAttribute('value'));
+    expect('20').toBe(
+      slider.element.querySelector('input[name="sliderInput"]').getAttribute('value')
+    );
 
     slider.value = 80;
 
     async.nextTick(function() {
-      assert.strictEqual('80', slider.element.querySelector('input[name="sliderInput"]').getAttribute('value'));
+      expect('80').toBe(
+        slider.element.querySelector('input[name="sliderInput"]').getAttribute('value')
+      );
       done();
     });
   });
@@ -57,14 +60,14 @@ describe('Slider', function() {
     });
 
     async.nextTick(function() {
-      assert.strictEqual(90, slider.value);
+      expect(90).toBe(slider.value);
 
       dom.triggerEvent(slider.element.querySelector('.rail-active'), 'click', {
         offsetX: 0.1 * rail.width
       });
 
       async.nextTick(function() {
-        assert.strictEqual(10, slider.value);
+        expect(10).toBe(slider.value);
         done();
       });
     });
@@ -84,7 +87,7 @@ describe('Slider', function() {
     });
 
     async.nextTick(function() {
-      assert.strictEqual('100%', slider.element.querySelector('.rail-handle').style.left);
+      expect('100%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
@@ -103,7 +106,7 @@ describe('Slider', function() {
     });
 
     async.nextTick(function() {
-      assert.strictEqual('0%', slider.element.querySelector('.rail-handle').style.left);
+      expect('0%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
@@ -116,11 +119,11 @@ describe('Slider', function() {
     });
 
     const railHandleEl = slider.element.querySelector('.rail-handle');
-    assert.strictEqual('50%', railHandleEl.style.left);
+    expect('50%').toBe(railHandleEl.style.left);
 
     dom.triggerEvent(slider.element.querySelector('.handle'), 'click');
     async.nextTick(function() {
-      assert.strictEqual('50%', railHandleEl.style.left);
+      expect('50%').toBe(railHandleEl.style.left);
       done();
     });
   });
@@ -139,7 +142,7 @@ describe('Slider', function() {
     DragTestHelper.triggerMouseEvent(document, 'mousemove', rail.width / 2, 0);
 
     async.nextTick(function() {
-      assert.strictEqual(50, slider.value);
+      expect(50).toBe(slider.value);
       done();
     });
   });
@@ -158,7 +161,7 @@ describe('Slider', function() {
     DragTestHelper.triggerMouseEvent(document, 'mousemove', -10, 0);
 
     async.nextTick(function() {
-      assert.strictEqual('0%', slider.element.querySelector('.rail-handle').style.left);
+      expect('0%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
@@ -177,7 +180,7 @@ describe('Slider', function() {
     DragTestHelper.triggerMouseEvent(document, 'mousemove', rail.right + 10, 0);
 
     async.nextTick(function() {
-      assert.strictEqual('100%', slider.element.querySelector('.rail-handle').style.left);
+      expect('100%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
@@ -190,21 +193,21 @@ describe('Slider', function() {
     });
 
     const handle = slider.element.querySelector('.handle');
-    assert.strictEqual('20', handle.getAttribute('aria-valuenow'));
+    expect('20').toBe(handle.getAttribute('aria-valuenow'));
 
     slider.value = 80;
     slider.once('stateSynced', function() {
-      assert.strictEqual('80', handle.getAttribute('aria-valuenow'));
+      expect('80').toBe(handle.getAttribute('aria-valuenow'));
       done();
     });
   });
 
   it('should update the drag container when element changes', function() {
     slider = new Slider();
-    assert.strictEqual(slider.element, slider.getDrag().container);
+    expect(slider.element).toBe(slider.getDrag().container);
 
     slider.element = document.createElement('div');
-    assert.strictEqual(slider.element, slider.getDrag().container);
+    expect(slider.element).toBe(slider.getDrag().container);
   });
 
   it('should not update the drag container when element changes to null', function() {
@@ -214,12 +217,12 @@ describe('Slider', function() {
 
   it('should update the drag container element when element changes', function() {
     slider = new Slider();
-    assert.strictEqual(slider.element, slider.getDrag().container);
+    expect(slider.element).toBe(slider.getDrag().container);
 
     var element = document.createElement('div');
     dom.append(element, '<div class="rail"></div>');
     slider.element = element;
-    assert.strictEqual(element, slider.getDrag().container);
+    expect(element).toBe(slider.getDrag().container);
   });
 
   it('shouldnt update value if its smaller than min', function() {
@@ -230,7 +233,7 @@ describe('Slider', function() {
 
     slider.value = 10;
 
-    assert.strictEqual(50, slider.value);
+    expect(50).toBe(slider.value);
   });
 
   it('shouldnt update value if its bigger than max', function() {
@@ -241,7 +244,7 @@ describe('Slider', function() {
 
     slider.value = 200;
 
-    assert.strictEqual(50, slider.value);
+    expect(50).toBe(slider.value);
   });
 
   it('should update value when max becomes smaller than value', function(done) {
@@ -253,7 +256,7 @@ describe('Slider', function() {
     slider.min = 80;
 
     async.nextTick(function() {
-      assert.strictEqual(80, slider.value);
+      expect(80).toBe(slider.value);
       done();
     });
   });
@@ -267,7 +270,7 @@ describe('Slider', function() {
     slider.max = 20;
 
     async.nextTick(function() {
-      assert.strictEqual(20, slider.value);
+      expect(20).toBe(slider.value);
       done();
     });
   });
@@ -279,14 +282,14 @@ describe('Slider', function() {
     });
 
     const handle = slider.element.querySelector('.handle');
-    assert.strictEqual('100', handle.getAttribute('aria-valuemax'));
-    assert.strictEqual('0', handle.getAttribute('aria-valuemin'));
+    expect('100').toBe(handle.getAttribute('aria-valuemax'));
+    expect('0').toBe(handle.getAttribute('aria-valuemin'));
   });
 
   it('should allow calling the soy template without params', function() {
     var element = document.createElement('div');
     IncrementalDOM.patch(element, Slider.TEMPLATE);
-    assert.strictEqual('0%', element.querySelector('.rail-active').style.width);
-    assert.strictEqual('0', element.textContent);
+    expect('0%').toBe(element.querySelector('.rail-active').style.width);
+    expect('0').toBe(element.textContent);
   });
 });

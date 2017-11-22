@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import CancellablePromise from 'metal-promise';
 import AutocompleteBase from '../src/AutocompleteBase';
@@ -30,8 +29,8 @@ describe('AutocompleteBase', function() {
       data: data,
       inputElement: input
     });
-    assert.isFunction(component.data);
-    assert.strictEqual(data, component.data());
+    expect(typeof component.data).toBe('function');
+    expect(data).toBe(component.data());
   });
 
   it('should not wrap data value in a function if it is already a function', function() {
@@ -43,19 +42,19 @@ describe('AutocompleteBase', function() {
       data: data,
       inputElement: input
     });
-    assert.strictEqual(items, component.data());
-    assert.strictEqual(data, component.data);
+    expect(items).toBe(component.data());
+    expect(data).toBe(component.data);
   });
 
   it('should not throw exception if inputElement is not specified', function() {
-    assert.doesNotThrow(function() {
+    expect(function() {
       component = new AutocompleteBase();
-    });
+    }).not.toThrow();
   });
 
   it('should invoke deferred data handler passing the user input as query', function(done) {
     var data = function(query) {
-      assert.strictEqual('foo', query);
+      expect('foo').toBe(query);
       done();
     };
     component = new AutocompleteBase({
@@ -68,7 +67,7 @@ describe('AutocompleteBase', function() {
 
   it('should invoke deferred data handler passing the query as argument', function(done) {
     var data = function(query) {
-      assert.strictEqual('foo', query);
+      expect('foo').toBe(query);
       done();
     };
     component = new AutocompleteBase({
@@ -84,7 +83,7 @@ describe('AutocompleteBase', function() {
       inputElement: input
     });
     component.request().catch(function(reason) {
-      assert.strictEqual('Cancelled by another request', reason.message);
+      expect('Cancelled by another request').toBe(reason.message);
       done();
     });
     component.request();
@@ -100,7 +99,7 @@ describe('AutocompleteBase', function() {
       format: formatter
     });
     component.request().then(function(data) {
-      assert.deepEqual([2, 3], data);
+      expect([2, 3]).toEqual(data);
       done();
     });
   });
@@ -115,7 +114,7 @@ describe('AutocompleteBase', function() {
       format: formatter
     });
     component.request().then(function(data) {
-      assert.deepEqual([], data);
+      expect([]).toEqual(data);
       done();
     });
   });
@@ -130,7 +129,7 @@ describe('AutocompleteBase', function() {
       format: formatter
     });
     component.request().then(function(data) {
-      assert.deepEqual([], data);
+      expect([]).toEqual(data);
       done();
     });
   });
@@ -143,7 +142,7 @@ describe('AutocompleteBase', function() {
     component.emit('select', {
       text: 'foo'
     });
-    assert.strictEqual('foo', input.value);
+    expect('foo').toBe(input.value);
   });
 
 });

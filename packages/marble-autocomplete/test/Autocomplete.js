@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import sinon from 'sinon';
 import { async } from 'metal';
 import { Align } from 'metal-position';
@@ -61,8 +60,8 @@ describe('Autocomplete', function() {
     });
 
     component.on('stateSynced', function() {
-      assert.ok(component.visible);
-      assert.strictEqual(2, component.element.querySelectorAll('li').length);
+      expect(component.visible).toBeTruthy();
+      expect(2).toBe(component.element.querySelectorAll('li').length);
       done();
     });
     component.request('a');
@@ -76,8 +75,8 @@ describe('Autocomplete', function() {
 
     component.request('asparagus').then(function() {
       async.nextTick(function() {
-        assert.ok(!component.visible);
-        assert.strictEqual(0, component.element.querySelectorAll('li').length);
+        expect(!component.visible).toBeTruthy();
+        expect(0).toBe(component.element.querySelectorAll('li').length);
         done();
       });
     });
@@ -91,8 +90,8 @@ describe('Autocomplete', function() {
 
     component.request('asparagus').then(function() {
       async.nextTick(function() {
-        assert.ok(!component.visible);
-        assert.strictEqual(0, component.element.querySelectorAll('li').length);
+        expect(!component.visible).toBeTruthy();
+        expect(0).toBe(component.element.querySelectorAll('li').length);
         done();
       });
     });
@@ -105,7 +104,7 @@ describe('Autocomplete', function() {
     });
 
     component.request('query').catch(function(reason) {
-      assert.strictEqual('Autocomplete item must be an object', reason.message);
+      expect('Autocomplete item must be an object').toBe(reason.message);
       done();
     });
   });
@@ -119,7 +118,7 @@ describe('Autocomplete', function() {
     });
 
     component.request('query').catch(function(reason) {
-      assert.strictEqual('Autocomplete item must be an object with \'textPrimary\' key', reason.message);
+      expect('Autocomplete item must be an object with \'textPrimary\' key').toBe(reason.message);
       done();
     });
   });
@@ -132,9 +131,9 @@ describe('Autocomplete', function() {
 
     component.on('stateSynced', function() {
       component.once('select', function(value) {
-        assert.strictEqual('Alabama', value.text);
+        expect('Alabama').toBe(value.text);
         component.on('stateSynced', function() {
-          assert.ok(!component.visible);
+          expect(!component.visible).toBeTruthy();
           done();
         });
       });
@@ -153,7 +152,7 @@ describe('Autocomplete', function() {
 
     component.on('stateSynced', function() {
       component.once('select', function(value) {
-        assert.strictEqual('Alabama', value.text);
+        expect('Alabama').toBe(value.text);
         done();
       });
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 13});
@@ -171,7 +170,7 @@ describe('Autocomplete', function() {
 
     component.on('stateSynced', function() {
       component.once('select', function(value) {
-        assert.strictEqual('Alabama', value.text);
+        expect('Alabama').toBe(value.text);
         done();
       });
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 32});
@@ -194,11 +193,11 @@ describe('Autocomplete', function() {
 
     component.on('stateSynced', function() {
       async.nextTick(function() {
-        assert.ok(!component.visible);
+        expect(!component.visible).toBeTruthy();
         dom.exitDocument(otherInput);
         done();
       });
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       otherInput.focus();
       dom.triggerEvent(otherInput, 'click');
     });
@@ -215,10 +214,10 @@ describe('Autocomplete', function() {
 
     component.on('stateSynced', function() {
       async.nextTick(function() {
-        assert.ok(component.visible);
+        expect(component.visible).toBeTruthy();
         done();
       });
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       dom.triggerEvent(input, 'click');
     });
 
@@ -235,9 +234,9 @@ describe('Autocomplete', function() {
 
     input.value = 'Alabama';
 
-    assert.notOk(component.visible);
+    expect(component.visible).toBeFalsy();
     component.on('stateSynced', function() {
-      assert.ok(component.visible);
+      expect(component.visible).toBeTruthy();
       done();
     });
 
@@ -251,7 +250,7 @@ describe('Autocomplete', function() {
     });
 
     let listComponentElement = component.getList().element;
-    assert.strictEqual(input.getAttribute('aria-owns'), listComponentElement.querySelector('.list-group').getAttribute('id'));
+    expect(input.getAttribute('aria-owns')).toBe(listComponentElement.querySelector('.list-group').getAttribute('id'));
   });
 
   it('should active the first item as soon as the list appears', function(done) {
@@ -264,7 +263,7 @@ describe('Autocomplete', function() {
     simulateFocus(input);
 
     component.on('stateSynced', function() {
-      assert.ok(dom.hasClass(getListItem(0), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
       done();
     });
   });
@@ -279,11 +278,11 @@ describe('Autocomplete', function() {
     simulateFocus(input);
 
     component.on('stateSynced', function() {
-      assert.ok(dom.hasClass(getListItem(0), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
 
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
-      assert.notOk(dom.hasClass(getListItem(0), 'active'));
-      assert.ok(dom.hasClass(getListItem(1), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeFalsy();
+      expect(dom.hasClass(getListItem(1), 'active')).toBeTruthy();
       done();
     });
   });
@@ -297,11 +296,11 @@ describe('Autocomplete', function() {
     input.value = 'Al';
 
     component.on('stateSynced', function() {
-      assert.ok(dom.hasClass(getListItem(0), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
 
       dom.triggerEvent(input, 'keydown', {keyCode: 38});
-      assert.notOk(dom.hasClass(getListItem(0), 'active'));
-      assert.ok(dom.hasClass(getLastListItem(), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeFalsy();
+      expect(dom.hasClass(getLastListItem(), 'active')).toBeTruthy();
       done();
     });
 
@@ -318,13 +317,13 @@ describe('Autocomplete', function() {
     simulateFocus(input);
 
     component.on('stateSynced', function() {
-      assert.ok(dom.hasClass(getListItem(0), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
 
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
 
-      assert.ok(dom.hasClass(getListItem(0), 'active'));
-      assert.notOk(dom.hasClass(getListItems(1), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
+      expect(dom.hasClass(getListItems(1), 'active')).toBeFalsy();
       done();
     });
   });
@@ -341,13 +340,13 @@ describe('Autocomplete', function() {
     component.on('stateSynced', function() {
       dom.triggerEvent(input, 'keydown', {keyCode: 40});
 
-      assert.notOk(dom.hasClass(getListItem(0), 'active'));
-      assert.ok(dom.hasClass(getListItem(1), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeFalsy();
+      expect(dom.hasClass(getListItem(1), 'active')).toBeTruthy();
 
       dom.triggerEvent(input, 'keydown', {keyCode: 38});
 
-      assert.ok(dom.hasClass(getListItem(0), 'active'));
-      assert.notOk(dom.hasClass(getListItem(1), 'active'));
+      expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
+      expect(dom.hasClass(getListItem(1), 'active')).toBeFalsy();
       done();
     });
   });
@@ -361,13 +360,13 @@ describe('Autocomplete', function() {
     input.value = 'New York City';
     simulateFocus(input);
     async.nextTick(function() {
-      assert.doesNotThrow(function() {
+      expect(function() {
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 38});
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 13});
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 32});
         done();
-      });
+      }).not.toThrow();
     });
   });
 
@@ -387,7 +386,7 @@ describe('Autocomplete', function() {
         inputElement: input,
         visible: true
       });
-      assert.strictEqual(input.offsetWidth, component.element.offsetWidth);
+      expect(input.offsetWidth).toBe(component.element.offsetWidth);
     });
 
     it('should update width to be equal to the input\'s width when window resizes', function(done) {
@@ -404,7 +403,7 @@ describe('Autocomplete', function() {
 
       // Waits for the resize event's debounce function to finish.
       setTimeout(function() {
-        assert.strictEqual(input.offsetWidth, component.element.offsetWidth);
+        expect(input.offsetWidth).toBe(component.element.offsetWidth);
         done();
       }, 200);
     });
@@ -416,7 +415,7 @@ describe('Autocomplete', function() {
         inputElement: input,
         visible: true
       });
-      assert.ok(Align.align.calledAfter(component.attached));
+      expect(Align.align.calledAfter(component.attached)).toBeTruthy();
       Autocomplete.prototype.attached.restore();
     });
 
@@ -425,11 +424,11 @@ describe('Autocomplete', function() {
         data: filterData,
         inputElement: input
       });
-      assert.strictEqual(0, Align.align.callCount);
+      expect(0).toBe(Align.align.callCount);
 
       component.visible = true;
       component.once('stateSynced', function() {
-        assert.strictEqual(1, Align.align.callCount);
+        expect(1).toBe(Align.align.callCount);
         done();
       });
     });
@@ -447,7 +446,7 @@ describe('Autocomplete', function() {
 
       // Waits for the resize event's debounce function to finish.
       setTimeout(function() {
-        assert.strictEqual(1, Align.align.callCount);
+        expect(1).toBe(Align.align.callCount);
         done();
       }, 200);
     });
@@ -462,7 +461,7 @@ describe('Autocomplete', function() {
 
       // Waits for the resize event's debounce function to finish.
       setTimeout(function() {
-        assert.strictEqual(0, Align.align.callCount);
+        expect(0).toBe(Align.align.callCount);
         done();
       }, 200);
     });
@@ -475,7 +474,7 @@ describe('Autocomplete', function() {
         visible: true
       });
 
-      assert.ok(dom.hasClass(component.element, 'autocomplete-bottom'));
+      expect(dom.hasClass(component.element, 'autocomplete-bottom')).toBeTruthy();
     });
 
     it('should add "autocomplete-top" css class if results are aligned on the top', function() {
@@ -486,7 +485,7 @@ describe('Autocomplete', function() {
         visible: true
       });
 
-      assert.ok(dom.hasClass(component.element, 'autocomplete-top'));
+      expect(dom.hasClass(component.element, 'autocomplete-top')).toBeTruthy();
     });
 
     it('should allow stopping looking for a better region to show the list', function() {
@@ -497,7 +496,7 @@ describe('Autocomplete', function() {
         visible: true
       });
 
-      assert.strictEqual(false, Align.align.args[0][3]);
+      expect(false).toBe(Align.align.args[0][3]);
     });
 
     it('should do not stop looking for a better region to show the list by default', function() {
@@ -507,7 +506,7 @@ describe('Autocomplete', function() {
         visible: true
       });
 
-      assert.strictEqual(true, Align.align.args[0][3]);
+      expect(true).toBe(Align.align.args[0][3]);
     });
   });
 });

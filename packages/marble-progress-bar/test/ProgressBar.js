@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import ProgressBar from '../src/ProgressBar';
 
@@ -16,19 +15,19 @@ describe('ProgressBar', function() {
       progressBar = new ProgressBar({
         label: 'My Label'
       });
-      assert.strictEqual('My Label', progressBar.element.textContent);
+      expect('My Label').toBe(progressBar.element.textContent);
     });
 
     it('should render specified label via incremental dom function', function() {
       progressBar = new ProgressBar({
         label: () => IncrementalDOM.text('My Label')
       });
-      assert.strictEqual('My Label', progressBar.element.textContent);
+      expect('My Label').toBe(progressBar.element.textContent);
     });
 
     it('should not render any text if no label is specified', function() {
       progressBar = new ProgressBar();
-      assert.strictEqual('', progressBar.element.textContent);
+      expect('').toBe(progressBar.element.textContent);
     });
 
     it('should update the rendered label when the state changes', function(done) {
@@ -36,7 +35,7 @@ describe('ProgressBar', function() {
 
       progressBar.label = 'My Label';
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('My Label', progressBar.element.textContent);
+        expect('My Label').toBe(progressBar.element.textContent);
         done();
       });
     });
@@ -45,14 +44,14 @@ describe('ProgressBar', function() {
   describe('Size', function() {
     it('should render bar with 0% width by default', function() {
       progressBar = new ProgressBar();
-      assert.strictEqual('0%', progressBar.element.childNodes[0].style.width);
+      expect('0%').toBe(progressBar.element.childNodes[0].style.width);
     });
 
     it('should render bar with the correct width according to `value`', function() {
       progressBar = new ProgressBar({
         value: 60
       });
-      assert.strictEqual('60%', progressBar.element.childNodes[0].style.width);
+      expect('60%').toBe(progressBar.element.childNodes[0].style.width);
     });
 
     it('should render bar with the correct width according to `min`, `max` and `value`', function() {
@@ -61,7 +60,7 @@ describe('ProgressBar', function() {
         min: 150,
         value: 250
       });
-      assert.strictEqual('50%', progressBar.element.childNodes[0].style.width);
+      expect('50%').toBe(progressBar.element.childNodes[0].style.width);
     });
 
     it('should render bar with the correct width after `value` changes', function(done) {
@@ -73,7 +72,7 @@ describe('ProgressBar', function() {
 
       progressBar.value = 300;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('75%', progressBar.element.childNodes[0].style.width);
+        expect('75%').toBe(progressBar.element.childNodes[0].style.width);
         done();
       });
     });
@@ -87,7 +86,7 @@ describe('ProgressBar', function() {
 
       progressBar.min = 200;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('33%', progressBar.element.childNodes[0].style.width);
+        expect('33%').toBe(progressBar.element.childNodes[0].style.width);
         done();
       });
     });
@@ -101,7 +100,7 @@ describe('ProgressBar', function() {
 
       progressBar.max = 300;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('66%', progressBar.element.childNodes[0].style.width);
+        expect('66%').toBe(progressBar.element.childNodes[0].style.width);
         done();
       });
     });
@@ -115,9 +114,9 @@ describe('ProgressBar', function() {
 
       progressBar.max = 200;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual(200, progressBar.value);
+        expect(200).toBe(progressBar.value);
         progressBar.once('stateSynced', function() {
-          assert.strictEqual('100%', progressBar.element.childNodes[0].style.width);
+          expect('100%').toBe(progressBar.element.childNodes[0].style.width);
           done();
         });
       });
@@ -132,9 +131,9 @@ describe('ProgressBar', function() {
 
       progressBar.min = 300;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual(300, progressBar.value);
+        expect(300).toBe(progressBar.value);
         progressBar.once('stateSynced', function() {
-          assert.strictEqual('0%', progressBar.element.childNodes[0].style.width);
+          expect('0%').toBe(progressBar.element.childNodes[0].style.width);
           done();
         });
       });
@@ -146,10 +145,10 @@ describe('ProgressBar', function() {
         min: 150,
         value: 100
       });
-      assert.strictEqual(150, progressBar.value);
+      expect(150).toBe(progressBar.value);
 
       progressBar.value = 400;
-      assert.strictEqual(350, progressBar.value);
+      expect(350).toBe(progressBar.value);
     });
   });
 
@@ -158,7 +157,7 @@ describe('ProgressBar', function() {
       progressBar = new ProgressBar({
         barClass: 'progress-bar-danger'
       });
-      assert.ok(dom.hasClass(progressBar.element.childNodes[0], 'progress-bar-danger'));
+      expect(dom.hasClass(progressBar.element.childNodes[0], 'progress-bar-danger')).toBeTruthy();
     });
 
     it('should update the inner bar element\'s class when `barClass` changes', function(done) {
@@ -168,8 +167,8 @@ describe('ProgressBar', function() {
 
       progressBar.barClass = 'progress-bar-info';
       progressBar.once('stateSynced', function() {
-        assert.ok(!dom.hasClass(progressBar.element.childNodes[0], 'progress-bar-danger'));
-        assert.ok(dom.hasClass(progressBar.element.childNodes[0], 'progress-bar-info'));
+        expect(!dom.hasClass(progressBar.element.childNodes[0], 'progress-bar-danger')).toBeTruthy();
+        expect(dom.hasClass(progressBar.element.childNodes[0], 'progress-bar-info')).toBeTruthy();
         done();
       });
     });
@@ -178,18 +177,18 @@ describe('ProgressBar', function() {
   describe('ARIA', function() {
     it('should have the progressbar role', function() {
       progressBar = new ProgressBar();
-      assert.strictEqual('progressbar', progressBar.element.getAttribute('role'));
+      expect('progressbar').toBe(progressBar.element.getAttribute('role'));
     });
 
     it('should set and update the aria-valuenow ARIA attribute', function(done) {
       progressBar = new ProgressBar({
         value: 20
       });
-      assert.strictEqual('20', progressBar.element.getAttribute('aria-valuenow'));
+      expect('20').toBe(progressBar.element.getAttribute('aria-valuenow'));
 
       progressBar.value = 40;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('40', progressBar.element.getAttribute('aria-valuenow'));
+        expect('40').toBe(progressBar.element.getAttribute('aria-valuenow'));
         done();
       });
     });
@@ -198,11 +197,11 @@ describe('ProgressBar', function() {
       progressBar = new ProgressBar({
         min: 20
       });
-      assert.strictEqual('20', progressBar.element.getAttribute('aria-valuemin'));
+      expect('20').toBe(progressBar.element.getAttribute('aria-valuemin'));
 
       progressBar.min = 40;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('40', progressBar.element.getAttribute('aria-valuemin'));
+        expect('40').toBe(progressBar.element.getAttribute('aria-valuemin'));
         done();
       });
     });
@@ -211,11 +210,11 @@ describe('ProgressBar', function() {
       progressBar = new ProgressBar({
         max: 20
       });
-      assert.strictEqual('20', progressBar.element.getAttribute('aria-valuemax'));
+      expect('20').toBe(progressBar.element.getAttribute('aria-valuemax'));
 
       progressBar.max = 40;
       progressBar.once('stateSynced', function() {
-        assert.strictEqual('40', progressBar.element.getAttribute('aria-valuemax'));
+        expect('40').toBe(progressBar.element.getAttribute('aria-valuemax'));
         done();
       });
     });

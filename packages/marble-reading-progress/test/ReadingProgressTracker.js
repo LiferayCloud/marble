@@ -1,6 +1,5 @@
 'use strict';
 
-import { assert } from 'chai';
 import dom from 'metal-dom';
 import ReadingProgressTracker from '../src/ReadingProgressTracker';
 
@@ -36,12 +35,12 @@ describe('ReadingProgressTracker', function() {
       element: '#links'
     });
     dom.once(document, 'scroll', function() {
-      assert.strictEqual(0, readingProgress.activeIndex);
-      assert.strictEqual(20, readingProgress.progress);
+      expect(0).toBe(readingProgress.activeIndex);
+      expect(20).toBe(readingProgress.progress);
 
       dom.once(document, 'scroll', function() {
-        assert.strictEqual(0, readingProgress.activeIndex);
-        assert.strictEqual(60, readingProgress.progress);
+        expect(0).toBe(readingProgress.activeIndex);
+        expect(60).toBe(readingProgress.progress);
         done();
       });
       window.scrollTo(0, 3000);
@@ -56,16 +55,16 @@ describe('ReadingProgressTracker', function() {
     var contents = document.querySelectorAll('#links a');
 
     dom.once(document, 'scroll', function() {
-      assert.strictEqual(0, readingProgress.activeIndex);
-      assert.strictEqual('20', contents.item(0).getAttribute('data-reading-progress'));
-      assert.ok(!contents.item(1).hasAttribute('data-reading-progress'));
-      assert.ok(!contents.item(2).hasAttribute('data-reading-progress'));
+      expect(0).toBe(readingProgress.activeIndex);
+      expect('20').toBe(contents.item(0).getAttribute('data-reading-progress'));
+      expect(!contents.item(1).hasAttribute('data-reading-progress')).toBeTruthy();
+      expect(!contents.item(2).hasAttribute('data-reading-progress')).toBeTruthy();
 
       dom.once(document, 'scroll', function() {
-        assert.strictEqual(1, readingProgress.activeIndex);
-        assert.ok(!contents.item(0).hasAttribute('data-reading-progress'));
-        assert.strictEqual('60', contents.item(1).getAttribute('data-reading-progress'));
-        assert.ok(!contents.item(2).hasAttribute('data-reading-progress'));
+        expect(1).toBe(readingProgress.activeIndex);
+        expect(!contents.item(0).hasAttribute('data-reading-progress')).toBeTruthy();
+        expect('60').toBe(contents.item(1).getAttribute('data-reading-progress'));
+        expect(!contents.item(2).hasAttribute('data-reading-progress')).toBeTruthy();
         done();
       });
       window.scrollTo(0, 8000);
@@ -80,24 +79,24 @@ describe('ReadingProgressTracker', function() {
     var contents = document.querySelectorAll('#links a');
 
     dom.once(document, 'scroll', function() {
-      assert.ok(!dom.hasClass(contents.item(0), readingProgress.completedClass));
-      assert.ok(!dom.hasClass(contents.item(1), readingProgress.completedClass));
-      assert.ok(!dom.hasClass(contents.item(2), readingProgress.completedClass));
+      expect(!dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
+      expect(!dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
+      expect(!dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
 
       dom.once(document, 'scroll', function() {
-        assert.ok(dom.hasClass(contents.item(0), readingProgress.completedClass));
-        assert.ok(!dom.hasClass(contents.item(1), readingProgress.completedClass));
-        assert.ok(!dom.hasClass(contents.item(2), readingProgress.completedClass));
+        expect(dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
+        expect(!dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
+        expect(!dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
 
         dom.once(document, 'scroll', function() {
-          assert.ok(dom.hasClass(contents.item(0), readingProgress.completedClass));
-          assert.ok(dom.hasClass(contents.item(1), readingProgress.completedClass));
-          assert.ok(dom.hasClass(contents.item(2), readingProgress.completedClass));
+          expect(dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
+          expect(dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
+          expect(dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
 
           dom.once(document, 'scroll', function() {
-            assert.ok(dom.hasClass(contents.item(0), readingProgress.completedClass));
-            assert.ok(dom.hasClass(contents.item(1), readingProgress.completedClass));
-            assert.ok(!dom.hasClass(contents.item(2), readingProgress.completedClass));
+            expect(dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
+            expect(dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
+            expect(!dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
             done();
           });
           window.scrollTo(0, 12000);
@@ -117,10 +116,10 @@ describe('ReadingProgressTracker', function() {
     var links = document.querySelectorAll('#links a');
 
     dom.once(document, 'scroll', function() {
-      assert.strictEqual(-1, readingProgress.activeIndex);
-      assert.ok(!links.item(0).hasAttribute('data-reading-progress'));
-      assert.ok(!links.item(1).hasAttribute('data-reading-progress'));
-      assert.ok(!links.item(2).hasAttribute('data-reading-progress'));
+      expect(-1).toBe(readingProgress.activeIndex);
+      expect(!links.item(0).hasAttribute('data-reading-progress')).toBeTruthy();
+      expect(!links.item(1).hasAttribute('data-reading-progress')).toBeTruthy();
+      expect(!links.item(2).hasAttribute('data-reading-progress')).toBeTruthy();
       done();
     });
     window.scrollTo(0, 50);

@@ -17,6 +17,16 @@ class Topbar extends Component {
       header: '.topbar-toggle',
       expandedClasses: 'topbar-list-expanded'
     });
+
+    document.documentElement.classList.add('topbar-canvas');
+
+    this.toggler.on('headerExpanded', () => {
+      document.documentElement.classList.add('topbar-canvas-expanded');
+    });
+
+    this.toggler.on('headerCollapsed', () => {
+      document.documentElement.classList.remove('topbar-canvas-expanded');
+    });
   }
 
   disposed() {

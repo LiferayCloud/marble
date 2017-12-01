@@ -30,7 +30,7 @@
     "metal-component": "^2.14.0",
     "metal-soy": "^2.14.0",
     "metal-state": "^2.14.0",
-    "metal-toggler": "^2.2.0"
+    "metal-toggler": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",

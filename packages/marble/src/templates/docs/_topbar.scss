@@ -5,6 +5,10 @@
 .guide:not(.content) {
   .topbar {
     background: rgba($primary, .02);
+
+    .topbar-canvas-expanded & {
+      background: $white;
+    }
   }
 
   .topbar-list {

@@ -1,0 +1,48 @@
+{
+  "name": "marble-tooltip",
+  "version": "1.0.3",
+  "description": "Marble's tooltip component",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-tooltip",
+  "author": {
+    "name": "Ygor Costa",
+    "email": "ygor.costa@liferay.com"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "jsnext:main": "src/Tooltip.js",
+  "main": "lib/Tooltip.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run soy && npm run compile",
+    "soy": "metalsoy"
+  },
+  "keywords": [
+    "marble",
+    "metal",
+    "tooltip"
+  ],
+  "dependencies": {
+    "metal": "^2.0.0",
+    "metal-component": "^2.0.0",
+    "metal-dom": "^2.0.0",
+    "metal-events": "^2.0.0",
+    "metal-position": "^2.0.0",
+    "metal-soy": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-node-env-inline": "^0.2.0",
+    "babel-preset-metal": "^4.0.0",
+    "metal-tools-soy": "^4.2.6",
+    "webpack": "^3.5.5"
+  }
+}

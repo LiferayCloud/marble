@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: Alert dismissible</title>
+
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+
+  <script src="../build/globals/marble-alert.js"></script>
+</head>
+<body>
+  <h1>Alert dismissible</h1>
+  <script>
+    new metal.Alert({
+      visible: true,
+      body: 'Danger',
+      elementClasses: 'alert-danger',
+      dismissible: false
+    });
+  </script>
+</body>
+</html>

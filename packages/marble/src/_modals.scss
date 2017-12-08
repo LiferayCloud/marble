@@ -1,0 +1,111 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/modals";
+
+/* ==========================================================================
+   Modals
+   ========================================================================== */
+
+.modal-dialog {
+  left: 50%;
+  margin: 0;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 582px;
+}
+
+.modal-content {
+  background-clip: initial;
+  border: 0;
+  border-radius: $border-radius-base;
+  box-shadow: none;
+}
+
+/* Modal - Header
+   ========================================================================== */
+
+.modal-header {
+  border: none;
+  padding: 28px 28px 70px 60px;
+}
+
+.modal-header .modal-title {
+  color: rgba($primary, .8);
+  font-family: $font-primary;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 49px 0 0;
+  text-transform: capitalize;
+}
+
+.modal-header .close {
+  color: rgba($primary, .4);
+  cursor: pointer;
+  float: right;
+  font-size: 32px;
+  line-height: 16px;
+  opacity: 1;
+  outline: none;
+
+  @include anim(all);
+}
+
+.modal-header .close:hover {
+  color: rgba($primary, .8);
+  opacity: 1;
+}
+
+/* Modal - Body
+   ========================================================================== */
+
+.modal-body {
+  border: 0;
+  padding: 0 60px 60px;
+}
+
+.modal-body:empty {
+  padding: 0;
+}
+
+.modal-body p {
+  color: rgba($primary, .8);
+  font-size: 14px;
+  margin-bottom: 21px;
+}
+
+.modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Modal - Footer
+   ========================================================================== */
+
+.modal-footer {
+  border: 0;
+  padding: 0 60px 60px;
+  text-align: right;
+}
+
+.modal-footer:empty {
+  padding: 0;
+}
+
+.modal-footer .btn {
+  margin: 0 6px;
+}
+
+.modal-footer .btn:last-child {
+  margin-right: 0;
+}
+
+/* Modal - Backdrop
+   ========================================================================== */
+
+.modal-backdrop {
+  background: $primary;
+}
+
+.modal-backdrop.in {
+  opacity: .92;
+}

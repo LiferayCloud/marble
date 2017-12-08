@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: InputMatrix</title>
+
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+
+  <script src="../build/globals/marble-input-matrix.js"></script>
+</head>
+<body>
+  <div class="container-hybrid-half">
+    <div class="row">
+      <div class="content-header">
+        <div class="header-title">
+          Metal Input-Matrix
+        </div>
+      </div>
+    </div>
+    <div class="content-body">
+      <section class="row">
+        <div class="col-xs-16">
+          <div id="form"></div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <script>
+    window.inputMatrix = new metal.InputMatrix({
+      elementClasses: 'input-matrix--inline',
+      closeButtonHtml: '<span class="icon-16-cancel"></span>',
+      fields:[
+        [{value:'aaa'}, {value:'aaa'}],
+        [{value:'bbb'}, {value:'bbb'}]
+      ],
+      fieldsConfig: [
+        {
+          autocomplete: 'off',
+          isArray: true,
+          label: 'Key',
+          name: 'key',
+          placeholder: 'Key'
+        },
+        {
+          autocomplete: 'off',
+          disableDuplication: true,
+          label: 'Value',
+          name: 'value',
+          placeholder: 'Value',
+          isArray: true,
+          initialShow: true,
+          isTogglePassword: true,
+          readonly: false,
+          editableWhileVisible: true
+        }
+      ]
+    }, '#form');
+  </script>
+</body>
+</html>

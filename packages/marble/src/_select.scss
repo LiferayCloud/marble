@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Select
+   ========================================================================== */
+
+.select {
+  margin-bottom: 24px;
+}
+
+.select .dropdown .btn {
+  background: rgba($primary, .05);
+  color: rgba($primary, .6);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 18px 0 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.select .dropdown .btn img {
+  border-radius: 4px;
+  float: left;
+  height: 24px;
+  margin: 18px 18px 0 0;
+  width: 24px;
+}
+
+.select .dropdown .btn [class^="icon-12-"],
+.select .dropdown .btn [class*="icon-12-"] {
+  line-height: 58px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.select .dropdown .icon-16-arrow-down-short {
+  color: rgba($primary, .4);
+  line-height: 58px;
+  position: absolute;
+  right: 12px;
+  top: 1px;
+}
+
+.select .dropdown .dropdown-menu {
+  margin: -60px 0 0;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.select .dropdown .dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.select .dropdown .dropdown-menu li a {
+  border-bottom-width: 0;
+  color: rgba($primary, .8);
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+  height: 36px;
+  line-height: 24px;
+  margin: 0;
+  padding: 6px 20px;
+}
+
+.select .dropdown .dropdown-menu li a img {
+  border-radius: 4px;
+  float: left;
+  height: 24px;
+  margin: 0 18px 0 0;
+  width: 24px;
+}
+
+.select .dropdown .dropdown-menu li a:hover {
+  background-color: rgba($accent, .1);
+  color: rgba($primary, .8);
+}
+
+/* ==========================================================================
+   Select Large
+   ========================================================================== */
+
+.select.select-large .dropdown .dropdown-menu {
+  margin: 0;
+}
+
+.select.select-large .dropdown .btn {
+  background: rgba($primary, .05);
+  color: rgba($primary, .8);
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.select.select-large .dropdown .btn:hover,
+.select.select-large .dropdown .btn:focus {
+  background: rgba($primary, .1);
+}
+
+.select.select-large .dropdown .btn img {
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba($primary, .1);
+  height: 36px;
+  margin: 12px 18px 0 0;
+  margin-right: 20px;
+  width: 36px;
+}
+
+.select.select-large .dropdown .btn .none {
+  color: rgba($primary, .2);
+  text-transform: lowercase;
+}
+
+.select.select-large .dropdown .btn .none .avatar {
+  background: $white;
+  color: rgba($primary, .2);
+  float: left;
+  height: 36px;
+  margin-right: 20px;
+  margin-top: 12px;
+  width: 36px;
+}
+
+.select.select-large .dropdown .btn .none .avatar [class^="icon-16-"],
+.select.select-large .dropdown .btn .none .avatar [class*="icon-16-"] {
+  display: block;
+  line-height: 36px;
+  margin: 0;
+  text-align: center;
+  top: 0;
+  vertical-align: middle;
+}
+
+.select.select-large .dropdown .dropdown-menu li a {
+  background: $white;
+  color: rgba($primary, .8);
+  cursor: pointer;
+  height: 60px;
+  line-height: 36px;
+  padding: 12px 20px;
+}
+
+.select.select-large .dropdown .dropdown-menu li a img {
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba($primary, .1);
+  height: 36px;
+  margin-right: 20px;
+  width: 36px;
+}
+
+.select.select-large .dropdown .dropdown-menu li a .none .avatar {
+  background: $white;
+  color: rgba($primary, .5);
+  float: left;
+  height: 36px;
+  margin-right: 20px;
+  width: 36px;
+}
+
+.select.select-large .dropdown .dropdown-menu li a .none .avatar span {
+  line-height: 36px;
+}

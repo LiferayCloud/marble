@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: Spinner</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+
+  <style>
+    section {
+      display: inline-grid;
+      margin-right: 20px;
+    }
+  </style>
+
+  <script src="../build/globals/marble-spinner.js"></script>
+</head>
+<body class="container">
+  <section>
+    <h2>Choose a size</h2>
+    <ul class="radio-group">
+      <li>
+        <input id="size-small" name="size" value="small" type="radio" onclick="changeSize(this)" checked>
+        <label for="size-small">Small</label>
+      </li>
+      <li>
+        <input id="size-medium" name="size" value="medium" type="radio" onclick="changeSize(this)">
+        <label for="size-medium">Medium</label>
+      </li>
+      <li>
+        <input id="size-large" name="size" value="large" type="radio" onclick="changeSize(this)">
+        <label for="size-large">Large</label>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Choose a style</h2>
+    <ul class="radio-group">
+      <li>
+        <input id="style-default" name="style" value="default" type="radio" onclick="changeStyle(this)" checked>
+        <label for="style-default">Default</label>
+      </li>
+      <li>
+        <input id="style-danger" name="style" value="danger" type="radio" onclick="changeStyle(this)">
+        <label for="style-danger">Danger</label>
+      </li>
+      <li>
+        <input id="style-warning" name="style" value="warning" type="radio" onclick="changeStyle(this)">
+        <label for="style-warning">Warning</label>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Choose a status</h2>
+    <div class="checkbox">
+      <input id="status-done" value="done" type="checkbox" onclick="changeStatus(this)">
+      <label for="status-done">Done</label>
+    </div>
+  </section>
+
+  <h1>Spinner</h1>
+  <div id="spinner"></div>
+
+  <script>
+    const spinner = new metal.Spinner({}, '#spinner');
+
+    function changeSize(radio) {
+      spinner.size = radio.value;
+    }
+
+    function changeStyle(radio) {
+      let style = radio.value;
+
+      if (style === 'default') {
+        style = undefined;
+      }
+
+      spinner.style = style;
+    }
+
+    function changeStatus(checkbox) {
+      spinner.isDone = checkbox.checked;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: ProgressBar</title>
+
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+
+  <script src="../build/globals/marble-progress-bar.js"></script>
+</head>
+<body>
+  <h1>ProgressBar</h1>
+  <script>
+    window.bar = new metal.ProgressBar({
+      value: 90
+    });
+
+    new metal.ProgressBar({
+      barClass: 'progress-bar-danger',
+      label: '40%',
+      value: 40
+    });
+
+    new metal.ProgressBar({
+      barClass: 'progress-bar-striped progress-bar-success',
+      max: 200,
+      min: 100,
+      label: '<strong>90%</strong>',
+      value: 190
+    });
+  </script>
+</body>
+</html>

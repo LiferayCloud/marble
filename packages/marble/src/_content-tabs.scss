@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Content Tabs
+   ========================================================================== */
+
+.content-tabs {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: -24px;
+  padding: 12px 8px;
+
+  @media (max-width: $screen-md-min) {
+    padding: 12px 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 36px;
+    list-style: none;
+    margin: 0 12px;
+
+    @media (max-width: $screen-md-min) {
+      margin: 0 24px 0 0;
+    }
+
+    &.content-tab-selected a {
+      color: rgba($accent, .9);
+    }
+
+    a {
+      color: rgba($primary, .6);
+      font-family: $font-primary;
+      font-size: 15px;
+      font-weight: 700;
+
+      @include anim(color);
+
+      &:hover,
+      &:focus {
+        color: rgba($accent, .9);
+      }
+    }
+  }
+}

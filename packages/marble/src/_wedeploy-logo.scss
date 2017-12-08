@@ -1,0 +1,195 @@
+.topbar .wedeploy-logo {
+  position: relative;
+
+  &.dashboard-logo {
+    display: inline-block;
+    width: auto;
+    z-index: 999;
+
+    .version-container {
+      bottom: 6px;
+      height: 24px;
+      left: 48px;
+      position: absolute;
+      width: 48px;
+
+      .version {
+        background: $white;
+        bottom: 0;
+        color: rgba($primary, .8);
+        height: 25px;
+        width: 48px;
+      }
+
+      .arrow-left {
+        border-bottom: 6px solid transparent !important; /* stylelint-disable-line declaration-no-important */
+        border-right: 6px solid $white;
+        border-top: 6px solid transparent !important; /* stylelint-disable-line declaration-no-important */
+        top: 6px;
+      }
+    }
+  }
+
+  .docs-nav-container {
+    display: none;
+    position: relative;
+  }
+
+  .we-circle {
+    background: $accent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+  }
+
+  .we {
+    background: none;
+    border-radius: 50%;
+    color: $white;
+    display: inline-block;
+    font-family: $font-primary;
+    font-size: 15px;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36.6px;
+    text-align: center;
+    width: 36px;
+  }
+
+  .deploy {
+    color: rgba($white, .9);
+    font-family: $font-primary;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-left: 6px;
+  }
+
+  .liferay {
+    color: rgba($white, .3);
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+  .version-container {
+    bottom: -7px;
+    position: absolute;
+    width: 48px;
+    z-index: 999;
+
+    @media (min-width: 320px) {
+      display: none;
+    }
+
+    @media (min-width: 960px) {
+      display: block;
+    }
+
+    .version {
+      background: rgba($primary, .05);
+      border-radius: 4px;
+      bottom: -30px;
+      color: rgba($primary, .4);
+      display: block;
+      font-size: 11px;
+      height: 24px;
+      line-height: 24px;
+      position: absolute;
+      text-align: center;
+      width: 48px;
+    }
+
+    .arrow-up {
+      border-bottom: 6px solid rgba($primary, .05);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      height: 0;
+      left: 20px;
+      position: absolute;
+      width: 0;
+    }
+
+    .arrow-left {
+      border-bottom: 6px solid transparent;
+      border-right: 6px solid rgba($primary, .05);
+      border-top: 6px solid transparent;
+      height: 0;
+      left: -6px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+.topbar.topbar-large .dashboard-logo .version-container {
+  left: 60px;
+  top: 12px;
+}
+
+.topbar.topbar-large .wedeploy-logo {
+  .we-circle {
+    height: 48px;
+    width: 48px;
+  }
+
+  .we {
+    background: none;
+    font-size: 22px;
+    height: 48px;
+    left: .5px;
+    line-height: 48px;
+    position: relative;
+    top: .5px;
+    width: 48px;
+  }
+
+  .deploy {
+    font-size: 22px;
+    line-height: 48px;
+    margin-left: 3px;
+    position: relative;
+    top: 1px;
+  }
+
+  .liferay {
+    font-size: 11px;
+    left: -2px;
+    letter-spacing: .003em;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.topbar.topbar-light .wedeploy-logo {
+  .deploy {
+    color: rgba($primary, .9);
+  }
+
+  .liferay {
+    color: rgba($primary, .3);
+  }
+
+  &.dashboard-logo {
+    .version {
+      background: rgba($primary, .05);
+    }
+
+    .arrow-up {
+      border-bottom: 6px solid rgba($primary, .05);
+    }
+
+    .arrow-left {
+      border-right: 6px solid rgba($primary, .05);
+    }
+  }
+}
+
+.topbar.topbar-inverse {
+  .we {
+    background: $white;
+    color: $accent;
+  }
+}

@@ -1,0 +1,35 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+
+/* ==========================================================================
+   Scaffolding
+   ========================================================================== */
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -.02rem;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body.fade-out {
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+
+  @include anim(opacity);
+}
+
+body.fade-in {
+  opacity: 1;
+
+  @include anim(opacity);
+}
+
+.primary-bg {
+  background: $primary;
+}
+
+.accent-bg {
+  background: $accent;
+}

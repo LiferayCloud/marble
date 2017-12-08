@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
+.content .topbar.topbar-fixed + .blog {
+  padding-top: 60px;
+}
+
+/* Overwrite blog > container > content li rule
+   ========================================================================== */
+
+.blog .container .content .nav.nav-code-tabs li {
+  margin-bottom: 0;
+}
+
+.blog .container .content .nav.nav-tabs.nav-code-tabs {
+  border-width: 0px;
+  padding: 0 24px;
+  margin: 0;
+
+  li::before {
+    content: "";
+  }
+}
+
+.blog {
+
+  @import "../root/elements";
+
+  .container {
+    width: 100%;
+    max-width: 34rem;
+    padding: 0 2.5rem 0;
+    margin: 0 auto;
+
+    @media (min-width: 600px) {
+      padding: 0;
+    }
+  }
+
+  .container .content p,
+  .container .content li {
+    font-size: $font-h6;
+  }
+
+  .container .content blockquote p {
+    font-size: $font-h4;
+  }
+
+  .container .content a {
+    @include anim(color);
+    border-bottom: 1px dashed rgba($primary, .4);
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      border-color: $accent;
+      color: $accent;
+    }
+  }
+
+  .posts-list {
+    background: rgba($primary, .02);
+    padding: calc(3rem * #{$lineHeight}) 0;
+  }
+
+  .post-item {
+    margin-bottom: calc(2rem * #{$lineHeight});
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .posts-list a {
+    border-width: 0px;
+  }
+
+  .posts-list a small {
+    @include anim(color);
+    margin-bottom: 0;
+  }
+
+  .posts-list a:hover small {
+    color: rgba($primary, .8);
+  }
+
+  .posts-list a h4 {
+    @include anim(color);
+  }
+
+  .posts-list a:hover h4 {
+    color: $accent;
+  }
+
+  .iframe-container {
+    height: 400px;
+    position: relative;
+    width: calc(100% + 5rem);
+    padding: 0 15px;
+
+    display: none;
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .no-iframe {
+    display: block;
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+
+  .iframe-container iframe {
+    min-width: 100%;
+    width: 1px;
+    border: 3px solid;
+    position: relative;
+    top: -3px;
+    height: calc(100% - 23px);
+    left: 0;
+    right: 0;
+  }
+
+  .iframe-container .iframe-frame {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  article:last-child {
+    margin-bottom: calc(4rem * #{$lineHeight});
+  }
+}
+
+.social {
+  text-align: center;
+  margin-top: 96px;
+  margin-bottom: 144px;
+
+  .social-banner {
+    margin-bottom: 12px;
+    height: 30px;
+    line-height: 30px;
+
+    .social-banner-title {
+      font-family: $font-primary;
+      font-size: $font-h6;
+      font-weight: bold;
+    }
+  }
+
+  .social-buttons {
+    .social-button {
+      @include anim(background-color);
+      display: inline-block;
+      margin-right: 24px;
+      height: 48px;
+      width: 48px;
+      border-bottom: none;
+      border-radius: 50%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.facebook {
+        background-color: $color-facebook;
+
+        &:hover {
+          background-color: rgba($color-facebook, .8);
+        }
+      }
+
+      &.twitter {
+        background-color: $color-twitter;
+        &:hover {
+          background-color: rgba($color-twitter, .8);
+        }
+      }
+
+      &.linkedin {
+        background-color: $color-linkedin;
+        &:hover {
+          background-color: rgba($color-linkedin, .8);
+        }
+      }
+
+      span {
+        font-size: 2rem;
+        color: $white;
+        line-height: 48px;
+      }
+    }
+  }
+}
+
+.we-container {
+  padding: calc(4rem * #{$lineHeight}) 0;
+  text-align: center;
+
+  .we-circle {
+    width: calc(2rem * #{$lineHeight});
+    height: calc(2rem * #{$lineHeight});
+    border-radius: 50%;
+    background: rgba($primary, .1);
+    display: inline-block;
+  }
+
+  .we {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: $font-h6;
+    color: $white;
+    line-height: calc(2rem * #{$lineHeight});
+    width: 2rem;
+    text-align: center;
+    position: relative;
+    top: .5px;
+    left: .5px;
+  }
+}

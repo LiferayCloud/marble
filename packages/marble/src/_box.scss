@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Box
+   ========================================================================== */
+
+.box {
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba($primary, .12);
+  color: rgba($primary, .8);
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+
+  @include anim(box-shadow);
+
+  &.show-custom-tooltip:hover {
+    box-shadow: 0 2px 8px rgba($primary, .2);
+  }
+
+  .bullet {
+    margin: 14px 0 0;
+  }
+}
+
+.box.box-img {
+  margin: 18px 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+}
+
+.box.box-label {
+  color: rgba($primary, .8);
+  margin: 0;
+  padding: 0 12px;
+  text-align: center;
+  width: auto;
+}
+
+.box.box-icon {
+  margin: 18px 8px 0 0;
+  padding: 0;
+
+  span {
+    color: $accent;
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    width: 24px;
+  }
+}
+
+.box.box-plus {
+  margin: 18px 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+}
+
+.box.box-disabled {
+  color: rgba($primary, .4);
+  margin: 18px 0 0;
+}
+
+.box.box-project {
+  margin: 18px 0 0;
+
+  span {
+    color: rgba($primary, .4);
+    display: inline-block;
+    float: left;
+    line-height: 36px;
+
+    &.icon-success {
+      color: $brand-success;
+    }
+
+    &.icon-danger {
+      color: $brand-danger;
+    }
+
+    &.icon-warning {
+      color: $brand-warning;
+    }
+  }
+
+  span.label-status {
+    color: rgba($primary, .8);
+    margin-left: 12px;
+  }
+}
+
+/* Box - Small
+   ========================================================================== */
+
+.box.box--small {
+  height: 24px;
+  line-height: 24px;
+
+  &.box--icon-label {
+    color: rgba($primary, .6);
+    margin: 12px 0 0;
+
+    span {
+      color: rgba($primary, .5);
+      margin: 0 8px 0 0;
+      position: relative;
+      top: 1px;
+
+      &.up {
+        color: $brand-success;
+      }
+
+      &.down {
+        color: $brand-danger;
+      }
+
+      &.warn {
+        color: $brand-warning;
+      }
+    }
+  }
+
+  .box-label {
+    margin: 12px 0 0;
+  }
+
+  .bullet {
+    margin: 8px 0 0;
+  }
+}
+
+/* ==========================================================================
+   Bullet Status
+   ========================================================================== */
+
+.bullet {
+  background: rgba($primary, .6);
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  height: 10px;
+  margin-right: 8px;
+  margin-top: 7px;
+  position: relative;
+  width: 10px;
+
+  &.up {
+    background: $accent;
+  }
+
+  &.down {
+    background: $brand-danger;
+  }
+
+  &.warn {
+    background: $brand-warning;
+  }
+}
+
+.project-activity .bullet,
+.project-overview .bullet {
+  background: none;
+}

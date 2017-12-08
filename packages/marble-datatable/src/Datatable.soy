@@ -1,0 +1,254 @@
+{namespace Datatable}
+
+/**
+ * @param data
+ * @param? displayColumnsType
+ * @param? elementClasses
+ * @param? tableClasses
+ */
+{template .render}
+  <div class="datatable{$elementClasses ? ' ' + $elementClasses : ''}">
+    {call .render_ data="$data"}
+      {param displayColumnsType: $displayColumnsType /}
+      {param path: 'table' /}
+      {param tableClasses: $tableClasses /}
+    {/call}
+  </div>
+{/template}
+
+/**
+ * @param path
+ * @param type
+ * @param? columns
+ */
+{template .render_}
+  {switch $type}
+    {case 'array'}
+      {if $columns}
+        {call .renderArrayOfObjects_ data="all" /}
+      {else}
+        {call .renderArray_ data="all" /}
+      {/if}
+    {case 'boolean'}
+      {call .renderBoolean_ data="all" /}
+    {case 'null'}
+      {call .renderNull_ data="all" /}
+    {case 'number'}
+      {call .renderNumber_ data="all" /}
+    {case 'object'}
+      {call .renderObject_ data="all" /}
+    {case 'string'}
+      {call .renderString_ data="all" /}
+    {case 'undefined'}
+      {call .renderUndefined_ data="all" /}
+  {/switch}
+{/template}
+
+/**
+ * @param path
+ * @param value
+ * @param? displayColumnsType
+ * @param? tableClasses
+ */
+{template .renderArray_}
+  <span class="datatable-array">
+    {call .tableLabel}
+      {param number: length($value) /}
+      {param path: $path /}
+      {param type: 'Array' /}
+    {/call}
+    <table class="{$tableClasses ? $tableClasses + '' : ''} hidden" role="grid">
+      <tbody>
+        {foreach $itemValue in $value}
+          {call .renderObjectRow_}
+            {param columns: [0] /}
+            {param displayColumnsType: $displayColumnsType /}
+            {param path: $path + '-' + index($itemValue) /}
+            {param rowIndex: index($itemValue) /}
+            {param rowLength: length($value) /}
+            {param tableClasses: $tableClasses /}
+            {param value: [$itemValue] /}
+          {/call}
+        {/foreach}
+      </tbody>
+    </table>
+  </span>
+{/template}
+
+/**
+ * @param columns
+ * @param value
+ * @param? columnsType
+ * @param? displayColumnsType
+ * @param path
+ * @param? tableClasses
+ */
+{template .renderArrayOfObjects_}
+  <span class="datatable-array-object">
+    <table class="{$tableClasses ? $tableClasses : ''}" role="grid">
+      {call .renderObjectHeaders_}
+        {param columns: $columns /}
+        {param columnsType: $columnsType /}
+        {param displayColumnsType: $displayColumnsType /}
+        {param path: $path + '-0' /}
+        {param rowLength: length($value) + 1 /}
+      {/call}
+      <tbody>
+        {foreach $itemValue in $value}
+          {call .renderObjectRow_}
+            {param columns: $columns /}
+            {param displayColumnsType: $displayColumnsType /}
+            {param path: $path + '-' + (index($itemValue) + 1) /}
+            {param rowIndex: index($itemValue) + 1 /}
+            {param rowLength: length($value) + 1 /}
+            {param tableClasses: $tableClasses /}
+            {param value: $itemValue.value /}
+          {/call}
+        {/foreach}
+      </tbody>
+    </table>
+  </span>
+{/template}
+
+/**
+ * @param value
+ */
+{template .renderBoolean_}
+  <span class="datatable-boolean">{$value}</span>
+{/template}
+
+/**
+ */
+{template .renderNull_}
+  <span class="datatable-null">null</span>
+{/template}
+
+/**
+ * @param value
+ */
+{template .renderNumber_}
+  <span class="datatable-number">{$value}</span>
+{/template}
+
+/**
+ * @param columns
+ * @param value
+ * @param? columnsType
+ * @param? displayColumnsType
+ * @param path
+ * @param? tableClasses
+ */
+{template .renderObject_}
+  <span class="datatable-object">
+    {call .tableLabel}
+      {param number: length(keys($value)) /}
+      {param path: $path /}
+      {param type: 'Object' /}
+    {/call}
+    <table class="{$tableClasses ? $tableClasses : ''} hidden" role="grid">
+      {call .renderObjectHeaders_}
+        {param columns: $columns /}
+        {param columnsType: $columnsType /}
+        {param displayColumnsType: $displayColumnsType /}
+        {param path: $path + '-0' /}
+        {param rowLength: 2 /}
+      {/call}
+      <tbody>
+        {call .renderObjectRow_}
+          {param columns: $columns /}
+          {param displayColumnsType: $displayColumnsType /}
+          {param path: $path + '-1' /}
+          {param rowIndex: 1 /}
+          {param rowLength: 2 /}
+          {param tableClasses: $tableClasses /}
+          {param value: $value /}
+        {/call}
+      </tbody>
+    </table>
+  </span>
+{/template}
+
+/**
+ * @param columns
+ * @param? columnsType
+ * @param? displayColumnsType
+ * @param path
+ * @param rowLength
+ */
+{template .renderObjectHeaders_}
+  <thead>
+    <tr data-rows="{$rowLength}">
+      {foreach $column in $columns}
+        {let $currPath: $path + '-' + index($column) /}
+        <th
+          role="columnheader"
+          scope="col"
+          ref="{$currPath}"
+          tabindex="{index($column) == 0 ? '0' : '-1'}"
+          data-cols="{length($columns)}">
+          {$column}
+          {if $displayColumnsType and $columnsType}
+            <span class="datatable-type">{$columnsType[$column]}</span>
+          {/if}
+        </th>
+      {/foreach}
+    </tr>
+  </thead>
+{/template}
+
+/**
+ * @param columns
+ * @param value
+ * @param? displayColumnsType
+ * @param path
+ * @param rowIndex
+ * @param rowLength
+ * @param? tableClasses
+ */
+{template .renderObjectRow_}
+  <tr data-rows="{$rowLength}">
+    {foreach $column in $columns}
+      {let $currPath: $path + '-' + index($column) /}
+      <td
+        role="gridcell"
+        ref="{$currPath}"
+        tabindex="{$rowIndex == 0 and index($column) == 0 ? '0' : '-1'}"
+        data-cols="{length($columns)}">
+        {call .render_ data="$value[$column]"}
+          {param displayColumnsType: $displayColumnsType /}
+          {param path: $currPath /}
+          {param tableClasses: $tableClasses /}
+        {/call}
+      </td>
+    {/foreach}
+  </tr>
+{/template}
+
+/**
+ */
+{template .renderUndefined_}
+  <span class="datatable-undefined">undefined</span>
+{/template}
+
+/**
+ */
+{template .renderString_}
+  {@param value: html}
+  <span class="datatable-string">{$value}</span>
+{/template}
+
+/**
+ * @param number
+ * @param path
+ * @param type
+ */
+{template .tableLabel}
+  <span
+    class="datatable-label collapsed"
+    data-onkeydown="handleKeydownToggle_"
+    data-onclick="handleClickToggle_"
+    ref="{$path}-label"
+    tabindex="{$path == 'table' ? 0 : -1}">
+    {$type}, {$number} items
+  </span>
+{/template}

@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Radio
+   ========================================================================== */
+
+.radio-group {
+  font-family: $font-secondary;
+  font-size: inherit;
+  font-weight: inherit;
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+
+  > * {
+    display: block;
+    line-height: 24px;
+  }
+
+  &.radio-group-inline {
+    > * {
+      display: inline-block;
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.radio-group * {
+  position: relative;
+}
+
+.radio-group * label {
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding-left: 24px;
+  top: 0;
+}
+
+.radio-group * input[type="radio"] {
+  display: none;
+}
+
+.radio-group * input[type="radio"] + label::before {
+  color: rgba($primary, .8);
+  content: "\E059";
+  font-family: "icon-16";
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  line-height: 24px;
+  position: absolute;
+  top: 0;
+
+  @include anim(all);
+}
+
+.radio-group * input[type="radio"]:checked + label::before {
+  color: $accent;
+  content: "\E058";
+}

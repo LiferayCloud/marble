@@ -1,0 +1,82 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.container-hybrid {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: 100%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 100%;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+.container,
+.container-hybrid,
+.container-fluid {
+  padding-left: $grid-margin-width;
+  padding-right: $grid-margin-width;
+}
+
+.container-hybrid-half {
+  margin: 0 auto;
+  max-width: 648px;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+}
+
+.container-hybrid-account {
+  margin: 0 auto;
+  max-width: 490px;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+}
+
+.col-flex-row-left-start {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.col-flex-row-left-center {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.col-flex-row-right-center {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.col-flex-row-spacebetween-center {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.col-flex-row-spacebetween-start {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}

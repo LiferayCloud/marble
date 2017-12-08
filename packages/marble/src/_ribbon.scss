@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Ribbon
+   ========================================================================== */
+
+.ribbon-container {
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  right: -4px;
+  top: -5px;
+  width: 85px;
+}
+
+.ribbon {
+  background-color: rgba($primary, .8);
+  box-shadow: 0 0 3px rgba($primary, .3);
+  color: $white;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+  left: -5px;
+  padding: 7px 0;
+  position: relative;
+  text-align: center;
+  top: 15px;
+  transform: rotate(45deg);
+  width: 120px;
+}
+
+.ribbon.ribbon-accent {
+  background-color: $accent;
+}
+
+.ribbon.ribbon-success {
+  background-color: $brand-success;
+}
+
+.ribbon.ribbon-warning {
+  background-color: $brand-warning;
+}
+
+.ribbon.ribbon-danger {
+  background-color: $brand-danger;
+}
+
+.ribbon::before, .ribbon::after {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid rgba($primary, .6);
+  bottom: -3px;
+  content: "";
+  position: absolute;
+}
+
+.ribbon::before {
+  left: 0;
+}
+
+.ribbon::after {
+  right: 0;
+}

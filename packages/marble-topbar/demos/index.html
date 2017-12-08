@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: Topbar</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+
+  <style>
+    h1 {
+      margin: 48px 20px 24px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    .topbar.topbar-light {
+      box-shadow: 0px 2px 8px rgba(12, 14, 26, 0.1);
+    }
+  </style>
+
+  <script src="../build/globals/marble-topbar.js"></script>
+</head>
+<body>
+  <section>
+    <h2>Choose a style</h2>
+    <ul class="radio-group radio-group-inline">
+      <li>
+        <input id="style-default" name="style" value="default" type="radio" onclick="changeStyle(this)" checked>
+        <label for="style-default">Default</label>
+      </li>
+      <li>
+        <input id="style-light" name="style" value="topbar-light" type="radio" onclick="changeStyle(this)">
+        <label for="style-light">Light</label>
+      </li>
+    </ul>
+  </section>
+
+  <h1>Topbar: Logo Text</h1>
+  <div id="logo-text"></div>
+
+  <h1>Topbar: Logo Icon</h1>
+  <div id="logo-icon"></div>
+
+  <h1>Topbar: Logo Icon + Text</h1>
+  <div id="logo-icon-text"></div>
+
+  <h1>Topbar: Logo Image</h1>
+  <div id="logo-image"></div>
+
+  <h1>Topbar: Logo Image + Text</h1>
+  <div id="logo-image-text"></div>
+
+  <script>
+    const navigation = [
+      {
+        label: 'Apps',
+        href: '/apps',
+        selected: true
+      },
+      {
+        label: 'Blog',
+        href: '/blog'
+      },
+      {
+        label: 'Docs',
+        href: '/docs'
+      },
+      {
+        label: 'Log in',
+        href: '/login',
+        type: 'button'
+      },
+    ];
+
+    // Topbars
+
+    const topbarLogoText = new metal.Topbar({
+      logo: {
+        text: 'Marble'
+      },
+      items: navigation
+    }, '#logo-text');
+
+    const topbarLogoIcon = new metal.Topbar({
+      logo: {
+        icon: 'icon-12-github'
+      },
+      items: navigation
+    }, '#logo-icon');
+
+    const topbarLogoIconText = new metal.Topbar({
+      logo: {
+        text: 'Marble',
+        icon: 'icon-12-github'
+      },
+      items: navigation
+    }, '#logo-icon-text');
+
+    const topbarLogoImage = new metal.Topbar({
+      logo: {
+        image: 'logo.svg'
+      },
+      items: navigation
+    }, '#logo-image');
+
+    const topbarLogoImageText = new metal.Topbar({
+      logo: {
+        text: 'Marble',
+        image: 'logo.svg'
+      },
+      items: navigation
+    }, '#logo-image-text');
+
+    // Styles
+
+    const topbars = [
+      topbarLogoText,
+      topbarLogoIcon, topbarLogoIconText,
+      topbarLogoImage, topbarLogoImageText
+    ];
+
+    function changeStyle(radio) {
+      if (radio.value === 'topbar-light') {
+        topbars.forEach((topbar) => {
+          topbar.style = radio.value;
+        });
+      } else {
+        topbars.forEach((topbar) => {
+          topbar.style = '';
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/forms";
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+label {
+  color: rgba($primary, .6);
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 0;
+  margin-left: 2px;
+  position: relative;
+  top: -4px;
+}
+
+.form-group {
+  margin-bottom: 36px;
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+}
+
+.form-control {
+  background: rgba($primary, .05);
+  border: 0;
+  box-shadow: none;
+  color: rgba($primary, .8);
+  font-family: $font-primary;
+  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 20px;
+
+  @include anim(background);
+
+  &:focus {
+    background: rgba($primary, .1);
+    box-shadow: none;
+  }
+
+  &[disabled],
+  &[readonly] {
+    background: rgba($primary, .2);
+    color: rgba($primary, .6);
+  }
+}
+
+.has-action-button {
+  display: block;
+  height: 60px;
+  margin-bottom: 24px;
+  position: relative;
+
+  .form-control {
+    background: rgba($primary, .05);
+    padding: 0 60px 0 20px;
+
+    &[readonly] {
+      background: rgba($primary, .2);
+    }
+
+    &:first-child {
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+
+  .btn-primary {
+    background-color: rgba($primary, .1);
+    border-radius: 4px;
+    color: rgba($primary, .6);
+    height: 36px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 36px;
+
+    [classˆ="icon-12-"], [class*="icon-12-"] {
+      display: block;
+      line-height: 36px;
+      text-align: center;
+      width: 36px;
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: rgba($primary, .2);
+      color: rgba($primary, .6);
+    }
+
+    &:active,
+    &.active {
+      &:hover,
+      &:focus,
+      &.focus {
+        background-color: rgba($primary, .2);
+        color: rgba($primary, .6);
+      }
+    }
+
+    &:hover {
+      overflow: visible;
+
+      .btn-tooltip {
+        opacity: 1;
+      }
+    }
+
+    .btn-tooltip {
+      background: $white;
+      border-radius: 4px;
+      box-shadow: 0 10px 20px rgba($primary, .1);
+      color: rgba($primary, 8);
+      font-family: $font-secondary;
+      font-size: 12px;
+      font-weight: 600;
+      height: 36px;
+      left: 50%;
+      line-height: 36px;
+      opacity: 0;
+      padding: 0 12px;
+      position: absolute;
+      top: calc(100% + 6px);
+      transform: translateX(-50%);
+      z-index: 9999;
+
+      @include anim(opacity);
+    }
+  }
+}
+
+.form-control-borderless {
+  border: 0;
+  color: rgba($primary, .8);
+  font-size: 16px;
+  outline: 0;
+}
+
+.help-block {
+  color: rgba($secondary, .4);
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 0;
+  margin-left: 2px;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: opacity .333s, visibility .333s, transform .333s;
+  visibility: hidden;
+}
+
+.has-success,
+.has-warning,
+.has-error {
+  .help-block {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.has-success,
+.has-warning,
+.has-error {
+  .form-control,
+  .form-control:focus {
+    box-shadow: none;
+  }
+}
+
+.has-success {
+  .form-control {
+    background: rgba($brand-success, .1);
+  }
+
+  .help-block .primary {
+    color: $state-success-text;
+  }
+}
+
+.has-warning {
+  .form-control {
+    background: rgba($brand-warning, .1);
+  }
+
+  .help-block .primary {
+    color: $state-warning-text;
+  }
+}
+
+.has-error {
+  .form-control {
+    background: rgba($brand-danger, .1);
+  }
+
+  .help-block .primary {
+    color: $state-danger-text;
+  }
+}
+
+.input-inverse-accent {
+  background: $input-inverse-bg;
+  border-color: $input-inverse-border;
+  color: $input-inverse-color;
+
+  @include placeholder($input-inverse-color-placeholder);
+
+  &:focus {
+    border-color: $input-inverse-border-focus;
+  }
+}
+
+input[type="file"] {
+  font-family: $font-primary;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 10px;
+  padding: 22px 20px;
+  vertical-align: middle;
+}

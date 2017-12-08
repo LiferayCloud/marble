@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Content Header
+   ========================================================================== */
+
+.content-header {
+  min-height: 48px;
+  padding: 24px 0 36px;
+
+  @media (max-width: $screen-md-min) {
+    padding: 24px 0;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .header-title {
+    color: rgba($primary, .9);
+    display: block;
+    font-family: $font-primary;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 2px;
+
+    @include anim(color);
+
+    @extend .truncate;
+
+    span {
+      color: rgba($primary, .4);
+
+      @include anim(color);
+    }
+
+    @media (max-width: $screen-md-min) {
+      font-size: 23px;
+      line-height: 36px;
+      text-align: left;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      font-size: 19px;
+      line-height: 36px;
+      text-align: left;
+    }
+  }
+
+  a.header-title:hover {
+    color: $accent;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  .btn-install {
+    font-family: $font-primary;
+    font-size: 13px;
+    font-weight: 700;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 12px;
+
+    span {
+      display: inline-block;
+      float: left;
+      line-height: 48px;
+      margin-right: 12px;
+      position: relative;
+      top: 0;
+
+      @media (max-width: $screen-md-min) {
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+
+    @media (max-width: $screen-md-min) {
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+
+  .nav-container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    &.nav-container-end {
+      justify-content: flex-end;
+
+      .avatar-status {
+        margin-left: 8px;
+
+        @media (max-width: $screen-md-min) {
+          margin-left: 0;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .service-health {
+      cursor: pointer;
+    }
+
+    .avatar-status {
+      background: rgba($primary, .05);
+      display: inline-block;
+      height: 48px;
+      text-align: center;
+      width: 48px;
+
+      @media (max-width: $screen-sm-min) {
+        height: 36px;
+        width: 36px;
+      }
+
+      [class^="icon-16-"],
+      [class*="icon-16-"] {
+        line-height: 48px;
+      }
+
+      [class^="icon-12-"],
+      [class*="icon-12-"] {
+        line-height: 36px;
+      }
+
+      &.up {
+        background: rgba($brand-success, .1);
+        color: $brand-success;
+      }
+
+      &.down {
+        background: rgba($brand-danger, .1);
+        color: $brand-danger;
+      }
+
+      &.warn {
+        background: rgba($brand-warning, .1);
+        color: $brand-warning;
+      }
+
+      &.unknown,
+      &.loading {
+        background: rgba($primary, .1);
+        color: rgba($primary, .8);
+      }
+    }
+  }
+
+  .dropdown.dropdown-last {
+    display: inline-block;
+    margin-left: 8px;
+
+    .dropdown-menu {
+      margin: 0 0 0 -120px;
+    }
+  }
+
+  .btn.btn-default.btn-icon,
+  .dropdown.dropdown-last .btn-icon {
+    background: rgba($primary, .05);
+    border-radius: 4px;
+    display: inline-block;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 48px;
+
+    @include anim(all);
+
+    &:hover {
+      background: rgba($accent, .1);
+      color: $accent;
+    }
+
+    span {
+      display: block;
+      left: 1px;
+      line-height: 48px;
+      margin: 0;
+      top: 1px;
+    }
+  }
+
+  .dropdown .btn.btn-default {
+    border-radius: 4px;
+    font-family: $font-primary;
+    font-size: 13px;
+    font-weight: 700;
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+    padding: 0 32px 0 12px;
+    position: relative;
+    text-align: left;
+
+    [class^="icon-12-"],
+    [class*="icon-12-"] {
+      line-height: 46px;
+      position: absolute;
+      right: 12px;
+    }
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      margin: 0;
+      padding: 12px 0;
+
+      li,
+      li:first-child,
+      li:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.create-project .content-header .header-title {
+  @media (max-width: $screen-md-min) {
+    font-size: 23px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    font-size: 19px;
+    line-height: 48px;
+    text-align: center;
+  }
+}

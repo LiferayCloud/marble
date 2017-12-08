@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+.list .listitem {
+  border: none;
+  list-style: none;
+  margin: 0;
+  padding: 35px 12px;
+  width: 100%;
+
+  @include anim(background);
+}
+
+.list .listitem:last-child {
+  border-bottom: 0;
+}
+
+.list .list-main-content {
+  margin-left: 20px;
+}
+
+.list .list-text-primary {
+  color: rgba($primary, .8);
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+  top: 2px;
+}
+
+.list .list-text-secondary {
+  color: rgba($primary, .4);
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  top: 4px;
+}
+
+.list .list-label {
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.list .btn-icon {
+  margin-left: 40px;
+}
+
+.list > ul {
+  padding: 0;
+}
+
+.list .avatar-initials {
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+  width: 48px;
+}
+
+.list .avatar-photo img {
+  height: 48px;
+  width: 48px;
+}
+
+/* List v2.0
+   ========================================================================== */
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.list.list--inline {
+  display: flex !important; /* stylelint-disable-line declaration-no-important */
+
+  @extends .flex-container--row-left-center;
+}
+
+.list.list--inline .list__item {
+  display: inline-flex;
+  flex: 0 1 auto;
+  margin-right: 10px;
+}
+
+.list--children {
+  width: 100%;
+}
+
+.list.list--numeric {
+  color: rgba($primary, .8);
+  margin: 0;
+  padding: 0 0 0 40px;
+}
+
+.list.list--numeric li {
+  counter-increment: list;
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 24px;
+  list-style-type: none;
+  margin: 0 0 0 40px;
+  padding: 0;
+  position: relative;
+}
+
+.list.list--numeric li::after {
+  color: rgba($primary, .4);
+  content: counter(list) ".";
+  left: -68px;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 40px;
+}

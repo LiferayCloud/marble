@@ -1,0 +1,124 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/labels";
+@import "variables";
+
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+
+.label {
+  border-radius: 4px;
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  padding: 0 12px;
+  position: relative;
+
+  &.label-sm {
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 12px;
+  }
+}
+
+/* Colors
+   ========================================================================== */
+
+.label-accent {
+  background: $accent;
+  color: $white;
+}
+
+.label-inverse-accent {
+  background: rgba($accent, .1);
+  color: $accent;
+}
+
+.label-default {
+  background: rgba($primary, .1);
+  color: rgba($primary, .8);
+}
+
+.label-danger {
+  background: rgba($brand-danger, .2);
+  color: $brand-danger;
+}
+
+.label-primary {
+  background: rgba($primary, .8);
+  color: $white;
+}
+
+.label-success {
+  background: rgba($brand-success, .2);
+  color: $brand-success;
+}
+
+.label-warning {
+  background: rgba($brand-warning, .2);
+  color: $brand-warning;
+}
+
+/* Text
+   ========================================================================== */
+
+.label-text {
+  font-weight: 400;
+}
+
+/* Icon
+   ========================================================================== */
+
+.label .label-icon {
+  color: inherit;
+  margin-right: 6px;
+  position: relative;
+  top: 2px;
+}
+
+/* Clickable
+   ========================================================================== */
+
+.label-clickable {
+  display: inline;
+  overflow: hidden;
+  position: relative;
+
+  .label-action {
+    left: 50%;
+    position: absolute;
+    top: -100%;
+    transform: translateX(-50%);
+
+    @include anim(top, .2s);
+  }
+
+  .label-icon {
+    position: relative;
+
+    @include anim(top, .2s);
+  }
+
+  .label-content {
+    position: relative;
+    top: 0;
+
+    @include anim(top, .2s);
+  }
+
+  &:hover {
+    .label-action {
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .label-icon {
+      top: 26px;
+    }
+
+    .label-content {
+      top: 26px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin anim($property, $duration: $transition-duration, $function: $transition-function) {
+  transition: $property $duration $function;
+}
+
+@mixin selection {
+  &::selection {
+    background: rgba($primary, .1);
+  }
+}

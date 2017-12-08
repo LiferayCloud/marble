@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Topbar should generate the default markup 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/"></a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render a list of navigation items 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/"></a>
+  </div>
+  <nav class="topbar-menu">
+    <button class="topbar-toggle">Menu</button>
+    <ul class="topbar-list">
+      <li class="topbar-item">
+        <a class="topbar-link topbar-link-selected" href="/apps">
+          <span>Apps</span>
+        </a>
+      </li>
+      <li class="topbar-item">
+        <a class="topbar-link " href="/blog" target="_blank">
+          <span>Blog</span>
+        </a>
+      </li>
+      <li class="topbar-item">
+        <a class="btn btn-accent" href="/login">Login</a>
+      </li>
+    </ul>
+  </nav>
+</nav>
+`;
+
+exports[`Topbar should render a logo with href 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="#"></a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render a logo with icon 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/">
+      <span class="topbar-logo-icon icon-12-github"></span>
+    </a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render a logo with icon and text 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/">
+      <span class="topbar-logo-icon icon-12-github"></span>
+      <h3 class="topbar-logo-text">Marble</h3>
+    </a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render a logo with image 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/">
+      <img class="topbar-logo-image" src="logo.svg">
+    </a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render a logo with image and text 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/">
+      <img class="topbar-logo-image" src="logo.svg">
+      <h3 class="topbar-logo-text">Marble</h3>
+    </a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render a logo with text 1`] = `
+<nav class="topbar">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/">
+      <h3 class="topbar-logo-text">Marble</h3>
+    </a>
+  </div>
+</nav>
+`;
+
+exports[`Topbar should render with an additional class 1`] = `
+<nav class="topbar topbar-light">
+  <div class="topbar-logo">
+    <a class="topbar-logo-link" href="/"></a>
+  </div>
+</nav>
+`;

@@ -1,0 +1,130 @@
+{namespace InputMatrix}
+
+/**
+ * This renders the component's whole content.
+ * @param? currentFields_
+ * @param? elementClasses
+ * @param fieldsConfig
+ * @param? handleInput_
+ */
+{template .render}
+  {@param? closeButtonHtml: html|string}
+
+  <div class="input-matrix {$elementClasses ?: ''}">
+    <div class="input-matrix-labels">
+      {foreach $config in $fieldsConfig}
+        <label class="input-matrix-label">{$config.label ?: ''}</label>
+      {/foreach}
+    </div>
+
+    {let $fieldObjs: $currentFields_ ? $currentFields_ : [[]] /}
+
+    {let $shouldAddRow kind="text"}
+      {call .shouldAddRow}
+        {param currentFields_: $fieldObjs[length($fieldObjs) - 1] ?: [] /}
+        {param fieldsConfig: $fieldsConfig /}
+      {/call}
+    {/let}
+
+    {foreach $rowFields in $fieldObjs}
+      {call .row}
+        {param closeButtonHtml : $closeButtonHtml /}
+        {param fieldsConfig : $fieldsConfig /}
+        {param last: (not $shouldAddRow) and index($rowFields) == (length($fieldObjs) - 1) /}
+        {param rowFields: $rowFields /}
+        {param rowIndex: index($rowFields) /}
+        {param handleInput_: $handleInput_ /}
+      {/call}
+    {/foreach}
+
+    {if $shouldAddRow != ''}
+      {call .row}
+        {param closeButtonHtml : $closeButtonHtml /}
+        {param fieldsConfig : $fieldsConfig /}
+        {param last: true /}
+        {param rowFields: [] /}
+        {param rowIndex: length($fieldObjs) /}
+        {param handleInput_: $handleInput_ /}
+      {/call}
+    {/if}
+  </div>
+{/template}
+
+/**
+ * @param closeButtonHtml
+ * @param fieldsConfig
+ * @param last
+ * @param rowIndex
+ * @param? handleInput_
+ * @param? rowFields
+ */
+{template .row}
+  <div class="input-matrix-fields" data-row="{$rowIndex}">
+    <div class="input-matrix-fields-left">
+      {foreach $config in $fieldsConfig}
+        {let $index: index($config) /}
+        {call .field data="$config"}
+          {param field: $rowFields ? $rowFields[$index] : null /}
+          {param fieldIndex: $index /}
+          {param rowIndex: $rowIndex /}
+          {param handleInput_: $handleInput_ /}
+        {/call}
+      {/foreach}
+    </div>
+    <div class="input-matrix-fields-right">
+      {if not $last}
+        <button
+          type="button"
+          class="close"
+          data-onclick="handleRemoveClick_"
+          data-row-index="{$rowIndex}"
+          aria-label="Remove"
+          tabindex="-1">
+          {if $closeButtonHtml}
+            {$closeButtonHtml}
+          {else}
+            <span aria-hidden="true">×</span>
+          {/if}
+        </button>
+      {/if}
+    </div>
+  </div>
+{/template}
+
+/**
+ * @param? field
+ * @param? handleInput_
+ * @param? isArray
+ * @param? name
+ * @param? rowIndex
+ */
+{template .field}
+  {let $hasError: $field and $field.error and $field.error != '' /}
+  <div class="form-group {$hasError ? 'has-error' : ''}">
+    {let $nameSuffix: $isArray ? '[]' : ($rowIndex + 1) /}
+
+    {call Input.render data="all"}
+      {param classes: 'form-control input-matrix-field' /}
+      {param onInput: $handleInput_ /}
+      {param name: isNonnull($name) ? ($name + $nameSuffix) : '' /}
+      {param value: $field and $field.value ? $field.value : '' /}
+    {/call}
+
+    <p class="help-block">{$field and $field.error ? $field.error : ''}</p>
+
+  </div>
+{/template}
+
+/**
+ * @param currentFields_
+ * @param fieldsConfig
+ */
+{template .shouldAddRow kind="text"}
+  {foreach $config in $fieldsConfig}
+    {let $index: index($config) /}
+    {let $hasValue: isNonnull($currentFields_[$index]) and isNonnull($currentFields_[$index].value) and $currentFields_[$index].value != '' /}
+    {if (not $config.disableDuplication) and $hasValue}
+      true
+    {/if}
+  {/foreach}
+{/template}

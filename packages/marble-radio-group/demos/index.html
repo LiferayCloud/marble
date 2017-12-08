@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: RadioGroup</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+
+  <script src="../build/globals/marble-radio-group.js"></script>
+</head>
+<body class="container">
+  <h1>Radio Group</h1>
+  <div id="radio-group"></div>
+
+  <h1>Radio Group Inline</h1>
+  <div id="radio-group-inline"></div>
+
+  <script>
+    new metal.RadioGroup({
+      name: 'radio-group-1',
+      items: [
+        {
+          id: 'radio-1-1',
+          checked: true,
+          label: 'Option 1',
+          value: 'Radio 1',
+        },
+        {
+          id: 'radio-1-2',
+          label: 'Option 2',
+          value: 'Radio 2',
+        },
+        {
+          id: 'radio-1-3',
+          label: 'Option 3',
+          value: 'Radio 3',
+        },
+      ]
+    }, '#radio-group');
+
+    new metal.RadioGroup({
+      name: 'radio-group-2',
+      style: 'radio-group radio-group-inline',
+      items: [
+        {
+          id: 'radio-2-1',
+          label: 'Option 1',
+          value: 'Radio 1',
+        },
+        {
+          id: 'radio-2-2',
+          checked: true,
+          label: 'Option 2',
+          value: 'Radio 2',
+        },
+        {
+          id: 'radio-2-3',
+          label: 'Option 3',
+          value: 'Radio 3',
+        },
+      ]
+    }, '#radio-group-inline');
+  </script>
+</body>
+</html>

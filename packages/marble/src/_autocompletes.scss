@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Autocomplete
+   ========================================================================== */
+
+.autocomplete {
+  background: $white;
+  border: 1px transparent;
+  border-radius: 4px;
+  margin-top: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: $zindex-modal;
+
+  @include box-shadow(0 2px 8px rgba(0, 0, 0, .1));
+
+  .list {
+    padding-bottom: 12px;
+    padding-top: 12px;
+
+    .listitem {
+      cursor: pointer;
+    }
+
+    .listitem:hover {
+      background-color: rgba($accent, .1);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.autocomplete-topbar.autocomplete-bottom {
+  border-radius: 0 0 4px 4px;
+  margin-top: 22px;
+}
+
+.autocomplete-topbar {
+  .list {
+    padding: 0;
+  }
+
+  .list-main-content {
+    margin: 0;
+  }
+
+  .list-text-primary {
+    margin: 0;
+  }
+
+  .listitem {
+    border: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .listitem-link {
+    display: block;
+    padding: 23px 20px 32px;
+
+    @include anim(background);
+
+    &:hover {
+      background: rgba($accent, .1);
+    }
+  }
+
+  .listitem-title {
+    color: $primary;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .listitem-description {
+    color: $primary;
+  }
+
+  em {
+    background: rgba($accent, .2);
+    color: $accent;
+    font-style: normal;
+  }
+}

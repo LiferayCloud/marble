@@ -1,0 +1,39 @@
+@import "templates/root/core";
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table {
+  border-collapse: collapse;
+  margin-bottom: calc(1rem * #{$lineHeight});
+  width: 100%;
+
+  * {
+    border-width: 0 !important; /* stylelint-disable-line declaration-no-important */
+  }
+}
+
+table thead tr {
+  background: rgba($primary, .05);
+}
+
+table tbody tr {
+  &:nth-child(odd) {
+    background: rgba($primary, .02);
+  }
+
+  &:nth-child(even) {
+    background: rgba($primary, .05);
+  }
+}
+
+table tr th,
+table tr td {
+  border-width: 0;
+  font-size: $font-small;
+  height: calc(2rem * #{$lineHeight});
+  line-height: calc(1rem * #{$lineHeight});
+  padding: calc(.5rem * #{$lineHeight}) calc(1rem * #{$lineHeight});
+  vertical-align: top;
+}

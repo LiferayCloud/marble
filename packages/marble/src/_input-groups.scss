@@ -1,0 +1,144 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+
+/* ==========================================================================
+   Input Groups
+   ========================================================================== */
+
+.input-group-addon {
+  background: rgba($primary, .2);
+  border: 0;
+  color: rgba($primary, .6);
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color .333s, background .333s;
+  white-space: nowrap;
+}
+
+.has-success {
+  .input-group-addon {
+    background: rgba($brand-success, .2);
+  }
+}
+
+.has-warning {
+  .input-group-addon {
+    background: rgba($brand-warning, .2);
+  }
+}
+
+.has-error {
+  .input-group-addon {
+    background: rgba($brand-danger, .2);
+  }
+}
+
+.input-group-addon.disabled {
+  background: rgba($primary, .3);
+}
+
+/* Inner Addon
+   ========================================================================== */
+
+.input-inner-addon {
+  position: relative;
+}
+
+.input-inner-addon [class^="icon-12-"],
+.input-inner-addon [class*="icon-12-"],
+.input-inner-addon [class^="icon-16-"],
+.input-inner-addon [class*="icon-16-"] {
+  color: rgba($primary, .3);
+  position: absolute;
+
+  @include anim(color);
+}
+
+.input-inner-addon-left [class^="icon-12-"],
+.input-inner-addon-left [class*="icon-12-"],
+.input-inner-addon-left [class^="icon-16-"],
+.input-inner-addon-left [class*="icon-16-"] {
+  right: 20px;
+}
+
+.input-inner-addon-left .form-control {
+  padding-right: 50px;
+}
+
+.input-inner-addon-right [class^="icon-12-"],
+.input-inner-addon-right [class*="icon-12-"],
+.input-inner-addon-right [class^="icon-16-"],
+.input-inner-addon-right [class*="icon-16-"] {
+  left: 20px;
+}
+
+.input-inner-addon-right .form-control {
+  padding-left: 50px;
+}
+
+.input-inner-addon [class^="icon-12-"],
+.input-inner-addon [class*="icon-12-"] {
+  top: 26px;
+}
+
+.input-inner-addon [class^="icon-16-"],
+.input-inner-addon [class*="icon-16-"] {
+  top: 20px;
+}
+
+.input-inner-icon-helper {
+  z-index: 999;
+}
+
+.input-inner-icon-helper:hover,
+.input-inner-icon-helper:hover,
+.input-inner-icon-helper:hover,
+.input-inner-icon-helper:hover {
+  color: rgba($primary, .6);
+}
+
+/* Button Addon
+   ========================================================================== */
+
+.input-group-btn {
+  z-index: 3;
+}
+
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group {
+  margin-right: 0;
+}
+
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  margin-left: 0;
+}
+
+.input-btn-right,
+.input-group-addon-input-left {
+  border-radius: 4px 0 0 4px !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.input-btn-left,
+.input-group-addon-input-right {
+  border-radius: 0 4px 4px 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.input-group-addon-input-center {
+  border-radius: 0;
+}
+
+/* Button Addon but separated
+   ========================================================================== */
+
+.form-group .input-group .form-control.input-btn-separated {
+  border-radius: 4px;
+  width: calc(100% - 8px);
+}
+
+.input-group-btn.input-group-btn-separated:last-child > .btn {
+  border-radius: 4px;
+}

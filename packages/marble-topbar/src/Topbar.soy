@@ -1,0 +1,90 @@
+{namespace Topbar}
+
+/**
+ * @param items
+ * @param? logo
+ * @param? style
+ */
+{template .render}
+  {let $styleClasses: $style ? 'topbar ' + $style : 'topbar' /}
+
+  <nav class="{$styleClasses}">
+    {call .logo}
+      {param logo: $logo /}
+    {/call}
+
+    {call .menu}
+      {param items: $items /}
+    {/call}
+  </nav>
+{/template}
+
+/**
+ * @param? logo
+ */
+{template .logo}
+  <div class="topbar-logo">
+    {let $href: $logo and $logo.href ? $logo.href : '/' /}
+
+    <a class="topbar-logo-link" href="{$href}">
+      {if $logo and $logo.icon}
+        <span class="topbar-logo-icon {$logo.icon}"></span>
+      {/if}
+
+      {if $logo and $logo.image}
+        <img class="topbar-logo-image" src="{$logo.image}">
+      {/if}
+
+      {if $logo and $logo.text}
+        <h3 class="topbar-logo-text">{$logo.text}</h3>
+      {/if}
+    </a>
+  </div>
+{/template}
+
+/**
+ * @param items
+ */
+{template .menu}
+  {if length($items)}
+    <nav class="topbar-menu">
+      <button class="topbar-toggle">Menu</button>
+      <ul class="topbar-list">
+        {foreach $item in $items}
+          {let $localVariant: $item.variant ?: 'default' /}
+
+          {delcall Topbar.item variant="$localVariant"}
+            {param href: $item.href /}
+            {param label: $item.label /}
+            {param target: $item.target /}
+            {param type: $item.type /}
+            {param selected: $item.selected /}
+          {/delcall}
+        {/foreach}
+      </ul>
+    </nav>
+  {/if}
+{/template}
+
+/**
+ * @param href
+ * @param label
+ * @param target
+ * @param type
+ * @param? selected
+ */
+{deltemplate Topbar.item variant="'default'"}
+  {let $selectedClass: $selected ? 'topbar-link-selected' : '' /}
+
+  <li class="topbar-item">
+    {if $type == 'button'}
+      <a class="btn btn-accent" href="{$href}" target="{$target}">
+        {$label}
+      </a>
+    {else}
+      <a class="topbar-link {$selectedClass}" href="{$href}" target="{$target}">
+        <span>{$label}</span>
+      </a>
+    {/if}
+  </li>
+{/deltemplate}

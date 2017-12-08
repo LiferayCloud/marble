@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: CheckboxGroup</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+
+  <script src="../build/globals/marble-checkbox-group.js"></script>
+</head>
+<body class="container">
+  <h1>Checkbox Group</h1>
+  <div id="checkbox-group"></div>
+
+  <h1>Checkbox Group Inline</h1>
+  <div id="checkbox-group-inline"></div>
+
+  <h1>Checkbox Group Indeterminate</h1>
+  <div id="checkbox-group-indeterminate"></div>
+
+  <script>
+    new metal.CheckboxGroup({
+      name: 'checkbox-group-1',
+      items: [
+        {
+          id: 'checkbox-1-1',
+          checked: true,
+          label: 'Option 1',
+          value: 'Checkbox 1',
+        },
+        {
+          id: 'checkbox-1-2',
+          label: 'Option 2',
+          value: 'Checkbox 2',
+        },
+        {
+          id: 'checkbox-1-3',
+          label: 'Option 3',
+          value: 'Checkbox 3',
+        },
+      ]
+    }, '#checkbox-group');
+
+    // Inline
+
+    new metal.CheckboxGroup({
+      name: 'checkbox-group-2',
+      style: 'checkbox-group checkbox-group-inline',
+      items: [
+        {
+          id: 'checkbox-2-1',
+          label: 'Option 1',
+          value: 'Checkbox 1',
+        },
+        {
+          id: 'checkbox-2-2',
+          checked: true,
+          label: 'Option 2',
+          value: 'Checkbox 2',
+        },
+        {
+          id: 'checkbox-2-3',
+          label: 'Option 3',
+          value: 'Checkbox 3',
+        },
+      ]
+    }, '#checkbox-group-inline');
+
+    // Indeterminate
+
+    new metal.CheckboxGroup({
+      name: 'checkbox-group-1',
+      items: [
+        {
+          id: 'checkbox-3-1',
+          checked: true,
+          label: 'Option 1',
+          value: 'Checkbox 1',
+        }
+      ]
+    }, '#checkbox-group-indeterminate');
+
+    const checkbox = document.getElementById('checkbox-3-1');
+    checkbox.indeterminate = true;
+    </script>
+  </script>
+</body>
+</html>

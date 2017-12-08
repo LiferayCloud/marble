@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: Tooltip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../build/marble.css">
+  <link rel="stylesheet" href="../build/templates/root.css">
+  <link rel="stylesheet" href="../build/templates/docs.css">
+  <link rel="stylesheet" href="../build/fonts/galano/galano.css">
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700,400,300">
+
+  <style>
+  .tooltip.tooltip-dark,
+  .tooltip.tooltip-light {
+    position: relative !important;
+    margin-bottom: 24px;
+  }
+
+  form label {
+    left: 0;
+    top: 0;
+    margin-right: 24px;
+    cursor: pointer;
+  }
+
+  form label input[type="radio"] {
+    margin: 0 12px 0 0;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="container-hybrid-half">
+
+    <div class="content-header">
+      <h1 class="header-title">Tooltip</h1>
+    </div>
+
+    <div class="content-body">
+        <section>
+          <h2 class="content-body-subtitle">Choose your theme</h2>
+          <form name="myForm">
+            <label><input type="radio" name="myRadios" value="dark" checked onclick="changeTheme(this)" />dark</label>
+            <label><input type="radio" name="myRadios" value="light" onclick="changeTheme(this)" />light</label>
+          </form>
+        </section>
+
+        <section>
+          <h2 class="content-body-title">Regular</h2>
+          <div class="tooltip tooltip-dark" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">
+
+              <div class="tooltip-title">
+                Storage
+              </div>
+
+              <div class="tooltip-description">
+                Total storage for the realtime database.<br/>
+                This does not include hosting or other features.
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="content-body-title">Larger Width Size</h2>
+          <div class="tooltip tooltip-dark" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">
+              <div class="tooltip-title">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              </div>
+
+              <div class="tooltip-description">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="content-body-title">Only Title</h2>
+          <div class="tooltip tooltip-dark" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">
+              <div class="tooltip-title">
+                Only Title
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="content-body-title">Only Description</h2>
+          <div class="tooltip tooltip-dark" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">
+              <div class="tooltip-description">
+                Only Description
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="content-body-title">With Links</h2>
+          <div class="tooltip tooltip-dark" role="tooltip">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">
+              <div class="tooltip-description">
+                To make a project accessible via one or more non-WeDeploy domain names, you must update your domain's DNS records. <a href="javascript:;">Read the docs</a> for more information.
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+
+    var tooltips = document.querySelectorAll('.tooltip');
+    setTimeout(function() {
+      tooltips.forEach(function(tooltip) {
+        tooltip.classList.add('showing');
+      });
+    }, 50);
+
+    function changeTheme(item) {
+      if(item.value === "light") {
+        tooltips.forEach(function(tooltip) {
+          tooltip.classList.add('tooltip-light');
+          tooltip.classList.remove('tooltip-dark');
+        });
+      } else {
+        tooltips.forEach(function(tooltip) {
+          tooltip.classList.add('tooltip-dark');
+          tooltip.classList.remove('tooltip-light');
+        });
+      }
+    }
+
+  </script>
+</body>
+</html>

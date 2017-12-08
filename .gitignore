@@ -1,2 +1,5 @@
 .sass-cache
+coverage
+lib
 node_modules
+*.log

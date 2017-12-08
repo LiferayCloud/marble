@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Content Footer
+   ========================================================================== */
+
+.content-footer {
+  color: rgba($primary, .6);
+  line-height: 24px;
+  margin-bottom: 24px;
+  margin-top: -12px;
+  text-align: center;
+}
+
+.content-footer .content-footer__link {
+  color: $accent;
+  font-family: $font-primary;
+  font-size: 13px;
+  font-weight: 600;
+}

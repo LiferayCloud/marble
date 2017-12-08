@@ -1,39 +1,37 @@
-# Marble
+# Marble [![Build Status](https://travis-ci.org/wedeploy/marble.svg?branch=master)](https://travis-ci.org/wedeploy/marble)
 
-> A set of UI components behind [Electric](https://electricjs.com/) and [WeDeploy](https://wedeploy.com/).
->
-> It is built with HTML, Sass, and Javascript with [Bootstrap](http://getbootstrap.com/) as a foundation.
+> A set of UI components behind [Electric](https://electricjs.com) and [WeDeploy](https://wedeploy.com).
 
-## Install
+## Setup
 
-You can get it on npm.
+1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
 
-```
-npm install marble --save
-```
+2. Install global dependencies:
 
-Or if you're not into package management, just [download a ZIP](https://github.com/wedeploy/marble/archive/master.zip) file.
+  ```
+  [sudo] npm install -g yarn
+  ```
 
-## Development
+3. Install project dependencies:
 
-1. Install local dependencies:
+  ```
+  yarn install
+  ```
 
-	```sh
-	npm install
-	```
+4. Install dependencies for each package and link them together:
 
-2. Compile scripts and styles:
+  ```
+  npm start
+  ```
 
-	```sh
-	npm start
-	```
+5. Run tests for all packages:
 
-3. Watch for file changes:
+  ```
+  npm test
+  ```
 
-	```sh
-	npm run watch
-	```
+6. Publish packages:
 
-## License
-
-[BSD License](https://github.com/wedeploy/marble/blob/master/LICENSE.md) © Liferay, Inc.
+  ```
+  npm run publish
+  ```

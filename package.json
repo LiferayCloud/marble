@@ -1,17 +1,11 @@
 {
-  "name": "marble",
-  "description": "WeDeploy's style guide and UI components",
-  "version": "2.12.2",
-  "repository": "wedeploy/marble",
-  "homepage": "marblecss.com",
-  "main": "index.js",
-	"license": "BSD",
-	"scripts": {
-		"test": "stylelint src/*.scss --syntax scss"
-	},
-  "dependencies": {
-    "bootstrap-sass": "^3.3.6",
-    "mathsass": "^0.9.5"
+  "private": true,
+  "scripts": {
+    "start": "lerna bootstrap -- --no-optional --no-package-lock",
+    "publish": "lerna publish",
+    "test": "lerna run soy && jest",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier-eslint packages/marble-*/src/*.js packages/marble-*/src/**/*.js"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -23,7 +17,17 @@
     "gulp-sass": "^2.3.1",
     "postcss-scss": "^1.0.2",
     "stylelint": "^8.0.0",
-    "stylelint-config-dev": "^2.0.0"
+    "stylelint-config-dev": "^2.0.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-metal": "^4.0.0",
+    "eslint": "^4.11.0",
+    "eslint-config-liferay": "^2.0.10",
+    "jest": "^21.2.1",
+    "lerna": "^2.5.1",
+    "metal-jest-serializer": "^1.0.1",
+    "prettier-eslint-cli": "^4.4.0",
+    "regenerator-runtime": "^0.11.0",
+    "sinon": "^4.1.2"
   },
   "scripts": {
     "build": "node_modules/.bin/gulp",
@@ -45,5 +49,20 @@
   ],
   "stylelint": {
     "extends": "stylelint-config-dev"
-  }
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/*.js"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>.*(node_modules)(?!.*marble.*).*$"
+    ],
+    "snapshotSerializers": [
+      "metal-jest-serializer"
+    ],
+    "resolver": "./jest-marble-lerna-resolver"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

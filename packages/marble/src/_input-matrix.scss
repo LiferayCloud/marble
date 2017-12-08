@@ -1,0 +1,135 @@
+/* ==========================================================================
+   Input Matrix
+   ========================================================================== */
+
+.form-control.input-matrix-field {
+  padding: 0 48px 0 20px;
+}
+
+.form-group {
+  margin-bottom: 0;
+
+  .help-block {
+    color: $brand-danger;
+    font-weight: 600;
+    margin: 0 2px;
+    min-height: 24px;
+    padding: 0;
+  }
+}
+
+.input-matrix .input-matrix-fields {
+  position: relative;
+
+  @extend .col-flex-row-left-start;
+}
+
+.input-matrix .input-matrix-fields .input-matrix-fields-left {
+  flex-grow: 1;
+  left: 0;
+  position: relative;
+  width: 100%;
+}
+
+.input-matrix .input-matrix-fields .input-matrix-fields-right {
+  flex-shrink: 0;
+  height: 60px;
+  margin: 0 0 0 12px;
+  position: relative;
+  width: 60px;
+
+  .close {
+    background: rgba($primary, .05);
+    border-radius: 4px;
+    color: rgba($primary, .4);
+    height: 60px;
+    opacity: 1;
+    outline: 0;
+    text-align: center;
+    transition: color .333s, background .333s;
+    width: 20px;
+    width: 60px;
+
+    &:hover {
+      background: rgba($brand-danger, .1);
+      color: $brand-danger;
+    }
+
+    > [class*="icon-16-"] {
+      left: .5px;
+      position: relative;
+      top: 1.5px;
+    }
+  }
+}
+
+/* Inline
+   ========================================================================== */
+
+.input-matrix.input-matrix--inline .input-matrix-labels {
+  width: calc(100% - 72px);
+
+  @media (max-width: $screen-md-min) {
+    display: none;
+  }
+
+  .input-matrix-label {
+    margin-right: 12px;
+    width: calc(50% - 8px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.input-matrix.input-matrix--inline .input-matrix-fields {
+  margin-bottom: 12px;
+}
+
+.input-matrix.input-matrix--inline .input-matrix-fields-left {
+  @extend .col-flex-row-left-center;
+
+  @media (max-width: $screen-md-min) {
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-right: 12px;
+    width: 50%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: $screen-md-min) {
+      margin-bottom: 12px;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+.input-matrix.input-matrix--inline .has-action-button {
+  margin-bottom: 0;
+}
+
+/* No Validation
+   ========================================================================== */
+
+.input-matrix .input-matrix-fields {
+  margin-bottom: 12px;
+}
+
+.input-matrix .input-matrix-fields .help-block {
+  display: none;
+}
+
+.input-matrix.has-validation .input-matrix-fields {
+  margin-bottom: 0;
+}
+
+.input-matrix.has-validation .input-matrix-fields .help-block {
+  display: block;
+}

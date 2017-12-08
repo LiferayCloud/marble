@@ -1,0 +1,59 @@
+{namespace Select}
+
+/**
+ * @param? arrowClass
+ * @param? disabled
+ * @param? buttonClass
+ * @param? elementClasses
+ * @param? expanded_
+ * @param? handleDropdownStateSynced_
+ * @param? handleItemClick_
+ * @param? handleItemKeyDown_
+ * @param? hiddenInputName
+ * @param items
+ * @param? values
+ * @param? selectedIndex
+ */
+{template .render}
+  {@param? label: html|string}
+  <div class="select{$elementClasses ? ' ' + $elementClasses : ''}" data-onkeydown="handleKeyDown_">
+    {let $currSelectedIndex: isNonnull($selectedIndex) ? $selectedIndex : ($label or (length($items) == 0) ? -1 : 0) /}
+    <input
+      disabled="{$disabled}"
+      type="hidden"
+      name="{$hiddenInputName ? $hiddenInputName : ''}"
+      value="{$currSelectedIndex == -1 ? '' : $values ? $values[$currSelectedIndex] : ''}"
+    >
+    {call Dropdown.render}
+      {param body kind="html"}
+        {foreach $item in $items}
+          <li
+            class="select-option{$currSelectedIndex == index($item) ? ' selected' : ''}"
+            data-onclick="{$handleItemClick_ ?: ''}"
+            data-onkeydown="{$handleItemKeyDown_ ?: ''}">
+            <a href="javascript:;">{$item}</a>
+          </li>
+        {/foreach}
+      {/param}
+      {param events: ['stateSynced': $handleDropdownStateSynced_] /}
+      {param expanded: $disabled ? false : $expanded_ /}
+      {param header kind="html"}
+        <button
+          class="{$buttonClass ?: 'btn btn-default'} dropdown-select"
+          disabled="{$disabled}"
+          type="button"
+          data-onclick="toggle"
+          aria-haspopup="true"
+          aria-expanded="{$expanded_ ? 'true' : 'false'}">
+          {if $currSelectedIndex == -1}
+            {$label}
+          {else}
+            {$items[$currSelectedIndex]}
+          {/if}
+          {sp}<span class="{$arrowClass ?: 'caret'}"></span>
+        </button>
+      {/param}
+      {param ref: 'dropdown' /}
+    {/call}
+  </div>
+{/template}

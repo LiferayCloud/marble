@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Pill
+   ========================================================================== */
+
+.pill {
+  align-content: center;
+  align-items: center;
+  background: rgba($primary, .05);
+  border-radius: 12px;
+  color: rgba($primary, .8);
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: 24px;
+  justify-content: center;
+  padding: 0 8px;
+
+  .pill-label {
+    display: inline-flex;
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .pill-bullet + .pill-label {
+    margin: 0 0 0 8px;
+  }
+
+  .pill-bullet {
+    background: rgba($primary, .4);
+    border-radius: 50%;
+    flex: 0 0 auto;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    width: 8px;
+
+    &.up {
+      background: $accent;
+    }
+
+    &.down {
+      background: $brand-danger;
+    }
+
+    &.warn {
+      background: $brand-warning;
+    }
+  }
+}

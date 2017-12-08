@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: Toast</title>
+
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+
+  <script src="../build/globals/marble-toast.js"></script>
+</head>
+<body>
+  <h1>Toast</h1>
+  <script>
+    window.toast = new metal.Toast({
+      body: 'User was deleted successfully<button class="alert-undo-link">undo</button>',
+      closeButtonHtml: '<span class="icon-16-cancel"></span>',
+      dismissible: true
+    });
+  </script>
+</body>
+</html>

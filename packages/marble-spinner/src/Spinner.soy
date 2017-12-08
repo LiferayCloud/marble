@@ -1,0 +1,24 @@
+{namespace Spinner}
+
+/**
+ *
+ */
+{template .render}
+  {@param? isDone: bool}
+  {@param? size: string}
+  {@param? style: string}
+
+  {let $doneClass kind="text"}
+    {if $isDone}spinner-done{/if}
+  {/let}
+
+  {let $sizeClass kind="text"}
+    {if $size}spinner-{$size}{/if}
+  {/let}
+
+  {let $styleClass kind="text"}
+    {if $style}spinner-{$style}{/if}
+  {/let}
+
+  <span class="spinner {$doneClass} {$sizeClass} {$styleClass}"></span>
+{/template}

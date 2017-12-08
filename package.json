@@ -8,6 +8,16 @@
     "prettier": "prettier-eslint packages/marble-*/src/*.js packages/marble-*/src/**/*.js"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "gulp": "^3.9.0",
+    "gulp-iconfont": "^2.0.0",
+    "gulp-iconfont-css": "0.0.9",
+    "gulp-sass": "^2.3.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^2.3.1",
+    "postcss-scss": "^1.0.2",
+    "stylelint": "^8.0.0",
+    "stylelint-config-dev": "^2.0.0",
     "babel-jest": "^21.2.0",
     "babel-preset-metal": "^4.0.0",
     "eslint": "^4.11.0",
@@ -18,6 +28,27 @@
     "prettier-eslint-cli": "^4.4.0",
     "regenerator-runtime": "^0.11.0",
     "sinon": "^4.1.2"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/gulp",
+    "b:watch": "node_modules/.bin/gulp watch",
+    "b:bootstrap": "node_modules/.bin/gulp bootstrap",
+    "b:fonts": "node_modules/.bin/gulp fonts",
+    "b:fonts-12": "node_modules/.bin/gulp font-icon-12",
+    "b:fonts-16": "node_modules/.bin/gulp font-icon-16",
+    "b:fonts-galano": "node_modules/.bin/gulp font-galano"
+  },
+  "browserslist": [
+    "ie 11",
+    "last 2 android versions",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 ios versions",
+    "last 2 safari versions"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-dev"
   },
   "jest": {
     "testMatch": [

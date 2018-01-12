@@ -7,7 +7,8 @@
   "main": "index.js",
   "license": "BSD-3-Clause",
   "scripts": {
-    "start": "gulp",
+    "build": "gulp",
+    "dev": "gulp watch",
     "test": "stylelint src/*.scss --syntax scss"
   },
   "dependencies": {

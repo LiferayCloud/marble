@@ -22,16 +22,16 @@ Or if you're not into package management, just [download a ZIP](https://github.c
    npm install
    ```
 
-2. Compile scripts and styles:
+2. Compile fonts and styles:
 
    ```sh
-   npm start
+   npm run build
    ```
 
 3. Watch for file changes:
 
    ```sh
-   npm run watch
+   npm run dev
    ```
 
 ## License

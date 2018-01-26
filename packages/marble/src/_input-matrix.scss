@@ -6,7 +6,13 @@
   padding: 0 48px 0 20px;
 }
 
-.form-group {
+.input-matrix .input-matrix-fields {
+  position: relative;
+
+  @extend .col-flex-row-left-start;
+}
+
+.input-matrix .input-matrix-fields .form-group {
   margin-bottom: 0;
 
   .help-block {
@@ -16,12 +22,6 @@
     min-height: 24px;
     padding: 0;
   }
-}
-
-.input-matrix .input-matrix-fields {
-  position: relative;
-
-  @extend .col-flex-row-left-start;
 }
 
 .input-matrix .input-matrix-fields .input-matrix-fields-left {

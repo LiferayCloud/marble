@@ -64,6 +64,10 @@
     padding: calc(3rem * #{$lineHeight}) 0;
   }
 
+  .posts-list.post-list-all {
+    background: white;
+  }
+
   .post-item {
     margin-bottom: calc(2rem * #{$lineHeight});
     &:last-child {

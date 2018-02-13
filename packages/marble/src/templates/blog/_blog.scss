@@ -157,12 +157,15 @@
   .social-buttons {
     .social-button {
       @include anim(background-color);
-      display: inline-block;
-      margin-right: 24px;
-      height: 48px;
-      width: 48px;
       border-bottom: none;
       border-radius: 50%;
+      display: inline-block;
+      height: 48px;
+      margin-right: 24px;
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+      width: 48px;
 
       &:last-child {
         margin-right: 0;
@@ -191,9 +194,14 @@
       }
 
       span {
-        font-size: 2rem;
         color: $white;
-        line-height: 48px;
+        display: inline-block;
+        font-size: 2rem;
+        left: 50%;
+        line-height: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
       }
     }
   }

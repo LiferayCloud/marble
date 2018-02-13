@@ -112,6 +112,8 @@
     width: 2rem;
     position: absolute;
     left: -1.5rem;
+    line-height: calc(1rem * #{$lineHeight});
+    vertical-align: middle;
   }
 
   ul.checklist {

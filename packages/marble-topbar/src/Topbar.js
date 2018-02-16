@@ -1,3 +1,4 @@
+import {isServerSide} from 'metal';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import Toggler from 'metal-toggler';
@@ -10,6 +11,10 @@ import templates from './Topbar.soy.js';
  */
 class Topbar extends Component {
   attached() {
+    if (isServerSide()) {
+      return;
+    }
+
     this.toggler = new Toggler({
       content: '.topbar-list',
       header: '.topbar-toggle',

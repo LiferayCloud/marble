@@ -1,4 +1,4 @@
-import {core} from 'metal';
+import {core, isServerSide} from 'metal';
 import dom from 'metal-dom';
 import Anim from 'metal-anim';
 import Component from 'metal-component';
@@ -22,6 +22,10 @@ class Alert extends Component {
    * @inheritDoc
    */
   detached() {
+    if (isServerSide()) {
+      return;
+    }
+
     super.detached();
     this.eventHandler_.removeAllListeners();
     clearTimeout(this.delay_);
@@ -86,6 +90,10 @@ class Alert extends Component {
    * @param {boolean} dismissible
    */
   syncDismissible(dismissible) {
+    if (isServerSide()) {
+      return;
+    }
+
     if (dismissible) {
       this.eventHandler_.add(
         dom.on(document, 'click', this.handleDocClick_.bind(this))
@@ -113,6 +121,10 @@ class Alert extends Component {
    * @param {boolean} visible
    */
   syncVisible(visible, prevVisible) {
+    if (isServerSide()) {
+      return;
+    }
+
     let shouldAsync = false;
     if (!visible) {
       dom.once(this.element, 'animationend', this.hideCompletely_.bind(this));

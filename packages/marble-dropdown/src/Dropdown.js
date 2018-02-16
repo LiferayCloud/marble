@@ -1,5 +1,3 @@
-'use strict';
-
 import {core, object} from 'metal';
 import dom from 'metal-dom';
 import {Align} from 'metal-position';

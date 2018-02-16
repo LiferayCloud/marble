@@ -1,5 +1,3 @@
-'use strict';
-
 import sinon from 'sinon';
 import { async } from 'metal';
 import dom from 'metal-dom';

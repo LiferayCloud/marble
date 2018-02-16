@@ -1,5 +1,3 @@
-'use strict';
-
 import sinon from 'sinon';
 import dom from 'metal-dom';
 import Input from '../src/Input';

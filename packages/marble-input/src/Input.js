@@ -1,5 +1,3 @@
-'use strict';
-
 import core from 'metal';
 import templates from './Input.soy.js';
 import Component from 'metal-component';

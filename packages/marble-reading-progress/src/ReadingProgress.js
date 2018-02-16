@@ -1,5 +1,3 @@
-'use strict';
-
 import {core, object} from 'metal';
 import templates from './ReadingProgress.soy.js';
 import Component from 'metal-component';

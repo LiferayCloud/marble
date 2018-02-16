@@ -1,5 +1,3 @@
-'use strict';
-
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
 import TooltipBase from './TooltipBase';

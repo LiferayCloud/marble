@@ -1,5 +1,3 @@
-'use strict';
-
 import CheckboxGroup from '../src/CheckboxGroup';
 
 let checkboxGroup;

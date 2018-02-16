@@ -1,5 +1,3 @@
-'use strict';
-
 import core from 'metal';
 import dom from 'metal-dom';
 import Component from 'metal-component';

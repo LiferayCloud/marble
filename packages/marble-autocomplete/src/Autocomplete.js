@@ -1,5 +1,3 @@
-'use strict';
-
 import core from 'metal';
 import debounce from 'metal-debounce';
 import dom from 'metal-dom';

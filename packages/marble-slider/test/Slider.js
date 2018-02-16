@@ -1,5 +1,3 @@
-'use strict';
-
 import { async } from 'metal';
 import dom from 'metal-dom';
 // import DragTestHelper from 'metal-drag-drop/test/fixtures/DragTestHelper';

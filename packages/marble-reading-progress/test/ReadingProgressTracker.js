@@ -1,5 +1,3 @@
-'use strict';
-
 import dom from 'metal-dom';
 import ReadingProgressTracker from '../src/ReadingProgressTracker';
 

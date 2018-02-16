@@ -1,5 +1,3 @@
-'use strict';
-
 import dom from 'metal-dom';
 import Dropdown from 'marble-dropdown';
 import Select from '../src/Select';

@@ -1,5 +1,3 @@
-'use strict';
-
 import Topbar from '../src/Topbar';
 
 let topbar;

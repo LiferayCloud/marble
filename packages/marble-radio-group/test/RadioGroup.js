@@ -1,5 +1,3 @@
-'use strict';
-
 import RadioGroup from '../src/RadioGroup';
 
 let radioGroup;

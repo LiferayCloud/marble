@@ -1,5 +1,3 @@
-'use strict';
-
 import dom from 'metal-dom';
 import Toast from '../src/Toast';
 

@@ -1,5 +1,3 @@
-'use strict';
-
 import <%= componentName %> from '../src/<%= componentName %>';
 
 let <%= kebabCaseName %>;

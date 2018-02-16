@@ -1,5 +1,3 @@
-'use strict';
-
 import Spinner from '../src/Spinner';
 
 let spinner;

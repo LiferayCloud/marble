@@ -1,5 +1,3 @@
-'use strict';
-
 import Soy from 'metal-soy';
 
 var data_nested_array = [{

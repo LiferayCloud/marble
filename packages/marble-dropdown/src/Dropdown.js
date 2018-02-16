@@ -1,4 +1,4 @@
-import {core, object} from 'metal';
+import {core, object, isServerSide} from 'metal';
 import dom from 'metal-dom';
 import {Align} from 'metal-position';
 import Component from 'metal-component';
@@ -16,6 +16,11 @@ class Dropdown extends Component {
    */
   attached() {
     super.attached();
+
+    if (isServerSide()) {
+      return;
+    }
+
     this.eventHandler_.add(
       dom.on(document, 'click', this.handleDocClick_.bind(this))
     );

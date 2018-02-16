@@ -9,27 +9,27 @@ import { data_nested_deep, data_nested_deep_expanded_fn } from './data/data_nest
 import { data_nested_object, data_nested_object_expanded_fn } from './data/data_nested_object.js';
 import { data_simple, data_simple_expanded_fn } from './data/data_simple.js';
 
-describe('Datatable', function() {
+describe('Datatable', () => {
   var datatable;
 
-  afterEach(function() {
+  afterEach(() => {
     if (datatable) {
       datatable.dispose();
     }
   });
 
-  describe('Expand Data', function() {
-    beforeEach(function() {
-      sinon.stub(Soy, 'toIncDom', function(str) {
+  describe('Expand Data', () => {
+    beforeEach(() => {
+      sinon.stub(Soy, 'toIncDom', (str) => {
         return str;
       });
     });
 
-    afterEach(function() {
+    afterEach(() => {
       Soy.toIncDom.restore();
     });
 
-    it.skip('should expand simple data with JSON types', function() {
+    it.skip('should expand simple data with JSON types', () => {
       var data = {
         data: data_simple
       };
@@ -37,7 +37,7 @@ describe('Datatable', function() {
       expect(data_simple_expanded_fn()).toEqual(datatable.data);
     });
 
-    it.skip('should expand nested deep data with JSON types', function() {
+    it.skip('should expand nested deep data with JSON types', () => {
       var data = {
         data: data_nested_deep
       };
@@ -45,7 +45,7 @@ describe('Datatable', function() {
       expect(data_nested_deep_expanded_fn()).toEqual(datatable.data);
     });
 
-    it.skip('should expand nested object data with JSON types', function() {
+    it.skip('should expand nested object data with JSON types', () => {
       var data = {
         data: data_nested_object
       };
@@ -53,7 +53,7 @@ describe('Datatable', function() {
       expect(data_nested_object_expanded_fn()).toEqual(datatable.data);
     });
 
-    it.skip('should expand nested array data with JSON types', function() {
+    it.skip('should expand nested array data with JSON types', () => {
       var data = {
         data: data_nested_array
       };
@@ -61,7 +61,7 @@ describe('Datatable', function() {
       expect(data_nested_array_expanded_fn()).toEqual(datatable.data);
     });
 
-    it.skip('should expand null data with JSON type', function() {
+    it.skip('should expand null data with JSON type', () => {
       var data = {
         data: null
       };
@@ -73,7 +73,7 @@ describe('Datatable', function() {
       expect(expandedData).toEqual(datatable.data);
     });
 
-    it.skip('should expand undefined data with JSON type', function() {
+    it.skip('should expand undefined data with JSON type', () => {
       var data = {
         data: undefined
       };
@@ -85,7 +85,7 @@ describe('Datatable', function() {
       expect(expandedData).toEqual(datatable.data);
     });
 
-    it.skip('should expand string data with JSON type', function() {
+    it.skip('should expand string data with JSON type', () => {
       var data = {
         data: 'string'
       };
@@ -97,7 +97,7 @@ describe('Datatable', function() {
       expect(expandedData).toEqual(datatable.data);
     });
 
-    it.skip('should expand number data with JSON type', function() {
+    it.skip('should expand number data with JSON type', () => {
       var data = {
         data: 1
       };
@@ -109,7 +109,7 @@ describe('Datatable', function() {
       expect(expandedData).toEqual(datatable.data);
     });
 
-    it.skip('should expand boolean data with JSON type', function() {
+    it.skip('should expand boolean data with JSON type', () => {
       var data = {
         data: true
       };
@@ -121,7 +121,7 @@ describe('Datatable', function() {
       expect(expandedData).toEqual(datatable.data);
     });
 
-    it.skip('should expand object data with JSON type', function() {
+    it.skip('should expand object data with JSON type', () => {
       var object = {};
       var data = {
         data: object
@@ -135,7 +135,7 @@ describe('Datatable', function() {
     });
   });
 
-  it.skip('should expand table contents when clicking on labels', function() {
+  it.skip('should expand table contents when clicking on labels', () => {
     datatable = new Datatable({
       data: [1, 2, 3]
     });
@@ -149,7 +149,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should expand table contents when pressing enter or space on labels', function() {
+  it.skip('should expand table contents when pressing enter or space on labels', () => {
     datatable = new Datatable({
       data: [1, 2, 3]
     });
@@ -171,7 +171,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should not expand table contents when pressing key other than enter or space on labels', function() {
+  it.skip('should not expand table contents when pressing key other than enter or space on labels', () => {
     datatable = new Datatable({
       data: [1, 2, 3]
     });
@@ -187,7 +187,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should expand table contents when pressing enter or space on columns with nested tables', function() {
+  it.skip('should expand table contents when pressing enter or space on columns with nested tables', () => {
     datatable = new Datatable({
       data: [
         {
@@ -215,7 +215,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should not throw error if enter or space is pressed on column without nested datatables', function() {
+  it.skip('should not throw error if enter or space is pressed on column without nested datatables', () => {
     datatable = new Datatable({
       data: [1, 2, 3]
     });
@@ -232,17 +232,17 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should throw exception when data contains mixed types inside array', function() {
+  it.skip('should throw exception when data contains mixed types inside array', () => {
     datatable = new Datatable({
       data: [0, false]
     }, false);
-    expect(function() {
+    expect(() => {
       // Access data to trigger its setter.
       datatable.data; // jshint ignore:line
     }).toThrow();
   });
 
-  it.skip('should display column types', function() {
+  it.skip('should display column types', () => {
     datatable = new Datatable({
       data: [{
         a: {
@@ -260,7 +260,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should not display column types', function() {
+  it.skip('should not display column types', () => {
     datatable = new Datatable({
       data: [{
         a: {
@@ -276,7 +276,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should not expanded already expanded data', function() {
+  it.skip('should not expanded already expanded data', () => {
     var expandedData = {
       columns: [],
       type: ''
@@ -288,7 +288,7 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  it.skip('should detect sanitized html objects as string', function() {
+  it.skip('should detect sanitized html objects as string', () => {
     datatable = new Datatable({
       data: {
         content: '',
@@ -299,12 +299,12 @@ describe('Datatable', function() {
     datatable.dispose();
   });
 
-  describe('Keyboard focus', function() {
-    afterEach(function() {
+  describe('Keyboard focus', () => {
+    afterEach(() => {
       UA.testUserAgent('', '');
     });
 
-    it.skip('should move between columns via the left/right arrow keys', function() {
+    it.skip('should move between columns via the left/right arrow keys', () => {
       datatable = new Datatable({
         data: {
           key1: 'value1',
@@ -323,7 +323,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
-    it.skip('should move between rows via the up/down arrow keys', function() {
+    it.skip('should move between rows via the up/down arrow keys', () => {
       datatable = new Datatable({
         data: {
           key1: 'value1',
@@ -342,7 +342,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
-    it.skip('should move to first row of current column via cmd + up arrow on mac', function() {
+    it.skip('should move to first row of current column via cmd + up arrow on mac', () => {
       UA.testUserAgent('', 'MacIntel');
 
       datatable = new Datatable({
@@ -365,7 +365,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-1']).toBe(document.activeElement);
     });
 
-    it.skip('should move to first row of current column via "page up" key', function() {
+    it.skip('should move to first row of current column via "page up" key', () => {
       datatable = new Datatable({
         data: [
           {
@@ -385,7 +385,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-1']).toBe(document.activeElement);
     });
 
-    it.skip('should move to last row of current column via cmd + down arrow on mac', function() {
+    it.skip('should move to last row of current column via cmd + down arrow on mac', () => {
       UA.testUserAgent('', 'MacIntel');
 
       datatable = new Datatable({
@@ -408,7 +408,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-2-1']).toBe(document.activeElement);
     });
 
-    it.skip('should move to last row of current column via "page down" key', function() {
+    it.skip('should move to last row of current column via "page down" key', () => {
       datatable = new Datatable({
         data: [
           {
@@ -428,7 +428,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-2-1']).toBe(document.activeElement);
     });
 
-    it.skip('should move to first column of current row via cmd + left arrow on mac', function() {
+    it.skip('should move to first column of current row via cmd + left arrow on mac', () => {
       UA.testUserAgent('', 'MacIntel');
 
       datatable = new Datatable({
@@ -446,7 +446,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
-    it.skip('should move to first column of current row via "home" key', function() {
+    it.skip('should move to first column of current row via "home" key', () => {
       datatable = new Datatable({
         data: {
           key1: 'value1',
@@ -461,7 +461,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-0']).toBe(document.activeElement);
     });
 
-    it.skip('should move to last column of current row via cmd + right arrow on mac', function() {
+    it.skip('should move to last column of current row via cmd + right arrow on mac', () => {
       UA.testUserAgent('', 'MacIntel');
 
       datatable = new Datatable({
@@ -479,7 +479,7 @@ describe('Datatable', function() {
       expect(datatable.refs['table-0-2']).toBe(document.activeElement);
     });
 
-    it.skip('should move to last column of current row via "end" key', function() {
+    it.skip('should move to last column of current row via "end" key', () => {
       datatable = new Datatable({
         data: {
           key1: 'value1',

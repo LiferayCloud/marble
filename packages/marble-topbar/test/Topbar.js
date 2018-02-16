@@ -2,7 +2,7 @@ import Topbar from '../src/Topbar';
 
 let topbar;
 
-describe('Topbar', function() {
+describe('Topbar', () => {
   afterEach(() => {
     if (topbar) {
       topbar.dispose();

@@ -21,7 +21,7 @@ const items = [
   },
 ];
 
-describe('CheckboxGroup', function() {
+describe('CheckboxGroup', () => {
   afterEach(() => {
     if (checkboxGroup) {
       checkboxGroup.dispose();

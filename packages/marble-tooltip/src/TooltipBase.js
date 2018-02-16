@@ -72,7 +72,7 @@ class TooltipBase extends Component {
     const delegateTarget = event.delegateTarget;
     const interactingWithDifferentTarget =
       delegateTarget && delegateTarget !== this.currentAlignElement;
-    this.callAsync_(function() {
+    this.callAsync_(() => {
       if (this.locked_) {
         return;
       }
@@ -93,7 +93,7 @@ class TooltipBase extends Component {
   handleShow(event) {
     const delegateTarget = event.delegateTarget;
     super.syncVisible(true);
-    this.callAsync_(function() {
+    this.callAsync_(() => {
       this.currentAlignElement = delegateTarget;
       this.visible = true;
     }, this.delay[0]);

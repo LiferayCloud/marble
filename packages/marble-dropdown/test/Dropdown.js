@@ -4,28 +4,28 @@ import dom from 'metal-dom';
 import { Align } from 'metal-position';
 import Dropdown from '../src/Dropdown';
 
-describe('Dropdown', function() {
+describe('Dropdown', () => {
   var component;
 
-  afterEach(function() {
+  afterEach(() => {
     component.dispose();
   });
 
-  it('should render html header', function() {
+  it('should render html header', () => {
     component = new Dropdown({
       header: '<div class="myHeader"></div>'
     });
     expect(component.element.querySelector('.myHeader')).toBeTruthy();
   });
 
-  it('should render html body', function() {
+  it('should render html body', () => {
     component = new Dropdown({
       body: '<div class="myBody"></div>'
     });
     expect(component.element.querySelector('.myBody')).toBeTruthy();
   });
 
-  it('should get header content from existing html', function() {
+  it('should get header content from existing html', () => {
     var element = document.createElement('div');
     dom.append(
       element,
@@ -38,7 +38,7 @@ describe('Dropdown', function() {
     expect('<div class="myHeader"></div>').toBe(component.header);
   });
 
-  it('should get body content from existing html', function() {
+  it('should get body content from existing html', () => {
     var element = document.createElement('div');
     dom.append(
       element,
@@ -51,12 +51,12 @@ describe('Dropdown', function() {
     expect('<div class="myBody"></div>').toBe(component.body);
   });
 
-  it('should open dropdown', function(done) {
+  it('should open dropdown', (done) => {
     component = new Dropdown();
     expect(!component.expanded).toBeTruthy();
     expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
     component.open();
-    component.once('stateChanged', function() {
+    component.once('stateChanged', () => {
       expect(component.expanded).toBeTruthy();
       expect(dom.hasClass(component.element, 'open')).toBeTruthy();
       component.dispose();
@@ -64,13 +64,13 @@ describe('Dropdown', function() {
     });
   });
 
-  it('should close dropdown', function(done) {
+  it('should close dropdown', (done) => {
     component = new Dropdown({
       expanded: true
     });
     expect(dom.hasClass(component.element, 'open')).toBeTruthy();
     component.close();
-    component.once('stateChanged', function() {
+    component.once('stateChanged', () => {
       expect(!component.expanded).toBeTruthy();
       expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
       component.dispose();
@@ -78,16 +78,16 @@ describe('Dropdown', function() {
     });
   });
 
-  it('should toggle dropdown', function(done) {
+  it('should toggle dropdown', (done) => {
     component = new Dropdown();
     expect(!component.expanded).toBeTruthy();
     expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
     component.toggle();
-    component.once('stateChanged', function() {
+    component.once('stateChanged', () => {
       expect(component.expanded).toBeTruthy();
       expect(dom.hasClass(component.element, 'open')).toBeTruthy();
       component.toggle();
-      component.once('stateChanged', function() {
+      component.once('stateChanged', () => {
         expect(!component.expanded).toBeTruthy();
         expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
         component.dispose();
@@ -96,7 +96,7 @@ describe('Dropdown', function() {
     });
   });
 
-  it('should change dropdown position', function(done) {
+  it('should change dropdown position', (done) => {
     component = new Dropdown({
       position: 'up'
     });
@@ -104,14 +104,14 @@ describe('Dropdown', function() {
     expect(dom.hasClass(component.element, 'dropup')).toBeTruthy();
 
     component.position = 'down';
-    component.once('stateChanged', function() {
+    component.once('stateChanged', () => {
       expect(dom.hasClass(component.element, 'dropdown')).toBeTruthy();
       expect(!dom.hasClass(component.element, 'dropup')).toBeTruthy();
       done();
     });
   });
 
-  it('should only accept valid positions', function() {
+  it('should only accept valid positions', () => {
     component = new Dropdown({
       position: 'up'
     });
@@ -127,7 +127,7 @@ describe('Dropdown', function() {
     expect(Align.TopCenter).toBe(component.position);
   });
 
-  it('should set position css class on dropdown-menu when positionClassOnMenu is true', function() {
+  it('should set position css class on dropdown-menu when positionClassOnMenu is true', () => {
     component = new Dropdown({
       position: Align.RightCenter,
       positionClassOnMenu: true
@@ -137,7 +137,7 @@ describe('Dropdown', function() {
     expect(dom.hasClass(element.querySelector('.dropdown-menu'), 'dropright')).toBeTruthy();
   });
 
-  it('should set class for the current position according to `classMap` state', function() {
+  it('should set class for the current position according to `classMap` state', () => {
     component = new Dropdown({
       classMap: {
         [Align.RightCenter]: 'my-right-class'
@@ -149,16 +149,16 @@ describe('Dropdown', function() {
     expect(dom.hasClass(element, 'my-right-class')).toBeTruthy();
   });
 
-  describe('Align', function() {
-    beforeEach(function() {
+  describe('Align', () => {
+    beforeEach(() => {
       sinon.spy(Align, 'align');
     });
 
-    afterEach(function() {
+    afterEach(() => {
       Align.align.restore();
     });
 
-    it('should automatically align through Align.align if alignElementSelector is given', function(done) {
+    it('should automatically align through Align.align if alignElementSelector is given', (done) => {
       component = new Dropdown({
         alignElementSelector: 'button',
         header: '<button></button>'
@@ -166,13 +166,13 @@ describe('Dropdown', function() {
 
       expect(0).toBe(Align.align.callCount);
       component.expanded = true;
-      component.once('stateSynced', function() {
+      component.once('stateSynced', () => {
         expect(1).toBe(Align.align.callCount);
         done();
       });
     });
 
-    it('should not automatically align through Align.align if alignElementSelector doesn\'t match anything', function(done) {
+    it('should not automatically align through Align.align if alignElementSelector doesn\'t match anything', (done) => {
       component = new Dropdown({
         alignElementSelector: 'nomatch',
         header: '<button></button>'
@@ -180,23 +180,23 @@ describe('Dropdown', function() {
 
       expect(0).toBe(Align.align.callCount);
       component.expanded = true;
-      component.once('stateSynced', function() {
+      component.once('stateSynced', () => {
         expect(0).toBe(Align.align.callCount);
         done();
       });
     });
   });
 
-  it('should close dropdown when click outside', function(done) {
+  it('should close dropdown when click outside', (done) => {
     component = new Dropdown();
     component.open();
 
     expect(component.isOpen()).toBeTruthy();
     dom.triggerEvent(component.element.firstChild, 'click');
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect(component.isOpen()).toBeTruthy();
       dom.triggerEvent(document, 'click');
-      async.nextTick(function() {
+      async.nextTick(() => {
         expect(!component.isOpen()).toBeTruthy();
         component.dispose();
         done();
@@ -204,7 +204,7 @@ describe('Dropdown', function() {
     });
   });
 
-  it('should decorate', function() {
+  it('should decorate', () => {
     var config = {
       element: '#dropdown',
       id: 'dropdown',

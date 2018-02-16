@@ -78,7 +78,7 @@
     var containerHybrid = document.querySelector('.container');
     sizeContainer.innerHTML = containerHybrid.offsetWidth + 'px';
 
-    window.addEventListener('resize', function(e) {
+    window.addEventListener('resize', (e) => {
       size.innerHTML = window.innerWidth + 'px';
       sizeContainer.innerHTML = containerHybrid.offsetWidth + 'px';
     });

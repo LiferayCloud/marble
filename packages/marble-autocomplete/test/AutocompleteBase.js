@@ -5,8 +5,8 @@ import AutocompleteBase from '../src/AutocompleteBase';
 var component;
 var input;
 
-describe('AutocompleteBase', function() {
-  afterEach(function() {
+describe('AutocompleteBase', () => {
+  afterEach(() => {
     if (component) {
       component.dispose();
     }
@@ -15,13 +15,13 @@ describe('AutocompleteBase', function() {
     }
   });
 
-  beforeEach(function() {
+  beforeEach(() => {
     input = document.createElement('input');
     input.type = 'text';
     dom.enterDocument(input);
   });
 
-  it('should wrap data value in a function', function() {
+  it('should wrap data value in a function', () => {
     var data = [];
     component = new AutocompleteBase({
       data: data,
@@ -31,9 +31,9 @@ describe('AutocompleteBase', function() {
     expect(data).toBe(component.data());
   });
 
-  it('should not wrap data value in a function if it is already a function', function() {
+  it('should not wrap data value in a function if it is already a function', () => {
     var items = [];
-    var data = function() {
+    var data = () => {
       return items;
     };
     component = new AutocompleteBase({
@@ -44,14 +44,14 @@ describe('AutocompleteBase', function() {
     expect(data).toBe(component.data);
   });
 
-  it('should not throw exception if inputElement is not specified', function() {
-    expect(function() {
+  it('should not throw exception if inputElement is not specified', () => {
+    expect(() => {
       component = new AutocompleteBase();
     }).not.toThrow();
   });
 
-  it('should invoke deferred data handler passing the user input as query', function(done) {
-    var data = function(query) {
+  it('should invoke deferred data handler passing the user input as query', (done) => {
+    var data = (query) => {
       expect('foo').toBe(query);
       done();
     };
@@ -63,8 +63,8 @@ describe('AutocompleteBase', function() {
     dom.triggerEvent(input, 'input');
   });
 
-  it('should invoke deferred data handler passing the query as argument', function(done) {
-    var data = function(query) {
+  it('should invoke deferred data handler passing the query as argument', (done) => {
+    var data = (query) => {
       expect('foo').toBe(query);
       done();
     };
@@ -75,20 +75,20 @@ describe('AutocompleteBase', function() {
     component.request('foo');
   });
 
-  it('should cancel pending request', function(done) {
+  it('should cancel pending request', (done) => {
     component = new AutocompleteBase({
-      data: new CancellablePromise(function() {}),
+      data: new CancellablePromise(() => {}),
       inputElement: input
     });
-    component.request().catch(function(reason) {
+    component.request().catch((reason) => {
       expect('Cancelled by another request').toBe(reason.message);
       done();
     });
     component.request();
   });
 
-  it('should format data items', function(done) {
-    var formatter = function(item) {
+  it('should format data items', (done) => {
+    var formatter = (item) => {
       return item + 1;
     };
     component = new AutocompleteBase({
@@ -96,14 +96,14 @@ describe('AutocompleteBase', function() {
       inputElement: input,
       format: formatter
     });
-    component.request().then(function(data) {
+    component.request().then((data) => {
       expect([2, 3]).toEqual(data);
       done();
     });
   });
 
-  it('should removes format data items null', function(done) {
-    var formatter = function() {
+  it('should removes format data items null', (done) => {
+    var formatter = () => {
       return null;
     };
     component = new AutocompleteBase({
@@ -111,14 +111,14 @@ describe('AutocompleteBase', function() {
       inputElement: input,
       format: formatter
     });
-    component.request().then(function(data) {
+    component.request().then((data) => {
       expect([]).toEqual(data);
       done();
     });
   });
 
-  it('should removes format data items undefined', function(done) {
-    var formatter = function() {
+  it('should removes format data items undefined', (done) => {
+    var formatter = () => {
       return undefined;
     };
     component = new AutocompleteBase({
@@ -126,13 +126,13 @@ describe('AutocompleteBase', function() {
       inputElement: input,
       format: formatter
     });
-    component.request().then(function(data) {
+    component.request().then((data) => {
       expect([]).toEqual(data);
       done();
     });
   });
 
-  it('should default select function set value and focus input element', function() {
+  it('should default select function set value and focus input element', () => {
     component = new AutocompleteBase({
       data: [],
       inputElement: input

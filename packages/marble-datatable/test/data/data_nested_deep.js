@@ -22,7 +22,7 @@ var data_nested_deep = [{
   }
 }];
 
-var data_nested_deep_expanded_fn = function() {
+var data_nested_deep_expanded_fn = () => {
   return {
     'type': 'array',
     'value': [

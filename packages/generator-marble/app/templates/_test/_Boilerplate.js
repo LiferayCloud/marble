@@ -2,7 +2,7 @@ import <%= componentName %> from '../src/<%= componentName %>';
 
 let <%= kebabCaseName %>;
 
-describe('<%= componentName %>', function() {
+describe('<%= componentName %>', () => {
   afterEach(() => {
     if (<%= kebabCaseName %>) {
       <%= kebabCaseName %>.dispose();

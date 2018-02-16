@@ -60,7 +60,7 @@ class AutocompleteBase extends Component {
       deferredData = CancellablePromise.resolve(deferredData);
     }
 
-    this.pendingRequest = deferredData.then(function(data) {
+    this.pendingRequest = deferredData.then((data) => {
       if (Array.isArray(data)) {
         return data
           .map(self.format.bind(self))
@@ -80,7 +80,7 @@ class AutocompleteBase extends Component {
    */
   setData_(val) {
     if (!core.isFunction(val)) {
-      return function() {
+      return () => {
         return val;
       };
     }

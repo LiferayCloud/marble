@@ -243,7 +243,7 @@ class Autocomplete extends AutocompleteBase {
     }
 
     let self = this;
-    return super.request(query).then(function(data) {
+    return super.request(query).then((data) => {
       if (data) {
         data.forEach(self.assertItemObjectStructure_);
         self.getList().items = data;

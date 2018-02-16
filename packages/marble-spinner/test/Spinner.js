@@ -2,7 +2,7 @@ import Spinner from '../src/Spinner';
 
 let spinner;
 
-describe('Spinner', function() {
+describe('Spinner', () => {
   afterEach(() => {
     if (spinner) {
       spinner.dispose();

@@ -12,11 +12,11 @@ gulp.task('default', ['bootstrap', 'fonts']);
 
 // Bootstrap -------------------------------------------------------------------
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
   gulp.watch('src/**/*.scss', ['bootstrap']);
 });
 
-gulp.task('bootstrap', function() {
+gulp.task('bootstrap', () => {
   return gulp.src('src/**/*.scss')
     .pipe(sass({includePaths: ['../../node_modules'], outputStyle: 'compressed'}))
     .pipe(postcss([
@@ -31,7 +31,7 @@ gulp.task('bootstrap', function() {
 
 gulp.task('fonts', ['font-icon-12', 'font-icon-16', 'font-galano']);
 
-gulp.task('font-icon-12', function() {
+gulp.task('font-icon-12', () => {
   return gulp.src('src/fonts/icon-12/*.svg')
     .pipe(iconfontCss({
       fontName: 'icon-12',
@@ -41,12 +41,12 @@ gulp.task('font-icon-12', function() {
     .pipe(iconfont({
       fontName: 'icon-12',
       normalize: true,
-      log: function() {}
+      log: () => {}
     }))
     .pipe(gulp.dest('build/fonts/icon-12'));
 });
 
-gulp.task('font-icon-16', function() {
+gulp.task('font-icon-16', () => {
   return gulp.src('src/fonts/icon-16/*.svg')
     .pipe(iconfontCss({
       fontName: 'icon-16',
@@ -56,7 +56,7 @@ gulp.task('font-icon-16', function() {
     .pipe(iconfont({
       fontName: 'icon-16',
       normalize: true,
-      log: function() {}
+      log: () => {}
     }))
     .pipe(gulp.dest('build/fonts/icon-16'));
 });

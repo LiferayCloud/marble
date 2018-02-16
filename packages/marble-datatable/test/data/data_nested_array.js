@@ -10,7 +10,7 @@ var data_nested_array = [{
   'addresses': ['La Pigalle, Paris', 'Harley Street, London']
 }];
 
-var data_nested_array_expanded_fn = function() {
+var data_nested_array_expanded_fn = () => {
   return {
     'type': 'array',
     'value': [

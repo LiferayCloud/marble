@@ -1,10 +1,10 @@
 import dom from 'metal-dom';
 import ReadingProgressTracker from '../src/ReadingProgressTracker';
 
-describe('ReadingProgressTracker', function() {
+describe('ReadingProgressTracker', () => {
   var readingProgress;
 
-  beforeAll(function() {
+  beforeAll(() => {
     dom.enterDocument('<style id="style">body{margin:0;padding:0;}');
     dom.enterDocument('<div id="content">' +
       '<div id="content1" style="height:5000px;">Link1</div>' +
@@ -18,25 +18,25 @@ describe('ReadingProgressTracker', function() {
     );
   });
 
-  afterEach(function() {
+  afterEach(() => {
     if (readingProgress) {
       readingProgress.dispose();
     }
   });
 
-  afterAll(function() {
+  afterAll(() => {
     document.body.innerHTML = '';
   });
 
-  it.skip('should update progress while scrolling', function(done) {
+  it.skip('should update progress while scrolling', (done) => {
     readingProgress = new ReadingProgressTracker({
       element: '#links'
     });
-    dom.once(document, 'scroll', function() {
+    dom.once(document, 'scroll', () => {
       expect(0).toBe(readingProgress.activeIndex);
       expect(20).toBe(readingProgress.progress);
 
-      dom.once(document, 'scroll', function() {
+      dom.once(document, 'scroll', () => {
         expect(0).toBe(readingProgress.activeIndex);
         expect(60).toBe(readingProgress.progress);
         done();
@@ -46,19 +46,19 @@ describe('ReadingProgressTracker', function() {
     window.scrollTo(0, 1000);
   });
 
-  it.skip('should set "data-reading-progress" to the progress percentage', function(done) {
+  it.skip('should set "data-reading-progress" to the progress percentage', (done) => {
     readingProgress = new ReadingProgressTracker({
       element: '#links'
     });
     var contents = document.querySelectorAll('#links a');
 
-    dom.once(document, 'scroll', function() {
+    dom.once(document, 'scroll', () => {
       expect(0).toBe(readingProgress.activeIndex);
       expect('20').toBe(contents.item(0).getAttribute('data-reading-progress'));
       expect(!contents.item(1).hasAttribute('data-reading-progress')).toBeTruthy();
       expect(!contents.item(2).hasAttribute('data-reading-progress')).toBeTruthy();
 
-      dom.once(document, 'scroll', function() {
+      dom.once(document, 'scroll', () => {
         expect(1).toBe(readingProgress.activeIndex);
         expect(!contents.item(0).hasAttribute('data-reading-progress')).toBeTruthy();
         expect('60').toBe(contents.item(1).getAttribute('data-reading-progress'));
@@ -70,28 +70,28 @@ describe('ReadingProgressTracker', function() {
     window.scrollTo(0, 1000);
   });
 
-  it.skip('should mark as complete/incomplete while scrolling', function(done) {
+  it.skip('should mark as complete/incomplete while scrolling', (done) => {
     readingProgress = new ReadingProgressTracker({
       element: '#links'
     });
     var contents = document.querySelectorAll('#links a');
 
-    dom.once(document, 'scroll', function() {
+    dom.once(document, 'scroll', () => {
       expect(!dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
       expect(!dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
       expect(!dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
 
-      dom.once(document, 'scroll', function() {
+      dom.once(document, 'scroll', () => {
         expect(dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
         expect(!dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
         expect(!dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
 
-        dom.once(document, 'scroll', function() {
+        dom.once(document, 'scroll', () => {
           expect(dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
           expect(dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
           expect(dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
 
-          dom.once(document, 'scroll', function() {
+          dom.once(document, 'scroll', () => {
             expect(dom.hasClass(contents.item(0), readingProgress.completedClass)).toBeTruthy();
             expect(dom.hasClass(contents.item(1), readingProgress.completedClass)).toBeTruthy();
             expect(!dom.hasClass(contents.item(2), readingProgress.completedClass)).toBeTruthy();
@@ -106,14 +106,14 @@ describe('ReadingProgressTracker', function() {
     window.scrollTo(0, 1000);
   });
 
-  it.skip('should not set progress on any link if none is active', function(done) {
+  it.skip('should not set progress on any link if none is active', (done) => {
     dom.enterDocument('<style id="style">body{ margin-top: 100px; }');
     readingProgress = new ReadingProgressTracker({
       element: '#links'
     });
     var links = document.querySelectorAll('#links a');
 
-    dom.once(document, 'scroll', function() {
+    dom.once(document, 'scroll', () => {
       expect(-1).toBe(readingProgress.activeIndex);
       expect(!links.item(0).hasAttribute('data-reading-progress')).toBeTruthy();
       expect(!links.item(1).hasAttribute('data-reading-progress')).toBeTruthy();

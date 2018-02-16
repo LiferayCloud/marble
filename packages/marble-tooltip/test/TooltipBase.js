@@ -1,16 +1,16 @@
 import dom from 'metal-dom';
 import TooltipBase from '../src/TooltipBase';
 
-describe('TooltipBase', function() {
+describe('TooltipBase', () => {
   var tooltip;
 
-  afterEach(function() {
+  afterEach(() => {
     if (tooltip) {
       tooltip.dispose();
     }
   });
 
-  it('should show tooltip on mouseover by a selector after a delay', function(done) {
+  it('should show tooltip on mouseover by a selector after a delay', (done) => {
     dom.enterDocument('<div id="tooltipTrigger1">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger1');
 
@@ -21,7 +21,7 @@ describe('TooltipBase', function() {
     });
     expect(!tooltip.visible).toBeTruthy();
     dom.triggerEvent(trigger, 'mouseover');
-    setTimeout(function() {
+    setTimeout(() => {
       expect(tooltip.visible).toBeTruthy();
       expect(trigger).toBe(tooltip.currentAlignElement);
       dom.exitDocument(trigger);
@@ -29,7 +29,7 @@ describe('TooltipBase', function() {
     }, 25);
   });
 
-  it('should hide tooltip on mouseout by a selector after a delay', function(done) {
+  it('should hide tooltip on mouseout by a selector after a delay', (done) => {
     dom.enterDocument('<div id="tooltipTrigger2">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger2');
 
@@ -40,14 +40,14 @@ describe('TooltipBase', function() {
       alignElement: trigger
     });
     dom.triggerEvent(trigger, 'mouseout');
-    setTimeout(function() {
+    setTimeout(() => {
       expect(!tooltip.visible).toBeTruthy();
       dom.exitDocument(trigger);
       done();
     }, 25);
   });
 
-  it('should toggle tooltip on click by a selector after a delay', function(done) {
+  it('should toggle tooltip on click by a selector after a delay', (done) => {
     dom.enterDocument('<div id="tooltipTrigger3">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger3');
 
@@ -58,10 +58,10 @@ describe('TooltipBase', function() {
       visible: false
     });
     dom.triggerEvent(trigger, 'click');
-    setTimeout(function() {
+    setTimeout(() => {
       expect(tooltip.visible).toBeTruthy();
       dom.triggerEvent(trigger, 'click');
-      setTimeout(function() {
+      setTimeout(() => {
         expect(!tooltip.visible).toBeTruthy();
         dom.exitDocument(trigger);
         done();
@@ -69,7 +69,7 @@ describe('TooltipBase', function() {
     }, 25);
   });
 
-  it('should prevent tooltip to hide when mouseenter tooltip area', function(done) {
+  it('should prevent tooltip to hide when mouseenter tooltip area', (done) => {
     dom.enterDocument('<div id="tooltipTrigger4">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger4');
 
@@ -79,14 +79,14 @@ describe('TooltipBase', function() {
       visible: false
     });
     dom.triggerEvent(trigger, 'mouseover');
-    setTimeout(function() {
+    setTimeout(() => {
       expect(tooltip.visible).toBeTruthy();
       dom.triggerEvent(trigger, 'mouseout');
       dom.triggerEvent(tooltip.element, 'mouseenter');
-      setTimeout(function() {
+      setTimeout(() => {
         expect(tooltip.visible).toBeTruthy();
         dom.triggerEvent(tooltip.element, 'mouseleave');
-        setTimeout(function() {
+        setTimeout(() => {
           expect(!tooltip.visible).toBeTruthy();
           dom.exitDocument(trigger);
           done();
@@ -95,7 +95,7 @@ describe('TooltipBase', function() {
     }, 25);
   });
 
-  it('should set alignedPosition equal to position if well aligned to trigger', function(done) {
+  it('should set alignedPosition equal to position if well aligned to trigger', (done) => {
     dom.enterDocument('<div id="trigger">trigger</div>');
     var trigger = dom.toElement('#trigger');
 
@@ -105,8 +105,8 @@ describe('TooltipBase', function() {
     });
     dom.triggerEvent(trigger, 'mouseover');
 
-    tooltip.once('stateSynced', function() {
-      tooltip.once('stateSynced', function() {
+    tooltip.once('stateSynced', () => {
+      tooltip.once('stateSynced', () => {
         expect(TooltipBase.Align.Bottom).toBe(tooltip.alignedPosition);
         dom.exitDocument(trigger);
         done();
@@ -114,7 +114,7 @@ describe('TooltipBase', function() {
     });
   });
 
-  it.skip('should set alignedPosition to the best found position that aligns well to trigger', function(done) {
+  it.skip('should set alignedPosition to the best found position that aligns well to trigger', (done) => {
     dom.enterDocument('<div id="trigger" style="width: 20px; height: 20px; position: absolute;">trigger</div>');
     var trigger = dom.toElement('#trigger');
 
@@ -126,8 +126,8 @@ describe('TooltipBase', function() {
     tooltip.element.style.height = '30px';
     dom.triggerEvent(trigger, 'mouseover');
 
-    tooltip.once('stateSynced', function() {
-      tooltip.once('stateSynced', function() {
+    tooltip.once('stateSynced', () => {
+      tooltip.once('stateSynced', () => {
         expect(TooltipBase.Align.Right).toBe(tooltip.alignedPosition);
         dom.exitDocument(trigger);
         done();
@@ -135,7 +135,7 @@ describe('TooltipBase', function() {
     });
   });
 
-  it('should remove listeners when dettached', function(done) {
+  it('should remove listeners when dettached', (done) => {
     dom.enterDocument('<div id="tooltipTrigger5">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger5');
 
@@ -146,14 +146,14 @@ describe('TooltipBase', function() {
     });
     tooltip.detach();
     dom.triggerEvent(trigger, 'mouseover');
-    setTimeout(function() {
+    setTimeout(() => {
       expect(!tooltip.visible).toBeTruthy();
       dom.exitDocument(trigger);
       done();
     }, 25);
   });
 
-  it('should stick open if only changes alignElement', function(done) {
+  it('should stick open if only changes alignElement', (done) => {
     dom.enterDocument('<div class="trigger" id="tooltipTrigger6">trigger</div>');
     dom.enterDocument('<div class="trigger" id="tooltipTrigger7">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger6');
@@ -165,10 +165,10 @@ describe('TooltipBase', function() {
       selector: '.trigger'
     });
     dom.triggerEvent(trigger, 'click');
-    setTimeout(function() {
+    setTimeout(() => {
       dom.triggerEvent(trigger, 'click');
       dom.triggerEvent(triggerOther, 'click');
-      setTimeout(function() {
+      setTimeout(() => {
         expect(tooltip.visible).toBeTruthy();
         expect(triggerOther).toBe(tooltip.currentAlignElement);
         dom.exitDocument(trigger);
@@ -178,7 +178,7 @@ describe('TooltipBase', function() {
     }, 25);
   });
 
-  it('should not throw error if showing tooltip while component is disposed', function(done) {
+  it('should not throw error if showing tooltip while component is disposed', (done) => {
     dom.enterDocument('<div id="tooltipTrigger1">trigger</div>');
     var trigger = dom.toElement('#tooltipTrigger1');
 
@@ -190,7 +190,7 @@ describe('TooltipBase', function() {
     dom.triggerEvent(trigger, 'mouseover');
     tooltip.dispose();
 
-    setTimeout(function() {
+    setTimeout(() => {
       dom.exitDocument(trigger);
       done();
     }, 25);

@@ -1,16 +1,16 @@
 import dom from 'metal-dom';
 import InputMatrix from '../src/InputMatrix';
 
-describe('InputMatrix', function() {
+describe('InputMatrix', () => {
   let comp;
 
-  afterEach(function() {
+  afterEach(() => {
     if (comp) {
       comp.dispose();
     }
   });
 
-  it('should render a single row with a single empty field by default', function() {
+  it('should render a single row with a single empty field by default', () => {
     comp = new InputMatrix();
     expect(2).toBe(comp.element.childNodes.length);
     expect(dom.hasClass(comp.element.childNodes[0], 'input-matrix-labels')).toBeTruthy();
@@ -20,7 +20,7 @@ describe('InputMatrix', function() {
     expect('').toBe(fields[0].value);
   });
 
-  it('should render a single text field for the given value plus an empty one below', function() {
+  it('should render a single text field for the given value plus an empty one below', () => {
     comp = new InputMatrix({
       fields: [[{
         value: 'foo'
@@ -45,7 +45,7 @@ describe('InputMatrix', function() {
     expect(expectedFields).toEqual(comp.fields);
   });
 
-  it('should render error messages when given', function() {
+  it('should render error messages when given', () => {
     comp = new InputMatrix({
       fields: [[{
         error: 'Test error message'
@@ -61,7 +61,7 @@ describe('InputMatrix', function() {
     expect('Test error message').toBe(errorBox.textContent);
   });
 
-  it('should render multiples rows with multiple text field for the given value plus empty row', function() {
+  it('should render multiples rows with multiple text field for the given value plus empty row', () => {
     comp = new InputMatrix({
       fields: [
         [
@@ -101,7 +101,7 @@ describe('InputMatrix', function() {
     expect('').toBe(fields[1].value);
   });
 
-  it('should add labels as specified in "fieldsConfig"', function() {
+  it('should add labels as specified in "fieldsConfig"', () => {
     comp = new InputMatrix({
       fields: [[], []],
       fieldsConfig: [
@@ -120,7 +120,7 @@ describe('InputMatrix', function() {
     expect('Label 2').toBe(labels[1].textContent);
   });
 
-  it('should add names with "[]" for array fields', function() {
+  it('should add names with "[]" for array fields', () => {
     comp = new InputMatrix({
       fields: [[], []],
       fieldsConfig: [
@@ -149,7 +149,7 @@ describe('InputMatrix', function() {
     expect('').toBe(fields[2].getAttribute('name'));
   });
 
-  it('should add new row with empty fields if field in last row is typed on', function(done) {
+  it('should add new row with empty fields if field in last row is typed on', (done) => {
     comp = new InputMatrix({
       fields: [
         [{
@@ -166,7 +166,7 @@ describe('InputMatrix', function() {
     lastField.value = 'last';
     dom.triggerEvent(lastField, 'input');
 
-    comp.once('stateSynced', function() {
+    comp.once('stateSynced', () => {
       var expectedFields = [
         [{
           value: 'foo'
@@ -188,7 +188,7 @@ describe('InputMatrix', function() {
     });
   });
 
-  it('should not add new row with empty fields if field in last row is typed on', function(done) {
+  it('should not add new row with empty fields if field in last row is typed on', (done) => {
     comp = new InputMatrix({
       fields: [
         [{
@@ -203,7 +203,7 @@ describe('InputMatrix', function() {
     lastField.value = 'bar';
     dom.triggerEvent(lastField, 'input');
 
-    comp.once('stateSynced', function() {
+    comp.once('stateSynced', () => {
       var expectedFields = [
         [{
           value: 'foo'
@@ -219,7 +219,7 @@ describe('InputMatrix', function() {
     });
   });
 
-  it('should not add new row with empty fields if field with "disableDuplication" is typed on', function(done) {
+  it('should not add new row with empty fields if field with "disableDuplication" is typed on', (done) => {
     comp = new InputMatrix({
       fields: [
         [{
@@ -239,7 +239,7 @@ describe('InputMatrix', function() {
     lastField.value = 'last';
     dom.triggerEvent(lastField, 'input');
 
-    comp.once('stateSynced', function() {
+    comp.once('stateSynced', () => {
       var expectedFields = [
         [{
           value: 'foo'
@@ -257,7 +257,7 @@ describe('InputMatrix', function() {
     });
   });
 
-  it('should render a remove button for each row except the last one', function() {
+  it('should render a remove button for each row except the last one', () => {
     comp = new InputMatrix({
       fields: [
         [{
@@ -276,7 +276,7 @@ describe('InputMatrix', function() {
     expect(!children[3].querySelector('button')).toBeTruthy();
   });
 
-  it('should remove field when the remove button is clicked', function(done) {
+  it('should remove field when the remove button is clicked', (done) => {
     comp = new InputMatrix({
       fields: [
         [{
@@ -292,7 +292,7 @@ describe('InputMatrix', function() {
     let removeButton = comp.element.childNodes[1].querySelector('button');
     dom.triggerEvent(removeButton, 'click');
 
-    comp.once('stateSynced', function() {
+    comp.once('stateSynced', () => {
       var expectedFields = [
         [{
           value: 'bar'
@@ -305,7 +305,7 @@ describe('InputMatrix', function() {
     });
   });
 
-  it('should set new fields to current fields internal state', function(done) {
+  it('should set new fields to current fields internal state', (done) => {
     comp = new InputMatrix();
 
     comp.setCurrentFields([
@@ -317,7 +317,7 @@ describe('InputMatrix', function() {
       }]
     ]);
 
-    comp.once('stateSynced', function() {
+    comp.once('stateSynced', () => {
       expect(4).toBe(comp.element.childNodes.length);
       done();
     });

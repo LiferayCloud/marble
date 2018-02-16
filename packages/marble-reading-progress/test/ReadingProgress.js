@@ -1,10 +1,10 @@
 import dom from 'metal-dom';
 import ReadingProgress from '../src/ReadingProgress';
 
-describe('ReadingProgress', function() {
+describe('ReadingProgress', () => {
   var readingProgress;
 
-  beforeAll(function() {
+  beforeAll(() => {
     dom.enterDocument('<style id="style">body{margin:0;padding:0;}');
     dom.enterDocument('<div id="content">' +
       '<div id="content1" style="height:5000px;"><h1>Title 1</h1><p>Content1</p></div>' +
@@ -13,17 +13,17 @@ describe('ReadingProgress', function() {
     );
   });
 
-  afterEach(function() {
+  afterEach(() => {
     if (readingProgress) {
       readingProgress.dispose();
     }
   });
 
-  afterAll(function() {
+  afterAll(() => {
     document.body.innerHTML = '';
   });
 
-  it('should render the items according to the "items" attribute', function() {
+  it('should render the items according to the "items" attribute', () => {
     readingProgress = new ReadingProgress({
       items: [
         {
@@ -48,7 +48,7 @@ describe('ReadingProgress', function() {
     expect('2 min read').toBe(items.item(1).querySelector('.reading-subtitle').textContent);
   });
 
-  it('should generate title from the referenced content when none is given', function() {
+  it('should generate title from the referenced content when none is given', () => {
     readingProgress = new ReadingProgress({
       items: ['#content1', '#content2', '#content3']
     });
@@ -62,7 +62,7 @@ describe('ReadingProgress', function() {
     expect('Title 3').toBe(titles.item(2).textContent);
   });
 
-  it('should generate expected time from the referenced content when none is given', function() {
+  it('should generate expected time from the referenced content when none is given', () => {
     document.querySelector('#content1 p').innerHTML = getBigText(1600);
     document.querySelector('#content2 p').innerHTML = getBigText(750);
     document.querySelector('#content3 p').innerHTML = getBigText(3100);
@@ -80,7 +80,7 @@ describe('ReadingProgress', function() {
     expect('2 min read').toBe(times.item(2).textContent);
   });
 
-  it('should only generate missing item info when href is hash link', function() {
+  it('should only generate missing item info when href is hash link', () => {
     readingProgress = new ReadingProgress({
       items: ['#content1', 'noHash', '#content3']
     });
@@ -90,7 +90,7 @@ describe('ReadingProgress', function() {
     expect('Title 3').toBe(readingProgress.items[2].title);
   });
 
-  it('should not create new ReadingProgressTracker after each render', function(done) {
+  it('should not create new ReadingProgressTracker after each render', (done) => {
     readingProgress = new ReadingProgress({
       items: ['#content1', '#content2', '#content3']
     });
@@ -99,13 +99,13 @@ describe('ReadingProgress', function() {
     expect(tracker).toBeTruthy();
 
     readingProgress.items = ['#content1', '#content2'];
-    readingProgress.once('stateSynced', function() {
+    readingProgress.once('stateSynced', () => {
       expect(tracker).toBe(readingProgress.getTracker());
       done();
     });
   });
 
-  it('should update progress bar when the tracker\'s progress attr changes', function() {
+  it('should update progress bar when the tracker\'s progress attr changes', () => {
     readingProgress = new ReadingProgress({
       items: ['#content1', '#content2', '#content3']
     });
@@ -121,7 +121,7 @@ describe('ReadingProgress', function() {
     expect('60').toBe(circle.getAttribute('stroke-dashoffset'));
   });
 
-  it('should set the title as an empty string if title element is not found', function() {
+  it('should set the title as an empty string if title element is not found', () => {
     readingProgress = new ReadingProgress({
       items: ['#content1', '#content2', '#content3'],
       titleSelector: 'h2'

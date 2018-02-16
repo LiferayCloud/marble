@@ -455,7 +455,7 @@ Datatable.STATE = {
    */
   formatColumns: {
     validator: core.isFunction,
-    value: function(columns) {
+    value: (columns) => {
       return columns.sort();
     },
   },
@@ -467,7 +467,7 @@ Datatable.STATE = {
    */
   formatColumnsType: {
     validator: core.isFunction,
-    value: function(columnstype) {
+    value: (columnstype) => {
       return columnstype;
     },
   },

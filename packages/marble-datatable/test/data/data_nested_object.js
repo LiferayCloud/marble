@@ -8,7 +8,7 @@ var data_nested_object = [{
   }
 }];
 
-var data_nested_object_expanded_fn = function() {
+var data_nested_object_expanded_fn = () => {
   return {
     'type': 'array',
     'value': [{

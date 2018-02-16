@@ -127,20 +127,21 @@
   <script type="text/javascript">
 
     var tooltips = document.querySelectorAll('.tooltip');
-    setTimeout(function() {
-      tooltips.forEach(function(tooltip) {
+
+    setTimeout(() => {
+      tooltips.forEach((tooltip) => {
         tooltip.classList.add('showing');
       });
     }, 50);
 
     function changeTheme(item) {
       if(item.value === "light") {
-        tooltips.forEach(function(tooltip) {
+        tooltips.forEach((tooltip) => {
           tooltip.classList.add('tooltip-light');
           tooltip.classList.remove('tooltip-dark');
         });
       } else {
-        tooltips.forEach(function(tooltip) {
+        tooltips.forEach((tooltip) => {
           tooltip.classList.add('tooltip-dark');
           tooltip.classList.remove('tooltip-light');
         });

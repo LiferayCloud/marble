@@ -2,8 +2,8 @@ let path = require('path');
 let assert = require('yeoman-generator').assert;
 let helpers = require('yeoman-generator').test;
 
-describe('marble-generator:app', function() {
-  beforeAll(function(done) {
+describe('marble-generator:app', () => {
+  beforeAll((done) => {
     helpers
       .run(path.join(__dirname, '../app'))
       .withOptions({skipInstall: true})
@@ -13,7 +13,7 @@ describe('marble-generator:app', function() {
       .on('end', done);
   });
 
-  it('creates files', function() {
+  it('creates files', () => {
     assert.file([
       'demos/index.html',
       'src/MarbleComponent.js',
@@ -28,7 +28,7 @@ describe('marble-generator:app', function() {
     ]);
   });
 
-  it('content of MarbleComponent.js', function() {
+  it('content of MarbleComponent.js', () => {
     assert.fileContent(
       'src/MarbleComponent.js',
       /class MarbleComponent extends Component/
@@ -41,7 +41,7 @@ describe('marble-generator:app', function() {
     assert.fileContent('src/MarbleComponent.js', /export default MarbleComponent/);
   });
 
-  it('content of MarbleComponent.soy', function() {
+  it('content of MarbleComponent.soy', () => {
     assert.fileContent('src/MarbleComponent.soy', /{namespace MarbleComponent}/);
   });
 });

@@ -6,14 +6,14 @@ import Slider from '../src/Slider';
 
 var slider;
 
-describe('Slider', function() {
-  afterEach(function() {
+describe('Slider', () => {
+  afterEach(() => {
     if (slider) {
       slider.dispose();
     }
   });
 
-  it('should create a hidden named input so it can be embedded in a form', function() {
+  it('should create a hidden named input so it can be embedded in a form', () => {
     slider = new Slider({
       inputName: 'sliderInput',
       value: 50
@@ -25,7 +25,7 @@ describe('Slider', function() {
     expect('50').toBe(sliderInput.getAttribute('value'));
   });
 
-  it('should update the value of the hidden input when the slider value changes', function(done) {
+  it('should update the value of the hidden input when the slider value changes', (done) => {
     slider = new Slider({
       inputName: 'sliderInput',
       value: 20
@@ -37,7 +37,7 @@ describe('Slider', function() {
 
     slider.value = 80;
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect('80').toBe(
         slider.element.querySelector('input[name="sliderInput"]').getAttribute('value')
       );
@@ -45,7 +45,7 @@ describe('Slider', function() {
     });
   });
 
-  it.skip('should update the value of the slider when clicking on the rail area', function(done) {
+  it.skip('should update the value of the slider when clicking on the rail area', (done) => {
     slider = new Slider({
       min: 0,
       value: 50,
@@ -57,21 +57,21 @@ describe('Slider', function() {
       offsetX: 0.9 * rail.width
     });
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect(90).toBe(slider.value);
 
       dom.triggerEvent(slider.element.querySelector('.rail-active'), 'click', {
         offsetX: 0.1 * rail.width
       });
 
-      async.nextTick(function() {
+      async.nextTick(() => {
         expect(10).toBe(slider.value);
         done();
       });
     });
   });
 
-  it('should update the position percentage to next value if clicking close to the right of the handle', function(done) {
+  it('should update the position percentage to next value if clicking close to the right of the handle', (done) => {
     slider = new Slider({
       min: 0,
       value: 1,
@@ -84,13 +84,13 @@ describe('Slider', function() {
       offsetX: rail.width / 2 + handle.width
     });
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect('100%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
 
-  it.skip('should update the position percentage to previous value if clicking close to the left of the handle', function(done) {
+  it.skip('should update the position percentage to previous value if clicking close to the left of the handle', (done) => {
     slider = new Slider({
       min: 0,
       value: 1,
@@ -103,13 +103,13 @@ describe('Slider', function() {
       offsetX: rail.width / 2 - handle.width
     });
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect('0%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
 
-  it('should not update the value if clicking on handle', function(done) {
+  it('should not update the value if clicking on handle', (done) => {
     slider = new Slider({
       min: 0,
       value: 1,
@@ -120,13 +120,13 @@ describe('Slider', function() {
     expect('50%').toBe(railHandleEl.style.left);
 
     dom.triggerEvent(slider.element.querySelector('.handle'), 'click');
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect('50%').toBe(railHandleEl.style.left);
       done();
     });
   });
 
-  it.skip('should update the value of the slider when dragging the rail handle', function(done) {
+  it.skip('should update the value of the slider when dragging the rail handle', (done) => {
     slider = new Slider({
       min: 0,
       value: 0,
@@ -139,13 +139,13 @@ describe('Slider', function() {
     DragTestHelper.triggerMouseEvent(handle, 'mousedown', 0, 0);
     DragTestHelper.triggerMouseEvent(document, 'mousemove', rail.width / 2, 0);
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect(50).toBe(slider.value);
       done();
     });
   });
 
-  it.skip('should update the position percentage to 0% when dragged to before beginning of rail', function(done) {
+  it.skip('should update the position percentage to 0% when dragged to before beginning of rail', (done) => {
     slider = new Slider({
       min: 0,
       value: 50,
@@ -158,13 +158,13 @@ describe('Slider', function() {
     DragTestHelper.triggerMouseEvent(handle, 'mousedown', rail.width / 2, 0);
     DragTestHelper.triggerMouseEvent(document, 'mousemove', -10, 0);
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect('0%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
 
-  it.skip('should update the position percentage to 100% when dragged to after end of rail', function(done) {
+  it.skip('should update the position percentage to 100% when dragged to after end of rail', (done) => {
     slider = new Slider({
       min: 0,
       value: 0,
@@ -177,13 +177,13 @@ describe('Slider', function() {
     DragTestHelper.triggerMouseEvent(handle, 'mousedown', 0, 0);
     DragTestHelper.triggerMouseEvent(document, 'mousemove', rail.right + 10, 0);
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect('100%').toBe(slider.element.querySelector('.rail-handle').style.left);
       done();
     });
   });
 
-  it('should update aria attributes when value changes', function(done) {
+  it('should update aria attributes when value changes', (done) => {
     slider = new Slider({
       max: 100,
       min: 0,
@@ -194,13 +194,13 @@ describe('Slider', function() {
     expect('20').toBe(handle.getAttribute('aria-valuenow'));
 
     slider.value = 80;
-    slider.once('stateSynced', function() {
+    slider.once('stateSynced', () => {
       expect('80').toBe(handle.getAttribute('aria-valuenow'));
       done();
     });
   });
 
-  it('should update the drag container when element changes', function() {
+  it('should update the drag container when element changes', () => {
     slider = new Slider();
     expect(slider.element).toBe(slider.getDrag().container);
 
@@ -208,12 +208,12 @@ describe('Slider', function() {
     expect(slider.element).toBe(slider.getDrag().container);
   });
 
-  it('should not update the drag container when element changes to null', function() {
+  it('should not update the drag container when element changes to null', () => {
     slider = new Slider();
     slider.element = null;
   });
 
-  it('should update the drag container element when element changes', function() {
+  it('should update the drag container element when element changes', () => {
     slider = new Slider();
     expect(slider.element).toBe(slider.getDrag().container);
 
@@ -223,7 +223,7 @@ describe('Slider', function() {
     expect(element).toBe(slider.getDrag().container);
   });
 
-  it('shouldnt update value if its smaller than min', function() {
+  it('shouldnt update value if its smaller than min', () => {
     slider = new Slider({
       min: 30,
       value: 50
@@ -234,7 +234,7 @@ describe('Slider', function() {
     expect(50).toBe(slider.value);
   });
 
-  it('shouldnt update value if its bigger than max', function() {
+  it('shouldnt update value if its bigger than max', () => {
     slider = new Slider({
       max: 100,
       value: 50
@@ -245,7 +245,7 @@ describe('Slider', function() {
     expect(50).toBe(slider.value);
   });
 
-  it('should update value when max becomes smaller than value', function(done) {
+  it('should update value when max becomes smaller than value', (done) => {
     slider = new Slider({
       min: 0,
       value: 50
@@ -253,13 +253,13 @@ describe('Slider', function() {
 
     slider.min = 80;
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect(80).toBe(slider.value);
       done();
     });
   });
 
-  it('should update value when min becomes bigger than value', function(done) {
+  it('should update value when min becomes bigger than value', (done) => {
     slider = new Slider({
       max: 100,
       value: 50
@@ -267,13 +267,13 @@ describe('Slider', function() {
 
     slider.max = 20;
 
-    async.nextTick(function() {
+    async.nextTick(() => {
       expect(20).toBe(slider.value);
       done();
     });
   });
 
-  it('should add aria attributes for min/max values', function() {
+  it('should add aria attributes for min/max values', () => {
     slider = new Slider({
       max: 100,
       min: 0
@@ -284,7 +284,7 @@ describe('Slider', function() {
     expect('0').toBe(handle.getAttribute('aria-valuemin'));
   });
 
-  it('should allow calling the soy template without params', function() {
+  it('should allow calling the soy template without params', () => {
     var element = document.createElement('div');
     IncrementalDOM.patch(element, Slider.TEMPLATE);
     expect('0%').toBe(element.querySelector('.rail-active').style.width);

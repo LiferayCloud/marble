@@ -32,7 +32,7 @@ var data_simple = [{
   'link': 'http://www.amazon.com/Batman-Killing-Deluxe-Alan-Moore-ebook/dp/B009POHHRG/ref=sr_1_1?s=books&ie=UTF8&qid=1439406383&sr=1-1'
 }];
 
-var data_simple_expanded_fn = function() {
+var data_simple_expanded_fn = () => {
   return {
     'type': 'array',
     'value': [{

@@ -1,8 +1,8 @@
 import dom from 'metal-dom';
 import Toast from '../src/Toast';
 
-describe('Toast', function() {
-  it('should update spinner as done', function(done) {
+describe('Toast', () => {
+  it('should update spinner as done', (done) => {
     var toast = new Toast({
       spinner: true,
       spinnerDone: false

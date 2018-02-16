@@ -21,7 +21,7 @@ const items = [
   },
 ];
 
-describe('RadioGroup', function() {
+describe('RadioGroup', () => {
   afterEach(() => {
     if (radioGroup) {
       radioGroup.dispose();

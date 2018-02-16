@@ -8,13 +8,13 @@ import dom from 'metal-dom';
 var component;
 var input;
 
-var filterData = function(query) {
-  return ['Alabama', 'Alaska'].filter(function(item) {
+var filterData = (query) => {
+  return ['Alabama', 'Alaska'].filter((item) => {
     return item.toLowerCase().indexOf(query.toLowerCase()) === 0;
   });
 };
 
-var simulateFocus = function(element) {
+var simulateFocus = (element) => {
   element.focus();
 
   if (UA.isFirefox) {
@@ -22,21 +22,21 @@ var simulateFocus = function(element) {
   }
 };
 
-var getListItem = function(index) {
+var getListItem = (index) => {
   return getListItems().item(index);
 };
 
-var getLastListItem = function() {
+var getLastListItem = () => {
   let list = getListItems();
   return getListItem(list.length - 1);
 };
 
-var getListItems = function() {
+var getListItems = () => {
   return component.getList().element.querySelectorAll('.listitem');
 };
 
-describe('Autocomplete', function() {
-  afterEach(function() {
+describe('Autocomplete', () => {
+  afterEach(() => {
     if (component) {
       component.dispose();
     }
@@ -45,19 +45,19 @@ describe('Autocomplete', function() {
     }
   });
 
-  beforeEach(function() {
+  beforeEach(() => {
     input = document.createElement('input');
     input.type = 'text';
     dom.enterDocument(input);
   });
 
-  it('should process valid query and display element', function(done) {
+  it('should process valid query and display element', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
     });
 
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       expect(component.visible).toBeTruthy();
       expect(2).toBe(component.element.querySelectorAll('li').length);
       done();
@@ -65,14 +65,14 @@ describe('Autocomplete', function() {
     component.request('a');
   });
 
-  it('should process invalid query and hide element', function(done) {
+  it('should process invalid query and hide element', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
     });
 
-    component.request('asparagus').then(function() {
-      async.nextTick(function() {
+    component.request('asparagus').then(() => {
+      async.nextTick(() => {
         expect(!component.visible).toBeTruthy();
         expect(0).toBe(component.element.querySelectorAll('li').length);
         done();
@@ -80,14 +80,14 @@ describe('Autocomplete', function() {
     });
   });
 
-  it('should process query null data and hide element', function(done) {
+  it('should process query null data and hide element', (done) => {
     component = new Autocomplete({
       data: null,
       inputElement: input
     });
 
-    component.request('asparagus').then(function() {
-      async.nextTick(function() {
+    component.request('asparagus').then(() => {
+      async.nextTick(() => {
         expect(!component.visible).toBeTruthy();
         expect(0).toBe(component.element.querySelectorAll('li').length);
         done();
@@ -95,19 +95,19 @@ describe('Autocomplete', function() {
     });
   });
 
-  it('should throws error with malformed data structure', function(done) {
+  it('should throws error with malformed data structure', (done) => {
     component = new Autocomplete({
       data: [1],
       inputElement: input
     });
 
-    component.request('query').catch(function(reason) {
+    component.request('query').catch((reason) => {
       expect('Autocomplete item must be an object').toBe(reason.message);
       done();
     });
   });
 
-  it('should throws error with malformed data object structure', function(done) {
+  it('should throws error with malformed data object structure', (done) => {
     component = new Autocomplete({
       data: [{
         foo: 'foo'
@@ -115,22 +115,22 @@ describe('Autocomplete', function() {
       inputElement: input
     });
 
-    component.request('query').catch(function(reason) {
+    component.request('query').catch((reason) => {
       expect('Autocomplete item must be an object with \'textPrimary\' key').toBe(reason.message);
       done();
     });
   });
 
-  it('should close dropdown list when item is selected', function(done) {
+  it('should close dropdown list when item is selected', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
     });
 
-    component.on('stateSynced', function() {
-      component.once('select', function(value) {
+    component.on('stateSynced', () => {
+      component.once('select', (value) => {
         expect('Alabama').toBe(value.text);
-        component.on('stateSynced', function() {
+        component.on('stateSynced', () => {
           expect(!component.visible).toBeTruthy();
           done();
         });
@@ -142,14 +142,14 @@ describe('Autocomplete', function() {
     dom.triggerEvent(input, 'input');
   });
 
-  it('should select an option by pressing enter key', function(done) {
+  it('should select an option by pressing enter key', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
     });
 
-    component.on('stateSynced', function() {
-      component.once('select', function(value) {
+    component.on('stateSynced', () => {
+      component.once('select', (value) => {
         expect('Alabama').toBe(value.text);
         done();
       });
@@ -160,14 +160,14 @@ describe('Autocomplete', function() {
     simulateFocus(input);
   });
 
-  it('should select an option by pressing space key', function(done) {
+  it('should select an option by pressing space key', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
     });
 
-    component.on('stateSynced', function() {
-      component.once('select', function(value) {
+    component.on('stateSynced', () => {
+      component.once('select', (value) => {
         expect('Alabama').toBe(value.text);
         done();
       });
@@ -179,7 +179,7 @@ describe('Autocomplete', function() {
   });
 
 
-  it.skip('should hide element when click outside input', function(done) {
+  it.skip('should hide element when click outside input', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -189,8 +189,8 @@ describe('Autocomplete', function() {
     otherInput.type = 'text';
     dom.enterDocument(otherInput);
 
-    component.on('stateSynced', function() {
-      async.nextTick(function() {
+    component.on('stateSynced', () => {
+      async.nextTick(() => {
         expect(!component.visible).toBeTruthy();
         dom.exitDocument(otherInput);
         done();
@@ -204,14 +204,14 @@ describe('Autocomplete', function() {
     simulateFocus(input);
   });
 
-  it('should not hide element when clicking inside input', function(done) {
+  it('should not hide element when clicking inside input', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
     });
 
-    component.on('stateSynced', function() {
-      async.nextTick(function() {
+    component.on('stateSynced', () => {
+      async.nextTick(() => {
         expect(component.visible).toBeTruthy();
         done();
       });
@@ -223,7 +223,7 @@ describe('Autocomplete', function() {
     simulateFocus(input);
   });
 
-  it('should show element when focus input', function(done) {
+  it('should show element when focus input', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input,
@@ -233,7 +233,7 @@ describe('Autocomplete', function() {
     input.value = 'Alabama';
 
     expect(component.visible).toBeFalsy();
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       expect(component.visible).toBeTruthy();
       done();
     });
@@ -241,7 +241,7 @@ describe('Autocomplete', function() {
     simulateFocus(input);
   });
 
-  it('should link the input with the list by aria-owns attribute', function() {
+  it('should link the input with the list by aria-owns attribute', () => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -251,7 +251,7 @@ describe('Autocomplete', function() {
     expect(input.getAttribute('aria-owns')).toBe(listComponentElement.querySelector('.list-group').getAttribute('id'));
   });
 
-  it('should active the first item as soon as the list appears', function(done) {
+  it('should active the first item as soon as the list appears', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -260,13 +260,13 @@ describe('Autocomplete', function() {
     input.value = 'Al';
     simulateFocus(input);
 
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
       done();
     });
   });
 
-  it('should navigate to the next option by pressing down arrow key', function(done) {
+  it('should navigate to the next option by pressing down arrow key', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -275,7 +275,7 @@ describe('Autocomplete', function() {
     input.value = 'Al';
     simulateFocus(input);
 
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
 
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
@@ -285,7 +285,7 @@ describe('Autocomplete', function() {
     });
   });
 
-  it('should navigate to the last option by pressing up arrow key if the first one is selected', function(done) {
+  it('should navigate to the last option by pressing up arrow key if the first one is selected', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -293,7 +293,7 @@ describe('Autocomplete', function() {
 
     input.value = 'Al';
 
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
 
       dom.triggerEvent(input, 'keydown', {keyCode: 38});
@@ -305,7 +305,7 @@ describe('Autocomplete', function() {
     simulateFocus(input);
   });
 
-  it('should navigate to the first option by pressing down arrow key if the last one is selected', function(done) {
+  it('should navigate to the first option by pressing down arrow key if the last one is selected', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -314,7 +314,7 @@ describe('Autocomplete', function() {
     input.value = 'Al';
     simulateFocus(input);
 
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       expect(dom.hasClass(getListItem(0), 'active')).toBeTruthy();
 
       dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
@@ -326,7 +326,7 @@ describe('Autocomplete', function() {
     });
   });
 
-  it('should navigate to the previous option by pressing up arrow key', function(done) {
+  it('should navigate to the previous option by pressing up arrow key', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -335,7 +335,7 @@ describe('Autocomplete', function() {
     input.value = 'Al';
     simulateFocus(input);
 
-    component.on('stateSynced', function() {
+    component.on('stateSynced', () => {
       dom.triggerEvent(input, 'keydown', {keyCode: 40});
 
       expect(dom.hasClass(getListItem(0), 'active')).toBeFalsy();
@@ -349,7 +349,7 @@ describe('Autocomplete', function() {
     });
   });
 
-  it('should not create an exception in keydown listener if the list is not visible', function(done) {
+  it('should not create an exception in keydown listener if the list is not visible', (done) => {
     component = new Autocomplete({
       data: filterData,
       inputElement: input
@@ -357,8 +357,8 @@ describe('Autocomplete', function() {
 
     input.value = 'New York City';
     simulateFocus(input);
-    async.nextTick(function() {
-      expect(function() {
+    async.nextTick(() => {
+      expect(() => {
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 40});
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 38});
         dom.triggerEvent(component.inputElement, 'keydown', {keyCode: 13});
@@ -368,16 +368,16 @@ describe('Autocomplete', function() {
     });
   });
 
-  describe('Align', function() {
-    beforeEach(function() {
+  describe('Align', () => {
+    beforeEach(() => {
       sinon.stub(Align, 'align');
     });
 
-    afterEach(function() {
+    afterEach(() => {
       Align.align.restore();
     });
 
-    it('should update width to be equal to the input\'s width', function() {
+    it('should update width to be equal to the input\'s width', () => {
       input.style.width = '200px';
       component = new Autocomplete({
         data: filterData,
@@ -387,7 +387,7 @@ describe('Autocomplete', function() {
       expect(input.offsetWidth).toBe(component.element.offsetWidth);
     });
 
-    it('should update width to be equal to the input\'s width when window resizes', function(done) {
+    it('should update width to be equal to the input\'s width when window resizes', (done) => {
       input.style.width = '200px';
       component = new Autocomplete({
         data: filterData,
@@ -400,13 +400,13 @@ describe('Autocomplete', function() {
       dom.triggerEvent(window, 'resize');
 
       // Waits for the resize event's debounce function to finish.
-      setTimeout(function() {
+      setTimeout(() => {
         expect(input.offsetWidth).toBe(component.element.offsetWidth);
         done();
       }, 200);
     });
 
-    it('should align element when it is created already visible', function() {
+    it('should align element when it is created already visible', () => {
       sinon.spy(Autocomplete.prototype, 'attached');
       component = new Autocomplete({
         data: filterData,
@@ -417,7 +417,7 @@ describe('Autocomplete', function() {
       Autocomplete.prototype.attached.restore();
     });
 
-    it('should align element when it becomes visible', function(done) {
+    it('should align element when it becomes visible', (done) => {
       component = new Autocomplete({
         data: filterData,
         inputElement: input
@@ -425,13 +425,13 @@ describe('Autocomplete', function() {
       expect(0).toBe(Align.align.callCount);
 
       component.visible = true;
-      component.once('stateSynced', function() {
+      component.once('stateSynced', () => {
         expect(1).toBe(Align.align.callCount);
         done();
       });
     });
 
-    it('should realign element when window resizes while the results are visible', function(done) {
+    it('should realign element when window resizes while the results are visible', (done) => {
       component = new Autocomplete({
         data: filterData,
         inputElement: input,
@@ -443,13 +443,13 @@ describe('Autocomplete', function() {
       dom.triggerEvent(window, 'resize');
 
       // Waits for the resize event's debounce function to finish.
-      setTimeout(function() {
+      setTimeout(() => {
         expect(1).toBe(Align.align.callCount);
         done();
       }, 200);
     });
 
-    it('should not realign element when window resizes while the results aren\'t visible', function(done) {
+    it('should not realign element when window resizes while the results aren\'t visible', (done) => {
       component = new Autocomplete({
         data: filterData,
         inputElement: input
@@ -458,13 +458,13 @@ describe('Autocomplete', function() {
       dom.triggerEvent(window, 'resize');
 
       // Waits for the resize event's debounce function to finish.
-      setTimeout(function() {
+      setTimeout(() => {
         expect(0).toBe(Align.align.callCount);
         done();
       }, 200);
     });
 
-    it('should add "autocomplete-bottom" css class if results are aligned on the bottom', function() {
+    it('should add "autocomplete-bottom" css class if results are aligned on the bottom', () => {
       Align.align.returns(Align.Bottom);
       component = new Autocomplete({
         data: filterData,
@@ -475,7 +475,7 @@ describe('Autocomplete', function() {
       expect(dom.hasClass(component.element, 'autocomplete-bottom')).toBeTruthy();
     });
 
-    it('should add "autocomplete-top" css class if results are aligned on the top', function() {
+    it('should add "autocomplete-top" css class if results are aligned on the top', () => {
       Align.align.returns(Align.Top);
       component = new Autocomplete({
         data: filterData,
@@ -486,7 +486,7 @@ describe('Autocomplete', function() {
       expect(dom.hasClass(component.element, 'autocomplete-top')).toBeTruthy();
     });
 
-    it('should allow stopping looking for a better region to show the list', function() {
+    it('should allow stopping looking for a better region to show the list', () => {
       component = new Autocomplete({
         data: filterData,
         inputElement: input,
@@ -497,7 +497,7 @@ describe('Autocomplete', function() {
       expect(false).toBe(Align.align.args[0][3]);
     });
 
-    it('should do not stop looking for a better region to show the list by default', function() {
+    it('should do not stop looking for a better region to show the list by default', () => {
       component = new Autocomplete({
         data: filterData,
         inputElement: input,

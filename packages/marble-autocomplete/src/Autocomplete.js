@@ -1,4 +1,4 @@
-import core from 'metal';
+import {core, isServerSide} from 'metal';
 import debounce from 'metal-debounce';
 import dom from 'metal-dom';
 import {CancellablePromise as Promise} from 'metal-promise';
@@ -23,6 +23,11 @@ class Autocomplete extends AutocompleteBase {
    */
   attached() {
     super.attached();
+
+    if (isServerSide()) {
+      return;
+    }
+
     this.setAriaAttributes_();
     this.eventHandler_.add(
       dom.on(this.inputElement, 'focus', this.handleInputFocus_.bind(this))

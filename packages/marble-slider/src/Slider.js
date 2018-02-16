@@ -1,4 +1,4 @@
-import core from 'metal';
+import {core, isServerSide} from 'metal';
 import dom from 'metal-dom';
 import Component from 'metal-component';
 import {Drag} from 'metal-drag-drop';
@@ -15,6 +15,10 @@ class Slider extends Component {
    * @inheritDoc
    */
   attached() {
+    if (isServerSide()) {
+      return;
+    }
+
     /**
      * Manages dragging the rail handle to update the slider value.
      * @type {Drag}
@@ -63,6 +67,10 @@ class Slider extends Component {
    * @inheritDoc
    */
   disposeInternal() {
+    if (isServerSide()) {
+      return;
+    }
+
     super.disposeInternal();
     this.drag_.dispose();
   }

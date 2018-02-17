@@ -1,4 +1,4 @@
-import core from 'metal';
+import {core, isServerSide} from 'metal';
 import dom from 'metal-dom';
 import templates from './Datatable.soy.js';
 import Component from 'metal-component';
@@ -7,6 +7,19 @@ import Soy from 'metal-soy';
 import UA from 'metal-useragent';
 
 class Datatable extends Component {
+  /**
+   * @inheritDoc
+   */
+  attached() {
+    if (isServerSide()) {
+      return;
+    }
+
+    this.keyboardFocusManager_ = new KeyboardFocusManager(this, 'td,th')
+      .setFocusHandler(this.handleNextFocus_.bind(this))
+      .start();
+  }
+
   /**
    * Visits array items and asserts that it only contains one literal type.
    * @param {array} value
@@ -36,15 +49,6 @@ class Datatable extends Component {
     if (type1 && type2 && type1 !== type2) {
       throw new Error('Datatable does not support mixed types in arrays.');
     }
-  }
-
-  /**
-   * @inheritDoc
-   */
-  attached() {
-    this.keyboardFocusManager_ = new KeyboardFocusManager(this, 'td,th')
-      .setFocusHandler(this.handleNextFocus_.bind(this))
-      .start();
   }
 
   /**

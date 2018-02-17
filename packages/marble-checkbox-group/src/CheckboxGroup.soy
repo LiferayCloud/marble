@@ -4,22 +4,24 @@
  * This renders the component's whole content.
  */
 {template .render}
-  {@param items: list<?>}
+  {@param? items: list<?>}
   {@param? name: string}
   {@param? style: string}
 
   <div class="{$style}">
-    {foreach $item in $items}
-      {let $checkedAttr kind="attributes"}
-        {if $item.checked}
-          checked="checked"
-        {/if}
-      {/let}
+    {if $items}
+      {foreach $item in $items}
+        {let $checkedAttr kind="attributes"}
+          {if $item.checked}
+            checked="checked"
+          {/if}
+        {/let}
 
-      <div class="checkbox">
-        <input id="{$item.id}" name="{$name}" value="{$item.value}" type="checkbox" {$checkedAttr}>
-        <label for="{$item.id}">{$item.label}</label>
-      </div>
-    {/foreach}
+        <div class="checkbox">
+          <input id="{$item.id}" name="{$name}" value="{$item.value}" type="checkbox" {$checkedAttr}>
+          <label for="{$item.id}">{$item.label}</label>
+        </div>
+      {/foreach}
+    {/if}
   </div>
 {/template}

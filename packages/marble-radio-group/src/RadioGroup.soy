@@ -4,22 +4,24 @@
  *
  */
 {template .render}
-  {@param items: list<?>}
+  {@param? items: list<?>}
   {@param? name: string}
   {@param? style: string}
 
   <ul class="{$style}">
-    {foreach $item in $items}
-      {let $checkedAttr kind="attributes"}
-        {if $item.checked}
-          checked="checked"
-        {/if}
-      {/let}
+    {if $items}
+      {foreach $item in $items}
+        {let $checkedAttr kind="attributes"}
+          {if $item.checked}
+            checked="checked"
+          {/if}
+        {/let}
 
-      <li>
-        <input id="{$item.id}" name="{$name}" value="{$item.value}" type="radio" {$checkedAttr}>
-        <label for="{$item.id}">{$item.label}</label>
-      </li>
-    {/foreach}
+        <li>
+          <input id="{$item.id}" name="{$name}" value="{$item.value}" type="radio" {$checkedAttr}>
+          <label for="{$item.id}">{$item.label}</label>
+        </li>
+      {/foreach}
+    {/if}
   </ul>
 {/template}

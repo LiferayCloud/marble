@@ -27,14 +27,14 @@ RadioGroup.STATE = {
       label: Config.string(),
       value: Config.string(),
     })
-  ).required(),
+  ),
 
   /**
    * The name param used on each radio
    * @type {?String}
    * @default undefined
    */
-  name: Config.string().required(),
+  name: Config.string(),
 
   /**
    * The style of the radio group

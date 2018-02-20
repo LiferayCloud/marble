@@ -1,6 +1,6 @@
 {
   "name": "marble-select",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Marble's select component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-select",
@@ -26,7 +26,7 @@
     "select"
   ],
   "dependencies": {
-    "marble-dropdown": "^3.0.7",
+    "marble-dropdown": "^3.0.8",
     "metal": "^2.0.0",
     "metal-component": "^2.0.0",
     "metal-dom": "^2.0.0",

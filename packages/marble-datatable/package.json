@@ -1,6 +1,6 @@
 {
   "name": "marble-datatable",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "Marble's datatable component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-datatable",

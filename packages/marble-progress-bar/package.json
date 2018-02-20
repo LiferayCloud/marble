@@ -1,6 +1,6 @@
 {
   "name": "marble-progress-bar",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "description": "Marble's progress bar component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-progress-bar",

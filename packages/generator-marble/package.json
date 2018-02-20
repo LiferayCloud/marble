@@ -1,6 +1,6 @@
 {
   "name": "generator-marble",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Yeoman generator for Marble components",
   "license": "MIT",
   "main": "app/index.js",

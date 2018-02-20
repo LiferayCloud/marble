@@ -1,6 +1,6 @@
 {
   "name": "marble-reading-progress",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "description": "Marble's reading progress component.",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-reading-progress",

@@ -1,6 +1,6 @@
 {
   "name": "marble-toast",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Marble's toast component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-toast",
@@ -26,7 +26,7 @@
     "metal"
   ],
   "dependencies": {
-    "marble-alert": "^2.1.5",
+    "marble-alert": "^2.1.6",
     "metal-dom": "^2.4.7",
     "metal-soy": "^2.4.7"
   },

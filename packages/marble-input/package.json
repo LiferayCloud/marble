@@ -1,6 +1,6 @@
 {
   "name": "marble-input",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Marble's input component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-input",

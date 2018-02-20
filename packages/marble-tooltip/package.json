@@ -1,6 +1,6 @@
 {
   "name": "marble-tooltip",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Marble's tooltip component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-tooltip",

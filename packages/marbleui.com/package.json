@@ -1,8 +1,8 @@
 {
-  "name": "marblecss.com",
+  "name": "marbleui.com",
   "version": "0.0.1",
   "private": true,
-  "repository": "wedeploy/marblecss.com",
+  "repository": "wedeploy/marbleui.com",
   "scripts": {
     "start": "electric"
   },

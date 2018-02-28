@@ -1,6 +1,6 @@
-# [marblecss.com](http://marblecss.com) [![Built with Electric](https://img.shields.io/badge/built%20with-electric-f3c302.svg?style=flat)](http://electricjs.com)
+# [marbleui.com](http://marbleui.com) [![Built with Electric](https://img.shields.io/badge/built%20with-electric-f3c302.svg?style=flat)](http://electricjs.com)
 
-> Contains the [marblecss.com](http://marblecss.com) static documentation page.
+> Contains the [marbleui.com](http://marbleui.com) static documentation page.
 
 ## Setup
 

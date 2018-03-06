@@ -1,24 +1,37 @@
 {namespace Toast}
 
 /**
- * This renders the main element
- * @param closeButton
- * @param spinner
- * @param spinnerDone
- * @param? elementClasses
- * @param? spinnerClasses
  */
 {template .render}
   {@param? body: html}
-  {@param? closeButtonHtml: html|string}
+  {@param? closeButton: ?}
+  {@param? closeButtonHtml: html}
+  {@param? elementClasses: ?}
+  {@param? spinner: ?}
+  {@param? spinnerClasses: ?}
+  {@param? spinnerDone: ?}
+
   <div class="alert{$elementClasses ? ' ' + $elementClasses : ''}" role="alert">
-    {if $spinner}
-      <span class="spinner{$spinnerClasses ? ' ' + $spinnerClasses : ''}{$spinnerDone ? ' spinner-done' : ''}"></span>
+    {if isNonnull($spinner) and isNonnull($spinnerDone)}
+      {let $spinnerStyle kind="text"}
+        {if strContains($spinnerClasses, 'danger')}
+          danger
+        {elseif strContains($spinnerClasses, 'warning')}
+          warning
+        {else}
+          success
+        {/if}
+      {/let}
+      {call Spinner.render}
+        {param isDone: $spinnerDone ? true : false /}
+        {param style: $spinnerStyle ?: 'success' /}
+        {param size: 'small' /}
+      {/call}
     {/if}
-    {if $body}
+    {if isNonnull($body)}
       <span class="alert-body">{$body}</span>
     {/if}
-    {if $closeButton}
+    {if isNonnull($closeButton) or isNonnull($closeButtonHtml)}
       <button type="button" class="close" aria-label="Close" data-onclick="toggle">
         {if $closeButtonHtml}
           {$closeButtonHtml}

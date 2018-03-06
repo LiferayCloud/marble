@@ -1,6 +1,7 @@
-import templates from './Toast.soy.js';
 import Soy from 'metal-soy';
+import templates from './Toast.soy.js';
 import Alert from 'marble-alert';
+import 'marble-spinner';
 
 class Toast extends Alert {}
 

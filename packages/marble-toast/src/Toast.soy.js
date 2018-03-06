@@ -16,21 +16,22 @@ var soydata = goog.require('soydata');
 
 goog.module('Toast.incrementaldom');
 
-goog.require('goog.soy.data.SanitizedContent');
 var incrementalDom = goog.require('incrementaldom');
 goog.require('soy.asserts');
 var soyIdom = goog.require('soy.idom');
 
+var $templateAlias1 = Soy.getTemplate('Spinner.incrementaldom', 'render');
+
 
 /**
  * @param {{
- *  closeButton: (?),
- *  spinner: (?),
- *  spinnerDone: (?),
- *  elementClasses: (?),
- *  spinnerClasses: (?),
  *  body: (function()|null|undefined),
- *  closeButtonHtml: (!goog.soy.data.SanitizedContent|function()|null|string|undefined)
+ *  closeButton: (?),
+ *  closeButtonHtml: (function()|null|undefined),
+ *  elementClasses: (?),
+ *  spinner: (?),
+ *  spinnerClasses: (?),
+ *  spinnerDone: (?)
  * }} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
@@ -39,28 +40,47 @@ var soyIdom = goog.require('soy.idom');
  */
 function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
+  var $$temp;
+  opt_data = opt_data || {};
   /** @type {function()|null|undefined} */
   var body = soy.asserts.assertType(opt_data.body == null || goog.isFunction(opt_data.body), 'body', opt_data.body, 'function()|null|undefined');
-  /** @type {!goog.soy.data.SanitizedContent|function()|null|string|undefined} */
-  var closeButtonHtml = soy.asserts.assertType(opt_data.closeButtonHtml == null || goog.isFunction(opt_data.closeButtonHtml) || (goog.isString(opt_data.closeButtonHtml) || opt_data.closeButtonHtml instanceof goog.soy.data.SanitizedContent), 'closeButtonHtml', opt_data.closeButtonHtml, '!goog.soy.data.SanitizedContent|function()|null|string|undefined');
+  /** @type {?} */
+  var closeButton = opt_data.closeButton;
+  /** @type {function()|null|undefined} */
+  var closeButtonHtml = soy.asserts.assertType(opt_data.closeButtonHtml == null || goog.isFunction(opt_data.closeButtonHtml), 'closeButtonHtml', opt_data.closeButtonHtml, 'function()|null|undefined');
+  /** @type {?} */
+  var elementClasses = opt_data.elementClasses;
+  /** @type {?} */
+  var spinner = opt_data.spinner;
+  /** @type {?} */
+  var spinnerClasses = opt_data.spinnerClasses;
+  /** @type {?} */
+  var spinnerDone = opt_data.spinnerDone;
   incrementalDom.elementOpenStart('div');
-      incrementalDom.attr('class', 'alert' + (opt_data.elementClasses ? ' ' + opt_data.elementClasses : ''));
+      incrementalDom.attr('class', 'alert' + (elementClasses ? ' ' + elementClasses : ''));
       incrementalDom.attr('role', 'alert');
   incrementalDom.elementOpenEnd();
-    if (opt_data.spinner) {
-      incrementalDom.elementOpenStart('span');
-          incrementalDom.attr('class', 'spinner' + (opt_data.spinnerClasses ? ' ' + opt_data.spinnerClasses : '') + (opt_data.spinnerDone ? ' spinner-done' : ''));
-      incrementalDom.elementOpenEnd();
-      incrementalDom.elementClose('span');
+    if ((spinner != null) && (spinnerDone != null)) {
+      var spinnerStyle__soy17 = '';
+      var $tmp = null;
+if ((('' + spinnerClasses).indexOf('danger') != -1)) {
+  $tmp = 'danger';
+} else if ((('' + spinnerClasses).indexOf('warning') != -1)) {
+  $tmp = 'warning';
+} else {
+  $tmp = 'success';
+}
+spinnerStyle__soy17 += $tmp;
+      $templateAlias1({isDone: spinnerDone ? true : false, style: ($$temp = spinnerStyle__soy17) == null ? 'success' : $$temp, size: 'small'}, null, opt_ijData);
     }
-    if (body) {
+    if ((body != null)) {
       incrementalDom.elementOpenStart('span');
           incrementalDom.attr('class', 'alert-body');
       incrementalDom.elementOpenEnd();
         body();
       incrementalDom.elementClose('span');
     }
-    if (opt_data.closeButton) {
+    if ((closeButton != null) || (closeButtonHtml != null)) {
       incrementalDom.elementOpenStart('button');
           incrementalDom.attr('type', 'button');
           incrementalDom.attr('class', 'close');
@@ -68,7 +88,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
           incrementalDom.attr('data-onclick', 'toggle');
       incrementalDom.elementOpenEnd();
         if (closeButtonHtml) {
-          soyIdom.print(closeButtonHtml);
+          closeButtonHtml();
         } else {
           incrementalDom.elementOpenStart('span');
               incrementalDom.attr('aria-hidden', 'true');
@@ -83,13 +103,13 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
 exports.render = $render;
 /**
  * @typedef {{
- *  closeButton: (?),
- *  spinner: (?),
- *  spinnerDone: (?),
- *  elementClasses: (?),
- *  spinnerClasses: (?),
  *  body: (function()|null|undefined),
- *  closeButtonHtml: (!goog.soy.data.SanitizedContent|function()|null|string|undefined)
+ *  closeButton: (?),
+ *  closeButtonHtml: (function()|null|undefined),
+ *  elementClasses: (?),
+ *  spinner: (?),
+ *  spinnerClasses: (?),
+ *  spinnerDone: (?)
  * }}
  */
 $render.Params;
@@ -97,8 +117,8 @@ if (goog.DEBUG) {
   $render.soyTemplateName = 'Toast.render';
 }
 
-exports.render.params = ["body","closeButtonHtml","closeButton","spinner","spinnerDone","elementClasses","spinnerClasses"];
-exports.render.types = {"body":"html","closeButtonHtml":"html|string","closeButton":"any","spinner":"any","spinnerDone":"any","elementClasses":"any","spinnerClasses":"any"};
+exports.render.params = ["body","closeButton","closeButtonHtml","elementClasses","spinner","spinnerClasses","spinnerDone"];
+exports.render.types = {"body":"html","closeButton":"?","closeButtonHtml":"html","elementClasses":"?","spinner":"?","spinnerClasses":"?","spinnerDone":"?"};
 templates = exports;
 return exports;
 

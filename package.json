@@ -3,6 +3,9 @@
   "scripts": {
     "start": "lerna bootstrap -- --no-optional --no-package-lock",
     "publish": "lerna publish",
+    "build": "lerna run compile && lerna run build",
+    "compile": "lerna run compile",
+    "link": "lerna link",
     "test": "lerna run soy && jest",
     "format": "npm run prettier -- --write",
     "prettier": "prettier-eslint packages/marble-*/src/*.js packages/marble-*/src/**/*.js"

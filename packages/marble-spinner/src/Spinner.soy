@@ -4,21 +4,29 @@
  *
  */
 {template .render}
-  {@param? isDone: bool}
-  {@param? size: string}
-  {@param? style: string}
+  {@param? isDone: ?}
+  {@param? size: ?}
+  {@param? style: ?}
 
-  {let $doneClass kind="text"}
-    {if $isDone}spinner-done{/if}
+  {let $spinnerClasses kind="text"}
+    {if $isDone}{sp}spinner-done{/if}
+    {if $size}{sp}spinner-{$size}{/if}
+    {if $style}{sp}spinner-{$style}{/if}
   {/let}
 
-  {let $sizeClass kind="text"}
-    {if $size}spinner-{$size}{/if}
+  {let $icon kind="text"}
+    {if $style == 'danger'}
+      icon-12-close-short
+    {elseif $style == 'warning'}
+      icon-12-exclamation
+    {else}
+      icon-12-check
+    {/if}
   {/let}
 
-  {let $styleClass kind="text"}
-    {if $style}spinner-{$style}{/if}
-  {/let}
-
-  <span class="spinner {$doneClass} {$sizeClass} {$styleClass}"></span>
+  <span class="spinner{$spinnerClasses}">
+    {if $isDone}
+      <span class="{$icon}"></span>
+    {/if}
+  </span>
 {/template}

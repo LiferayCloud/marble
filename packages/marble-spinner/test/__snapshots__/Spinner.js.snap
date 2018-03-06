@@ -1,9 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spinner should generate the default markup 1`] = `<span class="spinner   "></span>`;
+exports[`Spinner should generate the default markup 1`] = `<span class="spinner"></span>`;
 
-exports[`Spinner should render with a completion state 1`] = `<span class="spinner spinner-done  "></span>`;
+exports[`Spinner should render with a completion state 1`] = `
+<span class="spinner spinner-done">
+  <span class="icon-12-check"></span>
+</span>
+`;
 
-exports[`Spinner should render with a different size 1`] = `<span class="spinner  spinner-large "></span>`;
+exports[`Spinner should render with a different size 1`] = `<span class="spinner spinner-large"></span>`;
 
-exports[`Spinner should render with a different style 1`] = `<span class="spinner   spinner-warning"></span>`;
+exports[`Spinner should render with danger style 1`] = `<span class="spinner spinner-danger"></span>`;
+
+exports[`Spinner should render with success style 1`] = `<span class="spinner spinner-success"></span>`;
+
+exports[`Spinner should render with success style and with a completion state 1`] = `
+<span class="spinner spinner-done spinner-success">
+  <span class="icon-12-check"></span>
+</span>
+`;
+
+exports[`Spinner should render with warning style 1`] = `<span class="spinner spinner-warning"></span>`;

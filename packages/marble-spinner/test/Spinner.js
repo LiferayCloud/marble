@@ -17,7 +17,7 @@ describe('Spinner', () => {
 
   it('should render with a completion state', () => {
     spinner = new Spinner({
-      isDone: true
+      isDone: true,
     });
 
     expect(spinner).toMatchSnapshot();
@@ -25,15 +25,40 @@ describe('Spinner', () => {
 
   it('should render with a different size', () => {
     spinner = new Spinner({
-      size: 'large'
+      size: 'large',
     });
 
     expect(spinner).toMatchSnapshot();
   });
 
-  it('should render with a different style', () => {
+  it('should render with warning style', () => {
     spinner = new Spinner({
-      style: 'warning'
+      style: 'warning',
+    });
+
+    expect(spinner).toMatchSnapshot();
+  });
+
+  it('should render with danger style', () => {
+    spinner = new Spinner({
+      style: 'danger',
+    });
+
+    expect(spinner).toMatchSnapshot();
+  });
+
+  it('should render with success style', () => {
+    spinner = new Spinner({
+      style: 'success',
+    });
+
+    expect(spinner).toMatchSnapshot();
+  });
+
+  it('should render with success style and with a completion state', () => {
+    spinner = new Spinner({
+      isDone: true,
+      style: 'success',
     });
 
     expect(spinner).toMatchSnapshot();

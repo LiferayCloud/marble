@@ -31,7 +31,7 @@ Spinner.STATE = {
    * The style of the spinner
    * @type {!String|undefined}
    */
-  style: Config.oneOf(['danger', 'warning']),
+  style: Config.oneOf(['danger', 'success', 'warning']),
 };
 
 Soy.register(Spinner, templates);

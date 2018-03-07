@@ -1,6 +1,6 @@
 {
   "name": "marble-input-matrix",
-  "version": "2.1.15",
+  "version": "2.1.16",
   "description": "Marble's input matrix component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-input-matrix",
@@ -25,7 +25,7 @@
     "metal"
   ],
   "dependencies": {
-    "marble-input": "^1.0.17",
+    "marble-input": "^1.0.18",
     "metal": "^2.16.0",
     "metal-component": "^2.16.0",
     "metal-soy": "^2.16.0",

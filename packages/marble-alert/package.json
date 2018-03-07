@@ -1,6 +1,6 @@
 {
   "name": "marble-alert",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Marble's alert component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-alert",

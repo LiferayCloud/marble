@@ -12,7 +12,7 @@
   {@param? spinnerDone: ?}
 
   <div class="alert{$elementClasses ? ' ' + $elementClasses : ''}" role="alert">
-    {if isNonnull($spinner) and isNonnull($spinnerDone)}
+    {if $spinner and $spinnerDone}
       {let $spinnerStyle kind="text"}
         {if strContains($spinnerClasses, 'danger')}
           danger
@@ -28,10 +28,10 @@
         {param size: 'small' /}
       {/call}
     {/if}
-    {if isNonnull($body)}
+    {if $body}
       <span class="alert-body">{$body}</span>
     {/if}
-    {if isNonnull($closeButton) or isNonnull($closeButtonHtml)}
+    {if $closeButton or $closeButtonHtml}
       <button type="button" class="close" aria-label="Close" data-onclick="toggle">
         {if $closeButtonHtml}
           {$closeButtonHtml}

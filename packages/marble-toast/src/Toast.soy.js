@@ -60,7 +60,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
       incrementalDom.attr('class', 'alert' + (elementClasses ? ' ' + elementClasses : ''));
       incrementalDom.attr('role', 'alert');
   incrementalDom.elementOpenEnd();
-    if ((spinner != null) && (spinnerDone != null)) {
+    if (spinner && spinnerDone) {
       var spinnerStyle__soy17 = '';
       var $tmp = null;
 if ((('' + spinnerClasses).indexOf('danger') != -1)) {
@@ -73,14 +73,14 @@ if ((('' + spinnerClasses).indexOf('danger') != -1)) {
 spinnerStyle__soy17 += $tmp;
       $templateAlias1({isDone: spinnerDone ? true : false, style: ($$temp = spinnerStyle__soy17) == null ? 'success' : $$temp, size: 'small'}, null, opt_ijData);
     }
-    if ((body != null)) {
+    if (body) {
       incrementalDom.elementOpenStart('span');
           incrementalDom.attr('class', 'alert-body');
       incrementalDom.elementOpenEnd();
         body();
       incrementalDom.elementClose('span');
     }
-    if ((closeButton != null) || (closeButtonHtml != null)) {
+    if (closeButton || closeButtonHtml) {
       incrementalDom.elementOpenStart('button');
           incrementalDom.attr('type', 'button');
           incrementalDom.attr('class', 'close');

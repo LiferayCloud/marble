@@ -2,33 +2,48 @@
    Variables
    ========================================================================== */
 
+/* Sizes
+   ========================================================================== */
+// [base]line
+$baseline: 6px !default;
+$base: $baseline !default;
+
+// [b]ase [p]redefined [s]izes
+$bps-xxs: $base * 3; // 18px
+$bps-xs: $base * 4; // 24px
+$bps-sm: $base * 6; // 36px
+$bps-md: $base * 8; // 48px
+$bps-lg: $base * 10; // 60px
+$bps-xl: $base * 12; // 72px
+
+// [b]order-[r]adius
+$br-sm: 2px !default;
+$br-md: 4px !default;
+$br-lg: 6px !default;
+$br-round: 50% !default;
+
 /* Colors
    ========================================================================== */
-
-$primary   : #0e141a !default;
-$secondary : $primary !default;
-$accent    : #00d46a !default;
 
 $black      : #000000 !default;
 $white      : #ffffff !default;
 $gray-light : #888888 !default;
 
-$brand-primary : $primary !default;
-$brand-success : #00d46a !default;
-$brand-warning : #ffb700 !default;
-$brand-danger  : #ff4040 !default;
-
 $color-charade : #282a36 !default;
 $color-green   : #00d46a !default;
 $color-blue    : #00a4ff !default;
 $color-violet  : #9552ef !default;
-$color-red     : $brand-danger !default;
+$color-red     : #ff4040 !default;
 $color-orange  : #ff6e00 !default;
-$color-yellow  : $brand-warning !default;
+$color-yellow  : #ffb700 !default;
 
 $color-facebook : #38589a;
 $color-twitter  : #27aae5;
 $color-linkedin : #007ab7;
+
+$primary   : #0e141a !default;
+$secondary : $white !default;
+$accent    : $color-yellow !default;
 
 /* Grid
    ========================================================================== */
@@ -63,6 +78,14 @@ $font-primary: "Galano", sans-serif !default;
 $font-secondary: "Open Sans", sans-serif !default;
 $font-mono: "Roboto Mono", sans-serif !default;
 
+// [f]ont-[w]eight [p]rimary
+$fwp-bold: 700 !default;
+$fwp-normal: 400 !default;
+
+// [f]ont-[w]eight [s]econdary
+$fws-bold: 700 !default;
+$fws-normal: 400 !default;
+
 $font-size-base: 14px !default;
 $font-size-h1: 20px !default;
 $font-size-h2: 18px !default;
@@ -70,32 +93,6 @@ $font-size-h3: 16px !default;
 $font-size-h4: 14px !default;
 $font-size-h5: 13px !default;
 $font-size-h6: 12px !default;
-
-/* Buttons
-   ========================================================================== */
-
-$btn-default-color: rgba($primary, .6) !default;
-$btn-default-bg: rgba($primary, .1) !default;
-$btn-default-border: transparent !default;
-
-$btn-primary-color: $accent !default;
-$btn-primary-bg: rgba($accent, .2) !default;
-$btn-primary-border: transparent !default;
-
-$btn-success-border: transparent !default;
-$btn-danger-border: transparent !default;
-
-$btn-accent-color: $white !default;
-$btn-accent-bg: $accent !default;
-$btn-accent-border: transparent !default;
-
-$btn-inverse-color: $white !default;
-$btn-inverse-bg: rgba($white, .1) !default;
-$btn-inverse-border: transparent !default;
-
-$btn-inverse-accent-color: $accent !default;
-$btn-inverse-accent-bg: $white !default;
-$btn-inverse-accent-border: transparent !default;
 
 /* Forms
    ========================================================================== */
@@ -118,14 +115,8 @@ $input-inverse-color-placeholder: rgba($white, .8) !default;
 /* Form States
    ========================================================================== */
 
-$state-success-text: $brand-success !default;
-$state-danger-text: $brand-danger !default;
-
-/* Components
-   ========================================================================== */
-
-$border-radius-small: 2px !default;
-$border-radius-large: 4px !default;
+$state-success-text: $color-green !default;
+$state-danger-text: $color-red !default;
 
 /* Dropdowns
    ========================================================================== */

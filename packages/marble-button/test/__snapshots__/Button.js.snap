@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render as a link with href attribute 1`] = `<a class="btn btn-md btn-link" href="https://marbleui.com">Default</a>`;
+
+exports[`Button should render the class btn-block 1`] = `<button class="btn btn-block btn-md btn-default" type="button">Default</button>`;
+
+exports[`Button should render the class btn-dropdown 1`] = `<button class="btn btn-dropdown btn-md btn-default" type="button">Default</button>`;
+
+exports[`Button should render the class btn-success 1`] = `<button class="btn btn-md btn-success" type="button">Default</button>`;
+
+exports[`Button should render with disabled attribute 1`] = `<button class="btn btn-md btn-default" disabled="disabled" type="button">Default</button>`;
+
+exports[`Button should render with name \`button\` 1`] = `<button class="btn btn-md btn-default" name="button" type="button">Default</button>`;
+
+exports[`Button should render with only the icon 1`] = `
+<button class="btn btn-md btn-default" type="button">
+  <span class="icon icon-12-alert"></span>
+</button>
+`;
+
+exports[`Button should render with the class btn-lg 1`] = `<button class="btn btn-lg btn-default" type="button">Default</button>`;
+
+exports[`Button should render with the class btn-squared 1`] = `<button class="btn btn-squared btn-md btn-default" type="button">Default</button>`;
+
+exports[`Button should render with the classes \`btn-default\` and \`btn-md\` and type \`button\` 1`] = `<button class="btn btn-md btn-default" type="button">Default</button>`;
+
+exports[`Button should render with the icon and the label 1`] = `
+<button class="btn btn-md btn-default" type="button">
+  <span class="icon icon-12-alert icon-left"></span>Default</button>
+`;
+
+exports[`Button should render with the icon and the label, the icon should be on the right side 1`] = `
+<button class="btn btn-md btn-default" type="button">Default
+  <span class="icon icon-12-alert icon-right"></span>
+</button>
+`;
+
+exports[`Button should render with type \`submit\` 1`] = `<button class="btn btn-md btn-default" type="submit">Default</button>`;

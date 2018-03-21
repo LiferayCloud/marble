@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: Button</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+
+  <style>
+    .body-section {
+      clear: left;
+      font-size: 0;
+      margin-bottom: 24px;
+      overflow: auto;
+    }
+    .content-body .body-section .btn {
+      float: left;
+      margin: 0 5px 5px 0;
+    }
+  </style>
+
+  <script src="../build/globals/marble-button.js"></script>
+</head>
+<body>
+  <div class="container-hybrid-half">
+    <div class="content-header">
+      <h1 class="header-title">Buttons</h1>
+    </div>
+
+    <div class="content-body">
+
+      <div id="types" class="body-section">
+        <h3 class="content-body-title">Style</h3>
+        <script>
+          new metal.Button({
+            label: 'Default',
+          }, '#types');
+          new metal.Button({
+            label: 'Accent',
+            style: 'accent',
+          }, '#types');
+          new metal.Button({
+            label: 'Primary',
+            style: 'primary',
+          }, '#types');
+          new metal.Button({
+            label: 'Success',
+            style: 'success',
+          }, '#types');
+          new metal.Button({
+            label: 'Danger',
+            style: 'danger',
+          }, '#types');
+          new metal.Button({
+            label: 'Link',
+            style: 'link',
+          }, '#types');
+        </script>
+      </div>
+
+      <div id="sizes" class="body-section">
+        <h3 class="content-body-title">Size</h3>
+        <script>
+          new metal.Button({
+            label: 'x small',
+            size: 'xs',
+          }, '#sizes');
+          new metal.Button({
+            label: 'small',
+            size: 'sm',
+          }, '#sizes');
+          new metal.Button({
+            label: 'default',
+          }, '#sizes');
+          new metal.Button({
+            label: 'large',
+            style: 'lg',
+          }, '#sizes');
+        </script>
+      </div>
+
+      <div id="disabled" class="body-section">
+        <h3 class="content-body-title">Disabled</h3>
+        <script>
+          new metal.Button({
+            disabled: true,
+            label: 'disabled',
+          }, '#disabled');
+          new metal.Button({
+            disabled: true,
+            label: 'disabled',
+            style: 'success',
+          }, '#disabled');
+        </script>
+      </div>
+
+      <div id="label-and-icon" class="body-section">
+        <h3 class="content-body-title">Label and Icon</h3>
+        <script>
+          new metal.Button({
+            icon: 'icon-16-star',
+            label: 'Icon Left',
+          }, '#label-and-icon');
+          new metal.Button({
+            icon: 'icon-16-star',
+            iconAlignment: 'right',
+            label: 'Icon Right',
+          }, '#label-and-icon');
+        </script>
+      </div>
+
+      <div id="only-icon" class="body-section">
+        <h3 class="content-body-title">Only Icon</h3>
+        <script>
+          new metal.Button({
+            icon: 'icon-12-alert',
+            type: 'danger',
+          }, '#only-icon');
+        </script>
+      </div>
+
+      <div id="format" class="body-section">
+        <h3 class="content-body-title">Formats</h3>
+        <script>
+          new metal.Button({
+            format: 'squared',
+            icon: 'icon-12-alert',
+            type: 'danger',
+          }, '#format');
+          new metal.Button({
+            format: 'rounded',
+            icon: 'icon-12-alert',
+            type: 'danger',
+          }, '#format');
+        </script>
+      </div>
+
+      <div id="block" class="body-section">
+        <h3 class="content-body-title">Block</h3>
+        <script>
+          new metal.Button({
+            block: true,
+            icon: 'icon-12-alert',
+            label: 'Block',
+            style: 'success',
+          }, '#block');
+        </script>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

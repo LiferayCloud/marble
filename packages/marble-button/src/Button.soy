@@ -1,0 +1,111 @@
+{namespace Button}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+  {@param? block: bool}
+  {@param? disabled: bool}
+  {@param? elementClasses: string}
+  {@param? format: string}
+  {@param? href: string}
+  {@param? icon: string}
+  {@param? iconAlignment: string}
+  {@param? id: string}
+  {@param? label: html|string}
+  {@param? name: string}
+  {@param? size: string}
+  {@param? style: string}
+  {@param? type: string}
+  {@param? value: string}
+
+  {let $attributes kind="attributes"}
+    class="btn
+      {if $block}
+        {sp}btn-block
+      {/if}
+
+      {if $elementClasses}
+        {sp}{$elementClasses}
+      {/if}
+
+      {if $format}
+        {sp}btn-{$format}
+      {/if}
+
+      {if $size}
+        {sp}btn-{$size}
+      {/if}
+
+      {if $style}
+        {sp}btn-{$style}
+      {else}
+        {sp}btn-default
+      {/if}
+    "
+
+    {if $disabled}
+      disabled="disabled"
+    {/if}
+
+    {if $href}
+      href="{$href}"
+    {/if}
+
+    {if $id}
+      id="{$id}"
+    {/if}
+
+    {if $name}
+      name="{$name}"
+    {/if}
+
+    {if $value}
+      value="{$value}"
+    {/if}
+
+    {if not $href}
+      type="{$type}"
+    {/if}
+  {/let}
+
+  {if $href}
+   <a {$attributes}>
+  {else}
+   <button {$attributes}>
+  {/if}
+    {call .content}
+      {param icon: $icon /}
+      {param iconAlignment: $iconAlignment ?: 'left'/}
+      {param label: $label /}
+    {/call}
+  {if $href}
+   </a>
+  {else}
+   </button>
+  {/if}
+{/template}
+
+/**
+ * Renders element content
+ */
+{template .content}
+  {@param? icon: string}
+  {@param? iconAlignment: string}
+  {@param? label: html|string}
+
+  {if not $label}
+    {if $icon}
+      <span class="icon {$icon}"></span>
+    {/if}
+  {else}
+    {if $icon and $iconAlignment == 'left'}
+      <span class="icon {$icon} icon-{$iconAlignment}"></span>
+    {/if}
+    {$label ?: ''}
+    {if $icon and $iconAlignment == 'right'}
+      <span class="icon {$icon} icon-{$iconAlignment}"></span>
+    {/if}
+  {/if}
+{/template}
+

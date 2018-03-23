@@ -27,6 +27,7 @@
     "metal"
   ],
   "dependencies": {
+    "chart.js": "^2.7.2",
     "metal-component": "^2.14.0",
     "metal-soy": "^2.14.0",
     "metal-state": "^2.14.0"

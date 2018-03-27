@@ -79,7 +79,7 @@ Button.STATE = {
    * @type {function}
    */
   onClick: {
-    validator: Config.function(),
+    validator: Config.func(),
   },
 
   /**

@@ -78,7 +78,7 @@
           }, '#sizes');
           new metal.Button({
             label: 'large',
-            style: 'lg',
+            size: 'lg',
           }, '#sizes');
         </script>
       </div>
@@ -118,7 +118,7 @@
         <script>
           new metal.Button({
             icon: 'icon-12-alert',
-            type: 'danger',
+            style: 'danger',
           }, '#only-icon');
         </script>
       </div>
@@ -129,12 +129,12 @@
           new metal.Button({
             format: 'squared',
             icon: 'icon-12-alert',
-            type: 'danger',
+            style: 'danger',
           }, '#format');
           new metal.Button({
             format: 'rounded',
             icon: 'icon-12-alert',
-            type: 'danger',
+            style: 'danger',
           }, '#format');
         </script>
       </div>
@@ -148,6 +148,21 @@
             label: 'Block',
             style: 'success',
           }, '#block');
+        </script>
+      </div>
+
+      <div id="click" class="body-section">
+        <h3 class="content-body-title">Block</h3>
+        <script>
+          function clickFn() {
+            console.log('click');
+          }
+          new metal.Button({
+            icon: 'icon-12-alert',
+            label: 'Click',
+            style: 'success',
+            click: 'clickFn',
+          }, '#click');
         </script>
       </div>
 

@@ -25,6 +25,7 @@ var soyIdom = goog.require('soy.idom');
 /**
  * @param {{
  *  block: (boolean|null|undefined),
+ *  click: (?),
  *  disabled: (boolean|null|undefined),
  *  elementClasses: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  format: (!goog.soy.data.SanitizedContent|null|string|undefined),
@@ -36,6 +37,7 @@ var soyIdom = goog.require('soy.idom');
  *  name: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  size: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  style: (!goog.soy.data.SanitizedContent|null|string|undefined),
+ *  target: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  type: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  value: (!goog.soy.data.SanitizedContent|null|string|undefined)
  * }} opt_data
@@ -50,6 +52,8 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_data = opt_data || {};
   /** @type {boolean|null|undefined} */
   var block = soy.asserts.assertType(opt_data.block == null || (goog.isBoolean(opt_data.block) || opt_data.block === 1 || opt_data.block === 0), 'block', opt_data.block, 'boolean|null|undefined');
+  /** @type {?} */
+  var click = opt_data.click;
   /** @type {boolean|null|undefined} */
   var disabled = soy.asserts.assertType(opt_data.disabled == null || (goog.isBoolean(opt_data.disabled) || opt_data.disabled === 1 || opt_data.disabled === 0), 'disabled', opt_data.disabled, 'boolean|null|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
@@ -73,11 +77,16 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var style = soy.asserts.assertType(opt_data.style == null || (goog.isString(opt_data.style) || opt_data.style instanceof goog.soy.data.SanitizedContent), 'style', opt_data.style, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
+  var target = soy.asserts.assertType(opt_data.target == null || (goog.isString(opt_data.target) || opt_data.target instanceof goog.soy.data.SanitizedContent), 'target', opt_data.target, '!goog.soy.data.SanitizedContent|null|string|undefined');
+  /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var type = soy.asserts.assertType(opt_data.type == null || (goog.isString(opt_data.type) || opt_data.type instanceof goog.soy.data.SanitizedContent), 'type', opt_data.type, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var value = soy.asserts.assertType(opt_data.value == null || (goog.isString(opt_data.value) || opt_data.value instanceof goog.soy.data.SanitizedContent), 'value', opt_data.value, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  var attributes__soy18 = function() {
+  var attributes__soy20 = function() {
     incrementalDom.attr('class', 'btn' + (block ? ' btn-block' : '') + (elementClasses ? ' ' + elementClasses : '') + (format ? ' btn-' + format : '') + (size ? ' btn-' + size : '') + (style ? ' btn-' + style : ' btn-default'));
+    if (click) {
+      incrementalDom.attr('data-click', click);
+    }
     if (disabled) {
       incrementalDom.attr('disabled', 'disabled');
     }
@@ -93,17 +102,20 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
     if (value) {
       incrementalDom.attr('value', value);
     }
+    if (target) {
+      incrementalDom.attr('target', target);
+    }
     if (!href) {
       incrementalDom.attr('type', type);
     }
   };
       if (href) {
         incrementalDom.elementOpenStart('a');
-        attributes__soy18();
+        attributes__soy20();
     incrementalDom.elementOpenEnd();
       } else {
         incrementalDom.elementOpenStart('button');
-          attributes__soy18();
+          attributes__soy20();
       incrementalDom.elementOpenEnd();
       }
       $content({icon: icon, iconAlignment: ($$temp = iconAlignment) == null ? 'left' : $$temp, label: label}, null, opt_ijData);
@@ -117,6 +129,7 @@ exports.render = $render;
 /**
  * @typedef {{
  *  block: (boolean|null|undefined),
+ *  click: (?),
  *  disabled: (boolean|null|undefined),
  *  elementClasses: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  format: (!goog.soy.data.SanitizedContent|null|string|undefined),
@@ -128,6 +141,7 @@ exports.render = $render;
  *  name: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  size: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  style: (!goog.soy.data.SanitizedContent|null|string|undefined),
+ *  target: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  type: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  value: (!goog.soy.data.SanitizedContent|null|string|undefined)
  * }}
@@ -195,8 +209,8 @@ if (goog.DEBUG) {
   $content.soyTemplateName = 'Button.content';
 }
 
-exports.render.params = ["block","disabled","elementClasses","format","href","icon","iconAlignment","id","label","name","size","style","type","value"];
-exports.render.types = {"block":"bool","disabled":"bool","elementClasses":"string","format":"string","href":"string","icon":"string","iconAlignment":"string","id":"string","label":"html|string","name":"string","size":"string","style":"string","type":"string","value":"string"};
+exports.render.params = ["block","click","disabled","elementClasses","format","href","icon","iconAlignment","id","label","name","size","style","target","type","value"];
+exports.render.types = {"block":"bool","click":"?","disabled":"bool","elementClasses":"string","format":"string","href":"string","icon":"string","iconAlignment":"string","id":"string","label":"html|string","name":"string","size":"string","style":"string","target":"string","type":"string","value":"string"};
 exports.content.params = ["icon","iconAlignment","label"];
 exports.content.types = {"icon":"string","iconAlignment":"string","label":"html|string"};
 templates = exports;

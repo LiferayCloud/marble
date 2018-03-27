@@ -33,7 +33,7 @@ Button.STATE = {
   elementClasses: Config.string(),
 
   /**
-   * @default left
+   * @default undefined
    * @type {?string}
    */
   format: Config.oneOf(['squared', 'rounded']),
@@ -75,19 +75,33 @@ Button.STATE = {
   name: Config.string(),
 
   /**
-   * Button size.
    * @default undefined
+   * @type {function}
+   */
+  onClick: {
+    validator: Config.function(),
+  },
+
+  /**
+   * Button size.
+   * @default md
    * @type {?(string|undefined)}
    */
   size: Config.oneOf(['xs', 'sm', 'md', 'lg']).value('md'),
 
   /**
-   * @default primary
+   * @default default
    * @type {?(string|undefined)}
    */
   style: Config.oneOf(['accent', 'default', 'link', 'primary', 'success', 'danger', 'warning']).value(
     'default'
   ),
+
+  /**
+   * @default _self
+   * @type {?string}
+   */
+  target: Config.oneOf(['_blank', '_self', '_parent', '_top']).value('_self'),
 
   /**
    * @default button

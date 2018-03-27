@@ -14,8 +14,10 @@
   {@param? id: string}
   {@param? label: html|string}
   {@param? name: string}
+  {@param? onClick: ?}
   {@param? size: string}
   {@param? style: string}
+  {@param? target: string}
   {@param? type: string}
   {@param? value: string}
 
@@ -60,8 +62,16 @@
       name="{$name}"
     {/if}
 
+    {if $onClick}
+      data-onclick="{$onClick}"
+    {/if}
+
     {if $value}
       value="{$value}"
+    {/if}
+
+    {if $target}
+      target="{$target}"
     {/if}
 
     {if not $href}

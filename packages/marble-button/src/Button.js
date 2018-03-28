@@ -98,10 +98,10 @@ Button.STATE = {
   ),
 
   /**
-   * @default _self
+   * @default undefined
    * @type {?string}
    */
-  target: Config.oneOf(['_blank', '_self', '_parent', '_top']).value('_self'),
+  target: Config.oneOf(['_blank', '_self', '_parent', '_top']),
 
   /**
    * @default button

@@ -62,10 +62,6 @@
       name="{$name}"
     {/if}
 
-    {if $onClick}
-      data-onclick="{$onClick}"
-    {/if}
-
     {if $value}
       value="{$value}"
     {/if}
@@ -80,9 +76,9 @@
   {/let}
 
   {if $href}
-   <a {$attributes}>
+   <a {$attributes}{if $onClick} data-onclick="{$onClick}"{/if}>
   {else}
-   <button {$attributes}>
+   <button {$attributes}{if $onClick} data-onclick="{$onClick}"{/if}>
   {/if}
     {call .content}
       {param icon: $icon /}

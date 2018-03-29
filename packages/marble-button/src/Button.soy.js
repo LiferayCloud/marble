@@ -96,9 +96,6 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
     if (name) {
       incrementalDom.attr('name', name);
     }
-    if (onClick) {
-      incrementalDom.attr('data-onclick', onClick);
-    }
     if (value) {
       incrementalDom.attr('value', value);
     }
@@ -112,10 +109,16 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
       if (href) {
         incrementalDom.elementOpenStart('a');
         attributes__soy20();
+        if (onClick) {
+          incrementalDom.attr('data-onclick', onClick);
+        }
     incrementalDom.elementOpenEnd();
       } else {
         incrementalDom.elementOpenStart('button');
           attributes__soy20();
+          if (onClick) {
+            incrementalDom.attr('data-onclick', onClick);
+          }
       incrementalDom.elementOpenEnd();
       }
       $content({icon: icon, iconAlignment: ($$temp = iconAlignment) == null ? 'left' : $$temp, label: label}, null, opt_ijData);

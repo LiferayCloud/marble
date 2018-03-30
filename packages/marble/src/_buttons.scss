@@ -11,12 +11,11 @@
   font-weight: $fwp-bold;
   justify-content: center;
   text-align: center;
+  white-space: nowrap;
 
-  &:active {
-    &:focus,
-    &.focus {
-      outline: none;
-    }
+  &:active,
+  &:focus {
+    outline: 0;
   }
 }
 
@@ -43,6 +42,19 @@
   height: $bps-sm;
   font-size: 14px;
   line-height: $bps-sm;
+  padding: 0 ($base * 2);
+
+  .link-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 0px;
+    margin-right: 6px;
+
+    &.link-icon-right {
+      margin-left: 6px;
+      margin-right: 0px;
+    }
+  }
 }
 
 .btn.btn-xs,
@@ -61,8 +73,8 @@
   color: $primary;
   transition: background $transition-duration;
 
-  &:hover,
-  &:focus {
+  &:hover:not(.disabled):not([disabled]),
+  &:focus:not(.disabled):not([disabled]) {
     background: mix($primary, $white, 10%);
   }
 
@@ -70,8 +82,8 @@
     background: $accent;
     color: $white;
 
-    &:hover,
-    &:focus {
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
       background: mix($white, $accent, 20%);
     }
   }
@@ -80,8 +92,8 @@
     background: $primary;
     color: $white;
 
-    &:hover,
-    &:focus {
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
       background: mix($white, $primary, 20%);
     }
   }
@@ -90,8 +102,8 @@
     background: $color-green;
     color: $white;
 
-    &:hover,
-    &:focus {
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
       background: mix($white, $color-green, 20%);
     }
   }
@@ -100,8 +112,8 @@
     background: $color-red;
     color: $white;
 
-    &:hover,
-    &:focus {
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
       background: mix($white, $color-red, 20%);
     }
   }
@@ -110,8 +122,8 @@
     background: $color-yellow;
     color: $white;
 
-    &:hover,
-    &:focus {
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
       background: mix($white, $color-yellow, 20%);
     }
   }
@@ -123,31 +135,78 @@
   background: transparent;
   color: $primary;
 
-  &:hover,
-  &:focus {
+  &:hover:not(.disabled):not([disabled]),
+  &:focus:not(.disabled):not([disabled]) {
     background: transparent;
     color: rgba($primary, 0.6);
+
+    .link-icon {
+      opacity: 0.6;
+    }
+  }
+
+  &.btn-inverted {
+    background: transparent;
+    color: $white;
+
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
+      background: transparent;
+      color: rgba($white, 0.6);
+    }
   }
 
   &.btn-primary {
+    background: transparent;
     color: $primary;
+
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
+      background: transparent;
+      color: rgba($primary, 0.6);
+    }
   }
 
   &.btn-success {
+    background: transparent;
     color: $color-green;
+
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
+      background: transparent;
+      color: rgba($color-green, 0.6);
+    }
   }
 
   &.btn-danger {
+    background: transparent;
     color: $color-red;
+
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
+      background: transparent;
+      color: rgba($color-red, 0.6);
+    }
   }
 
   &.btn-warning {
+    background: transparent;
     color: $color-yellow;
+
+    &:hover:not(.disabled):not([disabled]),
+    &:focus:not(.disabled):not([disabled]) {
+      background: transparent;
+      color: rgba($color-yellow, 0.6);
+    }
   }
 }
 
 /* icons
    ========================================================================== */
+.btn > .icon {
+  min-width: 16px;
+}
+
 .btn > .icon-left {
   margin: 0 $base 0 0;
 }
@@ -183,9 +242,14 @@
     width: $bps-lg;
   }
 
-  .btn-sm,
-  .btn-small {
+  &.btn-sm,
+  &.btn-small {
     width: $bps-sm;
+  }
+
+  &.btn-xs,
+  &.btn-xsmall {
+    width: $bps-xs;
   }
 }
 

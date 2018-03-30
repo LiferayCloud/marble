@@ -1,18 +1,42 @@
-@import "bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
-@import "variables";
-
 /* ==========================================================================
    Dropdowns
    ========================================================================== */
 
-.dropdown-menu {
+.dropdown .btn:not(.btn-squared):not(.btn-rounded) {
+  justify-content: flex-start;
+}
+
+.dropdown .dropdown-menu {
   background: $white;
-  border: 0;
   border-radius: $border-radius-base;
+  border: 0;
   box-shadow: 0 2px 8px rgba($primary, .1);
-  margin: -10px 0 0 10px;
+  display: none;
+  left: 0;
+  margin: 6px 0;
+  max-width: 220px;
+  min-width: 140px;
+  overflow: auto;
   padding: 0;
   position: absolute;
+  top: 100%;
+  width: auto;
+  z-index: 9999;
+
+  > li > a {
+    font-weight: $fwp-bold;
+    display: inline-flex;
+  }
+
+  .dropdown-divider {
+    margin: 0;
+    padding: 0;
+    height: 0px;
+  }
+}
+
+.open .dropdown-menu {
+  display: inline-block;
 }
 
 .dropdown-menu li {
@@ -20,31 +44,22 @@
   padding: 0;
 
   &:first-child {
-    margin-top: 12px;
+    .btn {
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
   }
 
   &:last-child {
-    margin-bottom: 12px;
+    .btn {
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
   }
-}
 
-.dropdown-menu li a,
-.dropdown-menu li button {
-  color: rgba($primary, .8);
-  display: block;
-  font-family: $font-primary;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 10px 40px;
-  text-decoration: none;
-  white-space: nowrap;
-  width: 100%;
-
-  @include anim(color);
-
-  &:hover,
-  &:focus {
-    color: $accent;
+  .btn {
+    width: 100%;
+    border-radius: 0;
   }
 }
 

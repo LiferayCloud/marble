@@ -14,36 +14,32 @@
   padding: 0 18px 0 20px;
   text-align: left;
   width: 100%;
+
+  .truncate {
+    flex: 1 1 auto;
+  }
 }
 
 .select .dropdown .btn img {
   border-radius: 4px;
-  float: left;
   height: 24px;
-  margin: 18px 18px 0 0;
   width: 24px;
+  flex: 0 0 auto;
 }
 
-.select .dropdown .btn [class^="icon-12-"],
-.select .dropdown .btn [class*="icon-12-"] {
-  line-height: 58px;
-  position: absolute;
-  right: 20px;
-  top: 0;
+.select .dropdown .btn [class^="icon-"],
+.select .dropdown .btn [class*="icon-"] {
+  flex: 0 0 auto;
 }
 
-.select .dropdown .icon-16-arrow-down-short {
-  color: rgba($primary, .4);
-  line-height: 58px;
-  position: absolute;
-  right: 12px;
-  top: 1px;
+.select .dropdown .btn.btn-block .icon-right {
+  float: right;
 }
 
 .select .dropdown .dropdown-menu {
-  margin: -60px 0 0;
-  padding: 12px 0;
   width: 100%;
+  max-width: 100%;
+  margin: 6px 0;
 }
 
 .select .dropdown .dropdown-menu li {
@@ -61,6 +57,7 @@
   line-height: 24px;
   margin: 0;
   padding: 6px 20px;
+  width: 100%;
 }
 
 .select .dropdown .dropdown-menu li a img {

@@ -75,14 +75,6 @@ Button.STATE = {
   name: Config.string(),
 
   /**
-   * @default undefined
-   * @type {function}
-   */
-  onClick: {
-    validator: Config.func(),
-  },
-
-  /**
    * Button size.
    * @default md
    * @type {?(string|undefined)}

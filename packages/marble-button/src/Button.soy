@@ -14,7 +14,6 @@
   {@param? id: string}
   {@param? label: html|string}
   {@param? name: string}
-  {@param? onClick: ?}
   {@param? size: string}
   {@param? style: string}
   {@param? target: string}
@@ -76,9 +75,9 @@
   {/let}
 
   {if $href}
-   <a {$attributes}{if $onClick} data-onclick="{$onClick}"{/if}>
+   <a {$attributes}>
   {else}
-   <button {$attributes}{if $onClick} data-onclick="{$onClick}"{/if}>
+   <button {$attributes}>
   {/if}
     {call .content}
       {param icon: $icon /}

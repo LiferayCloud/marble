@@ -75,6 +75,12 @@ Button.STATE = {
   name: Config.string(),
 
   /**
+   * @default undefined
+   * @type {?(string|undefined)}
+   */
+  rel: Config.string(),
+
+  /**
    * Button size.
    * @default md
    * @type {?(string|undefined)}

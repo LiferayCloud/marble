@@ -191,26 +191,6 @@
     }
   }
 
-  .dropdown .btn.btn-default {
-    border-radius: 4px;
-    font-family: $font-primary;
-    font-size: 13px;
-    font-weight: 700;
-    height: 48px;
-    line-height: 48px;
-    margin: 0;
-    padding: 0 32px 0 12px;
-    position: relative;
-    text-align: left;
-
-    [class^="icon-12-"],
-    [class*="icon-12-"] {
-      line-height: 46px;
-      position: absolute;
-      right: 12px;
-    }
-  }
-
   .dropdown {
     .dropdown-menu {
       margin: 0;

@@ -23,6 +23,8 @@
   width: auto;
   z-index: 9999;
 
+  &
+
   > li > a {
     font-weight: $fwp-bold;
     display: inline-flex;
@@ -35,8 +37,23 @@
   }
 }
 
+.dropdown.dropdown-with-sections .dropdown-menu {
+  padding: 6px 0 !important;
+}
+
 .open .dropdown-menu {
   display: inline-block;
+}
+
+.dropdown-section-title {
+  color: rgba($white, 0.4);
+  display: block;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: $fwp-normal;
+  line-height: 18px;
+  padding: 6px 12px;
+  text-align: left;
 }
 
 .dropdown-menu li {

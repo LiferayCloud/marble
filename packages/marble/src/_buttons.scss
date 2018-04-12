@@ -45,13 +45,33 @@
   padding: 0 ($base * 2);
 
   .link-icon {
-    width: 18px;
+    width: 19px;
     height: 18px;
     margin-left: 0px;
     margin-right: 6px;
 
     &.link-icon-right {
       margin-left: 6px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.btn.btn-ml,
+.btn.btn-mlarge {
+  height: ($base * 7);
+  font-size: 14px;
+  line-height: ($base * 7);
+  padding: 0 ($base * 2);
+
+  .link-icon {
+    width: ($base * 5);
+    height: ($base * 5);
+    margin-left: 0px;
+    margin-right: 12px;
+
+    &.link-icon-right {
+      margin-left: 12px;
       margin-right: 0px;
     }
   }

@@ -37,6 +37,7 @@
 
 .topbar.topbar-docs {
   display: flex !important;
+  background-color: transparent;
 
   @media (min-width: 960px) {
     width: calc(100% - 284px);

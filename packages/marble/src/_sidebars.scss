@@ -428,7 +428,7 @@
   }
 
   &.sidebar-link-selected, .sidebar-link-selected:focus {
-    .icon {
+    .sidebar-item-icon {
       fill: $accent;
     }
     .sidebar-item-text {

@@ -380,15 +380,14 @@
   }
 }
 
-/* Sidebar Link
-   ========================================================================== */
-
 .sidebar-navigation.open .sidebar {
   animation: fadeInToRight .3s cubic-bezier(.3, 0, .3, 1) .1s 1 forwards;
   opacity: 0;
   position: absolute;
 }
 
+/* Sidebar Link
+   ========================================================================== */
 .sidebar .sidebar-link {
   display: flex;
   padding: 12px 0;

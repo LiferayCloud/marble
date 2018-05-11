@@ -380,21 +380,21 @@
   }
 }
 
+/* Sidebar Link
+   ========================================================================== */
+
 .sidebar-navigation.open .sidebar {
   animation: fadeInToRight .3s cubic-bezier(.3, 0, .3, 1) .1s 1 forwards;
   opacity: 0;
   position: absolute;
 }
 
-
-
-
 .sidebar .sidebar-link {
   display: flex;
   padding: 12px 0;
   justify-content: flex-start;
 
-  .icon {
+  .sidebar-item-icon {
     fill: $primary;
     height: 18px;
     margin: 0 18px 0 6px;
@@ -419,7 +419,7 @@
   }
 
   &:hover {
-    .icon {
+    .sidebar-item-icon {
       fill: rgba($primary, .8);
     }
     .sidebar-item-text {

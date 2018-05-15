@@ -1,7 +1,7 @@
 {
   "name": "marble",
   "description": "WeDeploy's style guide and UI components",
-  "version": "3.4.4",
+  "version": "3.4.5",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble",
   "homepage": "marblecss.com",
   "main": "index.js",

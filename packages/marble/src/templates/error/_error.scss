@@ -55,7 +55,7 @@ body {
   float: right;
   margin-left: 6px;
 }
-.suggestion-title {
+.error-title {
   color: rgba(14, 20, 26, 0.3);
   font-size: 255px;
   font-weight: 900;
@@ -66,7 +66,7 @@ body {
   text-align: center;
   transition: font-size 0.333s, line-height 0.333s;
 }
-.suggestion-subtitle {
+.error-subtitle {
   color: #0e141a;
   font-size: 46px;
   font-weight: 900;
@@ -74,7 +74,7 @@ body {
   margin: 12px 18px 0;
   padding: 0;
 }
-.suggestion-description {
+.error-description {
   color: rgba(14, 20, 26, 0.8);
   font-size: 18px;
   font-weight: 400;

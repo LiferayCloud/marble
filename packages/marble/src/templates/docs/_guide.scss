@@ -194,7 +194,7 @@
     &:hover,
     &:focus {
       border-color: $accent;
-      color: rgba($accent, .6);
+      color: $accent;
     }
   }
 

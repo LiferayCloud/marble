@@ -246,19 +246,6 @@
   }
 }
 
-.sidebar-list .sidebar-link:hover,
-.sidebar-list .sidebar-link:focus {
-  background: rgba($accent, .1);
-  color: rgba($primary, .8);
-}
-
-.sidebar-list .sidebar-link-selected,
-.sidebar-list .sidebar-link-selected:hover,
-.sidebar-list .sidebar-link-selected:focus {
-  background: rgba($accent, .1);
-  color: $accent;
-}
-
 /* Medium Screens
    ========================================================================== */
 
@@ -393,45 +380,67 @@
   padding: 12px 0;
   justify-content: flex-start;
 
-  .sidebar-item-icon {
-    fill: $primary;
-    height: 18px;
-    margin: 0 18px 0 6px;
-    width: 18px;
-    transition: fill 0.33s;
-  }
+
 
   .sidebar-item-container {
-    border-left: 4px solid transparent;
     height: 30px;
     display: flex;
     align-items: center;
     font-weight: $fwp-normal;
-    padding: 0 12px 0 8px;
+    margin-left: 7px;
+    border-radius: 15px;
+    transition: 0.33s;
+
+
+    .sidebar-item-icon {
+      fill: $primary;
+      height: 18px;
+      margin: 0 18px 0 11px;
+      width: 18px;
+      transition: fill 0.33s;
+    }
 
     .sidebar-item-text {
       color: #0e141a;
-      padding-bottom: 1px;
+      padding-bottom: 2px;
       font-size: 14px;
-      transition: 0.33s
+      transition: 0.33s;
+      margin-right: 12px;
     }
   }
 
-  &:hover {
-    .sidebar-item-icon {
-      fill: rgba($primary, .8);
-    }
-    .sidebar-item-text {
-      color: rgba($primary, .8);
-    }
-  }
-
-  &.sidebar-link-selected, .sidebar-link-selected:focus {
+  &.sidebar-link-selected {
     .sidebar-item-icon {
       fill: $accent;
     }
     .sidebar-item-text {
-      color: $primary;
+      color: $accent;
+    }
+  }
+
+  &:focus {
+    .sidebar-item-icon {
+      fill: $accent;
+    }
+    .sidebar-item-text {
+      color: $accent;
+    }
+    .sidebar-item-container {
+      background-color: rgba($accent, 0.1);
+      box-shadow: 0 0 0 3px rgba($accent, 0.3);
+    }
+  }
+
+  &:focus, .sidebar-item-container:focus {
+    outline: none;
+  }
+
+  &:hover {
+    .sidebar-item-icon {
+      fill: $accent;
+    }
+    .sidebar-item-text {
+      color: $accent;
     }
   }
 }

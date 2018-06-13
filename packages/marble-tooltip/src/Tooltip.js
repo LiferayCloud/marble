@@ -19,7 +19,6 @@ class Tooltip extends TooltipBase {
   }
 
   syncCurrentAlignElement(alignElement, prevAlignElement) {
-    this.currentAlignElement = alignElement;
     if (alignElement) {
       const dataTitle = alignElement.getAttribute('data-title');
       if (dataTitle) {
@@ -43,5 +42,5 @@ Soy.register(Tooltip, templates);
 
 Tooltip.Align = TooltipBase.Align;
 
-export {Tooltip};
+export {Tooltip, TooltipBase};
 export default Tooltip;

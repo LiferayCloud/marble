@@ -1,0 +1,22 @@
+{namespace Checkbox}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+  {@param? id: string}
+  {@param? value: string}
+  {@param? label: string}
+  {@param? checked: bool}
+
+  {let $checkedAttr kind="attributes"}
+    {if $checked}
+      checked="checked"
+    {/if}
+  {/let}
+
+  <div class="checkbox">
+    <input id="{$id}" name="{$id}" value="{$value}" type="checkbox" {$checkedAttr}>
+    <label for="{$id}">{$label}</label>
+  </div>
+{/template}

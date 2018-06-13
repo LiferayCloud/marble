@@ -1,0 +1,43 @@
+{
+  "name": "marble-checkbox",
+  "version": "1.0.0",
+  "description": "Marble's Checkbox component",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-checkbox",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/Checkbox.js",
+  "esnext:main": "src/Checkbox.js",
+  "jsnext:main": "src/Checkbox.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run soy && npm run compile",
+    "soy": "metalsoy"
+  },
+  "keywords": [
+    "marble",
+    "metal"
+  ],
+  "dependencies": {
+    "metal-component": "^2.14.0",
+    "metal-soy": "^2.14.0",
+    "metal-state": "^2.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-node-env-inline": "^0.2.0",
+    "babel-preset-metal": "^4.0.0",
+    "metal-tools-soy": "^4.2.6",
+    "metal-useragent": "^2.1.1",
+    "webpack": "^3.5.5"
+  }
+}

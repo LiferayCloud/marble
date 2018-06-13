@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: Checkbox</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+
+  <script src="../build/globals/marble-checkbox.js"></script>
+</head>
+<body class="container">
+  <h1>Checkbox Checked</h1>
+  <div id="checkbox-checked"></div>
+
+  <h1>Checkbox Unchecked</h1>
+  <div id="checkbox-unchecked"></div>
+
+  <script>
+    new metal.Checkbox({
+      checked: true,
+      id: 'checkbox-1',
+      label: 'Option 1',
+      value: 'Checkbox 1',
+    }, '#checkbox-checked');
+
+    new metal.Checkbox({
+      checked: false,
+      id: 'checkbox-2',
+      label: 'Option 2',
+      value: 'Checkbox 2',
+    }, '#checkbox-unchecked');
+  </script>
+</body>
+</html>

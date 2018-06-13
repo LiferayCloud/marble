@@ -29,10 +29,7 @@ body {
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
-      position: absolute;
-      right: 18px;
       text-decoration: none;
-      top: 18px;
       transition: color 0.333s;
     }
     .link:focus,
@@ -54,6 +51,11 @@ body {
     .link-icon.--right {
       float: right;
       margin-left: 6px;
+    }
+    .welcome-link {
+      position: absolute;
+      right: 18px;
+      top: 18px;
     }
     .error-title {
       color: rgba(14, 20, 26, 0.3);

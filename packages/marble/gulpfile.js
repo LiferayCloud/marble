@@ -29,7 +29,7 @@ gulp.task('bootstrap', () => {
 
 // Fonts -----------------------------------------------------------------------
 
-gulp.task('fonts', ['font-icon-12', 'font-icon-16', 'font-galano', 'font-circular']);
+gulp.task('fonts', ['font-icon-12', 'font-icon-16', 'font-circular']);
 
 gulp.task('font-icon-12', () => {
   return gulp.src('src/fonts/icon-12/*.svg')
@@ -59,11 +59,6 @@ gulp.task('font-icon-16', () => {
       log: () => {}
     }))
     .pipe(gulp.dest('build/fonts/icon-16'));
-});
-
-gulp.task('font-galano', function () {
-  return gulp.src(['src/fonts/galano/*'])
-    .pipe(gulp.dest('build/fonts/galano'));
 });
 
 gulp.task('font-circular', function () {

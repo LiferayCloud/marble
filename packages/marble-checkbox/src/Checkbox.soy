@@ -16,7 +16,7 @@
   {/let}
 
   <div class="checkbox">
-    <input id="{$id}" name="{$id}" value="{$value}" type="checkbox" {$checkedAttr}>
+    <input id="{$id}" name="{$id}" value="{$value}" type="checkbox" data-onchange="handleCheck" {$checkedAttr} >
     <label for="{$id}">{$label}</label>
   </div>
 {/template}

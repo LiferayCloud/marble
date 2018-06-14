@@ -58,6 +58,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
         incrementalDom.attr('name', id);
         incrementalDom.attr('value', value);
         incrementalDom.attr('type', 'checkbox');
+        incrementalDom.attr('data-onchange', 'handleCheck');
         checkedAttr__soy8();
     incrementalDom.elementOpenEnd();
     incrementalDom.elementClose('input');

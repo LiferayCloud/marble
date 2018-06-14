@@ -13,11 +13,8 @@
   <script src="../build/globals/marble-checkbox.js"></script>
 </head>
 <body class="container">
-  <h1>Checkbox Checked</h1>
-  <div id="checkbox-checked"></div>
-
-  <h1>Checkbox Unchecked</h1>
-  <div id="checkbox-unchecked"></div>
+  <h1>Checkbox</h1>
+  <div id="checkbox"></div>
 
   <script>
     new metal.Checkbox({
@@ -25,14 +22,7 @@
       id: 'checkbox-1',
       label: 'Option 1',
       value: 'Checkbox 1',
-    }, '#checkbox-checked');
-
-    new metal.Checkbox({
-      checked: false,
-      id: 'checkbox-2',
-      label: 'Option 2',
-      value: 'Checkbox 2',
-    }, '#checkbox-unchecked');
+    }, '#checkbox');
   </script>
 </body>
 </html>

@@ -47,4 +47,14 @@ describe('Checkbox', () => {
 
     expect(checkEvent).toHaveBeenCalled();
   });
+
+  it('should change the checked state after clicking', () => {
+    checkbox = new Checkbox({
+      checked: false
+    });
+
+    dom.triggerEvent(checkbox.element.querySelector('input'), 'click');
+
+    expect(checkbox.checked).toBeTruthy();
+  });
 });

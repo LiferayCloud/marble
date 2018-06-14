@@ -9,6 +9,7 @@ import templates from './Checkbox.soy.js';
  */
 class Checkbox extends Component {
   handleCheck(e) {
+    this.checked = !this.checked;
     this.emit('check', e);
   }
 }

@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Checkbox should be checked 1`] = `
+<div class="checkbox">
+  <input id="checkbox-2" name="checkbox-2" value="Checkbox 2" type="checkbox" checked="">
+  <label for="checkbox-2">Option 2</label>
+</div>
+`;
+
+exports[`Checkbox should be unchecked 1`] = `
+<div class="checkbox">
+  <input id="checkbox-1" name="checkbox-1" value="Checkbox 1" type="checkbox">
+  <label for="checkbox-1">Option 1</label>
+</div>
+`;
+
 exports[`Checkbox should generate the default markup 1`] = `
 <div class="checkbox">
   <input type="checkbox">

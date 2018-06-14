@@ -17,15 +17,16 @@
   <div id="checkbox"></div>
 
   <script>
-    var checkbox = new metal.Checkbox({
+    const checkbox = new metal.Checkbox({
       checked: true,
       id: 'checkbox-1',
       label: 'Option 1',
       value: 'Checkbox 1',
     }, '#checkbox');
 
-    checkbox.addEventListener('check', function(e) {
-      console.log(e);
+    checkbox.on('check', e => {
+      console.info('event', e);
+      console.info('checked', checkbox.checked);
     });
   </script>
 </body>

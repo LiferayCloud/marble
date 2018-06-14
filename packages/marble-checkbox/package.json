@@ -36,6 +36,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-node-env-inline": "^0.2.0",
     "babel-preset-metal": "^4.0.0",
+    "metal-dom": "^2.16.5",
     "metal-tools-soy": "^4.2.6",
     "metal-useragent": "^2.1.1",
     "webpack": "^3.5.5"

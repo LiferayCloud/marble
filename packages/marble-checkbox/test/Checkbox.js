@@ -1,4 +1,5 @@
 import Checkbox from '../src/Checkbox';
+import dom from 'metal-dom';
 
 let checkbox;
 
@@ -33,5 +34,17 @@ describe('Checkbox', () => {
     });
 
     expect(checkbox).toMatchSnapshot();
+  });
+
+  it('should trigger a check event', () => {
+    checkbox = new Checkbox();
+
+    const checkEvent = jest.fn();
+
+    checkbox.on('check', checkEvent);
+
+    dom.triggerEvent(checkbox.element.querySelector('input'), 'click');
+
+    expect(checkEvent).toHaveBeenCalled();
   });
 });

@@ -7,7 +7,11 @@ import templates from './Checkbox.soy.js';
 /**
  * Checkbox component.
  */
-class Checkbox extends Component {}
+class Checkbox extends Component {
+  handleCheck(e) {
+    this.emit('check', e);
+  }
+}
 
 /**
  * State definition.

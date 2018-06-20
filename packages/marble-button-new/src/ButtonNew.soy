@@ -1,0 +1,365 @@
+{namespace ButtonNew}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+  {@param? disabled: bool}
+  {@param? elementClasses: string}
+  {@param? style: string}
+  {@param? color: string}
+  {@param? size: string}
+  {@param? width: string}
+  {@param? hardWidth: bool}
+  {@param? weight: string}
+  {@param? darkTheme: bool}
+  {@param? rounded: bool}
+  {@param? group: bool}
+  {@param? groupType: string}
+  {@param? groupSpacing: string}
+  {@param groupButtons: list<map<string, html|string>>}
+  {@param? href: string}
+  {@param? icon: html|string}
+  {@param? classIcon: string}
+  {@param? iconAlignment: string}
+  {@param? id: string}
+  {@param? label: html|string}
+  {@param? name: string}
+  {@param? rel: string}
+  {@param? target: string}
+  {@param? type: string}
+  {@param? value: string}
+
+  {let $attributes kind="attributes"}
+    class="btn
+      {if $style == 'destructive'}
+        {sp}btn-destructive
+      {elseif $style and $color}
+        {sp}btn-{$style}-{$color}
+      {elseif $style and not $color}
+        {sp}btn-{$style}-accent
+      {elseif $color and not $style}
+        {sp}btn-primary-{$color}
+      {else}
+        {sp}btn-primary-accent
+      {/if}
+
+      {if $size}
+        {sp}btn-{$size}
+      {/if}
+
+      {if $width == 'full'}
+        {sp}btn-fullwidth
+      {/if}
+
+      {if $weight}
+        {sp}btn-{$weight}
+      {/if}
+
+      {if $darkTheme}
+        {sp}btn-darktheme
+      {/if}
+
+      {if $rounded}
+        {sp}btn-rounded
+      {/if}
+
+      {if not $label}
+        {if $icon or $classIcon}
+          {sp}btn-lone-icon
+        {/if}
+      {/if}
+
+      {if $iconAlignment == 'left-justified' or $iconAlignment == 'right-justified'}
+        {sp}btn-justified-padding
+      {/if}
+
+      {if $elementClasses}
+        {sp}{$elementClasses}
+      {/if}
+    "
+
+    {if $width and not $hardWidth}
+      style="min-width:{$width}"
+    {/if}
+
+    {if $width and $hardWidth}
+      style="width:{$width}"
+    {/if}
+
+    {if $disabled}
+      disabled
+    {/if}
+
+    {if $href}
+      href="{$href}"
+    {/if}
+
+    {if $id}
+      id="{$id}"
+    {/if}
+
+    {if $name}
+      name="{$name}"
+    {/if}
+
+    {if $rel}
+      rel="{$rel}"
+    {/if}
+
+    {if $value}
+      value="{$value}"
+    {/if}
+
+    {if $target}
+      target="{$target}"
+    {/if}
+
+    {if not $href}
+      type="{$type}"
+    {/if}
+  {/let}
+
+  {let $btnGroupAttributes kind="attributes"}
+    class="btngroup
+      {if $groupType}
+        {sp}btngroup-{$groupType}
+      {/if}
+    "
+  {/let}
+
+  {if $group}
+    <div {$btnGroupAttributes}>
+      {call .buttonGroup }
+        {param groupSpacing: $groupSpacing /}
+        {param groupButtons: $groupButtons /}
+      {/call}
+    </div>
+  {else}
+    {if $href}
+     <a {$attributes}>
+    {else}
+     <btn {$attributes}>
+    {/if}
+      {call .content}
+        {param icon: $icon /}
+        {param classIcon: $classIcon /}
+        {param iconAlignment: $iconAlignment /}
+        {param label: $label /}
+      {/call}
+    {if $href}
+     </a>
+    {else}
+     </btn>
+    {/if}
+  {/if}
+{/template}
+
+/**
+ * Renders button content
+ */
+{template .content}
+  {@param? icon: html|string}
+  {@param? classIcon: string}
+  {@param? iconAlignment: string}
+  {@param? label: html|string}
+
+  {if not $label}
+    {if $icon or $classIcon}
+      <span class="icon lone-icon {$classIcon ?: ''}">{$icon ?: ''}</span>
+    {/if}
+  {else}
+    {if $icon or $classIcon}
+
+      {if $iconAlignment}
+        {if $iconAlignment == 'left-center' or $iconAlignment == 'left-justified'}
+          <span class="icon {$classIcon ?: ''} icon-{$iconAlignment}">{$icon ?: ''}</span>
+        {/if}
+
+        <span class="button-label button-label-icon-{$iconAlignment}">{$label ?: ''}</span>
+
+        {if $iconAlignment == 'right-center' or $iconAlignment == 'right-justified'}
+          <span class="icon {$classIcon ?: ''} icon-{$iconAlignment}">{$icon ?: ''}</span>
+        {/if}
+      {else}
+        <span class="icon {$classIcon ?: ''} icon-left-center">{$icon ?: ''}</span>
+        <span class="button-label button-label-icon-left-center">{$label ?: ''}</span>
+      {/if}
+
+    {else}
+      {if $iconAlignment}
+        <span class="button-label button-label-icon-{$iconAlignment}">{$label ?: ''}</span>
+      {else}
+        <span class="button-label button-label-noIcon">{$label ?: ''}</span>
+      {/if}
+    {/if}
+  {/if}
+{/template}
+
+/**
+ * Renders button group's whole content
+ */
+{template .buttonGroup}
+  {@param? elementClasses: string}
+  {@param? rounded: bool}
+  {@param? groupSpacing: string}
+  {@param groupButtons: list<map<string, html|string>>}
+
+  {let $btnGroupItemAttributes kind="attributes"}
+    class="btngroup-item
+
+      {if $rounded}
+        {sp}btn-rounded
+      {/if}
+
+      {if $elementClasses}
+        {sp}{$elementClasses}
+      {/if}
+    "
+  {/let}
+
+  {let $btnGroupSpacerAttributes kind="attributes"}
+    class="btngroup-spacing"
+
+    {if $groupSpacing}
+      style="width:{$groupSpacing}"
+    {/if}
+  {/let}
+
+  <ul class="btngroup-list">
+    {foreach $button in $groupButtons}
+
+      {let $btnId: index($button) + 1 /}
+
+      {if isFirst($button)}
+        <li id="btngroup-firstitem" {$btnGroupItemAttributes}>
+
+      {elseif isLast($button)}
+        <div {$btnGroupSpacerAttributes}></div>
+        <li id="btngroup-lastitem" {$btnGroupItemAttributes}>
+
+      {else}
+        <div {$btnGroupSpacerAttributes}></div>
+        <li id="btngroup-miditem-{$btnId}" {$btnGroupItemAttributes}>
+      {/if}
+
+          {call .buttonGroupContent}
+            {param button: $button /}
+          {/call}
+
+        </li>
+
+    {/foreach}
+  </ul>
+{/template}
+
+/**
+ * Renders grouped buttons
+ */
+{template .buttonGroupContent}
+  {@param button: map<string, html|string>}
+
+  {let $groupButtonAttributes kind="attributes"}
+    class="btn btn-groupbtn
+      {if $button['style'] == 'destructive'}
+        {sp}btn-destructive
+      {elseif $button['style'] and $button['color']}
+        {sp}btn-{$button['style']}-{$button['color']}
+      {elseif $button['style'] and not $button['color']}
+        {sp}btn-{$button['style']}-accent
+      {elseif $button['color'] and not $button['style']}
+        {sp}btn-primary-{$button['color']}
+      {else}
+        {sp}btn-primary-accent
+      {/if}
+
+      {if $button['size']}
+        {sp}btn-{$button['size']}
+      {else}
+        {sp}btn-m
+      {/if}
+
+      {if $button['weight']}
+        {sp}btn-{$button['weight']}
+      {else}
+        {sp}btn-middleweight
+      {/if}
+
+      {if $button['darkTheme']}
+        {sp}btn-darktheme
+      {/if}
+
+      {if not $button['label']}
+        {if $button['icon'] or $button['classIcon']}
+          {sp}btn-lone-icon
+        {/if}
+      {/if}
+
+      {if $button['iconAlignment'] == 'left-justified' or $button['iconAlignment'] == 'right-justified'}
+        {sp}btn-justified-padding
+      {/if}
+
+      {if $button['elementClasses']}
+        {sp}{$button['elementClasses']}
+      {/if}
+    "
+
+    {if $button['width'] and not $button['hardWidth']}
+      style="min-width:{$button['width']}"
+    {/if}
+
+    {if $button['width'] and $button['hardWidth']}
+      style="width:{$button['width']}"
+    {/if}
+
+    {if $button['disabled']}
+      disabled
+    {/if}
+
+    {if $button['href']}
+      href="{$button['href']}"
+    {/if}
+
+    {if $button['id']}
+      id="{$button['id']}"
+    {/if}
+
+    {if $button['name']}
+      name="{$button['name']}"
+    {/if}
+
+    {if $button['rel']}
+      rel="{$button['rel']}"
+    {/if}
+
+    {if $button['value']}
+      value="{$button['value']}"
+    {/if}
+
+    {if $button['target']}
+      target="{$button['target']}"
+    {/if}
+
+    {if not $button['href']}
+      type="{$button['type']}"
+    {/if}
+  {/let}
+
+  {if $button['href']}
+   <a {$groupButtonAttributes}>
+  {else}
+   <btn {$groupButtonAttributes}>
+  {/if}
+    {call .content}
+      {param icon: $button['icon'] /}
+      {param classIcon: $button['classIcon'] /}
+      {param iconAlignment: $button['iconAlignment'] /}
+      {param label: $button['label'] /}
+    {/call}
+  {if $button['href']}
+   </a>
+  {else}
+   </btn>
+  {/if}
+
+{/template}

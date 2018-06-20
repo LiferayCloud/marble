@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: ButtonNew</title>
+
+  <link rel="stylesheet" href="../../marble/build/fonts/circular/circular.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+  <style>
+    * {
+      font-family: "Circular";
+    }
+    .demo-container {
+      margin: 0;
+      padding: 7vw 0 24px;
+      box-sizing: border-box;
+      width: 100vw;
+    }
+    .demo-header {
+      font-size: 48px;
+      font-weight: 900;
+      padding: 0 8vw;
+      margin: 0 0 12px;
+    }
+    .demo-subheader {
+      margin: 0 8vw;
+      font-size: 12px;
+      color: rgba(14, 20, 26, 0.4);
+    }
+    .demo-body-title {
+      color: #333;
+      font-size: 32px;
+      font-weight: 500;
+    }
+    .demo-body {
+      width: 100vw;
+      padding: 0;
+    }
+    .demo-body-section {
+      margin: 18px 0 24px;
+      padding: 24px 8vw 32px;
+      width: 100vw;
+    }
+    .demo-body-content {
+      margin: 10px auto;
+    }
+    .demo-body .demo-body-section .demo-body-subtitle {
+      color: #333;
+      font-size: 18px;
+      margin: 25px 0 15px;
+      font-weight: 400;
+    }
+    .demo-dark-section {
+      background-color: rgba(14, 20, 26, 0.9);
+    }
+    .demo-body-section.demo-dark-section .demo-body-title, .demo-body-section.demo-dark-section .demo-body-subtitle {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+
+    .line-break-force {
+      width: 100%;
+      height: 0px;
+      margin: 0;
+    }
+    .demo-body .demo-body-section .btn {
+      margin: 9px 18px;
+    }
+    .demo-body .demo-body-section .btngroup {
+      margin: 9px 18px;
+    }
+    .demo-body .demo-body-section .btngroup .btn {
+      margin: 0;
+    }
+    #styles .btn, #stylesDarkTheme .btn, #colors .btn, #weights .btn, #rounded .btn {
+      width: 106px;
+    }
+  </style>
+
+  <script src="../build/globals/marble-button-new.js"></script>
+</head>
+<body class="demo-container">
+
+  <h1 class="demo-header">Button</h1>
+
+  <div class="demo-body">
+
+    <div id="styles" class="demo-body-section">
+      <h3 class="demo-body-title">Styles</h3>
+
+      <div class="demo-body-content" id="states">
+        <h3 class="demo-body-subtitle">States</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+          }, '#states');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline'
+          }, '#states');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost'
+          }, '#states');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive'
+          }, '#states');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float'
+          }, '#states');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="selected">
+        <h3 class="demo-body-subtitle">Selected <em style="color:rgba(14,20,26,0.3)">(Class, different from the Active state when clicked. For states, see above.)</em></h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            elementClasses: 'btn-selected'
+          }, '#selected');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            elementClasses: 'btn-selected'
+          }, '#selected');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            elementClasses: 'btn-selected'
+          }, '#selected');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            elementClasses: 'btn-selected'
+          }, '#selected');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            elementClasses: 'btn-selected'
+          }, '#selected');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="disabled">
+        <h3 class="demo-body-subtitle">Disabled</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            disabled: true
+          }, '#disabled');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            disabled: true
+          }, '#disabled');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            disabled: true
+          }, '#disabled');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            disabled: true
+          }, '#disabled');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            disabled: true
+          }, '#disabled');
+
+        </script>
+      </div>
+    </div>
+
+    <div id="sizes" class="demo-body-section">
+      <h3 class="demo-body-title">Sizes</h3>
+
+      <div class="demo-body-content" id="s">
+        <h3 class="demo-body-subtitle">S</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            size: 's'
+          }, '#s');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            size: 's'
+          }, '#s');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            size: 's'
+          }, '#s');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            size: 's'
+          }, '#s');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            size: 's'
+          }, '#s');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="m">
+        <h3 class="demo-body-subtitle">M</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            size: 'm'
+          }, '#m');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            size: 'm'
+          }, '#m');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            size: 'm'
+          }, '#m');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            size: 'm'
+          }, '#m');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            size: 'm'
+          }, '#m');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="l">
+        <h3 class="demo-body-subtitle">L</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            size: 'l'
+          }, '#l');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            size: 'l'
+          }, '#l');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            size: 'l'
+          }, '#l');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            size: 'l'
+          }, '#l');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            size: 'l'
+          }, '#l');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="xl">
+        <h3 class="demo-body-subtitle">XL</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            size: 'xl'
+          }, '#xl');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            size: 'xl'
+          }, '#xl');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            size: 'xl'
+          }, '#xl');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            size: 'xl'
+          }, '#xl');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            size: 'xl'
+          }, '#xl');
+
+        </script>
+      </div>
+    </div>
+
+    <div id="weights" class="demo-body-section">
+      <h3 class="demo-body-title">Weights</h3>
+
+      <div class="demo-body-content" id="lightweight">
+        <h3 class="demo-body-subtitle">Lightweight</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            weight: 'lightweight'
+          }, '#lightweight');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            weight: 'lightweight'
+          }, '#lightweight');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            weight: 'lightweight'
+          }, '#lightweight');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            weight: 'lightweight'
+          }, '#lightweight');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            weight: 'lightweight'
+          }, '#lightweight');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="middleweight">
+        <h3 class="demo-body-subtitle">Middleweight</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            weight: 'middleweight'
+          }, '#middleweight');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            weight: 'middleweight'
+          }, '#middleweight');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            weight: 'middleweight'
+          }, '#middleweight');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            weight: 'middleweight'
+          }, '#middleweight');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            weight: 'middleweight'
+          }, '#middleweight');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="heavyweight">
+        <h3 class="demo-body-subtitle">Heavyweight</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            weight: 'heavyweight'
+          }, '#heavyweight');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            weight: 'heavyweight'
+          }, '#heavyweight');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            weight: 'heavyweight'
+          }, '#heavyweight');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            weight: 'heavyweight'
+          }, '#heavyweight');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            weight: 'heavyweight'
+          }, '#heavyweight');
+
+        </script>
+      </div>
+    </div>
+
+    <div id="rounded" class="demo-body-section">
+      <h3 class="demo-body-title">Rounded</h3>
+      <script>
+
+        new metal.ButtonNew({
+          label: 'Primary',
+          rounded: true
+        }, '#rounded');
+
+        new metal.ButtonNew({
+          label: 'Outline',
+          style: 'outline',
+          rounded: true
+        }, '#rounded');
+
+        new metal.ButtonNew({
+          label: 'Ghost',
+          style: 'ghost',
+          rounded: true
+        }, '#rounded');
+
+        new metal.ButtonNew({
+          label: 'Destructive',
+          style: 'destructive',
+          rounded: true
+        }, '#rounded');
+
+        new metal.ButtonNew({
+          label: 'Float',
+          style: 'float',
+          rounded: true
+        }, '#rounded');
+
+      </script>
+    </div>
+
+    <div id="fitting" class="demo-body-section">
+      <h3 class="demo-body-title">Fitting</h3>
+
+      <div class="demo-body-content" id="fullwidth">
+        <h3 class="demo-body-subtitle">Full Width</h3>
+
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Button S',
+            size: 's',
+            width: 'full',
+          }, '#fullwidth');
+
+          new metal.ButtonNew({
+            label: 'Button M',
+            size: 'm',
+            width: 'full',
+          }, '#fullwidth');
+
+          new metal.ButtonNew({
+            label: 'Button L',
+            size: 'l',
+            width: 'full',
+          }, '#fullwidth');
+
+          new metal.ButtonNew({
+            label: 'Button XL',
+            size: 'xl',
+            width: 'full',
+          }, '#fullwidth');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="custom">
+        <h3 class="demo-body-subtitle">Custom</h3>
+
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Button S',
+            size: 's',
+            width: '920px',
+          }, '#custom');
+
+        </script>
+        <p class="line-break-force"> </p>
+        <script>
+          new metal.ButtonNew({
+            label: 'Button M',
+            size: 'm',
+            width: '720px',
+          }, '#custom');
+
+        </script>
+        <p class="line-break-force"> </p>
+        <script>
+          new metal.ButtonNew({
+            label: 'Button L',
+            size: 'l',
+            width: '300px',
+          }, '#custom');
+
+        </script>
+        <p class="line-break-force"> </p>
+        <script>
+          new metal.ButtonNew({
+            label: 'Button XL',
+            size: 'xl',
+            width: '480px',
+          }, '#custom');
+
+        </script>
+      </div>
+    </div>
+
+    <div id="colors" class="demo-body-section">
+      <h3 class="demo-body-title">Colors</h3>
+
+      <div class="demo-body-content" id="black">
+        <h3 class="demo-body-subtitle">Black</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'black'
+          }, '#black');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'black'
+          }, '#black');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'black'
+          }, '#black');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'black'
+          }, '#black');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'black'
+          }, '#black');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="green">
+        <h3 class="demo-body-subtitle">Green</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'green'
+          }, '#green');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'green'
+          }, '#green');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'green'
+          }, '#green');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'green'
+          }, '#green');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'green'
+          }, '#green');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="blue-lt">
+        <h3 class="demo-body-subtitle">Blue Light</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'blue-light'
+          }, '#blue-lt');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'blue-light'
+          }, '#blue-lt');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'blue-light'
+          }, '#blue-lt');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'blue-light'
+          }, '#blue-lt');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'blue-light'
+          }, '#blue-lt');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="blue">
+        <h3 class="demo-body-subtitle">Blue</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'blue'
+          }, '#blue');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'blue'
+          }, '#blue');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'blue'
+          }, '#blue');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'blue'
+          }, '#blue');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'blue'
+          }, '#blue');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="violet">
+        <h3 class="demo-body-subtitle">Violet</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'violet'
+          }, '#violet');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'violet'
+          }, '#violet');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'violet'
+          }, '#violet');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'violet'
+          }, '#violet');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'violet'
+          }, '#violet');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="red">
+        <h3 class="demo-body-subtitle">Red</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'red'
+          }, '#red');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'red'
+          }, '#red');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'red'
+          }, '#red');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'red'
+          }, '#red');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'red'
+          }, '#red');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="orange">
+        <h3 class="demo-body-subtitle">Orange</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'orange'
+          }, '#orange');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'orange'
+          }, '#orange');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'orange'
+          }, '#orange');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'orange'
+          }, '#orange');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'orange'
+          }, '#orange');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="yellow">
+        <h3 class="demo-body-subtitle">Yellow</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            color: 'yellow'
+          }, '#yellow');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            color: 'yellow'
+          }, '#yellow');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            color: 'yellow'
+          }, '#yellow');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            color: 'yellow'
+          }, '#yellow');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            color: 'yellow'
+          }, '#yellow');
+
+        </script>
+      </div>
+    </div>
+
+    <div id="stylesDarkTheme" class="demo-body-section demo-dark-section">
+      <h3 class="demo-body-title">Dark Theme</h3>
+
+      <div class="demo-body-content" id="darkThemeStates">
+        <h3 class="demo-body-subtitle">States</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            darkTheme: true
+          }, '#darkThemeStates');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            darkTheme: true
+          }, '#darkThemeStates');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            darkTheme: true
+          }, '#darkThemeStates');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            darkTheme: true
+          }, '#darkThemeStates');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            darkTheme: true
+          }, '#darkThemeStates');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="darkThemeSelected">
+        <h3 class="demo-body-subtitle">Selected <em style="color:rgba(255,255,255,0.2)">(Class, different from the Active state when clicked. For states, see above.)</em></h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            elementClasses: 'btn-selected',
+            darkTheme: true
+          }, '#darkThemeSelected');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            elementClasses: 'btn-selected',
+            darkTheme: true
+          }, '#darkThemeSelected');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            elementClasses: 'btn-selected',
+            darkTheme: true
+          }, '#darkThemeSelected');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            elementClasses: 'btn-selected',
+            darkTheme: true
+          }, '#darkThemeSelected');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            elementClasses: 'btn-selected',
+            darkTheme: true
+          }, '#darkThemeSelected');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="darkThemeDisabled">
+        <h3 class="demo-body-subtitle">Disabled</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            disabled: true,
+            darkTheme: true
+          }, '#darkThemeDisabled');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            disabled: true,
+            darkTheme: true
+          }, '#darkThemeDisabled');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            disabled: true,
+            darkTheme: true
+          }, '#darkThemeDisabled');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            disabled: true,
+            darkTheme: true
+          }, '#darkThemeDisabled');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            disabled: true,
+            darkTheme: true
+          }, '#darkThemeDisabled');
+
+        </script>
+      </div>
+    </div>
+
+    <div id="icons" class="demo-body-section">
+      <h3 class="demo-body-title">Content</h3>
+
+      <div class="demo-body-content">
+        <h3 class="demo-body-subtitle">Lone Icon</h3>
+
+        <div id="s-lone-icons" class="demo-body-content">
+          <h4 class="demo-body-subtitle">S</h4>
+
+          <script>
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              size: 's'
+            }, '#s-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'outline',
+              size: 's'
+            }, '#s-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'ghost',
+              size: 's'
+            }, '#s-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'destructive',
+              size: 's'
+            }, '#s-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'float',
+              size: 's'
+            }, '#s-lone-icons');
+
+          </script>
+        </div>
+
+        <div id="m-lone-icons" class="demo-body-content">
+          <h4 class="demo-body-subtitle">M</h4>
+
+          <script>
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              size: 'm'
+            }, '#m-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'outline',
+              size: 'm'
+            }, '#m-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'ghost',
+              size: 'm'
+            }, '#m-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'destructive',
+              size: 'm'
+            }, '#m-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'float',
+              size: 'm'
+            }, '#m-lone-icons');
+
+          </script>
+        </div>
+
+        <div id="l-lone-icons" class="demo-body-content">
+          <h4 class="demo-body-subtitle">L</h4>
+
+          <script>
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              size: 'l'
+            }, '#l-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'outline',
+              size: 'l'
+            }, '#l-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'ghost',
+              size: 'l'
+            }, '#l-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'destructive',
+              size: 'l'
+            }, '#l-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'float',
+              size: 'l'
+            }, '#l-lone-icons');
+
+          </script>
+        </div>
+
+        <div id="xl-lone-icons" class="demo-body-content">
+          <h4 class="demo-body-subtitle">XL</h4>
+
+          <script>
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              size: 'xl'
+            }, '#xl-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'outline',
+              size: 'xl'
+            }, '#xl-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'ghost',
+              size: 'xl'
+            }, '#xl-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'destructive',
+              size: 'xl'
+            }, '#xl-lone-icons');
+
+            new metal.ButtonNew({
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+											  <g id="icon" fill-rule="evenodd">
+											    <path fill-opacity=".2" d="M15.7071 1.7071l-6 6A.9969.9969 0 0 1 9 8.0001a.9955.9955 0 0 1-.6004-.2004L5 5.25 1.6003 7.7997A.9954.9954 0 0 1 1 8c-.5523 0-1-.4477-1-1v6c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1V1a.997.997 0 0 1-.2929.7071"/>
+											    <path d="M15 0a.997.997 0 0 0-.7071.2929L8.9062 5.6796 5.6004 3.2003A.9955.9955 0 0 0 5 3a.9955.9955 0 0 0-.6003.2003L.4036 6.1973A.9985.9985 0 0 0 0 7c0 .5523.4477 1 1 1a.9955.9955 0 0 0 .6004-.2003L5 5.25l3.3997 2.5497A.9955.9955 0 0 0 9 8a.997.997 0 0 0 .7071-.2929l6-6A.997.997 0 0 0 16 1c0-.5523-.4477-1-1-1"/>
+											  </g>
+											</svg>`,
+              style: 'float',
+              size: 'xl'
+            }, '#xl-lone-icons');
+
+          </script>
+        </div>
+      </div>
+
+      <div class="demo-body-content" id="icon-label">
+        <h3 class="demo-body-subtitle">Icon With Label</h3>
+
+        <div class="demo-body-content" id="icon-label-lc">
+          <h3 class="demo-body-subtitle">Left Center</h3>
+
+          <div class="demo-body-content" id="s-icon-label-lc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 's',
+              }, '#s-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 's',
+                style: 'outline',
+              }, '#s-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 's',
+                style: 'ghost',
+              }, '#s-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 's',
+                style: 'destructive',
+              }, '#s-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 's',
+                style: 'float',
+              }, '#s-icon-label-lc');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="m-icon-label-lc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'm',
+              }, '#m-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'm',
+                style: 'outline',
+              }, '#m-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'm',
+                style: 'ghost',
+              }, '#m-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'm',
+                style: 'destructive',
+              }, '#m-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'm',
+                style: 'float',
+              }, '#m-icon-label-lc');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="l-icon-label-lc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'l',
+              }, '#l-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'l',
+                style: 'outline',
+              }, '#l-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'l',
+                style: 'ghost',
+              }, '#l-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'l',
+                style: 'destructive',
+              }, '#l-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'l',
+                style: 'float',
+              }, '#l-icon-label-lc');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="xl-icon-label-lc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'xl',
+              }, '#xl-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'xl',
+                style: 'outline',
+              }, '#xl-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'xl',
+                style: 'ghost',
+              }, '#xl-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'xl',
+                style: 'destructive',
+              }, '#xl-icon-label-lc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-center',
+                size: 'xl',
+                style: 'float',
+              }, '#xl-icon-label-lc');
+
+            </script>
+          </div>
+        </div>
+
+        <div class="demo-body-content" id="icon-label-lj">
+          <h3 class="demo-body-subtitle">Left Justified</h3>
+
+          <div class="demo-body-content" id="s-icon-label-lj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 's',
+                width: '80.31px',
+              }, '#s-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'outline',
+              }, '#s-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'ghost',
+              }, '#s-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'destructive',
+              }, '#s-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'float',
+              }, '#s-icon-label-lj');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="m-icon-label-lj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'm',
+                width: '91.31px',
+              }, '#m-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'outline',
+              }, '#m-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'ghost',
+              }, '#m-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'destructive',
+              }, '#m-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'float',
+              }, '#m-icon-label-lj');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="l-icon-label-lj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'l',
+                width: '149.28px',
+              }, '#l-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'outline',
+              }, '#l-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'ghost',
+              }, '#l-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'l',
+                style: 'destructive',
+              }, '#l-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'float',
+              }, '#l-icon-label-lj');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="xl-icon-label-lj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'xl',
+                width: '186.25px',
+              }, '#xl-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'outline',
+              }, '#xl-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'ghost',
+              }, '#xl-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'destructive',
+              }, '#xl-icon-label-lj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'left-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'float',
+              }, '#xl-icon-label-lj');
+
+            </script>
+          </div>
+        </div>
+
+        <div class="demo-body-content" id="icon-label-rc">
+          <h3 class="demo-body-subtitle">Right Center</h3>
+
+          <div class="demo-body-content" id="s-icon-label-rc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 's',
+              }, '#s-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 's',
+                style: 'outline',
+              }, '#s-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 's',
+                style: 'ghost',
+              }, '#s-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 's',
+                style: 'destructive',
+              }, '#s-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 's',
+                style: 'float',
+              }, '#s-icon-label-rc');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="m-icon-label-rc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'm',
+              }, '#m-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'm',
+                style: 'outline',
+              }, '#m-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'm',
+                style: 'ghost',
+              }, '#m-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'm',
+                style: 'destructive',
+              }, '#m-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'm',
+                style: 'float',
+              }, '#m-icon-label-rc');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="l-icon-label-rc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'l',
+              }, '#l-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'l',
+                style: 'outline',
+              }, '#l-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'l',
+                style: 'ghost',
+              }, '#l-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'l',
+                style: 'destructive',
+              }, '#l-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'l',
+                style: 'float',
+              }, '#l-icon-label-rc');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="xl-icon-label-rc">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'xl',
+              }, '#xl-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'xl',
+                style: 'outline',
+              }, '#xl-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'xl',
+                style: 'ghost',
+              }, '#xl-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'xl',
+                style: 'destructive',
+              }, '#xl-icon-label-rc');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-center',
+                size: 'xl',
+                style: 'float',
+              }, '#xl-icon-label-rc');
+
+            </script>
+          </div>
+        </div>
+
+        <div class="demo-body-content" id="icon-label-rj">
+          <h3 class="demo-body-subtitle">Right Justified</h3>
+
+          <div class="demo-body-content" id="s-icon-label-rj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 's',
+                width: '80.31px',
+              }, '#s-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'outline',
+              }, '#s-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'ghost',
+              }, '#s-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'destructive',
+              }, '#s-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 's',
+                width: '80.31px',
+                style: 'float',
+              }, '#s-icon-label-rj');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="m-icon-label-rj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'm',
+                width: '91.31px',
+              }, '#m-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'outline',
+              }, '#m-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'ghost',
+              }, '#m-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'destructive',
+              }, '#m-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'm',
+                width: '91.31px',
+                style: 'float',
+              }, '#m-icon-label-rj');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="l-icon-label-rj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'l',
+                width: '149.28px',
+              }, '#l-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'outline',
+              }, '#l-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'ghost',
+              }, '#l-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'destructive',
+              }, '#l-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'l',
+                width: '149.28px',
+                style: 'float',
+              }, '#l-icon-label-rj');
+
+            </script>
+          </div>
+
+          <div class="demo-body-content" id="xl-icon-label-rj">
+            <script>
+
+              new metal.ButtonNew({
+                label: 'Primary',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'xl',
+                width: '186.25px',
+              }, '#xl-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Outline',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'outline',
+              }, '#xl-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Ghost',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'ghost',
+              }, '#xl-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Destructive',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'destructive',
+              }, '#xl-icon-label-rj');
+
+              new metal.ButtonNew({
+                label: 'Float',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                        <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                        <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                      </svg>`,
+                iconAlignment: 'right-justified',
+                size: 'xl',
+                width: '186.25px',
+                style: 'float',
+              }, '#xl-icon-label-rj');
+
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="group" class="demo-body-section">
+      <h3 class="demo-body-title">Group</h3>
+
+      <div class="demo-body-content" id="group-default">
+        <h3 class="demo-body-subtitle">Default</h3>
+        <script>
+
+          new metal.ButtonNew({
+            group: true,
+            groupSpacing: '36px',
+            groupType: 'default',
+            groupButtons: [
+              {
+                'label': 'Primary 1',
+              },
+              {
+                'label': 'Primary 2',
+              },
+              {
+                'label': 'Primary 3',
+                'style': 'outline',
+              }
+            ],
+          }, '#group-default');
+
+        </script>
+      </div>
+      <div class="demo-body-content" id="group-segmented">
+        <h3 class="demo-body-subtitle">Segmented</h3>
+        <script>
+
+          new metal.ButtonNew({
+            group: true,
+            groupSpacing: '1px',
+            groupType: 'segmented',
+            groupButtons: [
+              {
+                'label': 'Primary 1',
+              },
+              {
+                'label': 'Primary 2',
+              },
+              {
+                'label': 'Primary 3',
+                'style': 'outline',
+              }
+            ],
+          }, '#group-segmented');
+
+        </script>
+      </div>
+      <div class="demo-body-content" id="group-segmented-icon">
+        <h3 class="demo-body-subtitle">Segmented With Lone Icon</h3>
+        <script>
+
+          new metal.ButtonNew({
+            group: true,
+            groupSpacing: '1px',
+            rounded: true,
+            groupType: 'segmented',
+            groupButtons: [
+              {
+                'label': 'Primary',
+              },
+              {
+                'icon': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                          <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
+                          <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
+                        </svg>`,
+              }
+            ],
+          }, '#group-segmented-icon');
+
+        </script>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</body>
+</html>

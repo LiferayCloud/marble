@@ -33,11 +33,11 @@ var soyIdom = goog.require('soy.idom');
  *  hardWidth: (boolean|null|undefined),
  *  weight: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  darkTheme: (boolean|null|undefined),
- *  rounded: (boolean|null|undefined),
+ *  borderRadius: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  group: (boolean|null|undefined),
  *  groupType: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  groupSpacing: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  groupButtons: !Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>,
+ *  groupButtons: !Array<?>,
  *  href: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  icon: (!goog.soy.data.SanitizedContent|function()|null|string|undefined),
  *  classIcon: (!goog.soy.data.SanitizedContent|null|string|undefined),
@@ -75,16 +75,16 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   var weight = soy.asserts.assertType(opt_data.weight == null || (goog.isString(opt_data.weight) || opt_data.weight instanceof goog.soy.data.SanitizedContent), 'weight', opt_data.weight, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {boolean|null|undefined} */
   var darkTheme = soy.asserts.assertType(opt_data.darkTheme == null || (goog.isBoolean(opt_data.darkTheme) || opt_data.darkTheme === 1 || opt_data.darkTheme === 0), 'darkTheme', opt_data.darkTheme, 'boolean|null|undefined');
-  /** @type {boolean|null|undefined} */
-  var rounded = soy.asserts.assertType(opt_data.rounded == null || (goog.isBoolean(opt_data.rounded) || opt_data.rounded === 1 || opt_data.rounded === 0), 'rounded', opt_data.rounded, 'boolean|null|undefined');
+  /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
+  var borderRadius = soy.asserts.assertType(opt_data.borderRadius == null || (goog.isString(opt_data.borderRadius) || opt_data.borderRadius instanceof goog.soy.data.SanitizedContent), 'borderRadius', opt_data.borderRadius, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {boolean|null|undefined} */
   var group = soy.asserts.assertType(opt_data.group == null || (goog.isBoolean(opt_data.group) || opt_data.group === 1 || opt_data.group === 0), 'group', opt_data.group, 'boolean|null|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var groupType = soy.asserts.assertType(opt_data.groupType == null || (goog.isString(opt_data.groupType) || opt_data.groupType instanceof goog.soy.data.SanitizedContent), 'groupType', opt_data.groupType, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var groupSpacing = soy.asserts.assertType(opt_data.groupSpacing == null || (goog.isString(opt_data.groupSpacing) || opt_data.groupSpacing instanceof goog.soy.data.SanitizedContent), 'groupSpacing', opt_data.groupSpacing, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  /** @type {!Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>} */
-  var groupButtons = soy.asserts.assertType(goog.isArray(opt_data.groupButtons), 'groupButtons', opt_data.groupButtons, '!Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>');
+  /** @type {!Array<?>} */
+  var groupButtons = soy.asserts.assertType(goog.isArray(opt_data.groupButtons), 'groupButtons', opt_data.groupButtons, '!Array<?>');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var href = soy.asserts.assertType(opt_data.href == null || (goog.isString(opt_data.href) || opt_data.href instanceof goog.soy.data.SanitizedContent), 'href', opt_data.href, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|function()|null|string|undefined} */
@@ -120,7 +120,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
     } else {
       $tmp = ' btn-primary-accent';
     }
-    incrementalDom.attr('class', 'btn' + $tmp + (size ? ' btn-' + size : '') + (width == 'full' ? ' btn-fullwidth' : '') + (weight ? ' btn-' + weight : '') + (darkTheme ? ' btn-darktheme' : '') + (rounded ? ' btn-rounded' : '') + (!label ? (icon || classIcon ? ' btn-lone-icon' : '') : '') + (iconAlignment == 'left-justified' || iconAlignment == 'right-justified' ? ' btn-justified-padding' : '') + (elementClasses ? ' ' + elementClasses : ''));
+    incrementalDom.attr('class', 'btn' + $tmp + (size ? ' btn-' + size : '') + (width == 'full' ? ' btn-fullwidth' : '') + (weight ? ' btn-' + weight : '') + (darkTheme ? ' btn-darktheme' : '') + (borderRadius ? ' btn-' + borderRadius : '') + (!label ? (icon || classIcon ? ' btn-lone-icon' : '') : '') + (iconAlignment == 'left-justified' || iconAlignment == 'right-justified' ? ' btn-justified-padding' : '') + (elementClasses ? ' ' + elementClasses : ''));
     if (width && !hardWidth) {
       incrementalDom.attr('style', 'min-width:' + width);
     }
@@ -152,12 +152,12 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
       incrementalDom.attr('type', type);
     }
   };
-  var btnGroupAttributes__soy152 = function() {
+  var btnGroupAttributes__soy154 = function() {
     incrementalDom.attr('class', 'btngroup' + (groupType ? ' btngroup-' + groupType : ''));
   };
   if (group) {
     incrementalDom.elementOpenStart('div');
-        btnGroupAttributes__soy152();
+        btnGroupAttributes__soy154();
     incrementalDom.elementOpenEnd();
       $buttonGroup(opt_data, null, opt_ijData);
     incrementalDom.elementClose('div');
@@ -191,11 +191,11 @@ exports.render = $render;
  *  hardWidth: (boolean|null|undefined),
  *  weight: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  darkTheme: (boolean|null|undefined),
- *  rounded: (boolean|null|undefined),
+ *  borderRadius: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  group: (boolean|null|undefined),
  *  groupType: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  groupSpacing: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  groupButtons: !Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>,
+ *  groupButtons: !Array<?>,
  *  href: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  icon: (!goog.soy.data.SanitizedContent|function()|null|string|undefined),
  *  classIcon: (!goog.soy.data.SanitizedContent|null|string|undefined),
@@ -316,9 +316,9 @@ if (goog.DEBUG) {
 /**
  * @param {{
  *  elementClasses: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  rounded: (boolean|null|undefined),
+ *  borderRadius: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  groupSpacing: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  groupButtons: !Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>
+ *  groupButtons: !Array<?>
  * }} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
@@ -329,16 +329,16 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var elementClasses = soy.asserts.assertType(opt_data.elementClasses == null || (goog.isString(opt_data.elementClasses) || opt_data.elementClasses instanceof goog.soy.data.SanitizedContent), 'elementClasses', opt_data.elementClasses, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  /** @type {boolean|null|undefined} */
-  var rounded = soy.asserts.assertType(opt_data.rounded == null || (goog.isBoolean(opt_data.rounded) || opt_data.rounded === 1 || opt_data.rounded === 0), 'rounded', opt_data.rounded, 'boolean|null|undefined');
+  /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
+  var borderRadius = soy.asserts.assertType(opt_data.borderRadius == null || (goog.isString(opt_data.borderRadius) || opt_data.borderRadius instanceof goog.soy.data.SanitizedContent), 'borderRadius', opt_data.borderRadius, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var groupSpacing = soy.asserts.assertType(opt_data.groupSpacing == null || (goog.isString(opt_data.groupSpacing) || opt_data.groupSpacing instanceof goog.soy.data.SanitizedContent), 'groupSpacing', opt_data.groupSpacing, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  /** @type {!Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>} */
-  var groupButtons = soy.asserts.assertType(goog.isArray(opt_data.groupButtons), 'groupButtons', opt_data.groupButtons, '!Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>');
-  var btnGroupItemAttributes__soy275 = function() {
-    incrementalDom.attr('class', 'btngroup-item' + (rounded ? ' btn-rounded' : '') + (elementClasses ? ' ' + elementClasses : ''));
+  /** @type {!Array<?>} */
+  var groupButtons = soy.asserts.assertType(goog.isArray(opt_data.groupButtons), 'groupButtons', opt_data.groupButtons, '!Array<?>');
+  var btnGroupItemAttributes__soy277 = function() {
+    incrementalDom.attr('class', 'btngroup-item' + (borderRadius ? ' btn-' + borderRadius : '') + (elementClasses ? ' ' + elementClasses : ''));
   };
-  var btnGroupSpacerAttributes__soy288 = function() {
+  var btnGroupSpacerAttributes__soy292 = function() {
     incrementalDom.attr('class', 'btngroup-spacing');
     if (groupSpacing) {
       incrementalDom.attr('style', 'width:' + groupSpacing);
@@ -347,36 +347,36 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
   incrementalDom.elementOpenStart('ul');
       incrementalDom.attr('class', 'btngroup-list');
   incrementalDom.elementOpenEnd();
-    var button323List = groupButtons;
-    var button323ListLen = button323List.length;
-        for (var button323Index = 0; button323Index < button323ListLen; button323Index++) {
-            var button323Data = button323List[button323Index];
-            var btnId__soy298 = button323Index + 1;
-              if (button323Index == 0) {
+    var button327List = groupButtons;
+    var button327ListLen = button327List.length;
+        for (var button327Index = 0; button327Index < button327ListLen; button327Index++) {
+            var button327Data = button327List[button327Index];
+            var btnId__soy302 = button327Index + 1;
+              if (button327Index == 0) {
                 incrementalDom.elementOpenStart('li');
               incrementalDom.attr('id', 'btngroup-firstitem');
-              btnGroupItemAttributes__soy275();
+              btnGroupItemAttributes__soy277();
           incrementalDom.elementOpenEnd();
-              } else if (button323Index == button323ListLen - 1) {
+              } else if (button327Index == button327ListLen - 1) {
                 incrementalDom.elementOpenStart('div');
-                btnGroupSpacerAttributes__soy288();
+                btnGroupSpacerAttributes__soy292();
             incrementalDom.elementOpenEnd();
             incrementalDom.elementClose('div');
             incrementalDom.elementOpenStart('li');
                 incrementalDom.attr('id', 'btngroup-lastitem');
-                btnGroupItemAttributes__soy275();
+                btnGroupItemAttributes__soy277();
             incrementalDom.elementOpenEnd();
               } else {
                 incrementalDom.elementOpenStart('div');
-                  btnGroupSpacerAttributes__soy288();
+                  btnGroupSpacerAttributes__soy292();
               incrementalDom.elementOpenEnd();
               incrementalDom.elementClose('div');
               incrementalDom.elementOpenStart('li');
-                  incrementalDom.attr('id', 'btngroup-miditem-' + btnId__soy298);
-                  btnGroupItemAttributes__soy275();
+                  incrementalDom.attr('id', 'btngroup-miditem-' + btnId__soy302);
+                  btnGroupItemAttributes__soy277();
               incrementalDom.elementOpenEnd();
               }
-              $buttonGroupContent({button: button323Data}, null, opt_ijData);
+              $buttonGroupContent({button: button327Data}, null, opt_ijData);
             incrementalDom.elementClose('li');
           }
       incrementalDom.elementClose('ul');
@@ -385,9 +385,9 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
     /**
      * @typedef {{
  *  elementClasses: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  rounded: (boolean|null|undefined),
+ *  borderRadius: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  groupSpacing: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  groupButtons: !Array<!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>>
+ *  groupButtons: !Array<?>
  * }}
      */
     $buttonGroup.Params;
@@ -398,7 +398,7 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
     
     /**
  * @param {{
- *  button: !Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>
+ *  button: (?)
  * }    } opt_data
      * @param {Object<string, *>=} opt_ijData
      * @param {Object<string, *>=} opt_ijData_deprecated
@@ -407,64 +407,64 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
      */
     function $buttonGroupContent(opt_data, opt_ijData, opt_ijData_deprecated) {
       opt_ijData = opt_ijData_deprecated || opt_ijData;
-      /** @type {!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>} */
-      var button = soy.asserts.assertType(goog.isObject(opt_data.button), 'button', opt_data.button, '!Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>');
-      var groupButtonAttributes__soy329 = function() {
+      /** @type {?} */
+      var button = opt_data.button;
+      var groupButtonAttributes__soy333 = function() {
         var $tmp = null;
-        if (button['style'] == 'destructive') {
+        if (button.style == 'destructive') {
           $tmp = ' btn-destructive';
-        } else if (button['style'] && button['color']) {
-          $tmp = ' btn-' + button['style'] + '-' + button['color'];
-        } else if (button['style'] && !button['color']) {
-          $tmp = ' btn-' + button['style'] + '-accent';
-        } else if (button['color'] && !button['style']) {
-          $tmp = ' btn-primary-' + button['color'];
+        } else if (button.style && button.color) {
+          $tmp = ' btn-' + button.style + '-' + button.color;
+        } else if (button.style && !button.color) {
+          $tmp = ' btn-' + button.style + '-accent';
+        } else if (button.color && !button.style) {
+          $tmp = ' btn-primary-' + button.color;
         } else {
           $tmp = ' btn-primary-accent';
         }
-        incrementalDom.attr('class', 'btn btn-groupbtn' + $tmp + (button['size'] ? ' btn-' + button['size'] : ' btn-m') + (button['weight'] ? ' btn-' + button['weight'] : ' btn-middleweight') + (button['darkTheme'] ? ' btn-darktheme' : '') + (!button['label'] ? (button['icon'] || button['classIcon'] ? ' btn-lone-icon' : '') : '') + (button['iconAlignment'] == 'left-justified' || button['iconAlignment'] == 'right-justified' ? ' btn-justified-padding' : '') + (button['elementClasses'] ? ' ' + button['elementClasses'] : ''));
-        if (button['width'] && !button['hardWidth']) {
-          incrementalDom.attr('style', 'min-width:' + button['width']);
+        incrementalDom.attr('class', 'btn btn-groupbtn' + $tmp + (button.size ? ' btn-' + button.size : ' btn-m') + (button.weight ? ' btn-' + button.weight : ' btn-middleweight') + (button.darkTheme ? ' btn-darktheme' : '') + (!button.label ? (button.icon || button.classIcon ? ' btn-lone-icon' : '') : '') + (button.iconAlignment == 'left-justified' || button.iconAlignment == 'right-justified' ? ' btn-justified-padding' : '') + (button.elementClasses ? ' ' + button.elementClasses : ''));
+        if (button.width && !button.hardWidth) {
+          incrementalDom.attr('style', 'min-width:' + button.width);
         }
-        if (button['width'] && button['hardWidth']) {
-          incrementalDom.attr('style', 'width:' + button['width']);
+        if (button.width && button.hardWidth) {
+          incrementalDom.attr('style', 'width:' + button.width);
         }
-        if (button['disabled']) {
+        if (button.disabled) {
           incrementalDom.attr('disabled', '');
         }
-        if (button['href']) {
-          incrementalDom.attr('href', button['href']);
+        if (button.href) {
+          incrementalDom.attr('href', button.href);
         }
-        if (button['id']) {
-          incrementalDom.attr('id', button['id']);
+        if (button.id) {
+          incrementalDom.attr('id', button.id);
         }
-        if (button['name']) {
-          incrementalDom.attr('name', button['name']);
+        if (button.name) {
+          incrementalDom.attr('name', button.name);
         }
-        if (button['rel']) {
-          incrementalDom.attr('rel', button['rel']);
+        if (button.rel) {
+          incrementalDom.attr('rel', button.rel);
         }
-        if (button['value']) {
-          incrementalDom.attr('value', button['value']);
+        if (button.value) {
+          incrementalDom.attr('value', button.value);
         }
-        if (button['target']) {
-          incrementalDom.attr('target', button['target']);
+        if (button.target) {
+          incrementalDom.attr('target', button.target);
         }
-        if (!button['href']) {
-          incrementalDom.attr('type', button['type']);
+        if (!button.href) {
+          incrementalDom.attr('type', button.type);
         }
       };
-          if (button['href']) {
+          if (button.href) {
             incrementalDom.elementOpenStart('a');
-            groupButtonAttributes__soy329();
+            groupButtonAttributes__soy333();
         incrementalDom.elementOpenEnd();
           } else {
             incrementalDom.elementOpenStart('btn');
-              groupButtonAttributes__soy329();
+              groupButtonAttributes__soy333();
           incrementalDom.elementOpenEnd();
           }
-          $content({icon: button['icon'], classIcon: button['classIcon'], iconAlignment: button['iconAlignment'], label: button['label']}, null, opt_ijData);
-      if (button['href']) {
+          $content({icon: button.icon, classIcon: button.classIcon, iconAlignment: button.iconAlignment, label: button.label}, null, opt_ijData);
+      if (button.href) {
         incrementalDom.elementClose('a');
       } else {
         incrementalDom.elementClose('btn');
@@ -473,7 +473,7 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
     exports.buttonGroupContent = $buttonGroupContent;
     /**
      * @typedef {{
- *  button: !Object<!goog.soy.data.SanitizedContent|string,!goog.soy.data.SanitizedContent|function()|string>
+ *  button: (?)
  * }}
      */
     $buttonGroupContent.Params;
@@ -481,14 +481,14 @@ function $buttonGroup(opt_data, opt_ijData, opt_ijData_deprecated) {
       $buttonGroupContent.soyTemplateName = 'ButtonNew.buttonGroupContent';
     }
 
-exports.render.params = ["disabled","elementClasses","style","color","size","width","hardWidth","weight","darkTheme","rounded","group","groupType","groupSpacing","groupButtons","href","icon","classIcon","iconAlignment","id","label","name","rel","target","type","value"];
-exports.render.types = {"disabled":"bool","elementClasses":"string","style":"string","color":"string","size":"string","width":"string","hardWidth":"bool","weight":"string","darkTheme":"bool","rounded":"bool","group":"bool","groupType":"string","groupSpacing":"string","groupButtons":"list<map<string, html|string>>","href":"string","icon":"html|string","classIcon":"string","iconAlignment":"string","id":"string","label":"html|string","name":"string","rel":"string","target":"string","type":"string","value":"string"};
+exports.render.params = ["disabled","elementClasses","style","color","size","width","hardWidth","weight","darkTheme","borderRadius","group","groupType","groupSpacing","groupButtons","href","icon","classIcon","iconAlignment","id","label","name","rel","target","type","value"];
+exports.render.types = {"disabled":"bool","elementClasses":"string","style":"string","color":"string","size":"string","width":"string","hardWidth":"bool","weight":"string","darkTheme":"bool","borderRadius":"string","group":"bool","groupType":"string","groupSpacing":"string","groupButtons":"list<?>","href":"string","icon":"html|string","classIcon":"string","iconAlignment":"string","id":"string","label":"html|string","name":"string","rel":"string","target":"string","type":"string","value":"string"};
 exports.content.params = ["icon","classIcon","iconAlignment","label"];
 exports.content.types = {"icon":"html|string","classIcon":"string","iconAlignment":"string","label":"html|string"};
-exports.buttonGroup.params = ["elementClasses","rounded","groupSpacing","groupButtons"];
-exports.buttonGroup.types = {"elementClasses":"string","rounded":"bool","groupSpacing":"string","groupButtons":"list<map<string, html|string>>"};
+exports.buttonGroup.params = ["elementClasses","borderRadius","groupSpacing","groupButtons"];
+exports.buttonGroup.types = {"elementClasses":"string","borderRadius":"string","groupSpacing":"string","groupButtons":"list<?>"};
 exports.buttonGroupContent.params = ["button"];
-exports.buttonGroupContent.types = {"button":"map<string, html|string>"};
+exports.buttonGroupContent.types = {"button":"?"};
 templates = exports;
 return exports;
 

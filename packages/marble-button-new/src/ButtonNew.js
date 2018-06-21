@@ -42,7 +42,7 @@ ButtonNew.STATE = {
    * @default m
    * @type {?string}
    */
-  size: Config.oneOf(['s', 'sm', 'm', 'md', 'l', 'lg', 'xl', 'xlarge']).value('m'),
+  size: Config.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl']).value('m'),
 
   /**
    * @default undefined
@@ -70,9 +70,9 @@ ButtonNew.STATE = {
 
   /**
    * @default undefined
-   * @type {?boolean}
+   * @type {?string}
    */
-  rounded: Config.bool(),
+  borderRadius: Config.oneOf(['borderRadius-6px', 'rounded']),
 
   /**
    * @default false
@@ -84,7 +84,7 @@ ButtonNew.STATE = {
    * @default default
    * @type {?string}
    */
-  groupType: Config.oneOf(['default', 'segmented', 'segmentedIcon']).value('default'),
+  groupType: Config.oneOf(['default', 'segmented']).value('default'),
 
   /**
    * @default '0px'
@@ -94,9 +94,33 @@ ButtonNew.STATE = {
 
   /**
    * @default empty
-   * @type {?map}
+   * @type {?Array|undefined}
+   * @default empty
    */
-  groupButtons: Config.array().value([{}]),
+  groupButtons: Config.arrayOf(
+    Config.shapeOf({
+      disabled: Config.bool().value(false),
+      elementClasses: Config.string(),
+      style: Config.oneOf(['primary', 'outline', 'ghost', 'danger', 'destructive', 'float']).value('primary'),
+      color: Config.oneOf(['accent', 'black', 'green', 'blue-light', 'blue', 'violet', 'red', 'orange', 'yellow']).value('accent'),
+      size: Config.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl']).value('m'),
+      width: Config.string(),
+      hardWidth: Config.bool().value(false),
+      weight: Config.oneOf(['lightweight', 'middleweight', 'heavyweight']).value('middleweight'),
+      darkTheme: Config.bool(),
+      href: Config.string(),
+      icon: Config.any(),
+      classIcon: Config.string(),
+      iconAlignment: Config.oneOf(['right-center', 'left-center', 'right-justified', 'left-justified']),
+      id: Config.string(),
+      label: Config.any(),
+      name: Config.string(),
+      rel: Config.string(),
+      target: Config.oneOf(['_blank', '_self', '_parent', '_top']),
+      type: Config.oneOf(['button', 'reset', 'submit']).value('button'),
+      value: Config.string(),
+    })
+  ).value([{}]),
 
   /**
    * @default undefined

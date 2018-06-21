@@ -13,11 +13,11 @@
   {@param? hardWidth: bool}
   {@param? weight: string}
   {@param? darkTheme: bool}
-  {@param? rounded: bool}
+  {@param? borderRadius: string}
   {@param? group: bool}
   {@param? groupType: string}
   {@param? groupSpacing: string}
-  {@param groupButtons: list<map<string, html|string>>}
+  {@param groupButtons: list<?>}
   {@param? href: string}
   {@param? icon: html|string}
   {@param? classIcon: string}
@@ -60,8 +60,8 @@
         {sp}btn-darktheme
       {/if}
 
-      {if $rounded}
-        {sp}btn-rounded
+      {if $borderRadius}
+        {sp}btn-{$borderRadius}
       {/if}
 
       {if not $label}
@@ -201,15 +201,15 @@
  */
 {template .buttonGroup}
   {@param? elementClasses: string}
-  {@param? rounded: bool}
+  {@param? borderRadius: string}
   {@param? groupSpacing: string}
-  {@param groupButtons: list<map<string, html|string>>}
+  {@param groupButtons: list<?>}
 
   {let $btnGroupItemAttributes kind="attributes"}
     class="btngroup-item
 
-      {if $rounded}
-        {sp}btn-rounded
+      {if $borderRadius}
+        {sp}btn-{$borderRadius}
       {/if}
 
       {if $elementClasses}
@@ -257,106 +257,106 @@
  * Renders grouped buttons
  */
 {template .buttonGroupContent}
-  {@param button: map<string, html|string>}
+  {@param button: ?}
 
   {let $groupButtonAttributes kind="attributes"}
     class="btn btn-groupbtn
-      {if $button['style'] == 'destructive'}
+      {if $button.style == 'destructive'}
         {sp}btn-destructive
-      {elseif $button['style'] and $button['color']}
-        {sp}btn-{$button['style']}-{$button['color']}
-      {elseif $button['style'] and not $button['color']}
-        {sp}btn-{$button['style']}-accent
-      {elseif $button['color'] and not $button['style']}
-        {sp}btn-primary-{$button['color']}
+      {elseif $button.style and $button.color}
+        {sp}btn-{$button.style}-{$button.color}
+      {elseif $button.style and not $button.color}
+        {sp}btn-{$button.style}-accent
+      {elseif $button.color and not $button.style}
+        {sp}btn-primary-{$button.color}
       {else}
         {sp}btn-primary-accent
       {/if}
 
-      {if $button['size']}
-        {sp}btn-{$button['size']}
+      {if $button.size}
+        {sp}btn-{$button.size}
       {else}
         {sp}btn-m
       {/if}
 
-      {if $button['weight']}
-        {sp}btn-{$button['weight']}
+      {if $button.weight}
+        {sp}btn-{$button.weight}
       {else}
         {sp}btn-middleweight
       {/if}
 
-      {if $button['darkTheme']}
+      {if $button.darkTheme}
         {sp}btn-darktheme
       {/if}
 
-      {if not $button['label']}
-        {if $button['icon'] or $button['classIcon']}
+      {if not $button.label}
+        {if $button.icon or $button.classIcon}
           {sp}btn-lone-icon
         {/if}
       {/if}
 
-      {if $button['iconAlignment'] == 'left-justified' or $button['iconAlignment'] == 'right-justified'}
+      {if $button.iconAlignment == 'left-justified' or $button.iconAlignment == 'right-justified'}
         {sp}btn-justified-padding
       {/if}
 
-      {if $button['elementClasses']}
-        {sp}{$button['elementClasses']}
+      {if $button.elementClasses}
+        {sp}{$button.elementClasses}
       {/if}
     "
 
-    {if $button['width'] and not $button['hardWidth']}
-      style="min-width:{$button['width']}"
+    {if $button.width and not $button.hardWidth}
+      style="min-width:{$button.width}"
     {/if}
 
-    {if $button['width'] and $button['hardWidth']}
-      style="width:{$button['width']}"
+    {if $button.width and $button.hardWidth}
+      style="width:{$button.width}"
     {/if}
 
-    {if $button['disabled']}
+    {if $button.disabled}
       disabled
     {/if}
 
-    {if $button['href']}
-      href="{$button['href']}"
+    {if $button.href}
+      href="{$button.href}"
     {/if}
 
-    {if $button['id']}
-      id="{$button['id']}"
+    {if $button.id}
+      id="{$button.id}"
     {/if}
 
-    {if $button['name']}
-      name="{$button['name']}"
+    {if $button.name}
+      name="{$button.name}"
     {/if}
 
-    {if $button['rel']}
-      rel="{$button['rel']}"
+    {if $button.rel}
+      rel="{$button.rel}"
     {/if}
 
-    {if $button['value']}
-      value="{$button['value']}"
+    {if $button.value}
+      value="{$button.value}"
     {/if}
 
-    {if $button['target']}
-      target="{$button['target']}"
+    {if $button.target}
+      target="{$button.target}"
     {/if}
 
-    {if not $button['href']}
-      type="{$button['type']}"
+    {if not $button.href}
+      type="{$button.type}"
     {/if}
   {/let}
 
-  {if $button['href']}
+  {if $button.href}
    <a {$groupButtonAttributes}>
   {else}
    <btn {$groupButtonAttributes}>
   {/if}
     {call .content}
-      {param icon: $button['icon'] /}
-      {param classIcon: $button['classIcon'] /}
-      {param iconAlignment: $button['iconAlignment'] /}
-      {param label: $button['label'] /}
+      {param icon: $button.icon /}
+      {param classIcon: $button.classIcon /}
+      {param iconAlignment: $button.iconAlignment /}
+      {param label: $button.label /}
     {/call}
-  {if $button['href']}
+  {if $button.href}
    </a>
   {else}
    </btn>

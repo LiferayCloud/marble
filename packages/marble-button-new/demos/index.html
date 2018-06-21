@@ -455,40 +455,80 @@
       </div>
     </div>
 
-    <div id="rounded" class="demo-body-section">
-      <h3 class="demo-body-title">Rounded</h3>
-      <script>
+    <div id="borderRadius" class="demo-body-section">
+      <h3 class="demo-body-title">Border Radius</h3>
 
-        new metal.ButtonNew({
-          label: 'Primary',
-          rounded: true
-        }, '#rounded');
+      <div class="demo-body-content" id="borderRadius-6px">
+        <h3 class="demo-body-subtitle">6px</h3>
+        <script>
 
-        new metal.ButtonNew({
-          label: 'Outline',
-          style: 'outline',
-          rounded: true
-        }, '#rounded');
+          new metal.ButtonNew({
+            label: 'Primary',
+            borderRadius: 'borderRadius-6px'
+          }, '#borderRadius-6px');
 
-        new metal.ButtonNew({
-          label: 'Ghost',
-          style: 'ghost',
-          rounded: true
-        }, '#rounded');
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            borderRadius: 'borderRadius-6px'
+          }, '#borderRadius-6px');
 
-        new metal.ButtonNew({
-          label: 'Destructive',
-          style: 'destructive',
-          rounded: true
-        }, '#rounded');
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            borderRadius: 'borderRadius-6px'
+          }, '#borderRadius-6px');
 
-        new metal.ButtonNew({
-          label: 'Float',
-          style: 'float',
-          rounded: true
-        }, '#rounded');
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            borderRadius: 'borderRadius-6px'
+          }, '#borderRadius-6px');
 
-      </script>
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            borderRadius: 'borderRadius-6px'
+          }, '#borderRadius-6px');
+
+        </script>
+      </div>
+
+      <div class="demo-body-content" id="borderRadius-rounded">
+        <h3 class="demo-body-subtitle">Rounded</h3>
+        <script>
+
+          new metal.ButtonNew({
+            label: 'Primary',
+            borderRadius: 'rounded'
+          }, '#borderRadius-rounded');
+
+          new metal.ButtonNew({
+            label: 'Outline',
+            style: 'outline',
+            borderRadius: 'rounded'
+          }, '#borderRadius-rounded');
+
+          new metal.ButtonNew({
+            label: 'Ghost',
+            style: 'ghost',
+            borderRadius: 'rounded'
+          }, '#borderRadius-rounded');
+
+          new metal.ButtonNew({
+            label: 'Destructive',
+            style: 'destructive',
+            borderRadius: 'rounded'
+          }, '#borderRadius-rounded');
+
+          new metal.ButtonNew({
+            label: 'Float',
+            style: 'float',
+            borderRadius: 'rounded'
+          }, '#borderRadius-rounded');
+
+        </script>
+      </div>
     </div>
 
     <div id="fitting" class="demo-body-section">
@@ -2271,14 +2311,14 @@
             groupType: 'default',
             groupButtons: [
               {
-                'label': 'Primary 1',
+                label: 'Primary 1',
               },
               {
-                'label': 'Primary 2',
+                label: 'Primary 2',
               },
               {
-                'label': 'Primary 3',
-                'style': 'outline',
+                label: 'Primary 3',
+                style: 'outline',
               }
             ],
           }, '#group-default');
@@ -2295,14 +2335,14 @@
             groupType: 'segmented',
             groupButtons: [
               {
-                'label': 'Primary 1',
+                label: 'Primary 1',
               },
               {
-                'label': 'Primary 2',
+                label: 'Primary 2',
               },
               {
-                'label': 'Primary 3',
-                'style': 'outline',
+                label: 'Primary 3',
+                style: 'outline',
               }
             ],
           }, '#group-segmented');
@@ -2316,14 +2356,14 @@
           new metal.ButtonNew({
             group: true,
             groupSpacing: '1px',
-            rounded: true,
+            borderRadius: 'rounded',
             groupType: 'segmented',
             groupButtons: [
               {
-                'label': 'Primary',
+                label: 'Primary',
               },
               {
-                'icon': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 14 13" width="14" height="13">
                           <path d="M5.707 9.707a.997.997 0 0 1-1.414 0 1 1 0 0 1 0-1.414L5.586 7H1a1 1 0 0 1 0-2h4.586L4.293 3.707a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3z"/>
                           <path fill-opacity=".6" d="M8.017 0H8a1 1 0 0 0 0 2 4 4 0 0 1 0 8 1 1 0 1 0 0 2 6 6 0 0 0 .017-12"/>
                         </svg>`,

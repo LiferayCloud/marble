@@ -8,7 +8,9 @@ $btn-red: #ff4040;
 $btn-orange: #ff6e02;
 $btn-yellow: #ffb700;
 
-// Buttons \\
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
 .btn {
   align-content: center;
   align-items: center;
@@ -38,7 +40,8 @@ $btn-yellow: #ffb700;
   }
 }
 
-// --- style
+/* Style
+   ========================================================================== */
 @mixin button-primary($overlay-color, $btn-color) {
   background-color: $btn-color;
   box-shadow: 0 0 0 0.65px rgba($primary, 0.18), 0 0 0 0.65px $btn-color;
@@ -349,7 +352,8 @@ $btn-yellow: #ffb700;
   }
 }
 
-// --- color
+/* Color
+   ========================================================================== */
 .btn {
   &.btn-primary-accent {
     @include button-primary($primary, $btn-accent);
@@ -464,11 +468,11 @@ $btn-yellow: #ffb700;
   }
 }
 
-// --- size / fitting / rounded / icon sizing / label + icon justified padding
+/* Size / Fitting / Rounded / Icon Sizing / Label+Icon Justified Padding
+   ========================================================================== */
 .btn {
   &.btn-s,
   &.btn-sm {
-    border-radius: 3px;
     height: 30px;
     font-size: 13px;
     padding: 0 9.5px;
@@ -539,12 +543,17 @@ $btn-yellow: #ffb700;
     }
   }
 
+  &.btn-borderRadius-6px {
+    border-radius: 6px;
+  }
+
   &.btn-fullwidth {
     width: 100%;
   }
 }
 
-// --- weight
+/* Font Weight
+   ========================================================================== */
 .btn {
   &.btn-lightweight {
     font-weight: 400;
@@ -559,7 +568,8 @@ $btn-yellow: #ffb700;
   }
 }
 
-// --- content
+/* Content
+   ========================================================================== */
 .btn {
 
   .icon, .button-label {
@@ -702,7 +712,8 @@ $btn-yellow: #ffb700;
   }
 }
 
-// --- button group
+/* Button Group
+   ========================================================================== */
 .btngroup {
   display: inline-flex;
 
@@ -724,10 +735,6 @@ $btn-yellow: #ffb700;
       &#btngroup-firstitem {
         .btn {
           border-radius: 4px 0 0 4px;
-
-          &.btn-s, &.btn-sm {
-            border-radius: 3px 0 0 3px;
-          }
         }
 
         &.btn-rounded {
@@ -751,10 +758,6 @@ $btn-yellow: #ffb700;
       &#btngroup-lastitem {
         .btn {
           border-radius: 0 4px 4px 0;
-
-          &.btn-s, &.btn-sm {
-            border-radius: 0 3px 3px 0;
-          }
         }
 
         &.btn-rounded {
@@ -778,8 +781,6 @@ $btn-yellow: #ffb700;
       &[id^='btngroup-miditem-'] .btn {
         border-radius: 0;
       }
-
     }
   }
 }
-

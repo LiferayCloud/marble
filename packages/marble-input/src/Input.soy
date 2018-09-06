@@ -3,6 +3,7 @@
 /**
  * @param? autocomplete
  * @param? classes
+ * @param? disabled
  * @param? fieldIndex
  * @param? isShowing_
  * @param? isTogglePassword
@@ -41,6 +42,7 @@
 /**
  * @param? autocomplete
  * @param? classes
+ * @param? disabled
  * @param? fieldIndex
  * @param? maxLength
  * @param? name
@@ -88,6 +90,10 @@
 
   {if isNonnull($value)}
     value="{$value}"
+  {/if}
+
+  {if isNonnull($disabled)}
+    disabled="{$disabled}"
   {/if}
 {/template}
 

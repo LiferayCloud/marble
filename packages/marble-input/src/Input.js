@@ -53,6 +53,13 @@ Input.STATE = {
     validator: core.isString,
   },
   /**
+   * Defines "disabled" html attribute
+   * @type {boolean}
+   */
+  disabled: {
+    validator: core.isBoolean,
+  },
+  /**
    * Defines if while exposed state, the related field shall be editable
    * It only works combined with isTogglePassword
    * @type {boolean}

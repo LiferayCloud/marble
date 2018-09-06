@@ -110,6 +110,9 @@ function $fieldAttrs(opt_data, opt_ijData, opt_ijData_deprecated) {
   if ((opt_data.value != null)) {
     incrementalDom.attr('value', opt_data.value);
   }
+  if ((opt_data.disabled != null)) {
+    incrementalDom.attr('disabled', opt_data.disabled);
+  }
 }
 exports.fieldAttrs = $fieldAttrs;
 if (goog.DEBUG) {
@@ -147,12 +150,12 @@ if (goog.DEBUG) {
   $togglePassword.soyTemplateName = 'Input.togglePassword';
 }
 
-exports.render.params = ["autocomplete","classes","fieldIndex","isShowing_","isTogglePassword","maxLength","name","onInput","readonly","rowIndex","type","value"];
-exports.render.types = {"autocomplete":"any","classes":"any","fieldIndex":"any","isShowing_":"any","isTogglePassword":"any","maxLength":"any","name":"any","onInput":"any","readonly":"any","rowIndex":"any","type":"any","value":"any"};
+exports.render.params = ["autocomplete","classes","disabled","fieldIndex","isShowing_","isTogglePassword","maxLength","name","onInput","readonly","rowIndex","type","value"];
+exports.render.types = {"autocomplete":"any","classes":"any","disabled":"any","fieldIndex":"any","isShowing_":"any","isTogglePassword":"any","maxLength":"any","name":"any","onInput":"any","readonly":"any","rowIndex":"any","type":"any","value":"any"};
 exports.input.params = ["type"];
 exports.input.types = {"type":"any"};
-exports.fieldAttrs.params = ["autocomplete","classes","fieldIndex","maxLength","name","onInput","placeholder","readonly","rowIndex","value"];
-exports.fieldAttrs.types = {"autocomplete":"any","classes":"any","fieldIndex":"any","maxLength":"any","name":"any","onInput":"any","placeholder":"any","readonly":"any","rowIndex":"any","value":"any"};
+exports.fieldAttrs.params = ["autocomplete","classes","disabled","fieldIndex","maxLength","name","onInput","placeholder","readonly","rowIndex","value"];
+exports.fieldAttrs.types = {"autocomplete":"any","classes":"any","disabled":"any","fieldIndex":"any","maxLength":"any","name":"any","onInput":"any","placeholder":"any","readonly":"any","rowIndex":"any","value":"any"};
 exports.togglePassword.params = ["isShowing_"];
 exports.togglePassword.types = {"isShowing_":"any"};
 templates = exports;

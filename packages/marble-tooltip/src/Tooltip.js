@@ -1,6 +1,7 @@
 import dom from 'metal-dom';
 import Soy from 'metal-soy';
 import TooltipBase from './TooltipBase';
+import xssFilters from 'xss-filters';
 
 import templates from './Tooltip.soy.js';
 
@@ -8,6 +9,9 @@ import templates from './Tooltip.soy.js';
  * Tooltip component.
  */
 class Tooltip extends TooltipBase {
+  /**
+   * @inheritDoc
+   */
   syncVisible(visible) {
     super.syncVisible(visible);
 
@@ -18,18 +22,31 @@ class Tooltip extends TooltipBase {
     }
   }
 
+  /**
+   * @inheritDoc
+   */
   syncCurrentAlignElement(alignElement, prevAlignElement) {
     if (alignElement) {
       const dataTitle = alignElement.getAttribute('data-title');
       if (dataTitle) {
-        this.title = dataTitle;
+        let escapeTitle = true;
+        if (alignElement.getAttribute('data-escape-title') === 'false') {
+          escapeTitle = false;
+        }
+
+        this.title = escapeTitle ? xssFilters.inHTMLData(dataTitle) : dataTitle;
       } else {
         this.title = '';
       }
 
       const dataDescription = alignElement.getAttribute('data-description');
       if (dataDescription) {
-        this.description = dataDescription;
+        let escapeDescription = true;
+        if (alignElement.getAttribute('data-escape-description') === 'false') {
+          escapeDescription = false;
+        }
+        this.description = escapeDescription ?
+          xssFilters.inHTMLData(dataDescription) : dataDescription;
       } else {
         this.description = '';
       }

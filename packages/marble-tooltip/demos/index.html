@@ -44,12 +44,12 @@
 
       <section>
         <h2 class="content-body-title">With Links</h2>
-        <button type="button" class="btn btn-sm show-tooltip" data-title="With Links" data-description="To make a project accessible via one or more non-WeDeploy domain names, you must update your domain's DNS records. &lt;a href=&quot;javascript:;&quot;&gt;Read the docs&lt;/a&gt; for more information.">With Links</button>
+        <button type="button" class="btn btn-sm show-tooltip" data-escape-title="false" data-escape-description="false" data-title="With Links" data-description="To make a project accessible via one or more non-WeDeploy domain names, you must update your domain's DNS records. &lt;a href=&quot;javascript:;&quot;&gt;Read the docs&lt;/a&gt; for more information.">With Links</button>
       </section>
 
       <section>
         <h2 class="content-body-title">Regular</h2>
-        <button type="button" class="btn btn-sm show-tooltip" data-title="Storage" data-description="Total storage for the realtime database.<br/>This does not include hosting or other features.">Regular</button>
+        <button type="button" class="btn btn-sm show-tooltip" data-title="Storage" data-description="Total storage for the realtime database.<br/>This does not include hosting or other features." data-escape-description="false">Regular</button>
       </section>
 
       <section>
@@ -79,7 +79,7 @@
     });
 
     function changeTheme(item) {
-      if(item.value === "light") {
+      if(item.value === 'light') {
         window.tooltip.elementClasses = 'tooltip-light';
       } else {
         window.tooltip.elementClasses = 'tooltip-dark';

@@ -147,7 +147,7 @@ class TooltipBase extends Component {
     if (prevAlignElement) {
       alignElement.removeAttribute('aria-describedby');
     }
-    if (alignElement) {
+    if (alignElement && !this.title) {
       const dataTitle = alignElement.getAttribute('data-title');
       if (dataTitle) {
         this.title = dataTitle;

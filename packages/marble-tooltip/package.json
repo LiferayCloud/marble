@@ -36,7 +36,8 @@
     "metal-events": "^2.16.0",
     "metal-position": "^2.1.0",
     "metal-soy": "^2.16.0",
-    "metal-state": "^2.16.0"
+    "metal-state": "^2.16.0",
+    "xss-filters": "^1.2.7"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",

@@ -114,6 +114,27 @@ describe('TooltipBase', () => {
     });
   });
 
+  it('should set alignedPosition when there is title already set', (done) => {
+    dom.enterDocument('<div id="trigger">trigger</div>');
+    var trigger = dom.toElement('#trigger');
+
+    tooltip = new TooltipBase({
+      position: TooltipBase.Align.Bottom,
+      selector: '#trigger',
+      title: 'tooltip title',
+    });
+    dom.triggerEvent(trigger, 'mouseover');
+
+    tooltip.once('stateSynced', () => {
+      tooltip.once('stateSynced', () => {
+        expect(TooltipBase.Align.Bottom).toBe(tooltip.alignedPosition);
+        expect(tooltip.title).toStrictEqual('tooltip title');
+        dom.exitDocument(trigger);
+        done();
+      });
+    });
+  });
+
   it.skip('should set alignedPosition to the best found position that aligns well to trigger', (done) => {
     dom.enterDocument('<div id="trigger" style="width: 20px; height: 20px; position: absolute;">trigger</div>');
     var trigger = dom.toElement('#trigger');

@@ -147,11 +147,14 @@ class TooltipBase extends Component {
     if (prevAlignElement) {
       alignElement.removeAttribute('aria-describedby');
     }
-    if (alignElement && !this.title) {
-      const dataTitle = alignElement.getAttribute('data-title');
-      if (dataTitle) {
-        this.title = dataTitle;
+    if (alignElement) {
+      if (!this.title) {
+        const dataTitle = alignElement.getAttribute('data-title');
+        if (dataTitle) {
+          this.title = dataTitle;
+        }
       }
+
       if (this.inDocument) {
         this.alignedPosition = TooltipBase.Align.align(
           this.element,

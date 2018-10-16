@@ -30,6 +30,12 @@ Button.STATE = {
    * @default undefined
    * @type {?(string|undefined)}
    */
+  elementAttributes: Config.string(),
+
+  /**
+   * @default undefined
+   * @type {?(string|undefined)}
+   */
   elementClasses: Config.string(),
 
   /**

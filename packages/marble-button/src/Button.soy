@@ -6,6 +6,7 @@
 {template .render}
   {@param? block: bool}
   {@param? disabled: bool}
+  {@param? elementAttributes: string}
   {@param? elementClasses: string}
   {@param? format: string}
   {@param? href: string}
@@ -76,6 +77,10 @@
 
     {if not $href}
       type="{$type}"
+    {/if}
+
+    {if $elementAttributes}
+      {$elementAttributes}
     {/if}
   {/let}
 

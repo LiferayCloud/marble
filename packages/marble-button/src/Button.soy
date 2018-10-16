@@ -89,13 +89,11 @@
   {else}
    <button {$attributes}>
   {/if}
-  <div class="btn-content-wrapper">
     {call .content}
       {param icon: $icon /}
       {param iconAlignment: $iconAlignment ?: 'left'/}
       {param label: $label /}
     {/call}
-  </div>
   {if $href}
    </a>
   {else}

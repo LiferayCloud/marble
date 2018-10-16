@@ -30,12 +30,6 @@ Button.STATE = {
    * @default undefined
    * @type {?(string|undefined)}
    */
-  elementAttributes: Config.string(),
-
-  /**
-   * @default undefined
-   * @type {?(string|undefined)}
-   */
   elementClasses: Config.string(),
 
   /**
@@ -100,6 +94,12 @@ Button.STATE = {
   style: Config.oneOf(['accent', 'default', 'link', 'primary', 'success', 'danger', 'warning']).value(
     'default'
   ),
+
+  /**
+   * @default undefined
+   * @type {?(string|number|undefined)}
+   */
+  tabIndex: Config.any(),
 
   /**
    * @default undefined

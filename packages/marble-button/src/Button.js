@@ -97,9 +97,9 @@ Button.STATE = {
 
   /**
    * @default undefined
-   * @type {?(string|number|undefined)}
+   * @type {?(number|undefined)}
    */
-  tabIndex: Config.any(),
+  tabIndex: Config.number(),
 
   /**
    * @default undefined

@@ -17,6 +17,7 @@
   {@param? rel: string}
   {@param? size: string}
   {@param? style: string}
+  {@param? tabIndex: number}
   {@param? target: string}
   {@param? type: string}
   {@param? value: string}
@@ -76,6 +77,10 @@
 
     {if not $href}
       type="{$type}"
+    {/if}
+
+    {if $tabIndex}
+      tabIndex="{$tabIndex}"
     {/if}
   {/let}
 

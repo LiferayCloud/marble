@@ -97,6 +97,12 @@ Button.STATE = {
 
   /**
    * @default undefined
+   * @type {?(number|undefined)}
+   */
+  tabIndex: Config.number(),
+
+  /**
+   * @default undefined
    * @type {?string}
    */
   target: Config.oneOf(['_blank', '_self', '_parent', '_top']),

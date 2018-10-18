@@ -7,6 +7,7 @@
   {@param? block: bool}
   {@param? disabled: bool}
   {@param? elementClasses: string}
+  {@param? focusTabIndex: bool}
   {@param? format: string}
   {@param? href: string}
   {@param? icon: string}
@@ -17,7 +18,6 @@
   {@param? rel: string}
   {@param? size: string}
   {@param? style: string}
-  {@param? tabIndex: number}
   {@param? target: string}
   {@param? type: string}
   {@param? value: string}
@@ -44,6 +44,10 @@
         {sp}btn-{$style}
       {else}
         {sp}btn-default
+      {/if}
+
+      {if $focusTabIndex}
+        {sp}btn-tabindex-padding
       {/if}
     "
 
@@ -79,8 +83,8 @@
       type="{$type}"
     {/if}
 
-    {if $tabIndex}
-      tabIndex="{$tabIndex}"
+    {if $focusTabIndex}
+      tabindex="0"
     {/if}
   {/let}
 
@@ -89,11 +93,17 @@
   {else}
    <button {$attributes}>
   {/if}
-    {call .content}
-      {param icon: $icon /}
-      {param iconAlignment: $iconAlignment ?: 'left'/}
-      {param label: $label /}
-    {/call}
+    {if $focusTabIndex}
+      <div class="btn-tabindex-wrapper" tabindex="-1">
+    {/if}
+      {call .content}
+        {param icon: $icon /}
+        {param iconAlignment: $iconAlignment ?: 'left'/}
+        {param label: $label /}
+      {/call}
+    {if $focusTabIndex}
+      </div>
+    {/if}
   {if $href}
    </a>
   {else}

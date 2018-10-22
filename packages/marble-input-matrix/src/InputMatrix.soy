@@ -9,6 +9,7 @@
  */
 {template .render}
   {@param? closeButtonHtml: html|string}
+  {@param? hideCloseButtons: bool}
 
   <div class="input-matrix {$elementClasses ?: ''}">
     <div class="input-matrix-labels">
@@ -30,6 +31,7 @@
       {call .row}
         {param closeButtonHtml : $closeButtonHtml /}
         {param fieldsConfig : $fieldsConfig /}
+        {param hideCloseButtons : $hideCloseButtons /}
         {param last: (not $shouldAddRow) and index($rowFields) == (length($fieldObjs) - 1) /}
         {param rowFields: $rowFields /}
         {param rowIndex: index($rowFields) /}
@@ -56,6 +58,7 @@
  * @param last
  * @param rowIndex
  * @param? handleInput_
+ * @param? hideCloseButtons
  * @param? rowFields
  */
 {template .row}
@@ -72,7 +75,7 @@
       {/foreach}
     </div>
     <div class="input-matrix-fields-right">
-      {if not $last}
+      {if not $last and not $hideCloseButtons}
         <button
           type="button"
           class="close"

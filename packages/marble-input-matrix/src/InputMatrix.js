@@ -149,6 +149,12 @@ InputMatrix.STATE = {
     validator: core.isArray,
     valueFn: () => [{}],
   },
+
+  /**
+   * Flag that allows hiding of close buttons.
+   * @type {boolean}
+   */
+  hideCloseButtons: {},
 };
 
 export {InputMatrix};

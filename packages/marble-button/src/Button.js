@@ -33,6 +33,12 @@ Button.STATE = {
   elementClasses: Config.string(),
 
   /**
+   * @default false
+   * @type {?boolean}
+   */
+  focusTabIndex: Config.bool().value(false),
+
+  /**
    * @default undefined
    * @type {?string}
    */
@@ -94,12 +100,6 @@ Button.STATE = {
   style: Config.oneOf(['accent', 'default', 'link', 'primary', 'success', 'danger', 'warning']).value(
     'default'
   ),
-
-  /**
-   * @default undefined
-   * @type {?(number|undefined)}
-   */
-  tabIndex: Config.number(),
 
   /**
    * @default undefined

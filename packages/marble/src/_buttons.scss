@@ -1,7 +1,8 @@
 /* ==========================================================================
    Buttons
    ========================================================================== */
-.btn {
+.btn,
+.btn .btn-tabindex-wrapper {
   align-content: center;
   align-items: center;
   border-radius: $br-md;
@@ -19,11 +20,19 @@
   }
 }
 
+// Forces button element to zero padding when .btn-tabindex-wrapper is present, uses wrapper for padding and content styles
+.btn.btn-tabindex-padding {
+  padding: 0 !important;
+}
+
 /* Sizes
    ========================================================================== */
 .btn,
+.btn-tabindex-wrapper,
 .btn.btn-md,
-.btn.btn-medium {
+.btn.btn-medium,
+.btn.btn-md .btn-tabindex-wrapper,
+.btn.btn-medium .btn-tabindex-wrapper {
   height: $bps-md;
   font-size: 15px;
   line-height: $bps-md;
@@ -31,14 +40,18 @@
 }
 
 .btn.btn-lg,
-.btn.btn-large {
+.btn.btn-large,
+.btn.btn-lg .btn-tabindex-wrapper,
+.btn.btn-large .btn-tabindex-wrapper {
   font-size: 16px;
   height: $bps-lg;
   line-height: $bps-lg;
 }
 
 .btn.btn-sm,
-.btn.btn-small {
+.btn.btn-small,
+.btn.btn-sm .btn-tabindex-wrapper,
+.btn.btn-small .btn-tabindex-wrapper {
   height: $bps-sm;
   font-size: 14px;
   line-height: $bps-sm;
@@ -58,7 +71,9 @@
 }
 
 .btn.btn-ml,
-.btn.btn-mlarge {
+.btn.btn-mlarge,
+.btn.btn-ml .btn-tabindex-wrapper,
+.btn.btn-mlarge .btn-tabindex-wrapper {
   height: ($base * 7);
   font-size: 14px;
   line-height: ($base * 7);
@@ -78,7 +93,9 @@
 }
 
 .btn.btn-xs,
-.btn.btn-xsmall {
+.btn.btn-xsmall,
+.btn.btn-xs .btn-tabindex-wrapper,
+.btn.btn-xsmall .btn-tabindex-wrapper {
   height: $bps-xs;
   font-size: 12px;
   line-height: $bps-xs;
@@ -223,15 +240,18 @@
 
 /* icons
    ========================================================================== */
-.btn > .icon {
+.btn > .icon,
+.btn .btn-tabindex-wrapper > .icon {
   min-width: 16px;
 }
 
-.btn > .icon-left {
+.btn > .icon-left,
+.btn .btn-tabindex-wrapper > .icon-left {
   margin: 0 $base 0 0;
 }
 
-.btn > .icon-right {
+.btn > .icon-right,
+.btn .btn-tabindex-wrapper > .icon-right {
   margin: 0 0 0 $base;
 }
 
@@ -247,13 +267,16 @@
 
 /* format
    ========================================================================== */
-.btn.btn-block {
+.btn.btn-block,
+.btn.btn-block .btn-tabindex-wrapper {
   display: flex;
   width: 100%;
 }
 
 .btn.btn-rounded,
-.btn.btn-squared {
+.btn.btn-squared,
+.btn.btn-rounded .btn-tabindex-wrapper,
+.btn.btn-squared .btn-tabindex-wrapper {
   padding: 0;
   width: $bps-md;
 

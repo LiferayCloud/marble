@@ -1,6 +1,6 @@
 {
   "name": "marble-input-matrix",
-  "version": "2.1.16",
+  "version": "2.1.17",
   "description": "Marble's input matrix component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-input-matrix",

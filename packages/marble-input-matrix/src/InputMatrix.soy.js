@@ -31,7 +31,8 @@ var $templateAlias1 = Soy.getTemplate('Input.incrementaldom', 'render');
  *  elementClasses: (?),
  *  fieldsConfig: (?),
  *  handleInput_: (?),
- *  closeButtonHtml: (!goog.soy.data.SanitizedContent|function()|null|string|undefined)
+ *  closeButtonHtml: (!goog.soy.data.SanitizedContent|function()|null|string|undefined),
+ *  hideCloseButtons: (boolean|null|undefined)
  * }} opt_data
  * @param {Object<string, *>=} opt_ijData
  * @param {Object<string, *>=} opt_ijData_deprecated
@@ -43,34 +44,36 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   var $$temp;
   /** @type {!goog.soy.data.SanitizedContent|function()|null|string|undefined} */
   var closeButtonHtml = soy.asserts.assertType(opt_data.closeButtonHtml == null || goog.isFunction(opt_data.closeButtonHtml) || (goog.isString(opt_data.closeButtonHtml) || opt_data.closeButtonHtml instanceof goog.soy.data.SanitizedContent), 'closeButtonHtml', opt_data.closeButtonHtml, '!goog.soy.data.SanitizedContent|function()|null|string|undefined');
+  /** @type {boolean|null|undefined} */
+  var hideCloseButtons = soy.asserts.assertType(opt_data.hideCloseButtons == null || (goog.isBoolean(opt_data.hideCloseButtons) || opt_data.hideCloseButtons === 1 || opt_data.hideCloseButtons === 0), 'hideCloseButtons', opt_data.hideCloseButtons, 'boolean|null|undefined');
   incrementalDom.elementOpenStart('div');
       incrementalDom.attr('class', 'input-matrix ' + (($$temp = opt_data.elementClasses) == null ? '' : $$temp));
   incrementalDom.elementOpenEnd();
     incrementalDom.elementOpenStart('div');
         incrementalDom.attr('class', 'input-matrix-labels');
     incrementalDom.elementOpenEnd();
-      var config11List = opt_data.fieldsConfig;
-      var config11ListLen = config11List.length;
-      for (var config11Index = 0; config11Index < config11ListLen; config11Index++) {
-          var config11Data = config11List[config11Index];
+      var config12List = opt_data.fieldsConfig;
+      var config12ListLen = config12List.length;
+      for (var config12Index = 0; config12Index < config12ListLen; config12Index++) {
+          var config12Data = config12List[config12Index];
           incrementalDom.elementOpenStart('label');
               incrementalDom.attr('class', 'input-matrix-label');
           incrementalDom.elementOpenEnd();
-            soyIdom.print(($$temp = config11Data.label) == null ? '' : $$temp);
+            soyIdom.print(($$temp = config12Data.label) == null ? '' : $$temp);
           incrementalDom.elementClose('label');
         }
     incrementalDom.elementClose('div');
-    var fieldObjs__soy14 = opt_data.currentFields_ ? opt_data.currentFields_ : [[]];
-    var shouldAddRow__soy16 = '';
-    shouldAddRow__soy16 += $shouldAddRow({currentFields_: ($$temp = fieldObjs__soy14[(fieldObjs__soy14.length) - 1]) == null ? [] : $$temp, fieldsConfig: opt_data.fieldsConfig}, null, opt_ijData);
-    var rowFields32List = fieldObjs__soy14;
-    var rowFields32ListLen = rowFields32List.length;
-    for (var rowFields32Index = 0; rowFields32Index < rowFields32ListLen; rowFields32Index++) {
-        var rowFields32Data = rowFields32List[rowFields32Index];
-        $row({closeButtonHtml: closeButtonHtml, fieldsConfig: opt_data.fieldsConfig, last: !shouldAddRow__soy16 && rowFields32Index == (fieldObjs__soy14.length) - 1, rowFields: rowFields32Data, rowIndex: rowFields32Index, handleInput_: opt_data.handleInput_}, null, opt_ijData);
+    var fieldObjs__soy15 = opt_data.currentFields_ ? opt_data.currentFields_ : [[]];
+    var shouldAddRow__soy17 = '';
+    shouldAddRow__soy17 += $shouldAddRow({currentFields_: ($$temp = fieldObjs__soy15[(fieldObjs__soy15.length) - 1]) == null ? [] : $$temp, fieldsConfig: opt_data.fieldsConfig}, null, opt_ijData);
+    var rowFields34List = fieldObjs__soy15;
+    var rowFields34ListLen = rowFields34List.length;
+    for (var rowFields34Index = 0; rowFields34Index < rowFields34ListLen; rowFields34Index++) {
+        var rowFields34Data = rowFields34List[rowFields34Index];
+        $row({closeButtonHtml: closeButtonHtml, fieldsConfig: opt_data.fieldsConfig, hideCloseButtons: hideCloseButtons, last: !shouldAddRow__soy17 && rowFields34Index == (fieldObjs__soy15.length) - 1, rowFields: rowFields34Data, rowIndex: rowFields34Index, handleInput_: opt_data.handleInput_}, null, opt_ijData);
       }
-    if (shouldAddRow__soy16 != '') {
-      $row({closeButtonHtml: closeButtonHtml, fieldsConfig: opt_data.fieldsConfig, last: true, rowFields: [], rowIndex: (fieldObjs__soy14.length), handleInput_: opt_data.handleInput_}, null, opt_ijData);
+    if (shouldAddRow__soy17 != '') {
+      $row({closeButtonHtml: closeButtonHtml, fieldsConfig: opt_data.fieldsConfig, last: true, rowFields: [], rowIndex: (fieldObjs__soy15.length), handleInput_: opt_data.handleInput_}, null, opt_ijData);
     }
   incrementalDom.elementClose('div');
 }
@@ -81,7 +84,8 @@ exports.render = $render;
  *  elementClasses: (?),
  *  fieldsConfig: (?),
  *  handleInput_: (?),
- *  closeButtonHtml: (!goog.soy.data.SanitizedContent|function()|null|string|undefined)
+ *  closeButtonHtml: (!goog.soy.data.SanitizedContent|function()|null|string|undefined),
+ *  hideCloseButtons: (boolean|null|undefined)
  * }}
  */
 $render.Params;
@@ -106,18 +110,18 @@ function $row(opt_data, opt_ijData, opt_ijData_deprecated) {
     incrementalDom.elementOpenStart('div');
         incrementalDom.attr('class', 'input-matrix-fields-left');
     incrementalDom.elementOpenEnd();
-      var config61List = opt_data.fieldsConfig;
-      var config61ListLen = config61List.length;
-      for (var config61Index = 0; config61Index < config61ListLen; config61Index++) {
-          var config61Data = config61List[config61Index];
-          var index__soy53 = config61Index;
-          $field(soy.$$assignDefaults({field: opt_data.rowFields ? opt_data.rowFields[index__soy53] : null, fieldIndex: index__soy53, rowIndex: opt_data.rowIndex, handleInput_: opt_data.handleInput_}, config61Data), null, opt_ijData);
+      var config63List = opt_data.fieldsConfig;
+      var config63ListLen = config63List.length;
+      for (var config63Index = 0; config63Index < config63ListLen; config63Index++) {
+          var config63Data = config63List[config63Index];
+          var index__soy55 = config63Index;
+          $field(soy.$$assignDefaults({field: opt_data.rowFields ? opt_data.rowFields[index__soy55] : null, fieldIndex: index__soy55, rowIndex: opt_data.rowIndex, handleInput_: opt_data.handleInput_}, config63Data), null, opt_ijData);
         }
     incrementalDom.elementClose('div');
     incrementalDom.elementOpenStart('div');
         incrementalDom.attr('class', 'input-matrix-fields-right');
     incrementalDom.elementOpenEnd();
-      if (!opt_data.last) {
+      if (!opt_data.last && !opt_data.hideCloseButtons) {
         incrementalDom.elementOpenStart('button');
             incrementalDom.attr('type', 'button');
             incrementalDom.attr('class', 'close');
@@ -156,12 +160,12 @@ if (goog.DEBUG) {
 function $field(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   opt_data = opt_data || {};
-  var hasError__soy80 = opt_data.field && opt_data.field.error && opt_data.field.error != '';
+  var hasError__soy82 = opt_data.field && opt_data.field.error && opt_data.field.error != '';
   incrementalDom.elementOpenStart('div');
-      incrementalDom.attr('class', 'form-group ' + (hasError__soy80 ? 'has-error' : ''));
+      incrementalDom.attr('class', 'form-group ' + (hasError__soy82 ? 'has-error' : ''));
   incrementalDom.elementOpenEnd();
-    var nameSuffix__soy84 = opt_data.isArray ? '[]' : opt_data.rowIndex + 1;
-    $templateAlias1(soy.$$assignDefaults({classes: 'form-control input-matrix-field', onInput: opt_data.handleInput_, name: (opt_data.name != null) ? opt_data.name + nameSuffix__soy84 : '', value: opt_data.field && opt_data.field.value ? opt_data.field.value : ''}, opt_data), null, opt_ijData);
+    var nameSuffix__soy86 = opt_data.isArray ? '[]' : opt_data.rowIndex + 1;
+    $templateAlias1(soy.$$assignDefaults({classes: 'form-control input-matrix-field', onInput: opt_data.handleInput_, name: (opt_data.name != null) ? opt_data.name + nameSuffix__soy86 : '', value: opt_data.field && opt_data.field.value ? opt_data.field.value : ''}, opt_data), null, opt_ijData);
     incrementalDom.elementOpenStart('p');
         incrementalDom.attr('class', 'help-block');
     incrementalDom.elementOpenEnd();
@@ -185,13 +189,13 @@ if (goog.DEBUG) {
 function $shouldAddRow(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   var output = '';
-  var config105List = opt_data.fieldsConfig;
-  var config105ListLen = config105List.length;
-  for (var config105Index = 0; config105Index < config105ListLen; config105Index++) {
-      var config105Data = config105List[config105Index];
-      var index__soy97 = config105Index;
-      var hasValue__soy99 = (opt_data.currentFields_[index__soy97] != null) && (opt_data.currentFields_[index__soy97].value != null) && opt_data.currentFields_[index__soy97].value != '';
-      output += !config105Data.disableDuplication && hasValue__soy99 ? 'true' : '';
+  var config107List = opt_data.fieldsConfig;
+  var config107ListLen = config107List.length;
+  for (var config107Index = 0; config107Index < config107ListLen; config107Index++) {
+      var config107Data = config107List[config107Index];
+      var index__soy99 = config107Index;
+      var hasValue__soy101 = (opt_data.currentFields_[index__soy99] != null) && (opt_data.currentFields_[index__soy99].value != null) && opt_data.currentFields_[index__soy99].value != '';
+      output += !config107Data.disableDuplication && hasValue__soy101 ? 'true' : '';
     }
   return output;
 }
@@ -200,10 +204,10 @@ if (goog.DEBUG) {
   $shouldAddRow.soyTemplateName = 'InputMatrix.shouldAddRow';
 }
 
-exports.render.params = ["closeButtonHtml","currentFields_","elementClasses","fieldsConfig","handleInput_"];
-exports.render.types = {"closeButtonHtml":"html|string","currentFields_":"any","elementClasses":"any","fieldsConfig":"any","handleInput_":"any"};
-exports.row.params = ["closeButtonHtml","fieldsConfig","last","rowIndex","handleInput_","rowFields"];
-exports.row.types = {"closeButtonHtml":"any","fieldsConfig":"any","last":"any","rowIndex":"any","handleInput_":"any","rowFields":"any"};
+exports.render.params = ["closeButtonHtml","hideCloseButtons","currentFields_","elementClasses","fieldsConfig","handleInput_"];
+exports.render.types = {"closeButtonHtml":"html|string","hideCloseButtons":"bool","currentFields_":"any","elementClasses":"any","fieldsConfig":"any","handleInput_":"any"};
+exports.row.params = ["closeButtonHtml","fieldsConfig","last","rowIndex","handleInput_","hideCloseButtons","rowFields"];
+exports.row.types = {"closeButtonHtml":"any","fieldsConfig":"any","last":"any","rowIndex":"any","handleInput_":"any","hideCloseButtons":"any","rowFields":"any"};
 exports.field.params = ["field","handleInput_","isArray","name","rowIndex"];
 exports.field.types = {"field":"any","handleInput_":"any","isArray":"any","name":"any","rowIndex":"any"};
 exports.shouldAddRow.params = ["currentFields_","fieldsConfig"];

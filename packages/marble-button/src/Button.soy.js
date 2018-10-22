@@ -27,6 +27,7 @@ var soyIdom = goog.require('soy.idom');
  *  block: (boolean|null|undefined),
  *  disabled: (boolean|null|undefined),
  *  elementClasses: (!goog.soy.data.SanitizedContent|null|string|undefined),
+ *  focusTabIndex: (boolean|null|undefined),
  *  format: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  href: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  icon: (!goog.soy.data.SanitizedContent|null|string|undefined),
@@ -37,7 +38,6 @@ var soyIdom = goog.require('soy.idom');
  *  rel: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  size: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  style: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  tabIndex: (null|number|undefined),
  *  target: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  type: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  value: (!goog.soy.data.SanitizedContent|null|string|undefined)
@@ -57,6 +57,8 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   var disabled = soy.asserts.assertType(opt_data.disabled == null || (goog.isBoolean(opt_data.disabled) || opt_data.disabled === 1 || opt_data.disabled === 0), 'disabled', opt_data.disabled, 'boolean|null|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var elementClasses = soy.asserts.assertType(opt_data.elementClasses == null || (goog.isString(opt_data.elementClasses) || opt_data.elementClasses instanceof goog.soy.data.SanitizedContent), 'elementClasses', opt_data.elementClasses, '!goog.soy.data.SanitizedContent|null|string|undefined');
+  /** @type {boolean|null|undefined} */
+  var focusTabIndex = soy.asserts.assertType(opt_data.focusTabIndex == null || (goog.isBoolean(opt_data.focusTabIndex) || opt_data.focusTabIndex === 1 || opt_data.focusTabIndex === 0), 'focusTabIndex', opt_data.focusTabIndex, 'boolean|null|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var format = soy.asserts.assertType(opt_data.format == null || (goog.isString(opt_data.format) || opt_data.format instanceof goog.soy.data.SanitizedContent), 'format', opt_data.format, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
@@ -77,8 +79,6 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   var size = soy.asserts.assertType(opt_data.size == null || (goog.isString(opt_data.size) || opt_data.size instanceof goog.soy.data.SanitizedContent), 'size', opt_data.size, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var style = soy.asserts.assertType(opt_data.style == null || (goog.isString(opt_data.style) || opt_data.style instanceof goog.soy.data.SanitizedContent), 'style', opt_data.style, '!goog.soy.data.SanitizedContent|null|string|undefined');
-  /** @type {null|number|undefined} */
-  var tabIndex = soy.asserts.assertType(opt_data.tabIndex == null || goog.isNumber(opt_data.tabIndex), 'tabIndex', opt_data.tabIndex, 'null|number|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var target = soy.asserts.assertType(opt_data.target == null || (goog.isString(opt_data.target) || opt_data.target instanceof goog.soy.data.SanitizedContent), 'target', opt_data.target, '!goog.soy.data.SanitizedContent|null|string|undefined');
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
@@ -86,7 +86,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   /** @type {!goog.soy.data.SanitizedContent|null|string|undefined} */
   var value = soy.asserts.assertType(opt_data.value == null || (goog.isString(opt_data.value) || opt_data.value instanceof goog.soy.data.SanitizedContent), 'value', opt_data.value, '!goog.soy.data.SanitizedContent|null|string|undefined');
   var attributes__soy21 = function() {
-    incrementalDom.attr('class', 'btn' + (block ? ' btn-block' : '') + (elementClasses ? ' ' + elementClasses : '') + (format ? ' btn-' + format : '') + (size ? ' btn-' + size : '') + (style ? ' btn-' + style : ' btn-default'));
+    incrementalDom.attr('class', 'btn' + (block ? ' btn-block' : '') + (elementClasses ? ' ' + elementClasses : '') + (format ? ' btn-' + format : '') + (size ? ' btn-' + size : '') + (style ? ' btn-' + style : ' btn-default') + (focusTabIndex ? ' btn-tabindex-padding' : ''));
     if (disabled) {
       incrementalDom.attr('disabled', 'disabled');
     }
@@ -111,9 +111,6 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
     if (!href) {
       incrementalDom.attr('type', type);
     }
-    if (tabIndex) {
-      incrementalDom.attr('tabIndex', tabIndex);
-    }
   };
       if (href) {
         incrementalDom.elementOpenStart('a');
@@ -124,7 +121,16 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
           attributes__soy21();
       incrementalDom.elementOpenEnd();
       }
-      $content({icon: icon, iconAlignment: ($$temp = iconAlignment) == null ? 'left' : $$temp, label: label}, null, opt_ijData);
+        if (focusTabIndex) {
+          incrementalDom.elementOpenStart('div');
+            incrementalDom.attr('class', 'btn-tabindex-wrapper');
+            incrementalDom.attr('tabindex', '-1');
+        incrementalDom.elementOpenEnd();
+        }
+        $content({icon: icon, iconAlignment: ($$temp = iconAlignment) == null ? 'left' : $$temp, label: label}, null, opt_ijData);
+      if (focusTabIndex) {
+        incrementalDom.elementClose('div');
+      }
   if (href) {
     incrementalDom.elementClose('a');
   } else {
@@ -137,6 +143,7 @@ exports.render = $render;
  *  block: (boolean|null|undefined),
  *  disabled: (boolean|null|undefined),
  *  elementClasses: (!goog.soy.data.SanitizedContent|null|string|undefined),
+ *  focusTabIndex: (boolean|null|undefined),
  *  format: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  href: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  icon: (!goog.soy.data.SanitizedContent|null|string|undefined),
@@ -147,7 +154,6 @@ exports.render = $render;
  *  rel: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  size: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  style: (!goog.soy.data.SanitizedContent|null|string|undefined),
- *  tabIndex: (null|number|undefined),
  *  target: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  type: (!goog.soy.data.SanitizedContent|null|string|undefined),
  *  value: (!goog.soy.data.SanitizedContent|null|string|undefined)
@@ -216,8 +222,8 @@ if (goog.DEBUG) {
   $content.soyTemplateName = 'Button.content';
 }
 
-exports.render.params = ["block","disabled","elementClasses","format","href","icon","iconAlignment","id","label","name","rel","size","style","tabIndex","target","type","value"];
-exports.render.types = {"block":"bool","disabled":"bool","elementClasses":"string","format":"string","href":"string","icon":"string","iconAlignment":"string","id":"string","label":"html|string","name":"string","rel":"string","size":"string","style":"string","tabIndex":"number","target":"string","type":"string","value":"string"};
+exports.render.params = ["block","disabled","elementClasses","focusTabIndex","format","href","icon","iconAlignment","id","label","name","rel","size","style","target","type","value"];
+exports.render.types = {"block":"bool","disabled":"bool","elementClasses":"string","focusTabIndex":"bool","format":"string","href":"string","icon":"string","iconAlignment":"string","id":"string","label":"html|string","name":"string","rel":"string","size":"string","style":"string","target":"string","type":"string","value":"string"};
 exports.content.params = ["icon","iconAlignment","label"];
 exports.content.types = {"icon":"string","iconAlignment":"string","label":"html|string"};
 templates = exports;

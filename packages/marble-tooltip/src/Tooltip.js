@@ -5,6 +5,8 @@ import xssFilters from 'xss-filters';
 
 import templates from './Tooltip.soy.js';
 
+const REGEX_ESCAPE = /__escape([\s\S]*?)escape__/gim;
+
 /**
  * Tooltip component.
  */
@@ -34,7 +36,7 @@ class Tooltip extends TooltipBase {
           escapeTitle = false;
         }
 
-        this.title = escapeTitle ? xssFilters.inHTMLData(dataTitle) : dataTitle;
+        this.title = escapeTitle ? this.escape_(dataTitle) : dataTitle;
       } else {
         this.title = '';
       }
@@ -45,13 +47,43 @@ class Tooltip extends TooltipBase {
         if (alignElement.getAttribute('data-escape-description') === 'false') {
           escapeDescription = false;
         }
-        this.description = escapeDescription ?
-          xssFilters.inHTMLData(dataDescription) : dataDescription;
+        this.description = escapeDescription
+          ? this.escape_(dataDescription)
+          : dataDescription;
       } else {
         this.description = '';
       }
     }
     super.syncCurrentAlignElement(alignElement, prevAlignElement);
+  }
+
+  /**
+   * Escapes content to be shown in HTML data.
+   * @param {!string} content Data to be escaped
+   * @return {string} Returns the escaped data
+   */
+  escape_(content) {
+    let buffer = '';
+    let match = REGEX_ESCAPE.exec(content);
+
+    if (match === null) {
+      return xssFilters.inHTMLData(content);
+    } else {
+      let lastIndex = 0;
+      do {
+        buffer += content.substring(lastIndex, match.index);
+        if (match.index === REGEX_ESCAPE.lastIndex) {
+          REGEX_ESCAPE.lastIndex++;
+        }
+
+        buffer += xssFilters.inHTMLData(match[1]);
+        lastIndex = REGEX_ESCAPE.lastIndex;
+      } while ((match = REGEX_ESCAPE.exec(content)) !== null);
+
+      buffer += content.substring(lastIndex);
+    }
+
+    return buffer;
   }
 }
 

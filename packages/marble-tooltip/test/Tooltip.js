@@ -37,6 +37,31 @@ describe('Tooltip', () => {
     }, 25);
   });
 
+  it('should escape parts of title and description wrapped in __escape...escape__', (done) => {
+    const title = 'title';
+    const description = 'description';
+
+    const titleInAttr = `begin__escape` + xssFilters.inDoubleQuotedAttr(`"><img src=x onerror=alert('${title}')>`) + `escape__<br>`;
+    const descriptionInAttr = `begin__escape` + xssFilters.inDoubleQuotedAttr(`"><img src=x onerror=alert('${description}')>`) + `escape__<br>`;
+    const titleInData = `begin` + xssFilters.inHTMLData(`"><img src=x onerror=alert('${title}')>`) + `<br>`;
+    const descriptionInData = `begin` + xssFilters.inHTMLData(`"><img src=x onerror=alert('${description}')>`) + `<br>`;
+
+    dom.enterDocument(`<div id="tooltipTrigger1" data-title="${titleInAttr}" data-description="${descriptionInAttr}">trigger</div>`);
+    let trigger = dom.toElement('#tooltipTrigger1');
+
+    tooltip = new Tooltip({
+      delay: [0, 0],
+      selector: '#tooltipTrigger1',
+      visible: false,
+    });
+    dom.triggerEvent(trigger, 'mouseover');
+    setTimeout(() => {
+      expect(tooltip.title).toEqual(titleInData);
+      expect(tooltip.description).toEqual(descriptionInData);
+      done();
+    }, 25);
+  });
+
   it('should prevent escaping title and description when escaping is disabled', (done) => {
     const title = `"><img src=x onerror=alert('title')>`;
     const description = `"><img src=x onerror=alert('description')>`;

@@ -20,6 +20,10 @@
     <h1>Select + label</h1>
     <div id="second"></div>
   </div>
+  <div class="col-md-4">
+    <h1>Select + label + caret</h1>
+    <div id="third"></div>
+  </div>
   <script type="text/javascript">
     window.select1 = new metal.Select({
       label: '<i>Select</i>',
@@ -32,6 +36,15 @@
       values: ['Number', 'String', 'Boolean', 'Array', 'Object'],
       label: 'Type',
     }, '#second');
+
+    window.select3 = new metal.Select({
+      caret: `<svg style="width:14px; height:14px; margin: 4px 0 0 auto" viewBox="0 0 14 14">
+        <path d="M7.80002743,1.60000563 L4.80001688,5.60001969 C4.6166829,5.83335385 4.33334857,6.0000211 4.00001407,6.0000211 C3.66667956,6.0000211 3.38334523,5.83335385 3.20001125,5.60001969 L0.200000703,1.60000563 C0.0666669011,1.43333837 0,1.23333767 0,1.00000352 C0,0.450001583 0.450001583,0 1.00000352,0 L7.00002462,0 C7.55002655,0 8.00002813,0.450001583 8.00002813,1.00000352 C8.00002813,1.23333767 7.93336123,1.43333837 7.80002743,1.60000563 Z"></path>
+      </svg>`,
+      items: ['Number', 'String', 'Boolean', 'Array', '<i>Object</i>'],
+      values: ['Number', 'String', 'Boolean', 'Array', 'Object'],
+      label: 'Type',
+    }, '#third');
   </script>
 </body>
 </html>

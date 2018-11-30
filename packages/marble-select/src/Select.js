@@ -239,6 +239,12 @@ Select.STATE = {
   },
 
   /**
+   * The caret icon.
+   * @type {*}
+   */
+  caret: {},
+
+  /**
    * Block or unblock the component behaviours.
    * @type {boolean}
    * @default false

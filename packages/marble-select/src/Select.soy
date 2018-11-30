@@ -15,6 +15,7 @@
  * @param? selectedIndex
  */
 {template .render}
+  {@param? caret: html|string}
   {@param? label: html|string}
   <div class="select{$elementClasses ? ' ' + $elementClasses : ''}" data-onkeydown="handleKeyDown_">
     {let $currSelectedIndex: isNonnull($selectedIndex) ? $selectedIndex : ($label or (length($items) == 0) ? -1 : 0) /}
@@ -50,7 +51,11 @@
           {else}
             {$items[$currSelectedIndex]}
           {/if}
-          {sp}<span class="{$arrowClass ?: 'caret'}"></span>
+          {if $caret}
+            {sp}{$caret}
+          {else}
+            {sp}<span class="{$arrowClass ?: 'caret'}"></span>
+          {/if}
         </button>
       {/param}
       {param ref: 'dropdown' /}

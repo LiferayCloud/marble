@@ -1,6 +1,6 @@
 {
   "name": "marble-select",
-  "version": "2.1.10",
+  "version": "2.2.0",
   "description": "Marble's select component",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-select",

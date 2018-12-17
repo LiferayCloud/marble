@@ -195,7 +195,9 @@ class Select extends Component {
   syncDisabled(disabled) {
     if (disabled) {
       this.expanded_ = false;
-      this.getDropdown().close();
+      if (this.getDropdown()) {
+        this.getDropdown().close();
+      }
     }
   }
 
@@ -205,9 +207,13 @@ class Select extends Component {
    */
   syncExpanded_(expanded) {
     if (expanded) {
-      this.getDropdown().open();
+      if (this.getDropdown()) {
+        this.getDropdown().open();
+      }
     } else {
-      this.getDropdown().close();
+      if (this.getDropdown()) {
+        this.getDropdown().close();
+      }
     }
   }
 }

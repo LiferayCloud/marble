@@ -1,0 +1,15 @@
+{namespace Timestamp}
+
+/**
+  * @param time
+  * @param? childElementClasses
+  * @param? elementClasses
+  * @param? label
+  * @param? hasTitle
+  * @param? title
+  */
+{template .render}
+  <div class="{$elementClasses}">
+    <span class="{$childElementClasses}" data-time="{$time}" {if $hasTitle}data-title="{$title}"{/if}>{$label}</span>
+  </div>
+{/template}

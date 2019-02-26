@@ -1,0 +1,47 @@
+{
+  "name": "marble-timestamp",
+  "version": "1.0.0",
+  "description": "Marble's timestamp component",
+  "license": "BSD-3-Clause",
+  "repository": "ygorcosta/marble-timestamp",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "jsnext:main": "src/Timestamp.js",
+  "main": "lib/Timestamp.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run soy && npm run compile",
+    "soy": "metalsoy"
+  },
+  "keywords": [
+    "alert",
+    "metal"
+  ],
+  "dependencies": {
+    "metal": "^2.16.0",
+    "metal-anim": "^2.0.0",
+    "metal-component": "^2.16.0",
+    "metal-dom": "^2.16.0",
+    "metal-events": "^2.16.0",
+    "metal-soy": "^2.16.0",
+    "metal-state": "^2.16.0",
+    "moment": "2.19.3",
+    "moment-duration-format": "^2.2.2",
+    "moment-timezone": "^0.5.14"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-node-env-inline": "^0.2.0",
+    "babel-preset-metal": "^4.0.0",
+    "metal-tools-soy": "^4.2.6",
+    "webpack": "^3.5.5"
+  }
+}

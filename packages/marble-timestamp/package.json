@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Marble's timestamp component",
   "license": "BSD-3-Clause",
-  "repository": "ygorcosta/marble-timestamp",
+  "repository": "https://github.com/wedeploy/marble/tree/master/packages/marble-timestamp",
   "engines": {
     "node": ">=0.12.0"
   },

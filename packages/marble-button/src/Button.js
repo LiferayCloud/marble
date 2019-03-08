@@ -1,8 +1,8 @@
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
-
 import templates from './Button.soy.js';
+import 'marble-spinner';
 
 /**
  * Button component.
@@ -73,6 +73,12 @@ Button.STATE = {
    * @type {?(html|string|undefined)}
    */
   label: Config.any(),
+
+  /**
+   * @default false
+   * @type {?boolean}
+   */
+  loading: Config.bool().value(false),
 
   /**
    * @default undefined

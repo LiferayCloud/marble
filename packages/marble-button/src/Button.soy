@@ -14,6 +14,7 @@
   {@param? iconAlignment: string}
   {@param? id: string}
   {@param? label: html|string}
+  {@param? loading: bool}
   {@param? name: string}
   {@param? rel: string}
   {@param? size: string}
@@ -51,7 +52,7 @@
       {/if}
     "
 
-    {if $disabled}
+    {if $disabled or $loading}
       disabled="disabled"
     {/if}
 
@@ -89,16 +90,24 @@
   {else}
    <button {$attributes}>
   {/if}
-    {if $focusTabIndex}
-      <div class="btn-tabindex-wrapper" tabindex="-1">
-    {/if}
-      {call .content}
-        {param icon: $icon /}
-        {param iconAlignment: $iconAlignment ?: 'left'/}
-        {param label: $label /}
+    {if $loading}
+      {call Spinner.render}
+        {param isDone: false /}
+        {param style: 'white' /}
+        {param size: 'small' /}
       {/call}
-    {if $focusTabIndex}
-      </div>
+    {else}
+      {if $focusTabIndex}
+        <div class="btn-tabindex-wrapper" tabindex="-1">
+      {/if}
+        {call .content}
+          {param icon: $icon /}
+          {param iconAlignment: $iconAlignment ?: 'left'/}
+          {param label: $label /}
+        {/call}
+      {if $focusTabIndex}
+        </div>
+      {/if}
     {/if}
   {if $href}
    </a>

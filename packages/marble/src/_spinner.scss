@@ -51,6 +51,10 @@
     width: 24px;
   }
 
+  &.spinner-white::before {
+    border-width: 2px;
+  }
+
   > [class*="icon-"] {
     font-size: 12px;
     line-height: 24px;
@@ -111,6 +115,13 @@
   border-bottom-color: $color-yellow;
   border-left-color: $color-yellow;
   border-top-color: $color-yellow;
+}
+
+.spinner.spinner-white::before {
+  border-bottom-color: $white;
+  border-left-color: $white;
+  border-top-color: $white;
+  border-right-color: rgba($white, 0.2);
 }
 
 /* is Done

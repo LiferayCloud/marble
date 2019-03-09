@@ -1,0 +1,42 @@
+{namespace Avatar}
+
+/**
+ * @param elementClasses
+ * @param email
+ * @param name
+ * @param? dataTitle
+ * @param? dataTitlePreventEscape
+ * @param? initialsClasses
+ * @param? tooltipClass
+ * @param? avatarColorIndex
+ * @param? statusIcon
+ * @param? iconClasses
+ */
+{template .render}
+  {let $classDefault: $elementClasses ? ' ' + $elementClasses : ' avatar-xsmall' /}
+  {let $colorIndex: $avatarColorIndex ? $avatarColorIndex : 0 /}
+	{let $initialsClassDefault: $initialsClasses ? ' ' + $initialsClasses : ' avatar-xsmall' /}
+	{let $tooltipDefault: $tooltipClass ? ' ' + $tooltipClass : '' /}
+	{let $tooltipMessage kind="text"}
+		{$dataTitle or $name or $email}
+	{/let}
+	<span class="avatar avatar-round{$classDefault}{$tooltipDefault}" data-title="{$tooltipMessage}" {if $dataTitlePreventEscape}data-escape-title="false"{/if}>
+		<div class="sa-target"></div>
+    {call .icon data="all" /}
+	</span>
+{/template}
+
+/**
+ * @param iconClasses
+ * @param statusIcon
+ */
+{template .icon}
+  {let $actualIconClasses: $iconClasses ?: 'sign-badge sign-badge-relative' /}
+  {if $statusIcon}
+    <span class="avatar-sign">
+      <svg key="{$statusIcon}-iconkey" class="{$actualIconClasses}">
+        <use xlink:href="/static/images/sprite.svg#{$statusIcon}" href="/static/images/sprite.svg#{$statusIcon}" />
+      </svg>
+    </span>
+  {/if}
+{/template}

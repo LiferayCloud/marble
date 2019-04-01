@@ -54,12 +54,12 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   incrementalDom.elementOpenStart('div');
       incrementalDom.attr('class', (opt_data.positionClassOnMenu ? 'dropdown' : positionClass__soy11) + (opt_data.elementClasses ? ' ' + opt_data.elementClasses : '') + (opt_data.expanded ? ' open' : ''));
   incrementalDom.elementOpenEnd();
+    if (header) {
+      header();
+    }
     if (opt_data.showConfirmationBody) {
       soyIdom.print(confirmationBody);
     } else {
-      if (header) {
-        header();
-      }
       incrementalDom.elementOpenStart('ul');
           incrementalDom.attr('class', 'dropdown-menu' + (opt_data.positionClassOnMenu ? ' ' + positionClass__soy11 : ''));
       incrementalDom.elementOpenEnd();

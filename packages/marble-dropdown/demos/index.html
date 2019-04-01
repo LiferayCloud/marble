@@ -23,7 +23,7 @@
   </style>
 </head>
 <body>
-  <h1>Dropdown</h1>
+ <!--  <h1>Dropdown</h1>
 
   <h3>From HTML</h3>
   <div id="htmlDropdown" class="dropdown">
@@ -31,7 +31,7 @@
     <div class="dropdown-menu">
       <li><a href="#">HTML Content</a></li>
     </div>
-  </div>
+  </div> -->
 
   <h3>From JS</h3>
 
@@ -39,18 +39,19 @@
     window.dropdown = new metal.Dropdown({
       alignElementSelector: 'button',
       header: '<button data-onclick="toggle" class="btn btn-primary">Dropdown <span class="caret"></span></button>',
-      body: '<li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li><li><a href="#">Separated link</a></li>'
+      body: '<li><button data-onclick="showConfirmation">Action</button></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li><li><a href="#">Separated link</a></li>',
+      confirmationBody: '<div>This is a confirmation body!<div><button class="btn btn-accent" data-onclick="hideConfirmation">Cancel</button><button class="btn btn-accent">OK</button></div></div>',
     });
 
-    new metal.Dropdown({
-      position: 'up',
-      header: '<button data-onclick="toggle" class="btn btn-primary">Dropup <span class="caret"></span></button>',
-      body: '<li><a href="#">Sign out</a></li>'
-    });
+    // new metal.Dropdown({
+    //   position: 'up',
+    //   header: '<button data-onclick="toggle" class="btn btn-primary">Dropup <span class="caret"></span></button>',
+    //   body: '<li><a href="#">Sign out</a></li>',
+    // });
 
-    new metal.Dropdown({
-      element: '#htmlDropdown'
-    });
+    // new metal.Dropdown({
+    //   element: '#htmlDropdown',
+    // });
   </script>
 </body>
 </html>

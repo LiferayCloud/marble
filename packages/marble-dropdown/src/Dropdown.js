@@ -100,6 +100,18 @@ class Dropdown extends Component {
   }
 
   /**
+   */
+  showConfirmation() {
+    this.showConfirmationBody = true;
+  }
+
+  /**
+   */
+  hideConfirmation() {
+    this.showConfirmationBody = false;
+  }
+
+  /**
    * Synchronization logic for `expanded` state.
    * @param {boolean} expanded
    */
@@ -230,6 +242,14 @@ Dropdown.STATE = {
   },
 
   /**
+   * The dropdown's body content.
+   * @type {string}
+   */
+  confirmationBody: {
+    isHtml: true,
+  },
+
+  /**
    * A map from `Align` position constants to the CSS class that should be
    * added to the dropdown when it's aligned in that position.
    * @type {!Object}
@@ -269,6 +289,13 @@ Dropdown.STATE = {
     setter: 'setterPositionFn_',
     value: Align.BottomLeft,
     validator: 'validatePosition_',
+  },
+
+  /**
+   * @type {boolean}
+   */
+  showConfirmationBody: {
+    value: false,
   },
 
   /**

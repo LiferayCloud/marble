@@ -1,0 +1,23 @@
+{namespace Banner}
+
+/**
+  * @param elementClasses
+  * @param? closeButton
+  * @param? closeButtonHtml
+  */
+{template .render}
+  {@param? body: html}
+
+  <div class="banner {$elementClasses}">
+    {$body}
+  </div>
+  {if $closeButton or $closeButtonHtml}
+    <button type="button" class="close" aria-label="Close" data-onclick="toggle">
+      {if $closeButtonHtml}
+        {$closeButtonHtml}
+      {else}
+        <span aria-hidden="true">×</span>
+      {/if}
+    </button>
+  {/if}
+{/template}

@@ -1,0 +1,12 @@
+.banner {
+  background-color: $color-red;
+  padding: 12px 12px 12px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  color: $white;
+
+  a {
+    text-decoration: underline;
+    color: $white;
+  }
+}

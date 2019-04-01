@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: Banner</title>
+
+  <link rel="stylesheet" href="../../marble/build/marble.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../../marble/build/fonts/icon-16/icon-16.css">
+
+  <script src="../build/globals/marble-banner.js"></script>
+</head>
+<body>
+  <h1>Banner</h1>
+  <script>
+    new metal.Banner({
+      elementClasses: 'banner',
+      body: '<span>Unable to perform this request. Please <a href="#">contact support</a>.</span>',
+      closeButtonHtml: '<span class="icon-16-cancel"></span>',
+    });
+  </script>
+</body>
+</html>

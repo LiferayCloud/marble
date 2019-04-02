@@ -22,7 +22,9 @@
       {$header}
     {/if}
     {if $showConfirmationBody}
-      {$confirmationBody}
+      <div class="dropdown-menu{$positionClassOnMenu ? ' ' + $positionClass : ''}">
+        {$confirmationBody}
+      </div>
     {else}
       <ul class="dropdown-menu{$positionClassOnMenu ? ' ' + $positionClass : ''}">
         {if $body}

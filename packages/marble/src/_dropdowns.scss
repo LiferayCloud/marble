@@ -1,6 +1,9 @@
 /* ==========================================================================
    Dropdowns
    ========================================================================== */
+.dropdown {
+  position: relative;
+}
 
 .dropdown .btn:not(.btn-squared):not(.btn-rounded) {
   justify-content: flex-start;

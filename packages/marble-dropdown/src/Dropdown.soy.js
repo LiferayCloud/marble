@@ -58,7 +58,11 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
       header();
     }
     if (opt_data.showConfirmationBody) {
-      soyIdom.print(confirmationBody);
+      incrementalDom.elementOpenStart('div');
+          incrementalDom.attr('class', 'dropdown-menu' + (opt_data.positionClassOnMenu ? ' ' + positionClass__soy11 : ''));
+      incrementalDom.elementOpenEnd();
+        soyIdom.print(confirmationBody);
+      incrementalDom.elementClose('div');
     } else {
       incrementalDom.elementOpenStart('ul');
           incrementalDom.attr('class', 'dropdown-menu' + (opt_data.positionClassOnMenu ? ' ' + positionClass__soy11 : ''));

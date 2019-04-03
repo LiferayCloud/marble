@@ -134,6 +134,7 @@ class Dropdown extends Component {
    */
   toggle() {
     this.expanded = !this.expanded;
+    this.hideConfirmation();
   }
 
   /**

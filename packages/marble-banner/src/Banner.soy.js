@@ -26,6 +26,7 @@ var soyIdom = goog.require('soy.idom');
  *  elementClasses: (?),
  *  closeButton: (?),
  *  closeButtonHtml: (?),
+ *  isVisible: (?),
  *  body: (function()|null|undefined)
  * }} opt_data
  * @param {Object<string, *>=} opt_ijData
@@ -37,28 +38,34 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   /** @type {function()|null|undefined} */
   var body = soy.asserts.assertType(opt_data.body == null || goog.isFunction(opt_data.body), 'body', opt_data.body, 'function()|null|undefined');
-  incrementalDom.elementOpenStart('div');
-      incrementalDom.attr('class', 'banner ' + opt_data.elementClasses);
-  incrementalDom.elementOpenEnd();
-    soyIdom.print(body);
-  incrementalDom.elementClose('div');
-  if (opt_data.closeButton || opt_data.closeButtonHtml) {
-    incrementalDom.elementOpenStart('button');
-        incrementalDom.attr('type', 'button');
-        incrementalDom.attr('class', 'close');
-        incrementalDom.attr('aria-label', 'Close');
-        incrementalDom.attr('data-onclick', 'toggle');
+  if (opt_data.isVisible) {
+    incrementalDom.elementOpenStart('div');
+        incrementalDom.attr('class', 'banner ' + opt_data.elementClasses);
     incrementalDom.elementOpenEnd();
-      if (opt_data.closeButtonHtml) {
-        soyIdom.print(opt_data.closeButtonHtml);
-      } else {
-        incrementalDom.elementOpenStart('span');
-            incrementalDom.attr('aria-hidden', 'true');
+      incrementalDom.elementOpenStart('div');
+          incrementalDom.attr('class', 'banner-content');
+      incrementalDom.elementOpenEnd();
+        soyIdom.print(body);
+      incrementalDom.elementClose('div');
+      if (opt_data.closeButton || opt_data.closeButtonHtml) {
+        incrementalDom.elementOpenStart('button');
+            incrementalDom.attr('type', 'button');
+            incrementalDom.attr('class', 'close');
+            incrementalDom.attr('aria-label', 'Close');
+            incrementalDom.attr('data-onclick', 'toggle');
         incrementalDom.elementOpenEnd();
-          incrementalDom.text('\u00D7');
-        incrementalDom.elementClose('span');
+          if (opt_data.closeButtonHtml) {
+            soyIdom.print(opt_data.closeButtonHtml);
+          } else {
+            incrementalDom.elementOpenStart('span');
+                incrementalDom.attr('aria-hidden', 'true');
+            incrementalDom.elementOpenEnd();
+              incrementalDom.text('\u00D7');
+            incrementalDom.elementClose('span');
+          }
+        incrementalDom.elementClose('button');
       }
-    incrementalDom.elementClose('button');
+    incrementalDom.elementClose('div');
   }
 }
 exports.render = $render;
@@ -67,6 +74,7 @@ exports.render = $render;
  *  elementClasses: (?),
  *  closeButton: (?),
  *  closeButtonHtml: (?),
+ *  isVisible: (?),
  *  body: (function()|null|undefined)
  * }}
  */
@@ -75,8 +83,8 @@ if (goog.DEBUG) {
   $render.soyTemplateName = 'Banner.render';
 }
 
-exports.render.params = ["body","elementClasses","closeButton","closeButtonHtml"];
-exports.render.types = {"body":"html","elementClasses":"any","closeButton":"any","closeButtonHtml":"any"};
+exports.render.params = ["body","elementClasses","closeButton","closeButtonHtml","isVisible"];
+exports.render.types = {"body":"html","elementClasses":"any","closeButton":"any","closeButtonHtml":"any","isVisible":"any"};
 templates = exports;
 return exports;
 

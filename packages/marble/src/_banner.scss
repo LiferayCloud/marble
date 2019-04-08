@@ -1,12 +1,26 @@
 .banner {
   background-color: $color-red;
-  padding: 12px 12px 12px 14px;
+  padding: 12px 12px 12px 18px;
   font-size: 13px;
   line-height: 18px;
   color: $white;
+  position: relative;
+  animation: slideInDown 600ms ease-in-out forwards;
 
   a {
     text-decoration: underline;
     color: $white;
+  }
+
+  button.close {
+    position: absolute;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: $white;
+    text-shadow: 0 1px 0 $white;
+    top: 12px;
+    right: 12px;
+    opacity: 0.8;
   }
 }

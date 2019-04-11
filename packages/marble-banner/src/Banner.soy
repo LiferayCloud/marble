@@ -4,20 +4,25 @@
   * @param elementClasses
   * @param? closeButton
   * @param? closeButtonHtml
+  * @param? isVisible
   */
 {template .render}
   {@param? body: html}
 
-  <div class="banner {$elementClasses}">
-    {$body}
-  </div>
-  {if $closeButton or $closeButtonHtml}
-    <button type="button" class="close" aria-label="Close" data-onclick="toggle">
-      {if $closeButtonHtml}
-        {$closeButtonHtml}
-      {else}
-        <span aria-hidden="true">×</span>
-      {/if}
-    </button>
+  {if $isVisible}
+    <div class="banner {$elementClasses}">
+      <div class="banner-content">
+        {$body}
+      </div>
+    {if $closeButton or $closeButtonHtml}
+      <button type="button" class="close" aria-label="Close" data-onclick="toggle">
+        {if $closeButtonHtml}
+          {$closeButtonHtml}
+        {else}
+          <span aria-hidden="true">×</span>
+        {/if}
+      </button>
+    {/if}
+    </div>
   {/if}
 {/template}

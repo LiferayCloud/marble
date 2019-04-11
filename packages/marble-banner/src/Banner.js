@@ -12,6 +12,7 @@ class Banner extends Component {
    */
   show(body) {
     this.isVisible = true;
+    this.animationClass = 'show-animation';
 
     if (body) {
       this.body = body;
@@ -19,16 +20,45 @@ class Banner extends Component {
   }
 
   /**
+   * @return {Promise}
    */
-  hide() {
-    this.isVisible = false;
+  async hide() {
+    return new Promise(resolve => {
+      this.animationClass = 'hide-animation';
+      this.callAsync_(() => {
+        this.isVisible = false;
+        resolve();
+      }, 600);
+    });
+  }
+
+  /**
+   * @inheritDoc
+   */
+  disposeInternal() {
+    super.disposeInternal();
+    clearTimeout(this.delay_);
+  }
+
+  /**
+   * @param {!function()} fn
+   * @param {number} delay
+   * @private
+   */
+  callAsync_(fn, delay) {
+    clearTimeout(this.delay_);
+    this.delay_ = setTimeout(fn.bind(this), delay);
   }
 
   /**
    * Toggles the visibility of the banner.
    */
-  toggle() {
-    this.isVisible = !this.isVisible;
+  async toggle() {
+    if (this.isVisible) {
+      await this.hide();
+    } else {
+      this.show();
+    }
   }
 }
 
@@ -43,6 +73,12 @@ Banner.STATE = {
    * @type {html|string}
    */
   elementClasses: Config.string().value(''),
+
+  /**
+   * The class to apply visibility animation
+   * @type {string}
+   */
+  animationClass: Config.string().value('show-animation'),
 
   /**
    * The content of the component.

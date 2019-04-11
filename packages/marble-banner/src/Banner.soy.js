@@ -24,8 +24,10 @@ var soyIdom = goog.require('soy.idom');
 /**
  * @param {{
  *  elementClasses: (?),
+ *  animationClass: (?),
  *  closeButton: (?),
  *  closeButtonHtml: (?),
+ *  closeButtonHandler: (?),
  *  isVisible: (?),
  *  body: (function()|null|undefined)
  * }} opt_data
@@ -36,11 +38,12 @@ var soyIdom = goog.require('soy.idom');
  */
 function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
+  var $$temp;
   /** @type {function()|null|undefined} */
   var body = soy.asserts.assertType(opt_data.body == null || goog.isFunction(opt_data.body), 'body', opt_data.body, 'function()|null|undefined');
   if (opt_data.isVisible) {
     incrementalDom.elementOpenStart('div');
-        incrementalDom.attr('class', 'banner ' + opt_data.elementClasses);
+        incrementalDom.attr('class', 'banner ' + opt_data.elementClasses + ' ' + opt_data.animationClass);
     incrementalDom.elementOpenEnd();
       incrementalDom.elementOpenStart('div');
           incrementalDom.attr('class', 'banner-content');
@@ -52,7 +55,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
             incrementalDom.attr('type', 'button');
             incrementalDom.attr('class', 'close');
             incrementalDom.attr('aria-label', 'Close');
-            incrementalDom.attr('data-onclick', 'toggle');
+            incrementalDom.attr('data-onclick', ($$temp = opt_data.closeButtonHandler) == null ? 'hide' : $$temp);
         incrementalDom.elementOpenEnd();
           if (opt_data.closeButtonHtml) {
             soyIdom.print(opt_data.closeButtonHtml);
@@ -72,8 +75,10 @@ exports.render = $render;
 /**
  * @typedef {{
  *  elementClasses: (?),
+ *  animationClass: (?),
  *  closeButton: (?),
  *  closeButtonHtml: (?),
+ *  closeButtonHandler: (?),
  *  isVisible: (?),
  *  body: (function()|null|undefined)
  * }}
@@ -83,8 +88,8 @@ if (goog.DEBUG) {
   $render.soyTemplateName = 'Banner.render';
 }
 
-exports.render.params = ["body","elementClasses","closeButton","closeButtonHtml","isVisible"];
-exports.render.types = {"body":"html","elementClasses":"any","closeButton":"any","closeButtonHtml":"any","isVisible":"any"};
+exports.render.params = ["body","elementClasses","animationClass","closeButton","closeButtonHtml","closeButtonHandler","isVisible"];
+exports.render.types = {"body":"html","elementClasses":"any","animationClass":"any","closeButton":"any","closeButtonHtml":"any","closeButtonHandler":"any","isVisible":"any"};
 templates = exports;
 return exports;
 

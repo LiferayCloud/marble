@@ -2,20 +2,22 @@
 
 /**
   * @param elementClasses
+  * @param? animationClass
   * @param? closeButton
   * @param? closeButtonHtml
+  * @param? closeButtonHandler
   * @param? isVisible
   */
 {template .render}
   {@param? body: html}
 
   {if $isVisible}
-    <div class="banner {$elementClasses}">
+    <div class="banner {$elementClasses} {$animationClass}">
       <div class="banner-content">
         {$body}
       </div>
     {if $closeButton or $closeButtonHtml}
-      <button type="button" class="close" aria-label="Close" data-onclick="toggle">
+      <button type="button" class="close" aria-label="Close" data-onclick="{$closeButtonHandler ?: 'hide'}">
         {if $closeButtonHtml}
           {$closeButtonHtml}
         {else}

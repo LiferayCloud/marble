@@ -5,7 +5,14 @@
   line-height: 18px;
   color: $white;
   position: relative;
-  animation: slideInDown 600ms ease-in-out forwards;
+
+  &.show-animation {
+    animation: slideInDown 600ms ease-in-out forwards;
+  }
+
+  &.hide-animation {
+    animation: slideOutUp 600ms ease-in-out forwards;
+  }
 
   a {
     text-decoration: underline;

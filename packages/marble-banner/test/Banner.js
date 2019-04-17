@@ -14,27 +14,31 @@ describe('Banner', () => {
     expect(component.element.querySelector('.myContent')).toBeTruthy();
   });
 
-  it('should hide the banner', async (done) => {
+  it('should hide the banner', (done) => {
     component = new Banner();
-    await component.hide();
+    component.hide();
     component.once('stateChanged', () => {
-      expect(!component.isVisible).toBeTruthy();
-      component.dispose();
-      done();
+      component.once('stateChanged', () => {
+        expect(!component.isVisible).toBeTruthy();
+        component.dispose();
+        done();
+      });
     });
   });
 
-  it('should toggle the banner', async (done) => {
+  it('should toggle the banner', (done) => {
     component = new Banner();
     expect(component.isVisible).toBeTruthy();
-    await component.toggle();
-    component.once('stateChanged', async () => {
-      expect(!component.isVisible).toBeTruthy();
-      await component.toggle();
+    component.toggle();
+    component.once('stateChanged', () => {
       component.once('stateChanged', () => {
-        expect(component.isVisible).toBeTruthy();
-        component.dispose();
-        done();
+        expect(!component.isVisible).toBeTruthy();
+        component.toggle();
+        component.once('stateChanged', () => {
+          expect(component.isVisible).toBeTruthy();
+          component.dispose();
+          done();
+        });
       });
     });
   });

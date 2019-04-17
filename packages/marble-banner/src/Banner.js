@@ -20,16 +20,12 @@ class Banner extends Component {
   }
 
   /**
-   * @return {Promise}
    */
-  async hide() {
-    return new Promise(resolve => {
-      this.animationClass = 'hide-animation';
-      this.callAsync_(() => {
-        this.isVisible = false;
-        resolve();
-      }, 600);
-    });
+  hide() {
+    this.animationClass = 'hide-animation';
+    this.callAsync_(() => {
+      this.isVisible = false;
+    }, 600);
   }
 
   /**
@@ -53,9 +49,9 @@ class Banner extends Component {
   /**
    * Toggles the visibility of the banner.
    */
-  async toggle() {
+  toggle() {
     if (this.isVisible) {
-      await this.hide();
+      this.hide();
     } else {
       this.show();
     }

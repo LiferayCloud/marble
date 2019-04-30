@@ -45,7 +45,12 @@
 }
 
 .open .dropdown-menu {
+  animation: fadeIn 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
   display: inline-block;
+}
+
+.hiding .dropdown-menu {
+  animation: fadeOut 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 }
 
 .dropdown-section-title {

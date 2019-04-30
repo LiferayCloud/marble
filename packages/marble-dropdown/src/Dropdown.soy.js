@@ -27,6 +27,7 @@ var soyIdom = goog.require('soy.idom');
  *  classMap: (?),
  *  elementClasses: (?),
  *  expanded: (?),
+ *  hiding: (?),
  *  position: (?),
  *  positionClassOnMenu: (?),
  *  showConfirmationBody: (?),
@@ -52,7 +53,7 @@ function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   var currentPosition__soy9 = (opt_data.alignedPosition != null) ? opt_data.alignedPosition : opt_data.position;
   var positionClass__soy11 = (currentPosition__soy9 != null) ? classes__soy7[currentPosition__soy9] : 'dropdown';
   incrementalDom.elementOpenStart('div');
-      incrementalDom.attr('class', (opt_data.positionClassOnMenu ? 'dropdown' : positionClass__soy11) + (opt_data.elementClasses ? ' ' + opt_data.elementClasses : '') + (opt_data.expanded ? ' open' : ''));
+      incrementalDom.attr('class', (opt_data.positionClassOnMenu ? 'dropdown' : positionClass__soy11) + (opt_data.elementClasses ? ' ' + opt_data.elementClasses : '') + (opt_data.expanded ? ' open' : '') + (opt_data.hiding ? ' hiding' : ''));
   incrementalDom.elementOpenEnd();
     if (header) {
       header();
@@ -81,6 +82,7 @@ exports.render = $render;
  *  classMap: (?),
  *  elementClasses: (?),
  *  expanded: (?),
+ *  hiding: (?),
  *  position: (?),
  *  positionClassOnMenu: (?),
  *  showConfirmationBody: (?),
@@ -94,8 +96,8 @@ if (goog.DEBUG) {
   $render.soyTemplateName = 'Dropdown.render';
 }
 
-exports.render.params = ["body","confirmationBody","header","alignedPosition","classMap","elementClasses","expanded","position","positionClassOnMenu","showConfirmationBody"];
-exports.render.types = {"body":"html","confirmationBody":"html","header":"html","alignedPosition":"any","classMap":"any","elementClasses":"any","expanded":"any","position":"any","positionClassOnMenu":"any","showConfirmationBody":"any"};
+exports.render.params = ["body","confirmationBody","header","alignedPosition","classMap","elementClasses","expanded","hiding","position","positionClassOnMenu","showConfirmationBody"];
+exports.render.types = {"body":"html","confirmationBody":"html","header":"html","alignedPosition":"any","classMap":"any","elementClasses":"any","expanded":"any","hiding":"any","position":"any","positionClassOnMenu":"any","showConfirmationBody":"any"};
 templates = exports;
 return exports;
 

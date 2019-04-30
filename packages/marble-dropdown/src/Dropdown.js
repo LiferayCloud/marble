@@ -133,8 +133,28 @@ class Dropdown extends Component {
    * Toggles the dropdown, closing it when open or opening it when closed.
    */
   toggle() {
-    this.expanded = !this.expanded;
-    this.hideConfirmation();
+    if (this.expanded) {
+      this.hiding = true;
+
+      this.callAsync_(() => {
+        this.expanded = !this.expanded;
+        this.hiding = false;
+        this.hideConfirmation();
+      }, 300);
+    } else {
+      this.expanded = !this.expanded;
+      this.hideConfirmation();
+    }
+  }
+
+  /**
+   * @param {!function()} fn
+   * @param {number} delay
+   * @private
+   */
+  callAsync_(fn, delay) {
+    clearTimeout(this.delay_);
+    this.delay_ = setTimeout(fn.bind(this), delay);
   }
 
   /**
@@ -276,6 +296,16 @@ Dropdown.STATE = {
    * @default false
    */
   expanded: {
+    value: false,
+    internal: true,
+  },
+
+  /**
+   * Flag indicating if the dropdown is hiding or not.
+   * @type {boolean}
+   * @default false
+   */
+  hiding: {
     value: false,
     internal: true,
   },

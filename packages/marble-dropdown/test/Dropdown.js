@@ -88,10 +88,15 @@ describe('Dropdown', () => {
       expect(dom.hasClass(component.element, 'open')).toBeTruthy();
       component.toggle();
       component.once('stateChanged', () => {
-        expect(!component.expanded).toBeTruthy();
-        expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
-        component.dispose();
-        done();
+        expect(component.hiding).toBeTruthy();
+        expect(dom.hasClass(component.element, 'hiding')).toBeTruthy();
+        component.once('stateChanged', () => {
+          expect(!component.expanded).toBeTruthy();
+          expect(!component.hiding).toBeTruthy();
+          expect(!dom.hasClass(component.element, 'open')).toBeTruthy();
+          component.dispose();
+          done();
+        });
       });
     });
   });

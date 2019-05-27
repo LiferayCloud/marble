@@ -2,18 +2,23 @@
 
 /**
  * This renders the component's whole content.
+ * @param fieldsConfig
  * @param? currentFields_
  * @param? elementClasses
- * @param fieldsConfig
  * @param? handleInput_
+ * @param? separatorIcon
+ * @param? separatorIconIndex
  */
 {template .render}
   {@param? closeButtonHtml: html|string}
   {@param? hideCloseButtons: bool}
 
   <div class="input-matrix {$elementClasses ?: ''}">
-    <div class="input-matrix-labels">
+    <div class="input-matrix-labels" style="display: flex">
       {foreach $config in $fieldsConfig}
+        {if index($config) == $separatorIconIndex}
+          <div style="opacity: 0;">{$separatorIcon}</div>
+        {/if}
         <label class="input-matrix-label">{$config.label ?: ''}</label>
       {/foreach}
     </div>
@@ -36,6 +41,8 @@
         {param rowFields: $rowFields /}
         {param rowIndex: index($rowFields) /}
         {param handleInput_: $handleInput_ /}
+        {param separatorIcon: $separatorIcon /}
+        {param separatorIconIndex: $separatorIconIndex /}
       {/call}
     {/foreach}
 
@@ -45,8 +52,10 @@
         {param fieldsConfig : $fieldsConfig /}
         {param last: true /}
         {param rowFields: [] /}
-        {param rowIndex: length($fieldObjs) /}
+        {param rowIndex: length($fieldObjs) - 1 /}
         {param handleInput_: $handleInput_ /}
+        {param separatorIcon: $separatorIcon /}
+        {param separatorIconIndex: $separatorIconIndex /}
       {/call}
     {/if}
   </div>
@@ -60,12 +69,17 @@
  * @param? handleInput_
  * @param? hideCloseButtons
  * @param? rowFields
+ * @param? separatorIcon
+ * @param? separatorIconIndex
  */
 {template .row}
   <div class="input-matrix-fields" data-row="{$rowIndex}">
     <div class="input-matrix-fields-left">
       {foreach $config in $fieldsConfig}
         {let $index: index($config) /}
+        {if $index == $separatorIconIndex}
+          <div>{$separatorIcon}</div>
+        {/if}
         {call .field data="$config"}
           {param field: $rowFields ? $rowFields[$index] : null /}
           {param fieldIndex: $index /}

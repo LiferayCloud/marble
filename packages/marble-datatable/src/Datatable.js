@@ -350,18 +350,26 @@ class Datatable extends Component {
    * @param {*} data
    * @return {*}
    */
-  cloneJSONData(data) {
-      return JSON.parse(JSON.stringify(data));
+  maybeCloneJSONData(data) {
+    let result;
+
+    if (data) {
+      result = JSON.parse(JSON.stringify(data));
+    } else {
+      result = data;
+    }
+
+    return result;
   }
 
   /**
    * Setter for the `data` state property.
-   * @param {!Object}
+   * @param {!Object} givenData
    * @return {!Object}
    * @protected
    */
   setData_(givenData) {
-    let data = this.cloneJSONData(givenData);
+    let data = this.maybeCloneJSONData(givenData);
     if (!this.isAlreadyExpanded(data)) {
       this.assertNoMixedTypesInArrays_(data);
       data = this.visitValuesAndExpandType_(data);
@@ -440,6 +448,7 @@ class Datatable extends Component {
     return value;
   }
 }
+
 Soy.register(Datatable, templates);
 
 Datatable.STATE = {

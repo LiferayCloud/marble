@@ -353,10 +353,10 @@ class Datatable extends Component {
   maybeCloneJSONData(data) {
     let result;
 
-    if (data) {
+    try {
       result = JSON.parse(JSON.stringify(data));
-    } else {
-      result = data;
+    } catch(e) {
+      return data;
     }
 
     return result;

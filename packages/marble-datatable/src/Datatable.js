@@ -346,12 +346,22 @@ class Datatable extends Component {
   }
 
   /**
+   * Clone JSON data
+   * @param {*} data
+   * @return {*}
+   */
+  cloneJSONData(data) {
+      return JSON.parse(JSON.stringify(data));
+  }
+
+  /**
    * Setter for the `data` state property.
    * @param {!Object}
    * @return {!Object}
    * @protected
    */
-  setData_(data) {
+  setData_(givenData) {
+    let data = this.cloneJSONData(givenData);
     if (!this.isAlreadyExpanded(data)) {
       this.assertNoMixedTypesInArrays_(data);
       data = this.visitValuesAndExpandType_(data);

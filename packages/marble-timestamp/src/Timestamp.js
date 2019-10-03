@@ -13,7 +13,7 @@ import {isServerSide} from 'metal';
 class Timestamp extends Component {
   /**
    */
-  attached() {
+  rendered() {
     if (isServerSide()) {
       return;
     }

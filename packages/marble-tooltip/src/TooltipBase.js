@@ -156,11 +156,13 @@ class TooltipBase extends Component {
       }
 
       if (this.inDocument) {
-        this.alignedPosition = TooltipBase.Align.align(
-          this.element,
-          alignElement,
-          this.position
-        );
+        setTimeout(() => {
+          this.alignedPosition = TooltipBase.Align.align(
+            this.element,
+            alignElement,
+            this.position
+          );
+        }, 10);
       }
     }
   }
@@ -169,7 +171,7 @@ class TooltipBase extends Component {
    * State synchronization logic for `position`.
    */
   syncPosition() {
-    this.syncCurrentAlignElement(this.currentAlignElement);
+    this.align();
   }
 
   /**

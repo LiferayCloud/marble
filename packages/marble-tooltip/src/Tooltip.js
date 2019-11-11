@@ -17,11 +17,13 @@ class Tooltip extends TooltipBase {
   syncVisible(visible) {
     super.syncVisible(visible);
 
-    if (visible) {
-      dom.addClasses(this.element, 'showing');
-    } else {
-      dom.removeClasses(this.element, 'showing');
-    }
+    setTimeout(() => {
+      if (visible) {
+        dom.addClasses(this.element, 'showing');
+      } else {
+        dom.removeClasses(this.element, 'showing');
+      }
+    }, 20);
   }
 
   /**

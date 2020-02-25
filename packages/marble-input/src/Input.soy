@@ -12,22 +12,26 @@
  * @param? onInput
  * @param? readonly
  * @param? rowIndex
+ * @param? showLengthLimit
  * @param? type
  * @param? value
  */
 {template .render}
-
-  {if $isTogglePassword}
-    <div class="has-action-button">
+  {if $isTogglePassword or ($showLengthLimit and $maxLength)}
+    <div class="{$isTogglePassword ? 'has-action-button' : ''}{sp}{$showLengthLimit ? 'show-length-limit' : ''}">
       {call .input data="all" }
-        {param type : $isShowing_ ? 'text' : 'password' /}
+        {param type: $isTogglePassword and not $isShowing_ ? 'password' : 'text' /}
       {/call}
-      {call .togglePassword data="all" /}
+      {if $isTogglePassword}
+        {call .togglePassword data="all" /}
+      {/if}
+      {if $showLengthLimit}
+        {call .lengthLimit data="all" /}
+      {/if}
     </div>
   {else}
     {call .input data="all" /}
   {/if}
-
 {/template}
 
 /**
@@ -106,3 +110,12 @@
     <div class="btn-tooltip">{$isShowing_ ? 'Hide' : 'Show'}</div>
   </button>
 {/template}
+
+/**
+ * @param maxLength
+ * @param value
+ */
+{template .lengthLimit kind="html"}
+  <span class="length-limit">{length($value)} of {$maxLength}</span>
+{/template}
+

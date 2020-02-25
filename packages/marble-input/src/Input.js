@@ -8,7 +8,7 @@ class Input extends Component {
     this.isShowing_ = this.initialShow;
 
     if (this.editableWhileVisible) {
-      if (!this.value || (this.value && this.valeu === '')) {
+      if (!this.value || (this.value && this.value === '')) {
         this.isShowing_ = true;
         this.readonly = false;
       } else {
@@ -18,6 +18,12 @@ class Input extends Component {
           this.readonly = true;
         }
       }
+    }
+
+    if (this.showLengthLimit && this.maxLength) {
+      this.onInput = e => {
+        this.value = e.target.value;
+      };
     }
   }
 
@@ -112,6 +118,14 @@ Input.STATE = {
     validator: core.isNumber,
   },
   /**
+   * Defines if this field should show "length/maxLength"
+   * @type {boolean}
+   */
+  showLengthLimit: {
+    validator: core.isBoolean,
+    value: false,
+  },
+  /**
    * Defines the function name to 'oninput' event
    * @type {function}
    */
@@ -160,6 +174,7 @@ Input.STATE = {
    */
   value: {
     validator: core.isString,
+    value: '',
   },
 };
 

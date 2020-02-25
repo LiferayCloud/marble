@@ -50,11 +50,27 @@ label {
   }
 }
 
-.has-action-button {
+.has-action-button, .show-length-limit {
   display: block;
+  position: relative;
+
+  .length-limit {
+    color: rgba($primary, .6);
+    font-size: 11px;
+    line-height: 18px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+}
+
+.has-action-button {
   height: 60px;
   margin-bottom: 24px;
-  position: relative;
+
+  .length-limit {
+    right: 42px;
+  }
 
   .form-control {
     background: rgba($primary, .05);

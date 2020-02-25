@@ -31,12 +31,17 @@ var soyIdom = goog.require('soy.idom');
 function $render(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
   opt_data = opt_data || {};
-  if (opt_data.isTogglePassword) {
+  if (opt_data.isTogglePassword || opt_data.showLengthLimit && opt_data.maxLength) {
     incrementalDom.elementOpenStart('div');
-        incrementalDom.attr('class', 'has-action-button');
+        incrementalDom.attr('class', (opt_data.isTogglePassword ? 'has-action-button' : '') + ' ' + (opt_data.showLengthLimit ? 'show-length-limit' : ''));
     incrementalDom.elementOpenEnd();
-      $input(soy.$$assignDefaults({type: opt_data.isShowing_ ? 'text' : 'password'}, opt_data), null, opt_ijData);
-      $togglePassword(opt_data, null, opt_ijData);
+      $input(soy.$$assignDefaults({type: opt_data.isTogglePassword && !opt_data.isShowing_ ? 'password' : 'text'}, opt_data), null, opt_ijData);
+      if (opt_data.isTogglePassword) {
+        $togglePassword(opt_data, null, opt_ijData);
+      }
+      if (opt_data.showLengthLimit) {
+        $lengthLimit(opt_data, null, opt_ijData);
+      }
     incrementalDom.elementClose('div');
   } else {
     $input(opt_data, null, opt_ijData);
@@ -150,14 +155,39 @@ if (goog.DEBUG) {
   $togglePassword.soyTemplateName = 'Input.togglePassword';
 }
 
-exports.render.params = ["autocomplete","classes","disabled","fieldIndex","isShowing_","isTogglePassword","maxLength","name","onInput","readonly","rowIndex","type","value"];
-exports.render.types = {"autocomplete":"any","classes":"any","disabled":"any","fieldIndex":"any","isShowing_":"any","isTogglePassword":"any","maxLength":"any","name":"any","onInput":"any","readonly":"any","rowIndex":"any","type":"any","value":"any"};
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {Object<string, *>=} opt_ijData
+ * @param {Object<string, *>=} opt_ijData_deprecated
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $lengthLimit(opt_data, opt_ijData, opt_ijData_deprecated) {
+  opt_ijData = opt_ijData_deprecated || opt_ijData;
+  incrementalDom.elementOpenStart('span');
+      incrementalDom.attr('class', 'length-limit');
+  incrementalDom.elementOpenEnd();
+    soyIdom.print((opt_data.value.length));
+    incrementalDom.text(' of ');
+    soyIdom.print(opt_data.maxLength);
+  incrementalDom.elementClose('span');
+}
+exports.lengthLimit = $lengthLimit;
+if (goog.DEBUG) {
+  $lengthLimit.soyTemplateName = 'Input.lengthLimit';
+}
+
+exports.render.params = ["autocomplete","classes","disabled","fieldIndex","isShowing_","isTogglePassword","maxLength","name","onInput","readonly","rowIndex","showLengthLimit","type","value"];
+exports.render.types = {"autocomplete":"any","classes":"any","disabled":"any","fieldIndex":"any","isShowing_":"any","isTogglePassword":"any","maxLength":"any","name":"any","onInput":"any","readonly":"any","rowIndex":"any","showLengthLimit":"any","type":"any","value":"any"};
 exports.input.params = ["type"];
 exports.input.types = {"type":"any"};
 exports.fieldAttrs.params = ["autocomplete","classes","disabled","fieldIndex","maxLength","name","onInput","placeholder","readonly","rowIndex","value"];
 exports.fieldAttrs.types = {"autocomplete":"any","classes":"any","disabled":"any","fieldIndex":"any","maxLength":"any","name":"any","onInput":"any","placeholder":"any","readonly":"any","rowIndex":"any","value":"any"};
 exports.togglePassword.params = ["isShowing_"];
 exports.togglePassword.types = {"isShowing_":"any"};
+exports.lengthLimit.params = ["maxLength","value"];
+exports.lengthLimit.types = {"maxLength":"any","value":"any"};
 templates = exports;
 return exports;
 

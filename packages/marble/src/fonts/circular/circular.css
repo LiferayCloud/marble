@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('./lineto-circular-book.woff2') format('woff2'),
+       url('./lineto-circular-book.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 500;
+  src: url('./lineto-circular-medium.woff2') format('woff2'),
+       url('./lineto-circular-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url('./lineto-circular-black.woff2') format('woff2'),
+       url('./lineto-circular-black.woff') format('woff');
+}

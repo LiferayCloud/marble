@@ -155,6 +155,14 @@ InputMatrix.STATE = {
    * @type {boolean}
    */
   hideCloseButtons: {},
+  
+  /**
+   * Icon used to separate columns based on a given index
+   * @type {html|string}
+   */
+  separatorIcon: {
+    isHtml: true
+  }
 };
 
 export {InputMatrix};
